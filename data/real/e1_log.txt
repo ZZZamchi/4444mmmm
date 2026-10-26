@@ -1,0 +1,24 @@
+embedding Counter({'no_embedding': 291, 'ok': 9}) 600s
+{
+  "model": "anthropic/claude-opus-5.5",
+  "label_inequivalent": {
+    "reject->reject": 47,
+    "final_reject": 49,
+    "unknown->unknown": 87,
+    "final_unknown": 87,
+    "accept->accept": 12,
+    "final_accept": 12,
+    "accept->off_image": 2,
+    "final_off_image": 2,
+    "unknown->reject": 2
+  },
+  "label_equivalent": {
+    "accept->accept": 112,
+    "final_accept": 112,
+    "unknown->unknown": 25,
+    "final_unknown": 25,
+    "reject->reject": 13,
+    "final_reject": 13
+  },
+  "seconds": 619.1
+}

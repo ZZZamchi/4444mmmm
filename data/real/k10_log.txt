@@ -1,0 +1,111 @@
+canon Counter({('id', 'ok'): 80, ('top', 'ok'): 80, ('absorb', 'ok'): 80, ('vac', 'ok'): 80}) 0s
+tactic tier Counter({('top', 'unknown'): 80, ('id', 'accept'): 77, ('absorb', 'unknown'): 77, ('vac', 'unknown'): 61, ('vac', 'reject'): 19, ('id', 'accept_uncertified'): 3, ('absorb', 'accept'): 3}) 1583s
+direction 0 stage exact: live 320 459s
+direction 0 stage assumption: live 116 527s
+direction 0 stage apply: live 106 606s
+direction 0 stage have: live 83 667s
+direction 0 stage convert0: live 1 699s
+direction 0 stage convert1: live 1 724s
+direction 0 stage convert2: live 1 749s
+direction 0 stage convert3: live 1 774s
+direction 0 stage convert4: live 1 799s
+direction 1 stage exact: live 309 1160s
+direction 1 stage assumption: live 231 1296s
+direction 1 stage apply: live 231 1486s
+direction 1 stage have: live 180 1675s
+direction 1 stage convert0: live 173 1835s
+direction 1 stage convert1: live 173 1994s
+direction 1 stage convert2: live 173 2154s
+direction 1 stage convert3: live 173 2311s
+direction 1 stage convert4: live 173 2467s
+{
+  "n_pairs": 320,
+  "label_inequivalent": {
+    "beq_plus_not": 184,
+    "beq_plus_equiv": 56
+  },
+  "label_equivalent": {
+    "beq_plus_equiv": 80
+  },
+  "stages": {
+    "d0_exact": 204,
+    "d0_assumption": 10,
+    "d0_apply": 23,
+    "d0_have": 82,
+    "d1_exact": 78,
+    "d1_apply": 51,
+    "d1_have": 7
+  },
+  "seconds": 2466.9
+}
+beq+ done 4049s
+model openai/gpt-4.1-mini Counter({('top', 'unknown'): 80, ('id', 'accept'): 77, ('absorb', 'unknown'): 76, ('vac', 'unknown'): 61, ('vac', 'reject'): 19, ('absorb', 'accept'): 4, ('id', 'accept_uncertified'): 3}) 5384s
+model anthropic/claude-opus-5.5 Counter({('id', 'accept'): 77, ('vac', 'reject'): 73, ('top', 'unknown'): 54, ('absorb', 'accept'): 45, ('absorb', 'unknown'): 24, ('top', 'accept'): 19, ('absorb', 'reject'): 8, ('top', 'reject'): 4, ('vac', 'unknown'): 4, ('id', 'accept_uncertified'): 3, ('absorb', 'accept_uncertified'): 3, ('vac', 'reject_uncertified'): 3, ('top', 'off_domain'): 3}) 8452s
+{
+ "id": {
+  "n": 80,
+  "beq_plus": 80,
+  "k9_flag": 0,
+  "tactics:closed": 80,
+  "tactics:accept": 77,
+  "tactics:accept_unflagged": 77,
+  "openai/gpt-4.1-mini:closed": 80,
+  "openai/gpt-4.1-mini:accept": 77,
+  "openai/gpt-4.1-mini:accept_unflagged": 77,
+  "anthropic/claude-opus-5.5:closed": 80,
+  "anthropic/claude-opus-5.5:accept": 77,
+  "anthropic/claude-opus-5.5:accept_unflagged": 77,
+  "tactics:accept_uncertified": 3,
+  "openai/gpt-4.1-mini:accept_uncertified": 3,
+  "anthropic/claude-opus-5.5:accept_uncertified": 3
+ },
+ "top": {
+  "n": 80,
+  "beq_plus": 2,
+  "k9_flag": 80,
+  "tactics:closed": 3,
+  "tactics:unknown": 80,
+  "openai/gpt-4.1-mini:closed": 3,
+  "openai/gpt-4.1-mini:unknown": 80,
+  "anthropic/claude-opus-5.5:closed": 54,
+  "anthropic/claude-opus-5.5:unknown": 54,
+  "anthropic/claude-opus-5.5:accept": 19,
+  "anthropic/claude-opus-5.5:accept_unflagged": 0,
+  "anthropic/claude-opus-5.5:off_domain": 3,
+  "anthropic/claude-opus-5.5:reject": 4
+ },
+ "absorb": {
+  "n": 80,
+  "beq_plus": 54,
+  "k9_flag": 80,
+  "tactics:closed": 3,
+  "tactics:unknown": 77,
+  "openai/gpt-4.1-mini:closed": 3,
+  "openai/gpt-4.1-mini:unknown": 76,
+  "anthropic/claude-opus-5.5:closed": 56,
+  "anthropic/claude-opus-5.5:accept": 45,
+  "anthropic/claude-opus-5.5:accept_unflagged": 0,
+  "anthropic/claude-opus-5.5:unknown": 24,
+  "anthropic/claude-opus-5.5:accept_uncertified": 3,
+  "anthropic/claude-opus-5.5:reject": 8,
+  "tactics:accept": 3,
+  "tactics:accept_unflagged": 0,
+  "openai/gpt-4.1-mini:accept": 4,
+  "openai/gpt-4.1-mini:accept_unflagged": 0
+ },
+ "vac": {
+  "n": 80,
+  "beq_plus": 0,
+  "k9_flag": 80,
+  "tactics:closed": 3,
+  "tactics:unknown": 61,
+  "openai/gpt-4.1-mini:closed": 3,
+  "openai/gpt-4.1-mini:unknown": 61,
+  "anthropic/claude-opus-5.5:closed": 52,
+  "anthropic/claude-opus-5.5:reject": 73,
+  "anthropic/claude-opus-5.5:reject_uncertified": 3,
+  "tactics:reject": 19,
+  "openai/gpt-4.1-mini:reject": 19,
+  "anthropic/claude-opus-5.5:unknown": 4
+ }
+}

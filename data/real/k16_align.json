@@ -1,0 +1,644 @@
+{
+ "model": "anthropic/claude-opus-5.5",
+ "variants": {
+  "subtype,classdec,dropunused,univ0,onept2": {
+   "changed": 32,
+   "flips": {
+    "F:residual->accept": 8,
+    "F:residual->residual": 1,
+    "U:reject->unknown": 7,
+    "U:residual->unknown": 8,
+    "U:unknown->reject": 2,
+    "U:unknown->unknown": 6
+   },
+   "pairs": [
+    {
+     "row_id": "pnv-test-1157",
+     "label": true,
+     "old": "residual",
+     "new": "accept",
+     "new_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-86",
+     "label": true,
+     "old": "residual",
+     "new": "accept",
+     "new_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-619",
+     "label": true,
+     "old": "residual",
+     "new": "accept",
+     "new_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=2/2 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-612",
+     "label": true,
+     "old": "residual",
+     "new": "accept",
+     "new_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1307",
+     "label": true,
+     "old": "residual",
+     "new": "residual",
+     "new_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-759",
+     "label": true,
+     "old": "residual",
+     "new": "accept",
+     "new_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-162",
+     "label": true,
+     "old": "residual",
+     "new": "accept",
+     "new_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1061",
+     "label": true,
+     "old": "residual",
+     "new": "accept",
+     "new_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-881",
+     "label": true,
+     "old": "residual",
+     "new": "accept",
+     "new_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=2/2 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1142",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=8/8 prefix_s=7/7 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-475",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1116",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "new_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-997",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "new_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-186",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-630",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-715",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1190",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1144",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-888",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-385",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-557",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-682",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=5/5 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-900",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-278",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "new_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=9/9 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r"
+     ]
+    },
+    {
+     "row_id": "pnv-test-115",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-591",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1113",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1167",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=8/8 prefix_s=6/6 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1180",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1329",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-737",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "new_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-637",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    }
+   ]
+  },
+  "subtype,classdec,dropunused,univ0,onept2#sample1": {
+   "changed": 21,
+   "flips": {
+    "U:reject->reject": 7,
+    "U:residual->accept": 1,
+    "U:residual->reject": 2,
+    "U:residual->unknown": 5,
+    "U:unknown->reject": 6
+   },
+   "pairs": [
+    {
+     "row_id": "pnv-test-1142",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=8/8 prefix_s=7/7 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-475",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1116",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "new_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-997",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "new_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-186",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-630",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-715",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1190",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1144",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-888",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-557",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-682",
+     "label": false,
+     "old": "residual",
+     "new": "accept",
+     "new_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=5/5 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-900",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-278",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "new_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=9/9 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-115",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-591",
+     "label": false,
+     "old": "residual",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1113",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1167",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=8/8 prefix_s=6/6 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1180",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1329",
+     "label": false,
+     "old": "residual",
+     "new": "reject",
+     "new_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-637",
+     "label": false,
+     "old": "residual",
+     "new": "unknown",
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "manifest_pairs": 471,
+ "manifest_labels": {
+  "equivalent": 369,
+  "non_equivalent": 102
+ },
+ "ours_equivalent": 446,
+ "shared": 444,
+ "by_outcome": {
+  "residual": {
+   "equivalent": 81,
+   "audit_both": 56,
+   "non_equivalent": 12
+  },
+  "accept": {
+   "non_equivalent": 3,
+   "audit_both": 238,
+   "equivalent": 245
+  },
+  "unknown": {
+   "equivalent": 17,
+   "audit_both": 8,
+   "non_equivalent": 35
+  },
+  "reject:component": {
+   "equivalent": 5,
+   "audit_both": 1,
+   "non_equivalent": 38
+  },
+  "reject:closed": {
+   "non_equivalent": 8,
+   "audit_both": 0
+  }
+ },
+ "rejects_kept_equivalent": [
+  {
+   "row_id": "pnv-test-310",
+   "exercise": "Putnam_exercise_2018_b4",
+   "audit_both": false,
+   "component": true,
+   "located": "H",
+   "alignment": "not total",
+   "direction": "vacuity"
+  },
+  {
+   "row_id": "pnv-test-358",
+   "exercise": "Rudin_exercise_1_18b",
+   "audit_both": true,
+   "component": true,
+   "located": "HC",
+   "alignment": "total",
+   "direction": "vacuity"
+  },
+  {
+   "row_id": "pnv-test-693",
+   "exercise": "Axler_exercise_1_4",
+   "audit_both": false,
+   "component": true,
+   "located": "H",
+   "alignment": "total",
+   "direction": "vacuity"
+  },
+  {
+   "row_id": "pnv-test-1068",
+   "exercise": "Artin_exercise_3_7_2",
+   "audit_both": false,
+   "component": true,
+   "located": "H",
+   "alignment": "not total",
+   "direction": "direction_only"
+  },
+  {
+   "row_id": "pnv-test-1135",
+   "exercise": "Herstein_exercise_2_1_26",
+   "audit_both": false,
+   "component": true,
+   "located": "HC",
+   "alignment": "not total",
+   "direction": "vacuity"
+  }
+ ],
+ "component_not_vacuity": {
+  "n": 35,
+  "relabelled": 34
+ },
+ "accepts_relabelled": [
+  {
+   "row_id": "pnv-test-212",
+   "exercise": "Artin_exercise_2_8_6"
+  },
+  {
+   "row_id": "pnv-test-1233",
+   "exercise": "Artin_exercise_2_8_6"
+  },
+  {
+   "row_id": "pnv-test-546",
+   "exercise": "Artin_exercise_2_8_6"
+  }
+ ]
+}

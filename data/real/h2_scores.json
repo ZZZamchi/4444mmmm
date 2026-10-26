@@ -1,0 +1,280 @@
+{
+ "annotators": 2,
+ "answered": [
+  226,
+  226
+ ],
+ "items_covered": [
+  249,
+  249
+ ],
+ "g_kappa_vs_first_0": {
+  "n": 42,
+  "kappa": 0.46153846153846184
+ },
+ "g_kappa_vs_first_0_ref_ok": {
+  "n": 38,
+  "kappa": 0.5365853658536582
+ },
+ "g_kappa_vs_first_1": {
+  "n": 42,
+  "kappa": 0.24701195219123476
+ },
+ "g_kappa_vs_first_1_ref_ok": {
+  "n": 38,
+  "kappa": 0.34482758620689646
+ },
+ "kappa_between": {
+  "n": 226,
+  "kappa": 0.6577122359505778,
+  "agree": 188
+ },
+ "open_picks_closed": {
+  "sampled": 30,
+  "distinct": 30,
+  "yes": 24,
+  "no": 4,
+  "disagree": 2,
+  "unfaithful_rate": 0.1429,
+  "ci95": [
+   0.057,
+   0.315
+  ]
+ },
+ "open_picks_judge_opus_ref": {
+  "sampled": 30,
+  "distinct": 30,
+  "disagree": 8,
+  "yes": 20,
+  "no": 2,
+  "unfaithful_rate": 0.0909,
+  "ci95": [
+   0.025,
+   0.278
+  ]
+ },
+ "open_picks_ours": {
+  "sampled": 30,
+  "distinct": 30,
+  "disagree": 5,
+  "yes": 24,
+  "no": 1,
+  "unfaithful_rate": 0.04,
+  "ci95": [
+   0.007,
+   0.195
+  ]
+ },
+ "strict_rejects_rewarded_all": {
+  "sampled": 34,
+  "distinct": 34,
+  "no": 13,
+  "yes": 10,
+  "disagree": 11,
+  "unfaithful_rate": 0.5652,
+  "ci95": [
+   0.368,
+   0.744
+  ]
+ },
+ "strict_rejects_rewarded_closed": {
+  "sampled": 31,
+  "distinct": 31,
+  "no": 12,
+  "yes": 9,
+  "disagree": 10,
+  "unfaithful_rate": 0.5714,
+  "ci95": [
+   0.365,
+   0.755
+  ]
+ },
+ "strict_rejects_rewarded_judge_opus_ref": {
+  "sampled": 25,
+  "distinct": 25,
+  "yes": 9,
+  "disagree": 8,
+  "no": 8,
+  "unfaithful_rate": 0.4706,
+  "ci95": [
+   0.262,
+   0.69
+  ]
+ },
+ "control_equivalent": {
+  "yes": 7,
+  "disagree": 3
+ },
+ "control_reject_nonstrict": {
+  "disagree": 2,
+  "yes": 3
+ },
+ "control_different_closed": {
+  "no": 2,
+  "yes": 1
+ },
+ "full_faithful_reject": {
+  "sampled": 43,
+  "distinct": 30,
+  "yes": 10,
+  "no": 16,
+  "disagree": 4,
+  "faithful_rate": 0.3846,
+  "ci95": [
+   0.224,
+   0.575
+  ]
+ },
+ "full_unfaithful_local_accept": {
+  "sampled": 14,
+  "distinct": 11,
+  "no": 6,
+  "yes": 5,
+  "faithful_rate": 0.4545,
+  "ci95": [
+   0.213,
+   0.72
+  ]
+ },
+ "full_faithful_local_accept": {
+  "sampled": 10,
+  "distinct": 10,
+  "yes": 10,
+  "faithful_rate": 1.0,
+  "ci95": [
+   0.722,
+   1.0
+  ]
+ },
+ "full_unfaithful_reject": {
+  "sampled": 10,
+  "distinct": 10,
+  "no": 9,
+  "disagree": 1,
+  "faithful_rate": 0.0,
+  "ci95": [
+   0.0,
+   0.299
+  ]
+ },
+ "kinds": {
+  "hyp_missing": 42,
+  "hyp_extra": 51,
+  "type_drift": 38,
+  "conclusion_diff": 49,
+  "vacuous": 4,
+  "false_statement": 12
+ },
+ "map_rejects": {
+  "align": {
+   "total": {
+    "items": 17,
+    "statements": 14,
+    "no": 12,
+    "disagree": 4,
+    "yes": 1
+   },
+   "early": {
+    "items": 26,
+    "statements": 16,
+    "yes": 16,
+    "no": 10
+   }
+  },
+  "loc": {
+   "H": {
+    "items": 30,
+    "statements": 19,
+    "yes": 12,
+    "no": 16,
+    "disagree": 2
+   },
+   "C": {
+    "items": 7,
+    "statements": 7,
+    "no": 2,
+    "disagree": 2,
+    "yes": 3
+   },
+   "HC": {
+    "items": 2,
+    "statements": 2,
+    "yes": 2
+   },
+   "closed": {
+    "items": 4,
+    "statements": 2,
+    "no": 4
+   }
+  },
+  "dir": {
+   "ref_false": {
+    "items": 13,
+    "statements": 4,
+    "yes": 8,
+    "no": 5
+   },
+   "cand_false": {
+    "items": 7,
+    "statements": 7,
+    "no": 6,
+    "disagree": 1
+   },
+   "one_false": {
+    "items": 2,
+    "statements": 2,
+    "no": 2
+   },
+   "vacuity": {
+    "items": 8,
+    "statements": 7,
+    "no": 3,
+    "yes": 3,
+    "disagree": 2
+   },
+   "direction_only": {
+    "items": 13,
+    "statements": 12,
+    "yes": 6,
+    "no": 6,
+    "disagree": 1
+   },
+   "open": {
+    "items": 0,
+    "statements": 0
+   }
+  }
+ },
+ "map_accepts": {
+  "fa": {
+   "constant": {
+    "items": 7,
+    "statements": 7,
+    "yes": 3,
+    "no": 4
+   },
+   "trivial": {
+    "items": 4,
+    "statements": 1,
+    "no": 4
+   },
+   "neither": {
+    "items": 3,
+    "statements": 3,
+    "yes": 2,
+    "no": 1
+   }
+  }
+ },
+ "location_vs_kind": [
+  {
+   "n": 32,
+   "agree": 29
+  },
+  {
+   "n": 43,
+   "agree": 35
+  }
+ ],
+ "located_reject_rows": 86
+}

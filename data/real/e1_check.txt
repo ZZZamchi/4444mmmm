@@ -1,0 +1,34 @@
+===== 855 True
+G: theorem exercise_1_1_4 (n : 鈩? (a b c : ZMod n) :
+  (a * b) * c = a * (b * c) := sorry
+P: theorem dummy (n : 鈩? (a b c : ZMod n) : (a * b) * c = a * (b * c) := sorry
+===== 1116 False
+G: theorem exercise_5_1_8 {p m n: 鈩晑 {F : Type*} [Field F]
+  (hp : p 鈮?0) (hn : n > 0)
+  (hF : CharP F p) (a b : F) (hm : m = p ^ n) :
+  (a + b) ^ m = a^m + b^m := sorry
+P: theorem dummy (F : Type*) [Field F] (p : 鈩? [hp : Fact p.Prime] [CharP F p] (m n : 鈩? (a b : F) : (a + b) ^ (p ^ n) = a ^ (p ^ n) + b ^ (p ^ n) := sorry
+===== 987 False
+G: theorem exercise_8_3_5a {n : 鈩 (hn0 : n > 3) (hn1 : Squarefree n) :
+  Irreducible (2 : Zsqrtd $ -n) 鈭?
+  Irreducible (鉄?, 1鉄?: Zsqrtd $ -n) 鈭?
+  Irreducible (1 + 鉄?, 1鉄?: Zsqrtd $ -n) := sorry
+P: theorem dummy (n : 鈩? (hn : Nat.Prime n) (hn3 : 3 < n) : Irreducible (2 : 鈩も垰(-n)) 鈭?Irreducible (1 : 鈩も垰(-n)) := sorry
+===== 216 False
+G: theorem exercise_21_6b
+  (f : 鈩?鈫?Icc 0 1 鈫?鈩?
+  (h : 鈭€ x n, f n x = 鈫憍 ^ n) :
+  卢 鈭?f鈧€, TendstoUniformly f f鈧€ atTop := sorry
+P: theorem dummy {n : 鈩晑 : 卢 TendstoUniformlyOn (fun (n : 鈩? (x : 鈩? => x ^ n) (fun x => x) atTop (Set.Icc 0 1) := sorry
+===== 290 False
+G: theorem exercise_4_4 {p t: 鈩晑 (hp0 : p.Prime) (hp1 : p = 4*t + 1)
+  (a : ZMod p) :
+  IsPrimitiveRoot a p 鈫?IsPrimitiveRoot (-a) p := sorry
+P: theorem dummy {p : 鈩晑 (hp : Fact (Prime p)) (hp1 : p % 4 = 1) (hp3 : p 鈮?3) (a : 鈩? (ha : a.gcd p = 1) : IsPrimitiveRoot (-a) p 鈫?IsPrimitiveRoot a p := sorry
+===== 742 True
+G: theorem exercise_5_1 {F V : Type*} [AddCommGroup V] [Field F]
+  [Module F V] {L : V 鈫掆倵[F] V} {n : 鈩晑 (U : Fin n 鈫?Submodule F V)
+  (hU : 鈭€ i : Fin n, Submodule.map L (U i) = U i) :
+  Submodule.map L (鈭?i : Fin n, U i : Submodule F V) =
+  (鈭?i : Fin n, U i : Su
+P: theorem dummy {V : Type*} [AddCommGroup V] [Module 鈩?V] (T : End 鈩?V) {m : 鈩晑 {U : Fin m 鈫?Submodule 鈩?V} (hU : 鈭€ i, (U i).map T 鈮?U i) : (Submodule.span 鈩?(鈰?i, (U i : Set V))).map T 鈮?Submodule.span 鈩?(鈰?i, (U i : Set V)) := sorry

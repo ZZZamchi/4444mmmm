@@ -1,0 +1,2124 @@
+{
+  "n_pairs": 300,
+  "label_inequivalent": {
+    "beq_plus_not": 150
+  },
+  "label_equivalent": {
+    "beq_plus_not": 80,
+    "beq_plus_equiv": 70
+  },
+  "stages": {
+    "d0_exact": 57,
+    "d0_assumption": 1,
+    "d0_apply": 13,
+    "d0_have": 26,
+    "d0_convert0": 3,
+    "d1_exact": 52,
+    "d1_apply": 6,
+    "d1_have": 10,
+    "d1_convert0": 2
+  },
+  "seconds": 0.2,
+  "pairs": [
+    {
+      "row_id": "pnv-test-1157",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-247",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-212",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-813",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-100",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1005",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-101",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-85",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-954",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-92",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-124",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-673",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-381",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-289",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-889",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-678",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1247",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-410",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1135",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-311",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-238",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1114",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-253",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-967",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-436",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-226",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-693",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1218",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-867",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1215",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-695",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-622",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-504",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1446",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1128",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1291",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-192",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-738",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-995",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-31",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-547",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-370",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1375",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1279",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1300",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-459",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1283",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-819",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-305",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1122",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-503",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-68",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-345",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1435",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1270",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1361",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1309",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-565",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-474",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1137",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1256",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1111",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-553",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-647",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-890",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-686",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-26",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-264",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-588",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-307",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-838",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-585",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-705",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-365",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1399",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-10",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-992",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1326",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-860",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-354",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-80",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-249",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1268",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1195",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-296",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-217",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-592",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1212",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-648",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1298",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-312",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-849",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1230",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1353",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-579",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-483",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1139",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-812",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-89",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-358",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-28",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1149",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1184",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1109",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-576",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1209",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-300",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-855",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-784",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1297",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-679",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-70",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1222",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1084",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-824",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-362",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1091",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-751",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-418",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-913",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-20",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-51",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1262",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-489",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-428",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-383",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-222",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-495",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-972",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-707",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-287",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1335",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-806",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-537",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-86",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1140",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-525",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-195",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1407",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-293",
+      "label": true,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1152",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-816",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-742",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1026",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-78",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1078",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1411",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1199",
+      "label": true,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-54",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-429",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-773",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-574",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-643",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-123",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1431",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1098",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-97",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-836",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-739",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1288",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-427",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1363",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-275",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-800",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1257",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-532",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1142",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1031",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1117",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1415",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1427",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-440",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-437",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-942",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-916",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1355",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-680",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-840",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-262",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-717",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-533",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-607",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-743",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-769",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-475",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-453",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1169",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-315",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-285",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1430",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-11",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-239",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-377",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-626",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1116",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-201",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-366",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1356",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-925",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-231",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-250",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1156",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-692",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-893",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-438",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-796",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-638",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-216",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-663",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-776",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-560",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-633",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1086",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1007",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1328",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1192",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-297",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1417",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1002",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-72",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-892",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-218",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1311",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-807",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-132",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1019",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1441",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1074",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-202",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-41",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-401",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-618",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-639",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1351",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-997",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-375",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-753",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1042",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-406",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1342",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1357",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-598",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-518",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1011",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1352",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-604",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-388",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-966",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-567",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-991",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-754",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-596",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-897",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1319",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-261",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-853",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-93",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-761",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-645",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-886",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-987",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-56",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-701",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-538",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1072",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-848",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1171",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-610",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-911",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-623",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-55",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-990",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-927",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-866",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1360",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-665",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-671",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1133",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-189",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-186",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-930",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-766",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-630",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-118",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1147",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-290",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-506",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-986",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-420",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-33",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-87",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-505",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-716",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-929",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1396",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1070",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-341",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-718",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-500",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-628",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+direction 0 stage exact: live 300 858s
+direction 0 stage assumption: live 243 1128s
+direction 0 stage apply: live 242 1447s
+direction 0 stage have: live 229 1901s
+direction 0 stage convert0: live 203 2238s
+direction 0 stage convert1: live 200 2561s
+direction 0 stage convert2: live 200 2889s
+direction 0 stage convert3: live 200 3218s
+direction 0 stage convert4: live 200 3541s
+direction 1 stage exact: live 99 3792s
+direction 1 stage assumption: live 47 3853s
+direction 1 stage apply: live 47 3921s
+direction 1 stage have: live 41 4012s
+direction 1 stage convert0: live 31 4072s
+direction 1 stage convert1: live 29 4128s
+direction 1 stage convert2: live 29 4184s
+direction 1 stage convert3: live 29 4241s
+direction 1 stage convert4: live 29 4298s
+{
+  "n_pairs": 300,
+  "label_inequivalent": {
+    "beq_plus_not": 150
+  },
+  "label_equivalent": {
+    "beq_plus_not": 80,
+    "beq_plus_equiv": 70
+  },
+  "stages": {
+    "d0_exact": 57,
+    "d0_assumption": 1,
+    "d0_apply": 13,
+    "d0_have": 26,
+    "d0_convert0": 3,
+    "d1_exact": 52,
+    "d1_apply": 6,
+    "d1_have": 10,
+    "d1_convert0": 2
+  },
+  "seconds": 4298.0
+}

@@ -1,0 +1,53 @@
+model anthropic/claude-opus-5.5 pairs 100
+re-decomposed 54 Counter({'no_alignment': 26, 'split_ok': 18, 'split_fail': 10}) 90s
+component done 672s
+closed done 3245s jobs 356
+{
+  "model": "anthropic/claude-opus-5.5",
+  "label_inequivalent": {
+    "no_alignment": 21,
+    "closed_refuted": 7,
+    "f7_no_alignment->no_alignment": 19,
+    "unknown": 20,
+    "closed_proved": 20,
+    "f7_unknown->unknown": 10,
+    "closed_unknown": 33,
+    "f7_split_fail->no_alignment": 2,
+    "split_fail": 8,
+    "f7_split_fail->split_fail": 2,
+    "reject": 10,
+    "f7_unknown->reject": 5,
+    "f7_no_alignment->unknown": 8,
+    "f7_no_alignment->split_fail": 6,
+    "accept": 1,
+    "f7_unknown->accept": 1,
+    "f7_no_alignment->reject": 3,
+    "f7_split_fail->unknown": 1,
+    "f7_reject->reject": 1,
+    "f7_split_fail->reject": 1,
+    "f7_reject->unknown": 1
+  },
+  "label_equivalent": {
+    "split_fail": 2,
+    "closed_proved": 32,
+    "f7_no_alignment->split_fail": 1,
+    "no_alignment": 5,
+    "f7_split_fail->no_alignment": 2,
+    "accept": 25,
+    "f7_accept->accept": 20,
+    "f7_no_alignment->no_alignment": 3,
+    "closed_unknown": 8,
+    "f7_unknown->accept": 3,
+    "unknown": 6,
+    "f7_unknown->unknown": 4,
+    "f7_no_alignment->accept": 2,
+    "f7_split_fail->split_fail": 1,
+    "f7_split_fail->unknown": 1,
+    "f7_no_alignment->unknown": 1,
+    "reject": 2,
+    "f7_no_alignment->reject": 1,
+    "f7_unknown->reject": 1
+  },
+  "closed_llm_jobs": 356,
+  "seconds": 3244.8
+}

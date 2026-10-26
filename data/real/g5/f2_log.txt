@@ -1,0 +1,52 @@
+selection: {'no_conversion': 38, 'elab_fail_other': 274, 'usable': 1140, 'usable_true': 446} pairs: 1140 229s
+selection: {'no_conversion': 38, 'elab_fail_other': 274, 'usable': 1140, 'usable_true': 446} pairs: 1140 0s
+t0 done 710s
+t1 done 3219s
+{
+  "selection": {
+    "no_conversion": 38,
+    "elab_fail_other": 274,
+    "usable": 1140,
+    "usable_true": 446
+  },
+  "n_pairs": 1140,
+  "tiers": {
+    "t0": {
+      "label_equivalent": {
+        "unknown": 243,
+        "unknown_no_cert": 243,
+        "proved": 203
+      },
+      "label_inequivalent": {
+        "unknown": 688,
+        "unknown_no_cert": 688,
+        "proved": 6
+      },
+      "inequivalent_unknown_share": 0.991,
+      "inequivalent_certified_share": 0.009,
+      "inequivalent_refuted_share": 0.0,
+      "proved_precision": 0.971,
+      "refuted_precision": null,
+      "pred_false_precision": null
+    },
+    "t1": {
+      "label_equivalent": {
+        "unknown": 231,
+        "unknown_no_cert": 231,
+        "proved": 215
+      },
+      "label_inequivalent": {
+        "unknown": 682,
+        "unknown_no_cert": 682,
+        "proved": 12
+      },
+      "inequivalent_unknown_share": 0.983,
+      "inequivalent_certified_share": 0.017,
+      "inequivalent_refuted_share": 0.0,
+      "proved_precision": 0.947,
+      "refuted_precision": null,
+      "pred_false_precision": null
+    }
+  },
+  "seconds": 3219.3
+}

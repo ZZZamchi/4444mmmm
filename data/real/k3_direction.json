@@ -1,0 +1,8355 @@
+{
+ "g1": {
+  "summary": {
+   "vacuity_only": 16,
+   "weaker": 13,
+   "stronger": 26,
+   "unknown": 4,
+   "differs": 4
+  },
+  "pairs": {
+   "pnv-test-1135": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-311": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1114": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-253": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-693": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-695": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-738": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-365": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-992": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-358": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-576": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-913": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "llm",
+     "pimp": "llm_repair",
+     "rs": "llm_repair"
+    }
+   },
+   "pnv-test-428": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1026": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-773": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-574": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-1431": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-97": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-739": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-275": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1117": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-916": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-262": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-533": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-743": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-1169": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-315": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-285": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-11": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-377": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1116": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-201": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-366": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-925": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-692": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-438": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-638": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-663": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-776": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-633": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1328": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1192": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1002": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1311": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1019": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-202": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-618": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-1351": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-997": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-753": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1342": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-596": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-886": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-701": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-610": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-990": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-671": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-189": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-766": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-420": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-87": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-716": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-1070": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   }
+  }
+ },
+ "g4": {
+  "summary": {
+   "stronger": 27,
+   "differs": 3,
+   "weaker": 3,
+   "vacuity_only": 5,
+   "unknown": 2
+  },
+  "pairs": {
+   "g4-4": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "g4-14": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "g4-18": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "g4-19": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "g4-23": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "g4-29": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "g4-77": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "g4-80": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "g4-87": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "g4-96": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "g4-100": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "g4-101": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "g4-120": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "g4-123": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "g4-133": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "g4-141": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "g4-155": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "g4-170": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "g4-171": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "g4-175": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "g4-176": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "g4-179": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "g4-180": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "g4-202": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "g4-203": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "g4-204": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "g4-220": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "g4-221": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "g4-259": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "g4-263": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "g4-264": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "g4-279": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "g4-285": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "g4-310": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "g4-312": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "g4-318": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "g4-353": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "g4-356": {
+    "proved": [
+     "pimp",
+     "rs"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm_repair"
+    }
+   },
+   "g4-358": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "g4-360": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   }
+  }
+ },
+ "d2": {
+  "summary": {
+   "vacuity_only": 197,
+   "stronger": 97,
+   "weaker": 24,
+   "unknown": 31,
+   "differs": 8
+  },
+  "pairs": {
+   "d1-2-21": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-4-36": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-4-41": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-4-42": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-4-43": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-4-54": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "d1-4-55": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "d1-10-135": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-10-136": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-10-137": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-10-139": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-10-142": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-10-143": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-10-144": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-13-183": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-13-187": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-14-193": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-194": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-14-195": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-196": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-197": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-199": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-200": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-201": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-203": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-204": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-205": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-206": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-207": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-208": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-14-209": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-14-212": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-14-213": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-19-281": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-19-286": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-20-300": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-20-303": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-20-307": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-20-308": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-20-311": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-20-315": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-21-321": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-21-322": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-21-323": {
+    "proved": [
+     "pimp",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "llm",
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-21-325": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-21-328": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-21-337": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-21-338": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-21-339": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-21-340": {
+    "proved": [
+     "pimp",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "llm",
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-21-341": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-21-342": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-28-413": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-34-466": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-34-470": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-34-472": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-34-473": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-34-474": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-34-477": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-39-539": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-39-541": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-39-542": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm_repair",
+     "pimp": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-39-544": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-43-582": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-43-584": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-43-585": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-43-586": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-45-615": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-47-652": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-47-653": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-50-694": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-50-696": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-50-698": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-50-706": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-50-707": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-50-709": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-51-727": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "llm",
+     "rs": "llm_repair"
+    }
+   },
+   "d1-51-728": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-53-762": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-62-853": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "d1-62-859": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "d1-62-870": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-64-897": {
+    "proved": [
+     "pimp",
+     "rs"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm_repair",
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-64-898": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-64-899": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-64-900": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "d1-64-901": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-64-902": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-64-903": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-75-1017": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-76-1042": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-82-1137": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-82-1152": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-82-1153": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-82-1154": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-83-1169": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-83-1171": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "rs": "llm_repair"
+    }
+   },
+   "d1-83-1172": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "rs": "llm_repair"
+    }
+   },
+   "d1-87-1192": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-88-1196": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-88-1198": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-91-1230": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-91-1232": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-91-1234": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-91-1235": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-100-1356": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-101-1377": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-101-1382": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-102-1402": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-102-1404": {
+    "proved": [
+     "pimp",
+     "rs"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm_repair",
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-102-1405": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm_repair",
+     "pimp": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-102-1406": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-102-1407": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-102-1408": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-102-1409": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-123-1608": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair",
+     "npimp": "llm"
+    }
+   },
+   "d1-123-1609": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair",
+     "npimp": "llm"
+    }
+   },
+   "d1-123-1610": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair",
+     "npimp": "llm"
+    }
+   },
+   "d1-123-1611": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-123-1613": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-123-1619": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair",
+     "npimp": "llm"
+    }
+   },
+   "d1-123-1621": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-123-1622": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair",
+     "npimp": "llm"
+    }
+   },
+   "d1-123-1624": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-127-1646": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-127-1649": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-127-1651": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-128-1661": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-128-1678": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-128-1680": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-130-1706": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-130-1707": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-133-1713": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-133-1714": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "d1-133-1715": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-133-1716": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-133-1717": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-133-1718": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-133-1720": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-133-1721": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-133-1722": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-133-1723": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-133-1724": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-133-1725": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-133-1726": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-133-1727": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-133-1728": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-133-1729": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-133-1731": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "d1-133-1732": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-138-1792": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-142-1839": {
+    "proved": [
+     "pimp",
+     "rs"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm_repair",
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-148-1913": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-153-1953": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-153-1955": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-153-1961": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-155-1974": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-155-1975": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-163-2016": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-165-2039": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-170-2076": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-171-2089": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-171-2091": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-171-2092": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-171-2093": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-171-2094": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-171-2101": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-171-2102": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-172-2104": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-172-2107": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-172-2109": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-172-2110": {
+    "proved": [
+     "pimp"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-172-2120": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-172-2122": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-172-2124": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-174-2135": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-174-2136": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "d1-174-2140": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-175-2149": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-175-2150": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-175-2152": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-175-2153": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-175-2155": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-175-2158": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "d1-175-2161": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-175-2164": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-175-2165": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-175-2168": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-176-2170": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-176-2171": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-176-2172": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-176-2174": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-179-2200": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-179-2202": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-180-2226": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-180-2230": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-180-2231": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-180-2232": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-180-2233": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-183-2261": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-183-2262": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-183-2263": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-183-2264": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-183-2265": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-183-2266": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-183-2274": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-187-2311": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "d1-187-2313": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-199-2437": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-201-2473": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-202-2479": {
+    "proved": [
+     "pimp",
+     "rs"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-202-2480": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-209-2573": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-214-2636": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-214-2637": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "llm",
+     "pimp": "llm_repair",
+     "rs": "llm_repair"
+    }
+   },
+   "d1-220-2672": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-220-2673": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-220-2674": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-220-2675": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-220-2676": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-220-2677": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-220-2678": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-220-2687": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-220-2688": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-220-2689": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-220-2690": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-221-2706": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-221-2707": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-222-2724": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-222-2725": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-222-2726": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-230-2833": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-230-2835": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "d1-231-2850": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-231-2855": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-241-3004": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-241-3005": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-241-3006": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-241-3007": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-241-3008": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-241-3009": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-241-3010": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "d1-241-3011": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-247-3082": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-247-3084": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-247-3085": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-247-3086": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-247-3087": {
+    "proved": [
+     "pimp"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-247-3088": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "llm",
+     "pimp": "llm_repair",
+     "rs": "llm_repair"
+    }
+   },
+   "d1-249-3112": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-259-3237": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-259-3239": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-259-3241": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "d1-259-3244": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-259-3245": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-259-3246": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-261-3276": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-263-3290": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-263-3291": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-263-3292": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "d1-263-3293": {
+    "proved": [
+     "pimp"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm"
+    }
+   },
+   "d1-263-3296": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm_repair",
+     "pimp": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-266-3345": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "d1-266-3346": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-266-3347": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-266-3348": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-266-3349": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-266-3351": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-266-3352": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-266-3361": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "d1-267-3382": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-267-3383": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-267-3384": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-267-3385": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-267-3386": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-272-3440": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-272-3443": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-272-3444": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-272-3456": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "llm",
+     "rs": "llm_repair"
+    }
+   },
+   "d1-272-3457": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-272-3458": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-275-3492": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "d1-275-3498": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-278-3532": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-278-3533": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "d1-283-3601": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-284-3619": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "llm",
+     "rs": "llm_repair"
+    }
+   },
+   "d1-285-3631": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-286-3655": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "d1-286-3657": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "d1-287-3668": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-287-3674": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-312-3929": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-312-3930": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-312-3931": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-312-3934": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-312-3938": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "d1-315-3986": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-315-3987": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-315-3988": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-315-3989": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-315-3990": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-315-3991": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-315-3992": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-319-4050": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-319-4053": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-325-4111": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-325-4113": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-325-4114": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-325-4115": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-325-4117": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-325-4118": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-325-4127": {
+    "proved": [
+     "pimp"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-325-4128": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "d1-325-4129": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-325-4130": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-325-4131": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-330-4201": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "d1-330-4203": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-330-4204": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "d1-330-4205": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-330-4211": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-330-4214": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "d1-330-4217": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "d1-330-4219": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "d1-330-4220": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "d1-332-4235": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-332-4237": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "rs": "llm"
+    }
+   },
+   "d1-332-4238": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-337-4262": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-341-4319": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-346-4359": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-347-4367": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-347-4368": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-356-4466": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-356-4467": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-356-4469": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-356-4479": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-356-4480": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-356-4481": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-356-4482": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "pimp": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "d1-358-4499": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm",
+     "rs": "llm"
+    }
+   },
+   "d1-358-4503": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-358-4510": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm",
+     "npimp": "llm"
+    }
+   },
+   "d1-358-4514": {
+    "proved": [
+     "pimp",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "tactic",
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-359-4516": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-359-4518": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "d1-359-4519": {
+    "proved": [
+     "pimp",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "sr": "llm_repair",
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-359-4520": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "d1-359-4521": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "d1-359-4534": {
+    "proved": [
+     "pimp"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair"
+    }
+   },
+   "d1-360-4536": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "d1-360-4537": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-360-4538": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "d1-360-4540": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "d1-360-4542": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm_repair"
+    }
+   },
+   "d1-360-4547": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "pimp": "llm",
+     "sr": "llm"
+    }
+   }
+  }
+ },
+ "g5": {
+  "summary": {
+   "vacuity_only": 67,
+   "weaker": 59,
+   "stronger": 143,
+   "differs": 31,
+   "unknown": 17
+  },
+  "pairs": {
+   "pnv-test-1135": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-311": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1114": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-253": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-693": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "tactic",
+     "rs": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-695": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-738": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-365": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-992": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-358": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "tactic",
+     "rs": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-576": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "tactic",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-913": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-428": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1026": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1040": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1112": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1102": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-805": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-976": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1201": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-595": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-338": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-616": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-1075": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1054": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-108": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-137": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-1081": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-379": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-310": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-672": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-507": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-38": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1221": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1010": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "pnv-test-167": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-404": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-899": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "pnv-test-778": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-569": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1068": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-528": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1370": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "tactic",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-773": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-574": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-1431": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-97": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-739": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-275": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1117": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-916": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-262": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-533": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-743": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1169": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-315": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-285": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-11": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-377": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1116": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-201": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-366": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-925": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-692": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-438": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-638": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-663": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-776": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-633": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1328": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1192": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1002": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1311": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1019": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-202": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-618": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1351": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-997": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-753": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1342": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-596": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-886": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-701": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-610": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-990": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-671": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "tactic",
+     "rs": "tactic",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-189": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "tactic",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-766": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-420": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-87": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-716": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-1070": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1058": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-878": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1418": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-928": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-706": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1365": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-1265": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-367": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-172": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1333": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-1332": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1438": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-12": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1410": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1190": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-477": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-1144": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-599": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1227": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-868": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-514": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-360": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1259": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-219": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-59": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-803": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1368": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-1241": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-169": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-486": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-804": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-856": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1269": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1429": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1389": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1346": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-691": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-35": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1364": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1163": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-2": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-557": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-258": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-205": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1387": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1338": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-566": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-555": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1296": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-71": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-558": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "tactic",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1310": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-163": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-694": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1182": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-589": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1057": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-154": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-1181": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-316": {
+    "proved": [
+     "pimp",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1273": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1178": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1239": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "tactic",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-282": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-985": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1289": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-224": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1009": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-904": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-582": {
+    "proved": [
+     "pimp",
+     "rs"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm"
+    }
+   },
+   "pnv-test-278": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1145": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-291": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "tactic",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-308": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-786": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1045": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-669": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-138": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "tactic",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-831": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1220": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-1336": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-512": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1131": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-847": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-780": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-447": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1032": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1127": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1226": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-621": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-303": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-874": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-519": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-968": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1436": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1339": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-1237": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "tactic",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-699": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1398": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1304": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-471": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-652": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-444": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-1231": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-731": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-469": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1105": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1235": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-864": {
+    "proved": [
+     "pimp",
+     "rs"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-148": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-170": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-334": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1113": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1347": {
+    "proved": [
+     "pimp",
+     "rs"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm"
+    }
+   },
+   "pnv-test-615": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1064": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-373": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "tactic"
+    }
+   },
+   "pnv-test-407": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-279": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1386": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-136": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-748": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-413": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1214": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-787": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-165": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-255": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-206": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-402": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-144": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-392": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-361": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-923": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-975": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-556": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-467": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-852": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1312": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1006": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-788": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-180": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "tactic",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1107": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-894": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-251": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-670": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1379": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-214": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-570": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "pnv-test-1024": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1327": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-430": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1295": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-843": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-94": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-426": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1089": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-265": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-833": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1203": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-656": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-246": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1035": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1382": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-283": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-81": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "tactic",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1177": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-232": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-116": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-988": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-762": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-332": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-193": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-309": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "tactic",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-135": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm_repair",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-830": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1324": {
+    "proved": [
+     "npimp",
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm",
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-667": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-408": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-42": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-515": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm_repair"
+    }
+   },
+   "pnv-test-896": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-640": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-463": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "llm"
+    }
+   },
+   "pnv-test-914": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-1088": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1060": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1110": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1066": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-977": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-728": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-951": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-32": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-664": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-95": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-1248": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1377": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1101": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-90": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-741": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-1143": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-713": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1046": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1095": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm_repair",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-872": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1194": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-322": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-331": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-779": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-318": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-1344": {
+    "proved": [
+     "pimp",
+     "rs"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm_repair",
+     "rs": "llm_repair"
+    }
+   },
+   "pnv-test-481": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-98": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-1376": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-571": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-854": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-260": {
+    "proved": [
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "rs": "llm",
+     "sr": "llm_repair"
+    }
+   },
+   "pnv-test-959": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-1104": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm"
+    }
+   },
+   "pnv-test-62": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "llm",
+     "sr": "llm"
+    }
+   },
+   "pnv-test-151": {
+    "proved": [
+     "rs"
+    ],
+    "class": "weaker",
+    "source": {
+     "rs": "llm_repair"
+    }
+   },
+   "pnv-test-774": {
+    "proved": [
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-922": {
+    "proved": [
+     "npimp",
+     "sr"
+    ],
+    "class": "stronger",
+    "source": {
+     "npimp": "llm",
+     "sr": "tactic"
+    }
+   },
+   "pnv-test-578": {
+    "proved": [
+     "npimp"
+    ],
+    "class": "differs",
+    "source": {
+     "npimp": "llm"
+    }
+   },
+   "pnv-test-794": {
+    "proved": [],
+    "class": "unknown",
+    "source": {}
+   },
+   "pnv-test-198": {
+    "proved": [
+     "pimp",
+     "rs",
+     "sr"
+    ],
+    "class": "vacuity_only",
+    "source": {
+     "pimp": "llm",
+     "rs": "tactic",
+     "sr": "llm"
+    }
+   }
+  }
+ }
+}

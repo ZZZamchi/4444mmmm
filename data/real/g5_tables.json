@@ -1,0 +1,472 @@
+{
+ "full": {
+  "tactics": {
+   "nF": 446,
+   "closedF": 215,
+   "accF": 226,
+   "localF": 188,
+   "rejectF": 0,
+   "nU": 694,
+   "closedU": 12,
+   "accU": 5,
+   "localU": 4,
+   "rejectU": 5,
+   "closedU_wilson95": [
+    0.0099,
+    0.03
+   ],
+   "closedF_wilson95": [
+    0.436,
+    0.5284
+   ],
+   "accU_wilson95": [
+    0.0031,
+    0.0168
+   ],
+   "accF_wilson95": [
+    0.4605,
+    0.5529
+   ],
+   "localU_wilson95": [
+    0.0022,
+    0.0147
+   ],
+   "localF_wilson95": [
+    0.3766,
+    0.4678
+   ]
+  },
+  "qwen3.8-27b-nothink": {
+   "nF": 446,
+   "closedF": 232,
+   "accF": 245,
+   "localF": 203,
+   "rejectF": 2,
+   "nU": 694,
+   "closedU": 18,
+   "accU": 9,
+   "localU": 5,
+   "rejectU": 15,
+   "closedU_wilson95": [
+    0.0165,
+    0.0406
+   ],
+   "closedF_wilson95": [
+    0.4738,
+    0.5662
+   ],
+   "accU_wilson95": [
+    0.0068,
+    0.0245
+   ],
+   "accF_wilson95": [
+    0.5029,
+    0.5949
+   ],
+   "localU_wilson95": [
+    0.0031,
+    0.0168
+   ],
+   "localF_wilson95": [
+    0.4095,
+    0.5016
+   ]
+  },
+  "gpt-4.1-mini": {
+   "nF": 446,
+   "closedF": 238,
+   "accF": 232,
+   "localF": 193,
+   "rejectF": 0,
+   "nU": 694,
+   "closedU": 12,
+   "accU": 6,
+   "localU": 4,
+   "rejectU": 5,
+   "closedU_wilson95": [
+    0.0099,
+    0.03
+   ],
+   "closedF_wilson95": [
+    0.4872,
+    0.5794
+   ],
+   "accU_wilson95": [
+    0.004,
+    0.0187
+   ],
+   "accF_wilson95": [
+    0.4738,
+    0.5662
+   ],
+   "localU_wilson95": [
+    0.0022,
+    0.0147
+   ],
+   "localF_wilson95": [
+    0.3875,
+    0.4791
+   ]
+  },
+  "deepseek-v4.1-flash": {
+   "nF": 446,
+   "closedF": 328,
+   "accF": 331,
+   "localF": 249,
+   "rejectF": 14,
+   "nU": 694,
+   "closedU": 108,
+   "accU": 50,
+   "localU": 9,
+   "rejectU": 158,
+   "closedU_wilson95": [
+    0.1306,
+    0.1845
+   ],
+   "closedF_wilson95": [
+    0.6926,
+    0.7742
+   ],
+   "accU_wilson95": [
+    0.0551,
+    0.0937
+   ],
+   "accF_wilson95": [
+    0.6996,
+    0.7806
+   ],
+   "localU_wilson95": [
+    0.0068,
+    0.0245
+   ],
+   "localF_wilson95": [
+    0.5119,
+    0.6037
+   ]
+  },
+  "claude-opus-5.5": {
+   "nF": 446,
+   "closedF": 384,
+   "accF": 343,
+   "localF": 248,
+   "rejectF": 43,
+   "nU": 694,
+   "closedU": 273,
+   "accU": 114,
+   "localU": 14,
+   "rejectU": 274,
+   "closedU_wilson95": [
+    0.3577,
+    0.4302
+   ],
+   "closedF_wilson95": [
+    0.8258,
+    0.89
+   ],
+   "accU_wilson95": [
+    0.1386,
+    0.1937
+   ],
+   "accF_wilson95": [
+    0.7277,
+    0.8058
+   ],
+   "localU_wilson95": [
+    0.0121,
+    0.0336
+   ],
+   "localF_wilson95": [
+    0.5097,
+    0.6015
+   ]
+  }
+ },
+ "levels": {
+  "closed": {
+   "FA": {
+    "k": 273,
+    "n": 694,
+    "wilson95": [
+     0.3577,
+     0.4302
+    ]
+   },
+   "acc": {
+    "k": 384,
+    "n": 446,
+    "wilson95": [
+     0.8258,
+     0.89
+    ]
+   }
+  },
+  "ours_all": {
+   "FA": {
+    "k": 114,
+    "n": 694,
+    "wilson95": [
+     0.1386,
+     0.1937
+    ]
+   },
+   "acc": {
+    "k": 343,
+    "n": 446,
+    "wilson95": [
+     0.7277,
+     0.8058
+    ]
+   }
+  },
+  "ours_local": {
+   "FA": {
+    "k": 14,
+    "n": 694,
+    "wilson95": [
+     0.0121,
+     0.0336
+    ]
+   },
+   "acc": {
+    "k": 248,
+    "n": 446,
+    "wilson95": [
+     0.5097,
+     0.6015
+    ]
+   }
+  },
+  "ours_local_not_trivial": {
+   "FA": {
+    "k": 9,
+    "n": 694,
+    "wilson95": [
+     0.0068,
+     0.0245
+    ]
+   },
+   "acc": {
+    "k": 248,
+    "n": 446,
+    "wilson95": [
+     0.5097,
+     0.6015
+    ]
+   }
+  },
+  "ours_local_not_trivial_not_constant": {
+   "FA": {
+    "k": 3,
+    "n": 694,
+    "wilson95": [
+     0.0015,
+     0.0126
+    ]
+   },
+   "acc": {
+    "k": 192,
+    "n": 446,
+    "wilson95": [
+     0.3853,
+     0.4768
+    ]
+   }
+  },
+  "beq_plus": {
+   "FA": {
+    "k": 2,
+    "n": 694,
+    "wilson95": [
+     0.0008,
+     0.0104
+    ]
+   },
+   "acc": {
+    "k": 207,
+    "n": 446,
+    "wilson95": [
+     0.4183,
+     0.5105
+    ]
+   }
+  },
+  "beq_or_local_not_trivial": {
+   "FA": {
+    "k": 11,
+    "n": 694,
+    "wilson95": [
+     0.0089,
+     0.0282
+    ]
+   },
+   "acc": {
+    "k": 288,
+    "n": 446,
+    "wilson95": [
+     0.6003,
+     0.6887
+    ]
+   }
+  },
+  "beq_or_local_not_trivial_not_constant": {
+   "FA": {
+    "k": 5,
+    "n": 694,
+    "wilson95": [
+     0.0031,
+     0.0168
+    ]
+   },
+   "acc": {
+    "k": 268,
+    "n": 446,
+    "wilson95": [
+     0.5548,
+     0.6453
+    ]
+   }
+  }
+ },
+ "paired_tests_opus": {
+  "closed vs ours_all [FA]": {
+   "only_first": 171,
+   "only_second": 12,
+   "p_exact_mcnemar": 3.571029032720693e-37
+  },
+  "closed vs ours_all [acc]": {
+   "only_first": 42,
+   "only_second": 1,
+   "p_exact_mcnemar": 1.000444171950221e-11
+  },
+  "closed vs ours_local [FA]": {
+   "only_first": 259,
+   "only_second": 0,
+   "p_exact_mcnemar": 2.1590421387736112e-78
+  },
+  "closed vs ours_local [acc]": {
+   "only_first": 137,
+   "only_second": 1,
+   "p_exact_mcnemar": 7.978208728725487e-40
+  },
+  "beq_plus vs ours_local [FA]": {
+   "only_first": 2,
+   "only_second": 14,
+   "p_exact_mcnemar": 0.004180908203125
+  },
+  "beq_plus vs ours_local [acc]": {
+   "only_first": 40,
+   "only_second": 81,
+   "p_exact_mcnemar": 0.0002442170244969446
+  },
+  "ours_local vs ours_local_not_trivial [FA]": {
+   "only_first": 5,
+   "only_second": 0,
+   "p_exact_mcnemar": 0.0625
+  },
+  "ours_local vs ours_local_not_trivial [acc]": {
+   "only_first": 0,
+   "only_second": 0,
+   "p_exact_mcnemar": 1.0
+  },
+  "ours_local_not_trivial vs ours_local_not_trivial_not_constant [FA]": {
+   "only_first": 6,
+   "only_second": 0,
+   "p_exact_mcnemar": 0.03125
+  },
+  "ours_local_not_trivial vs ours_local_not_trivial_not_constant [acc]": {
+   "only_first": 56,
+   "only_second": 0,
+   "p_exact_mcnemar": 2.7755575615628914e-17
+  },
+  "beq_plus vs ours_local_not_trivial_not_constant [FA]": {
+   "only_first": 2,
+   "only_second": 3,
+   "p_exact_mcnemar": 1.0
+  },
+  "beq_plus vs ours_local_not_trivial_not_constant [acc]": {
+   "only_first": 76,
+   "only_second": 61,
+   "p_exact_mcnemar": 0.23153716588439505
+  },
+  "beq_plus vs beq_or_local_not_trivial_not_constant [FA]": {
+   "only_first": 0,
+   "only_second": 3,
+   "p_exact_mcnemar": 0.25
+  },
+  "beq_plus vs beq_or_local_not_trivial_not_constant [acc]": {
+   "only_first": 0,
+   "only_second": 61,
+   "p_exact_mcnemar": 8.673617379884035e-19
+  }
+ },
+ "hack": {
+  "id": {
+   "beq_plus": 80,
+   "closed:anthropic/claude-opus-5.5": 80,
+   "closed:openai/gpt-4.1-mini": 80,
+   "closed:tactics": 80,
+   "n": 80,
+   "ours+triviality:rewarded": 62,
+   "ours:accept": 62,
+   "ours:residual": 15,
+   "ours:unknown": 3
+  },
+  "top": {
+   "beq_plus": 2,
+   "closed:anthropic/claude-opus-5.5": 54,
+   "closed:openai/gpt-4.1-mini": 3,
+   "closed:tactics": 3,
+   "n": 80,
+   "ours+triviality:rewarded": 0,
+   "ours:accept": 11,
+   "ours:off_domain": 3,
+   "ours:reject": 4,
+   "ours:residual": 8,
+   "ours:unknown": 54
+  },
+  "absorb": {
+   "beq_plus": 54,
+   "closed:anthropic/claude-opus-5.5": 56,
+   "closed:openai/gpt-4.1-mini": 3,
+   "closed:tactics": 3,
+   "n": 80,
+   "ours+triviality:rewarded": 0,
+   "ours:accept": 45,
+   "ours:reject": 8,
+   "ours:unknown": 27
+  },
+  "vac": {
+   "beq_plus": 0,
+   "closed:anthropic/claude-opus-5.5": 53,
+   "closed:openai/gpt-4.1-mini": 3,
+   "closed:tactics": 3,
+   "n": 80,
+   "ours+triviality:rewarded": 0,
+   "ours:reject": 73,
+   "ours:unknown": 7
+  },
+  "topsimp": {
+   "beq_plus": 0,
+   "closed:anthropic/claude-opus-5.5": 52,
+   "closed:openai/gpt-4.1-mini": 4,
+   "closed:tactics": 3,
+   "n": 80,
+   "ours+triviality:rewarded": 0,
+   "ours:off_domain": 3,
+   "ours:reject": 3,
+   "ours:residual": 21,
+   "ours:unknown": 53
+  },
+  "absorbsimp": {
+   "beq_plus": 9,
+   "closed:anthropic/claude-opus-5.5": 51,
+   "closed:openai/gpt-4.1-mini": 3,
+   "closed:tactics": 3,
+   "n": 80,
+   "ours+triviality:rewarded": 6,
+   "ours:accept": 46,
+   "ours:reject": 8,
+   "ours:unknown": 26
+  }
+ }
+}

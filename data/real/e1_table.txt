@@ -1,0 +1,9 @@
+set  prover                   n_unf closedFA compFA   n_f closedAcc compAcc compRej
+G1   tactics                    150        1      0   150        73      72       0
+G1   deepseek-v4.1-flash        150        2     13   150        73      99       7
+G1   gpt-4.1-mini               150       33      0   150       103      76       0
+G1   claude-opus-5.5            150       53     14   150       123     112      13
+G4   tactics                     75        1      1   242       235     235       0
+G4   deepseek-v4.1-flash         75       10      4   242       237     236       0
+G4   gpt-4.1-mini                75       25      1   242       236     235       0
+G4   claude-opus-5.5             75       16      7   242       237     237       0

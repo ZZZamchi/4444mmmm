@@ -1,0 +1,66 @@
+model anthropic/claude-opus-5.5 pairs 300
+canon Counter({'ok': 300}) 109s
+tactic tier Counter({'unknown': 227, 'accept': 72, 'reject': 1}) 109s
+component done 469s
+closed: reusing g1_results.json
+{
+  "model": "anthropic/claude-opus-5.5",
+  "label_inequivalent": {
+    "closed_refuted": 14,
+    "comp_reject": 47,
+    "comp_reject_shared>0": 42,
+    "comp_reject_nosplit": 12,
+    "closed_refuted->comp_reject": 6,
+    "union_reject": 55,
+    "closed_proved": 53,
+    "comp_reject_split": 35,
+    "closed_proved->comp_reject": 15,
+    "closed_unknown": 83,
+    "comp_unknown": 89,
+    "comp_unknown_shared0": 40,
+    "comp_unknown_nosplit": 23,
+    "closed_unknown->comp_unknown": 55,
+    "comp_unknown_shared>0": 49,
+    "closed_unknown->comp_reject": 26,
+    "comp_accept": 14,
+    "comp_accept_shared>0": 11,
+    "comp_accept_split": 13,
+    "closed_proved->comp_accept": 12,
+    "comp_unknown_split": 66,
+    "comp_reject_shared0": 5,
+    "closed_proved->comp_unknown": 26,
+    "closed_refuted->comp_unknown": 8,
+    "closed_unknown->comp_accept": 2,
+    "comp_accept_shared0": 3,
+    "comp_accept_nosplit": 1
+  },
+  "label_equivalent": {
+    "closed_proved": 123,
+    "comp_accept": 112,
+    "comp_accept_shared0": 26,
+    "comp_accept_split": 104,
+    "closed_proved->comp_accept": 107,
+    "comp_accept_nosplit": 8,
+    "comp_accept_shared>0": 86,
+    "closed_unknown": 25,
+    "comp_unknown": 25,
+    "comp_unknown_shared>0": 20,
+    "comp_unknown_split": 18,
+    "closed_unknown->comp_unknown": 14,
+    "comp_unknown_nosplit": 7,
+    "closed_proved->comp_unknown": 9,
+    "comp_reject": 13,
+    "comp_reject_shared>0": 12,
+    "comp_reject_split": 10,
+    "closed_proved->comp_reject": 7,
+    "union_reject": 15,
+    "comp_reject_nosplit": 3,
+    "closed_unknown->comp_reject": 6,
+    "comp_unknown_shared0": 5,
+    "closed_refuted": 2,
+    "closed_refuted->comp_unknown": 2,
+    "closed_unknown->comp_accept": 5,
+    "comp_reject_shared0": 1
+  },
+  "seconds": 469.2
+}

@@ -1,0 +1,63 @@
+18:28:54 start j1_judges
+18:28:54 start g1_gpt-5.6-sol
+18:28:54 start g1_gemini-4-argon
+18:31:08 g1_gemini-4-argon exit 3221225786 134s
+18:31:09 g1_gpt-5.6-sol exit 3221225786 135s
+18:31:09 start g4_gpt-5.6-sol
+18:31:09 start g4_gemini-4-argon
+18:31:13 g4_gpt-5.6-sol exit 3221225786 4s
+18:31:14 g4_gemini-4-argon exit 3221225786 5s
+18:35:58 start g1_gpt-6-astra
+18:35:58 start g1_gemini-4-argon
+18:35:59 g1_gpt-6-astra exit 1 1s
+18:36:39 g1_gemini-4-argon exit 3221225786 41s
+18:36:39 start g4_gemini-4-argon
+18:36:40 j1_judges exit 3221225786 42s
+18:36:41 g4_gemini-4-argon exit 3221225786 2s
+18:36:42 g4_gpt-6-astra exit 3221225786 3s
+18:36:42 ALL DONE
+18:37:42 start g1_gpt-6-astra
+18:37:55 g1_gpt-6-astra exit 3221225786 13s
+18:39:24 start g1_gemini-4-argon
+19:31:25 g1_gemini-4-argon exit 0 3121s
+20:08:05 g1_gpt-6-astra exit 1073807364 5321s
+20:08:05 start g4_gpt-6-astra
+20:08:05 start g4_gemini-4-argon
+20:08:05 g4_gemini-4-argon exit 3221226091 0s
+20:08:05 g4_gpt-6-astra exit 3221226091 0s
+20:08:05 start e2_g1_gemini-4-argon
+20:08:05 e2_g1_gemini-4-argon exit 3221226091 0s
+20:08:05 start j1_judges
+20:08:05 j1_judges exit 3221226091 0s
+20:08:05 ALL DONE
+00:29:23 start g1_gpt-6-astra
+00:29:23 skip g1_gemini-4-argon
+02:14:32 skip g1_gemini-4-argon
+02:14:32 start g4_gemini-4-argon
+03:16:41 g4_gemini-4-argon exit 0 3730s refused 0 breaker 0
+03:16:41 start e2_g1_gemini-4-argon
+03:18:04 e2_g1_gemini-4-argon exit 0 82s refused 0 breaker 0
+03:18:04 start e2_g4_gemini-4-argon
+03:24:48 e2_g4_gemini-4-argon exit 0 404s refused 0 breaker 0
+03:24:48 start j1_gemini-4-argon
+03:44:14 j1_gemini-4-argon exit 0 1165s refused 0 breaker 0
+03:44:14 ALL DONE
+10:14:26 start g1_gpt-6-astra
+10:16:34 g1_gpt-6-astra exit 0 129s refused 3 breaker 440
+10:16:34 g1_gpt-6-astra INCOMPLETE: 440 calls skipped after refusals
+10:16:34 start g4_gpt-6-astra
+10:20:05 start g1_gpt-6-astra
+10:34:34 g1_gpt-6-astra exit 0 869s refused 11 breaker 235
+10:34:34 g1_gpt-6-astra INCOMPLETE: 235 calls skipped after refusals
+10:34:34 start g4_gpt-6-astra
+10:36:36 start g1_gpt-6-astra
+11:10:09 g1_gpt-6-astra exit 0 2013s refused 21 breaker 0
+11:10:09 start g4_gpt-6-astra
+13:03:12 g4_gpt-6-astra exit 0 6783s refused 16 breaker 0
+13:03:12 start e2_g1_gpt-6-astra
+13:05:11 e2_g1_gpt-6-astra exit 0 118s refused 0 breaker 0
+13:05:11 start e2_g4_gpt-6-astra
+13:12:39 e2_g4_gpt-6-astra exit 0 448s refused 0 breaker 0
+13:12:39 start j1_gpt-6-astra
+13:41:12 j1_gpt-6-astra exit 0 1713s refused 0 breaker 0
+13:41:12 ALL DONE

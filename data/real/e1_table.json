@@ -1,0 +1,112 @@
+[
+ {
+  "set": "G1",
+  "prover": "tactics",
+  "n_unfaithful": 150,
+  "closed_false_accept": 1,
+  "comp_false_accept": 0,
+  "n_faithful": 150,
+  "closed_accept": 73,
+  "comp_accept": 72,
+  "comp_reject": 0
+ },
+ {
+  "set": "G1",
+  "prover": "deepseek-v4.1-flash",
+  "n_unfaithful": 150,
+  "closed_false_accept": 22,
+  "comp_false_accept": 11,
+  "n_faithful": 150,
+  "closed_accept": 108,
+  "comp_accept": 108,
+  "comp_reject": 3
+ },
+ {
+  "set": "G1",
+  "prover": "gpt-4.1-mini",
+  "n_unfaithful": 150,
+  "closed_false_accept": 1,
+  "comp_false_accept": 0,
+  "n_faithful": 150,
+  "closed_accept": 81,
+  "comp_accept": 77,
+  "comp_reject": 0
+ },
+ {
+  "set": "G1",
+  "prover": "claude-opus-5.5",
+  "n_unfaithful": 150,
+  "closed_false_accept": 61,
+  "comp_false_accept": 19,
+  "n_faithful": 150,
+  "closed_accept": 130,
+  "comp_accept": 112,
+  "comp_reject": 14
+ },
+ {
+  "set": "G1",
+  "prover": "qwen3.8-27b-nothink",
+  "n_unfaithful": 150,
+  "closed_false_accept": 3,
+  "comp_false_accept": 1,
+  "n_faithful": 150,
+  "closed_accept": 77,
+  "comp_accept": 82,
+  "comp_reject": 1
+ },
+ {
+  "set": "G4",
+  "prover": "tactics",
+  "n_unfaithful": 75,
+  "closed_false_accept": 1,
+  "comp_false_accept": 1,
+  "n_faithful": 242,
+  "closed_accept": 235,
+  "comp_accept": 235,
+  "comp_reject": 0
+ },
+ {
+  "set": "G4",
+  "prover": "deepseek-v4.1-flash",
+  "n_unfaithful": 75,
+  "closed_false_accept": 7,
+  "comp_false_accept": 4,
+  "n_faithful": 242,
+  "closed_accept": 236,
+  "comp_accept": 236,
+  "comp_reject": 0
+ },
+ {
+  "set": "G4",
+  "prover": "gpt-4.1-mini",
+  "n_unfaithful": 75,
+  "closed_false_accept": 1,
+  "comp_false_accept": 1,
+  "n_faithful": 242,
+  "closed_accept": 235,
+  "comp_accept": 235,
+  "comp_reject": 0
+ },
+ {
+  "set": "G4",
+  "prover": "claude-opus-5.5",
+  "n_unfaithful": 75,
+  "closed_false_accept": 25,
+  "comp_false_accept": 8,
+  "n_faithful": 242,
+  "closed_accept": 239,
+  "comp_accept": 238,
+  "comp_reject": 0
+ },
+ {
+  "set": "G4",
+  "prover": "qwen3.8-27b-nothink",
+  "n_unfaithful": 75,
+  "closed_false_accept": 1,
+  "comp_false_accept": 1,
+  "n_faithful": 242,
+  "closed_accept": 235,
+  "comp_accept": 235,
+  "comp_reject": 0
+ }
+]

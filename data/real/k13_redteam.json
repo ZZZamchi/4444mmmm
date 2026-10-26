@@ -1,0 +1,3284 @@
+{
+ "model": "anthropic/claude-opus-5.5",
+ "n_refs": 50,
+ "table": {
+  "beq_plus": 0,
+  "closed_accept_ours_reject": 14,
+  "closed_proved": 78,
+  "closed_refuted": 18,
+  "closed_unknown": 54,
+  "k9_flag": 5,
+  "n": 150,
+  "ours_accept": 37,
+  "ours_accept_unflagged": 33,
+  "ours_local_accept": 8,
+  "ours_local_accept_unflagged": 5,
+  "ours_reject": 45,
+  "ours_unknown": 68
+ },
+ "seconds": 9571.8,
+ "pairs": [
+  {
+   "row_id": "pnv-test-1033~rt0",
+   "why": "it only covers natural numbers a, not all integers a ∈ ℤ (the negative cases are lost).",
+   "gold": "∀ (p : ℕ) (hp : Nat.Prime p) (a : ℤ), a ^ p ≡ a [ZMOD p]",
+   "pred": "∀ (p : ℕ) [hp : Fact p.Prime] (a : ℕ), a^p ≡ a [MOD p]",
+   "src": "theorem dummy (p : ℕ) [hp : Fact p.Prime] (a : ℕ) : a^p ≡ a [MOD p] := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1033~rt1",
+   "why": "it states only the intermediate Lagrange step a^(p-1) ≡ 1 for a not divisible by p, not a^p ≡ a for all a.",
+   "gold": "∀ (p : ℕ) (hp : Nat.Prime p) (a : ℤ), a ^ p ≡ a [ZMOD p]",
+   "pred": "∀ (p : ℕ) [hp : Fact p.Prime] (a : ℤ) (ha : ¬ (p : ℤ) ∣ a), a^(p-1) ≡ 1 [ZMOD p]",
+   "src": "theorem dummy (p : ℕ) [hp : Fact p.Prime] (a : ℤ) (ha : ¬ (p : ℤ) ∣ a) : a^(p-1) ≡ 1 [ZMOD p] := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1033~rt2",
+   "why": "the universal quantifier over a is dropped; it only asserts the single instance a = 2.",
+   "gold": "∀ (p : ℕ) (hp : Nat.Prime p) (a : ℤ), a ^ p ≡ a [ZMOD p]",
+   "pred": "∀ (p : ℕ) [hp : Fact p.Prime], (2 : ℤ)^p ≡ 2 [ZMOD p]",
+   "src": "theorem dummy (p : ℕ) [hp : Fact p.Prime] : (2 : ℤ)^p ≡ 2 [ZMOD p] := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-116~rt0",
+   "why": "",
+   "gold": "∀ (f : ℝ → ℝ) (hf : ContDiff ℝ ⊤ f) (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf2 : ∀ x, f x ≥ 0), ∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0",
+   "pred": "∀ {f : ℝ → ℝ} (hf : Differentiable ℝ f) (hf₀ : f 0 = 0) (hf₁ : f 1 = 1) (hn : ∀ x, 0 ≤ f x) (hn' : ∀ n x, 0 ≤ iteratedDeriv n f x), False",
+   "src": "theorem dummy {f : ℝ → ℝ} (hf : Differentiable ℝ f) (hf₀ : f 0 = 0) (hf₁ : f 1 = 1) (hn : ∀ x, 0 ≤ f x) (hn' : ∀ n x, 0 ≤ iteratedDeriv n f x) : False := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-116~rt1",
+   "why": "",
+   "gold": "∀ (f : ℝ → ℝ) (hf : ContDiff ℝ ⊤ f) (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf2 : ∀ x, f x ≥ 0), ∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0",
+   "pred": "∀ {f : ℝ → ℝ} (hf : Differentiable ℝ f) (hf₀ : f 0 = 0) (hf₁ : f 1 = 1) (hn : ∀ x, 0 ≤ f x) (hn' : ∀ n x, 0 ≤ iteratedDeriv n f x), ∃ x : ℝ, f x < 0",
+   "src": "theorem dummy {f : ℝ → ℝ} (hf : Differentiable ℝ f) (hf₀ : f 0 = 0) (hf₁ : f 1 = 1) (hn : ∀ x, 0 ≤ f x) (hn' : ∀ n x, 0 ≤ iteratedDeriv n f x) : ∃ x : ℝ, f x < 0 := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=6/6 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-116~rt2",
+   "why": "",
+   "gold": "∀ (f : ℝ → ℝ) (hf : ContDiff ℝ ⊤ f) (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf2 : ∀ x, f x ≥ 0), ∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0",
+   "pred": "∀ {f : ℝ → ℝ} (hf : Differentiable ℝ f) (hf₀ : f 0 = 0) (hf₁ : f 1 = 1) (hn : ∀ x, 0 ≤ f x) (hn' : ∀ n x, 0 ≤ iteratedDeriv n f x), ∃ (n : ℕ) (x : ℝ), 100 < n ∧ deriv^[n] f x < -1000",
+   "src": "theorem dummy {f : ℝ → ℝ} (hf : Differentiable ℝ f) (hf₀ : f 0 = 0) (hf₁ : f 1 = 1) (hn : ∀ x, 0 ≤ f x) (hn' : ∀ n x, 0 ≤ iteratedDeriv n f x) : ∃ (n : ℕ) (x : ℝ), 100 < n ∧ deriv^[n] f x < -1000 := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=6/6 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-45~rt0",
+   "why": "",
+   "gold": "∀ (k : ℕ) (E P : Set (EuclideanSpace ℝ (Fin k))) (hE : ¬ Set.Countable E) (hP : P = {x | ∀ U ∈ 𝓝 x, ¬ Set.Countable (U ∩ E)}), Set.Countable (E \\ P)",
+   "pred": "∀ {α : Type u} [TopologicalSpace α] (E : Set α) (hE : Uncountable E) (P : Set α), Set.Countable (E \\ P)",
+   "src": "theorem dummy {α : Type*} [TopologicalSpace α] (E : Set α) (hE : Uncountable E) (P : Set α) : Set.Countable (E \\ P) := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-45~rt1",
+   "why": "",
+   "gold": "∀ (k : ℕ) (E P : Set (EuclideanSpace ℝ (Fin k))) (hE : ¬ Set.Countable E) (hP : P = {x | ∀ U ∈ 𝓝 x, ¬ Set.Countable (U ∩ E)}), Set.Countable (E \\ P)",
+   "pred": "∀ (k : ℕ) (E : Set (EuclideanSpace ℝ (Fin k))) (hE : Uncountable E) (P : Set (EuclideanSpace ℝ (Fin k))), Set.Countable {x | x ∈ E \\ P}",
+   "src": "theorem dummy (k : ℕ) (E : Set (EuclideanSpace ℝ (Fin k))) (hE : Uncountable E) (P : Set (EuclideanSpace ℝ (Fin k))) : Set.Countable {x | x ∈ E \\ P} := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=3/3 prefix_s=3/4 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-45~rt2",
+   "why": "",
+   "gold": "∀ (k : ℕ) (E P : Set (EuclideanSpace ℝ (Fin k))) (hE : ¬ Set.Countable E) (hP : P = {x | ∀ U ∈ 𝓝 x, ¬ Set.Countable (U ∩ E)}), Set.Countable (E \\ P)",
+   "pred": "∀ {α : Type u} [TopologicalSpace α] [T2Space α] (E : Set α) (hE : Uncountable E) (P : Set α), Set.Finite {x : α | x ∈ E \\ P}",
+   "src": "theorem dummy {α : Type*} [TopologicalSpace α] [T2Space α] (E : Set α) (hE : Uncountable E) (P : Set α) : Set.Finite {x : α | x ∈ E \\ P} := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1113~rt0",
+   "why": "it only asserts 3^p = 1 in ℕ (a false arithmetic claim), with no reference to orders modulo p or primitive roots",
+   "gold": "∀ {p n : ℕ} (hp : p.Prime) (hpn : p = 2^n + 1), IsPrimitiveRoot (3 : ZMod p) p",
+   "pred": "∀ {p : ℕ} (h : Nat.Prime p ∧ ∃ (n : ℕ), p = 2^n + 1), (3 : ℕ) ^ p = 1",
+   "src": "theorem dummy {p : ℕ} (h : Nat.Prime p ∧ ∃ (n : ℕ), p = 2^n + 1) : (3 : ℕ) ^ p = 1 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=2/2 shared=1 hoist_r=1 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1113~rt1",
+   "why": "it replaces \"3 is a primitive root mod p\" with the unrelated claim that 2 has multiplicative order p in ℕ (also false, hence \"equivalent\")",
+   "gold": "∀ {p n : ℕ} (hp : p.Prime) (hpn : p = 2^n + 1), IsPrimitiveRoot (3 : ZMod p) p",
+   "pred": "∀ {p : ℕ} (h : Nat.Prime p ∧ ∃ (n : ℕ), p = 2^n + 1), IsPrimitiveRoot (2 : ℕ) p",
+   "src": "theorem dummy {p : ℕ} (h : Nat.Prime p ∧ ∃ (n : ℕ), p = 2^n + 1) : IsPrimitiveRoot (2 : ℕ) p := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=2/2 shared=1 hoist_r=1 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1113~rt2",
+   "why": "the conclusion is just False, i.e. it claims Fermat primes do not exist, which has no primitive-root content at all",
+   "gold": "∀ {p n : ℕ} (hp : p.Prime) (hpn : p = 2^n + 1), IsPrimitiveRoot (3 : ZMod p) p",
+   "pred": "∀ {p : ℕ} (h : Nat.Prime p ∧ ∃ (n : ℕ), p = 2^n + 1), False",
+   "src": "theorem dummy {p : ℕ} (h : Nat.Prime p ∧ ∃ (n : ℕ), p = 2^n + 1) : False := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/1 shared=1 hoist_r=1 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1332~rt0",
+   "why": "drops the Hausdorff hypothesis on Y, which is essential to the informal uniqueness claim; it stays provable only because closedness of A trivializes the closure.",
+   "gold": "∀ {X : Type u} [TopologicalSpace X] {Y : Type u} [TopologicalSpace Y] [T2Space Y] {A : Set X} {f : X → Y} (hf : ContinuousOn f A) (g : X → Y) (g_con : ContinuousOn g (closure A)) (gExt : ∀ x : A, g x = f x), ∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ (∀ x : A, g' x = f x)) → (∀ x : closure A, g x = g' x)",
+   "pred": "∀ {X Y : Type u} [TopologicalSpace X] [TopologicalSpace Y] {A : Set X} (hA : IsClosed A) {f : X → Y} (hf : ContinuousOn f A) {g₁ g₂ : X → Y} (hg₁ : ContinuousOn g₁ (closure A)) (hg₂ : ContinuousOn g₂ (closure A)) (hgf₁ : EqOn g₁ f A) (hgf₂ : EqOn g₂ f A), EqOn g₁ g₂ (closure A)",
+   "src": "theorem dummy {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] {A : Set X} (hA : IsClosed A) {f : X → Y} (hf : ContinuousOn f A) {g₁ g₂ : X → Y} (hg₁ : ContinuousOn g₁ (closure A)) (hg₂ : ContinuousOn g₂ (closure A)) (hgf₁ : EqOn g₁ f A) (hgf₂ : EqOn g₂ f A) : EqOn g₁ g₂ (closure A) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [],
+   "canon_info": "ambiguous=true full=false prefix_r=13/14 prefix_s=14/14 shared=8 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1332~rt1",
+   "why": "removes all continuity assumptions on f, g₁, g₂, so it says nothing about continuous extensions; it is just agreement of two functions on a closed set.",
+   "gold": "∀ {X : Type u} [TopologicalSpace X] {Y : Type u} [TopologicalSpace Y] [T2Space Y] {A : Set X} {f : X → Y} (hf : ContinuousOn f A) (g : X → Y) (g_con : ContinuousOn g (closure A)) (gExt : ∀ x : A, g x = f x), ∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ (∀ x : A, g' x = f x)) → (∀ x : closure A, g x = g' x)",
+   "pred": "∀ {X Y : Type u} [TopologicalSpace X] [TopologicalSpace Y] [T2Space Y] {A : Set X} (hA : IsClosed A) {f : X → Y} {g₁ g₂ : X → Y} (hgf₁ : EqOn g₁ f A) (hgf₂ : EqOn g₂ f A), EqOn g₁ g₂ (closure A)",
+   "src": "theorem dummy {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] [T2Space Y] {A : Set X} (hA : IsClosed A) {f : X → Y} {g₁ g₂ : X → Y} (hgf₁ : EqOn g₁ f A) (hgf₂ : EqOn g₂ f A) : EqOn g₁ g₂ (closure A) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "nhyp"
+   ],
+   "canon_info": "ambiguous=true full=false prefix_r=13/14 prefix_s=12/12 shared=8 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1332~rt2",
+   "why": "the conclusion only asserts agreement on A itself rather than on the closure, losing the actual content (uniqueness on closure A); g₁ and g₂ are not even required to be continuous on the closure.",
+   "gold": "∀ {X : Type u} [TopologicalSpace X] {Y : Type u} [TopologicalSpace Y] [T2Space Y] {A : Set X} {f : X → Y} (hf : ContinuousOn f A) (g : X → Y) (g_con : ContinuousOn g (closure A)) (gExt : ∀ x : A, g x = f x), ∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ (∀ x : A, g' x = f x)) → (∀ x : closure A, g x = g' x)",
+   "pred": "∀ {X Y : Type u} [TopologicalSpace X] [TopologicalSpace Y] [T2Space Y] {A : Set X} (hA : IsClosed A) {f : X → Y} (hf : ContinuousOn f A) {g₁ g₂ : X → Y} (hg₁ : ContinuousOn g₁ A) (hg₂ : ContinuousOn g₂ A) (hgf₁ : EqOn g₁ f A) (hgf₂ : EqOn g₂ f A), EqOn g₁ g₂ A",
+   "src": "theorem dummy {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] [T2Space Y] {A : Set X} (hA : IsClosed A) {f : X → Y} (hf : ContinuousOn f A) {g₁ g₂ : X → Y} (hg₁ : ContinuousOn g₁ A) (hg₂ : ContinuousOn g₂ A) (hgf₁ : EqOn g₁ f A) (hgf₂ : EqOn g₂ f A) : EqOn g₁ g₂ A := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=false prefix_r=13/14 prefix_s=15/15 shared=8 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1246~rt0",
+   "why": "",
+   "gold": "∃ a b : ℤ, a - b ≠ b - a",
+   "pred": "∃ (a b : ℕ), a - b ≠ b - a",
+   "src": "theorem dummy : ∃ (a b : ℕ), a - b ≠ b - a := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1246~rt1",
+   "why": "",
+   "gold": "∃ a b : ℤ, a - b ≠ b - a",
+   "pred": "∃ (a b : ℤ), a / b ≠ b / a",
+   "src": "theorem dummy : ∃ (a b : ℤ), a / b ≠ b / a := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1246~rt2",
+   "why": "",
+   "gold": "∃ a b : ℤ, a - b ≠ b - a",
+   "pred": "∃ (a b : ℤ), a - b ≠ a + b",
+   "src": "theorem dummy : ∃ (a b : ℤ), a - b ≠ a + b := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1077~rt0",
+   "why": "the disjointness hypothesis A ∩ B = ∅ is dropped, so the statement no longer matches the informal problem (it remains true, hence provably equivalent to R).",
+   "gold": "∀ {M : Type u} [MetricSpace M] {A B : Set M} (hA : IsCompact A) (hB : IsCompact B) (hAB : Disjoint A B) (hA₀ : A ≠ ∅) (hB₀ : B ≠ ∅), ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a : M) (b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b",
+   "pred": "∀ {M : Type u} [MetricSpace M] [Nonempty M] {A B : Set M} (hA : CompactSpace A) (hB : CompactSpace B) (hA_nonempty : A.Nonempty) (hB_nonempty : B.Nonempty), ∃ (a₀ : M) (b₀ : M), a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a : M) (b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b",
+   "src": "theorem dummy {M : Type*} [MetricSpace M] [Nonempty M] {A B : Set M} (hA : CompactSpace A) (hB : CompactSpace B) (hA_nonempty : A.Nonempty) (hB_nonempty : B.Nonempty) : ∃ (a₀ : M) (b₀ : M), a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a : M) (b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=9/9 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1077~rt1",
+   "why": "the minimality conclusion is replaced by the trivial inequality dist a₀ b₀ ≤ dist a₀ b₀, so it only asserts that A and B are nonempty (true, hence provably equivalent to R).",
+   "gold": "∀ {M : Type u} [MetricSpace M] {A B : Set M} (hA : IsCompact A) (hB : IsCompact B) (hAB : Disjoint A B) (hA₀ : A ≠ ∅) (hB₀ : B ≠ ∅), ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a : M) (b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b",
+   "pred": "∀ {M : Type u} [MetricSpace M] [Nonempty M] {A B : Set M} (hA : CompactSpace A) (hB : CompactSpace B) (hA_nonempty : A.Nonempty) (hB_nonempty : B.Nonempty) (hA_B : A ∩ B = ∅), ∃ (a₀ : M) (b₀ : M), a₀ ∈ A ∧ b₀ ∈ B ∧ dist a₀ b₀ ≤ dist a₀ b₀",
+   "src": "theorem dummy {M : Type*} [MetricSpace M] [Nonempty M] {A B : Set M} (hA : CompactSpace A) (hB : CompactSpace B) (hA_nonempty : A.Nonempty) (hB_nonempty : B.Nonempty) (hA_B : A ∩ B = ∅) : ∃ (a₀ : M) (b₀ : M), a₀ ∈ A ∧ b₀ ∈ B ∧ dist a₀ b₀ ≤ dist a₀ b₀ := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=10/10 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1077~rt2",
+   "why": "instead of the existence of a closest pair, it only asserts that some pair from A × B has positive distance, which is a different and much weaker claim (true by disjointness, hence provably equivalent to R).",
+   "gold": "∀ {M : Type u} [MetricSpace M] {A B : Set M} (hA : IsCompact A) (hB : IsCompact B) (hAB : Disjoint A B) (hA₀ : A ≠ ∅) (hB₀ : B ≠ ∅), ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a : M) (b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b",
+   "pred": "∀ {M : Type u} [MetricSpace M] [Nonempty M] {A B : Set M} (hA : CompactSpace A) (hB : CompactSpace B) (hA_nonempty : A.Nonempty) (hB_nonempty : B.Nonempty) (hA_B : A ∩ B = ∅), ∃ (a₀ : M) (b₀ : M), a₀ ∈ A ∧ b₀ ∈ B ∧ 0 < dist a₀ b₀",
+   "src": "theorem dummy {M : Type*} [MetricSpace M] [Nonempty M] {A B : Set M} (hA : CompactSpace A) (hB : CompactSpace B) (hA_nonempty : A.Nonempty) (hB_nonempty : B.Nonempty) (hA_B : A ∩ B = ∅) : ∃ (a₀ : M) (b₀ : M), a₀ ∈ A ∧ b₀ ∈ B ∧ 0 < dist a₀ b₀ := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=10/10 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1010~rt0",
+   "why": "drops the main conclusion that φ is inversion everywhere; only the corollary \"G is abelian\" remains.",
+   "gold": "∀ {G : Type u} [Group G] [Fintype G] (φ : G ≃* G) {I : Finset G} (hI : ∀ x ∈ I, φ x = x⁻¹) (hI1 : (0.75 : ℚ) * card G ≤ card I), (∀ x : G, φ x = x⁻¹) ∧ ∀ x y : G, x*y = y*x",
+   "pred": "∀ {G : Type u} [Fintype G] [Group G] (φ : G ≃* G) (hφ : ∃ S : Finset G, S.card > (3 * Fintype.card G) / 4 ∧ ∀ x ∈ S, φ x = x⁻¹), ∀ a b : G, a * b = b * a",
+   "src": "theorem dummy {G : Type*} [Fintype G] [Group G] (φ : G ≃* G) (hφ : ∃ S : Finset G, S.card > (3 * Fintype.card G) / 4 ∧ ∀ x ∈ S, φ x = x⁻¹) : ∀ a b : G, a * b = b * a := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "nhyp",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=4/7 prefix_s=5/7 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1010~rt1",
+   "why": "the hypothesis is strengthened from \"more than 3/4 of elements\" to \"all elements\", so it becomes the trivial fact that an inverting automorphism forces commutativity.",
+   "gold": "∀ {G : Type u} [Group G] [Fintype G] (φ : G ≃* G) {I : Finset G} (hI : ∀ x ∈ I, φ x = x⁻¹) (hI1 : (0.75 : ℚ) * card G ≤ card I), (∀ x : G, φ x = x⁻¹) ∧ ∀ x y : G, x*y = y*x",
+   "pred": "∀ {G : Type u} [Fintype G] [Group G] (φ : G ≃* G) (hφ : ∀ x : G, φ x = x⁻¹), (∀ y : G, φ y = y⁻¹) ∧ (∀ a b : G, a * b = b * a)",
+   "src": "theorem dummy {G : Type*} [Fintype G] [Group G] (φ : G ≃* G) (hφ : ∀ x : G, φ x = x⁻¹) : (∀ y : G, φ y = y⁻¹) ∧ (∀ a b : G, a * b = b * a) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "nhyp",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=4/7 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1010~rt2",
+   "why": "assumes G is already commutative, which presupposes the \"so G is abelian\" conclusion and restricts the result to abelian groups.",
+   "gold": "∀ {G : Type u} [Group G] [Fintype G] (φ : G ≃* G) {I : Finset G} (hI : ∀ x ∈ I, φ x = x⁻¹) (hI1 : (0.75 : ℚ) * card G ≤ card I), (∀ x : G, φ x = x⁻¹) ∧ ∀ x y : G, x*y = y*x",
+   "pred": "∀ {G : Type u} [Fintype G] [CommGroup G] (φ : G ≃* G) (hφ : ∃ S : Finset G, S.card > (3 * Fintype.card G) / 4 ∧ ∀ x ∈ S, φ x = x⁻¹), (∀ y : G, φ y = y⁻¹) ∧ (∀ a b : G, a * b = b * a)",
+   "src": "theorem dummy {G : Type*} [Fintype G] [CommGroup G] (φ : G ≃* G) (hφ : ∃ S : Finset G, S.card > (3 * Fintype.card G) / 4 ∧ ∀ x ∈ S, φ x = x⁻¹) : (∀ y : G, φ y = y⁻¹) ∧ (∀ a b : G, a * b = b * a) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/7 prefix_s=1/5 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1023~rt0",
+   "why": "the conclusion is changed to `a * b = a ^ j * b`, which holds trivially with j = 1 in any group, so it no longer says anything about how b and a commute up to a power of a.",
+   "gold": "∀ {G : Type u} [Group G] (hG : ∀ (H : Subgroup G), H.Normal) (a b : G), ∃ (j : ℤ) , b*a = a^j * b",
+   "pred": "∀ {G : Type u} [Group G] (hG : ∀ (A : Subgroup G), A.Normal) (a b : G), ∃ (j : ℤ), a * b = a ^ j * b",
+   "src": "theorem dummy {G : Type*} [Group G] (hG : ∀ (A : Subgroup G), A.Normal) (a b : G) : ∃ (j : ℤ), a * b = a ^ j * b := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1023~rt1",
+   "why": "it adds the hypothesis that G is commutative. This restricts the claim to abelian groups, where j = 1 works trivially, and excludes the interesting non-abelian Dedekind groups such as the quaternion group Q8.",
+   "gold": "∀ {G : Type u} [Group G] (hG : ∀ (H : Subgroup G), H.Normal) (a b : G), ∃ (j : ℤ) , b*a = a^j * b",
+   "pred": "∀ {G : Type u} [Group G] (hG : ∀ (A : Subgroup G), A.Normal) (hc : ∀ x y : G, x * y = y * x) (a b : G), ∃ (j : ℤ), b * a = a ^ j * b",
+   "src": "theorem dummy {G : Type*} [Group G] (hG : ∀ (A : Subgroup G), A.Normal) (hc : ∀ x y : G, x * y = y * x) (a b : G) : ∃ (j : ℤ), b * a = a ^ j * b := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1023~rt2",
+   "why": "a and b are existentially quantified instead of universally, so it only claims some pair satisfies the relation. Taking a = b = 1 makes it trivial, and the claim is lost for arbitrary a, b.",
+   "gold": "∀ {G : Type u} [Group G] (hG : ∀ (H : Subgroup G), H.Normal) (a b : G), ∃ (j : ℤ) , b*a = a^j * b",
+   "pred": "∀ {G : Type u} [Group G] (hG : ∀ (A : Subgroup G), A.Normal), ∃ (a b : G) (j : ℤ), b * a = a ^ j * b",
+   "src": "theorem dummy {G : Type*} [Group G] (hG : ∀ (A : Subgroup G), A.Normal) : ∃ (a b : G) (j : ℤ), b * a = a ^ j * b := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=3/5 prefix_s=3/3 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1014~rt0",
+   "why": "it only rules out solutions in natural numbers, not all integers (a strictly weaker claim that is still true).",
+   "gold": "¬ ∃ x y : ℤ, 3*x^2 + 2 = y^2",
+   "pred": "∀ {x y : ℕ} (h : 3 * x ^ 2 + 2 = y ^ 2), False",
+   "src": "theorem dummy {x y : ℕ} (h : 3 * x ^ 2 + 2 = y ^ 2) : False := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1014~rt1",
+   "why": "it states only the auxiliary fact that no integer square is ≡ 2 mod 3, never mentioning the equation 3x^2+2=y^2.",
+   "gold": "¬ ∃ x y : ℤ, 3*x^2 + 2 = y^2",
+   "pred": "∀ y : ℤ, y ^ 2 % 3 ≠ 2",
+   "src": "theorem dummy : ∀ y : ℤ, y ^ 2 % 3 ≠ 2 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1014~rt2",
+   "why": "the added hypotheses 0 < x and 0 < y mean it only excludes solutions with positive x and y, a weaker statement than the original.",
+   "gold": "¬ ∃ x y : ℤ, 3*x^2 + 2 = y^2",
+   "pred": "∀ {x y : ℤ} (hx : 0 < x) (hy : 0 < y) (h : 3 * x ^ 2 + 2 = y ^ 2), False",
+   "src": "theorem dummy {x y : ℤ} (hx : 0 < x) (hy : 0 < y) (h : 3 * x ^ 2 + 2 = y ^ 2) : False := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1307~rt0",
+   "why": "it proves a different limit, sqrt(n^2 + 2n) - n → 1. This is true, so it is provably equivalent to R, but it has nothing to do with the 1/2 limit.",
+   "gold": "Tendsto (λ (n : ℝ) => (sqrt (n^2 + n) - n)) atTop (𝓝 (1/2))",
+   "pred": "∀ (n : ℕ), Tendsto (fun n : ℝ => sqrt (n ^ 2 + 2 * n) - n) atTop (𝓝 1)",
+   "src": "theorem dummy (n : ℕ) : Tendsto (fun n : ℝ => sqrt (n ^ 2 + 2 * n) - n) atTop (𝓝 1) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1307~rt1",
+   "why": "it only asserts an eventual upper bound sqrt(n^2+n) - n < 1/2, not convergence to 1/2. It is strictly weaker content but still true.",
+   "gold": "Tendsto (λ (n : ℝ) => (sqrt (n^2 + n) - n)) atTop (𝓝 (1/2))",
+   "pred": "∀ (n : ℕ), ∀ᶠ x : ℝ in atTop, sqrt (x ^ 2 + x) - x < 1 / 2",
+   "src": "theorem dummy (n : ℕ) : ∀ᶠ x : ℝ in atTop, sqrt (x ^ 2 + x) - x < 1 / 2 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1307~rt2",
+   "why": "it applies a floor, so the sequence is ⌊sqrt(n^2+n)⌋ - n, which is eventually 0 and tends to 0. The 1/2 limit is lost entirely, though the statement is true.",
+   "gold": "Tendsto (λ (n : ℝ) => (sqrt (n^2 + n) - n)) atTop (𝓝 (1/2))",
+   "pred": "∀ (n : ℕ), Tendsto (fun m : ℕ => ((⌊sqrt ((m : ℝ) ^ 2 + m)⌋ : ℤ) - (m : ℤ))) atTop (𝓝 0)",
+   "src": "theorem dummy (n : ℕ) : Tendsto (fun m : ℕ => ((⌊sqrt ((m : ℝ) ^ 2 + m)⌋ : ℤ) - (m : ℤ))) atTop (𝓝 0) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1106~rt0",
+   "why": "it only rules out divisibility by the single cubic (X-1)(X-2)(X-3) instead of asserting irreducibility over ℤ (no factorization into lower-degree factors at all).",
+   "gold": "Irreducible (X^4 - 4*X^3 + 6 : Polynomial ℤ)",
+   "pred": "∀ {R : Type u} [CommRing R] [IsDomain R] [CharZero R] (f : R[X]) (h : f = X^4 - 4 * X^3 + 6), ¬ ∃ (g : R[X]), f = g * ((X - 1) * ((X - 2) * (X - 3)))",
+   "src": "theorem dummy {R : Type*} [CommRing R] [IsDomain R] [CharZero R] (f : R[X]) (h : f = X^4 - 4 * X^3 + 6) : ¬ ∃ (g : R[X]), f = g * ((X - 1) * ((X - 2) * (X - 3))) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1106~rt1",
+   "why": "it is a non-divisibility statement about one specific cubic over an arbitrary char-zero domain, which says nothing about quadratic×quadratic or linear×cubic factorizations in ℤ[x].",
+   "gold": "Irreducible (X^4 - 4*X^3 + 6 : Polynomial ℤ)",
+   "pred": "∀ {R : Type u} [CommRing R] [IsDomain R] [CharZero R] (f : R[X]) (h : f = X^4 - 4 * X^3 + 6), ¬ ((X - 1) * (X - 2) * (X - 3) ∣ f)",
+   "src": "theorem dummy {R : Type*} [CommRing R] [IsDomain R] [CharZero R] (f : R[X]) (h : f = X^4 - 4 * X^3 + 6) : ¬ ((X - 1) * (X - 2) * (X - 3) ∣ f) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1106~rt2",
+   "why": "it merely claims 1 is not a root of f, a trivial evaluation fact far weaker than irreducibility in ℤ[x].",
+   "gold": "Irreducible (X^4 - 4*X^3 + 6 : Polynomial ℤ)",
+   "pred": "∀ {R : Type u} [CommRing R] [IsDomain R] [CharZero R] (f : R[X]) (h : f = X^4 - 4 * X^3 + 6), f.eval 1 ≠ 0",
+   "src": "theorem dummy {R : Type*} [CommRing R] [IsDomain R] [CharZero R] (f : R[X]) (h : f = X^4 - 4 * X^3 + 6) : f.eval 1 ≠ 0 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1291~rt0",
+   "why": "it states the converse (a = 0 ∨ v = 0 → a • v = 0), which is a trivial consequence of zero_smul/smul_zero rather than the no-zero-divisors property.",
+   "gold": "∀ {F V : Type u} [AddCommGroup V] [Field F] [Module F V] (v : V) (a : F), a • v = 0 → a = 0 ∨ v = 0",
+   "pred": "∀ {K V : Type u} [Field K] [AddCommGroup V] [Module K V] (a : K) (v : V) (h : a = 0 ∨ v = 0), a • v = 0",
+   "src": "theorem dummy {K V : Type*} [Field K] [AddCommGroup V] [Module K V] (a : K) (v : V) (h : a = 0 ∨ v = 0) : a • v = 0 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": true,
+   "proved": [
+    "acc",
+    "cond",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=7 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1291~rt1",
+   "why": "it specializes V to the field K itself (v is a scalar, and • becomes *), so it only says a field has no zero divisors and loses the general vector-space statement.",
+   "gold": "∀ {F V : Type u} [AddCommGroup V] [Field F] [Module F V] (v : V) (a : F), a • v = 0 → a = 0 ∨ v = 0",
+   "pred": "∀ {K : Type u} [Field K] (a v : K) (h : a * v = 0), a = 0 ∨ v = 0",
+   "src": "theorem dummy {K : Type*} [Field K] (a v : K) (h : a * v = 0) : a = 0 ∨ v = 0 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "cond",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/8 prefix_s=1/5 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1291~rt2",
+   "why": "it weakens the conclusion with the extra disjunct `a • v = 0`, which follows immediately from h, so the statement becomes vacuous and no longer asserts a = 0 or v = 0.",
+   "gold": "∀ {F V : Type u} [AddCommGroup V] [Field F] [Module F V] (v : V) (a : F), a • v = 0 → a = 0 ∨ v = 0",
+   "pred": "∀ {K V : Type u} [Field K] [AddCommGroup V] [Module K V] (a : K) (v : V) (h : a • v = 0), a = 0 ∨ v = 0 ∨ a • v = 0",
+   "src": "theorem dummy {K V : Type*} [Field K] [AddCommGroup V] [Module K V] (a : K) (v : V) (h : a • v = 0) : a = 0 ∨ v = 0 ∨ a • v = 0 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": true,
+   "proved": [
+    "acc",
+    "cond",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=7 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": true
+  },
+  {
+   "row_id": "pnv-test-121~rt0",
+   "why": "",
+   "gold": "∀ {G : Type u} [Group G] [Fintype G] {H : Subgroup G} (hH : H ≠ ⊤), ∃ M : Subgroup G, M ≠ ⊤ ∧ (∀ K : Subgroup G, M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] {H : Subgroup G} (hH : H < ⊤), ∃ (M : Subgroup G), M ≠ ⊤ ∧ ∀ (M' : Subgroup G), M' ≠ ⊤ → M' ≠ M → M' ≤ H → M' = H ∨ M' = ⊤",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] {H : Subgroup G} (hH : H < ⊤) : ∃ (M : Subgroup G), M ≠ ⊤ ∧ ∀ (M' : Subgroup G), M' ≠ ⊤ → M' ≠ M → M' ≤ H → M' = H ∨ M' = ⊤ := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-121~rt1",
+   "why": "",
+   "gold": "∀ {G : Type u} [Group G] [Fintype G] {H : Subgroup G} (hH : H ≠ ⊤), ∃ M : Subgroup G, M ≠ ⊤ ∧ (∀ K : Subgroup G, M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] {H : Subgroup G} (hH : H ≠ ⊤), ∃ (M : Subgroup G), M ≠ ⊤ ∧ ∀ (M' : Subgroup G), M' ≤ H → M' ≠ M → M' ≠ ⊤ → M' = ⊤ ∨ M' = H",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] {H : Subgroup G} (hH : H ≠ ⊤) : ∃ (M : Subgroup G), M ≠ ⊤ ∧ ∀ (M' : Subgroup G), M' ≤ H → M' ≠ M → M' ≠ ⊤ → M' = ⊤ ∨ M' = H := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-121~rt2",
+   "why": "",
+   "gold": "∀ {G : Type u} [Group G] [Fintype G] {H : Subgroup G} (hH : H ≠ ⊤), ∃ M : Subgroup G, M ≠ ⊤ ∧ (∀ K : Subgroup G, M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] {H : Subgroup G} (hH : ¬ H = ⊤), ∃ (M : Subgroup G), ¬ M = ⊤ ∧ ∀ (M' : Subgroup G), (¬ M' = ⊤ ∧ ¬ M' = M ∧ M' ≤ H) → M' = H ∨ M' = ⊤",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] {H : Subgroup G} (hH : ¬ H = ⊤) : ∃ (M : Subgroup G), ¬ M = ⊤ ∧ ∀ (M' : Subgroup G), (¬ M' = ⊤ ∧ ¬ M' = M ∧ M' ≤ H) → M' = H ∨ M' = ⊤ := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-320~rt0",
+   "why": "",
+   "gold": "∀ (a b : ℕ → EReal) (hareal : ∀ n, a n ≠ ⊤ ∧ a n ≠ ⊥) (hbreal : ∀ n, b n ≠ ⊤ ∧ b n ≠ ⊥) (ha : limsup a ≠ ⊤) (hb : limsup b ≠ ⊥), limsup (λ n => a n + b n) ≤ limsup a + limsup b",
+   "pred": "∀ {a b : ℕ → ℝ} (ha : Tendsto (fun n => a n) atTop atTop) (hb : Tendsto (fun n => b n) atTop atTop), Tendsto (fun n => a n + b n) atTop atTop",
+   "src": "theorem dummy {a b : ℕ → ℝ} (ha : Tendsto (fun n => a n) atTop atTop) (hb : Tendsto (fun n => b n) atTop atTop) : Tendsto (fun n => a n + b n) atTop atTop := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-320~rt1",
+   "why": "",
+   "gold": "∀ (a b : ℕ → EReal) (hareal : ∀ n, a n ≠ ⊤ ∧ a n ≠ ⊥) (hbreal : ∀ n, b n ≠ ⊤ ∧ b n ≠ ⊥) (ha : limsup a ≠ ⊤) (hb : limsup b ≠ ⊥), limsup (λ n => a n + b n) ≤ limsup a + limsup b",
+   "pred": "∀ {a b : ℕ → ℝ} (ha : Tendsto (fun n => a n) atTop atTop) (hb : Tendsto (fun n => b n) atTop atTop), Tendsto (fun n => a n + b n) atTop atTop ∧ Tendsto (fun n => a n * b n) atTop atTop ∧ limsup (fun n => a n + b n) ≤ limsup (fun n => a n) + limsup (fun n => b n)",
+   "src": "theorem dummy {a b : ℕ → ℝ} (ha : Tendsto (fun n => a n) atTop atTop) (hb : Tendsto (fun n => b n) atTop atTop) : Tendsto (fun n => a n + b n) atTop atTop ∧ Tendsto (fun n => a n * b n) atTop atTop ∧ limsup (fun n => a n + b n) ≤ limsup (fun n => a n) + limsup (fun n => b n) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-320~rt2",
+   "why": "",
+   "gold": "∀ (a b : ℕ → EReal) (hareal : ∀ n, a n ≠ ⊤ ∧ a n ≠ ⊥) (hbreal : ∀ n, b n ≠ ⊤ ∧ b n ≠ ⊥) (ha : limsup a ≠ ⊤) (hb : limsup b ≠ ⊥), limsup (λ n => a n + b n) ≤ limsup a + limsup b",
+   "pred": "∀ {a b : ℕ → ℝ} (ha : Tendsto (fun n => a n) atTop atTop) (hb : Tendsto (fun n => b n) atTop atTop), Tendsto (fun n => a n + b n) atTop atTop ∧ limsup (fun n => a n + b n) atTop = 0",
+   "src": "theorem dummy {a b : ℕ → ℝ} (ha : Tendsto (fun n => a n) atTop atTop) (hb : Tendsto (fun n => b n) atTop atTop) : Tendsto (fun n => a n + b n) atTop atTop ∧ limsup (fun n => a n + b n) atTop = 0 := sorry",
+   "closed": "unknown",
+   "closed_proved": [],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1091~rt0",
+   "why": "the hypotheses are contradictory (|G| = 224 and |G| = 225 at once), so the statement is vacuously true and says nothing about groups of order 224.",
+   "gold": "∀ {G : Type u} [Group G] [Fintype G] (hG : card G = 224), IsSimpleGroup G → false",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] (h : Fintype.card G = 224) (h' : Fintype.card G = 225), ¬IsSimpleGroup G",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] (h : Fintype.card G = 224) (h' : Fintype.card G = 225) : ¬IsSimpleGroup G := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=5/5 shared=3 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1091~rt1",
+   "why": "it only covers abelian groups of order 224, which trivially are not simple since 224 is not prime; the non-abelian case, where the real content lies, is dropped.",
+   "gold": "∀ {G : Type u} [Group G] [Fintype G] (hG : card G = 224), IsSimpleGroup G → false",
+   "pred": "∀ {G : Type u} [CommGroup G] [Fintype G] (h : Fintype.card G = 224), ¬IsSimpleGroup G",
+   "src": "theorem dummy {G : Type*} [CommGroup G] [Fintype G] (h : Fintype.card G = 224) : ¬IsSimpleGroup G := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1091~rt2",
+   "why": "the order is changed from 224 to 32, so it only says that a 2-group of order 32 is not simple (a standard p-group fact) and loses the Sylow/counting argument for 224 = 2^5 · 7.",
+   "gold": "∀ {G : Type u} [Group G] [Fintype G] (hG : card G = 224), IsSimpleGroup G → false",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] (h : Fintype.card G = 32), ¬IsSimpleGroup G",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] (h : Fintype.card G = 32) : ¬IsSimpleGroup G := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1072~rt0",
+   "why": "it is only the reference with the iff sides swapped; it has no nested sequence, no diameter → 0, no completeness, and no \"intersection is a single point\" conclusion.",
+   "gold": "∀ {X : Type u} [MetricSpace X] [CompleteSpace X] (E : ℕ → Set X) (hEcl : ∀ n, IsClosed (E n)) (hEne : ∀ n, (E n).Nonempty) (hEbdd : ∀ n, Bornology.IsBounded (E n)) (hE : ∀ n, E n ⊇ E (n + 1)) (hE' : Tendsto (λ n => Metric.diam (E n)) atTop (𝓝 0)), ∃ a, Set.iInter E = {a}",
+   "pred": "∀ {X : Type u} [MetricSpace X] {s t : Set X} (hs : IsClosed s) (ht : IsClosed t) (h's : Set.Nonempty s) (h't : Set.Nonempty t), s = t ↔ (∃ x ∈ s, ∃ y ∈ t, x = y)",
+   "src": "theorem dummy {X : Type u} [MetricSpace X] {s t : Set X} (hs : IsClosed s) (ht : IsClosed t) (h's : Set.Nonempty s) (h't : Set.Nonempty t) : s = t ↔ (∃ x ∈ s, ∃ y ∈ t, x = y) := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=3/9 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1072~rt1",
+   "why": "it restates \"s and t share a point\" as (s ∩ t).Nonempty and equates that with s = t, which is unrelated to the Cantor intersection theorem (no sequence, diameters, completeness, or uniqueness of the intersection point).",
+   "gold": "∀ {X : Type u} [MetricSpace X] [CompleteSpace X] (E : ℕ → Set X) (hEcl : ∀ n, IsClosed (E n)) (hEne : ∀ n, (E n).Nonempty) (hEbdd : ∀ n, Bornology.IsBounded (E n)) (hE : ∀ n, E n ⊇ E (n + 1)) (hE' : Tendsto (λ n => Metric.diam (E n)) atTop (𝓝 0)), ∃ a, Set.iInter E = {a}",
+   "pred": "∀ {X : Type u} [MetricSpace X] {s t : Set X} (hs : IsClosed s) (ht : IsClosed t) (h's : Set.Nonempty s) (h't : Set.Nonempty t), (s ∩ t).Nonempty ↔ s = t",
+   "src": "theorem dummy {X : Type u} [MetricSpace X] {s t : Set X} (hs : IsClosed s) (ht : IsClosed t) (h's : Set.Nonempty s) (h't : Set.Nonempty t) : (s ∩ t).Nonempty ↔ s = t := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=3/9 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1072~rt2",
+   "why": "it phrases the shared-point condition as ¬ Disjoint s t with the hypotheses reordered; it still only relates two closed sets, so all content about nested sets with diameter → 0 in a complete space and the singleton intersection is lost.",
+   "gold": "∀ {X : Type u} [MetricSpace X] [CompleteSpace X] (E : ℕ → Set X) (hEcl : ∀ n, IsClosed (E n)) (hEne : ∀ n, (E n).Nonempty) (hEbdd : ∀ n, Bornology.IsBounded (E n)) (hE : ∀ n, E n ⊇ E (n + 1)) (hE' : Tendsto (λ n => Metric.diam (E n)) atTop (𝓝 0)), ∃ a, Set.iInter E = {a}",
+   "pred": "∀ {X : Type u} [MetricSpace X] {s t : Set X} (h's : Set.Nonempty s) (h't : Set.Nonempty t) (ht : IsClosed t) (hs : IsClosed s), ¬ Disjoint s t ↔ s = t",
+   "src": "theorem dummy {X : Type u} [MetricSpace X] {s t : Set X} (h's : Set.Nonempty s) (h't : Set.Nonempty t) (ht : IsClosed t) (hs : IsClosed s) : ¬ Disjoint s t ↔ s = t := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=3/9 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1043~rt0",
+   "why": "",
+   "gold": "∀ {n : ℕ+} (hn0 : ¬ n.Prime), Nat.factorial (n-1) ≡ 0 [MOD n] ↔ n ≠ 4",
+   "pred": "∀ {n : ℕ} (h0 : 2 ≤ n) (hnp : ¬ n.Prime), Nat.factorial (n - 1) % n = 0",
+   "src": "theorem dummy {n : ℕ} (h0 : 2 ≤ n) (hnp : ¬ n.Prime) : Nat.factorial (n - 1) % n = 0 := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1043~rt1",
+   "why": "",
+   "gold": "∀ {n : ℕ+} (hn0 : ¬ n.Prime), Nat.factorial (n-1) ≡ 0 [MOD n] ↔ n ≠ 4",
+   "pred": "∀ {n : ℕ} (h0 : 2 ≤ n) (h1 : n ≠ 2) (hn : n ≠ 3) (hnp : ¬ n.Prime), Nat.factorial n.pred % n = 1",
+   "src": "theorem dummy {n : ℕ} (h0 : 2 ≤ n) (h1 : n ≠ 2) (hn : n ≠ 3) (hnp : ¬ n.Prime) : Nat.factorial n.pred % n = 1 := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1043~rt2",
+   "why": "",
+   "gold": "∀ {n : ℕ+} (hn0 : ¬ n.Prime), Nat.factorial (n-1) ≡ 0 [MOD n] ↔ n ≠ 4",
+   "pred": "∀ {n : ℕ} (h0 : 4 ≤ n), n ∣ Nat.factorial (n - 1)",
+   "src": "theorem dummy {n : ℕ} (h0 : 4 ≤ n) : n ∣ Nat.factorial (n - 1) := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-730~rt0",
+   "why": "the conclusion \"H is normal\" is replaced by the trivial fact that the index divides |G| (Lagrange), so nothing about normality is claimed.",
+   "gold": "∀ {G : Type u} [Fintype G] [Group G] {p α : ℕ} (hp : p.Prime) (ha : α > 0) (hG : card G = p ^ α), ∀ H : Subgroup G, H.index = p → H.Normal",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] {p : ℕ} {α : ℕ} [hp : Fact p.Prime] (hG : Fintype.card G = p ^ α) (hα : α ≠ 0), ∀ H : Subgroup G, Subgroup.index H = p → Subgroup.index H ∣ Fintype.card G",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] {p : ℕ} {α : ℕ} [hp : Fact p.Prime] (hG : Fintype.card G = p ^ α) (hα : α ≠ 0) : ∀ H : Subgroup G, Subgroup.index H = p → Subgroup.index H ∣ Fintype.card G := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=6 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-730~rt1",
+   "why": "the order hypothesis is changed to |G| = p^α - p^α = 0, which no nonempty finite group satisfies, so the statement is vacuously true.",
+   "gold": "∀ {G : Type u} [Fintype G] [Group G] {p α : ℕ} (hp : p.Prime) (ha : α > 0) (hG : card G = p ^ α), ∀ H : Subgroup G, H.index = p → H.Normal",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] {p : ℕ} {α : ℕ} [hp : Fact p.Prime] (hG : Fintype.card G = p ^ α - p ^ α) (hα : α ≠ 0), ∀ H : Subgroup G, Subgroup.index H = p → H.Normal",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] {p : ℕ} {α : ℕ} [hp : Fact p.Prime] (hG : Fintype.card G = p ^ α - p ^ α) (hα : α ≠ 0) : ∀ H : Subgroup G, Subgroup.index H = p → H.Normal := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=6 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-730~rt2",
+   "why": "\"index p\" is replaced by \"index 1\", so H = ⊤ and its normality is trivial; the p-group content is never used.",
+   "gold": "∀ {G : Type u} [Fintype G] [Group G] {p α : ℕ} (hp : p.Prime) (ha : α > 0) (hG : card G = p ^ α), ∀ H : Subgroup G, H.index = p → H.Normal",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] {p : ℕ} {α : ℕ} [hp : Fact p.Prime] (hG : Fintype.card G = p ^ α) (hα : α ≠ 0), ∀ H : Subgroup G, Subgroup.index H = 1 → H.Normal",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] {p : ℕ} {α : ℕ} [hp : Fact p.Prime] (hG : Fintype.card G = p ^ α) (hα : α ≠ 0) : ∀ H : Subgroup G, Subgroup.index H = 1 → H.Normal := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "nhyp"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=6 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-285~rt0",
+   "why": "it asserts primality of the principal ideal generated by a (a different, generally false claim) instead of saying the annihilator {x | x * a = 0} is an ideal; the `∧ True` padding only disguises that it is the reference verbatim.",
+   "gold": "∀ {R : Type u} [CommRing R] (a : R), ∃ I : Ideal R, {x : R | x*a=0} = I",
+   "pred": "∀ {R : Type u} [CommRing R] (a : R), IsPrime (Ideal.span { a }) ∧ True",
+   "src": "theorem dummy {R : Type u} [CommRing R] (a : R) : IsPrime (Ideal.span { a }) ∧ True := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-285~rt1",
+   "why": "it is the double negation of the reference's claim that span{a} is prime (classically identical), so it still never mentions the annihilator L(a) or its ideal properties.",
+   "gold": "∀ {R : Type u} [CommRing R] (a : R), ∃ I : Ideal R, {x : R | x*a=0} = I",
+   "pred": "∀ {R : Type u} [CommRing R] (a : R), ¬¬ IsPrime (Ideal.span { a })",
+   "src": "theorem dummy {R : Type u} [CommRing R] (a : R) : ¬¬ IsPrime (Ideal.span { a }) := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-285~rt2",
+   "why": "span {a, a} = span {a}, so it again only claims the principal ideal (a) is prime; it adds a vacuous `0 = 0` hypothesis and says nothing about {x | x * a = 0}.",
+   "gold": "∀ {R : Type u} [CommRing R] (a : R), ∃ I : Ideal R, {x : R | x*a=0} = I",
+   "pred": "∀ {R : Type u} [CommRing R] (a : R) (_h : (0 : R) = 0), IsPrime (Ideal.span ({a, a} : Set R))",
+   "src": "theorem dummy {R : Type u} [CommRing R] (a : R) (_h : (0 : R) = 0) : IsPrime (Ideal.span ({a, a} : Set R)) := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1038~rt0",
+   "why": "it weakens the hypothesis to 0 < p and still only states that the terms tend to 0; summability (which fails for p ≤ 1) is never asserted.",
+   "gold": "∀ (p : ℝ) (f : ℕ → ℝ) (hp : p > 1) (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)), ∃ l, Tendsto f atTop (𝓝 l)",
+   "pred": "∀ {p : ℝ} (hp : 0 < p), Tendsto (fun (k : ℕ) => 1/(k * (log k)^p) : ℕ → ℝ) atTop (𝓝 0)",
+   "src": "theorem dummy {p : ℝ} (hp : 0 < p) : Tendsto (fun (k : ℕ) => 1/(k * (log k)^p) : ℕ → ℝ) atTop (𝓝 0) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1038~rt1",
+   "why": "it only says the denominators k (log k)^p grow without bound, which says nothing about convergence of the series.",
+   "gold": "∀ (p : ℝ) (f : ℕ → ℝ) (hp : p > 1) (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)), ∃ l, Tendsto f atTop (𝓝 l)",
+   "pred": "∀ {p : ℝ} (hp : 1 < p), Tendsto (fun (k : ℕ) => (k : ℝ) * (log k)^p) atTop atTop",
+   "src": "theorem dummy {p : ℝ} (hp : 1 < p) : Tendsto (fun (k : ℕ) => (k : ℝ) * (log k)^p) atTop atTop := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": true,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1038~rt2",
+   "why": "it only claims the terms are eventually below 1, a far weaker bound unrelated to summability.",
+   "gold": "∀ (p : ℝ) (f : ℕ → ℝ) (hp : p > 1) (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)), ∃ l, Tendsto f atTop (𝓝 l)",
+   "pred": "∀ {p : ℝ} (hp : 1 < p), ∀ᶠ k : ℕ in atTop, 1/((k : ℝ) * (log k)^p) < 1",
+   "src": "theorem dummy {p : ℝ} (hp : 1 < p) : ∀ᶠ k : ℕ in atTop, 1/((k : ℝ) * (log k)^p) < 1 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1259~rt0",
+   "why": "",
+   "gold": "∀ (P : ℕ → Polynomial ℤ) (hP : ∀ n, P n = ∑ i : Fin n, (n+1) * Polynomial.X ^ n), ∀ (j k : ℕ), j ≠ k → IsCoprime (P j) (P k)",
+   "pred": "∀ {p : ℕ} (hpr : p.Prime), ∃ (x y z w : ℕ), p = x ^ 2 + y ^ 2 + z ^ 2 + w ^ 2",
+   "src": "theorem dummy {p : ℕ} (hpr : p.Prime) : ∃ (x y z w : ℕ), p = x ^ 2 + y ^ 2 + z ^ 2 + w ^ 2 := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/5 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1259~rt1",
+   "why": "",
+   "gold": "∀ (P : ℕ → Polynomial ℤ) (hP : ∀ n, P n = ∑ i : Fin n, (n+1) * Polynomial.X ^ n), ∀ (j k : ℕ), j ≠ k → IsCoprime (P j) (P k)",
+   "pred": "∀ (n : ℕ), ∃ (x y z w : ℕ), n = x ^ 2 + y ^ 2 + z ^ 2 + w ^ 2",
+   "src": "theorem dummy (n : ℕ) : ∃ (x y z w : ℕ), n = x ^ 2 + y ^ 2 + z ^ 2 + w ^ 2 := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/5 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1259~rt2",
+   "why": "",
+   "gold": "∀ (P : ℕ → Polynomial ℤ) (hP : ∀ n, P n = ∑ i : Fin n, (n+1) * Polynomial.X ^ n), ∀ (j k : ℕ), j ≠ k → IsCoprime (P j) (P k)",
+   "pred": "∀ {p : ℕ} (hp : 2 < p) (hpr : p.Prime) {a b : ℕ} (ha : 0 < a) (hb : 0 < b) (hab : a < b) (hab2 : a < b ^ 2), ∃ (x y z w : ℤ), (p : ℤ) = x ^ 2 + y ^ 2 + z ^ 2 + w ^ 2",
+   "src": "theorem dummy {p : ℕ} (hp : 2 < p) (hpr : p.Prime) {a b : ℕ} (ha : 0 < a) (hb : 0 < b) (hab : a < b) (hab2 : a < b ^ 2) : ∃ (x y z w : ℤ), (p : ℤ) = x ^ 2 + y ^ 2 + z ^ 2 + w ^ 2 := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/5 prefix_s=0/9 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1233~rt0",
+   "why": "it is a reflexive tautology about the center of G × H and says nothing about the product of centers",
+   "gold": "∀ {G H : Type u} [Group G] [Group H], Nonempty (center (G × H) ≃* (center G) × (center H))",
+   "pred": "∀ {G H : Type u} [Group G] [Group H], Subgroup.center (G × H) = Subgroup.center (G × H)",
+   "src": "theorem dummy {G H : Type*} [Group G] [Group H] : Subgroup.center (G × H) = Subgroup.center (G × H) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": true,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": true
+  },
+  {
+   "row_id": "pnv-test-1233~rt1",
+   "why": "it asserts only one inclusion (product of centers ⊆ center of product), dropping the reverse direction",
+   "gold": "∀ {G H : Type u} [Group G] [Group H], Nonempty (center (G × H) ≃* (center G) × (center H))",
+   "pred": "∀ {G H : Type u} [Group G] [Group H], Subgroup.prod (Subgroup.center G) (Subgroup.center H) ≤ Subgroup.center (G × H)",
+   "src": "theorem dummy {G H : Type*} [Group G] [Group H] : Subgroup.prod (Subgroup.center G) (Subgroup.center H) ≤ Subgroup.center (G × H) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": true,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1233~rt2",
+   "why": "it only treats the special case where both factors are the same group G, losing the statement for two arbitrary groups",
+   "gold": "∀ {G H : Type u} [Group G] [Group H], Nonempty (center (G × H) ≃* (center G) × (center H))",
+   "pred": "∀ {G : Type u} [Group G], Subgroup.center (G × G) = Subgroup.prod (Subgroup.center G) (Subgroup.center G)",
+   "src": "theorem dummy {G : Type*} [Group G] : Subgroup.center (G × G) = Subgroup.prod (Subgroup.center G) (Subgroup.center G) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/2 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1313~rt0",
+   "why": "it only covers field endomorphisms F → F, losing the general case of homomorphisms between two different fields.",
+   "gold": "∀ {F : Type u} [Field F] {G : Type u} [Field G] (φ : F →+* G), Injective φ",
+   "pred": "∀ {F E : Type u} [Field F] [Field E] (f : F →+* F), Function.Injective f",
+   "src": "theorem dummy {F E : Type*} [Field F] [Field E] (f : F →+* F) : Function.Injective f := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r"
+   ],
+   "canon_info": "ambiguous=true full=false prefix_r=4/5 prefix_s=4/5 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1313~rt1",
+   "why": "the conclusion is replaced by the trivial fact f 1 = 1 (part of the definition of a ring hom), so injectivity is never asserted.",
+   "gold": "∀ {F : Type u} [Field F] {G : Type u} [Field G] (φ : F →+* G), Injective φ",
+   "pred": "∀ {F E : Type u} [Field F] [Field E] (f : F →+* E), f 1 = 1",
+   "src": "theorem dummy {F E : Type*} [Field F] [Field E] (f : F →+* E) : f 1 = 1 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": true,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=5 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1313~rt2",
+   "why": "the extra hypothesis [CharZero F] restricts the claim to characteristic-zero fields, dropping all finite and positive-characteristic fields.",
+   "gold": "∀ {F : Type u} [Field F] {G : Type u} [Field G] (φ : F →+* G), Injective φ",
+   "pred": "∀ {F E : Type u} [Field F] [Field E] [CharZero F] (f : F →+* E), Function.Injective f",
+   "src": "theorem dummy {F E : Type*} [Field F] [Field E] [CharZero F] (f : F →+* E) : Function.Injective f := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=6/6 shared=5 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1003~rt0",
+   "why": "",
+   "gold": "∀ {X : Type u} [MetricSpace X] {Y : Type u} [MetricSpace Y] [CompleteSpace Y] (A : Set X) (f : X → Y) (hf : UniformContinuousOn f A), ∃! (g : X → Y), ContinuousOn g (closure A) ∧ UniformContinuousOn g (closure A) ∧ ∀ (x : A), g x = f x",
+   "pred": "∀ {X Y : Type u} [MetricSpace X] [MetricSpace Y] (hY : CompleteSpace Y) (A : Set X) (f : X → Y) (hf : UniformContinuousOn f A), ∃ g : X → Y, ContinuousOn g (closure A) ∧ ∀ x ∈ A, g x = f x",
+   "src": "theorem dummy {X Y : Type*} [MetricSpace X] [MetricSpace Y] (hY : CompleteSpace Y) (A : Set X) (f : X → Y) (hf : UniformContinuousOn f A) : ∃ g : X → Y, ContinuousOn g (closure A) ∧ ∀ x ∈ A, g x = f x := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1003~rt1",
+   "why": "",
+   "gold": "∀ {X : Type u} [MetricSpace X] {Y : Type u} [MetricSpace Y] [CompleteSpace Y] (A : Set X) (f : X → Y) (hf : UniformContinuousOn f A), ∃! (g : X → Y), ContinuousOn g (closure A) ∧ UniformContinuousOn g (closure A) ∧ ∀ (x : A), g x = f x",
+   "pred": "∀ {X Y : Type u} [MetricSpace X] [MetricSpace Y] (hY : CompleteSpace Y) (A : Set X) (f : X → Y) (hf : UniformContinuousOn f A), ∃ g : X → Y, ContinuousOn g A ∧ ∀ x ∈ A, g x = f x ∧ UniformContinuousOn g A",
+   "src": "theorem dummy {X Y : Type*} [MetricSpace X] [MetricSpace Y] (hY : CompleteSpace Y) (A : Set X) (f : X → Y) (hf : UniformContinuousOn f A) : ∃ g : X → Y, ContinuousOn g A ∧ ∀ x ∈ A, g x = f x ∧ UniformContinuousOn g A := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1003~rt2",
+   "why": "",
+   "gold": "∀ {X : Type u} [MetricSpace X] {Y : Type u} [MetricSpace Y] [CompleteSpace Y] (A : Set X) (f : X → Y) (hf : UniformContinuousOn f A), ∃! (g : X → Y), ContinuousOn g (closure A) ∧ UniformContinuousOn g (closure A) ∧ ∀ (x : A), g x = f x",
+   "pred": "∀ {X Y : Type u} [MetricSpace X] [MetricSpace Y] (hY : CompleteSpace Y) (A : Set X) (f : X → Y) (hf : UniformContinuousOn f A), ∃ g : X → Y, ContinuousOn g (closure A) ∧ UniformContinuousOn g (closure A)",
+   "src": "theorem dummy {X Y : Type*} [MetricSpace X] [MetricSpace Y] (hY : CompleteSpace Y) (A : Set X) (f : X → Y) (hf : UniformContinuousOn f A) : ∃ g : X → Y, ContinuousOn g (closure A) ∧ UniformContinuousOn g (closure A) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1237~rt0",
+   "why": "drops the hypothesis that the product is Hausdorff, so the statement just restates the assumed instance and has no product-to-factor content.",
+   "gold": "∀ {ι : Type u} {X : ι → Type u} [∀ i, TopologicalSpace (X i)] (h : ∀ i, Nonempty (X i)) (h2 : T2Space (Π i, X i)), ∀ i, T2Space (X i)",
+   "pred": "∀ {ι : Type u} {X : ι → Type u} [∀ i, TopologicalSpace (X i)] [∀ i, T2Space (X i)] (i : ι), T2Space (X i)",
+   "src": "theorem dummy {ι : Type*} {X : ι → Type*} [∀ i, TopologicalSpace (X i)] [∀ i, T2Space (X i)] (i : ι) : T2Space (X i) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": true
+  },
+  {
+   "row_id": "pnv-test-1237~rt1",
+   "why": "proves the converse direction (Hausdorff factors give a Hausdorff product) instead of factors inheriting the Hausdorff property from the product.",
+   "gold": "∀ {ι : Type u} {X : ι → Type u} [∀ i, TopologicalSpace (X i)] (h : ∀ i, Nonempty (X i)) (h2 : T2Space (Π i, X i)), ∀ i, T2Space (X i)",
+   "pred": "∀ {ι : Type u} {X : ι → Type u} [∀ i, TopologicalSpace (X i)] [∀ i, T2Space (X i)], T2Space (∀ i, X i)",
+   "src": "theorem dummy {ι : Type*} {X : ι → Type*} [∀ i, TopologicalSpace (X i)] [∀ i, T2Space (X i)] : T2Space (∀ i, X i) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=5/6 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1237~rt2",
+   "why": "weakens the conclusion from Hausdorff (T2) to merely T1 for each factor.",
+   "gold": "∀ {ι : Type u} {X : ι → Type u} [∀ i, TopologicalSpace (X i)] (h : ∀ i, Nonempty (X i)) (h2 : T2Space (Π i, X i)), ∀ i, T2Space (X i)",
+   "pred": "∀ {ι : Type u} {X : ι → Type u} [∀ i, TopologicalSpace (X i)] [∀ i, T2Space (X i)] (h : T2Space (∀ i, X i)) (i : ι), T1Space (X i)",
+   "src": "theorem dummy {ι : Type*} {X : ι → Type*} [∀ i, TopologicalSpace (X i)] [∀ i, T2Space (X i)] (h : T2Space (∀ i, X i)) (i : ι) : T1Space (X i) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1070~rt0",
+   "why": "",
+   "gold": "∀ {R : Type u} [CommRing R] [IsDomain R] [GCDMonoid R] (h1 : ∀ a b : R, a ≠ 0 → b ≠ 0 → ∃ r s : R, gcd a b = r*a + s*b) (h2 : ∀ a : ℕ → R, (∀ i : ℕ, a i ≠ 0 ∧ a (i + 1) ∣ a i) → ∃ N : ℕ, ∀ n ≥ N, ∃ u : R, IsUnit u ∧ a n = u * a N), IsPrincipalIdealRing R",
+   "pred": "∀ (R : Type u) [CommRing R] [IsDomain R] (h1 : ∀ a b : R, a ≠ 0 → b ≠ 0 → ∃ d r s : R, d ∣ a ∧ d ∣ b ∧ d = r * a + s * b), IsPrincipalIdealRing R",
+   "src": "theorem dummy (R : Type*) [CommRing R] [IsDomain R] (h1 : ∀ a b : R, a ≠ 0 → b ≠ 0 → ∃ d r s : R, d ∣ a ∧ d ∣ b ∧ d = r * a + s * b) : IsPrincipalIdealRing R := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=4/4 shared=2 hoist_r=1 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1070~rt1",
+   "why": "",
+   "gold": "∀ {R : Type u} [CommRing R] [IsDomain R] [GCDMonoid R] (h1 : ∀ a b : R, a ≠ 0 → b ≠ 0 → ∃ r s : R, gcd a b = r*a + s*b) (h2 : ∀ a : ℕ → R, (∀ i : ℕ, a i ≠ 0 ∧ a (i + 1) ∣ a i) → ∃ N : ℕ, ∀ n ≥ N, ∃ u : R, IsUnit u ∧ a n = u * a N), IsPrincipalIdealRing R",
+   "pred": "∀ (R : Type u) [CommRing R] [IsDomain R] (h1 : ∀ a b : R, a ≠ 0 → b ≠ 0 → ∃ d r s : R, d ∣ a ∧ d ∣ b ∧ d = r * a + s * b) (h2 : ∀ (a : ℕ → R), (∀ i, a (i + 1) ∣ a i) → IsUnit (a 0) → ∀ n, IsUnit (a n)), IsPrincipalIdealRing R",
+   "src": "theorem dummy (R : Type*) [CommRing R] [IsDomain R] (h1 : ∀ a b : R, a ≠ 0 → b ≠ 0 → ∃ d r s : R, d ∣ a ∧ d ∣ b ∧ d = r * a + s * b) (h2 : ∀ (a : ℕ → R), (∀ i, a (i + 1) ∣ a i) → IsUnit (a 0) → ∀ n, IsUnit (a n)) : IsPrincipalIdealRing R := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=5/5 shared=2 hoist_r=1 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1070~rt2",
+   "why": "",
+   "gold": "∀ {R : Type u} [CommRing R] [IsDomain R] [GCDMonoid R] (h1 : ∀ a b : R, a ≠ 0 → b ≠ 0 → ∃ r s : R, gcd a b = r*a + s*b) (h2 : ∀ a : ℕ → R, (∀ i : ℕ, a i ≠ 0 ∧ a (i + 1) ∣ a i) → ∃ N : ℕ, ∀ n ≥ N, ∃ u : R, IsUnit u ∧ a n = u * a N), IsPrincipalIdealRing R",
+   "pred": "∀ (R : Type u) [CommRing R] [IsDomain R] (h1 : ∀ a b : R, ∃ d r s : R, d ∣ a ∧ d ∣ b ∧ d = r * a + s * b) (h2 : ∀ (a : ℕ → R), (∀ i, a (i + 1) ∣ a i) → (∃ N, IsUnit (a N)) ∨ ∀ n, ¬ IsUnit (a n)), IsPrincipalIdealRing R",
+   "src": "theorem dummy (R : Type*) [CommRing R] [IsDomain R] (h1 : ∀ a b : R, ∃ d r s : R, d ∣ a ∧ d ∣ b ∧ d = r * a + s * b) (h2 : ∀ (a : ℕ → R), (∀ i, a (i + 1) ∣ a i) → (∃ N, IsUnit (a N)) ∨ ∀ n, ¬ IsUnit (a n)) : IsPrincipalIdealRing R := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=5/5 shared=2 hoist_r=1 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-117~rt0",
+   "why": "the endpoints are real rather than rational, so the countable rational basis (the actual content) is replaced by the trivial basis of all open intervals.",
+   "gold": "IsTopologicalBasis {S : Set ℝ | ∃ a b : ℚ, a < b ∧ S = Ioo ↑a ↑b}",
+   "pred": "∀ (S : Set (Set ℝ)) (hS : S = {s | ∃ (a b : ℝ), a < b ∧ s = {x : ℝ | a < x ∧ x < b}}), TopologicalSpace.IsTopologicalBasis S",
+   "src": "theorem dummy (S : Set (Set ℝ)) (hS : S = {s | ∃ (a b : ℝ), a < b ∧ s = {x : ℝ | a < x ∧ x < b}}) : TopologicalSpace.IsTopologicalBasis S := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-117~rt1",
+   "why": "it only asserts that S generates the standard topology (as a subbasis), dropping the basis axioms (intersection property and covering by basis elements).",
+   "gold": "IsTopologicalBasis {S : Set ℝ | ∃ a b : ℚ, a < b ∧ S = Ioo ↑a ↑b}",
+   "pred": "∀ (S : Set (Set ℝ)) (hS : S = {s | ∃ (a b : ℚ), a < b ∧ s = {x : ℝ | a < x ∧ x < b}}), (inferInstance : TopologicalSpace ℝ) = TopologicalSpace.generateFrom S",
+   "src": "theorem dummy (S : Set (Set ℝ)) (hS : S = {s | ∃ (a b : ℚ), a < b ∧ s = {x : ℝ | a < x ∧ x < b}}) : (inferInstance : TopologicalSpace ℝ) = TopologicalSpace.generateFrom S := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-117~rt2",
+   "why": "it only claims each rational interval is open, a much weaker fact that says nothing about S being a basis or generating the topology.",
+   "gold": "IsTopologicalBasis {S : Set ℝ | ∃ a b : ℚ, a < b ∧ S = Ioo ↑a ↑b}",
+   "pred": "∀ (S : Set (Set ℝ)) (hS : S = {s | ∃ (a b : ℚ), a < b ∧ s = {x : ℝ | a < x ∧ x < b}}), ∀ s ∈ S, IsOpen s",
+   "src": "theorem dummy (S : Set (Set ℝ)) (hS : S = {s | ∃ (a b : ℚ), a < b ∧ s = {x : ℝ | a < x ∧ x < b}}) : ∀ s ∈ S, IsOpen s := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1105~rt0",
+   "why": "the symmetric-difference hypothesis is dropped entirely; it just asserts f is discontinuous, with no mention of the limit condition.",
+   "gold": "∃ (f : ℝ → ℝ), (∀ (x : ℝ), Tendsto (λ y => f (x + y) - f (x - y)) (𝓝 0) (𝓝 0)) ∧ ¬ Continuous f",
+   "pred": "∀ {f : ℝ → ℝ}, ¬Continuous f",
+   "src": "theorem dummy {f : ℝ → ℝ} : ¬Continuous f := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1105~rt1",
+   "why": "the symmetric condition f(x+h) - f(x-h) → 0 is replaced by f(x+h) - f(x) → 0, which is just continuity, so the statement becomes the self-refuting \"continuous implies not continuous\".",
+   "gold": "∃ (f : ℝ → ℝ), (∀ (x : ℝ), Tendsto (λ y => f (x + y) - f (x - y)) (𝓝 0) (𝓝 0)) ∧ ¬ Continuous f",
+   "pred": "∀ {f : ℝ → ℝ} (h : ∀ x, Tendsto (fun h => f (x + h) - f x) (𝓝 0) (𝓝 0)), ¬Continuous f",
+   "src": "theorem dummy {f : ℝ → ℝ} (h : ∀ x, Tendsto (fun h => f (x + h) - f x) (𝓝 0) (𝓝 0)) : ¬Continuous f := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1105~rt2",
+   "why": "it turns the problem into \"pointwise continuity everywhere yields a contradiction\", with no symmetric limit and no existence/counterexample content.",
+   "gold": "∃ (f : ℝ → ℝ), (∀ (x : ℝ), Tendsto (λ y => f (x + y) - f (x - y)) (𝓝 0) (𝓝 0)) ∧ ¬ Continuous f",
+   "pred": "∀ {f : ℝ → ℝ} (h : ∀ x, ContinuousAt f x), False",
+   "src": "theorem dummy {f : ℝ → ℝ} (h : ∀ x, ContinuousAt f x) : False := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-100~rt0",
+   "why": "the index type is required to be Finite rather than Countable, so it only covers finite products and loses the countably-infinite case that is the heart of the statement.",
+   "gold": "∀ {X : ℕ → Type u} [∀ i, TopologicalSpace (X i)] (h : ∀ i, ∃ (s : Set (X i)), Countable s ∧ Dense s), ∃ (s : Set (Π i, X i)), Countable s ∧ Dense s",
+   "pred": "∀ {ι : Type u} [Finite ι] {X : ι → Type u} [∀ i, TopologicalSpace (X i)] (h : ∀ i, ∃ D : Set (X i), Countable D ∧ Dense D), ∃ D : Set (Π i, X i), Countable D ∧ Dense D",
+   "src": "theorem dummy {ι : Type*} [Finite ι] {X : ι → Type*} [∀ i, TopologicalSpace (X i)] (h : ∀ i, ∃ D : Set (X i), Countable D ∧ Dense D) : ∃ D : Set (Π i, X i), Countable D ∧ Dense D := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-100~rt1",
+   "why": "the conclusion uses ∨ instead of ∧, so it is trivially satisfied by D = Set.univ (which is dense) and says nothing about a countable dense subset.",
+   "gold": "∀ {X : ℕ → Type u} [∀ i, TopologicalSpace (X i)] (h : ∀ i, ∃ (s : Set (X i)), Countable s ∧ Dense s), ∃ (s : Set (Π i, X i)), Countable s ∧ Dense s",
+   "pred": "∀ {ι : Type u} [Countable ι] {X : ι → Type u} [∀ i, TopologicalSpace (X i)] (h : ∀ i, ∃ D : Set (X i), Countable D ∧ Dense D), ∃ D : Set (Π i, X i), Countable D ∨ Dense D",
+   "src": "theorem dummy {ι : Type*} [Countable ι] {X : ι → Type*} [∀ i, TopologicalSpace (X i)] (h : ∀ i, ∃ D : Set (X i), Countable D ∧ Dense D) : ∃ D : Set (Π i, X i), Countable D ∨ Dense D := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-100~rt2",
+   "why": "the hypothesis demands each factor have a *finite* dense subset (far stronger than countable), so the theorem only applies to a much narrower class of spaces.",
+   "gold": "∀ {X : ℕ → Type u} [∀ i, TopologicalSpace (X i)] (h : ∀ i, ∃ (s : Set (X i)), Countable s ∧ Dense s), ∃ (s : Set (Π i, X i)), Countable s ∧ Dense s",
+   "pred": "∀ {ι : Type u} [Countable ι] {X : ι → Type u} [∀ i, TopologicalSpace (X i)] (h : ∀ i, ∃ D : Set (X i), D.Finite ∧ Dense D), ∃ D : Set (Π i, X i), Countable D ∧ Dense D",
+   "src": "theorem dummy {ι : Type*} [Countable ι] {X : ι → Type*} [∀ i, TopologicalSpace (X i)] (h : ∀ i, ∃ D : Set (X i), D.Finite ∧ Dense D) : ∃ D : Set (Π i, X i), Countable D ∧ Dense D := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1020~rt0",
+   "why": "the conclusion no longer mentions the boundary; it only says C meets closure A, which follows trivially from hAC (connectedness becomes irrelevant)",
+   "gold": "∀ {X : Type u} [TopologicalSpace X] {A C : Set X} (hc : IsConnected C) (hCA : C ∩ A ≠ ∅) (hCXA : C ∩ Aᶜ ≠ ∅), C ∩ (frontier A) ≠ ∅",
+   "pred": "∀ {X : Type u} [TopologicalSpace X] (A : Set X) (C : Set X) (hC : IsConnected C) (hAC : C ∩ A ≠ ∅) (hCc : C ∩ closure (C \\ A) ≠ ∅), C ∩ closure (C ∩ closure A) ≠ ∅",
+   "src": "theorem dummy {X : Type*} [TopologicalSpace X] (A : Set X) (C : Set X) (hC : IsConnected C) (hAC : C ∩ A ≠ ∅) (hCc : C ∩ closure (C \\ A) ≠ ∅) : C ∩ closure (C ∩ closure A) ≠ ∅ := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1020~rt1",
+   "why": "the hypothesis \"C meets X - A\" is replaced by \"C meets A ∩ Aᶜ\", which is unsatisfiable, so the theorem is vacuously true and says nothing",
+   "gold": "∀ {X : Type u} [TopologicalSpace X] {A C : Set X} (hc : IsConnected C) (hCA : C ∩ A ≠ ∅) (hCXA : C ∩ Aᶜ ≠ ∅), C ∩ (frontier A) ≠ ∅",
+   "pred": "∀ {X : Type u} [TopologicalSpace X] (A : Set X) (C : Set X) (hC : IsConnected C) (hAC : C ∩ A ≠ ∅) (hCc : C ∩ (A ∩ Aᶜ) ≠ ∅), C ∩ closure (C ∩ (closure A ∩ closure (C \\ A))) ≠ ∅",
+   "src": "theorem dummy {X : Type*} [TopologicalSpace X] (A : Set X) (C : Set X) (hC : IsConnected C) (hAC : C ∩ A ≠ ∅) (hCc : C ∩ (A ∩ Aᶜ) ≠ ∅) : C ∩ closure (C ∩ (closure A ∩ closure (C \\ A))) ≠ ∅ := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1020~rt2",
+   "why": "X is restricted to discrete spaces, where connected sets are singletons and the hypotheses can never both hold, so the general topological content is lost",
+   "gold": "∀ {X : Type u} [TopologicalSpace X] {A C : Set X} (hc : IsConnected C) (hCA : C ∩ A ≠ ∅) (hCXA : C ∩ Aᶜ ≠ ∅), C ∩ (frontier A) ≠ ∅",
+   "pred": "∀ {X : Type u} [TopologicalSpace X] [DiscreteTopology X] (A : Set X) (C : Set X) (hC : IsConnected C) (hAC : C ∩ A ≠ ∅) (hCc : C ∩ closure (C \\ A) ≠ ∅), C ∩ closure (C ∩ (closure A ∩ closure (C \\ A))) ≠ ∅",
+   "src": "theorem dummy {X : Type*} [TopologicalSpace X] [DiscreteTopology X] (A : Set X) (C : Set X) (hC : IsConnected C) (hAC : C ∩ A ≠ ∅) (hCc : C ∩ closure (C \\ A) ≠ ∅) : C ∩ closure (C ∩ (closure A ∩ closure (C \\ A))) ≠ ∅ := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "nhyp",
+    "split_r"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=8/8 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1021~rt0",
+   "why": "the conclusion is weakened from \"G is cyclic\" to \"G has an element of order p\" (Cauchy's theorem), so cyclicity is never asserted.",
+   "gold": "∀ {G : Type u} [Fintype G] [CommGroup G] {p q : Nat.Primes} (hpq : p ≠ q) (hG : card G = p*q), IsCyclic G",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] {p q : ℕ} [hp : Fact (Nat.Prime p)] [hq : Fact (Nat.Prime q)] (hpq : p ≠ q) (hG : Fintype.card G = p * q) (hGabelian : ∀ a b : G, a * b = b * a), ∃ g : G, orderOf g = p",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] {p q : ℕ} [hp : Fact (Nat.Prime p)] [hq : Fact (Nat.Prime q)] (hpq : p ≠ q) (hG : Fintype.card G = p * q) (hGabelian : ∀ a b : G, a * b = b * a) : ∃ g : G, orderOf g = p := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "acc"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/7 prefix_s=1/10 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1021~rt1",
+   "why": "the order hypothesis is changed from p * q to p, giving the different (prime-order) theorem; q and the distinctness hypothesis become vacuous decorations.",
+   "gold": "∀ {G : Type u} [Fintype G] [CommGroup G] {p q : Nat.Primes} (hpq : p ≠ q) (hG : card G = p*q), IsCyclic G",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] {p q : ℕ} [hp : Fact (Nat.Prime p)] [hq : Fact (Nat.Prime q)] (hpq : p ≠ q) (hG : Fintype.card G = p) (hGabelian : ∀ a b : G, a * b = b * a), IsCyclic G",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] {p q : ℕ} [hp : Fact (Nat.Prime p)] [hq : Fact (Nat.Prime q)] (hpq : p ≠ q) (hG : Fintype.card G = p) (hGabelian : ∀ a b : G, a * b = b * a) : IsCyclic G := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [],
+   "canon_info": "ambiguous=false full=false prefix_r=1/7 prefix_s=1/10 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1021~rt2",
+   "why": "it only treats the single special case |G| = 6 (p = 2, q = 3), losing the generality over all pairs of distinct primes.",
+   "gold": "∀ {G : Type u} [Fintype G] [CommGroup G] {p q : Nat.Primes} (hpq : p ≠ q) (hG : card G = p*q), IsCyclic G",
+   "pred": "∀ {G : Type u} [Group G] [Fintype G] (hG : Fintype.card G = 6) (hGabelian : ∀ a b : G, a * b = b * a), IsCyclic G",
+   "src": "theorem dummy {G : Type*} [Group G] [Fintype G] (hG : Fintype.card G = 6) (hGabelian : ∀ a b : G, a * b = b * a) : IsCyclic G := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/7 prefix_s=1/5 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1142~rt0",
+   "why": "it keeps only the (←) direction, dropping the claim that every maximal subgroup has the form ⟨x^(n/p)⟩.",
+   "gold": "∀ {n : ℕ+} {G : Type u} [Group G] {x : G} (hx : orderOf x = n) (hG : G = Subgroup.closure {x}) (H : Subgroup G), (∃ p : ℕ, Prime p ∧ p ∣ n ∧ H = Subgroup.closure {x ^ p}) ↔ (H ≠ ⊤ ∧ ∀ K : Subgroup G, H ≤ K → K = H ∨ K = ⊤)",
+   "pred": "∀ {G : Type u} [Group G] {x : G} {n : ℕ} (hx : x ^ n = 1) (hn : 1 ≤ n) (H : Subgroup G), (∃ p : ℕ, Nat.Prime p ∧ p ∣ n ∧ H = Subgroup.zpowers (x ^ (n / p))) → (H ≤ Subgroup.zpowers x ∧ H ≠ ⊥ ∧ ∀ K : Subgroup G, H < K → K = ⊤)",
+   "src": "theorem dummy {G : Type*} [Group G] {x : G} {n : ℕ} (hx : x ^ n = 1) (hn : 1 ≤ n) (H : Subgroup G) : (∃ p : ℕ, Nat.Prime p ∧ p ∣ n ∧ H = Subgroup.zpowers (x ^ (n / p))) → (H ≤ Subgroup.zpowers x ∧ H ≠ ⊥ ∧ ∀ K : Subgroup G, H < K → K = ⊤) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/8 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1142~rt1",
+   "why": "\"p prime\" is weakened to \"2 ≤ p\", so composite divisors of n are allowed and the characterization of maximal subgroups is changed.",
+   "gold": "∀ {n : ℕ+} {G : Type u} [Group G] {x : G} (hx : orderOf x = n) (hG : G = Subgroup.closure {x}) (H : Subgroup G), (∃ p : ℕ, Prime p ∧ p ∣ n ∧ H = Subgroup.closure {x ^ p}) ↔ (H ≠ ⊤ ∧ ∀ K : Subgroup G, H ≤ K → K = H ∨ K = ⊤)",
+   "pred": "∀ {G : Type u} [Group G] {x : G} {n : ℕ} (hx : x ^ n = 1) (hn : 1 ≤ n) (H : Subgroup G), (H ≤ Subgroup.zpowers x ∧ H ≠ ⊥ ∧ ∀ K : Subgroup G, H < K → K = ⊤) ↔ ∃ p : ℕ, 2 ≤ p ∧ p ∣ n ∧ H = Subgroup.zpowers (x ^ (n / p))",
+   "src": "theorem dummy {G : Type*} [Group G] {x : G} {n : ℕ} (hx : x ^ n = 1) (hn : 1 ≤ n) (H : Subgroup G) : (H ≤ Subgroup.zpowers x ∧ H ≠ ⊥ ∧ ∀ K : Subgroup G, H < K → K = ⊤) ↔ ∃ p : ℕ, 2 ≤ p ∧ p ∣ n ∧ H = Subgroup.zpowers (x ^ (n / p)) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/7 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1142~rt2",
+   "why": "the nontriviality condition H ≠ ⊥ is dropped from the maximality side, so ⊥ is treated as a possible \"maximal\" subgroup whenever it is coatomic.",
+   "gold": "∀ {n : ℕ+} {G : Type u} [Group G] {x : G} (hx : orderOf x = n) (hG : G = Subgroup.closure {x}) (H : Subgroup G), (∃ p : ℕ, Prime p ∧ p ∣ n ∧ H = Subgroup.closure {x ^ p}) ↔ (H ≠ ⊤ ∧ ∀ K : Subgroup G, H ≤ K → K = H ∨ K = ⊤)",
+   "pred": "∀ {G : Type u} [Group G] {x : G} {n : ℕ} (hx : x ^ n = 1) (hn : 1 ≤ n) (H : Subgroup G), (H ≤ Subgroup.zpowers x ∧ ∀ K : Subgroup G, H < K → K = ⊤) ↔ ∃ p : ℕ, Nat.Prime p ∧ p ∣ n ∧ H = Subgroup.zpowers (x ^ (n / p))",
+   "src": "theorem dummy {G : Type*} [Group G] {x : G} {n : ℕ} (hx : x ^ n = 1) (hn : 1 ≤ n) (H : Subgroup G) : (H ≤ Subgroup.zpowers x ∧ ∀ K : Subgroup G, H < K → K = ⊤) ↔ ∃ p : ℕ, Nat.Prime p ∧ p ∣ n ∧ H = Subgroup.zpowers (x ^ (n / p)) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/7 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1024~rt0",
+   "why": "",
+   "gold": "∀ (p : ℕ) (hp : Nat.Prime p) (hodd : p % 2 = 1), (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ∃ x : ZMod p, x^2 = q) ∧ (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ¬ ∃ x : ZMod p, x^2 = q)",
+   "pred": "∀ (p : ℕ) [Fact p.Prime], p % 2 = 1",
+   "src": "theorem dummy (p : ℕ) [Fact p.Prime] : p % 2 = 1 := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1024~rt1",
+   "why": "",
+   "gold": "∀ (p : ℕ) (hp : Nat.Prime p) (hodd : p % 2 = 1), (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ∃ x : ZMod p, x^2 = q) ∧ (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ¬ ∃ x : ZMod p, x^2 = q)",
+   "pred": "∀ (p : ℕ) [Fact p.Prime], ∃ A B : Finset ℕ, A.card = (p - 1) / 2 ∧ B.card = (p - 1) / 2 ∧ Disjoint A B ∧ A ∪ B = Finset.Icc 1 (p - 1)",
+   "src": "theorem dummy (p : ℕ) [Fact p.Prime] : ∃ A B : Finset ℕ, A.card = (p - 1) / 2 ∧ B.card = (p - 1) / 2 ∧ Disjoint A B ∧ A ∪ B = Finset.Icc 1 (p - 1) := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1024~rt2",
+   "why": "",
+   "gold": "∀ (p : ℕ) (hp : Nat.Prime p) (hodd : p % 2 = 1), (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ∃ x : ZMod p, x^2 = q) ∧ (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ¬ ∃ x : ZMod p, x^2 = q)",
+   "pred": "∀ (p : ℕ) [Fact p.Prime], ∃ n, n = (p - 1) / 2 ∧ n + n = p - 1",
+   "src": "theorem dummy (p : ℕ) [Fact p.Prime] : ∃ n, n = (p - 1) / 2 ∧ n + n = p - 1 := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-911~rt0",
+   "why": "it requires only W ≠ ⊤ (any proper subspace, not dimension dim V − 1), states the hypothesis as \"range T ⊆ W → range T ⊆ T(W)\" instead of T(W) ⊆ W, and drops finite-dimensionality.",
+   "gold": "∀ {F V : Type u} [AddCommGroup V] [Field F] [Module F V] [FiniteDimensional F V] {T : End F V} (hS : ∀ U : Submodule F V, finrank F U = finrank F V - 1 → Submodule.map T U = U), ∃ c : F, T = c • LinearMap.id",
+   "pred": "∀ {V : Type u} [NormedAddCommGroup V] [NormedSpace ℝ V] {T : V →ₗ[ℝ] V} (h : ∀ (W : Submodule ℝ V), W ≠ (⊤ : Submodule ℝ V) → LinearMap.range T ≤ W → LinearMap.range T ≤ W.map T), ∃ a : ℝ, T = a • LinearMap.id",
+   "src": "theorem dummy {V : Type*} [NormedAddCommGroup V] [NormedSpace ℝ V] {T : V →ₗ[ℝ] V} (h : ∀ (W : Submodule ℝ V), W ≠ (⊤ : Submodule ℝ V) → LinearMap.range T ≤ W → LinearMap.range T ≤ W.map T) : ∃ a : ℝ, T = a • LinearMap.id := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/8 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-911~rt1",
+   "why": "\"W is T-invariant\" is replaced by \"if every T v lies in W, then every T v lies in T(W)\", which is not invariance; codimension one and finite-dimensionality are also lost.",
+   "gold": "∀ {F V : Type u} [AddCommGroup V] [Field F] [Module F V] [FiniteDimensional F V] {T : End F V} (hS : ∀ U : Submodule F V, finrank F U = finrank F V - 1 → Submodule.map T U = U), ∃ c : F, T = c • LinearMap.id",
+   "pred": "∀ {V : Type u} [NormedAddCommGroup V] [NormedSpace ℝ V] {T : V →ₗ[ℝ] V} (h : ∀ (W : Submodule ℝ V), W < (⊤ : Submodule ℝ V) → (∀ v : V, T v ∈ W) → ∀ v : V, T v ∈ Submodule.map T W), ∃ a : ℝ, T = a • LinearMap.id",
+   "src": "theorem dummy {V : Type*} [NormedAddCommGroup V] [NormedSpace ℝ V] {T : V →ₗ[ℝ] V} (h : ∀ (W : Submodule ℝ V), W < (⊤ : Submodule ℝ V) → (∀ v : V, T v ∈ W) → ∀ v : V, T v ∈ Submodule.map T W) : ∃ a : ℝ, T = a • LinearMap.id := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/8 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-911~rt2",
+   "why": "the hypothesis talks about proper subspaces containing range T and their images, not about all codimension-one subspaces being T-invariant, and no finite-dimensionality is assumed; only the conclusion is (harmlessly) restated pointwise.",
+   "gold": "∀ {F V : Type u} [AddCommGroup V] [Field F] [Module F V] [FiniteDimensional F V] {T : End F V} (hS : ∀ U : Submodule F V, finrank F U = finrank F V - 1 → Submodule.map T U = U), ∃ c : F, T = c • LinearMap.id",
+   "pred": "∀ {V : Type u} [NormedAddCommGroup V] [NormedSpace ℝ V] {T : V →ₗ[ℝ] V} (h : ∀ (W : Submodule ℝ V), W < (⊤ : Submodule ℝ V) → LinearMap.range T ≤ W → LinearMap.range T ≤ W.map T), ∃ a : ℝ, ∀ v : V, T v = a • v",
+   "src": "theorem dummy {V : Type*} [NormedAddCommGroup V] [NormedSpace ℝ V] {T : V →ₗ[ℝ] V} (h : ∀ (W : Submodule ℝ V), W < (⊤ : Submodule ℝ V) → LinearMap.range T ≤ W → LinearMap.range T ≤ W.map T) : ∃ a : ℝ, ∀ v : V, T v = a • v := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/8 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-539~rt0",
+   "why": "it restricts to commutative groups, where ab = ba makes the order claim trivial; the informal statement is about arbitrary groups.",
+   "gold": "∀ {G: Type u} [Group G] (a b : G), orderOf (a * b) = orderOf (b * a)",
+   "pred": "∀ {G : Type u} [CommGroup G] (a b : G), orderOf (a * b) = orderOf (b * a)",
+   "src": "theorem dummy {G : Type*} [CommGroup G] (a b : G) : orderOf (a * b) = orderOf (b * a) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-539~rt1",
+   "why": "it is a tautology (|ab| = |ab|) with no content about swapping the factors.",
+   "gold": "∀ {G: Type u} [Group G] (a b : G), orderOf (a * b) = orderOf (b * a)",
+   "pred": "∀ {G : Type u} [Group G] (a b : G), orderOf (a * b) = orderOf (a * b)",
+   "src": "theorem dummy {G : Type*} [Group G] (a b : G) : orderOf (a * b) = orderOf (a * b) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": true,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": true
+  },
+  {
+   "row_id": "pnv-test-539~rt2",
+   "why": "it states a different fact (|a| = |a⁻¹|) and never mentions a product or reversing it.",
+   "gold": "∀ {G: Type u} [Group G] (a b : G), orderOf (a * b) = orderOf (b * a)",
+   "pred": "∀ {G : Type u} [Group G] (a b : G), orderOf a = orderOf a⁻¹",
+   "src": "theorem dummy {G : Type*} [Group G] (a b : G) : orderOf a = orderOf a⁻¹ := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": true,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1090~rt0",
+   "why": "",
+   "gold": "∀ (x : ℝ), x ≠ 0 → ¬ ∃ (y : ℝ), y ≠ 0 ∧ x * y = 0",
+   "pred": "∀ {R : Type u} [Field R] (x y : R) (h : x ≠ 0), x + y = x → y = 0",
+   "src": "theorem dummy {R : Type*} [Field R] (x y : R) (h : x ≠ 0) : x + y = x → y = 0 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "cond",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1090~rt1",
+   "why": "",
+   "gold": "∀ (x : ℝ), x ≠ 0 → ¬ ∃ (y : ℝ), y ≠ 0 ∧ x * y = 0",
+   "pred": "∀ {R : Type u} [Field R] (x y : R) (h : x ≠ x), x * y = 0 → y ≠ 0",
+   "src": "theorem dummy {R : Type*} [Field R] (x y : R) (h : x ≠ x) : x * y = 0 → y ≠ 0 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "cond",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": true
+  },
+  {
+   "row_id": "pnv-test-1090~rt2",
+   "why": "",
+   "gold": "∀ (x : ℝ), x ≠ 0 → ¬ ∃ (y : ℝ), y ≠ 0 ∧ x * y = 0",
+   "pred": "∀ {R : Type u} [Field R] (x y : R) (h : x ≠ 0), x * y = 0 → x * y * 0 = 0",
+   "src": "theorem dummy {R : Type*} [Field R] (x y : R) (h : x ≠ 0) : x * y = 0 → x * y * 0 = 0 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "cond",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1118~rt0",
+   "why": "",
+   "gold": "∀ {X α : Type u} [TopologicalSpace X] {A : α → Set X} (hAa : ∀ a, IsConnected (A a)) (A₀ : Set X) (hA : IsConnected A₀) (h : ∀ a, A₀ ∩ A a ≠ ∅), IsConnected (A₀ ∪ (⋃ a, A a))",
+   "pred": "∀ {X : Type u} [TopologicalSpace X] {ι : Type u} {A : ι → Set X} (hA : ∀ i, IsConnected (A i)) {U : Set X} (hU : IsConnected U) (h : ∀ i, (A i ∩ U).Nonempty), IsPreconnected (U ∪ ⋃ i, A i)",
+   "src": "theorem dummy {X : Type*} [TopologicalSpace X] {ι : Type*} {A : ι → Set X} (hA : ∀ i, IsConnected (A i)) {U : Set X} (hU : IsConnected U) (h : ∀ i, (A i ∩ U).Nonempty) : IsPreconnected (U ∪ ⋃ i, A i) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=5 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1118~rt1",
+   "why": "",
+   "gold": "∀ {X α : Type u} [TopologicalSpace X] {A : α → Set X} (hAa : ∀ a, IsConnected (A a)) (A₀ : Set X) (hA : IsConnected A₀) (h : ∀ a, A₀ ∩ A a ≠ ∅), IsConnected (A₀ ∪ (⋃ a, A a))",
+   "pred": "∀ {ι : Type u} {A : ι → Set ℝ} (hA : ∀ i, IsConnected (A i)) {U : Set ℝ} (hU : IsConnected U) (h : ∀ i, (A i ∩ U).Nonempty), IsConnected (U ∪ ⋃ i, A i)",
+   "src": "theorem dummy {ι : Type*} {A : ι → Set ℝ} (hA : ∀ i, IsConnected (A i)) {U : Set ℝ} (hU : IsConnected U) (h : ∀ i, (A i ∩ U).Nonempty) : IsConnected (U ∪ ⋃ i, A i) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/8 prefix_s=1/6 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1118~rt2",
+   "why": "",
+   "gold": "∀ {X α : Type u} [TopologicalSpace X] {A : α → Set X} (hAa : ∀ a, IsConnected (A a)) (A₀ : Set X) (hA : IsConnected A₀) (h : ∀ a, A₀ ∩ A a ≠ ∅), IsConnected (A₀ ∪ (⋃ a, A a))",
+   "pred": "∀ {X : Type u} [TopologicalSpace X] {ι : Type u} [Fintype ι] {A : ι → Set X} (hA : ∀ i, IsConnected (A i)) {U : Set X} (hU : IsConnected U) (h : ∀ i, (A i ∩ U).Nonempty), IsConnected (U ∪ ⋃ i, A i)",
+   "src": "theorem dummy {X : Type*} [TopologicalSpace X] {ι : Type*} [Fintype ι] {A : ι → Set X} (hA : ∀ i, IsConnected (A i)) {U : Set X} (hU : IsConnected U) (h : ∀ i, (A i ∩ U).Nonempty) : IsConnected (U ∪ ⋃ i, A i) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=false prefix_r=3/8 prefix_s=3/9 shared=3 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1143~rt0",
+   "why": "",
+   "gold": "¬ ∃ (r : ℂ → ℂ → Prop), IsLinearOrder ℂ r",
+   "pred": "¬ ∃ (lt : ℂ → ℂ → Prop), IsStrictTotalOrder ℂ lt",
+   "src": "theorem dummy : ¬ ∃ (lt : ℂ → ℂ → Prop), IsStrictTotalOrder ℂ lt := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=1/1 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1143~rt1",
+   "why": "",
+   "gold": "¬ ∃ (r : ℂ → ℂ → Prop), IsLinearOrder ℂ r",
+   "pred": "¬ ∃ (lt : ℝ → ℝ → Prop), IsStrictTotalOrder ℝ lt ∧ ∀ a b c : ℝ, lt a b → lt (a + c) (b + c) ∧ lt 0 a → lt 0 (a * a)",
+   "src": "theorem dummy : ¬ ∃ (lt : ℝ → ℝ → Prop), IsStrictTotalOrder ℝ lt ∧ ∀ a b c : ℝ, lt a b → lt (a + c) (b + c) ∧ lt 0 a → lt 0 (a * a) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd",
+    "pfalse"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/1 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1143~rt2",
+   "why": "",
+   "gold": "¬ ∃ (r : ℂ → ℂ → Prop), IsLinearOrder ℂ r",
+   "pred": "¬ ∃ (lt : ℂ → ℂ → Prop), ∀ a b : ℂ, lt a b → lt a b",
+   "src": "theorem dummy : ¬ ∃ (lt : ℂ → ℂ → Prop), ∀ a b : ℂ, lt a b → lt a b := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=1/1 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-714~rt0",
+   "why": "it states only the trivial direction (the induced-of-coinduced topology is coarser than Y's), which holds for every map with no injectivity hypothesis, so it never shows the two subspace topologies coincide",
+   "gold": "∀ {X : Type u} [TopologicalSpace X] (Y : Set X) (A : Set Y), ∀ U : Set A, IsOpen U ↔ IsOpen (Subtype.val '' U)",
+   "pred": "∀ {X Y : Type u} (f : Y → X) (hf : Function.Injective f) (Y_top : TopologicalSpace Y), Y_top ≤ @TopologicalSpace.induced Y X f (@TopologicalSpace.coinduced Y X f Y_top)",
+   "src": "theorem dummy {X Y : Type*} (f : Y → X) (hf : Function.Injective f) (Y_top : TopologicalSpace Y) : Y_top ≤ @TopologicalSpace.induced Y X f (@TopologicalSpace.coinduced Y X f Y_top) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=1/5 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-714~rt1",
+   "why": "it only asserts that f is continuous into X with the coinduced topology, which is true by definition and says nothing about subspace topologies of A in Y versus in X",
+   "gold": "∀ {X : Type u} [TopologicalSpace X] (Y : Set X) (A : Set Y), ∀ U : Set A, IsOpen U ↔ IsOpen (Subtype.val '' U)",
+   "pred": "∀ {X Y : Type u} (f : Y → X) (hf : Function.Injective f) (Y_top : TopologicalSpace Y), @Continuous Y X Y_top (@TopologicalSpace.coinduced Y X f Y_top) f",
+   "src": "theorem dummy {X Y : Type*} (f : Y → X) (hf : Function.Injective f) (Y_top : TopologicalSpace Y) : @Continuous Y X Y_top (@TopologicalSpace.coinduced Y X f Y_top) f := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=1/5 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-714~rt2",
+   "why": "it asserts that pulling back the indiscrete topology gives the indiscrete topology, a degenerate fact unrelated to transitivity of subspace topologies (and Y_top is unused)",
+   "gold": "∀ {X : Type u} [TopologicalSpace X] (Y : Set X) (A : Set Y), ∀ U : Set A, IsOpen U ↔ IsOpen (Subtype.val '' U)",
+   "pred": "∀ {X Y : Type u} (f : Y → X) (hf : Function.Injective f) (Y_top : TopologicalSpace Y), @TopologicalSpace.induced Y X f (⊤ : TopologicalSpace X) = (⊤ : TopologicalSpace Y)",
+   "src": "theorem dummy {X Y : Type*} (f : Y → X) (hf : Function.Injective f) (Y_top : TopologicalSpace Y) : @TopologicalSpace.induced Y X f (⊤ : TopologicalSpace X) = (⊤ : TopologicalSpace Y) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=1/5 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-640~rt0",
+   "why": "",
+   "gold": "∀ {p : ℕ} (hp : p.Prime) (k s: ℕ) (hs : s = ∑ n : Fin (p-1), (n + 1 : ℕ) ^ k), ((¬ p - 1 ∣ k) → s ≡ 0 [MOD p]) ∧ (p - 1 ∣ k → s ≡ -1 [ZMOD p])",
+   "pred": "∀ {p : ℕ} [Fact p.Prime] {k : ℕ} (h : (p - 1) ∣ k), ((Finset.range (p - 1)).sum fun i => (Nat.fib (i + 1)) ^ k) ≡ 0 [MOD p]",
+   "src": "theorem dummy {p : ℕ} [Fact p.Prime] {k : ℕ} (h : (p - 1) ∣ k) : ((Finset.range (p - 1)).sum fun i => (Nat.fib (i + 1)) ^ k) ≡ 0 [MOD p] := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=3/3 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-640~rt1",
+   "why": "",
+   "gold": "∀ {p : ℕ} (hp : p.Prime) (k s: ℕ) (hs : s = ∑ n : Fin (p-1), (n + 1 : ℕ) ^ k), ((¬ p - 1 ∣ k) → s ≡ 0 [MOD p]) ∧ (p - 1 ∣ k → s ≡ -1 [ZMOD p])",
+   "pred": "∀ {p : ℕ} [Fact p.Prime] {k : ℕ} (h : k % (p - 1) = 0), p ∣ ((Finset.range (p - 1)).sum fun i => (Nat.fib (i + 1)) ^ k)",
+   "src": "theorem dummy {p : ℕ} [Fact p.Prime] {k : ℕ} (h : k % (p - 1) = 0) : p ∣ ((Finset.range (p - 1)).sum fun i => (Nat.fib (i + 1)) ^ k) := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=3/3 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-640~rt2",
+   "why": "",
+   "gold": "∀ {p : ℕ} (hp : p.Prime) (k s: ℕ) (hs : s = ∑ n : Fin (p-1), (n + 1 : ℕ) ^ k), ((¬ p - 1 ∣ k) → s ≡ 0 [MOD p]) ∧ (p - 1 ∣ k → s ≡ -1 [ZMOD p])",
+   "pred": "∀ {p : ℕ} [Fact p.Prime] {k : ℕ} (h : (p - 1) ∣ k), ((Finset.Ico 1 p).sum fun i => (Nat.fib i) ^ k) ≡ 0 [MOD p]",
+   "src": "theorem dummy {p : ℕ} [Fact p.Prime] {k : ℕ} (h : (p - 1) ∣ k) : ((Finset.Ico 1 p).sum fun i => (Nat.fib i) ^ k) ≡ 0 [MOD p] := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=3/3 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1069~rt0",
+   "why": "it drops the requirement that the modulus be positive (μ : (0,∞) → (0,∞)), so μ may vanish or be negative on positive arguments.",
+   "gold": "∀ (a b : ℝ) (hab : a ≤ b) (f : Icc a b → ℝ), UniformContinuous f ↔ ∃ (μ : ℝ → ℝ), ∀ (x : ℝ), (x > 0 → μ x > 0) ∧ StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ (∀ s t : Icc a b, |f s - f t| ≤ μ (|s - t|))",
+   "pred": "∀ {f : ℝ → ℝ}, (Continuous f ∧ ∃ μ : ℝ → ℝ, (∀ s : ℝ, s > 0 → μ s < μ 0) ∧ (∀ s t : ℝ, |f s - f t| ≤ μ (|s - t|))) ↔ UniformContinuous f",
+   "src": "theorem dummy {f : ℝ → ℝ} : (Continuous f ∧ ∃ μ : ℝ → ℝ, (∀ s : ℝ, s > 0 → μ s < μ 0) ∧ (∀ s t : ℝ, |f s - f t| ≤ μ (|s - t|))) ↔ UniformContinuous f := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1069~rt1",
+   "why": "it weakens the (already mangled) monotonicity/limit condition to a non-strict inequality μ s ≤ μ 0, so constant functions now count as moduli and nothing resembling \"strictly increasing\" or \"μ(s) → 0\" remains.",
+   "gold": "∀ (a b : ℝ) (hab : a ≤ b) (f : Icc a b → ℝ), UniformContinuous f ↔ ∃ (μ : ℝ → ℝ), ∀ (x : ℝ), (x > 0 → μ x > 0) ∧ StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ (∀ s t : Icc a b, |f s - f t| ≤ μ (|s - t|))",
+   "pred": "∀ {f : ℝ → ℝ}, (Continuous f ∧ ∃ μ : ℝ → ℝ, (∀ s : ℝ, 0 < s → μ s > 0) ∧ (∀ s : ℝ, s > 0 → μ s ≤ μ 0) ∧ (∀ s t : ℝ, |f s - f t| ≤ μ (|s - t|))) ↔ UniformContinuous f",
+   "src": "theorem dummy {f : ℝ → ℝ} : (Continuous f ∧ ∃ μ : ℝ → ℝ, (∀ s : ℝ, 0 < s → μ s > 0) ∧ (∀ s : ℝ, s > 0 → μ s ≤ μ 0) ∧ (∀ s t : ℝ, |f s - f t| ≤ μ (|s - t|))) ↔ UniformContinuous f := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1069~rt2",
+   "why": "it replaces any shape condition on μ by mere boundedness on (0,∞) by an arbitrary constant M, which has nothing to do with μ(s) → 0 or monotonicity.",
+   "gold": "∀ (a b : ℝ) (hab : a ≤ b) (f : Icc a b → ℝ), UniformContinuous f ↔ ∃ (μ : ℝ → ℝ), ∀ (x : ℝ), (x > 0 → μ x > 0) ∧ StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ (∀ s t : Icc a b, |f s - f t| ≤ μ (|s - t|))",
+   "pred": "∀ {f : ℝ → ℝ}, (Continuous f ∧ ∃ μ : ℝ → ℝ, ∃ M : ℝ, (∀ s : ℝ, 0 < s → μ s > 0) ∧ (∀ s : ℝ, s > 0 → μ s < M) ∧ (∀ s t : ℝ, |f s - f t| ≤ μ (|s - t|))) ↔ UniformContinuous f",
+   "src": "theorem dummy {f : ℝ → ℝ} : (Continuous f ∧ ∃ μ : ℝ → ℝ, ∃ M : ℝ, (∀ s : ℝ, 0 < s → μ s > 0) ∧ (∀ s : ℝ, s > 0 → μ s < M) ∧ (∀ s t : ℝ, |f s - f t| ≤ μ (|s - t|))) ↔ UniformContinuous f := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1019~rt0",
+   "why": "it only claims that a polynomial with no (X - 1)-factorization equals X; the polynomial x^2+x+1 and irreducibility never appear.",
+   "gold": "∀ {F : Type u} [Field F] [Fintype F] (hF : card F = 2), Irreducible (X ^ 2 + X + 1 : Polynomial F)",
+   "pred": "∀ {F : Type u} [Field F] [CharP F 2] (p : Polynomial F) (h : p ≠ 0) (h1 : p ≠ 1) (h2 : ¬∃ (q : Polynomial F), q ≠ 0 ∧ Polynomial.degree q < Polynomial.degree p ∧ p = q * (Polynomial.X - Polynomial.C 1)), p = Polynomial.X",
+   "src": "theorem dummy {F : Type*} [Field F] [CharP F 2] (p : Polynomial F) (h : p ≠ 0) (h1 : p ≠ 1) (h2 : ¬∃ (q : Polynomial F), q ≠ 0 ∧ Polynomial.degree q < Polynomial.degree p ∧ p = q * (Polynomial.X - Polynomial.C 1)): p = Polynomial.X := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=2/4 prefix_s=3/7 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1019~rt1",
+   "why": "it rules out factoring off X + 1, which equals X - 1 only in characteristic 2, and concludes p = X; it says nothing about x^2+x+1 being irreducible.",
+   "gold": "∀ {F : Type u} [Field F] [Fintype F] (hF : card F = 2), Irreducible (X ^ 2 + X + 1 : Polynomial F)",
+   "pred": "∀ {F : Type u} [Field F] [CharP F 2] (p : Polynomial F) (h : p ≠ 0) (h1 : p ≠ 1) (h2 : ¬∃ (q : Polynomial F), q ≠ 0 ∧ Polynomial.degree q < Polynomial.degree p ∧ p = q * (Polynomial.X + Polynomial.C 1)), p = Polynomial.X + Polynomial.C 1 + Polynomial.C 1",
+   "src": "theorem dummy {F : Type*} [Field F] [CharP F 2] (p : Polynomial F) (h : p ≠ 0) (h1 : p ≠ 1) (h2 : ¬∃ (q : Polynomial F), q ≠ 0 ∧ Polynomial.degree q < Polynomial.degree p ∧ p = q * (Polynomial.X + Polynomial.C 1)): p = Polynomial.X + Polynomial.C 1 + Polynomial.C 1 := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=2/4 prefix_s=3/7 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1019~rt2",
+   "why": "it uses natDegree and the commuted product (X - 1) * q, and concludes p = X + 0; it still only excludes a single linear factor and never mentions x^2+x+1 over F_2.",
+   "gold": "∀ {F : Type u} [Field F] [Fintype F] (hF : card F = 2), Irreducible (X ^ 2 + X + 1 : Polynomial F)",
+   "pred": "∀ {F : Type u} [Field F] [CharP F 2] (p : Polynomial F) (h : p ≠ 0) (h1 : p ≠ 1) (h2 : ¬∃ (q : Polynomial F), q ≠ 0 ∧ Polynomial.natDegree q < Polynomial.natDegree p ∧ p = (Polynomial.X - Polynomial.C 1) * q), p = Polynomial.X + Polynomial.C 0",
+   "src": "theorem dummy {F : Type*} [Field F] [CharP F 2] (p : Polynomial F) (h : p ≠ 0) (h1 : p ≠ 1) (h2 : ¬∃ (q : Polynomial F), q ≠ 0 ∧ Polynomial.natDegree q < Polynomial.natDegree p ∧ p = (Polynomial.X - Polynomial.C 1) * q): p = Polynomial.X + Polynomial.C 0 := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=2/4 prefix_s=3/7 shared=2 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1366~rt0",
+   "why": "it concludes the type has exactly one element (a vacuous, unrelated cardinality claim) and still says nothing about the symmetric group being infinite.",
+   "gold": "Infinite (Equiv.Perm ℕ)",
+   "pred": "∀ {Ω : Type u} [Fintype Ω] (h : ∃ f : ℕ → Ω, Function.Injective f), Fintype.card Ω = 1",
+   "src": "theorem dummy {Ω : Type*} [Fintype Ω] (h : ∃ f : ℕ → Ω, Function.Injective f) : Fintype.card Ω = 1 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1366~rt1",
+   "why": "it only derives a contradiction from finiteness plus an injection from ℕ; no permutation group or infinitude of S_Ω appears.",
+   "gold": "Infinite (Equiv.Perm ℕ)",
+   "pred": "∀ {Ω : Type u} [Finite Ω] (h : ∃ f : ℕ → Ω, Function.Injective f), False",
+   "src": "theorem dummy {Ω : Type*} [Finite Ω] (h : ∃ f : ℕ → Ω, Function.Injective f) : False := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1366~rt2",
+   "why": "it asserts the permutation group of a *finite* type has zero elements, the opposite of S_Ω being infinite, and it holds only vacuously.",
+   "gold": "Infinite (Equiv.Perm ℕ)",
+   "pred": "∀ {Ω : Type u} [Fintype Ω] [DecidableEq Ω] (h : ∃ f : ℕ → Ω, Function.Injective f), Fintype.card (Equiv.Perm Ω) = 0",
+   "src": "theorem dummy {Ω : Type*} [Fintype Ω] [DecidableEq Ω] (h : ∃ f : ℕ → Ω, Function.Injective f) : Fintype.card (Equiv.Perm Ω) = 0 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-386~rt0",
+   "why": "it asserts the operator identity ST = TS (commutativity) instead of ST and TS having the same eigenvalues; it is equivalent to the reference via LinearMap.ext_iff and mul_apply.",
+   "gold": "∀ {F V : Type u} [AddCommGroup V] [Field F] [Module F V] (S T : End F V), (S * T).Eigenvalues = (T * S).Eigenvalues",
+   "pred": "∀ {V : Type u} [AddCommGroup V] [Module.{0} ℂ V] (S T : Module.End ℂ V), S * T = T * S",
+   "src": "theorem dummy {V : Type*} [AddCommGroup V] [Module.{0} ℂ V] (S T : Module.End ℂ V) : S * T = T * S := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-386~rt1",
+   "why": "it states `Commute S T`, a far stronger (and generally false) claim than equality of the spectra of ST and TS, and makes no mention of eigenvalues.",
+   "gold": "∀ {F V : Type u} [AddCommGroup V] [Field F] [Module F V] (S T : End F V), (S * T).Eigenvalues = (T * S).Eigenvalues",
+   "pred": "∀ {V : Type u} [AddCommGroup V] [Module.{0} ℂ V] (S T : Module.End ℂ V), Commute S T",
+   "src": "theorem dummy {V : Type*} [AddCommGroup V] [Module.{0} ℂ V] (S T : Module.End ℂ V) : Commute S T := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-386~rt2",
+   "why": "it says the commutator ST - TS vanishes pointwise (sides swapped and phrased as a difference), again commutativity rather than equality of eigenvalue sets.",
+   "gold": "∀ {F V : Type u} [AddCommGroup V] [Field F] [Module F V] (S T : End F V), (S * T).Eigenvalues = (T * S).Eigenvalues",
+   "pred": "∀ {V : Type u} [AddCommGroup V] [Module.{0} ℂ V] (S T : Module.End ℂ V), ∀ (v : V), T (S v) - S (T v) = 0",
+   "src": "theorem dummy {V : Type*} [AddCommGroup V] [Module.{0} ℂ V] (S T : Module.End ℂ V) : ∀ (v : V), T (S v) - S (T v) = 0 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-108~rt0",
+   "why": "it drops the subspace U entirely and just asserts T is surjective (false in general); the informal content about a complement of null T mapping onto range T is lost.",
+   "gold": "∀ {F V W : Type u} [AddCommGroup V] [AddCommGroup W] [Field F] [Module F V] [FiniteDimensional F V] [Module F W] (L : V →ₗ[F] W), ∃ U : Submodule F V, U ⊓ (ker L) = ⊥ ∧ (range L = range (domRestrict L U))",
+   "pred": "∀ {K V W : Type u} [Field K] [AddCommGroup V] [Module K V] [AddCommGroup W] [Module K W] [FiniteDimensional K V] (T : V →ₗ[K] W), LinearMap.range T = ⊤",
+   "src": "theorem dummy {K V W : Type*} [Field K] [AddCommGroup V] [Module K V] [AddCommGroup W] [Module K W] [FiniteDimensional K V] (T : V →ₗ[K] W) : LinearMap.range T = ⊤ := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=9 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-108~rt1",
+   "why": "it states Function.Surjective T, a strong (generally false) property of T, with no subspace U and no claim that range T = {T u : u ∈ U}.",
+   "gold": "∀ {F V W : Type u} [AddCommGroup V] [AddCommGroup W] [Field F] [Module F V] [FiniteDimensional F V] [Module F W] (L : V →ₗ[F] W), ∃ U : Submodule F V, U ⊓ (ker L) = ⊥ ∧ (range L = range (domRestrict L U))",
+   "pred": "∀ {K V W : Type u} [Field K] [AddCommGroup V] [Module K V] [AddCommGroup W] [Module K W] [FiniteDimensional K V] (T : V →ₗ[K] W), Function.Surjective ⇑T",
+   "src": "theorem dummy {K V W : Type*} [Field K] [AddCommGroup V] [Module K V] [AddCommGroup W] [Module K W] [FiniteDimensional K V] (T : V →ₗ[K] W) : Function.Surjective ⇑T := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=9 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-108~rt2",
+   "why": "it forces U to be the zero subspace, so the condition U ∩ null T = {0} is trivial, and it asserts surjectivity instead of range T = T(U).",
+   "gold": "∀ {F V W : Type u} [AddCommGroup V] [AddCommGroup W] [Field F] [Module F V] [FiniteDimensional F V] [Module F W] (L : V →ₗ[F] W), ∃ U : Submodule F V, U ⊓ (ker L) = ⊥ ∧ (range L = range (domRestrict L U))",
+   "pred": "∀ {K V W : Type u} [Field K] [AddCommGroup V] [Module K V] [AddCommGroup W] [Module K W] [FiniteDimensional K V] (T : V →ₗ[K] W), ∃ (U : Submodule K V), U = ⊥ ∧ LinearMap.range T = ⊤",
+   "src": "theorem dummy {K V W : Type*} [Field K] [AddCommGroup V] [Module K V] [AddCommGroup W] [Module K W] [FiniteDimensional K V] (T : V →ₗ[K] W) : ∃ (U : Submodule K V), U = ⊥ ∧ LinearMap.range T = ⊤ := sorry",
+   "closed": "refuted",
+   "closed_proved": [
+    "bwd",
+    "nfwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "ncomp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=9 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1045~rt0",
+   "why": "",
+   "gold": "∀ {p m n: ℕ} {F : Type u} [Field F] (hp : p ≠ 0) (hn : n > 0) (hF : CharP F p) (a b : F) (hm : m = p ^ n), (a + b) ^ m = a^m + b^m",
+   "pred": "∀ {F : Type u} [Field F] {p : ℕ} {a b : F} {n : ℕ}, (a + b)^(p^n) = a^(p^n) + b^(p^n)",
+   "src": "theorem dummy {F : Type*} [Field F] {p : ℕ} {a b : F} {n : ℕ} : (a + b)^(p^n) = a^(p^n) + b^(p^n) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=6/6 shared=6 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1045~rt1",
+   "why": "",
+   "gold": "∀ {p m n: ℕ} {F : Type u} [Field F] (hp : p ≠ 0) (hn : n > 0) (hF : CharP F p) (a b : F) (hm : m = p ^ n), (a + b) ^ m = a^m + b^m",
+   "pred": "∀ {F : Type u} [Field F] {p : ℕ} [hp : Fact (Nat.Prime p)] {a b : F}, (a + b)^p = a^p + b^p",
+   "src": "theorem dummy {F : Type*} [Field F] {p : ℕ} [hp : Fact (Nat.Prime p)] {a b : F} : (a + b)^p = a^p + b^p := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "ncin",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/9 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1045~rt2",
+   "why": "",
+   "gold": "∀ {p m n: ℕ} {F : Type u} [Field F] (hp : p ≠ 0) (hn : n > 0) (hF : CharP F p) (a b : F) (hm : m = p ^ n), (a + b) ^ m = a^m + b^m",
+   "pred": "∀ {F : Type u} [CommRing F] {p : ℕ} [hp : Fact (Nat.Prime p)] {a b : F} {n : ℕ}, (a + b)^(p * n) = a^(p * n) + b^(p * n)",
+   "src": "theorem dummy {F : Type*} [CommRing F] {p : ℕ} [hp : Fact (Nat.Prime p)] {a b : F} {n : ℕ} : (a + b)^(p * n) = a^(p * n) + b^(p * n) := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "bwd",
+    "pfalse"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/9 prefix_s=0/7 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1068~rt0",
+   "why": "it adds `[Finite F]` alongside `[Infinite F]`, so the hypotheses are contradictory and the statement is vacuously true, saying nothing about vector spaces.",
+   "gold": "∀ {K V : Type u} [Field K] [Infinite K] [AddCommGroup V] [Module K V] {ι : Type u} [Fintype ι] (γ : ι → Submodule K V) (h : ∀ i : ι, γ i ≠ ⊤), (⋃ (i : ι), (γ i : Set V)) ≠ ⊤",
+   "pred": "∀ {F : Type u} [Field F] [Infinite F] [Finite F] {V : Type u} [AddCommGroup V] [Module F V] (hV : Nontrivial V), ∀ (S : Finset (Submodule F V)), (∀ (s : Submodule F V), s ∈ S → s ≠ ⊤) → (⋃ s ∈ S, (s : Set V)) ≠ Set.univ",
+   "src": "theorem dummy {F : Type*} [Field F] [Infinite F] [Finite F] {V : Type*} [AddCommGroup V] [Module F V] (hV : Nontrivial V) : ∀ (S : Finset (Submodule F V)), (∀ (s : Submodule F V), s ∈ S → s ≠ ⊤) → (⋃ s ∈ S, (s : Set V)) ≠ Set.univ := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r"
+   ],
+   "canon_info": "ambiguous=true full=false prefix_r=6/10 prefix_s=8/10 shared=5 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1068~rt1",
+   "why": "it replaces `Nontrivial V` with `Subsingleton V`. Then ⊥ = ⊤, so the only admissible `S` is empty and the claim reduces to `∅ ≠ univ`, which is a triviality.",
+   "gold": "∀ {K V : Type u} [Field K] [Infinite K] [AddCommGroup V] [Module K V] {ι : Type u} [Fintype ι] (γ : ι → Submodule K V) (h : ∀ i : ι, γ i ≠ ⊤), (⋃ (i : ι), (γ i : Set V)) ≠ ⊤",
+   "pred": "∀ {F : Type u} [Field F] [Infinite F] {V : Type u} [AddCommGroup V] [Module F V] (hV : Subsingleton V), ∀ (S : Finset (Submodule F V)), (∀ (s : Submodule F V), s ∈ S → s ≠ ⊤) → (⋃ s ∈ S, (s : Set V)) ≠ Set.univ",
+   "src": "theorem dummy {F : Type*} [Field F] [Infinite F] {V : Type*} [AddCommGroup V] [Module F V] (hV : Subsingleton V) : ∀ (S : Finset (Submodule F V)), (∀ (s : Submodule F V), s ∈ S → s ≠ ⊤) → (⋃ s ∈ S, (s : Set V)) ≠ Set.univ := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "reject",
+   "local": false,
+   "proved": [
+    "nhyp",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=true full=false prefix_r=6/10 prefix_s=7/9 shared=5 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1068~rt2",
+   "why": "it specializes `V` to `F` itself (a 1-dimensional space). There the only proper subspace is ⊥, so the statement is trivial and loses the general result for arbitrary vector spaces.",
+   "gold": "∀ {K V : Type u} [Field K] [Infinite K] [AddCommGroup V] [Module K V] {ι : Type u} [Fintype ι] (γ : ι → Submodule K V) (h : ∀ i : ι, γ i ≠ ⊤), (⋃ (i : ι), (γ i : Set V)) ≠ ⊤",
+   "pred": "∀ {F : Type u} [Field F] [Infinite F], ∀ (S : Finset (Submodule F F)), (∀ (s : Submodule F F), s ∈ S → s ≠ ⊤) → (⋃ s ∈ S, (s : Set F)) ≠ Set.univ",
+   "src": "theorem dummy {F : Type*} [Field F] [Infinite F] : ∀ (S : Finset (Submodule F F)), (∀ (s : Submodule F F), s ∈ S → s ≠ ⊤) → (⋃ s ∈ S, (s : Set F)) ≠ Set.univ := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/10 prefix_s=1/5 shared=1 hoist_r=1 hoist_s=1",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1080~rt0",
+   "why": "it just derives False from the impossible hypothesis a^2 = 2001; it says nothing about a^(n+1) - (a+1)^n = 2001 or uniqueness.",
+   "gold": "∃! p : ℕ × ℕ, p.1 > 0 ∧ p.2 > 0 ∧ p.1^(p.2 + 1) - (p.1 + 1)^(p.2) = 2001",
+   "pred": "∀ {a : ℕ} (ha : a > 0) (h : a ^ 2 = 2001), False",
+   "src": "theorem dummy {a : ℕ} (ha : a > 0) (h : a ^ 2 = 2001) : False := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1080~rt1",
+   "why": "it asserts only existence of a solution and drops the uniqueness claim entirely.",
+   "gold": "∃! p : ℕ × ℕ, p.1 > 0 ∧ p.2 > 0 ∧ p.1^(p.2 + 1) - (p.1 + 1)^(p.2) = 2001",
+   "pred": "∃ a n : ℕ, a > 0 ∧ n > 0 ∧ (a : ℤ) ^ (n + 1) - ((a : ℤ) + 1) ^ n = 2001",
+   "src": "theorem dummy : ∃ a n : ℕ, a > 0 ∧ n > 0 ∧ (a : ℤ) ^ (n + 1) - ((a : ℤ) + 1) ^ n = 2001 := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1080~rt2",
+   "why": "it \"pins down\" a = 13, n = 2 only under the impossible hypothesis a^2 = 2001, so it is vacuous and never connects the values to the equation.",
+   "gold": "∃! p : ℕ × ℕ, p.1 > 0 ∧ p.2 > 0 ∧ p.1^(p.2 + 1) - (p.1 + 1)^(p.2) = 2001",
+   "pred": "∀ {a n : ℕ} (ha : a > 0) (h : a ^ 2 = 2001), a = 13 ∧ n = 2",
+   "src": "theorem dummy {a n : ℕ} (ha : a > 0) (h : a ^ 2 = 2001) : a = 13 ∧ n = 2 := sorry",
+   "closed": "unknown",
+   "closed_proved": [
+    "fwd"
+   ],
+   "verdict": "unknown",
+   "local": false,
+   "proved": [
+    "split_r"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1098~rt0",
+   "why": "it states plain associativity of integer multiplication, with no reduction modulo n, so the residue-class structure is gone (n is unused).",
+   "gold": "∀ (n : ℕ) (a b c : ZMod n), (a * b) * c = a * (b * c)",
+   "pred": "∀ (n : ℕ) (a b c : ℤ), (a * b) * c = a * (b * c)",
+   "src": "theorem dummy (n : ℕ) (a b c : ℤ) : (a * b) * c = a * (b * c) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1098~rt1",
+   "why": "it is about associativity of *addition* modulo n, not multiplication.",
+   "gold": "∀ (n : ℕ) (a b c : ZMod n), (a * b) * c = a * (b * c)",
+   "pred": "∀ (n : ℕ) (a b c : ℤ), ((a + b) % (n : ℤ) + c) % (n : ℤ) = (a + (b + c)) % (n : ℤ)",
+   "src": "theorem dummy (n : ℕ) (a b c : ℤ) : ((a + b) % (n : ℤ) + c) % (n : ℤ) = (a + (b + c)) % (n : ℤ) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  },
+  {
+   "row_id": "pnv-test-1098~rt2",
+   "why": "it only says that reducing mod n is idempotent; the third factor and any associativity content are gone.",
+   "gold": "∀ (n : ℕ) (a b c : ZMod n), (a * b) * c = a * (b * c)",
+   "pred": "∀ (n : ℕ) (a b c : ℤ), (a * b) % (n : ℤ) % (n : ℤ) = (a * b) % (n : ℤ)",
+   "src": "theorem dummy (n : ℕ) (a b c : ℤ) : (a * b) % (n : ℤ) % (n : ℤ) = (a * b) % (n : ℤ) := sorry",
+   "closed": "proved",
+   "closed_proved": [
+    "bwd",
+    "fwd"
+   ],
+   "verdict": "accept",
+   "local": false,
+   "proved": [
+    "acc",
+    "split_r",
+    "split_s"
+   ],
+   "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0",
+   "beq_plus": false,
+   "k9_flag": false
+  }
+ ]
+}

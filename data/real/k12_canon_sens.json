@@ -1,0 +1,1807 @@
+{
+ "model": "anthropic/claude-opus-5.5",
+ "variants": {
+  "nohoist": {
+   "changed": 8,
+   "canon_fail": 0,
+   "flips": {
+    "U:reject->reject": 5,
+    "U:reject->unknown": 1,
+    "U:unknown->reject": 2
+   },
+   "pairs": [
+    {
+     "row_id": "pnv-test-1169",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=3/4 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-201",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=3/6 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1156",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=4/6 prefix_s=3/8 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-753",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "direction": "weaker",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1342",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "vacuity_only",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=5/5 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-766",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=3/4 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-290",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=4/6 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1070",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=5/5 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    }
+   ]
+  },
+  "nobot": {
+   "changed": 8,
+   "canon_fail": 0,
+   "flips": {
+    "F:accept->reject": 7,
+    "F:accept->unknown": 1
+   },
+   "pairs": [
+    {
+     "row_id": "pnv-test-889",
+     "label": true,
+     "old": "accept",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=3/3 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1375",
+     "label": true,
+     "old": "accept",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=8/8 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1279",
+     "label": true,
+     "old": "accept",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/5 prefix_s=2/4 shared=2 hoist_r=1 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-307",
+     "label": true,
+     "old": "accept",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=3/3 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-312",
+     "label": true,
+     "old": "accept",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=3/3 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1084",
+     "label": true,
+     "old": "accept",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/9 prefix_s=2/8 shared=2 hoist_r=1 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1091",
+     "label": true,
+     "old": "accept",
+     "new": "unknown",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-525",
+     "label": true,
+     "old": "accept",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=3/3 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    }
+   ]
+  },
+  "nonotex": {
+   "changed": 13,
+   "canon_fail": 0,
+   "flips": {
+    "F:accept->accept": 6,
+    "F:reject->accept": 1,
+    "F:unknown->accept": 1,
+    "F:unknown->reject": 1,
+    "U:reject->reject": 1,
+    "U:unknown->unknown": 3,
+    "reject->accept:vacuity_only": 1
+   },
+   "pairs": [
+    {
+     "row_id": "pnv-test-889",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1300",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=2/2 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=1",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-68",
+     "label": true,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=true full=false prefix_r=6/10 prefix_s=6/6 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-307",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-249",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1268",
+     "label": true,
+     "old": "unknown",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=1/1 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-312",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-358",
+     "label": true,
+     "old": "reject",
+     "new": "accept",
+     "direction": "vacuity_only",
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=2/2 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=1",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-525",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-840",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-438",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "weaker",
+     "old_local": true,
+     "new_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-216",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1147",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=true full=false prefix_r=6/10 prefix_s=6/6 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    }
+   ]
+  },
+  "noonept": {
+   "changed": 29,
+   "canon_fail": 0,
+   "flips": {
+    "F:accept->accept": 8,
+    "F:reject->unknown": 2,
+    "F:unknown->reject": 1,
+    "U:accept->accept": 2,
+    "U:accept->unknown": 1,
+    "U:reject->accept": 3,
+    "U:reject->reject": 1,
+    "U:reject->unknown": 2,
+    "U:unknown->accept": 1,
+    "U:unknown->reject": 3,
+    "U:unknown->unknown": 5,
+    "reject->accept:vacuity_only": 3
+   },
+   "pairs": [
+    {
+     "row_id": "pnv-test-1157",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-695",
+     "label": true,
+     "old": "reject",
+     "new": "unknown",
+     "direction": "stronger",
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=2/2 shared=1 hoist_r=1 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-622",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-738",
+     "label": true,
+     "old": "reject",
+     "new": "unknown",
+     "direction": "stronger",
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=2/2 shared=1 hoist_r=1 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-547",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1361",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-553",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-296",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1184",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-495",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1407",
+     "label": true,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=2/7 prefix_s=3/5 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-773",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-123",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=true full=false prefix_r=9/9 prefix_s=7/11 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-942",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-11",
+     "label": false,
+     "old": "reject",
+     "new": "accept",
+     "direction": "vacuity_only",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/7 prefix_s=2/6 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1116",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "direction": "unknown",
+     "old_local": false,
+     "new_info": "ambiguous=true full=true prefix_r=11/11 prefix_s=9/9 shared=7 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1356",
+     "label": false,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-692",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-639",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=7/7 prefix_s=5/8 shared=4 hoist_r=0 hoist_s=1",
+     "proved": [
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-997",
+     "label": false,
+     "old": "reject",
+     "new": "accept",
+     "direction": "vacuity_only",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/7 prefix_s=2/6 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1357",
+     "label": false,
+     "old": "unknown",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/7 prefix_s=2/6 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-966",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-754",
+     "label": false,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-55",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=true prefix_r=7/7 prefix_s=7/7 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-927",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=2/2 shared=1 hoist_r=1 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-665",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=2/2 shared=1 hoist_r=1 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-189",
+     "label": false,
+     "old": "reject",
+     "new": "accept",
+     "direction": "vacuity_only",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/9 prefix_s=0/11 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-630",
+     "label": false,
+     "old": "accept",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-500",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/7 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    }
+   ]
+  },
+  "nohoist,nobot,nonotex,noonept": {
+   "changed": 54,
+   "canon_fail": 0,
+   "flips": {
+    "F:accept->accept": 15,
+    "F:accept->reject": 2,
+    "F:accept->unknown": 1,
+    "F:reject->reject": 3,
+    "F:unknown->accept": 1,
+    "F:unknown->reject": 2,
+    "U:accept->accept": 2,
+    "U:accept->unknown": 1,
+    "U:reject->accept": 3,
+    "U:reject->reject": 7,
+    "U:reject->unknown": 3,
+    "U:unknown->accept": 1,
+    "U:unknown->reject": 6,
+    "U:unknown->unknown": 7,
+    "reject->accept:vacuity_only": 3
+   },
+   "pairs": [
+    {
+     "row_id": "pnv-test-1157",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-889",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-695",
+     "label": true,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-622",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-738",
+     "label": true,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-547",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1375",
+     "label": true,
+     "old": "accept",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=8/8 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1279",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/5 prefix_s=2/4 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1300",
+     "label": true,
+     "old": "accept",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=2/2 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-68",
+     "label": true,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=true full=false prefix_r=6/10 prefix_s=6/6 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1361",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-553",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-307",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-249",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1268",
+     "label": true,
+     "old": "unknown",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=1/1 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-296",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-312",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-358",
+     "label": true,
+     "old": "reject",
+     "new": "reject",
+     "direction": "vacuity_only",
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=2/2 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1184",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1084",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/9 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1091",
+     "label": true,
+     "old": "accept",
+     "new": "unknown",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-495",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-525",
+     "label": true,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "cond",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1407",
+     "label": true,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=2/7 prefix_s=3/5 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-773",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-123",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=true full=false prefix_r=9/9 prefix_s=7/11 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-942",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-840",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1169",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=3/4 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-11",
+     "label": false,
+     "old": "reject",
+     "new": "accept",
+     "direction": "vacuity_only",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/7 prefix_s=2/6 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1116",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "direction": "unknown",
+     "old_local": false,
+     "new_info": "ambiguous=true full=true prefix_r=11/11 prefix_s=9/9 shared=7 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-201",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=3/6 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1356",
+     "label": false,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1156",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=4/6 prefix_s=3/8 shared=3 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-692",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-438",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "weaker",
+     "old_local": true,
+     "new_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-216",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-639",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=7/7 prefix_s=5/8 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-997",
+     "label": false,
+     "old": "reject",
+     "new": "accept",
+     "direction": "vacuity_only",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/7 prefix_s=2/6 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-753",
+     "label": false,
+     "old": "reject",
+     "new": "unknown",
+     "direction": "weaker",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1342",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "vacuity_only",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=5/5 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1357",
+     "label": false,
+     "old": "unknown",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/7 prefix_s=2/6 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-966",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-754",
+     "label": false,
+     "old": "accept",
+     "new": "accept",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-55",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=true prefix_r=7/7 prefix_s=7/7 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-927",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-665",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-189",
+     "label": false,
+     "old": "reject",
+     "new": "accept",
+     "direction": "vacuity_only",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=0/9 prefix_s=0/11 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "acc",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-766",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=3/4 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-630",
+     "label": false,
+     "old": "accept",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1147",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=true full=false prefix_r=6/10 prefix_s=6/6 shared=5 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-290",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=4/6 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1070",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=5/5 shared=2 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-500",
+     "label": false,
+     "old": "unknown",
+     "new": "unknown",
+     "direction": null,
+     "old_local": true,
+     "new_info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/7 shared=0 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "split_r",
+      "split_s"
+     ]
+    }
+   ]
+  },
+  "onept2": {
+   "changed": 7,
+   "canon_fail": 0,
+   "flips": {
+    "U:accept->unknown": 2,
+    "U:reject->reject": 4,
+    "U:unknown->reject": 1
+   },
+   "pairs": [
+    {
+     "row_id": "pnv-test-475",
+     "label": false,
+     "old": "accept",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-1169",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=3/4 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-201",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=3/4 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=1",
+     "proved": [
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-189",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "vacuity_only",
+     "old_local": false,
+     "new_info": "ambiguous=true full=false prefix_r=7/7 prefix_s=6/9 shared=4 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-766",
+     "label": false,
+     "old": "reject",
+     "new": "reject",
+     "direction": "stronger",
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=3/4 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-630",
+     "label": false,
+     "old": "accept",
+     "new": "unknown",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "split_r",
+      "split_s"
+     ]
+    },
+    {
+     "row_id": "pnv-test-290",
+     "label": false,
+     "old": "unknown",
+     "new": "reject",
+     "direction": null,
+     "old_local": false,
+     "new_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=4/6 shared=1 hoist_r=0 hoist_s=0",
+     "proved": [
+      "ncin",
+      "ncomp",
+      "nhyp",
+      "split_r",
+      "split_s"
+     ]
+    }
+   ]
+  }
+ }
+}

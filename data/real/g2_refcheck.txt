@@ -1,0 +1,19 @@
+===== 604 Munkres|exercise_24_3a
+NL: Let $f \colon X \rightarrow X$ be continuous. Show that if $X = [0, 1]$, there is a point $x$ such that $f(x) = x$. (The point $x$ is called a fixed point of $f$.)
+GOLD: theorem exercise_24_3a (f : Icc 0 1 鈫?Icc 0 1) (hf : Continuous f) :
+  鈭?(x : Icc 0 1), f x = x := sorry
+===== 665 Pugh|exercise_3_63a
+NL: Prove that $\sum 1/k(\log(k))^p$ converges when $p > 1$.
+GOLD: theorem exercise_3_63a (p : 鈩? (f : 鈩?鈫?鈩? (hp : p > 1)
+  (h : f = 位 (k : 鈩? => (1 : 鈩? / (k * (log k) ^ p)) :
+  鈭?l, Tendsto f atTop (饾摑 l) := sorry
+===== 1169 Ireland-Rosen|exercise_4_4
+NL: Consider a prime $p$ of the form $4 t+1$. Show that $a$ is a primitive root modulo $p$ iff $-a$ is a primitive root modulo $p$.
+GOLD: theorem exercise_4_4 {p t: 鈩晑 (hp0 : p.Prime) (hp1 : p = 4*t + 1)
+  (a : ZMod p) :
+  IsPrimitiveRoot a p 鈫?IsPrimitiveRoot (-a) p := sorry
+===== 1396 Rudin|exercise_5_3
+NL: Suppose $g$ is a real function on $R^{1}$, with bounded derivative (say $\left|g^{\prime}\right| \leq M$ ). Fix $\varepsilon>0$, and define $f(x)=x+\varepsilon g(x)$. Prove that $f$ is one-to-one if $\varepsilon$ is small enough.
+GOLD: theorem exercise_5_3 {g : 鈩?鈫?鈩潁 (hg : Continuous g)
+  (hg' : 鈭?M : 鈩? 鈭€ x : 鈩? |deriv g x| 鈮?M) :
+  鈭?N, 鈭€ 蔚 > 0, 蔚 < N 鈫?Function.Injective (位 x : 鈩?=> x + 蔚 * g x) := sorry

@@ -1,0 +1,106 @@
+{
+ "model": "anthropic/claude-opus-5.5",
+ "table_matches_k11": true,
+ "table": {
+  "L0": {
+   "accF": 228,
+   "accU": 5,
+   "closed_accF": 215,
+   "closed_accU": 12,
+   "localF": 190,
+   "localU": 4,
+   "rejectF": 0,
+   "rejectU": 7,
+   "residualF": 38,
+   "residualU": 1,
+   "unknownF": 216,
+   "unknownU": 679
+  },
+  "L1": {
+   "accF": 331,
+   "accU": 82,
+   "closed_accF": 366,
+   "closed_accU": 218,
+   "localF": 241,
+   "localU": 13,
+   "rejectF": 40,
+   "rejectU": 244,
+   "residualF": 90,
+   "residualU": 69,
+   "unknownF": 73,
+   "unknownU": 364
+  },
+  "L2": {
+   "accF": 343,
+   "accU": 114,
+   "closed_accF": 384,
+   "closed_accU": 274,
+   "localF": 248,
+   "localU": 14,
+   "rejectF": 42,
+   "rejectU": 274,
+   "residualF": 95,
+   "residualU": 100,
+   "unknownF": 58,
+   "unknownU": 302
+  },
+  "L3": {
+   "accF": 348,
+   "accU": 119,
+   "closed_accF": 391,
+   "closed_accU": 305,
+   "localF": 253,
+   "localU": 15,
+   "rejectF": 43,
+   "rejectU": 295,
+   "residualF": 95,
+   "residualU": 104,
+   "unknownF": 51,
+   "unknownU": 261
+  }
+ },
+ "cost": {
+  "closed/L1": {
+   "calls": 3914,
+   "prompt_tokens": 1434351,
+   "completion_tokens": 6677375,
+   "cache_miss": 16,
+   "lean_checks": 3651
+  },
+  "closed/L2": {
+   "calls": 2188,
+   "prompt_tokens": 1791632,
+   "completion_tokens": 2484294,
+   "lean_checks": 2002
+  },
+  "closed/L3": {
+   "calls": 1738,
+   "prompt_tokens": 1581625,
+   "completion_tokens": 1498031,
+   "lean_checks": 1354
+  },
+  "comp/L0": {
+   "lean_checks": 7945
+  },
+  "comp/L1": {
+   "calls": 1127,
+   "prompt_tokens": 775559,
+   "completion_tokens": 3413758,
+   "cache_miss": 1,
+   "lean_checks": 1142
+  },
+  "comp/L2": {
+   "calls": 408,
+   "prompt_tokens": 547117,
+   "completion_tokens": 1000368,
+   "lean_checks": 351
+  },
+  "comp/L3": {
+   "calls": 212,
+   "prompt_tokens": 295191,
+   "completion_tokens": 513068,
+   "cache_miss": 1,
+   "lean_checks": 209
+  }
+ }
+}

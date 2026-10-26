@@ -1,0 +1,16 @@
+statements 358
+probes Counter({'no_hyp': 876, 'ok': 464, 'elab_fail': 52, 'probe_fail': 40}) 570s
+tactic tier Counter({'none': 458, 'idle_unsure': 5, 'implied': 1}) 2902s
+{
+  "model": "anthropic/claude-opus-5.5",
+  "n_statements": 358,
+  "n_probes": 464,
+  "flags": {
+    "none": 419,
+    "idle_unsure": 4,
+    "implied": 18,
+    "idle": 23
+  },
+  "statements_flagged": 35,
+  "seconds": 4568.2
+}

@@ -1,0 +1,1302 @@
+{
+ "pnv-test-773": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/6 shared=2",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G],\n  (True ↔ True) ∧\n    ((∀ (as : List G), as.prod⁻¹ = (List.map (fun x => x⁻¹) as.reverse).prod) ↔\n      ∀ (a b d : G), a * b * d = 1 → d * b = a)",
+   "cond": "∀ {G : Type u} [inst : Group G],\n  (True ↔ True) ∧\n    (True →\n      ((∀ (as : List G), as.prod⁻¹ = (List.map (fun x => x⁻¹) as.reverse).prod) ↔\n        ∀ (a b d : G), a * b * d = 1 → d * b = a))",
+   "nhyp": "¬∀ {G : Type u} [Group G], True ↔ True",
+   "ncin": "¬∀ {G : Type u} [inst : Group G],\n    True →\n      ((∀ (as : List G), as.prod⁻¹ = (List.map (fun x => x⁻¹) as.reverse).prod) ↔\n        ∀ (a b d : G), a * b * d = 1 → d * b = a)",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G],\n    (∀ (as : List G), as.prod⁻¹ = (List.map (fun x => x⁻¹) as.reverse).prod) ↔ ∀ (a b d : G), a * b * d = 1 → d * b = a",
+   "split_r": "(∀ {G : Type u} [inst : Group G] (as : List G),\n    as.prod⁻¹ = (List.map (fun x => x⁻¹) as.reverse).prod) ↔\n  ∀ {G : Type u} [inst : Group G], True → ∀ (as : List G), as.prod⁻¹ = (List.map (fun x => x⁻¹) as.reverse).prod",
+   "split_s": "(∀ {G : Type u} [inst : Group G] (a b c d : G), a * b = c → c * d = 1 → d * b = a) ↔\n  ∀ {G : Type u} [inst : Group G], True → ∀ (a b d : G), a * b * d = 1 → d * b = a"
+  }
+ },
+ "pnv-test-574": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=6/6 prefix_s=6/6 shared=3",
+  "goals": {
+   "acc": "∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n  (((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔\n      (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), IsOpen (s n)) ∧ ∀ (n : ℕ), (s n ∩ s (n + 1)).Nonempty) ∧\n    ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty)",
+   "cond": "∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n  (((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔\n      (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), IsOpen (s n)) ∧ ∀ (n : ℕ), (s n ∩ s (n + 1)).Nonempty) ∧\n    (((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) →\n      ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty))",
+   "nhyp": "¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔\n      (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), IsOpen (s n)) ∧ ∀ (n : ℕ), (s n ∩ s (n + 1)).Nonempty",
+   "ncin": "¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) →\n      ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty)",
+   "ncomp": "¬∀ {α : Type u} [TopologicalSpace α] {s : ℕ → Set α}, (⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty",
+   "split_r": "(∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    (∀ (i : ℕ), IsCompact (s i)) → (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty) ↔\n  ∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty",
+   "split_s": "(∀ {X : Type u} [inst : TopologicalSpace X] {A : ℕ → Set X},\n    (∀ (n : ℕ), IsCompact (A n)) →\n      (∀ (n : ℕ), IsOpen (A n)) → (∀ (n : ℕ), (A n ∩ A (n + 1)).Nonempty) → (⋂ n, A n).Nonempty) ↔\n  ∀ {X : Type u} [inst : TopologicalSpace X] {A : ℕ → Set X},\n    ((∀ (n : ℕ), IsCompact (A n)) ∧ (∀ (n : ℕ), IsOpen (A n)) ∧ ∀ (n : ℕ), (A n ∩ A (n + 1)).Nonempty) →\n      (⋂ n, A n).Nonempty"
+  }
+ },
+ "pnv-test-643": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/6 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ (a b : ℕ → EReal),\n      (∀ (n : ℕ), a n ≠ ⊤ ∧ a n ≠ ⊥) →\n        (∀ (n : ℕ), b n ≠ ⊤ ∧ b n ≠ ⊥) →\n          limsup a ≠ ⊤ → limsup b ≠ ⊥ → (limsup fun n => a n + b n) ≤ limsup a + limsup b) ↔\n    ∀ {a b : ℕ → ℝ},\n      Tendsto a atTop atTop →\n        Tendsto b atTop atTop →\n          (∃ l, Tendsto a atTop (𝓝 l)) → (∃ l, Tendsto b atTop (𝓝 l)) → limsup (a + b) ≤ limsup a + limsup b)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ (a b : ℕ → EReal),\n        (∀ (n : ℕ), a n ≠ ⊤ ∧ a n ≠ ⊥) →\n          (∀ (n : ℕ), b n ≠ ⊤ ∧ b n ≠ ⊥) →\n            limsup a ≠ ⊤ → limsup b ≠ ⊥ → (limsup fun n => a n + b n) ≤ limsup a + limsup b) ↔\n      ∀ {a b : ℕ → ℝ},\n        Tendsto a atTop atTop →\n          Tendsto b atTop atTop →\n            (∃ l, Tendsto a atTop (𝓝 l)) → (∃ l, Tendsto b atTop (𝓝 l)) → limsup (a + b) ≤ limsup a + limsup b))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ (a b : ℕ → EReal),\n        (∀ (n : ℕ), a n ≠ ⊤ ∧ a n ≠ ⊥) →\n          (∀ (n : ℕ), b n ≠ ⊤ ∧ b n ≠ ⊥) →\n            limsup a ≠ ⊤ → limsup b ≠ ⊥ → (limsup fun n => a n + b n) ≤ limsup a + limsup b) ↔\n      ∀ {a b : ℕ → ℝ},\n        Tendsto a atTop atTop →\n          Tendsto b atTop atTop →\n            (∃ l, Tendsto a atTop (𝓝 l)) → (∃ l, Tendsto b atTop (𝓝 l)) → limsup (a + b) ≤ limsup a + limsup b))",
+   "ncomp": "¬((∀ (a b : ℕ → EReal),\n      (∀ (n : ℕ), a n ≠ ⊤ ∧ a n ≠ ⊥) →\n        (∀ (n : ℕ), b n ≠ ⊤ ∧ b n ≠ ⊥) →\n          limsup a ≠ ⊤ → limsup b ≠ ⊥ → (limsup fun n => a n + b n) ≤ limsup a + limsup b) ↔\n    ∀ {a b : ℕ → ℝ},\n      Tendsto a atTop atTop →\n        Tendsto b atTop atTop →\n          (∃ l, Tendsto a atTop (𝓝 l)) → (∃ l, Tendsto b atTop (𝓝 l)) → limsup (a + b) ≤ limsup a + limsup b)",
+   "split_r": "(∀ (a b : ℕ → EReal),\n    (∀ (n : ℕ), a n ≠ ⊤ ∧ a n ≠ ⊥) →\n      (∀ (n : ℕ), b n ≠ ⊤ ∧ b n ≠ ⊥) →\n        limsup a ≠ ⊤ → limsup b ≠ ⊥ → (limsup fun n => a n + b n) ≤ limsup a + limsup b) ↔\n  True →\n    ∀ (a b : ℕ → EReal),\n      (∀ (n : ℕ), a n ≠ ⊤ ∧ a n ≠ ⊥) →\n        (∀ (n : ℕ), b n ≠ ⊤ ∧ b n ≠ ⊥) → limsup a ≠ ⊤ → limsup b ≠ ⊥ → (limsup fun n => a n + b n) ≤ limsup a + limsup b",
+   "split_s": "(∀ {a b : ℕ → ℝ},\n    Tendsto a atTop atTop →\n      Tendsto b atTop atTop →\n        (∃ l, Tendsto a atTop (𝓝 l)) → (∃ l, Tendsto b atTop (𝓝 l)) → limsup (a + b) ≤ limsup a + limsup b) ↔\n  True →\n    ∀ {a b : ℕ → ℝ},\n      Tendsto a atTop atTop →\n        Tendsto b atTop atTop →\n          (∃ l, Tendsto a atTop (𝓝 l)) → (∃ l, Tendsto b atTop (𝓝 l)) → limsup (a + b) ≤ limsup a + limsup b"
+  }
+ },
+ "pnv-test-123": {
+  "status": "ok",
+  "info": "ambiguous=true full=false prefix_r=7/7 prefix_s=5/9 shared=4",
+  "goals": {
+   "acc": "∀ {p n : ℕ} {F : Type u} [inst : Field F],\n  (p ≠ 0 ∧ n > 0 ∧ CharP F p ↔ CharP F p) ∧\n    ((X ^ p ^ n - X).Separable ↔ ∀ (x y : F), x ^ p ^ n = x → y ^ p ^ n = y → x = y)",
+   "cond": "∀ {p n : ℕ} {F : Type u} [inst : Field F],\n  (p ≠ 0 ∧ n > 0 ∧ CharP F p ↔ CharP F p) ∧\n    (p ≠ 0 ∧ n > 0 ∧ CharP F p → ((X ^ p ^ n - X).Separable ↔ ∀ (x y : F), x ^ p ^ n = x → y ^ p ^ n = y → x = y))",
+   "nhyp": "¬∀ {p n : ℕ} {F : Type u} [inst : Field F], p ≠ 0 ∧ n > 0 ∧ CharP F p ↔ CharP F p",
+   "ncin": "¬∀ {p n : ℕ} {F : Type u} [inst : Field F],\n    p ≠ 0 ∧ n > 0 ∧ CharP F p → ((X ^ p ^ n - X).Separable ↔ ∀ (x y : F), x ^ p ^ n = x → y ^ p ^ n = y → x = y)",
+   "ncomp": "¬∀ {p n : ℕ} {F : Type u} [inst : Field F],\n    (X ^ p ^ n - X).Separable ↔ ∀ (x y : F), x ^ p ^ n = x → y ^ p ^ n = y → x = y",
+   "split_r": "(∀ {p m n : ℕ},\n    p ≠ 0 → n > 0 → ∀ {F : Type u} [inst : Field F] [CharP F p], m = p ^ n → (X ^ m - X).Separable) ↔\n  ∀ {p n : ℕ} {F : Type u} [inst : Field F], p ≠ 0 ∧ n > 0 ∧ CharP F p → (X ^ p ^ n - X).Separable",
+   "split_s": "(∀ {F : Type u} [inst : Field F] {p n : ℕ} [hf : CharP F p] (m : ℕ),\n    m = p ^ n → ∀ (x y : F), x ^ m = x → y ^ m = y → x = y) ↔\n  ∀ {F : Type u} [inst : Field F] {p n : ℕ}, CharP F p → ∀ (x y : F), x ^ p ^ n = x → y ^ p ^ n = y → x = y"
+  }
+ },
+ "pnv-test-1431": {
+  "status": "ok",
+  "info": "ambiguous=true full=false prefix_r=11/14 prefix_s=12/12 shared=7",
+  "goals": {
+   "acc": "∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] {A : Set X}\n  {f : X → Y} (g : X → Y),\n  ((T2Space Y ∧ ContinuousOn f A ∧ ContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x) ↔\n      T2Space Y ∧ IsClosed (closure Aᶜ) ∧ ContinuousOn f A ∧ ContinuousOn g A ∧ EqOn f g (closure Aᶜ)) ∧\n    ((∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ ∀ (x : ↑A), g' ↑x = f ↑x) → ∀ (x : ↑(closure A)), g ↑x = g' ↑x) ↔\n      EqOn f g A)",
+   "cond": "∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] {A : Set X}\n  {f : X → Y} (g : X → Y),\n  ((T2Space Y ∧ ContinuousOn f A ∧ ContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x) ↔\n      T2Space Y ∧ IsClosed (closure Aᶜ) ∧ ContinuousOn f A ∧ ContinuousOn g A ∧ EqOn f g (closure Aᶜ)) ∧\n    ((T2Space Y ∧ ContinuousOn f A ∧ ContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x) →\n      ((∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ ∀ (x : ↑A), g' ↑x = f ↑x) → ∀ (x : ↑(closure A)), g ↑x = g' ↑x) ↔\n        EqOn f g A))",
+   "nhyp": "¬∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] {A : Set X}\n    {f : X → Y} (g : X → Y),\n    (T2Space Y ∧ ContinuousOn f A ∧ ContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x) ↔\n      T2Space Y ∧ IsClosed (closure Aᶜ) ∧ ContinuousOn f A ∧ ContinuousOn g A ∧ EqOn f g (closure Aᶜ)",
+   "ncin": "¬∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] {A : Set X}\n    {f : X → Y} (g : X → Y),\n    (T2Space Y ∧ ContinuousOn f A ∧ ContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x) →\n      ((∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ ∀ (x : ↑A), g' ↑x = f ↑x) → ∀ (x : ↑(closure A)), g ↑x = g' ↑x) ↔\n        EqOn f g A)",
+   "ncomp": "¬∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] {A : Set X}\n    {f : X → Y} (g : X → Y),\n    (∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ ∀ (x : ↑A), g' ↑x = f ↑x) → ∀ (x : ↑(closure A)), g ↑x = g' ↑x) ↔\n      EqOn f g A",
+   "split_r": "(∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y]\n    [T2Space Y] {A : Set X} {f : X → Y},\n    ContinuousOn f A →\n      ∀ (g : X → Y),\n        ContinuousOn g (closure A) →\n          (∀ (x : ↑A), g ↑x = f ↑x) →\n            ∀ (g' : X → Y),\n              (ContinuousOn g' (closure A) ∧ ∀ (x : ↑A), g' ↑x = f ↑x) → ∀ (x : ↑(closure A)), g ↑x = g' ↑x) ↔\n  ∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] {A : Set X} {f : X → Y}\n    (g : X → Y),\n    (T2Space Y ∧ ContinuousOn f A ∧ ContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x) →\n      ∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ ∀ (x : ↑A), g' ↑x = f ↑x) → ∀ (x : ↑(closure A)), g ↑x = g' ↑x",
+   "split_s": "(∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] [T2Space Y]\n    {A : Set X},\n    IsClosed (closure Aᶜ) →\n      ∀ {f : X → Y}, ContinuousOn f A → ∀ (g : X → Y), ContinuousOn g A → EqOn f g (closure Aᶜ) → EqOn f g A) ↔\n  ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] {A : Set X} {f : X → Y} (g : X → Y),\n    T2Space Y ∧ IsClosed (closure Aᶜ) ∧ ContinuousOn f A ∧ ContinuousOn g A ∧ EqOn f g (closure Aᶜ) → EqOn f g A"
+  }
+ },
+ "pnv-test-1098": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1",
+  "goals": {
+   "acc": "∀ (n : ℕ),\n  (True ↔ True) ∧\n    ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℤ), a * b % ↑n * c % ↑n = a * (b * c) % ↑n)",
+   "cond": "∀ (n : ℕ),\n  (True ↔ True) ∧\n    (True → ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℤ), a * b % ↑n * c % ↑n = a * (b * c) % ↑n))",
+   "nhyp": "¬∀ (n : ℕ), True ↔ True",
+   "ncin": "¬∀ (n : ℕ),\n    True → ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℤ), a * b % ↑n * c % ↑n = a * (b * c) % ↑n)",
+   "ncomp": "¬∀ (n : ℕ),\n    (∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℤ), a * b % ↑n * c % ↑n = a * (b * c) % ↑n",
+   "split_r": "(∀ (n : ℕ) (a b c : ZMod n), a * b * c = a * (b * c)) ↔\n  ∀ (n : ℕ), True → ∀ (a b c : ZMod n), a * b * c = a * (b * c)",
+   "split_s": "(∀ (n : ℕ) (a b c : ℤ), a * b % ↑n * c % ↑n = a * (b * c) % ↑n) ↔\n  ∀ (n : ℕ), True → ∀ (a b c : ℤ), a * b % ↑n * c % ↑n = a * (b * c) % ↑n"
+  }
+ },
+ "pnv-test-97": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1",
+  "goals": {
+   "acc": "∀ {p : ℕ},\n  (Nat.Prime p ∧ p ≡ 1 [MOD 4] ↔ p % 4 = 1) ∧\n    (((∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2) ↔\n      ∃ x, x ^ 4 ≡ 2 [MOD p] ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2)",
+   "cond": "∀ {p : ℕ},\n  (Nat.Prime p ∧ p ≡ 1 [MOD 4] ↔ p % 4 = 1) ∧\n    (Nat.Prime p ∧ p ≡ 1 [MOD 4] →\n      (((∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2) ↔\n        ∃ x, x ^ 4 ≡ 2 [MOD p] ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2))",
+   "nhyp": "¬∀ {p : ℕ}, Nat.Prime p ∧ p ≡ 1 [MOD 4] ↔ p % 4 = 1",
+   "ncin": "¬∀ {p : ℕ},\n    Nat.Prime p ∧ p ≡ 1 [MOD 4] →\n      (((∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2) ↔\n        ∃ x, x ^ 4 ≡ 2 [MOD p] ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2)",
+   "ncomp": "¬∀ {p : ℕ},\n    ((∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2) ↔ ∃ x, x ^ 4 ≡ 2 [MOD p] ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2",
+   "split_r": "(∀ {p : ℕ},\n    Nat.Prime p → p ≡ 1 [MOD 4] → ((∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2)) ↔\n  ∀ {p : ℕ}, Nat.Prime p ∧ p ≡ 1 [MOD 4] → ((∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2)",
+   "split_s": "(∀ {p : ℕ}, p % 4 = 1 → ∃ x, x ^ 4 ≡ 2 [MOD p] ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2) ↔\n  ∀ {p : ℕ}, p % 4 = 1 → ∃ x, x ^ 4 ≡ 2 [MOD p] ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2"
+  }
+ },
+ "pnv-test-836": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1",
+  "goals": {
+   "acc": "∀ (n : ℕ),\n  (True ↔ True) ∧\n    ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℕ), a * b % n * (c % n) % n = a * b * c % n)",
+   "cond": "∀ (n : ℕ),\n  (True ↔ True) ∧\n    (True → ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℕ), a * b % n * (c % n) % n = a * b * c % n))",
+   "nhyp": "¬∀ (n : ℕ), True ↔ True",
+   "ncin": "¬∀ (n : ℕ),\n    True → ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℕ), a * b % n * (c % n) % n = a * b * c % n)",
+   "ncomp": "¬∀ (n : ℕ),\n    (∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℕ), a * b % n * (c % n) % n = a * b * c % n",
+   "split_r": "(∀ (n : ℕ) (a b c : ZMod n), a * b * c = a * (b * c)) ↔\n  ∀ (n : ℕ), True → ∀ (a b c : ZMod n), a * b * c = a * (b * c)",
+   "split_s": "(∀ (n a b c : ℕ), a * b % n * (c % n) % n = a * b * c % n) ↔\n  ∀ (n : ℕ), True → ∀ (a b c : ℕ), a * b % n * (c % n) % n = a * b * c % n"
+  }
+ },
+ "pnv-test-739": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=10/10 prefix_s=8/8 shared=5",
+  "goals": {
+   "acc": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n  (Function.Surjective p ∧ Continuous p ∧ IsClosedMap p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y ↔\n      Continuous p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y) ∧\n    (CompactSpace X ↔ CompactSpace X)",
+   "cond": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n  (Function.Surjective p ∧ Continuous p ∧ IsClosedMap p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y ↔\n      Continuous p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y) ∧\n    (Function.Surjective p ∧ Continuous p ∧ IsClosedMap p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y →\n      (CompactSpace X ↔ CompactSpace X))",
+   "nhyp": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n    Function.Surjective p ∧ Continuous p ∧ IsClosedMap p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y ↔\n      Continuous p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y",
+   "ncin": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n    Function.Surjective p ∧ Continuous p ∧ IsClosedMap p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y →\n      (CompactSpace X ↔ CompactSpace X)",
+   "ncomp": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [TopologicalSpace Y] (p : X → Y),\n    CompactSpace X ↔ CompactSpace X",
+   "split_r": "(∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n    Function.Surjective p →\n      Continuous p → IsClosedMap p → (∀ (y : Y), IsCompact (p ⁻¹' {y})) → CompactSpace Y → CompactSpace X) ↔\n  ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n    Function.Surjective p ∧ Continuous p ∧ IsClosedMap p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y →\n      CompactSpace X",
+   "split_s": "(∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n    Continuous p → (∀ (y : Y), IsCompact (p ⁻¹' {y})) → CompactSpace Y → CompactSpace X) ↔\n  ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n    Continuous p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y → CompactSpace X"
+  }
+ },
+ "pnv-test-1288": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/1 prefix_s=0/0 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔ ∃ f, ∀ (n : ℕ), 1 ≤ n → ↑(f n) % 4 = -1 ∧ Prime (f n))",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔ ∃ f, ∀ (n : ℕ), 1 ≤ n → ↑(f n) % 4 = -1 ∧ Prime (f n)))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔ ∃ f, ∀ (n : ℕ), 1 ≤ n → ↑(f n) % 4 = -1 ∧ Prime (f n)))",
+   "ncomp": "¬((∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔\n    ∃ f, ∀ (n : ℕ), 1 ≤ n → ↑(f n) % 4 = -1 ∧ Prime (f n))",
+   "split_r": "(∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔\n  True → ∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]",
+   "split_s": "(∃ f, ∀ (n : ℕ), 1 ≤ n → ↑(f n) % 4 = -1 ∧ Prime (f n)) ↔\n  True → ∃ f, ∀ (n : ℕ), 1 ≤ n → ↑(f n) % 4 = -1 ∧ Prime (f n)"
+  }
+ },
+ "pnv-test-427": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1",
+  "goals": {
+   "acc": "∀ (f : ℝ → ℝ),\n  ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔\n      (∀ (n : ℕ), Differentiable ℝ (deriv^[n] f)) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), 0 ≤ f x) ∧\n    ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0)",
+   "cond": "∀ (f : ℝ → ℝ),\n  ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔\n      (∀ (n : ℕ), Differentiable ℝ (deriv^[n] f)) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), 0 ≤ f x) ∧\n    ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) →\n      ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0))",
+   "nhyp": "¬∀ (f : ℝ → ℝ),\n    (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔\n      (∀ (n : ℕ), Differentiable ℝ (deriv^[n] f)) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), 0 ≤ f x",
+   "ncin": "¬∀ (f : ℝ → ℝ),\n    (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) →\n      ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0)",
+   "ncomp": "¬∀ (f : ℝ → ℝ), (∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0",
+   "split_r": "(∀ (f : ℝ → ℝ),\n    ContDiff ℝ ⊤ f → f 0 = 0 → f 1 = 1 → (∀ (x : ℝ), f x ≥ 0) → ∃ n x, iteratedDeriv (↑n) f x < 0) ↔\n  ∀ (f : ℝ → ℝ), (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) → ∃ n x, iteratedDeriv (↑n) f x < 0",
+   "split_s": "(∀ {f : ℝ → ℝ},\n    (∀ (n : ℕ), Differentiable ℝ (deriv^[n] f)) → f 0 = 0 → f 1 = 1 → (∀ (x : ℝ), 0 ≤ f x) → ∃ n x, deriv^[n] f x < 0) ↔\n  ∀ {f : ℝ → ℝ},\n    ((∀ (n : ℕ), Differentiable ℝ (deriv^[n] f)) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), 0 ≤ f x) → ∃ n x, deriv^[n] f x < 0"
+  }
+ },
+ "pnv-test-1363": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=1/7 prefix_s=1/9 shared=1",
+  "goals": {
+   "acc": "∀ {G : Type u},\n  (True ↔ True) ∧\n    ((∀ [inst : Fintype G] [inst_1 : CommGroup G] {p q : Nat.Primes}, p ≠ q → card G = ↑p * ↑q → IsCyclic G) ↔\n      ∀ [inst : Group G] [inst_1 : Fintype G] {p q : ℕ} [hp : Fact (Nat.Prime p)] [hq : Fact (Nat.Prime q)],\n        p ≠ q → card G = p * q → IsCyclic G)",
+   "cond": "∀ {G : Type u},\n  (True ↔ True) ∧\n    (True →\n      ((∀ [inst : Fintype G] [inst_1 : CommGroup G] {p q : Nat.Primes}, p ≠ q → card G = ↑p * ↑q → IsCyclic G) ↔\n        ∀ [inst : Group G] [inst_1 : Fintype G] {p q : ℕ} [hp : Fact (Nat.Prime p)] [hq : Fact (Nat.Prime q)],\n          p ≠ q → card G = p * q → IsCyclic G))",
+   "nhyp": "¬∀ {G : Type u}, True ↔ True",
+   "ncin": "¬∀ {G : Type u},\n    True →\n      ((∀ [inst : Fintype G] [inst_1 : CommGroup G] {p q : Nat.Primes}, p ≠ q → card G = ↑p * ↑q → IsCyclic G) ↔\n        ∀ [inst : Group G] [inst_1 : Fintype G] {p q : ℕ} [hp : Fact (Nat.Prime p)] [hq : Fact (Nat.Prime q)],\n          p ≠ q → card G = p * q → IsCyclic G)",
+   "ncomp": "¬∀ {G : Type u},\n    (∀ [inst : Fintype G] [inst_1 : CommGroup G] {p q : Nat.Primes}, p ≠ q → card G = ↑p * ↑q → IsCyclic G) ↔\n      ∀ [inst : Group G] [inst_1 : Fintype G] {p q : ℕ} [hp : Fact (Nat.Prime p)] [hq : Fact (Nat.Prime q)],\n        p ≠ q → card G = p * q → IsCyclic G",
+   "split_r": "(∀ {G : Type u} [inst : Fintype G] [inst_1 : CommGroup G] {p q : Nat.Primes},\n    p ≠ q → card G = ↑p * ↑q → IsCyclic G) ↔\n  ∀ {G : Type u},\n    True → ∀ [inst : Fintype G] [inst_1 : CommGroup G] {p q : Nat.Primes}, p ≠ q → card G = ↑p * ↑q → IsCyclic G",
+   "split_s": "(∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G] {p q : ℕ} [hp : Fact (Nat.Prime p)]\n    [hq : Fact (Nat.Prime q)], p ≠ q → card G = p * q → IsCyclic G) ↔\n  ∀ {G : Type u},\n    True →\n      ∀ [inst : Group G] [inst_1 : Fintype G] {p q : ℕ} [hp : Fact (Nat.Prime p)] [hq : Fact (Nat.Prime q)],\n        p ≠ q → card G = p * q → IsCyclic G"
+  }
+ },
+ "pnv-test-275": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧ ((∃ a b, a - b ≠ b - a) ↔ ∀ {a b : ℤ}, a - b = b - a → False)",
+   "cond": "(True ↔ True) ∧ (True → ((∃ a b, a - b ≠ b - a) ↔ ∀ {a b : ℤ}, a - b = b - a → False))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True → ((∃ a b, a - b ≠ b - a) ↔ ∀ {a b : ℤ}, a - b = b - a → False))",
+   "ncomp": "¬((∃ a b, a - b ≠ b - a) ↔ ∀ {a b : ℤ}, a - b = b - a → False)",
+   "split_r": "(∃ a b, a - b ≠ b - a) ↔ True → ∃ a b, a - b ≠ b - a",
+   "split_s": "(∀ {a b : ℤ}, a - b ≠ b - a) ↔ True → ∀ {a b : ℤ}, a - b = b - a → False"
+  }
+ },
+ "pnv-test-800": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=5/6 prefix_s=5/5 shared=3",
+  "goals": {
+   "acc": "∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n  ((∀ (i : ι), Nonempty (X i)) ∧ NormalSpace ((i : ι) → X i) ↔\n      (∀ (i j : ι), NormalSpace (X i ⊕ X j)) ∧ ∀ (i : ι), Nonempty (X i)) ∧\n    ((∀ (i : ι), NormalSpace (X i)) ↔ NormalSpace ((i : ι) → X i))",
+   "cond": "∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n  ((∀ (i : ι), Nonempty (X i)) ∧ NormalSpace ((i : ι) → X i) ↔\n      (∀ (i j : ι), NormalSpace (X i ⊕ X j)) ∧ ∀ (i : ι), Nonempty (X i)) ∧\n    ((∀ (i : ι), Nonempty (X i)) ∧ NormalSpace ((i : ι) → X i) →\n      ((∀ (i : ι), NormalSpace (X i)) ↔ NormalSpace ((i : ι) → X i)))",
+   "nhyp": "¬∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n    (∀ (i : ι), Nonempty (X i)) ∧ NormalSpace ((i : ι) → X i) ↔\n      (∀ (i j : ι), NormalSpace (X i ⊕ X j)) ∧ ∀ (i : ι), Nonempty (X i)",
+   "ncin": "¬∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n    (∀ (i : ι), Nonempty (X i)) ∧ NormalSpace ((i : ι) → X i) →\n      ((∀ (i : ι), NormalSpace (X i)) ↔ NormalSpace ((i : ι) → X i))",
+   "ncomp": "¬∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n    (∀ (i : ι), NormalSpace (X i)) ↔ NormalSpace ((i : ι) → X i)",
+   "split_r": "(∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n    (∀ (i : ι), Nonempty (X i)) → NormalSpace ((i : ι) → X i) → ∀ (i : ι), NormalSpace (X i)) ↔\n  ∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n    (∀ (i : ι), Nonempty (X i)) ∧ NormalSpace ((i : ι) → X i) → ∀ (i : ι), NormalSpace (X i)",
+   "split_s": "(∀ {ι : Type u} {X : ι → Type u} [tX : (i : ι) → TopologicalSpace (X i)],\n    (∀ (i j : ι), NormalSpace (X i ⊕ X j)) → (∀ (i : ι), Nonempty (X i)) → NormalSpace ((i : ι) → X i)) ↔\n  ∀ {ι : Type u} {X : ι → Type u} [tX : (i : ι) → TopologicalSpace (X i)],\n    ((∀ (i j : ι), NormalSpace (X i ⊕ X j)) ∧ ∀ (i : ι), Nonempty (X i)) → NormalSpace ((i : ι) → X i)"
+  }
+ },
+ "pnv-test-1257": {
+  "status": "ok",
+  "info": "ambiguous=true full=false prefix_r=3/10 prefix_s=3/10 shared=3",
+  "goals": {
+   "acc": "∀ {F V W : Type u},\n  (True ↔ True) ∧\n    ((∀ [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F] [inst_3 : Module F V]\n        [FiniteDimensional F V] [inst_5 : Module F W] (L : V →ₗ[F] W),\n        ∃ U, U ⊓ ker L = ⊥ ∧ range L = range (L.domRestrict U)) ↔\n      ∀ [inst : DivisionRing F] [inst_1 : AddCommGroup V] [inst_2 : Module F V] [inst_3 : AddCommGroup W]\n        [inst_4 : Module F W] [FiniteDimensional F V] (T : V →ₗ[F] W),\n        ∃ U, (∀ (u₁ u₂ : ↥U), T ↑u₁ = T ↑u₂ → u₁ = u₂) ∧ ∀ (w : W), ∃ v, T ↑v = w)",
+   "cond": "∀ {F V W : Type u},\n  (True ↔ True) ∧\n    (True →\n      ((∀ [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F] [inst_3 : Module F V]\n          [FiniteDimensional F V] [inst_5 : Module F W] (L : V →ₗ[F] W),\n          ∃ U, U ⊓ ker L = ⊥ ∧ range L = range (L.domRestrict U)) ↔\n        ∀ [inst : DivisionRing F] [inst_1 : AddCommGroup V] [inst_2 : Module F V] [inst_3 : AddCommGroup W]\n          [inst_4 : Module F W] [FiniteDimensional F V] (T : V →ₗ[F] W),\n          ∃ U, (∀ (u₁ u₂ : ↥U), T ↑u₁ = T ↑u₂ → u₁ = u₂) ∧ ∀ (w : W), ∃ v, T ↑v = w))",
+   "nhyp": "¬∀ {F V W : Type u}, True ↔ True",
+   "ncin": "¬∀ {F V W : Type u},\n    True →\n      ((∀ [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F] [inst_3 : Module F V]\n          [FiniteDimensional F V] [inst_5 : Module F W] (L : V →ₗ[F] W),\n          ∃ U, U ⊓ ker L = ⊥ ∧ range L = range (L.domRestrict U)) ↔\n        ∀ [inst : DivisionRing F] [inst_1 : AddCommGroup V] [inst_2 : Module F V] [inst_3 : AddCommGroup W]\n          [inst_4 : Module F W] [FiniteDimensional F V] (T : V →ₗ[F] W),\n          ∃ U, (∀ (u₁ u₂ : ↥U), T ↑u₁ = T ↑u₂ → u₁ = u₂) ∧ ∀ (w : W), ∃ v, T ↑v = w)",
+   "ncomp": "¬∀ {F V W : Type u},\n    (∀ [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F] [inst_3 : Module F V]\n        [FiniteDimensional F V] [inst_5 : Module F W] (L : V →ₗ[F] W),\n        ∃ U, U ⊓ ker L = ⊥ ∧ range L = range (L.domRestrict U)) ↔\n      ∀ [inst : DivisionRing F] [inst_1 : AddCommGroup V] [inst_2 : Module F V] [inst_3 : AddCommGroup W]\n        [inst_4 : Module F W] [FiniteDimensional F V] (T : V →ₗ[F] W),\n        ∃ U, (∀ (u₁ u₂ : ↥U), T ↑u₁ = T ↑u₂ → u₁ = u₂) ∧ ∀ (w : W), ∃ v, T ↑v = w",
+   "split_r": "(∀ {F V W : Type u} [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F]\n    [inst_3 : Module F V] [FiniteDimensional F V] [inst_5 : Module F W] (L : V →ₗ[F] W),\n    ∃ U, U ⊓ ker L = ⊥ ∧ range L = range (L.domRestrict U)) ↔\n  ∀ {F V W : Type u},\n    True →\n      ∀ [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F] [inst_3 : Module F V]\n        [FiniteDimensional F V] [inst_5 : Module F W] (L : V →ₗ[F] W),\n        ∃ U, U ⊓ ker L = ⊥ ∧ range L = range (L.domRestrict U)",
+   "split_s": "(∀ {K V W : Type u} [inst : DivisionRing K] [inst_1 : AddCommGroup V] [inst_2 : Module K V]\n    [inst_3 : AddCommGroup W] [inst_4 : Module K W] [FiniteDimensional K V] (T : V →ₗ[K] W),\n    ∃ U, (∀ (u₁ u₂ : ↥U), T ↑u₁ = T ↑u₂ → u₁ = u₂) ∧ ∀ (w : W), ∃ v, T ↑v = w) ↔\n  ∀ {K V W : Type u},\n    True →\n      ∀ [inst : DivisionRing K] [inst_1 : AddCommGroup V] [inst_2 : Module K V] [inst_3 : AddCommGroup W]\n        [inst_4 : Module K W] [FiniteDimensional K V] (T : V →ₗ[K] W),\n        ∃ U, (∀ (u₁ u₂ : ↥U), T ↑u₁ = T ↑u₂ → u₁ = u₂) ∧ ∀ (w : W), ∃ v, T ↑v = w"
+  }
+ },
+ "pnv-test-532": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1",
+  "goals": {
+   "acc": "∀ {K : Type u},\n  (True ↔ True) ∧\n    ((∀ [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a) ↔\n      ∀ {K_1 : Type u} [inst : Field K] [inst_1 : Field K_1] [inst_2 : Algebra K K_1] (a : K_1),\n        IsAlgebraic K (a ^ 2) → IsAlgebraic K a)",
+   "cond": "∀ {K : Type u},\n  (True ↔ True) ∧\n    (True →\n      ((∀ [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a) ↔\n        ∀ {K_1 : Type u} [inst : Field K] [inst_1 : Field K_1] [inst_2 : Algebra K K_1] (a : K_1),\n          IsAlgebraic K (a ^ 2) → IsAlgebraic K a))",
+   "nhyp": "¬∀ {K : Type u}, True ↔ True",
+   "ncin": "¬∀ {K : Type u},\n    True →\n      ((∀ [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a) ↔\n        ∀ {K_1 : Type u} [inst : Field K] [inst_1 : Field K_1] [inst_2 : Algebra K K_1] (a : K_1),\n          IsAlgebraic K (a ^ 2) → IsAlgebraic K a)",
+   "ncomp": "¬∀ {K : Type u},\n    (∀ [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a) ↔\n      ∀ {K_1 : Type u} [inst : Field K] [inst_1 : Field K_1] [inst_2 : Algebra K K_1] (a : K_1),\n        IsAlgebraic K (a ^ 2) → IsAlgebraic K a",
+   "split_r": "(∀ {K : Type u} [inst : Field K] {F : Subfield K} {a : K},\n    IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a) ↔\n  ∀ {K : Type u}, True → ∀ [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a",
+   "split_s": "(∀ {F K : Type u} [inst : Field F] [inst_1 : Field K] [inst_2 : Algebra F K] (a : K),\n    IsAlgebraic F (a ^ 2) → IsAlgebraic F a) ↔\n  ∀ {F : Type u},\n    True →\n      ∀ {K : Type u} [inst : Field F] [inst_1 : Field K] [inst_2 : Algebra F K] (a : K),\n        IsAlgebraic F (a ^ 2) → IsAlgebraic F a"
+  }
+ },
+ "pnv-test-1142": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/7 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ {n : ℕ+} {G : Type u} [inst : Group G] {x : G},\n      orderOf x = ↑n →\n        G = ↥(Subgroup.closure {x}) →\n          ∀ (H : Subgroup G),\n            (∃ p, Prime p ∧ p ∣ ↑n ∧ H = Subgroup.closure {x ^ p}) ↔\n              H ≠ ⊤ ∧ ∀ (K : Subgroup G), H ≤ K → K = H ∨ K = ⊤) ↔\n    ∀ {G : Type u} [inst : Group G] {x : G} {n : ℕ},\n      x ^ n = 1 →\n        1 ≤ n →\n          ∀ (H : Subgroup G),\n            (H ≤ zpowers x ∧ H ≠ ⊥ ∧ ∀ (K : Subgroup G), H < K → K = ⊤) ↔\n              ∃ p, Nat.Prime p ∧ p ∣ n ∧ H = zpowers (x ^ (n / p)))",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ {n : ℕ+} {G : Type u} [inst : Group G] {x : G},\n        orderOf x = ↑n →\n          G = ↥(Subgroup.closure {x}) →\n            ∀ (H : Subgroup G),\n              (∃ p, Prime p ∧ p ∣ ↑n ∧ H = Subgroup.closure {x ^ p}) ↔\n                H ≠ ⊤ ∧ ∀ (K : Subgroup G), H ≤ K → K = H ∨ K = ⊤) ↔\n      ∀ {G : Type u} [inst : Group G] {x : G} {n : ℕ},\n        x ^ n = 1 →\n          1 ≤ n →\n            ∀ (H : Subgroup G),\n              (H ≤ zpowers x ∧ H ≠ ⊥ ∧ ∀ (K : Subgroup G), H < K → K = ⊤) ↔\n                ∃ p, Nat.Prime p ∧ p ∣ n ∧ H = zpowers (x ^ (n / p))))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ {n : ℕ+} {G : Type u} [inst : Group G] {x : G},\n        orderOf x = ↑n →\n          G = ↥(Subgroup.closure {x}) →\n            ∀ (H : Subgroup G),\n              (∃ p, Prime p ∧ p ∣ ↑n ∧ H = Subgroup.closure {x ^ p}) ↔\n                H ≠ ⊤ ∧ ∀ (K : Subgroup G), H ≤ K → K = H ∨ K = ⊤) ↔\n      ∀ {G : Type u} [inst : Group G] {x : G} {n : ℕ},\n        x ^ n = 1 →\n          1 ≤ n →\n            ∀ (H : Subgroup G),\n              (H ≤ zpowers x ∧ H ≠ ⊥ ∧ ∀ (K : Subgroup G), H < K → K = ⊤) ↔\n                ∃ p, Nat.Prime p ∧ p ∣ n ∧ H = zpowers (x ^ (n / p))))",
+   "ncomp": "¬((∀ {n : ℕ+} {G : Type u} [inst : Group G] {x : G},\n      orderOf x = ↑n →\n        G = ↥(Subgroup.closure {x}) →\n          ∀ (H : Subgroup G),\n            (∃ p, Prime p ∧ p ∣ ↑n ∧ H = Subgroup.closure {x ^ p}) ↔\n              H ≠ ⊤ ∧ ∀ (K : Subgroup G), H ≤ K → K = H ∨ K = ⊤) ↔\n    ∀ {G : Type u} [inst : Group G] {x : G} {n : ℕ},\n      x ^ n = 1 →\n        1 ≤ n →\n          ∀ (H : Subgroup G),\n            (H ≤ zpowers x ∧ H ≠ ⊥ ∧ ∀ (K : Subgroup G), H < K → K = ⊤) ↔\n              ∃ p, Nat.Prime p ∧ p ∣ n ∧ H = zpowers (x ^ (n / p)))",
+   "split_r": "(∀ {n : ℕ+} {G : Type u} [inst : Group G] {x : G},\n    orderOf x = ↑n →\n      G = ↥(Subgroup.closure {x}) →\n        ∀ (H : Subgroup G),\n          (∃ p, Prime p ∧ p ∣ ↑n ∧ H = Subgroup.closure {x ^ p}) ↔ H ≠ ⊤ ∧ ∀ (K : Subgroup G), H ≤ K → K = H ∨ K = ⊤) ↔\n  True →\n    ∀ {n : ℕ+} {G : Type u} [inst : Group G] {x : G},\n      orderOf x = ↑n →\n        G = ↥(Subgroup.closure {x}) →\n          ∀ (H : Subgroup G),\n            (∃ p, Prime p ∧ p ∣ ↑n ∧ H = Subgroup.closure {x ^ p}) ↔ H ≠ ⊤ ∧ ∀ (K : Subgroup G), H ≤ K → K = H ∨ K = ⊤",
+   "split_s": "(∀ {G : Type u} [inst : Group G] {x : G} {n : ℕ},\n    x ^ n = 1 →\n      1 ≤ n →\n        ∀ (H : Subgroup G),\n          (H ≤ zpowers x ∧ H ≠ ⊥ ∧ ∀ (K : Subgroup G), H < K → K = ⊤) ↔\n            ∃ p, Nat.Prime p ∧ p ∣ n ∧ H = zpowers (x ^ (n / p))) ↔\n  True →\n    ∀ {G : Type u} [inst : Group G] {x : G} {n : ℕ},\n      x ^ n = 1 →\n        1 ≤ n →\n          ∀ (H : Subgroup G),\n            (H ≤ zpowers x ∧ H ≠ ⊥ ∧ ∀ (K : Subgroup G), H < K → K = ⊤) ↔\n              ∃ p, Nat.Prime p ∧ p ∣ n ∧ H = zpowers (x ^ (n / p))"
+  }
+ },
+ "pnv-test-1031": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=2/6 prefix_s=2/9 shared=2",
+  "goals": {
+   "acc": "∀ {α : Type u} [inst : TopologicalSpace α],\n  (True ↔ True) ∧\n    ((∀ {s : ℕ → Set α},\n        (∀ (i : ℕ), IsCompact (s i)) →\n          (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty) ↔\n      ∀ {s : Set α},\n        IsCompact s →\n          ∀ (u : α → Set α),\n            (∀ (x : α), IsCompact (closure (u x))) →\n              (∀ (x : α), IsOpen (u x)) → (∀ (x : α), s ⊆ u x) → ⋂ x, closure (u x) = ∅ → False)",
+   "cond": "∀ {α : Type u} [inst : TopologicalSpace α],\n  (True ↔ True) ∧\n    (True →\n      ((∀ {s : ℕ → Set α},\n          (∀ (i : ℕ), IsCompact (s i)) →\n            (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty) ↔\n        ∀ {s : Set α},\n          IsCompact s →\n            ∀ (u : α → Set α),\n              (∀ (x : α), IsCompact (closure (u x))) →\n                (∀ (x : α), IsOpen (u x)) → (∀ (x : α), s ⊆ u x) → ⋂ x, closure (u x) = ∅ → False))",
+   "nhyp": "¬∀ {α : Type u} [TopologicalSpace α], True ↔ True",
+   "ncin": "¬∀ {α : Type u} [inst : TopologicalSpace α],\n    True →\n      ((∀ {s : ℕ → Set α},\n          (∀ (i : ℕ), IsCompact (s i)) →\n            (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty) ↔\n        ∀ {s : Set α},\n          IsCompact s →\n            ∀ (u : α → Set α),\n              (∀ (x : α), IsCompact (closure (u x))) →\n                (∀ (x : α), IsOpen (u x)) → (∀ (x : α), s ⊆ u x) → ⋂ x, closure (u x) = ∅ → False)",
+   "ncomp": "¬∀ {α : Type u} [inst : TopologicalSpace α],\n    (∀ {s : ℕ → Set α},\n        (∀ (i : ℕ), IsCompact (s i)) →\n          (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty) ↔\n      ∀ {s : Set α},\n        IsCompact s →\n          ∀ (u : α → Set α),\n            (∀ (x : α), IsCompact (closure (u x))) →\n              (∀ (x : α), IsOpen (u x)) → (∀ (x : α), s ⊆ u x) → ⋂ x, closure (u x) = ∅ → False",
+   "split_r": "(∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    (∀ (i : ℕ), IsCompact (s i)) → (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty) ↔\n  ∀ {α : Type u} [inst : TopologicalSpace α],\n    True →\n      ∀ {s : ℕ → Set α},\n        (∀ (i : ℕ), IsCompact (s i)) → (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty",
+   "split_s": "(∀ {X : Type u} [inst : TopologicalSpace X] {s : Set X},\n    IsCompact s →\n      ∀ (u : X → Set X),\n        (∀ (x : X), IsCompact (closure (u x))) →\n          (∀ (x : X), IsOpen (u x)) → (∀ (x : X), s ⊆ u x) → ⋂ x, closure (u x) ≠ ∅) ↔\n  ∀ {X : Type u} [inst : TopologicalSpace X],\n    True →\n      ∀ {s : Set X},\n        IsCompact s →\n          ∀ (u : X → Set X),\n            (∀ (x : X), IsCompact (closure (u x))) →\n              (∀ (x : X), IsOpen (u x)) → (∀ (x : X), s ⊆ u x) → ⋂ x, closure (u x) = ∅ → False"
+  }
+ },
+ "pnv-test-1117": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=4",
+  "goals": {
+   "acc": "∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},\n  (IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅ ↔\n      IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ closure Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅) ∧\n    (False ↔ False)",
+   "cond": "∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},\n  (IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅ ↔\n      IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ closure Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅) ∧\n    (IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅ → (False ↔ False))",
+   "nhyp": "¬∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},\n    IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅ ↔\n      IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ closure Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅",
+   "ncin": "¬∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},\n    IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅ → (False ↔ False)",
+   "ncomp": "¬∀ {X : Type u} [TopologicalSpace X] {A C : Set X}, False ↔ False",
+   "split_r": "(∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},\n    IsConnected C → C ∩ A ≠ ∅ → C ∩ Aᶜ ≠ ∅ → C ∩ frontier A ≠ ∅) ↔\n  ∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},\n    IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅ → False",
+   "split_s": "(∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},\n    IsConnected C → C ∩ A ≠ ∅ → C ∩ closure Aᶜ ≠ ∅ → C ∩ frontier A ≠ ∅) ↔\n  ∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},\n    IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ closure Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅ → False"
+  }
+ },
+ "pnv-test-1415": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/2 prefix_s=1/1 shared=0",
+  "goals": {
+   "acc": "(True ↔ LocallyCompactSpace (↑univ × ↑univ)) ∧\n  ((∀ [inst : TopologicalSpace (ℕ → ↑(Icc 0 1))], LocallyCompactSpace (ℕ → ↑(Icc 0 1)) → False) ↔ False)",
+   "cond": "(True ↔ LocallyCompactSpace (↑univ × ↑univ)) ∧\n  (True → ((∀ [inst : TopologicalSpace (ℕ → ↑(Icc 0 1))], LocallyCompactSpace (ℕ → ↑(Icc 0 1)) → False) ↔ False))",
+   "nhyp": "¬(True ↔ LocallyCompactSpace (↑univ × ↑univ))",
+   "ncin": "¬(True →\n    ((∀ [inst : TopologicalSpace (ℕ → ↑(Icc 0 1))], LocallyCompactSpace (ℕ → ↑(Icc 0 1)) → False) ↔ False))",
+   "ncomp": "¬((∀ [inst : TopologicalSpace (ℕ → ↑(Icc 0 1))], LocallyCompactSpace (ℕ → ↑(Icc 0 1)) → False) ↔\n    False)",
+   "split_r": "(∀ [inst : TopologicalSpace (ℕ → ↑(Icc 0 1))], ¬LocallyCompactSpace (ℕ → ↑(Icc 0 1))) ↔\n  True → ∀ [inst : TopologicalSpace (ℕ → ↑(Icc 0 1))], LocallyCompactSpace (ℕ → ↑(Icc 0 1)) → False",
+   "split_s": "¬LocallyCompactSpace (↑univ × ↑univ) ↔ LocallyCompactSpace (↑univ × ↑univ) → False"
+  }
+ },
+ "pnv-test-1427": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1",
+  "goals": {
+   "acc": "∀ (f : ℝ → ℝ),\n  ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔\n      ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), 0 ≤ f x) ∧\n    ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, f^[n] x < 0)",
+   "cond": "∀ (f : ℝ → ℝ),\n  ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔\n      ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), 0 ≤ f x) ∧\n    ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) →\n      ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, f^[n] x < 0))",
+   "nhyp": "¬∀ (f : ℝ → ℝ),\n    (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔ ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), 0 ≤ f x",
+   "ncin": "¬∀ (f : ℝ → ℝ),\n    (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) →\n      ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, f^[n] x < 0)",
+   "ncomp": "¬∀ (f : ℝ → ℝ), (∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, f^[n] x < 0",
+   "split_r": "(∀ (f : ℝ → ℝ),\n    ContDiff ℝ ⊤ f → f 0 = 0 → f 1 = 1 → (∀ (x : ℝ), f x ≥ 0) → ∃ n x, iteratedDeriv (↑n) f x < 0) ↔\n  ∀ (f : ℝ → ℝ), (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) → ∃ n x, iteratedDeriv (↑n) f x < 0",
+   "split_s": "(∀ {f : ℝ → ℝ}, ContDiff ℝ ⊤ f → f 0 = 0 → f 1 = 1 → (∀ (x : ℝ), 0 ≤ f x) → ∃ n x, f^[n] x < 0) ↔\n  ∀ {f : ℝ → ℝ}, (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), 0 ≤ f x) → ∃ n x, f^[n] x < 0"
+  }
+ },
+ "pnv-test-440": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=1/3 prefix_s=1/3 shared=1",
+  "goals": {
+   "acc": "∀ {R : Type u},\n  (True ↔ True) ∧\n    ((∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n      ∀ [inst : CommRing R] {f : R[X]}, f ∈ nonZeroDivisors R[X] ↔ f ≠ 0)",
+   "cond": "∀ {R : Type u},\n  (True ↔ True) ∧\n    (True →\n      ((∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n        ∀ [inst : CommRing R] {f : R[X]}, f ∈ nonZeroDivisors R[X] ↔ f ≠ 0))",
+   "nhyp": "¬∀ {R : Type u}, True ↔ True",
+   "ncin": "¬∀ {R : Type u},\n    True →\n      ((∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n        ∀ [inst : CommRing R] {f : R[X]}, f ∈ nonZeroDivisors R[X] ↔ f ≠ 0)",
+   "ncomp": "¬∀ {R : Type u},\n    (∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n      ∀ [inst : CommRing R] {f : R[X]}, f ∈ nonZeroDivisors R[X] ↔ f ≠ 0",
+   "split_r": "(∀ {R : Type u} [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n  ∀ {R : Type u}, True → ∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0",
+   "split_s": "(∀ {R : Type u} [inst : CommRing R] {f : R[X]}, f ∈ nonZeroDivisors R[X] ↔ f ≠ 0) ↔\n  ∀ {R : Type u}, True → ∀ [inst : CommRing R] {f : R[X]}, f ∈ nonZeroDivisors R[X] ↔ f ≠ 0"
+  }
+ },
+ "pnv-test-437": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n    ∀ (a n : ℕ), a ^ (n + 1) - (a + 1) ^ n = 2001 → a = 3 ∧ n = 6)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n      ∀ (a n : ℕ), a ^ (n + 1) - (a + 1) ^ n = 2001 → a = 3 ∧ n = 6))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n      ∀ (a n : ℕ), a ^ (n + 1) - (a + 1) ^ n = 2001 → a = 3 ∧ n = 6))",
+   "ncomp": "¬((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n    ∀ (a n : ℕ), a ^ (n + 1) - (a + 1) ^ n = 2001 → a = 3 ∧ n = 6)",
+   "split_r": "(∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n  True → ∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001",
+   "split_s": "(∀ (a n : ℕ), a ^ (n + 1) - (a + 1) ^ n = 2001 → a = 3 ∧ n = 6) ↔\n  True → ∀ (a n : ℕ), a ^ (n + 1) - (a + 1) ^ n = 2001 → a = 3 ∧ n = 6"
+  }
+ },
+ "pnv-test-942": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/6 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  (Irreducible (X ^ 3 - 2) ∧\n      Irreducible (X ^ 3 + 2) ∧ Nonempty ((ZMod 7)[X] ⧸ span {X ^ 3 - 2} ≃+* (ZMod 7)[X] ⧸ span {X ^ 3 + 2}) ↔\n    ∀ {F : Type u} [inst : Field F] (p q : F[X]),\n      Irreducible p →\n        Irreducible q →\n          IsField (F[X] ⧸ span {p}) ∧ IsField (F[X] ⧸ span {q}) ∧ Nonempty (F[X] ⧸ span {p} ≃+* F[X] ⧸ span {q}))",
+   "cond": "(True ↔ True) ∧\n  (True →\n    (Irreducible (X ^ 3 - 2) ∧\n        Irreducible (X ^ 3 + 2) ∧ Nonempty ((ZMod 7)[X] ⧸ span {X ^ 3 - 2} ≃+* (ZMod 7)[X] ⧸ span {X ^ 3 + 2}) ↔\n      ∀ {F : Type u} [inst : Field F] (p q : F[X]),\n        Irreducible p →\n          Irreducible q →\n            IsField (F[X] ⧸ span {p}) ∧ IsField (F[X] ⧸ span {q}) ∧ Nonempty (F[X] ⧸ span {p} ≃+* F[X] ⧸ span {q})))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    (Irreducible (X ^ 3 - 2) ∧\n        Irreducible (X ^ 3 + 2) ∧ Nonempty ((ZMod 7)[X] ⧸ span {X ^ 3 - 2} ≃+* (ZMod 7)[X] ⧸ span {X ^ 3 + 2}) ↔\n      ∀ {F : Type u} [inst : Field F] (p q : F[X]),\n        Irreducible p →\n          Irreducible q →\n            IsField (F[X] ⧸ span {p}) ∧ IsField (F[X] ⧸ span {q}) ∧ Nonempty (F[X] ⧸ span {p} ≃+* F[X] ⧸ span {q})))",
+   "ncomp": "¬(Irreducible (X ^ 3 - 2) ∧\n      Irreducible (X ^ 3 + 2) ∧ Nonempty ((ZMod 7)[X] ⧸ span {X ^ 3 - 2} ≃+* (ZMod 7)[X] ⧸ span {X ^ 3 + 2}) ↔\n    ∀ {F : Type u} [inst : Field F] (p q : F[X]),\n      Irreducible p →\n        Irreducible q →\n          IsField (F[X] ⧸ span {p}) ∧ IsField (F[X] ⧸ span {q}) ∧ Nonempty (F[X] ⧸ span {p} ≃+* F[X] ⧸ span {q}))",
+   "split_r": "(∀ {p q : (ZMod 7)[X]},\n    p = X ^ 3 - 2 →\n      q = X ^ 3 + 2 → Irreducible p ∧ Irreducible q ∧ Nonempty ((ZMod 7)[X] ⧸ span {p} ≃+* (ZMod 7)[X] ⧸ span {q})) ↔\n  True →\n    Irreducible (X ^ 3 - 2) ∧\n      Irreducible (X ^ 3 + 2) ∧ Nonempty ((ZMod 7)[X] ⧸ span {X ^ 3 - 2} ≃+* (ZMod 7)[X] ⧸ span {X ^ 3 + 2})",
+   "split_s": "(∀ {F : Type u} [inst : Field F] (p q : F[X]),\n    Irreducible p →\n      Irreducible q →\n        IsField (F[X] ⧸ span {p}) ∧ IsField (F[X] ⧸ span {q}) ∧ Nonempty (F[X] ⧸ span {p} ≃+* F[X] ⧸ span {q})) ↔\n  True →\n    ∀ {F : Type u} [inst : Field F] (p q : F[X]),\n      Irreducible p →\n        Irreducible q →\n          IsField (F[X] ⧸ span {p}) ∧ IsField (F[X] ⧸ span {q}) ∧ Nonempty (F[X] ⧸ span {p} ≃+* F[X] ⧸ span {q})"
+  }
+ },
+ "pnv-test-916": {
+  "status": "ok",
+  "info": "ambiguous=true full=false prefix_r=3/4 prefix_s=3/4 shared=2",
+  "goals": {
+   "acc": "∀ (a b : ℝ),\n  (a ≤ b ↔ a < b) ∧\n    ((∀ (f : ↑(Icc a b) → ℝ),\n        UniformContinuous f ↔\n          ∃ μ,\n            ∀ (x : ℝ),\n              (x > 0 → μ x > 0) ∧\n                StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ ∀ (s t : ↑(Icc a b)), |f s - f t| ≤ μ |↑s - ↑t|) ↔\n      ∀ (f : ℝ → ℝ),\n        UniformContinuousOn f (Icc a b) ↔\n          ∃ μ, (μ =O[atTop] fun x => x) ∧ ∀ (s t : ℝ), a ≤ s → s ≤ t → t ≤ b → |f t - f s| ≤ μ |t - s|)",
+   "cond": "∀ (a b : ℝ),\n  (a ≤ b ↔ a < b) ∧\n    (a ≤ b →\n      ((∀ (f : ↑(Icc a b) → ℝ),\n          UniformContinuous f ↔\n            ∃ μ,\n              ∀ (x : ℝ),\n                (x > 0 → μ x > 0) ∧\n                  StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ ∀ (s t : ↑(Icc a b)), |f s - f t| ≤ μ |↑s - ↑t|) ↔\n        ∀ (f : ℝ → ℝ),\n          UniformContinuousOn f (Icc a b) ↔\n            ∃ μ, (μ =O[atTop] fun x => x) ∧ ∀ (s t : ℝ), a ≤ s → s ≤ t → t ≤ b → |f t - f s| ≤ μ |t - s|))",
+   "nhyp": "¬∀ (a b : ℝ), a ≤ b ↔ a < b",
+   "ncin": "¬∀ (a b : ℝ),\n    a ≤ b →\n      ((∀ (f : ↑(Icc a b) → ℝ),\n          UniformContinuous f ↔\n            ∃ μ,\n              ∀ (x : ℝ),\n                (x > 0 → μ x > 0) ∧\n                  StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ ∀ (s t : ↑(Icc a b)), |f s - f t| ≤ μ |↑s - ↑t|) ↔\n        ∀ (f : ℝ → ℝ),\n          UniformContinuousOn f (Icc a b) ↔\n            ∃ μ, (μ =O[atTop] fun x => x) ∧ ∀ (s t : ℝ), a ≤ s → s ≤ t → t ≤ b → |f t - f s| ≤ μ |t - s|)",
+   "ncomp": "¬∀ (a b : ℝ),\n    (∀ (f : ↑(Icc a b) → ℝ),\n        UniformContinuous f ↔\n          ∃ μ,\n            ∀ (x : ℝ),\n              (x > 0 → μ x > 0) ∧\n                StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ ∀ (s t : ↑(Icc a b)), |f s - f t| ≤ μ |↑s - ↑t|) ↔\n      ∀ (f : ℝ → ℝ),\n        UniformContinuousOn f (Icc a b) ↔\n          ∃ μ, (μ =O[atTop] fun x => x) ∧ ∀ (s t : ℝ), a ≤ s → s ≤ t → t ≤ b → |f t - f s| ≤ μ |t - s|",
+   "split_r": "(∀ (a b : ℝ),\n    a ≤ b →\n      ∀ (f : ↑(Icc a b) → ℝ),\n        UniformContinuous f ↔\n          ∃ μ,\n            ∀ (x : ℝ),\n              (x > 0 → μ x > 0) ∧\n                StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ ∀ (s t : ↑(Icc a b)), |f s - f t| ≤ μ |↑s - ↑t|) ↔\n  ∀ (a b : ℝ),\n    a ≤ b →\n      ∀ (f : ↑(Icc a b) → ℝ),\n        UniformContinuous f ↔\n          ∃ μ,\n            ∀ (x : ℝ),\n              (x > 0 → μ x > 0) ∧\n                StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ ∀ (s t : ↑(Icc a b)), |f s - f t| ≤ μ |↑s - ↑t|",
+   "split_s": "(∀ {a b : ℝ},\n    a < b →\n      ∀ (f : ℝ → ℝ),\n        UniformContinuousOn f (Icc a b) ↔\n          ∃ μ, (μ =O[atTop] fun x => x) ∧ ∀ (s t : ℝ), a ≤ s → s ≤ t → t ≤ b → |f t - f s| ≤ μ |t - s|) ↔\n  ∀ {a b : ℝ},\n    a < b →\n      ∀ (f : ℝ → ℝ),\n        UniformContinuousOn f (Icc a b) ↔\n          ∃ μ, (μ =O[atTop] fun x => x) ∧ ∀ (s t : ℝ), a ≤ s → s ≤ t → t ≤ b → |f t - f s| ≤ μ |t - s|"
+  }
+ },
+ "pnv-test-1355": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1",
+  "goals": {
+   "acc": "∀ (p : ℕ),\n  (Nat.Prime p ↔ Fact (Nat.Prime p)) ∧ ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p])",
+   "cond": "∀ (p : ℕ),\n  (Nat.Prime p ↔ Fact (Nat.Prime p)) ∧ (Nat.Prime p → ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p]))",
+   "nhyp": "¬∀ (p : ℕ), Nat.Prime p ↔ Fact (Nat.Prime p)",
+   "ncin": "¬∀ (p : ℕ), Nat.Prime p → ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p])",
+   "ncomp": "¬∀ (p : ℕ), (∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p]",
+   "split_r": "(∀ (p : ℕ), Nat.Prime p → ∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔\n  ∀ (p : ℕ), Nat.Prime p → ∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]",
+   "split_s": "(∀ (p : ℕ) [Fact (Nat.Prime p)] (a : ℕ), a ^ p ≡ a [MOD p]) ↔\n  ∀ (p : ℕ), Fact (Nat.Prime p) → ∀ (a : ℕ), a ^ p ≡ a [MOD p]"
+  }
+ },
+ "pnv-test-680": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  (IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔ IsTopologicalBasis (range fun p => Ioo p.1 p.2))",
+   "cond": "(True ↔ True) ∧\n  (True → (IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔ IsTopologicalBasis (range fun p => Ioo p.1 p.2)))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    (IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔ IsTopologicalBasis (range fun p => Ioo p.1 p.2)))",
+   "ncomp": "¬(IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔\n    IsTopologicalBasis (range fun p => Ioo p.1 p.2))",
+   "split_r": "IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔\n  True → IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b}",
+   "split_s": "IsTopologicalBasis (range fun p => Ioo p.1 p.2) ↔\n  True → IsTopologicalBasis (range fun p => Ioo p.1 p.2)"
+  }
+ },
+ "pnv-test-840": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=1/1 prefix_s=0/3 shared=0",
+  "goals": {
+   "acc": "((Summable fun i => 1 / ↑↑i) ↔ True) ∧\n  (False ↔ ∀ (n N : ℕ), (∀ (d : ℕ), d ∣ N → d ∣ n → d = 1) → False)",
+   "cond": "((Summable fun i => 1 / ↑↑i) ↔ True) ∧\n  ((Summable fun i => 1 / ↑↑i) → (False ↔ ∀ (n N : ℕ), (∀ (d : ℕ), d ∣ N → d ∣ n → d = 1) → False))",
+   "nhyp": "¬((Summable fun i => 1 / ↑↑i) ↔ True)",
+   "ncin": "¬((Summable fun i => 1 / ↑↑i) → (False ↔ ∀ (n N : ℕ), (∀ (d : ℕ), d ∣ N → d ∣ n → d = 1) → False))",
+   "ncomp": "¬(False ↔ ∀ (n N : ℕ), (∀ (d : ℕ), d ∣ N → d ∣ n → d = 1) → False)",
+   "split_r": "(¬Summable fun i => 1 / ↑↑i) ↔ (Summable fun i => 1 / ↑↑i) → False",
+   "split_s": "(∀ (n : ℕ), ¬∃ N, ∀ (d : ℕ), d ∣ N → d ∣ n → d = 1) ↔\n  True → ∀ (n N : ℕ), (∀ (d : ℕ), d ∣ N → d ∣ n → d = 1) → False"
+  }
+ },
+ "pnv-test-262": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G] (H K : Subgroup G),\n  (H ≤ K ∧ (H.subgroupOf K).Characteristic ∧ K.Normal ↔ H ≤ K ∧ H.Characteristic ∧ K.Normal) ∧ (H.Normal ↔ H.Normal)",
+   "cond": "∀ {G : Type u} [inst : Group G] (H K : Subgroup G),\n  (H ≤ K ∧ (H.subgroupOf K).Characteristic ∧ K.Normal ↔ H ≤ K ∧ H.Characteristic ∧ K.Normal) ∧\n    (H ≤ K ∧ (H.subgroupOf K).Characteristic ∧ K.Normal → (H.Normal ↔ H.Normal))",
+   "nhyp": "¬∀ {G : Type u} [inst : Group G] (H K : Subgroup G),\n    H ≤ K ∧ (H.subgroupOf K).Characteristic ∧ K.Normal ↔ H ≤ K ∧ H.Characteristic ∧ K.Normal",
+   "ncin": "¬∀ {G : Type u} [inst : Group G] (H K : Subgroup G),\n    H ≤ K ∧ (H.subgroupOf K).Characteristic ∧ K.Normal → (H.Normal ↔ H.Normal)",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G] (H K : Subgroup G), H.Normal ↔ H.Normal",
+   "split_r": "(∀ {G : Type u} [inst : Group G] (H K : Subgroup G),\n    H ≤ K → ∀ [hHK1 : (H.subgroupOf K).Characteristic] [hK : K.Normal], H.Normal) ↔\n  ∀ {G : Type u} [inst : Group G] (H K : Subgroup G), H ≤ K ∧ (H.subgroupOf K).Characteristic ∧ K.Normal → H.Normal",
+   "split_s": "(∀ {G : Type u} [inst : Group G] {H K : Subgroup G},\n    H ≤ K → H.Characteristic → K.Normal → H.Normal) ↔\n  ∀ {G : Type u} [inst : Group G] {H K : Subgroup G}, H ≤ K ∧ H.Characteristic ∧ K.Normal → H.Normal"
+  }
+ },
+ "pnv-test-717": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  (IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔\n    ∀ (x : ℝ), ∃ a, ∃ b > a, ∀ (A : Set ℝ), IsOpen A ∧ x ∈ A ↔ ∃ n, ↑a ≤ ↑n ∧ n < b ∧ ↑n ∈ A)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    (IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔\n      ∀ (x : ℝ), ∃ a, ∃ b > a, ∀ (A : Set ℝ), IsOpen A ∧ x ∈ A ↔ ∃ n, ↑a ≤ ↑n ∧ n < b ∧ ↑n ∈ A))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    (IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔\n      ∀ (x : ℝ), ∃ a, ∃ b > a, ∀ (A : Set ℝ), IsOpen A ∧ x ∈ A ↔ ∃ n, ↑a ≤ ↑n ∧ n < b ∧ ↑n ∈ A))",
+   "ncomp": "¬(IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔\n    ∀ (x : ℝ), ∃ a, ∃ b > a, ∀ (A : Set ℝ), IsOpen A ∧ x ∈ A ↔ ∃ n, ↑a ≤ ↑n ∧ n < b ∧ ↑n ∈ A)",
+   "split_r": "IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔\n  True → IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b}",
+   "split_s": "(∀ (x : ℝ), ∃ a, ∃ b > a, ∀ (A : Set ℝ), IsOpen A ∧ x ∈ A ↔ ∃ n, ↑a ≤ ↑n ∧ n < b ∧ ↑n ∈ A) ↔\n  True → ∀ (x : ℝ), ∃ a, ∃ b > a, ∀ (A : Set ℝ), IsOpen A ∧ x ∈ A ↔ ∃ n, ↑a ≤ ↑n ∧ n < b ∧ ↑n ∈ A"
+  }
+ },
+ "pnv-test-533": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=3/3 prefix_s=2/5 shared=2",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G],\n  ((∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) ↔ True) ∧\n    ((IsCyclic G ∧ ∃ p Fin, Nat.Prime p ∧ card G = p) ↔\n      ∀ {p : ℕ} [hp : Fact (Nat.Prime p)] [Fact (Nat.card G = p)], IsCyclic G)",
+   "cond": "∀ {G : Type u} [inst : Group G],\n  ((∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) ↔ True) ∧\n    ((∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) →\n      ((IsCyclic G ∧ ∃ p Fin, Nat.Prime p ∧ card G = p) ↔\n        ∀ {p : ℕ} [hp : Fact (Nat.Prime p)] [Fact (Nat.card G = p)], IsCyclic G))",
+   "nhyp": "¬∀ {G : Type u} [inst : Group G], (∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) ↔ True",
+   "ncin": "¬∀ {G : Type u} [inst : Group G],\n    (∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) →\n      ((IsCyclic G ∧ ∃ p Fin, Nat.Prime p ∧ card G = p) ↔\n        ∀ {p : ℕ} [hp : Fact (Nat.Prime p)] [Fact (Nat.card G = p)], IsCyclic G)",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G],\n    (IsCyclic G ∧ ∃ p Fin, Nat.Prime p ∧ card G = p) ↔\n      ∀ {p : ℕ} [hp : Fact (Nat.Prime p)] [Fact (Nat.card G = p)], IsCyclic G",
+   "split_r": "(∀ {G : Type u} [inst : Group G],\n    (∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) → IsCyclic G ∧ ∃ p Fin, Nat.Prime p ∧ card G = p) ↔\n  ∀ {G : Type u} [inst : Group G], (∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) → IsCyclic G ∧ ∃ p Fin, Nat.Prime p ∧ card G = p",
+   "split_s": "(∀ {G : Type u} [inst : Group G] {p : ℕ} [hp : Fact (Nat.Prime p)] [Fact (Nat.card G = p)],\n    IsCyclic G) ↔\n  ∀ {G : Type u} [inst : Group G], True → ∀ {p : ℕ} [hp : Fact (Nat.Prime p)] [Fact (Nat.card G = p)], IsCyclic G"
+  }
+ },
+ "pnv-test-607": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=3",
+  "goals": {
+   "acc": "∀ {X : Type u} [inst : MetricSpace X] {f : X → X},\n  (CompactSpace X ∧ Isometry f ↔ (∀ (x y : X), dist (f x) (f y) = dist x y) ∧ CompactSpace X) ∧\n    (Continuous f ∧ Bijective f ∧ IsOpenMap f ↔ Bijective f)",
+   "cond": "∀ {X : Type u} [inst : MetricSpace X] {f : X → X},\n  (CompactSpace X ∧ Isometry f ↔ (∀ (x y : X), dist (f x) (f y) = dist x y) ∧ CompactSpace X) ∧\n    (CompactSpace X ∧ Isometry f → (Continuous f ∧ Bijective f ∧ IsOpenMap f ↔ Bijective f))",
+   "nhyp": "¬∀ {X : Type u} [inst : MetricSpace X] {f : X → X},\n    CompactSpace X ∧ Isometry f ↔ (∀ (x y : X), dist (f x) (f y) = dist x y) ∧ CompactSpace X",
+   "ncin": "¬∀ {X : Type u} [inst : MetricSpace X] {f : X → X},\n    CompactSpace X ∧ Isometry f → (Continuous f ∧ Bijective f ∧ IsOpenMap f ↔ Bijective f)",
+   "ncomp": "¬∀ {X : Type u} [inst : MetricSpace X] {f : X → X},\n    Continuous f ∧ Bijective f ∧ IsOpenMap f ↔ Bijective f",
+   "split_r": "(∀ {X : Type u} [inst : MetricSpace X] [CompactSpace X] {f : X → X},\n    Isometry f → Continuous f ∧ Bijective f ∧ IsOpenMap f) ↔\n  ∀ {X : Type u} [inst : MetricSpace X] {f : X → X},\n    CompactSpace X ∧ Isometry f → Continuous f ∧ Bijective f ∧ IsOpenMap f",
+   "split_s": "(∀ {X : Type u} [inst : MetricSpace X] (f : X → X),\n    (∀ (x y : X), dist (f x) (f y) = dist x y) → CompactSpace X → Bijective f) ↔\n  ∀ {X : Type u} [inst : MetricSpace X] (f : X → X),\n    (∀ (x y : X), dist (f x) (f y) = dist x y) ∧ CompactSpace X → Bijective f"
+  }
+ },
+ "pnv-test-743": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/2 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔ ∀ {n : ℕ}, ¬Prime n → n.pred.factorial = 0)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔ ∀ {n : ℕ}, ¬Prime n → n.pred.factorial = 0))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔ ∀ {n : ℕ}, ¬Prime n → n.pred.factorial = 0))",
+   "ncomp": "¬((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔\n    ∀ {n : ℕ}, ¬Prime n → n.pred.factorial = 0)",
+   "split_r": "(∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔\n  True → ∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)",
+   "split_s": "(∀ {n : ℕ}, ¬Prime n → n.pred.factorial = 0) ↔ True → ∀ {n : ℕ}, ¬Prime n → n.pred.factorial = 0"
+  }
+ },
+ "pnv-test-769": {
+  "status": "ok",
+  "info": "ambiguous=true full=false prefix_r=4/4 prefix_s=4/6 shared=4",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G] (a b : G),\n  (True ↔ True) ∧ (orderOf (a * b) = orderOf (b * a) ↔ ∀ {c : G}, a * b = a * c → b = c)",
+   "cond": "∀ {G : Type u} [inst : Group G] (a b : G),\n  (True ↔ True) ∧ (True → (orderOf (a * b) = orderOf (b * a) ↔ ∀ {c : G}, a * b = a * c → b = c))",
+   "nhyp": "¬∀ {G : Type u} [Group G] (a b : G), True ↔ True",
+   "ncin": "¬∀ {G : Type u} [inst : Group G] (a b : G),\n    True → (orderOf (a * b) = orderOf (b * a) ↔ ∀ {c : G}, a * b = a * c → b = c)",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G] (a b : G),\n    orderOf (a * b) = orderOf (b * a) ↔ ∀ {c : G}, a * b = a * c → b = c",
+   "split_r": "(∀ {G : Type u} [inst : Group G] (a b : G), orderOf (a * b) = orderOf (b * a)) ↔\n  ∀ {G : Type u} [inst : Group G] (a b : G), True → orderOf (a * b) = orderOf (b * a)",
+   "split_s": "(∀ {G : Type u} [inst : Group G] {a b c : G}, a * b = a * c → b = c) ↔\n  ∀ {G : Type u} [inst : Group G] {a b : G}, True → ∀ {c : G}, a * b = a * c → b = c"
+  }
+ },
+ "pnv-test-475": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/2 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ {p n : ℕ}, Nat.Prime p → p = 2 ^ n + 1 → IsPrimitiveRoot 3 p) ↔\n    ∀ (n : ℕ), Nat.Prime (2 ^ n + 1) → IsPrimitiveRoot 3 (2 ^ n + 1))",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ {p n : ℕ}, Nat.Prime p → p = 2 ^ n + 1 → IsPrimitiveRoot 3 p) ↔\n      ∀ (n : ℕ), Nat.Prime (2 ^ n + 1) → IsPrimitiveRoot 3 (2 ^ n + 1)))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ {p n : ℕ}, Nat.Prime p → p = 2 ^ n + 1 → IsPrimitiveRoot 3 p) ↔\n      ∀ (n : ℕ), Nat.Prime (2 ^ n + 1) → IsPrimitiveRoot 3 (2 ^ n + 1)))",
+   "ncomp": "¬((∀ {p n : ℕ}, Nat.Prime p → p = 2 ^ n + 1 → IsPrimitiveRoot 3 p) ↔\n    ∀ (n : ℕ), Nat.Prime (2 ^ n + 1) → IsPrimitiveRoot 3 (2 ^ n + 1))",
+   "split_r": "(∀ {p n : ℕ}, Nat.Prime p → p = 2 ^ n + 1 → IsPrimitiveRoot 3 p) ↔\n  True → ∀ {p n : ℕ}, Nat.Prime p → p = 2 ^ n + 1 → IsPrimitiveRoot 3 p",
+   "split_s": "(∀ (n : ℕ), Nat.Prime (2 ^ n + 1) → IsPrimitiveRoot 3 (2 ^ n + 1)) ↔\n  True → ∀ (n : ℕ), Nat.Prime (2 ^ n + 1) → IsPrimitiveRoot 3 (2 ^ n + 1)"
+  }
+ },
+ "pnv-test-453": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/6 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (U W : Submodule F V),\n      (∃ U', U'.carrier = ↑U ∪ ↑W) ↔ U ≤ W ∨ W ≤ U) ↔\n    ∀ {V : Type u} [inst : AddCommGroup V] [inst_1 : Module ℤ V] (W₁ W₂ : Submodule ℤ V),\n      W₁ ≤ W₂ ∧ W₂ ≤ W₁ → W₁ ⊔ W₂ = W₁ ∨ W₁ ⊔ W₂ = W₂)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (U W : Submodule F V),\n        (∃ U', U'.carrier = ↑U ∪ ↑W) ↔ U ≤ W ∨ W ≤ U) ↔\n      ∀ {V : Type u} [inst : AddCommGroup V] [inst_1 : Module ℤ V] (W₁ W₂ : Submodule ℤ V),\n        W₁ ≤ W₂ ∧ W₂ ≤ W₁ → W₁ ⊔ W₂ = W₁ ∨ W₁ ⊔ W₂ = W₂))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (U W : Submodule F V),\n        (∃ U', U'.carrier = ↑U ∪ ↑W) ↔ U ≤ W ∨ W ≤ U) ↔\n      ∀ {V : Type u} [inst : AddCommGroup V] [inst_1 : Module ℤ V] (W₁ W₂ : Submodule ℤ V),\n        W₁ ≤ W₂ ∧ W₂ ≤ W₁ → W₁ ⊔ W₂ = W₁ ∨ W₁ ⊔ W₂ = W₂))",
+   "ncomp": "¬((∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n      (U W : Submodule F V), (∃ U', U'.carrier = ↑U ∪ ↑W) ↔ U ≤ W ∨ W ≤ U) ↔\n    ∀ {V : Type u} [inst : AddCommGroup V] [inst_1 : Module ℤ V] (W₁ W₂ : Submodule ℤ V),\n      W₁ ≤ W₂ ∧ W₂ ≤ W₁ → W₁ ⊔ W₂ = W₁ ∨ W₁ ⊔ W₂ = W₂)",
+   "split_r": "(∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    (U W : Submodule F V), (∃ U', U'.carrier = ↑U ∪ ↑W) ↔ U ≤ W ∨ W ≤ U) ↔\n  True →\n    ∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (U W : Submodule F V),\n      (∃ U', U'.carrier = ↑U ∪ ↑W) ↔ U ≤ W ∨ W ≤ U",
+   "split_s": "(∀ {V : Type u} [inst : AddCommGroup V] [inst_1 : Module ℤ V] (W₁ W₂ : Submodule ℤ V),\n    W₁ ≤ W₂ ∧ W₂ ≤ W₁ → W₁ ⊔ W₂ = W₁ ∨ W₁ ⊔ W₂ = W₂) ↔\n  True →\n    ∀ {V : Type u} [inst : AddCommGroup V] [inst_1 : Module ℤ V] (W₁ W₂ : Submodule ℤ V),\n      W₁ ≤ W₂ ∧ W₂ ≤ W₁ → W₁ ⊔ W₂ = W₁ ∨ W₁ ⊔ W₂ = W₂"
+  }
+ },
+ "pnv-test-1169": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=1/5 prefix_s=3/4 shared=1",
+  "goals": {
+   "acc": "∀ {p : ℕ},\n  (True ↔ Fact (Nat.Prime p) ∧ p % 4 = 1) ∧\n    ((∀ {t : ℕ}, Nat.Prime p → p = 4 * t + 1 → ∀ (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p) ↔\n      ∀ (a : ℤ), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p)",
+   "cond": "∀ {p : ℕ},\n  (True ↔ Fact (Nat.Prime p) ∧ p % 4 = 1) ∧\n    (True →\n      ((∀ {t : ℕ}, Nat.Prime p → p = 4 * t + 1 → ∀ (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p) ↔\n        ∀ (a : ℤ), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p))",
+   "nhyp": "¬∀ {p : ℕ}, True ↔ Fact (Nat.Prime p) ∧ p % 4 = 1",
+   "ncin": "¬∀ {p : ℕ},\n    True →\n      ((∀ {t : ℕ}, Nat.Prime p → p = 4 * t + 1 → ∀ (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p) ↔\n        ∀ (a : ℤ), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p)",
+   "ncomp": "¬∀ {p : ℕ},\n    (∀ {t : ℕ}, Nat.Prime p → p = 4 * t + 1 → ∀ (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p) ↔\n      ∀ (a : ℤ), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p",
+   "split_r": "(∀ {p t : ℕ},\n    Nat.Prime p → p = 4 * t + 1 → ∀ (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p) ↔\n  ∀ {p : ℕ},\n    True → ∀ {t : ℕ}, Nat.Prime p → p = 4 * t + 1 → ∀ (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p",
+   "split_s": "(∀ {p : ℕ} [hp : Fact (Nat.Prime p)],\n    p % 4 = 1 → ∀ (a : ℤ), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p) ↔\n  ∀ {p : ℕ}, Fact (Nat.Prime p) ∧ p % 4 = 1 → ∀ (a : ℤ), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p"
+  }
+ },
+ "pnv-test-315": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=4/4 prefix_s=5/5 shared=3",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n  (Even (card G) ↔ card G % 2 = 0 ∧ card G > 2) ∧ ((∃ a, a ≠ 1 ∧ a = a⁻¹) ↔ ∃ x, x ≠ 1 ∧ x ^ 2 = 1)",
+   "cond": "∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n  (Even (card G) ↔ card G % 2 = 0 ∧ card G > 2) ∧ (Even (card G) → ((∃ a, a ≠ 1 ∧ a = a⁻¹) ↔ ∃ x, x ≠ 1 ∧ x ^ 2 = 1))",
+   "nhyp": "¬∀ {G : Type u} [Group G] [inst : Fintype G], Even (card G) ↔ card G % 2 = 0 ∧ card G > 2",
+   "ncin": "¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n    Even (card G) → ((∃ a, a ≠ 1 ∧ a = a⁻¹) ↔ ∃ x, x ≠ 1 ∧ x ^ 2 = 1)",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G] [Fintype G], (∃ a, a ≠ 1 ∧ a = a⁻¹) ↔ ∃ x, x ≠ 1 ∧ x ^ 2 = 1",
+   "split_r": "(∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G], Even (card G) → ∃ a, a ≠ 1 ∧ a = a⁻¹) ↔\n  ∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G], Even (card G) → ∃ a, a ≠ 1 ∧ a = a⁻¹",
+   "split_s": "(∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n    card G % 2 = 0 → card G > 2 → ∃ x, x ≠ 1 ∧ x ^ 2 = 1) ↔\n  ∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G], card G % 2 = 0 ∧ card G > 2 → ∃ x, x ≠ 1 ∧ x ^ 2 = 1"
+  }
+ },
+ "pnv-test-285": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=3",
+  "goals": {
+   "acc": "∀ {R : Type u} [inst : CommRing R] (a : R),\n  (True ↔ True) ∧ ((∃ I, {x | x * a = 0} = ↑I) ↔ (span {a}).IsPrime)",
+   "cond": "∀ {R : Type u} [inst : CommRing R] (a : R),\n  (True ↔ True) ∧ (True → ((∃ I, {x | x * a = 0} = ↑I) ↔ (span {a}).IsPrime))",
+   "nhyp": "¬∀ {R : Type u} [CommRing R] (a : R), True ↔ True",
+   "ncin": "¬∀ {R : Type u} [inst : CommRing R] (a : R),\n    True → ((∃ I, {x | x * a = 0} = ↑I) ↔ (span {a}).IsPrime)",
+   "ncomp": "¬∀ {R : Type u} [inst : CommRing R] (a : R), (∃ I, {x | x * a = 0} = ↑I) ↔ (span {a}).IsPrime",
+   "split_r": "(∀ {R : Type u} [inst : CommRing R] (a : R), ∃ I, {x | x * a = 0} = ↑I) ↔\n  ∀ {R : Type u} [inst : CommRing R] (a : R), True → ∃ I, {x | x * a = 0} = ↑I",
+   "split_s": "(∀ {R : Type u} [inst : CommRing R] (a : R), (span {a}).IsPrime) ↔\n  ∀ {R : Type u} [inst : CommRing R] (a : R), True → (span {a}).IsPrime"
+  }
+ },
+ "pnv-test-1430": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=1/6 prefix_s=1/6 shared=1",
+  "goals": {
+   "acc": "∀ {α : Type u},\n  (True ↔ True) ∧\n    ((∀ [Fintype α] {σ τ : Equiv.Perm α}, (∀ (a : α), σ a = a ↔ τ a ≠ a) → ⇑τ ∘ ⇑σ = id → σ = 1 ∧ τ = 1) ↔\n      ∀ [inst : Group α] {a b : α}, a * b = b * a → a * b * a⁻¹ = b → a = 1)",
+   "cond": "∀ {α : Type u},\n  (True ↔ True) ∧\n    (True →\n      ((∀ [Fintype α] {σ τ : Equiv.Perm α}, (∀ (a : α), σ a = a ↔ τ a ≠ a) → ⇑τ ∘ ⇑σ = id → σ = 1 ∧ τ = 1) ↔\n        ∀ [inst : Group α] {a b : α}, a * b = b * a → a * b * a⁻¹ = b → a = 1))",
+   "nhyp": "¬∀ {α : Type u}, True ↔ True",
+   "ncin": "¬∀ {α : Type u},\n    True →\n      ((∀ [Fintype α] {σ τ : Equiv.Perm α}, (∀ (a : α), σ a = a ↔ τ a ≠ a) → ⇑τ ∘ ⇑σ = id → σ = 1 ∧ τ = 1) ↔\n        ∀ [inst : Group α] {a b : α}, a * b = b * a → a * b * a⁻¹ = b → a = 1)",
+   "ncomp": "¬∀ {α : Type u},\n    (∀ [Fintype α] {σ τ : Equiv.Perm α}, (∀ (a : α), σ a = a ↔ τ a ≠ a) → ⇑τ ∘ ⇑σ = id → σ = 1 ∧ τ = 1) ↔\n      ∀ [inst : Group α] {a b : α}, a * b = b * a → a * b * a⁻¹ = b → a = 1",
+   "split_r": "(∀ {α : Type u} [Fintype α] {σ τ : Equiv.Perm α},\n    (∀ (a : α), σ a = a ↔ τ a ≠ a) → ⇑τ ∘ ⇑σ = id → σ = 1 ∧ τ = 1) ↔\n  ∀ {α : Type u},\n    True → ∀ [Fintype α] {σ τ : Equiv.Perm α}, (∀ (a : α), σ a = a ↔ τ a ≠ a) → ⇑τ ∘ ⇑σ = id → σ = 1 ∧ τ = 1",
+   "split_s": "(∀ {G : Type u} [inst : Group G] {a b : G}, a * b = b * a → a * b * a⁻¹ = b → a = 1) ↔\n  ∀ {G : Type u}, True → ∀ [inst : Group G] {a b : G}, a * b = b * a → a * b * a⁻¹ = b → a = 1"
+  }
+ },
+ "pnv-test-11": {
+  "status": "ok",
+  "info": "ambiguous=true full=false prefix_r=5/5 prefix_s=4/6 shared=4",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G] (a b : G),\n  ((∃ n,\n        (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) n ∧\n          (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 1) ∧\n            (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 2)) ↔\n      True) ∧\n    (a * b = b * a ↔ ∀ (i : ℤ), (∀ j ∈ {i - 1, i, i + 1}, (a * b) ^ j = a ^ j * b ^ j) → Commute a b)",
+   "cond": "∀ {G : Type u} [inst : Group G] (a b : G),\n  ((∃ n,\n        (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) n ∧\n          (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 1) ∧\n            (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 2)) ↔\n      True) ∧\n    ((∃ n,\n        (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) n ∧\n          (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 1) ∧\n            (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 2)) →\n      (a * b = b * a ↔ ∀ (i : ℤ), (∀ j ∈ {i - 1, i, i + 1}, (a * b) ^ j = a ^ j * b ^ j) → Commute a b))",
+   "nhyp": "¬∀ {G : Type u} [inst : Group G] (a b : G),\n    (∃ n,\n        (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) n ∧\n          (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 1) ∧\n            (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 2)) ↔\n      True",
+   "ncin": "¬∀ {G : Type u} [inst : Group G] (a b : G),\n    (∃ n,\n        (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) n ∧\n          (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 1) ∧\n            (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 2)) →\n      (a * b = b * a ↔ ∀ (i : ℤ), (∀ j ∈ {i - 1, i, i + 1}, (a * b) ^ j = a ^ j * b ^ j) → Commute a b)",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G] (a b : G),\n    a * b = b * a ↔ ∀ (i : ℤ), (∀ j ∈ {i - 1, i, i + 1}, (a * b) ^ j = a ^ j * b ^ j) → Commute a b",
+   "split_r": "(∀ {G : Type u} [inst : Group G] {P : ℕ → Prop}\n    {hP : P = fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i},\n    (∃ n, P n ∧ P (n + 1) ∧ P (n + 2)) → ∀ (a b : G), a * b = b * a) ↔\n  ∀ {G : Type u} [inst : Group G] (a b : G),\n    (∃ n,\n        (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) n ∧\n          (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 1) ∧\n            (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 2)) →\n      a * b = b * a",
+   "split_s": "(∀ {G : Type u} [inst : Group G] (a b : G) (i : ℤ),\n    (∀ j ∈ {i - 1, i, i + 1}, (a * b) ^ j = a ^ j * b ^ j) → Commute a b) ↔\n  ∀ {G : Type u} [inst : Group G] (a b : G),\n    True → ∀ (i : ℤ), (∀ j ∈ {i - 1, i, i + 1}, (a * b) ^ j = a ^ j * b ^ j) → Commute a b"
+  }
+ },
+ "pnv-test-239": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/4 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ {I : Ideal GaussianInt}, I ≠ ⊥ → ∃ z, z ≠ 0 ∧ (↑z).im = 0) ↔\n    ∀ {R : Type u} [inst : CommRing R] (I : Ideal R), I ≠ ⊥ → ∃ x, x ≠ 0 ∧ x ∉ I)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ {I : Ideal GaussianInt}, I ≠ ⊥ → ∃ z, z ≠ 0 ∧ (↑z).im = 0) ↔\n      ∀ {R : Type u} [inst : CommRing R] (I : Ideal R), I ≠ ⊥ → ∃ x, x ≠ 0 ∧ x ∉ I))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ {I : Ideal GaussianInt}, I ≠ ⊥ → ∃ z, z ≠ 0 ∧ (↑z).im = 0) ↔\n      ∀ {R : Type u} [inst : CommRing R] (I : Ideal R), I ≠ ⊥ → ∃ x, x ≠ 0 ∧ x ∉ I))",
+   "ncomp": "¬((∀ {I : Ideal GaussianInt}, I ≠ ⊥ → ∃ z, z ≠ 0 ∧ (↑z).im = 0) ↔\n    ∀ {R : Type u} [inst : CommRing R] (I : Ideal R), I ≠ ⊥ → ∃ x, x ≠ 0 ∧ x ∉ I)",
+   "split_r": "(∀ {I : Ideal GaussianInt}, I ≠ ⊥ → ∃ z, z ≠ 0 ∧ (↑z).im = 0) ↔\n  True → ∀ {I : Ideal GaussianInt}, I ≠ ⊥ → ∃ z, z ≠ 0 ∧ (↑z).im = 0",
+   "split_s": "(∀ {R : Type u} [inst : CommRing R] (I : Ideal R), I ≠ ⊥ → ∃ x, x ≠ 0 ∧ x ∉ I) ↔\n  True → ∀ {R : Type u} [inst : CommRing R] (I : Ideal R), I ≠ ⊥ → ∃ x, x ≠ 0 ∧ x ∉ I"
+  }
+ },
+ "pnv-test-377": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧ ((∃ a b, a - b ≠ b - a) ↔ ∀ (a b : ℤ), min a b = 0 → max a b = 0)",
+   "cond": "(True ↔ True) ∧ (True → ((∃ a b, a - b ≠ b - a) ↔ ∀ (a b : ℤ), min a b = 0 → max a b = 0))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True → ((∃ a b, a - b ≠ b - a) ↔ ∀ (a b : ℤ), min a b = 0 → max a b = 0))",
+   "ncomp": "¬((∃ a b, a - b ≠ b - a) ↔ ∀ (a b : ℤ), min a b = 0 → max a b = 0)",
+   "split_r": "(∃ a b, a - b ≠ b - a) ↔ True → ∃ a b, a - b ≠ b - a",
+   "split_s": "(∀ (a b : ℤ), min a b = 0 → max a b = 0) ↔ True → ∀ (a b : ℤ), min a b = 0 → max a b = 0"
+  }
+ },
+ "pnv-test-626": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n    ∀ {a : ℕ} {n : ℕ}, 0 < a → ∃! n, 0 < n ∧ a ^ (n + 1) - (a + 1) ^ n = 2001)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n      ∀ {a : ℕ} {n : ℕ}, 0 < a → ∃! n, 0 < n ∧ a ^ (n + 1) - (a + 1) ^ n = 2001))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n      ∀ {a : ℕ} {n : ℕ}, 0 < a → ∃! n, 0 < n ∧ a ^ (n + 1) - (a + 1) ^ n = 2001))",
+   "ncomp": "¬((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n    ∀ {a : ℕ} {n : ℕ}, 0 < a → ∃! n, 0 < n ∧ a ^ (n + 1) - (a + 1) ^ n = 2001)",
+   "split_r": "(∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n  True → ∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001",
+   "split_s": "(∀ {a : ℕ} {n : ℕ}, 0 < a → ∃! n, 0 < n ∧ a ^ (n + 1) - (a + 1) ^ n = 2001) ↔\n  True → ∀ {a : ℕ} {n : ℕ}, 0 < a → ∃! n, 0 < n ∧ a ^ (n + 1) - (a + 1) ^ n = 2001"
+  }
+ },
+ "pnv-test-1116": {
+  "status": "ok",
+  "info": "ambiguous=true full=false prefix_r=7/9 prefix_s=6/9 shared=4",
+  "goals": {
+   "acc": "∀ {p n : ℕ} {F : Type u} [inst : Field F],\n  (p ≠ 0 ∧ n > 0 ∧ CharP F p ↔ Fact (Nat.Prime p) ∧ CharP F p) ∧\n    ((∀ (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n) ↔\n      ∀ (n : ℕ) (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n)",
+   "cond": "∀ {p n : ℕ} {F : Type u} [inst : Field F],\n  (p ≠ 0 ∧ n > 0 ∧ CharP F p ↔ Fact (Nat.Prime p) ∧ CharP F p) ∧\n    (p ≠ 0 ∧ n > 0 ∧ CharP F p →\n      ((∀ (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n) ↔\n        ∀ (n : ℕ) (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n))",
+   "nhyp": "¬∀ {p n : ℕ} {F : Type u} [inst : Field F],\n    p ≠ 0 ∧ n > 0 ∧ CharP F p ↔ Fact (Nat.Prime p) ∧ CharP F p",
+   "ncin": "¬∀ {p n : ℕ} {F : Type u} [inst : Field F],\n    p ≠ 0 ∧ n > 0 ∧ CharP F p →\n      ((∀ (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n) ↔\n        ∀ (n : ℕ) (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n)",
+   "ncomp": "¬∀ {p n : ℕ} {F : Type u} [inst : Field F],\n    (∀ (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n) ↔\n      ∀ (n : ℕ) (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n",
+   "split_r": "(∀ {p m n : ℕ} {F : Type u} [inst : Field F],\n    p ≠ 0 → n > 0 → CharP F p → ∀ (a b : F), m = p ^ n → (a + b) ^ m = a ^ m + b ^ m) ↔\n  ∀ {p n : ℕ} {F : Type u} [inst : Field F],\n    p ≠ 0 ∧ n > 0 ∧ CharP F p → ∀ (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n",
+   "split_s": "(∀ (F : Type u) [inst : Field F] (p : ℕ) [hp : Fact (Nat.Prime p)] [CharP F p] (m n : ℕ)\n    (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n) ↔\n  ∀ (F : Type u) [inst : Field F] (p m : ℕ),\n    Fact (Nat.Prime p) ∧ CharP F p → ∀ (n : ℕ) (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n"
+  }
+ },
+ "pnv-test-201": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=3/6 prefix_s=1/3 shared=1",
+  "goals": {
+   "acc": "∀ {q : ℕ},\n  (Nat.Prime q ∧ ↑q ≡ 3 [ZMOD 4] ↔ True) ∧\n    ((∀ {R : Type} [inst : Ring R], R = (GaussianInt ⧸ span {↑q}) → IsField R ∧ ∃ finR, card R = q ^ 2) ↔\n      ∀ [inst : Fact (Nat.Prime q)], q ≡ 3 [MOD 4] → card (ZMod q) = q ^ 2)",
+   "cond": "∀ {q : ℕ},\n  (Nat.Prime q ∧ ↑q ≡ 3 [ZMOD 4] ↔ True) ∧\n    (Nat.Prime q ∧ ↑q ≡ 3 [ZMOD 4] →\n      ((∀ {R : Type} [inst : Ring R], R = (GaussianInt ⧸ span {↑q}) → IsField R ∧ ∃ finR, card R = q ^ 2) ↔\n        ∀ [inst : Fact (Nat.Prime q)], q ≡ 3 [MOD 4] → card (ZMod q) = q ^ 2))",
+   "nhyp": "¬∀ {q : ℕ}, Nat.Prime q ∧ ↑q ≡ 3 [ZMOD 4] ↔ True",
+   "ncin": "¬∀ {q : ℕ},\n    Nat.Prime q ∧ ↑q ≡ 3 [ZMOD 4] →\n      ((∀ {R : Type} [inst : Ring R], R = (GaussianInt ⧸ span {↑q}) → IsField R ∧ ∃ finR, card R = q ^ 2) ↔\n        ∀ [inst : Fact (Nat.Prime q)], q ≡ 3 [MOD 4] → card (ZMod q) = q ^ 2)",
+   "ncomp": "¬∀ {q : ℕ},\n    (∀ {R : Type} [inst : Ring R], R = (GaussianInt ⧸ span {↑q}) → IsField R ∧ ∃ finR, card R = q ^ 2) ↔\n      ∀ [inst : Fact (Nat.Prime q)], q ≡ 3 [MOD 4] → card (ZMod q) = q ^ 2",
+   "split_r": "(∀ {q : ℕ},\n    Nat.Prime q →\n      ↑q ≡ 3 [ZMOD 4] →\n        ∀ {R : Type} [inst : Ring R], R = (GaussianInt ⧸ span {↑q}) → IsField R ∧ ∃ finR, card R = q ^ 2) ↔\n  ∀ {q : ℕ},\n    Nat.Prime q ∧ ↑q ≡ 3 [ZMOD 4] →\n      ∀ {R : Type} [inst : Ring R], R = (GaussianInt ⧸ span {↑q}) → IsField R ∧ ∃ finR, card R = q ^ 2",
+   "split_s": "(∀ (q : ℕ) [inst : Fact (Nat.Prime q)], q ≡ 3 [MOD 4] → card (ZMod q) = q ^ 2) ↔\n  ∀ (q : ℕ), True → ∀ [inst : Fact (Nat.Prime q)], q ≡ 3 [MOD 4] → card (ZMod q) = q ^ 2"
+  }
+ },
+ "pnv-test-366": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=7/7 prefix_s=8/8 shared=6",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),\n  (N.Normal ↔ Function.Surjective ⇑φ ∧ ↑N ≤ center G) ∧ ((Subgroup.map φ N).Normal ↔ ⇑φ '' ↑N ≤ center G')",
+   "cond": "∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),\n  (N.Normal ↔ Function.Surjective ⇑φ ∧ ↑N ≤ center G) ∧ (N.Normal → ((Subgroup.map φ N).Normal ↔ ⇑φ '' ↑N ≤ center G'))",
+   "nhyp": "¬∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),\n    N.Normal ↔ Function.Surjective ⇑φ ∧ ↑N ≤ center G",
+   "ncin": "¬∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),\n    N.Normal → ((Subgroup.map φ N).Normal ↔ ⇑φ '' ↑N ≤ center G')",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),\n    (Subgroup.map φ N).Normal ↔ ⇑φ '' ↑N ≤ center G'",
+   "split_r": "(∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G)\n    [N.Normal], (Subgroup.map φ N).Normal) ↔\n  ∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),\n    N.Normal → (Subgroup.map φ N).Normal",
+   "split_s": "(∀ {G G' : Type u} [inst : Group G] [inst_1 : Group G'] (φ : G →* G'),\n    Function.Surjective ⇑φ → ∀ (N : Subgroup G), ↑N ≤ center G → ⇑φ '' ↑N ≤ center G') ↔\n  ∀ {G G' : Type u} [inst : Group G] [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),\n    Function.Surjective ⇑φ ∧ ↑N ≤ center G → ⇑φ '' ↑N ≤ center G'"
+  }
+ },
+ "pnv-test-1356": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/5 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  (Infinite\n      ↑(minimalPrimes (MvPolynomial ℕ ℤ ⧸ span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)))) ↔\n    ∀ {R : Type u} [inst : CommRing R] (I : Ideal R) [I.IsPrime],\n      (∀ (n : ℕ), ∃ I, I.IsPrime ∧ I ≤ I ^ 2 ^ n) → ∃ n I, I.IsPrime ∧ I ≤ I ^ 2 ^ n)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    (Infinite\n        ↑(minimalPrimes\n            (MvPolynomial ℕ ℤ ⧸ span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)))) ↔\n      ∀ {R : Type u} [inst : CommRing R] (I : Ideal R) [I.IsPrime],\n        (∀ (n : ℕ), ∃ I, I.IsPrime ∧ I ≤ I ^ 2 ^ n) → ∃ n I, I.IsPrime ∧ I ≤ I ^ 2 ^ n))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    (Infinite\n        ↑(minimalPrimes\n            (MvPolynomial ℕ ℤ ⧸ span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)))) ↔\n      ∀ {R : Type u} [inst : CommRing R] (I : Ideal R) [I.IsPrime],\n        (∀ (n : ℕ), ∃ I, I.IsPrime ∧ I ≤ I ^ 2 ^ n) → ∃ n I, I.IsPrime ∧ I ≤ I ^ 2 ^ n))",
+   "ncomp": "¬(Infinite\n      ↑(minimalPrimes (MvPolynomial ℕ ℤ ⧸ span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)))) ↔\n    ∀ {R : Type u} [inst : CommRing R] (I : Ideal R) [I.IsPrime],\n      (∀ (n : ℕ), ∃ I, I.IsPrime ∧ I ≤ I ^ 2 ^ n) → ∃ n I, I.IsPrime ∧ I ≤ I ^ 2 ^ n)",
+   "split_r": "(∀ {f : ℕ → MvPolynomial ℕ ℤ},\n    (f = fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)) →\n      Infinite ↑(minimalPrimes (MvPolynomial ℕ ℤ ⧸ span (range f)))) ↔\n  True →\n    Infinite\n      ↑(minimalPrimes (MvPolynomial ℕ ℤ ⧸ span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1))))",
+   "split_s": "(∀ {R : Type u} [inst : CommRing R] (I : Ideal R) [I.IsPrime],\n    (∀ (n : ℕ), ∃ I, I.IsPrime ∧ I ≤ I ^ 2 ^ n) → ∃ n I, I.IsPrime ∧ I ≤ I ^ 2 ^ n) ↔\n  True →\n    ∀ {R : Type u} [inst : CommRing R] (I : Ideal R) [I.IsPrime],\n      (∀ (n : ℕ), ∃ I, I.IsPrime ∧ I ≤ I ^ 2 ^ n) → ∃ n I, I.IsPrime ∧ I ≤ I ^ 2 ^ n"
+  }
+ },
+ "pnv-test-925": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1",
+  "goals": {
+   "acc": "∀ (p : ℕ),\n  (Nat.Prime p ∧ p % 2 = 1 ↔ Fact (Nat.Prime p)) ∧\n    (((∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ∃ x, x ^ 2 = q) ∧\n        ∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ¬∃ x, x ^ 2 = q) ↔\n      (p - 1) / 2 = {x ∈ Finset.range (p - 1) | x ^ 2 ≡ 1 [MOD p]}.card)",
+   "cond": "∀ (p : ℕ),\n  (Nat.Prime p ∧ p % 2 = 1 ↔ Fact (Nat.Prime p)) ∧\n    (Nat.Prime p ∧ p % 2 = 1 →\n      (((∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ∃ x, x ^ 2 = q) ∧\n          ∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ¬∃ x, x ^ 2 = q) ↔\n        (p - 1) / 2 = {x ∈ Finset.range (p - 1) | x ^ 2 ≡ 1 [MOD p]}.card))",
+   "nhyp": "¬∀ (p : ℕ), Nat.Prime p ∧ p % 2 = 1 ↔ Fact (Nat.Prime p)",
+   "ncin": "¬∀ (p : ℕ),\n    Nat.Prime p ∧ p % 2 = 1 →\n      (((∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ∃ x, x ^ 2 = q) ∧\n          ∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ¬∃ x, x ^ 2 = q) ↔\n        (p - 1) / 2 = {x ∈ Finset.range (p - 1) | x ^ 2 ≡ 1 [MOD p]}.card)",
+   "ncomp": "¬∀ (p : ℕ),\n    ((∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ∃ x, x ^ 2 = q) ∧\n        ∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ¬∃ x, x ^ 2 = q) ↔\n      (p - 1) / 2 = {x ∈ Finset.range (p - 1) | x ^ 2 ≡ 1 [MOD p]}.card",
+   "split_r": "(∀ (p : ℕ),\n    Nat.Prime p →\n      p % 2 = 1 →\n        (∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ∃ x, x ^ 2 = q) ∧\n          ∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ¬∃ x, x ^ 2 = q) ↔\n  ∀ (p : ℕ),\n    Nat.Prime p ∧ p % 2 = 1 →\n      (∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ∃ x, x ^ 2 = q) ∧\n        ∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ¬∃ x, x ^ 2 = q",
+   "split_s": "(∀ (p : ℕ) [Fact (Nat.Prime p)],\n    (p - 1) / 2 = {x ∈ Finset.range (p - 1) | x ^ 2 ≡ 1 [MOD p]}.card) ↔\n  ∀ (p : ℕ), Fact (Nat.Prime p) → (p - 1) / 2 = {x ∈ Finset.range (p - 1) | x ^ 2 ≡ 1 [MOD p]}.card"
+  }
+ },
+ "pnv-test-231": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n    ∀ (a n : ℕ), 0 < a → 0 < n → a ^ (n + 1) - (a + 1) ^ n = 2001)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n      ∀ (a n : ℕ), 0 < a → 0 < n → a ^ (n + 1) - (a + 1) ^ n = 2001))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n      ∀ (a n : ℕ), 0 < a → 0 < n → a ^ (n + 1) - (a + 1) ^ n = 2001))",
+   "ncomp": "¬((∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n    ∀ (a n : ℕ), 0 < a → 0 < n → a ^ (n + 1) - (a + 1) ^ n = 2001)",
+   "split_r": "(∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) ↔\n  True → ∃! p, p.1 > 0 ∧ p.2 > 0 ∧ p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001",
+   "split_s": "(∀ (a n : ℕ), 0 < a → 0 < n → a ^ (n + 1) - (a + 1) ^ n = 2001) ↔\n  True → ∀ (a n : ℕ), 0 < a → 0 < n → a ^ (n + 1) - (a + 1) ^ n = 2001"
+  }
+ },
+ "pnv-test-250": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=1/1 prefix_s=0/0 shared=0",
+  "goals": {
+   "acc": "((Summable fun i => 1 / ↑↑i) ↔ True) ∧ (False ↔ Summable fun n => 1 / ↑n)",
+   "cond": "((Summable fun i => 1 / ↑↑i) ↔ True) ∧\n  ((Summable fun i => 1 / ↑↑i) → (False ↔ Summable fun n => 1 / ↑n))",
+   "nhyp": "¬((Summable fun i => 1 / ↑↑i) ↔ True)",
+   "ncin": "¬((Summable fun i => 1 / ↑↑i) → (False ↔ Summable fun n => 1 / ↑n))",
+   "ncomp": "¬(False ↔ Summable fun n => 1 / ↑n)",
+   "split_r": "(¬Summable fun i => 1 / ↑↑i) ↔ (Summable fun i => 1 / ↑↑i) → False",
+   "split_s": "(Summable fun n => 1 / ↑n) ↔ True → Summable fun n => 1 / ↑n"
+  }
+ },
+ "pnv-test-1156": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=4/6 prefix_s=3/8 shared=3",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G] {p : ℕ},\n  (Nat.Prime p ↔ True) ∧\n    ((∀ {P : Sylow p G}, (↑P).Normal → (↑P).Characteristic) ↔\n      ∀ {P : Subgroup G} [hp : Fact (Nat.Prime p)],\n        P.Normal → IsPGroup p ↥P → ∀ (ϕ : G ≃* G), ⇑ϕ.toMonoidHom '' ↑P = ↑P)",
+   "cond": "∀ {G : Type u} [inst : Group G] {p : ℕ},\n  (Nat.Prime p ↔ True) ∧\n    (Nat.Prime p →\n      ((∀ {P : Sylow p G}, (↑P).Normal → (↑P).Characteristic) ↔\n        ∀ {P : Subgroup G} [hp : Fact (Nat.Prime p)],\n          P.Normal → IsPGroup p ↥P → ∀ (ϕ : G ≃* G), ⇑ϕ.toMonoidHom '' ↑P = ↑P))",
+   "nhyp": "¬∀ {G : Type u} [Group G] {p : ℕ}, Nat.Prime p ↔ True",
+   "ncin": "¬∀ {G : Type u} [inst : Group G] {p : ℕ},\n    Nat.Prime p →\n      ((∀ {P : Sylow p G}, (↑P).Normal → (↑P).Characteristic) ↔\n        ∀ {P : Subgroup G} [hp : Fact (Nat.Prime p)],\n          P.Normal → IsPGroup p ↥P → ∀ (ϕ : G ≃* G), ⇑ϕ.toMonoidHom '' ↑P = ↑P)",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G] {p : ℕ},\n    (∀ {P : Sylow p G}, (↑P).Normal → (↑P).Characteristic) ↔\n      ∀ {P : Subgroup G} [hp : Fact (Nat.Prime p)], P.Normal → IsPGroup p ↥P → ∀ (ϕ : G ≃* G), ⇑ϕ.toMonoidHom '' ↑P = ↑P",
+   "split_r": "(∀ {G : Type u} [inst : Group G] {p : ℕ},\n    Nat.Prime p → ∀ {P : Sylow p G}, (↑P).Normal → (↑P).Characteristic) ↔\n  ∀ {G : Type u} [inst : Group G] {p : ℕ}, Nat.Prime p → ∀ {P : Sylow p G}, (↑P).Normal → (↑P).Characteristic",
+   "split_s": "(∀ {G : Type u} [inst : Group G] {p : ℕ} {P : Subgroup G} [hp : Fact (Nat.Prime p)],\n    P.Normal → IsPGroup p ↥P → ∀ (ϕ : G ≃* G), ⇑ϕ.toMonoidHom '' ↑P = ↑P) ↔\n  ∀ {G : Type u} [inst : Group G] {p : ℕ},\n    True →\n      ∀ {P : Subgroup G} [hp : Fact (Nat.Prime p)], P.Normal → IsPGroup p ↥P → ∀ (ϕ : G ≃* G), ⇑ϕ.toMonoidHom '' ↑P = ↑P"
+  }
+ },
+ "pnv-test-692": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  (Infinite\n      ↑(minimalPrimes (MvPolynomial ℕ ℤ ⧸ span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)))) ↔\n    ∀ {p : ℕ},\n      Prime p →\n        ∀ k ≥ 1,\n          ∃ f,\n            ∃ (_ : StrictAnti f),\n              (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 1) ∧\n                (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 2) ∧\n                  (∀ (i : ℕ), f (2 * i) ≥ p ^ 2) ∧ (∀ (i : ℕ), f (2 * i + 1) ≥ p ^ 2) ∧ ∀ i ≥ k, p ∣ f i)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    (Infinite\n        ↑(minimalPrimes\n            (MvPolynomial ℕ ℤ ⧸ span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)))) ↔\n      ∀ {p : ℕ},\n        Prime p →\n          ∀ k ≥ 1,\n            ∃ f,\n              ∃ (_ : StrictAnti f),\n                (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 1) ∧\n                  (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 2) ∧\n                    (∀ (i : ℕ), f (2 * i) ≥ p ^ 2) ∧ (∀ (i : ℕ), f (2 * i + 1) ≥ p ^ 2) ∧ ∀ i ≥ k, p ∣ f i))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    (Infinite\n        ↑(minimalPrimes\n            (MvPolynomial ℕ ℤ ⧸ span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)))) ↔\n      ∀ {p : ℕ},\n        Prime p →\n          ∀ k ≥ 1,\n            ∃ f,\n              ∃ (_ : StrictAnti f),\n                (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 1) ∧\n                  (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 2) ∧\n                    (∀ (i : ℕ), f (2 * i) ≥ p ^ 2) ∧ (∀ (i : ℕ), f (2 * i + 1) ≥ p ^ 2) ∧ ∀ i ≥ k, p ∣ f i))",
+   "ncomp": "¬(Infinite\n      ↑(minimalPrimes (MvPolynomial ℕ ℤ ⧸ span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)))) ↔\n    ∀ {p : ℕ},\n      Prime p →\n        ∀ k ≥ 1,\n          ∃ f,\n            ∃ (_ : StrictAnti f),\n              (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 1) ∧\n                (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 2) ∧\n                  (∀ (i : ℕ), f (2 * i) ≥ p ^ 2) ∧ (∀ (i : ℕ), f (2 * i + 1) ≥ p ^ 2) ∧ ∀ i ≥ k, p ∣ f i)",
+   "split_r": "(∀ {f : ℕ → MvPolynomial ℕ ℤ},\n    (f = fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)) →\n      Infinite ↑(minimalPrimes (MvPolynomial ℕ ℤ ⧸ span (range f)))) ↔\n  True →\n    Infinite\n      ↑(minimalPrimes (MvPolynomial ℕ ℤ ⧸ span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1))))",
+   "split_s": "(∀ {p : ℕ},\n    Prime p →\n      ∀ k ≥ 1,\n        ∃ f,\n          ∃ (_ : StrictAnti f),\n            (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 1) ∧\n              (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 2) ∧\n                (∀ (i : ℕ), f (2 * i) ≥ p ^ 2) ∧ (∀ (i : ℕ), f (2 * i + 1) ≥ p ^ 2) ∧ ∀ i ≥ k, p ∣ f i) ↔\n  True →\n    ∀ {p : ℕ},\n      Prime p →\n        ∀ k ≥ 1,\n          ∃ f,\n            ∃ (_ : StrictAnti f),\n              (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 1) ∧\n                (∀ (i : ℕ), f i ≥ 1 → f (i + 1) ≥ f i + 2) ∧\n                  (∀ (i : ℕ), f (2 * i) ≥ p ^ 2) ∧ (∀ (i : ℕ), f (2 * i + 1) ≥ p ^ 2) ∧ ∀ i ≥ k, p ∣ f i"
+  }
+ },
+ "pnv-test-893": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1",
+  "goals": {
+   "acc": "∀ (f : ℝ → ℝ),\n  ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔\n      (∀ (n : ℕ), Differentiable ℝ f^[n]) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ∧\n    ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0)",
+   "cond": "∀ (f : ℝ → ℝ),\n  ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔\n      (∀ (n : ℕ), Differentiable ℝ f^[n]) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ∧\n    ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) →\n      ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0))",
+   "nhyp": "¬∀ (f : ℝ → ℝ),\n    (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔\n      (∀ (n : ℕ), Differentiable ℝ f^[n]) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0",
+   "ncin": "¬∀ (f : ℝ → ℝ),\n    (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) →\n      ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0)",
+   "ncomp": "¬∀ (f : ℝ → ℝ), (∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0",
+   "split_r": "(∀ (f : ℝ → ℝ),\n    ContDiff ℝ ⊤ f → f 0 = 0 → f 1 = 1 → (∀ (x : ℝ), f x ≥ 0) → ∃ n x, iteratedDeriv (↑n) f x < 0) ↔\n  ∀ (f : ℝ → ℝ), (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) → ∃ n x, iteratedDeriv (↑n) f x < 0",
+   "split_s": "(∀ (f : ℝ → ℝ),\n    (∀ (n : ℕ), Differentiable ℝ f^[n]) → f 0 = 0 → f 1 = 1 → (∀ (x : ℝ), f x ≥ 0) → ∃ n x, deriv^[n] f x < 0) ↔\n  ∀ (f : ℝ → ℝ),\n    ((∀ (n : ℕ), Differentiable ℝ f^[n]) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) → ∃ n x, deriv^[n] f x < 0"
+  }
+ },
+ "pnv-test-438": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1",
+  "goals": {
+   "acc": "∀ (r : ℂ → ℂ → Prop),\n  (IsLinearOrder ℂ r ↔\n      IsStrictTotalOrder ℂ r ∧ ∀ (x y z : ℂ), r x y → r (x + z) (y + z) ∧ ∀ (x y : ℂ), r 0 x → r 0 (x * y)) ∧\n    (False ↔ False)",
+   "cond": "∀ (r : ℂ → ℂ → Prop),\n  (IsLinearOrder ℂ r ↔\n      IsStrictTotalOrder ℂ r ∧ ∀ (x y z : ℂ), r x y → r (x + z) (y + z) ∧ ∀ (x y : ℂ), r 0 x → r 0 (x * y)) ∧\n    (IsLinearOrder ℂ r → (False ↔ False))",
+   "nhyp": "¬∀ (r : ℂ → ℂ → Prop),\n    IsLinearOrder ℂ r ↔\n      IsStrictTotalOrder ℂ r ∧ ∀ (x y z : ℂ), r x y → r (x + z) (y + z) ∧ ∀ (x y : ℂ), r 0 x → r 0 (x * y)",
+   "ncin": "¬∀ (r : ℂ → ℂ → Prop), IsLinearOrder ℂ r → (False ↔ False)",
+   "ncomp": "¬∀ (r : ℂ → ℂ → Prop), False ↔ False",
+   "split_r": "(¬∃ r, IsLinearOrder ℂ r) ↔ ∀ (r : ℂ → ℂ → Prop), IsLinearOrder ℂ r → False",
+   "split_s": "(¬∃ r,\n      IsStrictTotalOrder ℂ r ∧ ∀ (x y z : ℂ), r x y → r (x + z) (y + z) ∧ ∀ (x y : ℂ), r 0 x → r 0 (x * y)) ↔\n  ∀ (r : ℂ → ℂ → Prop),\n    (IsStrictTotalOrder ℂ r ∧ ∀ (x y z : ℂ), r x y → r (x + z) (y + z) ∧ ∀ (x y : ℂ), r 0 x → r 0 (x * y)) → False"
+  }
+ },
+ "pnv-test-796": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1",
+  "goals": {
+   "acc": "∀ (p : ℕ),\n  (Nat.Prime p ↔ Fact (Nat.Prime p)) ∧ ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p])",
+   "cond": "∀ (p : ℕ),\n  (Nat.Prime p ↔ Fact (Nat.Prime p)) ∧ (Nat.Prime p → ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p]))",
+   "nhyp": "¬∀ (p : ℕ), Nat.Prime p ↔ Fact (Nat.Prime p)",
+   "ncin": "¬∀ (p : ℕ), Nat.Prime p → ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p])",
+   "ncomp": "¬∀ (p : ℕ), (∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p]",
+   "split_r": "(∀ (p : ℕ), Nat.Prime p → ∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔\n  ∀ (p : ℕ), Nat.Prime p → ∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]",
+   "split_s": "(∀ (p : ℕ) [Fact (Nat.Prime p)] (a : ℕ), a ^ p ≡ a [MOD p]) ↔\n  ∀ (p : ℕ), Fact (Nat.Prime p) → ∀ (a : ℕ), a ^ p ≡ a [MOD p]"
+  }
+ },
+ "pnv-test-638": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=3/3 prefix_s=4/4 shared=1",
+  "goals": {
+   "acc": "∀ {f : ℝ → ℝ},\n  (DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) ↔\n      Tendsto (deriv f) atTop (𝓝 0) ∧ Continuous f ∧ Monotone f) ∧\n    (Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) ↔ Tendsto f atTop (𝓝 0))",
+   "cond": "∀ {f : ℝ → ℝ},\n  (DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) ↔\n      Tendsto (deriv f) atTop (𝓝 0) ∧ Continuous f ∧ Monotone f) ∧\n    (DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) →\n      (Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) ↔ Tendsto f atTop (𝓝 0)))",
+   "nhyp": "¬∀ {f : ℝ → ℝ},\n    DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) ↔\n      Tendsto (deriv f) atTop (𝓝 0) ∧ Continuous f ∧ Monotone f",
+   "ncin": "¬∀ {f : ℝ → ℝ},\n    DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) →\n      (Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) ↔ Tendsto f atTop (𝓝 0))",
+   "ncomp": "¬∀ {f : ℝ → ℝ}, Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) ↔ Tendsto f atTop (𝓝 0)",
+   "split_r": "(∀ {f : ℝ → ℝ},\n    DifferentiableOn ℝ f (Set.Ioi 0) → Tendsto (deriv f) atTop (𝓝 0) → Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0)) ↔\n  ∀ {f : ℝ → ℝ},\n    DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) → Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0)",
+   "split_s": "(∀ {f : ℝ → ℝ},\n    Tendsto (deriv f) atTop (𝓝 0) → Continuous f → Monotone f → Tendsto f atTop (𝓝 0)) ↔\n  ∀ {f : ℝ → ℝ}, Tendsto (deriv f) atTop (𝓝 0) ∧ Continuous f ∧ Monotone f → Tendsto f atTop (𝓝 0)"
+  }
+ },
+ "pnv-test-216": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/2 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ (f : ℕ → ↑(Icc 0 1) → ℝ),\n      (∀ (x : ↑(Icc 0 1)) (n : ℕ), f n x = ↑↑x ^ n) → ∀ (f₀ : ↑(Icc 0 1) → ℝ), TendstoUniformly f f₀ atTop → False) ↔\n    ∀ {n : ℕ}, TendstoUniformlyOn (fun n x => x ^ n) (fun x => x) atTop (Icc 0 1) → False)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ (f : ℕ → ↑(Icc 0 1) → ℝ),\n        (∀ (x : ↑(Icc 0 1)) (n : ℕ), f n x = ↑↑x ^ n) → ∀ (f₀ : ↑(Icc 0 1) → ℝ), TendstoUniformly f f₀ atTop → False) ↔\n      ∀ {n : ℕ}, TendstoUniformlyOn (fun n x => x ^ n) (fun x => x) atTop (Icc 0 1) → False))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ (f : ℕ → ↑(Icc 0 1) → ℝ),\n        (∀ (x : ↑(Icc 0 1)) (n : ℕ), f n x = ↑↑x ^ n) → ∀ (f₀ : ↑(Icc 0 1) → ℝ), TendstoUniformly f f₀ atTop → False) ↔\n      ∀ {n : ℕ}, TendstoUniformlyOn (fun n x => x ^ n) (fun x => x) atTop (Icc 0 1) → False))",
+   "ncomp": "¬((∀ (f : ℕ → ↑(Icc 0 1) → ℝ),\n      (∀ (x : ↑(Icc 0 1)) (n : ℕ), f n x = ↑↑x ^ n) → ∀ (f₀ : ↑(Icc 0 1) → ℝ), TendstoUniformly f f₀ atTop → False) ↔\n    ∀ {n : ℕ}, TendstoUniformlyOn (fun n x => x ^ n) (fun x => x) atTop (Icc 0 1) → False)",
+   "split_r": "(∀ (f : ℕ → ↑(Icc 0 1) → ℝ),\n    (∀ (x : ↑(Icc 0 1)) (n : ℕ), f n x = ↑↑x ^ n) → ¬∃ f₀, TendstoUniformly f f₀ atTop) ↔\n  True →\n    ∀ (f : ℕ → ↑(Icc 0 1) → ℝ),\n      (∀ (x : ↑(Icc 0 1)) (n : ℕ), f n x = ↑↑x ^ n) → ∀ (f₀ : ↑(Icc 0 1) → ℝ), TendstoUniformly f f₀ atTop → False",
+   "split_s": "(∀ {n : ℕ}, ¬TendstoUniformlyOn (fun n x => x ^ n) (fun x => x) atTop (Icc 0 1)) ↔\n  True → ∀ {n : ℕ}, TendstoUniformlyOn (fun n x => x ^ n) (fun x => x) atTop (Icc 0 1) → False"
+  }
+ },
+ "pnv-test-663": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=2/5 prefix_s=3/5 shared=2",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G],\n  (True ↔ Finite G) ∧\n    ((∀ [Fintype G] {H : Subgroup G}, H ≠ ⊤ → ∃ M, M ≠ ⊤ ∧ (∀ (K : Subgroup G), M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M) ↔\n      ∀ {H : Subgroup G}, H ≠ ⊤ → ∃ M, ∃ (_ : M ≠ ⊤), H ≤ M ∧ ∀ (K : Subgroup G), H ≤ K → M = K ∨ K = ⊤)",
+   "cond": "∀ {G : Type u} [inst : Group G],\n  (True ↔ Finite G) ∧\n    (True →\n      ((∀ [Fintype G] {H : Subgroup G}, H ≠ ⊤ → ∃ M, M ≠ ⊤ ∧ (∀ (K : Subgroup G), M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M) ↔\n        ∀ {H : Subgroup G}, H ≠ ⊤ → ∃ M, ∃ (_ : M ≠ ⊤), H ≤ M ∧ ∀ (K : Subgroup G), H ≤ K → M = K ∨ K = ⊤))",
+   "nhyp": "¬∀ {G : Type u} [Group G], True ↔ Finite G",
+   "ncin": "¬∀ {G : Type u} [inst : Group G],\n    True →\n      ((∀ [Fintype G] {H : Subgroup G}, H ≠ ⊤ → ∃ M, M ≠ ⊤ ∧ (∀ (K : Subgroup G), M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M) ↔\n        ∀ {H : Subgroup G}, H ≠ ⊤ → ∃ M, ∃ (_ : M ≠ ⊤), H ≤ M ∧ ∀ (K : Subgroup G), H ≤ K → M = K ∨ K = ⊤)",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G],\n    (∀ [Fintype G] {H : Subgroup G}, H ≠ ⊤ → ∃ M, M ≠ ⊤ ∧ (∀ (K : Subgroup G), M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M) ↔\n      ∀ {H : Subgroup G}, H ≠ ⊤ → ∃ M, ∃ (_ : M ≠ ⊤), H ≤ M ∧ ∀ (K : Subgroup G), H ≤ K → M = K ∨ K = ⊤",
+   "split_r": "(∀ {G : Type u} [inst : Group G] [Fintype G] {H : Subgroup G},\n    H ≠ ⊤ → ∃ M, M ≠ ⊤ ∧ (∀ (K : Subgroup G), M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M) ↔\n  ∀ {G : Type u} [inst : Group G],\n    True → ∀ [Fintype G] {H : Subgroup G}, H ≠ ⊤ → ∃ M, M ≠ ⊤ ∧ (∀ (K : Subgroup G), M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M",
+   "split_s": "(∀ {G : Type u} [inst : Group G] [Finite G] {H : Subgroup G},\n    H ≠ ⊤ → ∃ M, ∃ (_ : M ≠ ⊤), H ≤ M ∧ ∀ (K : Subgroup G), H ≤ K → M = K ∨ K = ⊤) ↔\n  ∀ {G : Type u} [inst : Group G],\n    Finite G → ∀ {H : Subgroup G}, H ≠ ⊤ → ∃ M, ∃ (_ : M ≠ ⊤), H ≤ M ∧ ∀ (K : Subgroup G), H ≤ K → M = K ∨ K = ⊤"
+  }
+ },
+ "pnv-test-776": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4",
+  "goals": {
+   "acc": "∀ {R : Type u} [inst : CommRing R] {a : R} (b : R),\n  (0 ≠ 1 ∧ IsNilpotent a ↔ IsNilpotent a ∧ b ≠ 0) ∧ (IsUnit (1 - a * b) ↔ IsUnit (1 - a * b))",
+   "cond": "∀ {R : Type u} [inst : CommRing R] {a : R} (b : R),\n  (0 ≠ 1 ∧ IsNilpotent a ↔ IsNilpotent a ∧ b ≠ 0) ∧ (0 ≠ 1 ∧ IsNilpotent a → (IsUnit (1 - a * b) ↔ IsUnit (1 - a * b)))",
+   "nhyp": "¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R), 0 ≠ 1 ∧ IsNilpotent a ↔ IsNilpotent a ∧ b ≠ 0",
+   "ncin": "¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R),\n    0 ≠ 1 ∧ IsNilpotent a → (IsUnit (1 - a * b) ↔ IsUnit (1 - a * b))",
+   "ncomp": "¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R), IsUnit (1 - a * b) ↔ IsUnit (1 - a * b)",
+   "split_r": "(∀ {R : Type u} [inst : CommRing R],\n    0 ≠ 1 → ∀ {a : R}, IsNilpotent a → ∀ (b : R), IsUnit (1 - a * b)) ↔\n  ∀ {R : Type u} [inst : CommRing R] {a : R} (b : R), 0 ≠ 1 ∧ IsNilpotent a → IsUnit (1 - a * b)",
+   "split_s": "(∀ {R : Type u} [inst : CommRing R] {a b : R}, IsNilpotent a → b ≠ 0 → IsUnit (1 - a * b)) ↔\n  ∀ {R : Type u} [inst : CommRing R] {a b : R}, IsNilpotent a ∧ b ≠ 0 → IsUnit (1 - a * b)"
+  }
+ },
+ "pnv-test-1157": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/4 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ), Continuous f → IsClosed (f ⁻¹' {0})) ↔\n    ∀ {X : Type u} [inst : MetricSpace X] {f : X → ℝ}, Continuous f → IsClosed {x | f x = 0})",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ), Continuous f → IsClosed (f ⁻¹' {0})) ↔\n      ∀ {X : Type u} [inst : MetricSpace X] {f : X → ℝ}, Continuous f → IsClosed {x | f x = 0}))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ), Continuous f → IsClosed (f ⁻¹' {0})) ↔\n      ∀ {X : Type u} [inst : MetricSpace X] {f : X → ℝ}, Continuous f → IsClosed {x | f x = 0}))",
+   "ncomp": "¬((∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ), Continuous f → IsClosed (f ⁻¹' {0})) ↔\n    ∀ {X : Type u} [inst : MetricSpace X] {f : X → ℝ}, Continuous f → IsClosed {x | f x = 0})",
+   "split_r": "(∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ),\n    Continuous f → ∀ (z : Set α), z = f ⁻¹' {0} → IsClosed z) ↔\n  True → ∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ), Continuous f → IsClosed (f ⁻¹' {0})",
+   "split_s": "(∀ {X : Type u} [inst : MetricSpace X] {f : X → ℝ}, Continuous f → IsClosed {x | f x = 0}) ↔\n  True → ∀ {X : Type u} [inst : MetricSpace X] {f : X → ℝ}, Continuous f → IsClosed {x | f x = 0}"
+  }
+ },
+ "pnv-test-247": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/12 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n      Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔\n    ∀ {X Y : Type u} [inst : MetricSpace X] [inst_1 : MetricSpace Y] {f g : X → Y} {P : Set X},\n      Dense P → Continuous f → Continuous g → (∀ p ∈ P, f p = g p) → ∀ (x : X), f x = g x)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n        Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔\n      ∀ {X Y : Type u} [inst : MetricSpace X] [inst_1 : MetricSpace Y] {f g : X → Y} {P : Set X},\n        Dense P → Continuous f → Continuous g → (∀ p ∈ P, f p = g p) → ∀ (x : X), f x = g x))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n        Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔\n      ∀ {X Y : Type u} [inst : MetricSpace X] [inst_1 : MetricSpace Y] {f g : X → Y} {P : Set X},\n        Dense P → Continuous f → Continuous g → (∀ p ∈ P, f p = g p) → ∀ (x : X), f x = g x))",
+   "ncomp": "¬((∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β)\n      (s : Set α), Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔\n    ∀ {X Y : Type u} [inst : MetricSpace X] [inst_1 : MetricSpace Y] {f g : X → Y} {P : Set X},\n      Dense P → Continuous f → Continuous g → (∀ p ∈ P, f p = g p) → ∀ (x : X), f x = g x)",
+   "split_r": "(∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β)\n    (s : Set α), Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔\n  True →\n    ∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n      Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g",
+   "split_s": "(∀ {X Y : Type u} [inst : MetricSpace X] [inst_1 : MetricSpace Y] {f g : X → Y} {P : Set X},\n    Dense P → Continuous f → Continuous g → (∀ p ∈ P, f p = g p) → ∀ (x : X), f x = g x) ↔\n  True →\n    ∀ {X Y : Type u} [inst : MetricSpace X] [inst_1 : MetricSpace Y] {f g : X → Y} {P : Set X},\n      Dense P → Continuous f → Continuous g → (∀ p ∈ P, f p = g p) → ∀ (x : X), f x = g x"
+  }
+ },
+ "pnv-test-212": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4",
+  "goals": {
+   "acc": "∀ {G H : Type u} [inst : Group G] [inst_1 : Group H],\n  (True ↔ True) ∧\n    (Nonempty (↥(center (G × H)) ≃* ↥(center G) × ↥(center H)) ↔ center (G × H) = (center G).prod (center H))",
+   "cond": "∀ {G H : Type u} [inst : Group G] [inst_1 : Group H],\n  (True ↔ True) ∧\n    (True → (Nonempty (↥(center (G × H)) ≃* ↥(center G) × ↥(center H)) ↔ center (G × H) = (center G).prod (center H)))",
+   "nhyp": "¬∀ {G H : Type u} [Group G] [Group H], True ↔ True",
+   "ncin": "¬∀ {G H : Type u} [inst : Group G] [inst_1 : Group H],\n    True → (Nonempty (↥(center (G × H)) ≃* ↥(center G) × ↥(center H)) ↔ center (G × H) = (center G).prod (center H))",
+   "ncomp": "¬∀ {G H : Type u} [inst : Group G] [inst_1 : Group H],\n    Nonempty (↥(center (G × H)) ≃* ↥(center G) × ↥(center H)) ↔ center (G × H) = (center G).prod (center H)",
+   "split_r": "(∀ {G H : Type u} [inst : Group G] [inst_1 : Group H],\n    Nonempty (↥(center (G × H)) ≃* ↥(center G) × ↥(center H))) ↔\n  ∀ {G H : Type u} [inst : Group G] [inst_1 : Group H], True → Nonempty (↥(center (G × H)) ≃* ↥(center G) × ↥(center H))",
+   "split_s": "(∀ (G H : Type u) [inst : Group G] [inst_1 : Group H],\n    center (G × H) = (center G).prod (center H)) ↔\n  ∀ (G H : Type u) [inst : Group G] [inst_1 : Group H], True → center (G × H) = (center G).prod (center H)"
+  }
+ },
+ "pnv-test-813": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=1/1 prefix_s=1/1 shared=1",
+  "goals": {
+   "acc": "∀ (A : Set ℕ), (True ↔ True) ∧ (IsClopen A ↔ IsClopen A)",
+   "cond": "∀ (A : Set ℕ), (True ↔ True) ∧ (True → (IsClopen A ↔ IsClopen A))",
+   "nhyp": "¬∀ (A : Set ℕ), True ↔ True",
+   "ncin": "¬∀ (A : Set ℕ), True → (IsClopen A ↔ IsClopen A)",
+   "ncomp": "¬∀ (A : Set ℕ), IsClopen A ↔ IsClopen A",
+   "split_r": "(∀ (A : Set ℕ), IsClopen A) ↔ ∀ (A : Set ℕ), True → IsClopen A",
+   "split_s": "(∀ {s : Set ℕ}, IsClopen s) ↔ ∀ {s : Set ℕ}, True → IsClopen s"
+  }
+ },
+ "pnv-test-100": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/5 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ {X : ℕ → Type u} [inst : (i : ℕ) → TopologicalSpace (X i)],\n      (∀ (i : ℕ), ∃ s, Countable ↑s ∧ Dense s) → ∃ s, Countable ↑s ∧ Dense s) ↔\n    ∀ {ι : Type u} [Countable ι] {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n      (∀ (i : ι), ∃ D, Countable ↑D ∧ Dense D) → ∃ D, Countable ↑D ∧ Dense D)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ {X : ℕ → Type u} [inst : (i : ℕ) → TopologicalSpace (X i)],\n        (∀ (i : ℕ), ∃ s, Countable ↑s ∧ Dense s) → ∃ s, Countable ↑s ∧ Dense s) ↔\n      ∀ {ι : Type u} [Countable ι] {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n        (∀ (i : ι), ∃ D, Countable ↑D ∧ Dense D) → ∃ D, Countable ↑D ∧ Dense D))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ {X : ℕ → Type u} [inst : (i : ℕ) → TopologicalSpace (X i)],\n        (∀ (i : ℕ), ∃ s, Countable ↑s ∧ Dense s) → ∃ s, Countable ↑s ∧ Dense s) ↔\n      ∀ {ι : Type u} [Countable ι] {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n        (∀ (i : ι), ∃ D, Countable ↑D ∧ Dense D) → ∃ D, Countable ↑D ∧ Dense D))",
+   "ncomp": "¬((∀ {X : ℕ → Type u} [inst : (i : ℕ) → TopologicalSpace (X i)],\n      (∀ (i : ℕ), ∃ s, Countable ↑s ∧ Dense s) → ∃ s, Countable ↑s ∧ Dense s) ↔\n    ∀ {ι : Type u} [Countable ι] {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n      (∀ (i : ι), ∃ D, Countable ↑D ∧ Dense D) → ∃ D, Countable ↑D ∧ Dense D)",
+   "split_r": "(∀ {X : ℕ → Type u} [inst : (i : ℕ) → TopologicalSpace (X i)],\n    (∀ (i : ℕ), ∃ s, Countable ↑s ∧ Dense s) → ∃ s, Countable ↑s ∧ Dense s) ↔\n  True →\n    ∀ {X : ℕ → Type u} [inst : (i : ℕ) → TopologicalSpace (X i)],\n      (∀ (i : ℕ), ∃ s, Countable ↑s ∧ Dense s) → ∃ s, Countable ↑s ∧ Dense s",
+   "split_s": "(∀ {ι : Type u} [Countable ι] {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n    (∀ (i : ι), ∃ D, Countable ↑D ∧ Dense D) → ∃ D, Countable ↑D ∧ Dense D) ↔\n  True →\n    ∀ {ι : Type u} [Countable ι] {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n      (∀ (i : ι), ∃ D, Countable ↑D ∧ Dense D) → ∃ D, Countable ↑D ∧ Dense D"
+  }
+ },
+ "pnv-test-1005": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=2",
+  "goals": {
+   "acc": "∀ (f : ℝ → ℝ) (x : ℝ),\n  ((ContDiff ℝ 3 f ∧ (∀ n ≤ 3, ∀ (x : ℝ), iteratedDeriv n f x > 0) ∧ ∀ (x : ℝ), iteratedDeriv 3 f x ≤ f x) ↔\n      (∀ n ≤ 3, Continuous (deriv^[n] f)) ∧\n        (∀ (x : ℝ), 0 < f x ∧ 0 < deriv f x ∧ 0 < deriv^[2] f x ∧ 0 < deriv^[3] f x) ∧ ∀ (x : ℝ), deriv^[3] f x ≤ f x) ∧\n    (deriv f x < 2 * f x ↔ deriv f x < 2 * f x)",
+   "cond": "∀ (f : ℝ → ℝ) (x : ℝ),\n  ((ContDiff ℝ 3 f ∧ (∀ n ≤ 3, ∀ (x : ℝ), iteratedDeriv n f x > 0) ∧ ∀ (x : ℝ), iteratedDeriv 3 f x ≤ f x) ↔\n      (∀ n ≤ 3, Continuous (deriv^[n] f)) ∧\n        (∀ (x : ℝ), 0 < f x ∧ 0 < deriv f x ∧ 0 < deriv^[2] f x ∧ 0 < deriv^[3] f x) ∧ ∀ (x : ℝ), deriv^[3] f x ≤ f x) ∧\n    ((ContDiff ℝ 3 f ∧ (∀ n ≤ 3, ∀ (x : ℝ), iteratedDeriv n f x > 0) ∧ ∀ (x : ℝ), iteratedDeriv 3 f x ≤ f x) →\n      (deriv f x < 2 * f x ↔ deriv f x < 2 * f x))",
+   "nhyp": "¬∀ (f : ℝ → ℝ) (x : ℝ),\n    (ContDiff ℝ 3 f ∧ (∀ n ≤ 3, ∀ (x : ℝ), iteratedDeriv n f x > 0) ∧ ∀ (x : ℝ), iteratedDeriv 3 f x ≤ f x) ↔\n      (∀ n ≤ 3, Continuous (deriv^[n] f)) ∧\n        (∀ (x : ℝ), 0 < f x ∧ 0 < deriv f x ∧ 0 < deriv^[2] f x ∧ 0 < deriv^[3] f x) ∧ ∀ (x : ℝ), deriv^[3] f x ≤ f x",
+   "ncin": "¬∀ (f : ℝ → ℝ) (x : ℝ),\n    (ContDiff ℝ 3 f ∧ (∀ n ≤ 3, ∀ (x : ℝ), iteratedDeriv n f x > 0) ∧ ∀ (x : ℝ), iteratedDeriv 3 f x ≤ f x) →\n      (deriv f x < 2 * f x ↔ deriv f x < 2 * f x)",
+   "ncomp": "¬∀ (f : ℝ → ℝ) (x : ℝ), deriv f x < 2 * f x ↔ deriv f x < 2 * f x",
+   "split_r": "(∀ (f : ℝ → ℝ),\n    ContDiff ℝ 3 f →\n      (∀ n ≤ 3, ∀ (x : ℝ), iteratedDeriv n f x > 0) →\n        (∀ (x : ℝ), iteratedDeriv 3 f x ≤ f x) → ∀ (x : ℝ), deriv f x < 2 * f x) ↔\n  ∀ (f : ℝ → ℝ) (x : ℝ),\n    (ContDiff ℝ 3 f ∧ (∀ n ≤ 3, ∀ (x : ℝ), iteratedDeriv n f x > 0) ∧ ∀ (x : ℝ), iteratedDeriv 3 f x ≤ f x) →\n      deriv f x < 2 * f x",
+   "split_s": "(∀ {f : ℝ → ℝ},\n    (∀ n ≤ 3, Continuous (deriv^[n] f)) →\n      (∀ (x : ℝ), 0 < f x ∧ 0 < deriv f x ∧ 0 < deriv^[2] f x ∧ 0 < deriv^[3] f x) →\n        (∀ (x : ℝ), deriv^[3] f x ≤ f x) → ∀ (x : ℝ), deriv f x < 2 * f x) ↔\n  ∀ {f : ℝ → ℝ} (x : ℝ),\n    ((∀ n ≤ 3, Continuous (deriv^[n] f)) ∧\n        (∀ (x : ℝ), 0 < f x ∧ 0 < deriv f x ∧ 0 < deriv^[2] f x ∧ 0 < deriv^[3] f x) ∧ ∀ (x : ℝ), deriv^[3] f x ≤ f x) →\n      deriv f x < 2 * f x"
+  }
+ },
+ "pnv-test-101": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1",
+  "goals": {
+   "acc": "∀ {f : ℝ → ℝ},\n  ((∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ↔ ∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ∧\n    ((∃ c, f = fun x => c) ↔ ∃ c, ∀ (x : ℝ), f x = c)",
+   "cond": "∀ {f : ℝ → ℝ},\n  ((∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ↔ ∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ∧\n    ((∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) → ((∃ c, f = fun x => c) ↔ ∃ c, ∀ (x : ℝ), f x = c))",
+   "nhyp": "¬∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ↔ ∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2",
+   "ncin": "¬∀ {f : ℝ → ℝ},\n    (∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) → ((∃ c, f = fun x => c) ↔ ∃ c, ∀ (x : ℝ), f x = c)",
+   "ncomp": "¬∀ {f : ℝ → ℝ}, (∃ c, f = fun x => c) ↔ ∃ c, ∀ (x : ℝ), f x = c",
+   "split_r": "(∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) → ∃ c, f = fun x => c) ↔\n  ∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) → ∃ c, f = fun x => c",
+   "split_s": "(∀ (f : ℝ → ℝ), (∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) → ∃ c, ∀ (x : ℝ), f x = c) ↔\n  ∀ (f : ℝ → ℝ), (∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) → ∃ c, ∀ (x : ℝ), f x = c"
+  }
+ },
+ "pnv-test-85": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=9/9 prefix_s=8/8 shared=4",
+  "goals": {
+   "acc": "∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n  (IsCompact A ∧ IsCompact B ∧ Disjoint A B ∧ A ≠ ∅ ∧ B ≠ ∅ ↔\n      IsCompact A ∧ IsCompact B ∧ Disjoint A B ∧ A.Nonempty ∧ B.Nonempty) ∧\n    ((∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b) ↔\n      ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b)",
+   "cond": "∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n  (IsCompact A ∧ IsCompact B ∧ Disjoint A B ∧ A ≠ ∅ ∧ B ≠ ∅ ↔\n      IsCompact A ∧ IsCompact B ∧ Disjoint A B ∧ A.Nonempty ∧ B.Nonempty) ∧\n    (IsCompact A ∧ IsCompact B ∧ Disjoint A B ∧ A ≠ ∅ ∧ B ≠ ∅ →\n      ((∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b) ↔\n        ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b))",
+   "nhyp": "¬∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n    IsCompact A ∧ IsCompact B ∧ Disjoint A B ∧ A ≠ ∅ ∧ B ≠ ∅ ↔\n      IsCompact A ∧ IsCompact B ∧ Disjoint A B ∧ A.Nonempty ∧ B.Nonempty",
+   "ncin": "¬∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n    IsCompact A ∧ IsCompact B ∧ Disjoint A B ∧ A ≠ ∅ ∧ B ≠ ∅ →\n      ((∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b) ↔\n        ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b)",
+   "ncomp": "¬∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n    (∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b) ↔\n      ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b",
+   "split_r": "(∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n    IsCompact A →\n      IsCompact B →\n        Disjoint A B → A ≠ ∅ → B ≠ ∅ → ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b) ↔\n  ∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n    IsCompact A ∧ IsCompact B ∧ Disjoint A B ∧ A ≠ ∅ ∧ B ≠ ∅ →\n      ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b",
+   "split_s": "(∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n    IsCompact A →\n      IsCompact B →\n        Disjoint A B →\n          A.Nonempty ∧ B.Nonempty → ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b) ↔\n  ∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n    IsCompact A ∧ IsCompact B ∧ Disjoint A B ∧ A.Nonempty ∧ B.Nonempty →\n      ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b"
+  }
+ },
+ "pnv-test-954": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=7",
+  "goals": {
+   "acc": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] [inst_2 : LinearOrder Y]\n  {f g : X → Y},\n  (OrderTopology Y ∧ Continuous f ∧ Continuous g ↔ OrderTopology Y ∧ Continuous f ∧ Continuous g) ∧\n    (IsClosed {x | f x ≤ g x} ↔ IsClosed {x | f x ≤ g x})",
+   "cond": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] [inst_2 : LinearOrder Y]\n  {f g : X → Y},\n  (OrderTopology Y ∧ Continuous f ∧ Continuous g ↔ OrderTopology Y ∧ Continuous f ∧ Continuous g) ∧\n    (OrderTopology Y ∧ Continuous f ∧ Continuous g → (IsClosed {x | f x ≤ g x} ↔ IsClosed {x | f x ≤ g x}))",
+   "nhyp": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] [inst_2 : LinearOrder Y]\n    {f g : X → Y}, OrderTopology Y ∧ Continuous f ∧ Continuous g ↔ OrderTopology Y ∧ Continuous f ∧ Continuous g",
+   "ncin": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] [inst_2 : LinearOrder Y]\n    {f g : X → Y}, OrderTopology Y ∧ Continuous f ∧ Continuous g → (IsClosed {x | f x ≤ g x} ↔ IsClosed {x | f x ≤ g x})",
+   "ncomp": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [TopologicalSpace Y] [inst_2 : LinearOrder Y]\n    {f g : X → Y}, IsClosed {x | f x ≤ g x} ↔ IsClosed {x | f x ≤ g x}",
+   "split_r": "(∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y]\n    [inst_2 : LinearOrder Y] [OrderTopology Y] {f g : X → Y}, Continuous f → Continuous g → IsClosed {x | f x ≤ g x}) ↔\n  ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] [inst_2 : LinearOrder Y] {f g : X → Y},\n    OrderTopology Y ∧ Continuous f ∧ Continuous g → IsClosed {x | f x ≤ g x}",
+   "split_s": "(∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y]\n    [inst_2 : LinearOrder Y] [OrderTopology Y] {f g : X → Y}, Continuous f → Continuous g → IsClosed {x | f x ≤ g x}) ↔\n  ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] [inst_2 : LinearOrder Y] {f g : X → Y},\n    OrderTopology Y ∧ Continuous f ∧ Continuous g → IsClosed {x | f x ≤ g x}"
+  }
+ },
+ "pnv-test-92": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1",
+  "goals": {
+   "acc": "∀ {f : ℂ → ℂ},\n  (Differentiable ℂ f ∧ Injective f ↔ Differentiable ℂ f ∧ Injective f) ∧\n    ((∃ a b, (f = fun z => a * z + b) ∧ a ≠ 0) ↔ ∃ a b, a ≠ 0 ∧ ∀ (z : ℂ), f z = a * z + b)",
+   "cond": "∀ {f : ℂ → ℂ},\n  (Differentiable ℂ f ∧ Injective f ↔ Differentiable ℂ f ∧ Injective f) ∧\n    (Differentiable ℂ f ∧ Injective f →\n      ((∃ a b, (f = fun z => a * z + b) ∧ a ≠ 0) ↔ ∃ a b, a ≠ 0 ∧ ∀ (z : ℂ), f z = a * z + b))",
+   "nhyp": "¬∀ {f : ℂ → ℂ}, Differentiable ℂ f ∧ Injective f ↔ Differentiable ℂ f ∧ Injective f",
+   "ncin": "¬∀ {f : ℂ → ℂ},\n    Differentiable ℂ f ∧ Injective f →\n      ((∃ a b, (f = fun z => a * z + b) ∧ a ≠ 0) ↔ ∃ a b, a ≠ 0 ∧ ∀ (z : ℂ), f z = a * z + b)",
+   "ncomp": "¬∀ {f : ℂ → ℂ},\n    (∃ a b, (f = fun z => a * z + b) ∧ a ≠ 0) ↔ ∃ a b, a ≠ 0 ∧ ∀ (z : ℂ), f z = a * z + b",
+   "split_r": "(∀ {f : ℂ → ℂ}, Differentiable ℂ f → Injective f → ∃ a b, (f = fun z => a * z + b) ∧ a ≠ 0) ↔\n  ∀ {f : ℂ → ℂ}, Differentiable ℂ f ∧ Injective f → ∃ a b, (f = fun z => a * z + b) ∧ a ≠ 0",
+   "split_s": "(∀ {f : ℂ → ℂ}, Differentiable ℂ f → Injective f → ∃ a b, a ≠ 0 ∧ ∀ (z : ℂ), f z = a * z + b) ↔\n  ∀ {f : ℂ → ℂ}, Differentiable ℂ f ∧ Injective f → ∃ a b, a ≠ 0 ∧ ∀ (z : ℂ), f z = a * z + b"
+  }
+ },
+ "pnv-test-124": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  (Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔ Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1))",
+   "cond": "(True ↔ True) ∧\n  (True →\n    (Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔ Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1)))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    (Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔ Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1)))",
+   "ncomp": "¬(Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔\n    Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1))",
+   "split_r": "Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔\n  True → Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1)",
+   "split_s": "Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔\n  True → Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1)"
+  }
+ },
+ "pnv-test-673": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧ (IsAlgebraic ℚ (sin (π / 12)) ↔ IsAlgebraic ℤ (sin (π / 12)))",
+   "cond": "(True ↔ True) ∧ (True → (IsAlgebraic ℚ (sin (π / 12)) ↔ IsAlgebraic ℤ (sin (π / 12))))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True → (IsAlgebraic ℚ (sin (π / 12)) ↔ IsAlgebraic ℤ (sin (π / 12))))",
+   "ncomp": "¬(IsAlgebraic ℚ (sin (π / 12)) ↔ IsAlgebraic ℤ (sin (π / 12)))",
+   "split_r": "IsAlgebraic ℚ (sin (π / 12)) ↔ True → IsAlgebraic ℚ (sin (π / 12))",
+   "split_s": "IsAlgebraic ℤ (sin (π / 12)) ↔ True → IsAlgebraic ℤ (sin (π / 12))"
+  }
+ },
+ "pnv-test-381": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=11/11 prefix_s=11/11 shared=4",
+  "goals": {
+   "acc": "∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X),\n  (CompactSpace X ∧ T2Space X ∧ IsClosed X1 ∧ IsClosed X2 ∧ X1 ∪ X2 = univ ∧ MetrizableSpace ↑X1 ∧ MetrizableSpace ↑X2 ↔\n      CompactSpace X ∧\n        T2Space X ∧ IsClosed X1 ∧ IsClosed X2 ∧ X = ↑(X1 ∪ X2) ∧ MetrizableSpace ↑X1 ∧ MetrizableSpace ↑X2) ∧\n    (MetrizableSpace X ↔ MetrizableSpace X)",
+   "cond": "∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X),\n  (CompactSpace X ∧ T2Space X ∧ IsClosed X1 ∧ IsClosed X2 ∧ X1 ∪ X2 = univ ∧ MetrizableSpace ↑X1 ∧ MetrizableSpace ↑X2 ↔\n      CompactSpace X ∧\n        T2Space X ∧ IsClosed X1 ∧ IsClosed X2 ∧ X = ↑(X1 ∪ X2) ∧ MetrizableSpace ↑X1 ∧ MetrizableSpace ↑X2) ∧\n    (CompactSpace X ∧\n        T2Space X ∧ IsClosed X1 ∧ IsClosed X2 ∧ X1 ∪ X2 = univ ∧ MetrizableSpace ↑X1 ∧ MetrizableSpace ↑X2 →\n      (MetrizableSpace X ↔ MetrizableSpace X))",
+   "nhyp": "¬∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X),\n    CompactSpace X ∧\n        T2Space X ∧ IsClosed X1 ∧ IsClosed X2 ∧ X1 ∪ X2 = univ ∧ MetrizableSpace ↑X1 ∧ MetrizableSpace ↑X2 ↔\n      CompactSpace X ∧\n        T2Space X ∧ IsClosed X1 ∧ IsClosed X2 ∧ X = ↑(X1 ∪ X2) ∧ MetrizableSpace ↑X1 ∧ MetrizableSpace ↑X2",
+   "ncin": "¬∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X),\n    CompactSpace X ∧\n        T2Space X ∧ IsClosed X1 ∧ IsClosed X2 ∧ X1 ∪ X2 = univ ∧ MetrizableSpace ↑X1 ∧ MetrizableSpace ↑X2 →\n      (MetrizableSpace X ↔ MetrizableSpace X)",
+   "ncomp": "¬∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X), MetrizableSpace X ↔ MetrizableSpace X",
+   "split_r": "(∀ (X : Type u) [inst : TopologicalSpace X] [CompactSpace X] [T2Space X] (X1 X2 : Set X),\n    IsClosed X1 → IsClosed X2 → X1 ∪ X2 = univ → MetrizableSpace ↑X1 → MetrizableSpace ↑X2 → MetrizableSpace X) ↔\n  ∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X),\n    CompactSpace X ∧\n        T2Space X ∧ IsClosed X1 ∧ IsClosed X2 ∧ X1 ∪ X2 = univ ∧ MetrizableSpace ↑X1 ∧ MetrizableSpace ↑X2 →\n      MetrizableSpace X",
+   "split_s": "(∀ {X : Type u} [inst : TopologicalSpace X] [CompactSpace X] [T2Space X] {X₁ X₂ : Set X},\n    IsClosed X₁ → IsClosed X₂ → X = ↑(X₁ ∪ X₂) → MetrizableSpace ↑X₁ → MetrizableSpace ↑X₂ → MetrizableSpace X) ↔\n  ∀ {X : Type u} [inst : TopologicalSpace X] {X₁ X₂ : Set X},\n    CompactSpace X ∧\n        T2Space X ∧ IsClosed X₁ ∧ IsClosed X₂ ∧ X = ↑(X₁ ∪ X₂) ∧ MetrizableSpace ↑X₁ ∧ MetrizableSpace ↑X₂ →\n      MetrizableSpace X"
+  }
+ },
+ "pnv-test-289": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=3",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G],\n  (card G = 6545 ∧ IsSimpleGroup G ↔ card G = 6545 ∧ IsSimpleGroup G) ∧ (False ↔ False)",
+   "cond": "∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G],\n  (card G = 6545 ∧ IsSimpleGroup G ↔ card G = 6545 ∧ IsSimpleGroup G) ∧\n    (card G = 6545 ∧ IsSimpleGroup G → (False ↔ False))",
+   "nhyp": "¬∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G],\n    card G = 6545 ∧ IsSimpleGroup G ↔ card G = 6545 ∧ IsSimpleGroup G",
+   "ncin": "¬∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G],\n    card G = 6545 ∧ IsSimpleGroup G → (False ↔ False)",
+   "ncomp": "¬∀ {G : Type u} [Fintype G] [Group G], False ↔ False",
+   "split_r": "(∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G], card G = 6545 → ¬IsSimpleGroup G) ↔\n  ∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G], card G = 6545 ∧ IsSimpleGroup G → False",
+   "split_s": "(∀ (G : Type u) [inst : Group G] [inst_1 : Fintype G], card G = 6545 → ¬IsSimpleGroup G) ↔\n  ∀ (G : Type u) [inst : Group G] [inst_1 : Fintype G], card G = 6545 ∧ IsSimpleGroup G → False"
+  }
+ },
+ "pnv-test-889": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=3/3 prefix_s=3/3 shared=2",
+  "goals": {
+   "acc": "∀ (x y : ℤ), (3 * x ^ 2 + 2 = y ^ 2 ↔ 3 * x ^ 2 + 2 = y ^ 2) ∧ (False ↔ False)",
+   "cond": "∀ (x y : ℤ),\n  (3 * x ^ 2 + 2 = y ^ 2 ↔ 3 * x ^ 2 + 2 = y ^ 2) ∧ (3 * x ^ 2 + 2 = y ^ 2 → (False ↔ False))",
+   "nhyp": "¬∀ (x y : ℤ), 3 * x ^ 2 + 2 = y ^ 2 ↔ 3 * x ^ 2 + 2 = y ^ 2",
+   "ncin": "¬∀ (x y : ℤ), 3 * x ^ 2 + 2 = y ^ 2 → (False ↔ False)",
+   "ncomp": "¬∀ (x y : ℤ), False ↔ False",
+   "split_r": "(¬∃ x y, 3 * x ^ 2 + 2 = y ^ 2) ↔ ∀ (x y : ℤ), 3 * x ^ 2 + 2 = y ^ 2 → False",
+   "split_s": "(∀ (m n : ℤ), 3 * m ^ 2 + 2 = n ^ 2 → False) ↔ ∀ (m n : ℤ), 3 * m ^ 2 + 2 = n ^ 2 → False"
+  }
+ },
+ "pnv-test-678": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6",
+  "goals": {
+   "acc": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y) (A : Set X),\n  (IsOpenMap p ∧ IsOpen A ↔ IsOpenMap p ∧ IsOpen A) ∧ (IsOpenMap (p ∘ Subtype.val) ↔ IsOpen (p '' A))",
+   "cond": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y) (A : Set X),\n  (IsOpenMap p ∧ IsOpen A ↔ IsOpenMap p ∧ IsOpen A) ∧\n    (IsOpenMap p ∧ IsOpen A → (IsOpenMap (p ∘ Subtype.val) ↔ IsOpen (p '' A)))",
+   "nhyp": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y) (A : Set X),\n    IsOpenMap p ∧ IsOpen A ↔ IsOpenMap p ∧ IsOpen A",
+   "ncin": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y) (A : Set X),\n    IsOpenMap p ∧ IsOpen A → (IsOpenMap (p ∘ Subtype.val) ↔ IsOpen (p '' A))",
+   "ncomp": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y)\n    (A : Set X), IsOpenMap (p ∘ Subtype.val) ↔ IsOpen (p '' A)",
+   "split_r": "(∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n    IsOpenMap p → ∀ (A : Set X), IsOpen A → IsOpenMap (p ∘ Subtype.val)) ↔\n  ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y) (A : Set X),\n    IsOpenMap p ∧ IsOpen A → IsOpenMap (p ∘ Subtype.val)",
+   "split_s": "(∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n    IsOpenMap p → ∀ (A : Set X), IsOpen A → IsOpen (p '' A)) ↔\n  ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y) (A : Set X),\n    IsOpenMap p ∧ IsOpen A → IsOpen (p '' A)"
+  }
+ },
+ "pnv-test-1247": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=1/1 prefix_s=1/1 shared=1",
+  "goals": {
+   "acc": "∀ (A : Set ℕ), (True ↔ True) ∧ (IsClopen A ↔ IsOpen A ∧ IsClosed A)",
+   "cond": "∀ (A : Set ℕ), (True ↔ True) ∧ (True → (IsClopen A ↔ IsOpen A ∧ IsClosed A))",
+   "nhyp": "¬∀ (A : Set ℕ), True ↔ True",
+   "ncin": "¬∀ (A : Set ℕ), True → (IsClopen A ↔ IsOpen A ∧ IsClosed A)",
+   "ncomp": "¬∀ (A : Set ℕ), IsClopen A ↔ IsOpen A ∧ IsClosed A",
+   "split_r": "(∀ (A : Set ℕ), IsClopen A) ↔ ∀ (A : Set ℕ), True → IsClopen A",
+   "split_s": "(∀ (A : Set ℕ), IsOpen A ∧ IsClosed A) ↔ ∀ (A : Set ℕ), True → IsOpen A ∧ IsClosed A"
+  }
+ },
+ "pnv-test-410": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/1 prefix_s=0/0 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔ ∃ S, (∀ p ∈ S, Nat.Prime p ∧ p % 4 = 3) ∧ Infinite ↑S)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔ ∃ S, (∀ p ∈ S, Nat.Prime p ∧ p % 4 = 3) ∧ Infinite ↑S))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔ ∃ S, (∀ p ∈ S, Nat.Prime p ∧ p % 4 = 3) ∧ Infinite ↑S))",
+   "ncomp": "¬((∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔\n    ∃ S, (∀ p ∈ S, Nat.Prime p ∧ p % 4 = 3) ∧ Infinite ↑S)",
+   "split_r": "(∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔\n  True → ∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]",
+   "split_s": "(∃ S, (∀ p ∈ S, Nat.Prime p ∧ p % 4 = 3) ∧ Infinite ↑S) ↔\n  True → ∃ S, (∀ p ∈ S, Nat.Prime p ∧ p % 4 = 3) ∧ Infinite ↑S"
+  }
+ },
+ "pnv-test-1135": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=2/4 prefix_s=3/4 shared=2",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G],\n  (True ↔ Finite G) ∧ ((∀ [Fintype G] (a : G), ∃ n > 0, a ^ n = 1) ↔ ∀ (a : G), ∃ n, n ≠ 0 ∧ a ^ n = 1)",
+   "cond": "∀ {G : Type u} [inst : Group G],\n  (True ↔ Finite G) ∧ (True → ((∀ [Fintype G] (a : G), ∃ n > 0, a ^ n = 1) ↔ ∀ (a : G), ∃ n, n ≠ 0 ∧ a ^ n = 1))",
+   "nhyp": "¬∀ {G : Type u} [Group G], True ↔ Finite G",
+   "ncin": "¬∀ {G : Type u} [inst : Group G],\n    True → ((∀ [Fintype G] (a : G), ∃ n > 0, a ^ n = 1) ↔ ∀ (a : G), ∃ n, n ≠ 0 ∧ a ^ n = 1)",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G],\n    (∀ [Fintype G] (a : G), ∃ n > 0, a ^ n = 1) ↔ ∀ (a : G), ∃ n, n ≠ 0 ∧ a ^ n = 1",
+   "split_r": "(∀ {G : Type u} [inst : Group G] [Fintype G] (a : G), ∃ n > 0, a ^ n = 1) ↔\n  ∀ {G : Type u} [inst : Group G], True → ∀ [Fintype G] (a : G), ∃ n > 0, a ^ n = 1",
+   "split_s": "(∀ {G : Type u} [inst : Group G] [Finite G] (a : G), ∃ n, n ≠ 0 ∧ a ^ n = 1) ↔\n  ∀ {G : Type u} [inst : Group G], Finite G → ∀ (a : G), ∃ n, n ≠ 0 ∧ a ^ n = 1"
+  }
+ },
+ "pnv-test-311": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=1/3 prefix_s=2/2 shared=1",
+  "goals": {
+   "acc": "∀ (H : AddSubgroup ℚ),\n  (True ↔ ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H) ∧ ((∀ {x : ℚ}, (x ∈ H ∧ x ≠ 0 → 1 / x ∈ H) → H = ⊥ ∨ H = ⊤) ↔ H = ⊥ ∨ H = ⊤)",
+   "cond": "∀ (H : AddSubgroup ℚ),\n  (True ↔ ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H) ∧\n    (True → ((∀ {x : ℚ}, (x ∈ H ∧ x ≠ 0 → 1 / x ∈ H) → H = ⊥ ∨ H = ⊤) ↔ H = ⊥ ∨ H = ⊤))",
+   "nhyp": "¬∀ (H : AddSubgroup ℚ), True ↔ ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H",
+   "ncin": "¬∀ (H : AddSubgroup ℚ),\n    True → ((∀ {x : ℚ}, (x ∈ H ∧ x ≠ 0 → 1 / x ∈ H) → H = ⊥ ∨ H = ⊤) ↔ H = ⊥ ∨ H = ⊤)",
+   "ncomp": "¬∀ (H : AddSubgroup ℚ), (∀ {x : ℚ}, (x ∈ H ∧ x ≠ 0 → 1 / x ∈ H) → H = ⊥ ∨ H = ⊤) ↔ H = ⊥ ∨ H = ⊤",
+   "split_r": "(∀ (H : AddSubgroup ℚ) {x : ℚ}, (x ∈ H ∧ x ≠ 0 → 1 / x ∈ H) → H = ⊥ ∨ H = ⊤) ↔\n  ∀ (H : AddSubgroup ℚ), True → ∀ {x : ℚ}, (x ∈ H ∧ x ≠ 0 → 1 / x ∈ H) → H = ⊥ ∨ H = ⊤",
+   "split_s": "(∀ {H : AddSubgroup ℚ}, (∀ x ∈ H, x ≠ 0 → 1 / x ∈ H) → H = ⊥ ∨ H = ⊤) ↔\n  ∀ {H : AddSubgroup ℚ}, (∀ x ∈ H, x ≠ 0 → 1 / x ∈ H) → H = ⊥ ∨ H = ⊤"
+  }
+ },
+ "pnv-test-238": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1",
+  "goals": {
+   "acc": "∀ {f : ℝ → ℝ},\n  (Continuous f ∧ IsOpenMap f ↔ Continuous f ∧ ∀ (U : Set ℝ), IsOpen U → IsOpen (f '' U)) ∧ (Monotone f ↔ Monotone f)",
+   "cond": "∀ {f : ℝ → ℝ},\n  (Continuous f ∧ IsOpenMap f ↔ Continuous f ∧ ∀ (U : Set ℝ), IsOpen U → IsOpen (f '' U)) ∧\n    (Continuous f ∧ IsOpenMap f → (Monotone f ↔ Monotone f))",
+   "nhyp": "¬∀ {f : ℝ → ℝ},\n    Continuous f ∧ IsOpenMap f ↔ Continuous f ∧ ∀ (U : Set ℝ), IsOpen U → IsOpen (f '' U)",
+   "ncin": "¬∀ {f : ℝ → ℝ}, Continuous f ∧ IsOpenMap f → (Monotone f ↔ Monotone f)",
+   "ncomp": "¬∀ {f : ℝ → ℝ}, Monotone f ↔ Monotone f",
+   "split_r": "(∀ {f : ℝ → ℝ}, Continuous f → IsOpenMap f → Monotone f) ↔\n  ∀ {f : ℝ → ℝ}, Continuous f ∧ IsOpenMap f → Monotone f",
+   "split_s": "(∀ {f : ℝ → ℝ}, Continuous f → (∀ (U : Set ℝ), IsOpen U → IsOpen (f '' U)) → Monotone f) ↔\n  ∀ {f : ℝ → ℝ}, (Continuous f ∧ ∀ (U : Set ℝ), IsOpen U → IsOpen (f '' U)) → Monotone f"
+  }
+ },
+ "pnv-test-1114": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3",
+  "goals": {
+   "acc": "∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n  (((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔\n      CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), (s n).Nonempty) ∧ ∀ (n : ℕ), s (n + 1) ⊆ s n) ∧\n    ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty)",
+   "cond": "∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n  (((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔\n      CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), (s n).Nonempty) ∧ ∀ (n : ℕ), s (n + 1) ⊆ s n) ∧\n    (((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) →\n      ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty))",
+   "nhyp": "¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔\n      CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), (s n).Nonempty) ∧ ∀ (n : ℕ), s (n + 1) ⊆ s n",
+   "ncin": "¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) →\n      ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty)",
+   "ncomp": "¬∀ {α : Type u} [TopologicalSpace α] {s : ℕ → Set α}, (⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty",
+   "split_r": "(∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    (∀ (i : ℕ), IsCompact (s i)) → (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty) ↔\n  ∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty",
+   "split_s": "(∀ {α : Type u} [inst : TopologicalSpace α] [CompactSpace α] {K : ℕ → Set α},\n    (∀ (n : ℕ), IsCompact (K n)) → (∀ (n : ℕ), (K n).Nonempty) → (∀ (n : ℕ), K (n + 1) ⊆ K n) → (⋂ n, K n).Nonempty) ↔\n  ∀ {α : Type u} [inst : TopologicalSpace α] {K : ℕ → Set α},\n    (CompactSpace α ∧ (∀ (n : ℕ), IsCompact (K n)) ∧ (∀ (n : ℕ), (K n).Nonempty) ∧ ∀ (n : ℕ), K (n + 1) ⊆ K n) →\n      (⋂ n, K n).Nonempty"
+  }
+ },
+ "pnv-test-253": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3",
+  "goals": {
+   "acc": "∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n  (((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔\n      CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), (s n).Nonempty) ∧ ∀ (n : ℕ), s (n + 1) ⊆ s n) ∧\n    ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty)",
+   "cond": "∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n  (((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔\n      CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), (s n).Nonempty) ∧ ∀ (n : ℕ), s (n + 1) ⊆ s n) ∧\n    (((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) →\n      ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty))",
+   "nhyp": "¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔\n      CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), (s n).Nonempty) ∧ ∀ (n : ℕ), s (n + 1) ⊆ s n",
+   "ncin": "¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) →\n      ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty)",
+   "ncomp": "¬∀ {α : Type u} [TopologicalSpace α] {s : ℕ → Set α}, (⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty",
+   "split_r": "(∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    (∀ (i : ℕ), IsCompact (s i)) → (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty) ↔\n  ∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty",
+   "split_s": "(∀ {α : Type u} [inst : TopologicalSpace α] [CompactSpace α] {K : ℕ → Set α},\n    (∀ (n : ℕ), IsCompact (K n)) → (∀ (n : ℕ), (K n).Nonempty) → (∀ (n : ℕ), K (n + 1) ⊆ K n) → (⋂ n, K n).Nonempty) ↔\n  ∀ {α : Type u} [inst : TopologicalSpace α] {K : ℕ → Set α},\n    (CompactSpace α ∧ (∀ (n : ℕ), IsCompact (K n)) ∧ (∀ (n : ℕ), (K n).Nonempty) ∧ ∀ (n : ℕ), K (n + 1) ⊆ K n) →\n      (⋂ n, K n).Nonempty"
+  }
+ },
+ "pnv-test-967": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=5",
+  "goals": {
+   "acc": "∀ {G : Type u} [inst : Group G] {n : ℕ} (a b : G),\n  ((n > 1 ∧ ∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) ↔ 1 < n ∧ ∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) ∧\n    ((a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1 ↔ (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1)",
+   "cond": "∀ {G : Type u} [inst : Group G] {n : ℕ} (a b : G),\n  ((n > 1 ∧ ∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) ↔ 1 < n ∧ ∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) ∧\n    ((n > 1 ∧ ∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) →\n      ((a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1 ↔ (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1))",
+   "nhyp": "¬∀ {G : Type u} [inst : Group G] {n : ℕ} (a b : G),\n    (n > 1 ∧ ∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) ↔ 1 < n ∧ ∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n",
+   "ncin": "¬∀ {G : Type u} [inst : Group G] {n : ℕ} (a b : G),\n    (n > 1 ∧ ∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) →\n      ((a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1 ↔ (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1)",
+   "ncomp": "¬∀ {G : Type u} [inst : Group G] {n : ℕ} (a b : G),\n    (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1 ↔ (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1",
+   "split_r": "(∀ {G : Type u} [inst : Group G] {n : ℕ},\n    n > 1 → (∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) → ∀ (a b : G), (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1) ↔\n  ∀ {G : Type u} [inst : Group G] {n : ℕ} (a b : G),\n    (n > 1 ∧ ∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) → (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1",
+   "split_s": "(∀ {G : Type u} [inst : Group G] {n : ℕ},\n    1 < n → (∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) → ∀ (a b : G), (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1) ↔\n  ∀ {G : Type u} [inst : Group G] {n : ℕ} (a b : G),\n    (1 < n ∧ ∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) → (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1"
+  }
+ },
+ "pnv-test-436": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=5",
+  "goals": {
+   "acc": "∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S},\n  (Function.Surjective ⇑φ ↔ Function.Surjective ⇑φ) ∧\n    (⇑φ '' Set.center R ⊆ Set.center S ↔ ⇑φ '' Set.center R ⊆ Set.center S)",
+   "cond": "∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S},\n  (Function.Surjective ⇑φ ↔ Function.Surjective ⇑φ) ∧\n    (Function.Surjective ⇑φ → (⇑φ '' Set.center R ⊆ Set.center S ↔ ⇑φ '' Set.center R ⊆ Set.center S))",
+   "nhyp": "¬∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S},\n    Function.Surjective ⇑φ ↔ Function.Surjective ⇑φ",
+   "ncin": "¬∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S},\n    Function.Surjective ⇑φ → (⇑φ '' Set.center R ⊆ Set.center S ↔ ⇑φ '' Set.center R ⊆ Set.center S)",
+   "ncomp": "¬∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S},\n    ⇑φ '' Set.center R ⊆ Set.center S ↔ ⇑φ '' Set.center R ⊆ Set.center S",
+   "split_r": "(∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S},\n    Function.Surjective ⇑φ → ⇑φ '' Set.center R ⊆ Set.center S) ↔\n  ∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S},\n    Function.Surjective ⇑φ → ⇑φ '' Set.center R ⊆ Set.center S",
+   "split_s": "(∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] (phi : R →+* S),\n    Function.Surjective ⇑phi → ⇑phi '' Set.center R ⊆ Set.center S) ↔\n  ∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] (phi : R →+* S),\n    Function.Surjective ⇑phi → ⇑phi '' Set.center R ⊆ Set.center S"
+  }
+ },
+ "pnv-test-226": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=2/2 prefix_s=2/4 shared=1",
+  "goals": {
+   "acc": "∀ {f : ℝ → ℝ},\n  ((∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) ↔ ∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) ∧\n    ((∃ c, f = fun x => c) ↔ ∀ (x y : ℝ), f x = f y)",
+   "cond": "∀ {f : ℝ → ℝ},\n  ((∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) ↔ ∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) ∧\n    ((∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) → ((∃ c, f = fun x => c) ↔ ∀ (x y : ℝ), f x = f y))",
+   "nhyp": "¬∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) ↔ ∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2",
+   "ncin": "¬∀ {f : ℝ → ℝ},\n    (∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) → ((∃ c, f = fun x => c) ↔ ∀ (x y : ℝ), f x = f y)",
+   "ncomp": "¬∀ {f : ℝ → ℝ}, (∃ c, f = fun x => c) ↔ ∀ (x y : ℝ), f x = f y",
+   "split_r": "(∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) → ∃ c, f = fun x => c) ↔\n  ∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) → ∃ c, f = fun x => c",
+   "split_s": "(∀ {f : ℝ → ℝ}, (∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) → ∀ (x y : ℝ), f x = f y) ↔\n  ∀ {f : ℝ → ℝ}, (∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) → ∀ (x y : ℝ), f x = f y"
+  }
+ },
+ "pnv-test-693": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=8/8 prefix_s=7/7 shared=7",
+  "goals": {
+   "acc": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n  (a • v = 0 ↔ True) ∧ (a = 0 ∨ v = 0 ↔ (a • v = 0 ↔ a = 0 ∨ v = 0))",
+   "cond": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n  (a • v = 0 ↔ True) ∧ (a • v = 0 → (a = 0 ∨ v = 0 ↔ (a • v = 0 ↔ a = 0 ∨ v = 0)))",
+   "nhyp": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n    a • v = 0 ↔ True",
+   "ncin": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n    a • v = 0 → (a = 0 ∨ v = 0 ↔ (a • v = 0 ↔ a = 0 ∨ v = 0))",
+   "ncomp": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n    a = 0 ∨ v = 0 ↔ (a • v = 0 ↔ a = 0 ∨ v = 0)",
+   "split_r": "(∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V)\n    (a : F), a • v = 0 → a = 0 ∨ v = 0) ↔\n  ∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n    a • v = 0 → a = 0 ∨ v = 0",
+   "split_s": "(∀ {F : Type u} [inst : Field F] {V : Type u} [inst_1 : AddCommGroup V] [inst_2 : Module F V]\n    (a : F) (v : V), a • v = 0 ↔ a = 0 ∨ v = 0) ↔\n  ∀ {F : Type u} [inst : Field F] {V : Type u} [inst_1 : AddCommGroup V] [inst_2 : Module F V] (a : F) (v : V),\n    True → (a • v = 0 ↔ a = 0 ∨ v = 0)"
+  }
+ },
+ "pnv-test-1218": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/3 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔\n    ∀ {n : ℕ}, ¬Nat.Prime n → n ≠ 4 → (n - 1).factorial % n = 0)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔\n      ∀ {n : ℕ}, ¬Nat.Prime n → n ≠ 4 → (n - 1).factorial % n = 0))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔\n      ∀ {n : ℕ}, ¬Nat.Prime n → n ≠ 4 → (n - 1).factorial % n = 0))",
+   "ncomp": "¬((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔\n    ∀ {n : ℕ}, ¬Nat.Prime n → n ≠ 4 → (n - 1).factorial % n = 0)",
+   "split_r": "(∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔\n  True → ∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)",
+   "split_s": "(∀ {n : ℕ}, ¬Nat.Prime n → n ≠ 4 → (n - 1).factorial % n = 0) ↔\n  True → ∀ {n : ℕ}, ¬Nat.Prime n → n ≠ 4 → (n - 1).factorial % n = 0"
+  }
+ },
+ "pnv-test-867": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1",
+  "goals": {
+   "acc": "∀ {f : ℝ → ℝ}, (Continuous f ∧ IsOpenMap f ↔ Continuous f ∧ IsOpenMap f) ∧ (Monotone f ↔ Monotone f)",
+   "cond": "∀ {f : ℝ → ℝ},\n  (Continuous f ∧ IsOpenMap f ↔ Continuous f ∧ IsOpenMap f) ∧ (Continuous f ∧ IsOpenMap f → (Monotone f ↔ Monotone f))",
+   "nhyp": "¬∀ {f : ℝ → ℝ}, Continuous f ∧ IsOpenMap f ↔ Continuous f ∧ IsOpenMap f",
+   "ncin": "¬∀ {f : ℝ → ℝ}, Continuous f ∧ IsOpenMap f → (Monotone f ↔ Monotone f)",
+   "ncomp": "¬∀ {f : ℝ → ℝ}, Monotone f ↔ Monotone f",
+   "split_r": "(∀ {f : ℝ → ℝ}, Continuous f → IsOpenMap f → Monotone f) ↔\n  ∀ {f : ℝ → ℝ}, Continuous f ∧ IsOpenMap f → Monotone f",
+   "split_s": "(∀ (f : ℝ → ℝ), Continuous f → IsOpenMap f → Monotone f) ↔\n  ∀ (f : ℝ → ℝ), Continuous f ∧ IsOpenMap f → Monotone f"
+  }
+ },
+ "pnv-test-1215": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3",
+  "goals": {
+   "acc": "∀ {R : Type u} [inst : Ring R] {x : R},\n  (IsNilpotent x ↔ ∃ n, x ^ n = 0) ∧ (IsUnit (1 + x) ↔ IsUnit (1 + x))",
+   "cond": "∀ {R : Type u} [inst : Ring R] {x : R},\n  (IsNilpotent x ↔ ∃ n, x ^ n = 0) ∧ (IsNilpotent x → (IsUnit (1 + x) ↔ IsUnit (1 + x)))",
+   "nhyp": "¬∀ {R : Type u} [inst : Ring R] {x : R}, IsNilpotent x ↔ ∃ n, x ^ n = 0",
+   "ncin": "¬∀ {R : Type u} [inst : Ring R] {x : R}, IsNilpotent x → (IsUnit (1 + x) ↔ IsUnit (1 + x))",
+   "ncomp": "¬∀ {R : Type u} [inst : Ring R] {x : R}, IsUnit (1 + x) ↔ IsUnit (1 + x)",
+   "split_r": "(∀ {R : Type u} [inst : Ring R] {x : R}, IsNilpotent x → IsUnit (1 + x)) ↔\n  ∀ {R : Type u} [inst : Ring R] {x : R}, IsNilpotent x → IsUnit (1 + x)",
+   "split_s": "(∀ {R : Type u} [inst : Ring R] (x : R), (∃ n, x ^ n = 0) → IsUnit (1 + x)) ↔\n  ∀ {R : Type u} [inst : Ring R] (x : R), (∃ n, x ^ n = 0) → IsUnit (1 + x)"
+  }
+ },
+ "pnv-test-695": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1",
+  "goals": {
+   "acc": "∀ (p : ℝ),\n  (p > 1 ↔ 1 < p) ∧\n    ((∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p))",
+   "cond": "∀ (p : ℝ),\n  (p > 1 ↔ 1 < p) ∧\n    (p > 1 → ((∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p)))",
+   "nhyp": "¬∀ (p : ℝ), p > 1 ↔ 1 < p",
+   "ncin": "¬∀ p > 1,\n    (∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p)",
+   "ncomp": "¬∀ (p : ℝ),\n    (∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p)",
+   "split_r": "(∀ (p : ℝ) (f : ℕ → ℝ),\n    p > 1 → (f = fun k => 1 / (↑k * log ↑k ^ p)) → ∃ l, Tendsto f atTop (𝓝 l)) ↔\n  ∀ p > 1, ∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)",
+   "split_s": "(∀ (p : ℝ), 1 < p → Summable fun k => 1 / (k * log k ^ p)) ↔\n  ∀ (p : ℝ), 1 < p → Summable fun k => 1 / (k * log k ^ p)"
+  }
+ },
+ "pnv-test-622": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  (Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔ Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1))",
+   "cond": "(True ↔ True) ∧\n  (True →\n    (Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔ Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1)))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    (Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔ Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1)))",
+   "ncomp": "¬(Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔\n    Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1))",
+   "split_r": "Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1) ↔\n  True → Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1)",
+   "split_s": "(∀ (p : ℤ[X]), p = X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1 → Irreducible p) ↔\n  True → Irreducible (X ^ 4 + 4 * X ^ 3 + 6 * X ^ 2 + 2 * X + 1)"
+  }
+ },
+ "pnv-test-504": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=1/3 prefix_s=1/3 shared=1",
+  "goals": {
+   "acc": "∀ {R : Type u},\n  (True ↔ True) ∧\n    ((∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n      ∀ [inst : CommRing R] {p : R[X]}, (∃ q, q ≠ 0 ∧ p * q = 0) ↔ ∃ b, b ≠ 0 ∧ b • p = 0)",
+   "cond": "∀ {R : Type u},\n  (True ↔ True) ∧\n    (True →\n      ((∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n        ∀ [inst : CommRing R] {p : R[X]}, (∃ q, q ≠ 0 ∧ p * q = 0) ↔ ∃ b, b ≠ 0 ∧ b • p = 0))",
+   "nhyp": "¬∀ {R : Type u}, True ↔ True",
+   "ncin": "¬∀ {R : Type u},\n    True →\n      ((∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n        ∀ [inst : CommRing R] {p : R[X]}, (∃ q, q ≠ 0 ∧ p * q = 0) ↔ ∃ b, b ≠ 0 ∧ b • p = 0)",
+   "ncomp": "¬∀ {R : Type u},\n    (∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n      ∀ [inst : CommRing R] {p : R[X]}, (∃ q, q ≠ 0 ∧ p * q = 0) ↔ ∃ b, b ≠ 0 ∧ b • p = 0",
+   "split_r": "(∀ {R : Type u} [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n  ∀ {R : Type u}, True → ∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0",
+   "split_s": "(∀ {R : Type u} [inst : CommRing R] {p : R[X]},\n    (∃ q, q ≠ 0 ∧ p * q = 0) ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔\n  ∀ {R : Type u}, True → ∀ [inst : CommRing R] {p : R[X]}, (∃ q, q ≠ 0 ∧ p * q = 0) ↔ ∃ b, b ≠ 0 ∧ b • p = 0"
+  }
+ },
+ "pnv-test-1446": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1",
+  "goals": {
+   "acc": "∀ {f : ℝ → ℝ},\n  ((∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) ↔ ∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) ∧\n    ((∃ c, f = fun x => c) ↔ ∃ c, ∀ (x : ℝ), f x = c)",
+   "cond": "∀ {f : ℝ → ℝ},\n  ((∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) ↔ ∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) ∧\n    ((∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) → ((∃ c, f = fun x => c) ↔ ∃ c, ∀ (x : ℝ), f x = c))",
+   "nhyp": "¬∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) ↔ ∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2",
+   "ncin": "¬∀ {f : ℝ → ℝ},\n    (∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) → ((∃ c, f = fun x => c) ↔ ∃ c, ∀ (x : ℝ), f x = c)",
+   "ncomp": "¬∀ {f : ℝ → ℝ}, (∃ c, f = fun x => c) ↔ ∃ c, ∀ (x : ℝ), f x = c",
+   "split_r": "(∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) → ∃ c, f = fun x => c) ↔\n  ∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) → ∃ c, f = fun x => c",
+   "split_s": "(∀ {f : ℝ → ℝ}, (∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) → ∃ c, ∀ (x : ℝ), f x = c) ↔\n  ∀ {f : ℝ → ℝ}, (∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) → ∃ c, ∀ (x : ℝ), f x = c"
+  }
+ },
+ "pnv-test-1128": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4",
+  "goals": {
+   "acc": "∀ {R : Type u} [inst : CommRing R] {a : R} (b : R),\n  (0 ≠ 1 ∧ IsNilpotent a ↔ Nontrivial R ∧ IsNilpotent a) ∧ (IsUnit (1 - a * b) ↔ IsUnit (1 - a * b))",
+   "cond": "∀ {R : Type u} [inst : CommRing R] {a : R} (b : R),\n  (0 ≠ 1 ∧ IsNilpotent a ↔ Nontrivial R ∧ IsNilpotent a) ∧\n    (0 ≠ 1 ∧ IsNilpotent a → (IsUnit (1 - a * b) ↔ IsUnit (1 - a * b)))",
+   "nhyp": "¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R),\n    0 ≠ 1 ∧ IsNilpotent a ↔ Nontrivial R ∧ IsNilpotent a",
+   "ncin": "¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R),\n    0 ≠ 1 ∧ IsNilpotent a → (IsUnit (1 - a * b) ↔ IsUnit (1 - a * b))",
+   "ncomp": "¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R), IsUnit (1 - a * b) ↔ IsUnit (1 - a * b)",
+   "split_r": "(∀ {R : Type u} [inst : CommRing R],\n    0 ≠ 1 → ∀ {a : R}, IsNilpotent a → ∀ (b : R), IsUnit (1 - a * b)) ↔\n  ∀ {R : Type u} [inst : CommRing R] {a : R} (b : R), 0 ≠ 1 ∧ IsNilpotent a → IsUnit (1 - a * b)",
+   "split_s": "(∀ {R : Type u} [inst : CommRing R] [Nontrivial R] (a b : R),\n    IsNilpotent a → IsUnit (1 - a * b)) ↔\n  ∀ {R : Type u} [inst : CommRing R] (a b : R), Nontrivial R ∧ IsNilpotent a → IsUnit (1 - a * b)"
+  }
+ },
+ "pnv-test-1291": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=7",
+  "goals": {
+   "acc": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n  (a • v = 0 ↔ a • v = 0) ∧ (a = 0 ∨ v = 0 ↔ a = 0 ∨ v = 0)",
+   "cond": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n  (a • v = 0 ↔ a • v = 0) ∧ (a • v = 0 → (a = 0 ∨ v = 0 ↔ a = 0 ∨ v = 0))",
+   "nhyp": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n    a • v = 0 ↔ a • v = 0",
+   "ncin": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n    a • v = 0 → (a = 0 ∨ v = 0 ↔ a = 0 ∨ v = 0)",
+   "ncomp": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [Module F V] (v : V) (a : F),\n    a = 0 ∨ v = 0 ↔ a = 0 ∨ v = 0",
+   "split_r": "(∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V)\n    (a : F), a • v = 0 → a = 0 ∨ v = 0) ↔\n  ∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),\n    a • v = 0 → a = 0 ∨ v = 0",
+   "split_s": "(∀ {K V : Type u} [inst : Field K] [inst_1 : AddCommGroup V] [inst_2 : Module K V] (a : K)\n    (v : V), a • v = 0 → a = 0 ∨ v = 0) ↔\n  ∀ {K V : Type u} [inst : Field K] [inst_1 : AddCommGroup V] [inst_2 : Module K V] (a : K) (v : V),\n    a • v = 0 → a = 0 ∨ v = 0"
+  }
+ },
+ "pnv-test-192": {
+  "status": "ok",
+  "info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4",
+  "goals": {
+   "acc": "∀ {R : Type u} [inst : CommRing R] (I J : Ideal R),\n  (I + J = ⊤ ↔ I + J = ⊤) ∧ (I * J = I ⊓ J ↔ I * J = I ⊓ J)",
+   "cond": "∀ {R : Type u} [inst : CommRing R] (I J : Ideal R),\n  (I + J = ⊤ ↔ I + J = ⊤) ∧ (I + J = ⊤ → (I * J = I ⊓ J ↔ I * J = I ⊓ J))",
+   "nhyp": "¬∀ {R : Type u} [inst : CommRing R] (I J : Ideal R), I + J = ⊤ ↔ I + J = ⊤",
+   "ncin": "¬∀ {R : Type u} [inst : CommRing R] (I J : Ideal R), I + J = ⊤ → (I * J = I ⊓ J ↔ I * J = I ⊓ J)",
+   "ncomp": "¬∀ {R : Type u} [inst : CommRing R] (I J : Ideal R), I * J = I ⊓ J ↔ I * J = I ⊓ J",
+   "split_r": "(∀ {R : Type u} [inst : CommRing R] (I J : Ideal R), I + J = ⊤ → I * J = I ⊓ J) ↔\n  ∀ {R : Type u} [inst : CommRing R] (I J : Ideal R), I + J = ⊤ → I * J = I ⊓ J",
+   "split_s": "(∀ {R : Type u} [inst : CommRing R] {I J : Ideal R}, I + J = ⊤ → I * J = I ⊓ J) ↔\n  ∀ {R : Type u} [inst : CommRing R] {I J : Ideal R}, I + J = ⊤ → I * J = I ⊓ J"
+  }
+ },
+ "pnv-test-738": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1",
+  "goals": {
+   "acc": "∀ (p : ℝ),\n  (p > 1 ↔ 1 < p) ∧\n    ((∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p))",
+   "cond": "∀ (p : ℝ),\n  (p > 1 ↔ 1 < p) ∧\n    (p > 1 → ((∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p)))",
+   "nhyp": "¬∀ (p : ℝ), p > 1 ↔ 1 < p",
+   "ncin": "¬∀ p > 1,\n    (∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p)",
+   "ncomp": "¬∀ (p : ℝ),\n    (∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p)",
+   "split_r": "(∀ (p : ℝ) (f : ℕ → ℝ),\n    p > 1 → (f = fun k => 1 / (↑k * log ↑k ^ p)) → ∃ l, Tendsto f atTop (𝓝 l)) ↔\n  ∀ p > 1, ∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)",
+   "split_s": "(∀ (p : ℝ), 1 < p → Summable fun k => 1 / (k * log k ^ p)) ↔\n  ∀ (p : ℝ), 1 < p → Summable fun k => 1 / (k * log k ^ p)"
+  }
+ },
+ "pnv-test-995": {
+  "status": "ok",
+  "info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/12 shared=0",
+  "goals": {
+   "acc": "(True ↔ True) ∧\n  ((∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n      Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔\n    ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] {f g : X → Y} {E : Set X},\n      Continuous f → Continuous g → Dense E → (∀ p ∈ E, g p = f p) → ∀ (p : X), g p = f p)",
+   "cond": "(True ↔ True) ∧\n  (True →\n    ((∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n        Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔\n      ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] {f g : X → Y} {E : Set X},\n        Continuous f → Continuous g → Dense E → (∀ p ∈ E, g p = f p) → ∀ (p : X), g p = f p))",
+   "nhyp": "¬(True ↔ True)",
+   "ncin": "¬(True →\n    ((∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n        Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔\n      ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] {f g : X → Y} {E : Set X},\n        Continuous f → Continuous g → Dense E → (∀ p ∈ E, g p = f p) → ∀ (p : X), g p = f p))",
+   "ncomp": "¬((∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β)\n      (s : Set α), Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔\n    ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] {f g : X → Y} {E : Set X},\n      Continuous f → Continuous g → Dense E → (∀ p ∈ E, g p = f p) → ∀ (p : X), g p = f p)",
+   "split_r": "(∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β)\n    (s : Set α), Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔\n  True →\n    ∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n      Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g",
+   "split_s": "(∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] {f g : X → Y}\n    {E : Set X}, Continuous f → Continuous g → Dense E → (∀ p ∈ E, g p = f p) → ∀ (p : X), g p = f p) ↔\n  True →\n    ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] {f g : X → Y} {E : Set X},\n      Continuous f → Continuous g → Dense E → (∀ p ∈ E, g p = f p) → ∀ (p : X), g p = f p"
+  }
+ },
+ "pnv-test-31": {
+  "status": "ok",
+  "info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1",
+  "goals": {
+   "acc": "∀ {f : ℝ → ℝ},\n  (DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) ↔\n      (∀ x > 0, DifferentiableAt ℝ f x) ∧ Tendsto (fun x => deriv f x) atTop (𝓝 0)) ∧\n    (Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) ↔ Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0))",
+   "cond": "∀ {f : ℝ → ℝ},\n  (DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) ↔\n      (∀ x > 0, DifferentiableAt ℝ f x) ∧ Tendsto (fun x => deriv f x) atTop (𝓝 0)) ∧\n    (DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) →\n      (Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) ↔ Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0)))",
+   "nhyp": "¬∀ {f : ℝ → ℝ},\n    DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) ↔\n      (∀ x > 0, DifferentiableAt ℝ f x) ∧ Tendsto (fun x => deriv f x) atTop (𝓝 0)",
+   "ncin": "¬∀ {f : ℝ → ℝ},\n    DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) →\n      (Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) ↔ Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0))",
+   "ncomp": "¬∀ {f : ℝ → ℝ},\n    Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) ↔ Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0)",
+   "split_r": "(∀ {f : ℝ → ℝ},\n    DifferentiableOn ℝ f (Set.Ioi 0) → Tendsto (deriv f) atTop (𝓝 0) → Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0)) ↔\n  ∀ {f : ℝ → ℝ},\n    DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) → Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0)",
+   "split_s": "(∀ {f : ℝ → ℝ},\n    (∀ x > 0, DifferentiableAt ℝ f x) →\n      Tendsto (fun x => deriv f x) atTop (𝓝 0) → Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0)) ↔\n  ∀ {f : ℝ → ℝ},\n    (∀ x > 0, DifferentiableAt ℝ f x) ∧ Tendsto (fun x => deriv f x) atTop (𝓝 0) →\n      Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0)"
+  }
+ }
+}

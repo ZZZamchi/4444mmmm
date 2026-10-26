@@ -1,0 +1,3188 @@
+[
+ {
+  "key": "pnv-test-818",
+  "part": "F",
+  "nl": "If $k = 1$ and $\\mathbf{x} \\in R^{k}$, $\\mathbf{x} \\neq 0$, prove that there does not exist $\\mathbf{y} \\in R^{k}$ such that $\\mathbf{y} \\neq 0$ but $\\mathbf{x} \\cdot \\mathbf{y}=0$",
+  "ref": "theorem exercise_1_18b\n  : ∀ (x : ℝ), x ≠ 0 → ¬ ∃ (y : ℝ), y ≠ 0 ∧ x * y = 0 := sorry",
+  "cand": "theorem dummy (x : ℝ) (hx : x ≠ 0) : ¬∃ (y : ℝ), y ≠ 0 ∧ x * y = 0 := sorry",
+  "cell": "faithful_local_accept",
+  "control": true,
+  "item": 1,
+  "sheet_item": 1
+ },
+ {
+  "key": "pnv-test-340",
+  "part": "F",
+  "nl": "If $a, b$ are integers and if $a$ divides $b$ in the ring of Gauss integers, then $a$ divides $b$ in $\\mathbb{Z}$.",
+  "ref": "theorem exercise_11_2_13 (a b : ℤ) :\n  (ofInt a : GaussianInt) ∣ ofInt b → a ∣ b := sorry",
+  "cand": "theorem dummy (a b : ℤ) (hab : a ∣ b) : a ∣ b := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 2,
+  "sheet_item": 2
+ },
+ {
+  "key": "d1-165-2040",
+  "part": "S",
+  "nl": "Let $f$ and $g$ be continuous mappings of a metric space $X$ into a metric space $Y$, and let $E$ be a dense subset of $X$. Prove that $f(E)$ is dense in $f(X)$.",
+  "ref": "theorem Rudin_exercise_4_4a\n  {α : Type} [MetricSpace α]\n  {β : Type} [MetricSpace β]\n  (f : α → β)\n  (s : Set α)\n  (h₁ : Continuous f)\n  (h₂ : Dense s)\n  : f '' Set.univ ⊆ closure (f '' s) := sorry",
+  "cand": "theorem Rudin_exercise_4_4a\n  {α : Type*} [MetricSpace α]\n  {β : Type*} [MetricSpace β]\n  (f : α → β)\n  (s : Set α)\n  (h₁ : Continuous f)\n  (h₂ : Dense s) :\n  f '' Set.univ ⊆ closure (f '' s) := by sorry",
+  "selectors": [
+   "judge_opus_ref",
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 3,
+  "sheet_item": 3
+ },
+ {
+  "key": "pnv-test-518",
+  "part": "G",
+  "set": "C",
+  "nl": "Let $f$ be a real function with a continuous third derivative such that $f(x), f^{\\prime}(x), f^{\\prime \\prime}(x), f^{\\prime \\prime \\prime}(x)$ are positive for all $x$. Suppose that $f^{\\prime \\prime \\prime}(x) \\leq f(x)$ for all $x$. Show that $f^{\\prime}(x)<2 f(x)$ for all $x$.",
+  "ref": "theorem exercise_1999_b4 (f : ℝ → ℝ) (hf: ContDiff ℝ 3 f)\n  (hf1 : ∀ n ≤ 3, ∀ x : ℝ, iteratedDeriv n f x > 0)\n  (hf2 : ∀ x : ℝ, iteratedDeriv 3 f x ≤ f x) :\n  ∀ x : ℝ, deriv f x < 2 * f x := sorry",
+  "cand": "theorem dummy {f : ℝ → ℝ} (hf : ∀ x, 0 < f x) (hf' : ∀ x, 0 < deriv f x) (hf'' : ∀ x, 0 < deriv^[2] f x) (hf''' : ∀ x, 0 < deriv^[3] f x) (h_bound : ∀ x, deriv^[3] f x ≤ f x) : ∀ x, deriv f x < 2 * f x := sorry",
+  "item": 4,
+  "sheet_item": 4
+ },
+ {
+  "key": "d1-223-2748",
+  "part": "S",
+  "nl": "Show that if $G=\\langle x\\rangle$ is a cyclic group of order $n \\geq 1$ then a subgroup $H$ is maximal if and only $H=\\left\\langle x^{p}\\right\\rangle$ for some prime $p$ dividing $n$.",
+  "ref": "theorem Dummit_Foote_exercise_2_4_16c {n : ℕ+} {G : Type*} [Group G] {x : G}\n  (hx : orderOf x = n) (hG : closure ({x} : Set G) = ⊤) (H : Subgroup G) :\n  (∃ p : ℕ, Prime p ∧ p ∣ n ∧ H = Subgroup.closure {x ^ p}) ↔\n  (H ≠ ⊤ ∧ ∀ K : Subgroup G, H ≤ K → K = H ∨ K = ⊤) := sorry",
+  "cand": "theorem Dummit_Foote_exercise_2_4_16c {G : Type*} [Group G] [Fintype G]\n    (x : G) (hx : ∀ g : G, g ∈ Subgroup.zpowers x)\n    (n : ℕ) (hn : Fintype.card G = n) (hn1 : 1 ≤ n) (H : Subgroup G) :\n    IsCoatom H ↔ ∃ p : ℕ, p.Prime ∧ p ∣ n ∧ H = Subgroup.zpowers (x ^ p) := by sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 5,
+  "sheet_item": 5
+ },
+ {
+  "key": "d1-356-4466",
+  "part": "S",
+  "nl": "Suppose $g$ is a real function on $R^{1}$, with bounded derivative (say $\\left|g^{\\prime}\\right| \\leq M$ ). Fix $\\varepsilon>0$, and define $f(x)=x+\\varepsilon g(x)$. Prove that $f$ is one-to-one if $\\varepsilon$ is small enough.",
+  "ref": "theorem Rudin_exercise_5_3\n  {g : ℝ → ℝ} (hgDiff : Differentiable ℝ g)\n  (hg' : ∃ M : ℝ, ∀ x : ℝ, |deriv g x| ≤ M) :\n  ∃ N > 0, ∀ ε > 0, ε < N → Function.Injective (λ x : ℝ => x + ε * g x) := sorry",
+  "cand": "theorem Rudin_exercise_5_3 (g : ℝ → ℝ) (M : ℝ)\n    (hg : Differentiable ℝ g)\n    (hg_bound : ∀ x, |deriv g x| ≤ M) :\n    ∃ δ : ℝ, δ > 0 ∧ ∀ ε : ℝ, ε > 0 → ε < δ →\n      Function.Injective (fun x : ℝ => x + ε * g x) := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 6,
+  "sheet_item": 6
+ },
+ {
+  "key": "d1-155-1975",
+  "part": "J",
+  "nl": "Let $X$ be a metric space in which every infinite subset has a limit point. Prove that $X$ is separable.",
+  "ref": "theorem Rudin_exercise_2_24\n    {X : Type*} [MetricSpace X]\n    (hBW : ∀ A : Set X, A.Infinite → ∃ p : X, AccPt p (𝓟 A)) :\n    SeparableSpace X :=\n  sorry := sorry",
+  "cand": "theorem Rudin_exercise_2_24 {X : Type*} [MetricSpace X]\n  (h : ∀ (S : Set X), S.Infinite → ∃ x, x ∈ (closure S) \\ S) :\n  ∃ (D : Set X), Countable D ∧ Dense D := by sorry",
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 7,
+  "sheet_item": 7
+ },
+ {
+  "key": "pnv-test-404",
+  "part": "F",
+  "nl": "Let $H$ be a subgroup of the additive group of rational numbers with the property that $1 / x \\in H$ for every nonzero element $x$ of $H$. Prove that $H=0$ or $\\mathbb{Q}$.",
+  "ref": "theorem exercise_2_1_13 (H : AddSubgroup ℚ) {x : ℚ}\n  (hH : (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H):\n  H = ⊥ ∨ H = ⊤ := sorry",
+  "cand": "theorem dummy {H : AddSubgroup ℚ} (hH : ∀ x ∈ H, x ≠ 0 → (1 / x) ∈ H) : H = ⊥ ∨ H = ⊤ := sorry",
+  "cell": "faithful_reject",
+  "item": 8,
+  "sheet_item": 8
+ },
+ {
+  "key": "pnv-test-604",
+  "part": "G",
+  "set": "C",
+  "nl": "Let $f \\colon X \\rightarrow X$ be continuous. Show that if $X = [0, 1]$, there is a point $x$ such that $f(x) = x$. (The point $x$ is called a fixed point of $f$.)",
+  "ref": "theorem exercise_24_3a (f : Icc 0 1 → Icc 0 1) (hf : Continuous f) :\n  ∃ (x : Icc 0 1), f x = x := sorry",
+  "cand": "theorem dummy {f : ℝ → ℝ} (hf : Continuous f) (h : ∀ x, 0 ≤ x ∧ x ≤ 1 → 0 ≤ f x ∧ f x ≤ 1) : ∃ x ∈ Icc (0 : ℝ) 1, f x = x := sorry",
+  "item": 9,
+  "sheet_item": 9
+ },
+ {
+  "key": "pnv-test-1355",
+  "part": "G",
+  "set": "B",
+  "nl": "Use Lagrange's Theorem in the multiplicative group $(\\mathbb{Z} / p \\mathbb{Z})^{\\times}$to prove Fermat's Little Theorem: if $p$ is a prime then $a^{p} \\equiv a(\\bmod p)$ for all $a \\in \\mathbb{Z}$.",
+  "ref": "theorem exercise_3_2_16 (p : ℕ) (hp : Nat.Prime p) (a : ℤ) :\n  a ^ p ≡ a [ZMOD p] := sorry",
+  "cand": "theorem dummy (p : ℕ) [Fact (Nat.Prime p)] (a : ℕ) : a ^ p ≡ a [MOD p] := sorry",
+  "item": 10,
+  "sheet_item": 10
+ },
+ {
+  "key": "d1-255-3202",
+  "part": "S",
+  "nl": "If $G$ is a finite group of even order, show that there must be an element $a \\neq e$ such that $a=a^{-1}$.",
+  "ref": "theorem Herstein_exercise_2_1_18 {G : Type*} [Group G]\n  [Fintype G] (hG2 : Even (card G)) :\n  ∃ (a : G), a ≠ 1 ∧ a = a⁻¹ := sorry",
+  "cand": "theorem Herstein_exercise_2_1_18 {G : Type} [Group G] [Fintype G] (h : Even (Fintype.card G)) :\n  ∃ a : G, a ≠ 1 ∧ a = a⁻¹ := by sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 11,
+  "sheet_item": 11
+ },
+ {
+  "key": "d1-330-4215",
+  "part": "S",
+  "nl": "Let $f: \\mathbb{R} \\rightarrow \\mathbb{R}$ be an infinitely differentiable function satisfying $f(0)=0, f(1)=1$, and $f(x) \\geq 0$ for all $x \\in$ $\\mathbb{R}$. Show that there exist a positive integer $n$ and a real number $x$ such that $f^{(n)}(x)<0$.",
+  "ref": "theorem Putnam_exercise_2018_a5 (f : ℝ → ℝ) (hf : ContDiff ℝ ((⊤ : ℕ∞) : WithTop ℕ∞) f)\n  (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf2 : ∀ x, f x ≥ 0) :\n  ∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0 := sorry",
+  "cand": "theorem Putnam_exercise_2018_a5 (f : ℝ → ℝ) (hf : ContDiff ℝ ⊤ f)\n    (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hpos : ∀ x : ℝ, f x ≥ 0) :\n    ∃ n : ℕ, 0 < n ∧ ∃ x : ℝ, iteratedDeriv n f x < 0 := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 12,
+  "sheet_item": 12
+ },
+ {
+  "key": "d1-287-3674",
+  "part": "S",
+  "nl": "Show that $x^{4} \\equiv 2(p)$ has a solution for $p \\equiv 1(4)$ iff $p$ is of the form $A^{2}+64 B^{2}$.",
+  "ref": "theorem Ireland_Rosen_exercise_5_28 {p : ℕ} (hp : p.Prime) (hp1 : p ≡ 1 [MOD 4]) :\n    (∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2 := sorry",
+  "cand": "theorem Ireland_Rosen_exercise_5_28 (p : ℕ) [Fact (Nat.Prime p)] (hp : p % 4 = 1) :\n  (∃ x : ZMod p, x ^ 4 = 2) ↔ ∃ A B : ℤ, (p : ℤ) = A ^ 2 + 64 * B ^ 2 := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 13,
+  "sheet_item": 13
+ },
+ {
+  "key": "pnv-test-507",
+  "part": "F",
+  "nl": "Let $H$ be a subgroup of the additive group of rational numbers with the property that $1 / x \\in H$ for every nonzero element $x$ of $H$. Prove that $H=0$ or $\\mathbb{Q}$.",
+  "ref": "theorem exercise_2_1_13 (H : AddSubgroup ℚ) {x : ℚ}\n  (hH : (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H):\n  H = ⊥ ∨ H = ⊤ := sorry",
+  "cand": "theorem dummy {H : AddSubgroup ℚ} (hH : ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H) : H = ⊥ ∨ H = ⊤ := sorry",
+  "cell": "faithful_reject",
+  "item": 14,
+  "sheet_item": 8
+ },
+ {
+  "key": "d1-357-4494",
+  "part": "K",
+  "nl": "Suppose $f$ is defined and differentiable for every $x>0$, and $f^{\\prime}(x) \\rightarrow 0$ as $x \\rightarrow+\\infty$. Put $g(x)=f(x+1)-f(x)$. Prove that $g(x) \\rightarrow 0$ as $x \\rightarrow+\\infty$.",
+  "ref": "theorem Rudin_exercise_5_5\n  {f : ℝ → ℝ}\n  (hfd : DifferentiableOn ℝ f (Ioi 0))\n  (hf : Tendsto (deriv f) atTop (𝓝 0)) :\n  Tendsto (λ x => f (x + 1) - f x) atTop (𝓝 0) := sorry",
+  "cand": "theorem Rudin_exercise_5_5 {f : ℝ → ℝ}\n  (h_diff : ∀ x > 0, DifferentiableAt ℝ f x)\n  (h_lim : Tendsto (fun x => (deriv f x)) atTop (𝓝 0)) :\n  Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) := by\n  sorry",
+  "control": "equivalent",
+  "item": 15,
+  "sheet_item": 14
+ },
+ {
+  "key": "d1-315-3977",
+  "part": "S",
+  "nl": "Show that if $\\prod X_\\alpha$ is normal, then so is $X_\\alpha$. Assume that each $X_\\alpha$ is nonempty.",
+  "ref": "theorem Munkres_exercise_32_2c\n  {ι : Type*} {X : ι → Type*} [∀ i, TopologicalSpace (X i)]\n  (h : ∀ i, Nonempty (X i)) (h2 : NormalSpace (Π i, X i)) :\n  ∀ i, NormalSpace (X i) := sorry",
+  "cand": "theorem Munkres_exercise_32_2c\n    {ι : Type*} (X : ι → Type*) [∀ α, TopologicalSpace (X α)]\n    [T4Space (∀ α, X α)] (h : ∀ α, Nonempty (X α)) :\n    ∀ α, T4Space (X α) := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 16,
+  "sheet_item": 15
+ },
+ {
+  "key": "d1-126-1638",
+  "part": "S",
+  "nl": "Show that the rationals $\\mathbb{Q}$ are not locally compact.",
+  "ref": "theorem Munkres_exercise_29_1 : ¬ LocallyCompactSpace ℚ := sorry",
+  "cand": "theorem Munkres_exercise_29_1 : ¬ LocallyCompactSpace ℚ := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 17,
+  "sheet_item": 16
+ },
+ {
+  "key": "d1-318-4039",
+  "part": "S",
+  "nl": "Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces; let $Y$ be complete. Let $A \\subset X$. Show that if $f \\colon A \\rightarrow Y$ is uniformly continuous, then $f$ can be uniquely extended to a continuous function $g \\colon \\bar{A} \\rightarrow Y$, and $g$ is uniformly continuous.",
+  "ref": "theorem Munkres_exercise_43_2 {X : Type*} [MetricSpace X]\n    {Y : Type*} [MetricSpace Y] [CompleteSpace Y] (A : Set X)\n    (f : X → Y) (hf : UniformContinuousOn f A) :\n    ∃ (g : closure A → Y),\n      UniformContinuous g ∧\n        (∀ x : A, g ⟨x, subset_closure x.property⟩ = f x) ∧\n        (∀ g' : closure A → Y, Continuous g' →\n          (∀ x : A, g' ⟨x, subset_closure x.property⟩ = f x) → g' = g) := sorry",
+  "cand": "theorem Munkres_exercise_43_2 {X Y : Type*} [MetricSpace X] [MetricSpace Y]\n    [CompleteSpace Y] (A : Set X) (f : A → Y) (hf : UniformContinuous f) :\n    ∃ g : closure A → Y, Continuous g ∧ UniformContinuous g ∧\n      (∀ a : A, g ⟨a.1, subset_closure a.2⟩ = f a) ∧\n      ∀ g' : closure A → Y, Continuous g' →\n        (∀ a : A, g' ⟨a.1, subset_closure a.2⟩ = f a) → g' = g := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 18,
+  "sheet_item": 17
+ },
+ {
+  "key": "pnv-test-108",
+  "part": "F",
+  "nl": "Suppose that $V$ is finite dimensional and that $T \\in \\mathcal{L}(V, W)$. Prove that there exists a subspace $U$ of $V$ such that $U \\cap \\operatorname{null} T=\\{0\\}$ and range $T=\\{T u: u \\in U\\}$.",
+  "ref": "theorem exercise_3_8 {F V W : Type*} [AddCommGroup V]\n  [AddCommGroup W] [Field F] [Module F V] [FiniteDimensional F V] [Module F W]\n  (L : V →ₗ[F] W) :\n  ∃ U : Submodule F V, U ⊓ (ker L) = ⊥ ∧\n  (range L = range (domRestrict L U)):= sorry",
+  "cand": "theorem dummy {K V W : Type*} [Field K] [AddCommGroup V] [Module K V] [AddCommGroup W] [Module K W] [FiniteDimensional K V] (T : V →ₗ[K] W) : ∃ (U : Submodule K V), U ⊓ LinearMap.ker T = ⊥ ∧ LinearMap.range T = ⊤ := sorry",
+  "cell": "faithful_reject",
+  "item": 19,
+  "sheet_item": 18
+ },
+ {
+  "key": "d1-203-2511",
+  "part": "S",
+  "nl": "Suppose $S, T \\in \\mathcal{L}(V)$. Prove that $S T$ and $T S$ have the same eigenvalues.",
+  "ref": "theorem Axler_exercise_5_11 {F V : Type*} [Field F] [AddCommGroup V]\n    [Module F V] [FiniteDimensional F V] (S T : End F V) :\n    (S * T).Eigenvalues = (T * S).Eigenvalues := sorry",
+  "cand": "theorem Axler_exercise_5_11 {F V : Type*} [Field F] [AddCommGroup V] [Module F V]\n    [FiniteDimensional F V] (S T : Module.End F V) :\n    ∀ μ : F, (S * T).HasEigenvalue μ ↔ (T * S).HasEigenvalue μ := by sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "judge_opus_ref"
+  ],
+  "item": 20,
+  "sheet_item": 19
+ },
+ {
+  "key": "pnv-test-231",
+  "part": "G",
+  "set": "C",
+  "nl": "Prove that there are unique positive integers $a, n$ such that $a^{n+1}-(a+1)^n=2001$.",
+  "ref": "theorem exercise_2001_a5 :\n  ∃! p : ℕ × ℕ, p.1 > 0 ∧ p.2 > 0 ∧ p.1^(p.2 + 1) - (p.1 + 1)^(p.2) = 2001 := sorry",
+  "cand": "theorem dummy (a n : ℕ) (ha : 0 < a) (hn : 0 < n) : a^(n+1) - (a+1)^n = 2001 := sorry",
+  "item": 21,
+  "sheet_item": 20
+ },
+ {
+  "key": "pnv-test-1221",
+  "part": "F",
+  "nl": "Let $E$ be a nonempty subset of an ordered set; suppose $\\alpha$ is a lower bound of $E$ and $\\beta$ is an upper bound of $E$. Prove that $\\alpha \\leq \\beta$.",
+  "ref": "theorem exercise_1_4\n(α : Type*) [PartialOrder α]\n(s : Set α)\n(x y : α)\n(h₀ : Set.Nonempty s)\n(h₁ : x ∈ lowerBounds s)\n(h₂ : y ∈ upperBounds s)\n: x ≤ y := sorry",
+  "cand": "theorem dummy {α : Type*} [PartialOrder α] {s : Set α} (hs : s.Nonempty) {a b : α} (ha : ∀ x ∈ s, a ≤ x) (hb : ∀ x ∈ s, x < b) : a ≤ b := sorry",
+  "cell": "faithful_reject",
+  "item": 22,
+  "sheet_item": 21
+ },
+ {
+  "key": "d1-337-4262",
+  "part": "J",
+  "nl": "If $k = 1$ and $\\mathbf{x} \\in R^{k}$, $\\mathbf{x} \\neq 0$, prove that there does not exist $\\mathbf{y} \\in R^{k}$ such that $\\mathbf{y} \\neq 0$ but $\\mathbf{x} \\cdot \\mathbf{y}=0$",
+  "ref": "theorem Rudin_exercise_1_18b\n  : ∀ (x : ℝ), x ≠ 0 → ¬ ∃ (y : ℝ), y ≠ 0 ∧ x * y = 0 := sorry",
+  "cand": "theorem Rudin_exercise_1_18b (x y : ℝ) (hx : x ≠ 0) (hy : y ≠ 0) : x * y ≠ 0 := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 23,
+  "sheet_item": 22
+ },
+ {
+  "key": "d1-206-2566",
+  "part": "S",
+  "nl": "Prove that $\\left(\\sum_{j=1}^{n} a_{j} b_{j}\\right)^{2} \\leq\\left(\\sum_{j=1}^{n} j a_{j}{ }^{2}\\right)\\left(\\sum_{j=1}^{n} \\frac{b_{j}{ }^{2}}{j}\\right)$ for all real numbers $a_{1}, \\ldots, a_{n}$ and $b_{1}, \\ldots, b_{n}$.",
+  "ref": "theorem Axler_exercise_6_3 {n : ℕ} (a b : Fin n → ℝ) :\n  (∑ i, a i * b i) ^ 2 ≤ (∑ i : Fin n, (i + 1) * a i ^ 2) * (∑ i, b i ^ 2 / (i + 1)) := sorry",
+  "cand": "theorem Axler_exercise_6_3 (n : ℕ) (a b : ℕ → ℝ) :\n    (∑ j ∈ Finset.Icc 1 n, a j * b j) ^ 2 ≤\n      (∑ j ∈ Finset.Icc 1 n, (j : ℝ) * a j ^ 2) *\n        (∑ j ∈ Finset.Icc 1 n, b j ^ 2 / (j : ℝ)) := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 24,
+  "sheet_item": 23
+ },
+ {
+  "key": "d1-272-3461",
+  "part": "S",
+  "nl": "Show that $(p - 1)/2$ of the numbers $1, 2, \\ldots, p - 1$ are quadratic residues and $(p - 1)/2$ are quadratic nonresidues $\\mod p$.",
+  "ref": "theorem Herstein_exercise_4_4_9 (p : ℕ) (hp : Nat.Prime p) (hodd : p % 2 = 1) :\n  (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ∃ x : ZMod p, x^2 = q) ∧\n  (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ¬ ∃ x : ZMod p, x^2 = q) := sorry",
+  "cand": "theorem Herstein_exercise_4_4_9 (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2) :\n    {a : ℕ | a ∈ Set.Icc 1 (p - 1) ∧ IsSquare ((a : ZMod p))}.ncard = (p - 1) / 2 ∧\n    {a : ℕ | a ∈ Set.Icc 1 (p - 1) ∧ ¬ IsSquare ((a : ZMod p))}.ncard = (p - 1) / 2 := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "judge_opus_ref"
+  ],
+  "item": 25,
+  "sheet_item": 24
+ },
+ {
+  "key": "pnv-test-93",
+  "part": "G",
+  "set": "C",
+  "nl": "A subgroup $M$ of a group $G$ is called a maximal subgroup if $M \\neq G$ and the only subgroups of $G$ which contain $M$ are $M$ and $G$. Prove that if $H$ is a proper subgroup of the finite group $G$ then there is a maximal subgroup of $G$ containing $H$.",
+  "ref": "theorem exercise_2_4_16a {G : Type*} [Group G] [Fintype G] {H : Subgroup G}\n  (hH : H ≠ ⊤) :\n  ∃ M : Subgroup G, M ≠ ⊤ ∧\n  (∀ K : Subgroup G, M ≤ K → K = M ∨ K = ⊤) ∧\n  H ≤ M := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] [Finite G] {H : Subgroup G} (hH : H ≠ ⊤) : ∃ (M : Subgroup G), H ≤ M ∧ M ≠ ⊤ ∧ ∀ (K : Subgroup G), H ≤ K → K = M ∨ K = ⊤ := sorry",
+  "item": 26,
+  "sheet_item": 25
+ },
+ {
+  "key": "d1-61-842",
+  "part": "S",
+  "nl": "Let $G=\\left\\{g_{1}, \\ldots, g_{n}\\right\\}$ be a finite group. Prove that the element $N=g_{1}+g_{2}+\\ldots+g_{n}$ is in the center of the group ring $R G$.",
+  "ref": "theorem Dummit_Foote_exercise_7_2_12 {R G : Type*} [Ring R] [Group G] [Fintype G] :\n  ∑ g : G, MonoidAlgebra.of R G g ∈ center (MonoidAlgebra R G) := sorry",
+  "cand": "theorem Dummit_Foote_exercise_7_2_12\n    (R G : Type*) [Semiring R] [Group G] [Fintype G] :\n    ∀ x : MonoidAlgebra R G,\n      (∑ g : G, (MonoidAlgebra.of R G g : MonoidAlgebra R G)) * x =\n        x * (∑ g : G, (MonoidAlgebra.of R G g : MonoidAlgebra R G)) := by\n  sorry",
+  "selectors": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 27,
+  "sheet_item": 26
+ },
+ {
+  "key": "pnv-test-616",
+  "part": "F",
+  "nl": "Let $G$ be a finite group and $\\varphi$ an automorphism of $G$ such that $\\varphi(x) = x^{-1}$ for more than three-fourths of the elements of $G$. Prove that $\\varphi(y) = y^{-1}$ for all $y \\in G$, and so $G$ is abelian.",
+  "ref": "theorem exercise_2_5_52 {G : Type*} [Group G] [Fintype G]\n  (φ : G ≃* G) {I : Finset G} (hI : ∀ x ∈ I, φ x = x⁻¹)\n  (hI1 : (0.75 : ℚ) * card G ≤ card I) :\n  (∀ x : G, φ x = x⁻¹) ∧ ∀ x y : G, x*y = y*x := sorry",
+  "cand": "theorem dummy (G : Type*) [Group G] [Fintype G] (φ : G ≃* G) (hφ : ∃ S : Finset G, S.card > 3 * Fintype.card G / 4 ∧ ∀ x ∈ S, φ x = x⁻¹) : (∀ y : G, φ y = y⁻¹) ∧ ∀ x y : G, x * y = y * x := sorry",
+  "cell": "faithful_reject",
+  "item": 28,
+  "sheet_item": 27
+ },
+ {
+  "key": "pnv-test-769",
+  "part": "G",
+  "set": "B",
+  "nl": "Deduce that $|a b|=|b a|$ for all $a, b \\in G$.",
+  "ref": "theorem exercise_1_1_22b {G: Type*} [Group G] (a b : G) :\n  orderOf (a * b) = orderOf (b * a) := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] {a b c : G} : a * b = a * c → b = c := sorry",
+  "item": 29,
+  "sheet_item": 28
+ },
+ {
+  "key": "pnv-test-643",
+  "part": "G",
+  "set": "C",
+  "nl": "For any two real sequences $\\left\\{a_{n}\\right\\},\\left\\{b_{n}\\right\\}$, prove that $\\limsup _{n \\rightarrow \\infty}\\left(a_{n}+b_{n}\\right) \\leq \\limsup _{n \\rightarrow \\infty} a_{n}+\\limsup _{n \\rightarrow \\infty} b_{n},$ provided the sum on the right is not of the form $\\infty-\\infty$.",
+  "ref": "theorem exercise_3_5\n    (a b : ℕ → EReal)\n    (hareal : ∀ n, a n ≠ ⊤ ∧ a n ≠ ⊥)\n    (hbreal : ∀ n, b n ≠ ⊤ ∧ b n ≠ ⊥)\n    (ha : limsup a ≠ ⊤)\n    (hb : limsup b ≠ ⊥) :\n    limsup (λ n => a n + b n) ≤ limsup a + limsup b := sorry",
+  "cand": "theorem dummy {a b : ℕ → ℝ} (haa : Tendsto a atTop atTop) (hbb : Tendsto b atTop atTop) (ha : ∃ l, Tendsto a atTop (𝓝 l)) (hb : ∃ l, Tendsto b atTop (𝓝 l)) : limsup (a + b) ≤ limsup a + limsup b := sorry",
+  "item": 30,
+  "sheet_item": 29
+ },
+ {
+  "key": "pnv-test-960",
+  "part": "F",
+  "nl": "Prove that a set $U \\subset M$ is open if and only if none of its points are limits of its complement.",
+  "ref": "theorem exercise_2_26 {M : Type*} [TopologicalSpace M]\n  (U : Set M) : IsOpen U ↔ ∀ x ∈ U, ¬ ClusterPt x (𝓟 Uᶜ) := sorry",
+  "cand": "theorem dummy {X : Type u} [TopologicalSpace X] (U : Set X) : IsOpen U ↔ ∀ x : X, x ∈ U → ¬ x ∈ closure (Uᶜ) := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 31,
+  "sheet_item": 30
+ },
+ {
+  "key": "pnv-test-1068",
+  "part": "F",
+  "nl": "Let $V$ be a vector space over an infinite field $F$. Prove that $V$ is not the union of finitely many proper subspaces.",
+  "ref": "theorem exercise_3_7_2 {K V : Type*} [Field K] [Infinite K] [AddCommGroup V]\n  [Module K V] {ι : Type*} [Fintype ι] (γ : ι → Submodule K V)\n  (h : ∀ i : ι, γ i ≠ ⊤) :\n  (⋃ (i : ι), (γ i : Set V)) ≠ ⊤ := sorry",
+  "cand": "theorem dummy {F : Type*} [Field F] [Infinite F] {V : Type*} [AddCommGroup V] [Module F V] (hV : Nontrivial V) : ∀ (S : Finset (Submodule F V)), (∀ (s : Submodule F V), s ∈ S → s ≠ ⊤) → (⋃ s ∈ S, (s : Set V)) ≠ Set.univ := sorry",
+  "cell": "faithful_reject",
+  "item": 32,
+  "sheet_item": 31
+ },
+ {
+  "key": "d1-202-2487",
+  "part": "S",
+  "nl": "Suppose $T \\in \\mathcal{L}(V)$. Prove that if $U_{1}, \\ldots, U_{m}$ are subspaces of $V$ invariant under $T$, then $U_{1}+\\cdots+U_{m}$ is invariant under $T$.",
+  "ref": "theorem Axler_exercise_5_1 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] {T : V →ₗ[F] V} {n : ℕ} (U : Fin n → Submodule F V)\n  (hU : ∀ i : Fin n, Submodule.map T (U i) ≤ U i) :\n  Submodule.map T (∑ i : Fin n, U i : Submodule F V) ≤\n  (∑ i : Fin n, U i : Submodule F V) := sorry",
+  "cand": "theorem Axler_exercise_5_1 {𝕜 V : Type*} [Field 𝕜] [AddCommGroup V] [Module 𝕜 V]\n  (T : End 𝕜 V) {m : ℕ} {U : Fin m → Submodule 𝕜 V}\n  (hT : ∀ i, T '' (U i) ⊆ U i) :\n  T '' (⨆ i, U i) ⊆ (⨆ i, U i) := by sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 33,
+  "sheet_item": 32
+ },
+ {
+  "key": "d1-213-2618",
+  "part": "S",
+  "nl": "Prove that $(a_1a_2\\dots a_n)^{-1} = a_n^{-1}a_{n-1}^{-1}\\dots a_1^{-1}$ for all $a_1, a_2, \\dots, a_n\\in G$.",
+  "ref": "theorem Dummit_Foote_exercise_1_1_15 {G : Type*} [Group G] (as : List G) :\n  as.prod⁻¹ = (as.reverse.map (λ x => x⁻¹)).prod := sorry",
+  "cand": "theorem Dummit_Foote_exercise_1_1_15\n    {G : Type*} [Group G] (n : ℕ) (a : Fin n → G) :\n    ((List.finRange n).map a).prod⁻¹ =\n      ((List.finRange n).reverse.map (fun i => (a i)⁻¹)).prod := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 34,
+  "sheet_item": 33
+ },
+ {
+  "key": "pnv-test-1075",
+  "part": "F",
+  "nl": "Let $E$ be a nonempty subset of an ordered set; suppose $\\alpha$ is a lower bound of $E$ and $\\beta$ is an upper bound of $E$. Prove that $\\alpha \\leq \\beta$.",
+  "ref": "theorem exercise_1_4\n(α : Type*) [PartialOrder α]\n(s : Set α)\n(x y : α)\n(h₀ : Set.Nonempty s)\n(h₁ : x ∈ lowerBounds s)\n(h₂ : y ∈ upperBounds s)\n: x ≤ y := sorry",
+  "cand": "theorem dummy {X : Type*} [LE X] (hX : Nonempty X) {E : Set X} {a b : X} (ha : ∀ x ∈ E, a ≤ x) (hb : ∀ x ∈ E, x ≤ b) : a ≤ b := sorry",
+  "cell": "faithful_reject",
+  "item": 35,
+  "sheet_item": 34
+ },
+ {
+  "key": "pnv-test-695",
+  "part": "G",
+  "set": "A",
+  "nl": "Prove that $\\sum 1/k(\\log(k))^p$ converges when $p > 1$.",
+  "ref": "theorem exercise_3_63a (p : ℝ) (f : ℕ → ℝ) (hp : p > 1)\n  (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)) :\n  ∃ l, Tendsto f atTop (𝓝 l) := sorry",
+  "cand": "theorem dummy (p : ℝ) (hp : 1 < p) : Summable fun k => 1 / (k * (log k)^p) := sorry",
+  "f_cell": "faithful_reject",
+  "item": 36,
+  "sheet_item": 35
+ },
+ {
+  "key": "d1-127-1646",
+  "part": "J",
+  "nl": "Show that if $X$ is a Hausdorff space that is locally compact at the point $x$, then for each neighborhood $U$ of $x$, there is a neighborhood $V$ of $x$ such that $\\bar{V}$ is compact and $\\bar{V} \\subset U$.",
+  "ref": "theorem Munkres_exercise_29_10 {X : Type*}\n  [TopologicalSpace X] [T2Space X] (x : X)\n  (hx : ∃ U : Set X, x ∈ U ∧ IsOpen U ∧ (∃ K : Set X, U ⊆ K ∧ IsCompact K))\n  (U : Set X) (hU : IsOpen U) (hxU : x ∈ U) :\n  ∃ (V : Set X), IsOpen V ∧ x ∈ V ∧ IsCompact (closure V) ∧ closure V ⊆ U := sorry",
+  "cand": "theorem Munkres_exercise_29_10 {X : Type*} [TopologicalSpace X] [T2Space X]\n    (x : X) (hx : ∃ K : Set X, IsCompact K ∧ K ∈ 𝓝 x) :\n    ∀ U : Set X, U ∈ 𝓝 x → ∃ V : Set X, V ∈ 𝓝 x ∧ IsCompact (closure V) ∧ closure V ⊆ U := by\n  sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 37,
+  "sheet_item": 36
+ },
+ {
+  "key": "d1-142-1839",
+  "part": "J",
+  "nl": "Let $f$ be a real function on the real line with continuous third derivative. Prove that there exists a point $a$ such that $f(a) \\cdot f^{\\prime}(a) \\cdot f^{\\prime \\prime}(a) \\cdot f^{\\prime \\prime \\prime}(a) \\geq 0$.",
+  "ref": "theorem Putnam_exercise_1998_a3 (f : ℝ → ℝ) (hf : ContDiff ℝ 3 f) :\n  ∃ a : ℝ, (f a) * (deriv f a) * (iteratedDeriv 2 f a) * (iteratedDeriv 3 f a) ≥ 0 := sorry",
+  "cand": "theorem Putnam_exercise_1998_a3 (f : ℝ → ℝ) (h : DifferentiableOn ℝ f (Set.univ))\n  (h3 : DifferentiableOn ℝ (deriv (deriv (deriv f))) (Set.univ)) :\n  ∃ a : ℝ, 0 ≤ f a * (deriv f a) * (deriv (deriv f) a) * (deriv (deriv (deriv f)) a) :=\nby sorry",
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 38,
+  "sheet_item": 37
+ },
+ {
+  "key": "d1-16-226",
+  "part": "S",
+  "nl": "Prove that the intersection of any collection of subspaces of $V$ is a subspace of $V$.",
+  "ref": "theorem Axler_exercise_1_8 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] {ι : Type*} (u : ι → Submodule F V) :\n  ∃ U : Submodule F V, (⋂ (i : ι), (u i).carrier) = ↑U := sorry",
+  "cand": "theorem Axler_exercise_1_8 {K V : Type*} [Field K] [AddCommGroup V] [Module K V]\n    (S : Set (Submodule K V)) :\n    ∃ W : Submodule K V, (W : Set V) = ⋂ U ∈ S, (U : Set V) := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 39,
+  "sheet_item": 38
+ },
+ {
+  "key": "d1-325-4115",
+  "part": "J",
+  "nl": "A continuous, strictly increasing function $\\mu \\colon (0, \\infty) \\rightarrow (0, \\infty)$ is a modulus of continuity if $\\mu(s) \\rightarrow 0$ as $s \\rightarrow 0$. A function $f \\colon [a, b] \\rightarrow \\mathbb{R}$ has modulus of continuity $\\mu$ if $|f(s) - f(t)| \\leq \\mu(|s - t|)$ for all $s, t \\in [a, b]$. Prove that a function is uniformly continuous if and only if it has a modulus of continuity.",
+  "ref": "theorem Pugh_exercise_4_15a (a b : ℝ) (hab : a ≤ b) (f : Icc a b → ℝ) :\n  UniformContinuous f ↔ ∃ (μ : ℝ → ℝ), (∀ x : ℝ, x > 0 → μ x > 0) ∧\n  ContinuousOn μ (Ioi 0) ∧ StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝[>] 0) (𝓝 0) ∧\n  (∀ s t : Icc a b, |f s - f t| ≤ μ (|s - t|)) := sorry",
+  "cand": "theorem Pugh_exercise_4_15a (a b : ℝ) (f : Set.Icc a b → ℝ) :\n    UniformContinuous f ↔\n      ∃ μ : ℝ → ℝ,\n        (∀ s : ℝ, 0 < s → 0 < μ s) ∧\n        ContinuousOn μ (Set.Ioi 0) ∧\n        StrictMonoOn μ (Set.Ioi 0) ∧\n        Tendsto μ (𝓝[>] (0 : ℝ)) (𝓝 0) ∧\n        (∀ s t : Set.Icc a b, s ≠ t →\n          |f s - f t| ≤ μ |(s : ℝ) - (t : ℝ)|) := by\n  sorry",
+  "rewarded_by": [
+   "judge_opus_ref"
+  ],
+  "item": 40,
+  "sheet_item": 39
+ },
+ {
+  "key": "pnv-test-1026",
+  "part": "G",
+  "set": "A",
+  "nl": "Prove that there exists a normal subgroup that is not characteristic.",
+  "ref": "theorem exercise_4_4_6b :\n  ∃ (G : Type*) (hG : Group G) (H : @Subgroup G hG), @Normal G hG H ∧ ¬ @Characteristic G hG H := sorry",
+  "cand": "theorem dummy (G : Type*) [Group G] : ∃ H : Subgroup G, H.Normal ∧ ¬ H.Characteristic := sorry",
+  "f_cell": "faithful_reject",
+  "item": 41,
+  "sheet_item": 40
+ },
+ {
+  "key": "pnv-test-322",
+  "part": "F",
+  "nl": "Prove that $(a_1a_2\\dots a_n)^{-1} = a_n^{-1}a_{n-1}^{-1}\\dots a_1^{-1}$ for all $a_1, a_2, \\dots, a_n\\in G$.",
+  "ref": "theorem exercise_1_1_15 {G : Type*} [Group G] (as : List G) :\n  as.prod⁻¹ = (as.reverse.map (λ x => x⁻¹)).prod := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] (a b c : G) (h : a * b = c) : a⁻¹ * b⁻¹ = c⁻¹ := sorry",
+  "cell": "unfaithful_reject",
+  "control": true,
+  "item": 42,
+  "sheet_item": 41
+ },
+ {
+  "key": "d1-307-3872",
+  "part": "S",
+  "nl": "Let $p: X \\rightarrow Y$ be a closed continuous surjective map such that $p^{-1}(\\{y\\})$ is compact, for each $y \\in Y$. (Such a map is called a perfect map.) Show that if $Y$ is compact, then $X$ is compact.",
+  "ref": "theorem Munkres_exercise_26_12 {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y]\n  (p : X → Y) (h : Function.Surjective p) (hc : Continuous p)\n  (hp : IsClosedMap p) (hp : ∀ y, IsCompact (p ⁻¹' {y}))\n  (hY : CompactSpace Y) : CompactSpace X := sorry",
+  "cand": "theorem Munkres_exercise_26_12 {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y]\n  (p : X → Y) (hp_cont : Continuous p) (hp_closed : IsClosedMap p) (hp_surj : Function.Surjective p)\n  (hp_compact_fibers : ∀ y : Y, IsCompact (p ⁻¹' {y})) (hY_compact : IsCompact (univ : Set Y)) :\n  IsCompact (univ : Set X) :=\nby sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 43,
+  "sheet_item": 42
+ },
+ {
+  "key": "d1-281-3567",
+  "part": "S",
+  "nl": "Show that $\\sum^{\\prime} 1 / n$, the sum being over square free integers, diverges.",
+  "ref": "theorem Ireland_Rosen_exercise_2_27a :\n  ¬ Summable (λ i : {p : ℤ // Squarefree p} => (1 : ℚ) / i) := sorry",
+  "cand": "theorem Ireland_Rosen_exercise_2_27a :\n    ¬ Summable (fun n : ℕ => if Squarefree n then (1 : ℝ) / n else 0) := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 44,
+  "sheet_item": 43
+ },
+ {
+  "key": "d1-275-3492",
+  "part": "J",
+  "nl": "If $F$ is a field of characteristic $p \\neq 0$, show that $(a + b)^m = a^m + b^m$, where $m = p^n$, for all $a, b \\in F$ and any positive integer $n$.",
+  "ref": "theorem Herstein_exercise_5_1_8 {p m n: ℕ} {F : Type*} [Field F]\n  (hp : p ≠ 0) (hn : n > 0)\n  (hF : CharP F p) (a b : F) (hm : m = p ^ n) :\n  (a + b) ^ m = a^m + b^m := sorry",
+  "cand": "`lean\ntheorem Herstein_exercise_5_1_8 {p m n : ℕ} {F : Type*} [Field F]\n  (hp : Nat.Prime p) (hF : CharP F p) (a b : F) (hm : m = p ^ n) :\n  (a + b) ^ m = a^m + b^m :=\nsorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 45,
+  "sheet_item": 44
+ },
+ {
+  "key": "d1-64-898",
+  "part": "S",
+  "nl": "Prove that if an integer is the sum of two rational squares, then it is the sum of two integer squares.",
+  "ref": "theorem Dummit_Foote_exercise_8_3_4 {n : ℤ} {r s : ℚ}\n  (h : r^2 + s^2 = n) :\n  ∃ a b : ℤ, a^2 + b^2 = n := sorry",
+  "cand": "theorem Dummit_Foote_exercise_8_3_4 (n : ℤ) :\n    (∃ a b : ℚ, (n : ℚ) = a ^ 2 + b ^ 2) → (∃ x y : ℤ, n = x ^ 2 + y ^ 2) := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 46,
+  "sheet_item": 45
+ },
+ {
+  "key": "d1-147-1899",
+  "part": "S",
+  "nl": "For $j \\in\\{1,2,3,4\\}$, let $z_{j}$ be a complex number with $\\left|z_{j}\\right|=1$ and $z_{j} \\neq 1$. Prove that $3-z_{1}-z_{2}-z_{3}-z_{4}+z_{1} z_{2} z_{3} z_{4} \\neq 0 .$",
+  "ref": "theorem Putnam_exercise_2020_b5 (z : Fin 4 → ℂ) (hz0 : ∀ n, ‖z n‖ = 1)\n  (hz1 : ∀ n, z n ≠ 1) :\n  3 - z 0 - z 1 - z 2 - z 3 + (z 0) * (z 1) * (z 2) * (z 3) ≠ 0 := sorry",
+  "cand": "theorem Putnam_exercise_2020_b5 (z₁ z₂ z₃ z₄ : ℂ)\n    (h₁ : ‖z₁‖ = 1) (h₂ : ‖z₂‖ = 1) (h₃ : ‖z₃‖ = 1) (h₄ : ‖z₄‖ = 1)\n    (hz₁ : z₁ ≠ 1) (hz₂ : z₂ ≠ 1) (hz₃ : z₃ ≠ 1) (hz₄ : z₄ ≠ 1) :\n    3 - z₁ - z₂ - z₃ - z₄ + z₁ * z₂ * z₃ * z₄ ≠ 0 := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 47,
+  "sheet_item": 46
+ },
+ {
+  "key": "pnv-test-1235",
+  "part": "F",
+  "nl": "Let $G$ be a group with subgroups $H$ and $K$ with $H \\leq K$. Prove that if $H$ is characteristic in $K$ and $K$ is normal in $G$ then $H$ is normal in $G$.",
+  "ref": "theorem exercise_4_4_8a {G : Type*} [Group G] (H K : Subgroup G)\n  (hHK : H ≤ K) [hHK1 : (H.subgroupOf K).Characteristic] [hK : K.Normal] :\n  H.Normal := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] {H K : Subgroup G} (hHK : H ≤ K) (hH : H.Characteristic) (hK : K.Normal) : H.Normal := sorry",
+  "cell": "unfaithful_reject",
+  "control": true,
+  "item": 48,
+  "sheet_item": 47
+ },
+ {
+  "key": "d1-24-369",
+  "part": "S",
+  "nl": "Suppose $U$ is a subspace of $V$. Prove that $U^{\\perp}=\\{0\\}$ if and only if $U=V$",
+  "ref": "theorem Axler_exercise_6_16 {K V : Type*} [RCLike K] [NormedAddCommGroup V]\n  [InnerProductSpace K V] [CompleteSpace V] {U : Submodule K V}\n  (hU : IsClosed (U : Set V)) :\n  U.orthogonal = ⊥ ↔ U = ⊤ := sorry",
+  "cand": "theorem Axler_exercise_6_16 {K : Type*} [RCLike K] {V : Type*}\n    [NormedAddCommGroup V] [InnerProductSpace K V] [FiniteDimensional K V]\n    (U : Submodule K V) :\n    Uᗮ = ⊥ ↔ U = ⊤ := by sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 49,
+  "sheet_item": 48
+ },
+ {
+  "key": "pnv-test-1427",
+  "part": "G",
+  "set": "C",
+  "nl": "Let $f: \\mathbb{R} \\rightarrow \\mathbb{R}$ be an infinitely differentiable function satisfying $f(0)=0, f(1)=1$, and $f(x) \\geq 0$ for all $x \\in$ $\\mathbb{R}$. Show that there exist a positive integer $n$ and a real number $x$ such that $f^{(n)}(x)<0$.",
+  "ref": "theorem exercise_2018_a5 (f : ℝ → ℝ) (hf : ContDiff ℝ ⊤ f)\n  (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf2 : ∀ x, f x ≥ 0) :\n  ∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0 := sorry",
+  "cand": "theorem dummy {f : ℝ → ℝ} (hf : ContDiff ℝ ⊤ f) (hf₀ : f 0 = 0) (hf₁ : f 1 = 1) (hf₂ : ∀ x, 0 ≤ f x) : ∃ n : ℕ, ∃ x : ℝ, f ^[n] x < 0 := sorry",
+  "item": 50,
+  "sheet_item": 49
+ },
+ {
+  "key": "d1-145-1861",
+  "part": "S",
+  "nl": "Suppose that $f(x)=\\sum_{i=0}^{\\infty} c_{i} x^{i}$ is a power series for which each coefficient $c_{i}$ is 0 or 1 . Show that if $f(2 / 3)=3 / 2$, then $f(1 / 2)$ must be irrational.",
+  "ref": "theorem Putnam_exercise_2017_b3 (f : ℝ → ℝ) (c : ℕ → ℝ)\n  (hf : f = λ x => (∑' (i : ℕ), (c i) * x^i))\n  (hc : ∀ n, c n = 0 ∨ c n = 1)\n  (hf1 : f (2/3) = 3/2) :\n  Irrational (f (1/2)) := sorry",
+  "cand": "theorem Putnam_exercise_2017_b3 (c : ℕ → ℕ) (hc : ∀ i, c i = 0 ∨ c i = 1)\n    (h : ∑' i, (c i : ℝ) * (2 / 3 : ℝ) ^ i = 3 / 2) :\n    Irrational (∑' i, (c i : ℝ) * (1 / 2 : ℝ) ^ i) := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 51,
+  "sheet_item": 50
+ },
+ {
+  "key": "pnv-test-1153",
+  "part": "F",
+  "nl": "Let $p: X \\rightarrow Y$ be a closed continuous surjective map such that $p^{-1}(\\{y\\})$ is compact, for each $y \\in Y$. (Such a map is called a perfect map.) Show that if $Y$ is compact, then $X$ is compact.",
+  "ref": "theorem exercise_26_12 {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y]\n  (p : X → Y) (h : Function.Surjective p) (hc : Continuous p)\n  (hp : IsClosedMap p) (hp : ∀ y, IsCompact (p ⁻¹' {y}))\n  (hY : CompactSpace Y) : CompactSpace X := sorry",
+  "cand": "theorem dummy {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] (p : X → Y) (hp : Continuous p) (h_closed : IsClosedMap p) (h_surj : Function.Surjective p) (h_fiber_compact : ∀ y : Y, IsCompact (p ⁻¹' {y})) (hY : CompactSpace Y) : CompactSpace X := sorry",
+  "cell": "faithful_local_accept",
+  "control": true,
+  "item": 52,
+  "sheet_item": 51
+ },
+ {
+  "key": "d1-349-4385",
+  "part": "S",
+  "nl": "Let $f$ and $g$ be continuous mappings of a metric space $X$ into a metric space $Y$, and let $P$ be a dense subset of $X$. Prove that if $g(p) = f(p)$ for all $p \\in P$ then $g(p) = f(p)$ for all $p \\in X$.",
+  "ref": "theorem Rudin_exercise_4_4b\n  {α : Type} [MetricSpace α]\n  {β : Type} [MetricSpace β]\n  (f g : α → β)\n  (s : Set α)\n  (h₁ : Continuous f)\n  (h₂ : Continuous g)\n  (h₃ : Dense s)\n  (h₄ : ∀ x ∈ s, f x = g x)\n  : f = g := sorry",
+  "cand": "theorem Rudin_exercise_4_4b {X Y : Type*} [MetricSpace X] [MetricSpace Y]\n    (f g : X → Y) (P : Set X)\n    (hf : Continuous f) (hg : Continuous g) (hP : Dense P)\n    (h : ∀ p ∈ P, g p = f p) :\n    ∀ x : X, g x = f x := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 53,
+  "sheet_item": 52
+ },
+ {
+  "key": "pnv-test-976",
+  "part": "F",
+  "nl": "Show that $(p - 1)/2$ of the numbers $1, 2, \\ldots, p - 1$ are quadratic residues and $(p - 1)/2$ are quadratic nonresidues $\\mod p$.",
+  "ref": "theorem exercise_4_4_9 (p : ℕ) (hp : Nat.Prime p) (hodd : p % 2 = 1) :\n  (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ∃ x : ZMod p, x^2 = q) ∧\n  (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ¬ ∃ x : ZMod p, x^2 = q) := sorry",
+  "cand": "theorem dummy {p : ℕ} (hp : Nat.Prime p) : (∃ (res nonres : Finset (ZMod p)), res.card = (p - 1) / 2 ∧ nonres.card = (p - 1) / 2 ∧ (∀ a ∈ res, ∃ b : ZMod p, b^2 = a) ∧ (∀ a ∈ nonres, ∀ b : ZMod p, b^2 ≠ a) ∧ ∀ x : ZMod p, x ≠ 0 → (x ∈ res ∨ x ∈ nonres)) := sorry",
+  "cell": "faithful_reject",
+  "item": 54,
+  "sheet_item": 53
+ },
+ {
+  "key": "pnv-test-1112",
+  "part": "F",
+  "nl": "Let $H$ be a subgroup of the additive group of rational numbers with the property that $1 / x \\in H$ for every nonzero element $x$ of $H$. Prove that $H=0$ or $\\mathbb{Q}$.",
+  "ref": "theorem exercise_2_1_13 (H : AddSubgroup ℚ) {x : ℚ}\n  (hH : (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H):\n  H = ⊥ ∨ H = ⊤ := sorry",
+  "cand": "theorem dummy (H : AddSubgroup ℚ) (hH : ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H) : H = ⊥ ∨ H = ⊤ := sorry",
+  "cell": "faithful_reject",
+  "item": 55,
+  "sheet_item": 8
+ },
+ {
+  "key": "d1-259-3245",
+  "part": "K",
+  "nl": "If a group $G$ has no proper subgroups, prove that $G$ is cyclic of order $p$, where $p$ is a prime number.",
+  "ref": "theorem Herstein_exercise_2_3_16\n    {G : Type*} [Group G]\n    (hG : ∀ H : Subgroup G, H = ⊤ ∨ H = ⊥)\n    (h_nontrivial : ∃ g : G, g ≠ (1 : G)) :\n    IsCyclic G ∧ ∃ p : ℕ, Nat.Prime p ∧ Nat.card G = p := sorry",
+  "cand": "theorem Herstein_exercise_2_3_16 {G : Type*} [Group G] [Fintype G]\n  (h : ∀ H : Subgroup G, H = ⊥ ∨ H = ⊤) :\n  ∃ p : ℕ, Nat.Prime p ∧ ∃ g : G, Subgroup.closure ({g} : Set G) = ⊤ ∧ Fintype.card G = p := by sorry",
+  "control": "reject_nonstrict",
+  "item": 56,
+  "sheet_item": 54
+ },
+ {
+  "key": "d1-360-4536",
+  "part": "K",
+  "nl": "Suppose that $f$ is holomorphic in an open set $\\Omega$. Prove that if $\\text{Im}(f)$ is constant, then $f$ is constant.",
+  "ref": "theorem Shakarchi_exercise_1_13b {f : ℂ → ℂ} {Ω : Set ℂ}\n    (hΩ : IsOpen Ω) (hConn : IsPreconnected Ω)\n    (hf : DifferentiableOn ℂ f Ω)\n    (hc : ∃ c : ℝ, ∀ z ∈ Ω, (f z).im = c) :\n    ∀ a b : Ω, f a = f b := sorry",
+  "cand": "theorem Shakarchi_exercise_1_13b\n    {Ω : Set ℂ} (hΩ : IsOpen Ω) {f : ℂ → ℂ}\n    (hf : DifferentiableOn ℂ f Ω)\n    (hIm : ∃ c : ℝ, ∀ z ∈ Ω, (f z).im = c) :\n    ∃ c : ℂ, ∀ z ∈ Ω, f z = c := by\n  sorry",
+  "control": "reject_nonstrict",
+  "item": 57,
+  "sheet_item": 55
+ },
+ {
+  "key": "pnv-test-1074",
+  "part": "G",
+  "set": "C",
+  "nl": "Prove that $f(x) = x^3 + 3x + 2$ is irreducible in $Q[x]$.",
+  "ref": "theorem exercise_4_6_2 : Irreducible (X^3 + 3*X + 2 : Polynomial ℚ) := sorry",
+  "cand": "theorem dummy (f : Polynomial ℚ) (hf : f.degree = 3) (hf0 : f.coeff 0 = 2) (hf1 : f.coeff 1 = 3) (hf2 : f.coeff 2 = 1) : Irreducible f := sorry",
+  "item": 58,
+  "sheet_item": 56
+ },
+ {
+  "key": "d1-259-3250",
+  "part": "K",
+  "nl": "If a group $G$ has no proper subgroups, prove that $G$ is cyclic of order $p$, where $p$ is a prime number.",
+  "ref": "theorem Herstein_exercise_2_3_16\n    {G : Type*} [Group G]\n    (hG : ∀ H : Subgroup G, H = ⊤ ∨ H = ⊥)\n    (h_nontrivial : ∃ g : G, g ≠ (1 : G)) :\n    IsCyclic G ∧ ∃ p : ℕ, Nat.Prime p ∧ Nat.card G = p := sorry",
+  "cand": "theorem Herstein_exercise_2_3_16 {G : Type*} [Group G] [Nontrivial G]\n    (hG : ∀ H : Subgroup G, H = ⊤ ∨ H = ⊥) :\n    IsCyclic G ∧ ∃ p : ℕ, Nat.Prime p ∧ Nat.card G = p := by sorry",
+  "control": "equivalent",
+  "item": 59,
+  "sheet_item": 57
+ },
+ {
+  "key": "d1-231-2852",
+  "part": "S",
+  "nl": "Prove that if $p$ is a prime and $G$ is a group of order $p^{\\alpha}$ for some $\\alpha \\in \\mathbb{Z}^{+}$, then every subgroup of index $p$ is normal in $G$.",
+  "ref": "theorem Dummit_Foote_exercise_4_2_9a {G : Type*} [Fintype G] [Group G] {p α : ℕ}\n  (hp : p.Prime) (ha : α > 0) (hG : card G = p ^ α) :\n  ∀ H : Subgroup G, H.index = p → H.Normal := sorry",
+  "cand": "theorem Dummit_Foote_exercise_4_2_9a\n    {p : ℕ} (hp : Nat.Prime p) {G : Type*} [Group G] [Fintype G]\n    (α : ℕ+) (hcard : Fintype.card G = p ^ (α : ℕ)) :\n    ∀ H : Subgroup G, H.index = p → H.Normal := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 60,
+  "sheet_item": 58
+ },
+ {
+  "key": "pnv-test-1040",
+  "part": "F",
+  "nl": "Let $H$ be a subgroup of the additive group of rational numbers with the property that $1 / x \\in H$ for every nonzero element $x$ of $H$. Prove that $H=0$ or $\\mathbb{Q}$.",
+  "ref": "theorem exercise_2_1_13 (H : AddSubgroup ℚ) {x : ℚ}\n  (hH : (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H):\n  H = ⊥ ∨ H = ⊤ := sorry",
+  "cand": "theorem dummy {H : AddSubgroup ℚ} (hH : ∀ x ∈ H, x ≠ 0 → (1 / x : ℚ) ∈ H) : H = ⊥ ∨ H = ⊤ := sorry",
+  "cell": "faithful_reject",
+  "item": 61,
+  "sheet_item": 8
+ },
+ {
+  "key": "d1-39-541",
+  "part": "J",
+  "nl": "Show that the subgroup of all rotations in a dihedral group is a maximal subgroup.",
+  "ref": "theorem Dummit_Foote_exercise_2_4_16b {n : ℕ} {hn : n ≠ 0}\n  {R : Subgroup (DihedralGroup n)}\n  (hR : R = Subgroup.closure {DihedralGroup.r 1}) :\n  R ≠ ⊤ ∧\n  ∀ K : Subgroup (DihedralGroup n), R ≤ K → K = R ∨ K = ⊤ := sorry",
+  "cand": "theorem Dummit_Foote_exercise_2_4_16b (n : ℕ) :\n    IsCoatom (Subgroup.closure {DihedralGroup.r 1} : Subgroup (DihedralGroup n)) := by sorry",
+  "rewarded_by": [
+   "judge_opus_ref"
+  ],
+  "item": 62,
+  "sheet_item": 59
+ },
+ {
+  "key": "pnv-test-628",
+  "part": "G",
+  "set": "C",
+  "nl": "Suppose $f$ is a real, three times differentiable function on $[-1,1]$, such that $f(-1)=0, \\quad f(0)=0, \\quad f(1)=1, \\quad f^{\\prime}(0)=0 .$ Prove that $f^{(3)}(x) \\geq 3$ for some $x \\in(-1,1)$.",
+  "ref": "theorem exercise_5_17\n  {f : ℝ → ℝ}\n  (hf' : DifferentiableOn ℝ f (Set.Icc (-1) 1))\n  (hf'' : DifferentiableOn ℝ (deriv f) (Set.Icc (-1) 1))\n  (hf''' : DifferentiableOn ℝ (deriv (deriv f)) (Set.Icc (-1) 1))\n  (hf0 : f (-1) = 0)\n  (hf1 : f 0 = 0)\n  (hf2 : f 1 = 1)\n  (hf3 : deriv f 0 = 0) :\n  ∃ x, x ∈ Set.Ioo (-1 : ℝ) 1 ∧ deriv (deriv (deriv f)) x ≥ 3 := sorry",
+  "cand": "theorem dummy {f : ℝ → ℝ} (h₁ : ContDiff ℝ 3 f) (h₂ : f (-1) = 0) (h₃ : f 0 = 0) (h₄ : f 1 = 1) (h₅ : deriv f 0 = 0) : ∃ x ∈ Set.Icc (-1 : ℝ) 1, deriv^[3] f x ≥ 3 := sorry",
+  "item": 63,
+  "sheet_item": 60
+ },
+ {
+  "key": "d1-246-3058",
+  "part": "S",
+  "nl": "Let $R$ be a commutative ring with $1 \\neq 0$. Prove that if $a$ is a nilpotent element of $R$ then $1-a b$ is a unit for all $b \\in R$.",
+  "ref": "theorem Dummit_Foote_exercise_7_4_27 {R : Type*} [CommRing R] (hR : (0 : R) ≠ 1)\n  {a : R} (ha : IsNilpotent a) (b : R) :\n  IsUnit (1-a*b) := sorry",
+  "cand": "theorem Dummit_Foote_exercise_7_4_27 {R : Type*} [CommRing R] [Nontrivial R]\n    (a : R) (ha : IsNilpotent a) : ∀ b : R, IsUnit (1 - a * b) := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 64,
+  "sheet_item": 61
+ },
+ {
+  "key": "pnv-test-1054",
+  "part": "F",
+  "nl": "Prove that there exists a normal subgroup that is not characteristic.",
+  "ref": "theorem exercise_4_4_6b :\n  ∃ (G : Type*) (hG : Group G) (H : @Subgroup G hG), @Normal G hG H ∧ ¬ @Characteristic G hG H := sorry",
+  "cand": "theorem dummy (G : Type*) [Group G] : ∃ H : Subgroup G, Normal H ∧ ¬ Characteristic H := sorry",
+  "cell": "faithful_reject",
+  "item": 65,
+  "sheet_item": 40
+ },
+ {
+  "key": "d1-123-1621",
+  "part": "J",
+  "nl": "Let $X$ be a compact Hausdorff space. Let $\\mathcal{A}$ be a collection of closed connected subsets of $X$ that is simply ordered by proper inclusion. Then $Y=\\bigcap_{A \\in \\mathcal{A}} A$ is connected.",
+  "ref": "theorem Munkres_exercise_26_11\n  {X : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X]\n  (A : Set (Set X)) (hAne : A.Nonempty)\n  (hChain : ∀ (a b : Set X), a ∈ A → b ∈ A → a ⊆ b ∨ b ⊆ a)\n  (hClosed : ∀ a ∈ A, IsClosed a) (hConn : ∀ a ∈ A, IsConnected a) :\n  IsConnected (⋂₀ A) := sorry",
+  "cand": "theorem Munkres_exercise_26_11 {X : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X]\n    (𝒜 : Set (Set X)) (hne : 𝒜.Nonempty)\n    (hclosed : ∀ A ∈ 𝒜, IsClosed A)\n    (hconn : ∀ A ∈ 𝒜, IsPreconnected A)\n    (hchain : IsChain (· ⊆ ·) 𝒜) :\n    IsPreconnected (⋂₀ 𝒜) := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 66,
+  "sheet_item": 62
+ },
+ {
+  "key": "pnv-test-1100",
+  "part": "F",
+  "nl": "Prove that a set $U \\subset M$ is open if and only if none of its points are limits of its complement.",
+  "ref": "theorem exercise_2_26 {M : Type*} [TopologicalSpace M]\n  (U : Set M) : IsOpen U ↔ ∀ x ∈ U, ¬ ClusterPt x (𝓟 Uᶜ) := sorry",
+  "cand": "theorem dummy {M : Type*} [TopologicalSpace M] {U : Set M} : IsOpen U ↔ ∀ x ∈ U, ∀ (V : Set M), IsOpen V → x ∉ V → x ∉ closure (Uᶜ) := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 67,
+  "sheet_item": 63
+ },
+ {
+  "key": "pnv-test-358",
+  "part": "G",
+  "set": "A",
+  "nl": "If $k = 1$ and $\\mathbf{x} \\in R^{k}$, $\\mathbf{x} \\neq 0$, prove that there does not exist $\\mathbf{y} \\in R^{k}$ such that $\\mathbf{y} \\neq 0$ but $\\mathbf{x} \\cdot \\mathbf{y}=0$",
+  "ref": "theorem exercise_1_18b\n  : ∀ (x : ℝ), x ≠ 0 → ¬ ∃ (y : ℝ), y ≠ 0 ∧ x * y = 0 := sorry",
+  "cand": "theorem dummy {x y : ℝ} (hx : x ≠ 0) (hxy : x * y = 0) : y = 0 := sorry",
+  "f_cell": "faithful_reject",
+  "item": 68,
+  "sheet_item": 64
+ },
+ {
+  "key": "d1-148-1916",
+  "part": "S",
+  "nl": "If $r$ is rational $(r \\neq 0)$ and $x$ is irrational, prove that $r+x$ is irrational.",
+  "ref": "theorem Rudin_exercise_1_1a\n  (x : ℝ) (y : ℚ) (hy : y ≠ 0) :\n  ( Irrational x ) -> Irrational ( x + y ) := sorry",
+  "cand": "theorem Rudin_exercise_1_1a (r : ℚ) (x : ℝ) (hr : r ≠ 0) (hx : ¬ ∃ q : ℚ, x = q) : ¬ ∃ q : ℚ, r + x = q := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 69,
+  "sheet_item": 65
+ },
+ {
+  "key": "pnv-test-186",
+  "part": "G",
+  "set": "C",
+  "nl": "Prove that as vector spaces over $\\mathbb{Q}, \\mathbb{R}^n \\cong \\mathbb{R}$, for all $n \\in \\mathbb{Z}^{+}$.",
+  "ref": "theorem exercise_11_1_13 {n : ℕ+} :\n  Nonempty ((Fin n → ℝ) ≃ₗ[ℚ] ℝ) := sorry",
+  "cand": "theorem dummy (n : ℕ) : ∃ (f : ℝ ≃ₗ[ℚ] Fin n → ℝ), True := sorry",
+  "item": 70,
+  "sheet_item": 66
+ },
+ {
+  "key": "pnv-test-1441",
+  "part": "G",
+  "set": "B",
+  "nl": "If $a \\in K$ is such that $a^2$ is algebraic over the subfield $F$ of $K$, show that a is algebraic over $F$.",
+  "ref": "theorem exercise_5_3_7 {K : Type*} [Field K] {F : Subfield K}\n  {a : K} (ha : IsAlgebraic F (a ^ 2)) : IsAlgebraic F a := sorry",
+  "cand": "theorem dummy {F K : Type*} [Field F] [Field K] [Algebra F K] {a : K} (h : IsAlgebraic F (a^2)) : IsAlgebraic F a := sorry",
+  "item": 71,
+  "sheet_item": 67
+ },
+ {
+  "key": "pnv-test-992",
+  "part": "G",
+  "set": "A",
+  "nl": "Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.",
+  "ref": "theorem exercise_2_92 {α : Type*} [TopologicalSpace α]\n  {s : ℕ → Set α}\n  (hs : ∀ i, IsCompact (s i))\n  (hne : ∀ i, (s i).Nonempty)\n  (hs : ∀ i, (s i) ⊇ (s (i + 1))) :\n  (⋂ i, s i).Nonempty := sorry",
+  "cand": "theorem dummy {α : Type*} [TopologicalSpace α] [CompactSpace α] {K : ℕ → Set α} (hK : ∀ n, IsCompact (K n)) (hdec : ∀ n, K (n + 1) ⊆ K n) (hne : ∀ n, (K n).Nonempty) : (⋂ n, K n).Nonempty := sorry",
+  "f_cell": "faithful_reject",
+  "item": 72,
+  "sheet_item": 68
+ },
+ {
+  "key": "pnv-test-607",
+  "part": "G",
+  "set": "C",
+  "nl": "Let $(X, d)$ be a metric space. If $f: X \\rightarrow X$ satisfies the condition $d(f(x), f(y))=d(x, y)$ for all $x, y \\in X$, then $f$ is called an isometry of $X$. Show that if $f$ is an isometry and $X$ is compact, then $f$ is bijective and hence a homeomorphism.",
+  "ref": "theorem exercise_28_6 {X : Type*} [MetricSpace X]\n  [CompactSpace X] {f : X → X} (hf : Isometry f) :\n  Continuous f ∧ Bijective f ∧ IsOpenMap f := sorry",
+  "cand": "theorem dummy {X : Type u} [MetricSpace X] (f : X → X) (hf : ∀ x y : X, dist (f x) (f y) = dist x y) (hX : CompactSpace X) : Function.Bijective f := sorry",
+  "item": 73,
+  "sheet_item": 69
+ },
+ {
+  "key": "d1-231-2850",
+  "part": "S",
+  "nl": "Prove that if $p$ is a prime and $G$ is a group of order $p^{\\alpha}$ for some $\\alpha \\in \\mathbb{Z}^{+}$, then every subgroup of index $p$ is normal in $G$.",
+  "ref": "theorem Dummit_Foote_exercise_4_2_9a {G : Type*} [Fintype G] [Group G] {p α : ℕ}\n  (hp : p.Prime) (ha : α > 0) (hG : card G = p ^ α) :\n  ∀ H : Subgroup G, H.index = p → H.Normal := sorry",
+  "cand": "theorem Dummit_Foote_exercise_4_2_9a\n    {p : ℕ} (hp : Nat.Prime p)\n    {G : Type*} [Group G] [Fintype G]\n    (hG : ∃ α : ℕ, 0 < α ∧ Fintype.card G = p ^ α) :\n    ∀ H : Subgroup G, H.index = p → H.Normal := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 74,
+  "sheet_item": 70
+ },
+ {
+  "key": "d1-163-2016",
+  "part": "J",
+  "nl": "Suppose $X$ is a nonempty complete metric space, and $\\left\\{G_{n}\\right\\}$ is a sequence of dense open sets of $X$. Prove Baire's theorem, namely, that $\\bigcap_{1}^{\\infty} G_{n}$ is not empty.",
+  "ref": "theorem Rudin_exercise_3_22 (X : Type*) [MetricSpace X] [CompleteSpace X] [Nonempty X]\n  (G : ℕ → Set X) (hG : ∀ n, IsOpen (G n) ∧ Dense (G n)) :\n  ∃ x, ∀ n, x ∈ G n := sorry",
+  "cand": "theorem Rudin_exercise_3_22 (X : Type*) [MetricSpace X] [CompleteSpace X] [Nonempty X]\n    (G : ℕ → Set X) (hG : ∀ n : ℕ, IsOpen (G (n + 1)) ∧ Dense (G (n + 1))) :\n    (⋂ n : ℕ, G (n + 1)).Nonempty := by\n  sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 75,
+  "sheet_item": 71
+ },
+ {
+  "key": "pnv-test-239",
+  "part": "G",
+  "set": "C",
+  "nl": "Prove that every nonzero ideal in the ring of Gauss integers contains a nonzero integer.",
+  "ref": "theorem exercise_10_6_7 {I : Ideal GaussianInt}\n  (hI : I ≠ ⊥) : ∃ (z : I), z ≠ 0 ∧ (z : GaussianInt).im = 0 := sorry",
+  "cand": "theorem dummy {R : Type*} [CommRing R] (I : Ideal R) (hI : I ≠ ⊥) : ∃ (x : R), x ≠ 0 ∧ x ∉ I := sorry",
+  "item": 76,
+  "sheet_item": 72
+ },
+ {
+  "key": "pnv-test-717",
+  "part": "G",
+  "set": "C",
+  "nl": "Show that the collection $\\{(a,b) \\mid a < b, a \\text{ and } b \\text{ rational}\\}$ is a basis that generates the standard topology on $\\mathbb{R}$.",
+  "ref": "theorem exercise_13_8a :\n  IsTopologicalBasis {S : Set ℝ | ∃ a b : ℚ, a < b ∧ S = Ioo ↑a ↑b} := sorry",
+  "cand": "theorem dummy (x : ℝ) : ∃ (a b : ℕ), b > a ∧ ∀ (A : Set ℝ), IsOpen A ∧ x ∈ A ↔ (∃ (n : ℕ), (a : ℝ) ≤ n ∧ n < b ∧ (n : ℝ) ∈ A) := sorry",
+  "item": 77,
+  "sheet_item": 73
+ },
+ {
+  "key": "d1-143-1851",
+  "part": "S",
+  "nl": "Prove that there exist infinitely many integers $n$ such that $n, n+1, n+2$ are each the sum of the squares of two integers.",
+  "ref": "theorem Putnam_exercise_2000_a2 :\n  ∀ N : ℕ, ∃ n : ℕ, n > N ∧ ∃ i : Fin 6 → ℕ, n = (i 0)^2 + (i 1)^2 ∧\n  n + 1 = (i 2)^2 + (i 3)^2 ∧ n + 2 = (i 4)^2 + (i 5)^2 := sorry",
+  "cand": "theorem Putnam_exercise_2000_a2 :\n    Set.Infinite {n : ℤ | ∃ a b c d e f : ℤ,\n      n = a ^ 2 + b ^ 2 ∧ n + 1 = c ^ 2 + d ^ 2 ∧ n + 2 = e ^ 2 + f ^ 2} := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 78,
+  "sheet_item": 74
+ },
+ {
+  "key": "d1-171-2102",
+  "part": "J",
+  "nl": "Assume that $f$ is a continuous real function defined in $(a, b)$ such that $f\\left(\\frac{x+y}{2}\\right) \\leq \\frac{f(x)+f(y)}{2}$ for all $x, y \\in(a, b)$. Prove that $f$ is convex.",
+  "ref": "theorem Rudin_exercise_4_24 {f : ℝ → ℝ} {a b : ℝ}\n  (hf : ContinuousOn f (Set.Ioo a b)) (hab : a < b)\n  (h : ∀ x y : ℝ, a < x → x < b → a < y → y < b → f ((x + y) / 2) ≤ (f x + f y) / 2) :\n  ConvexOn ℝ (Set.Ioo a b) f := sorry",
+  "cand": "theorem Rudin_exercise_4_24 {a b : ℝ} (f : ℝ → ℝ)\n    (hf : ContinuousOn f (Set.Ioo a b))\n    (hmid : ∀ x ∈ Set.Ioo a b, ∀ y ∈ Set.Ioo a b,\n      f ((x + y) / 2) ≤ (f x + f y) / 2) :\n    ConvexOn ℝ (Set.Ioo a b) f := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 79,
+  "sheet_item": 75
+ },
+ {
+  "key": "d1-72-994",
+  "part": "S",
+  "nl": "If $G$ is a finite group, prove that there is an integer $m > 0$ such that $a^m = e$ for all $a \\in G$.",
+  "ref": "theorem Herstein_exercise_2_1_27 {G : Type*} [Group G]\n  [Fintype G] : ∃ (m : ℕ), m > 0 ∧ ∀ (a : G), a ^ m = 1 := sorry",
+  "cand": "theorem Herstein_exercise_2_1_27 {G : Type _} [Group G] [Fintype G] :\n  ∃ m : ℕ, 0 < m ∧ ∀ a : G, a ^ m = 1 := by sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 80,
+  "sheet_item": 76
+ },
+ {
+  "key": "d1-276-3506",
+  "part": "S",
+  "nl": "If $a \\in K$ is such that $a^2$ is algebraic over the subfield $F$ of $K$, show that a is algebraic over $F$.",
+  "ref": "theorem Herstein_exercise_5_3_7 {K : Type*} [Field K] {F : Subfield K}\n  {a : K} (ha : IsAlgebraic F (a ^ 2)) : IsAlgebraic F a := sorry",
+  "cand": "theorem Herstein_exercise_5_3_7 {F K : Type*} [Field F] [Field K] [Algebra F K] {a : K}\n  (h : IsAlgebraic F (a ^ 2)) : IsAlgebraic F a := by sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 81,
+  "sheet_item": 67
+ },
+ {
+  "key": "d1-293-3693",
+  "part": "S",
+  "nl": "Show that the collection $\\{(a,b) \\mid a < b, a \\text{ and } b \\text{ rational}\\}$ is a basis that generates the standard topology on $\\mathbb{R}$.",
+  "ref": "theorem Munkres_exercise_13_8a :\n  IsTopologicalBasis {S : Set ℝ | ∃ a b : ℚ, a < b ∧ S = Ioo ↑a ↑b} := sorry",
+  "cand": "theorem Munkres_exercise_13_8a :\n    TopologicalSpace.IsTopologicalBasis\n      ({I : Set ℝ | ∃ a b : ℚ, a < b ∧ I = Set.Ioo (a : ℝ) (b : ℝ)} : Set (Set ℝ)) := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 82,
+  "sheet_item": 77
+ },
+ {
+  "key": "pnv-test-754",
+  "part": "G",
+  "set": "B",
+  "nl": "Let $f$ be a continuous real function on a metric space $X$. Let $Z(f)$ (the zero set of $f$ ) be the set of all $p \\in X$ at which $f(p)=0$. Prove that $Z(f)$ is closed.",
+  "ref": "theorem exercise_4_3\n  {α : Type} [MetricSpace α]\n  (f : α → ℝ) (h : Continuous f) (z : Set α) (g : z = f⁻¹' {0})\n  : IsClosed z := sorry",
+  "cand": "theorem dummy {X : Type*} [TopologicalSpace X] [T2Space X] {f : X → ℝ} (hf : Continuous f) : IsClosed {p : X | f p = 0} := sorry",
+  "item": 83,
+  "sheet_item": 78
+ },
+ {
+  "key": "d1-35-479",
+  "part": "S",
+  "nl": "Prove that the multiplicative groups $\\mathbb{R}-\\{0\\}$ and $\\mathbb{C}-\\{0\\}$ are not isomorphic.",
+  "ref": "theorem Dummit_Foote_exercise_1_6_4 :\n    IsEmpty (ℝˣ ≃* ℂˣ) := sorry",
+  "cand": "theorem Dummit_Foote_exercise_1_6_4 : ¬ Nonempty (ℝˣ ≃* ℂˣ) := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 84,
+  "sheet_item": 79
+ },
+ {
+  "key": "pnv-test-672",
+  "part": "F",
+  "nl": "Let $H$ be a subgroup of the additive group of rational numbers with the property that $1 / x \\in H$ for every nonzero element $x$ of $H$. Prove that $H=0$ or $\\mathbb{Q}$.",
+  "ref": "theorem exercise_2_1_13 (H : AddSubgroup ℚ) {x : ℚ}\n  (hH : (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H):\n  H = ⊥ ∨ H = ⊤ := sorry",
+  "cand": "theorem dummy {H : AddSubgroup ℚ} (hx : ∀ x ∈ H, ∀ x0 : x ≠ 0, 1 / x ∈ H) : H = ⊥ ∨ H = ⊤ := sorry",
+  "cell": "faithful_reject",
+  "item": 85,
+  "sheet_item": 8
+ },
+ {
+  "key": "d1-146-1894",
+  "part": "S",
+  "nl": "Let $n$ be a positive integer, and let $f_{n}(z)=n+(n-1) z+$ $(n-2) z^{2}+\\cdots+z^{n-1}$. Prove that $f_{n}$ has no roots in the closed unit disk $\\{z \\in \\mathbb{C}:|z| \\leq 1\\}$.",
+  "ref": "theorem Putnam_exercise_2018_b2 (n : ℕ) (hn : n > 0) (f : ℕ → ℂ → ℂ)\n  (hf : ∀ n : ℕ, f n = λ (z : ℂ) => (∑ i : Fin n, (n-i)* z^(i : ℕ))) :\n  ¬ (∃ z : ℂ, ‖z‖ ≤ 1 ∧ f n z = 0) := sorry",
+  "cand": "theorem Putnam_exercise_2018_b2 (n : ℕ) (hn : 0 < n) :\n    ∀ z : ℂ, ‖z‖ ≤ 1 → ∑ i ∈ Finset.range n, ((n : ℂ) - i) * z ^ i ≠ 0 := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 86,
+  "sheet_item": 80
+ },
+ {
+  "key": "d1-332-4240",
+  "part": "S",
+  "nl": "If $r$ is rational $(r \\neq 0)$ and $x$ is irrational, prove that $rx$ is irrational.",
+  "ref": "theorem Rudin_exercise_1_1b\n(x : ℝ)\n(y : ℚ)\n(h : y ≠ 0)\n: ( Irrational x ) -> Irrational ( x * y ) := sorry",
+  "cand": "theorem Rudin_exercise_1_1b (r : ℚ) (x : ℝ) (hr : r ≠ 0) (hx : ¬ ∃ q : ℚ, x = q) : ¬ ∃ q : ℚ, r • x = q :=\nby sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 87,
+  "sheet_item": 81
+ },
+ {
+  "key": "pnv-test-576",
+  "part": "G",
+  "set": "A",
+  "nl": "Suppose $g$ is a real function on $R^{1}$, with bounded derivative (say $\\left|g^{\\prime}\\right| \\leq M$ ). Fix $\\varepsilon>0$, and define $f(x)=x+\\varepsilon g(x)$. Prove that $f$ is one-to-one if $\\varepsilon$ is small enough.",
+  "ref": "theorem exercise_5_3 {g : ℝ → ℝ} (hg : Continuous g)\n  (hg' : ∃ M : ℝ, ∀ x : ℝ, |deriv g x| ≤ M) :\n  ∃ N, ∀ ε > 0, ε < N → Function.Injective (λ x : ℝ => x + ε * g x) := sorry",
+  "cand": "theorem dummy {g : ℝ → ℝ} (M : ℝ) (hM : ∀ x, |deriv g x| ≤ M) (ε : ℝ) (hε : ε > 0) (f : ℝ → ℝ) (hf : ∀ x, f x = x + ε * g x) : ∃ δ > 0, (ε < δ) → Function.Injective f := sorry",
+  "f_cell": "faithful_reject",
+  "item": 88,
+  "sheet_item": 82
+ },
+ {
+  "key": "pnv-test-281",
+  "part": "F",
+  "nl": "Let $f: \\mathbb{R} \\rightarrow \\mathbb{R}$ be an infinitely differentiable function satisfying $f(0)=0, f(1)=1$, and $f(x) \\geq 0$ for all $x \\in$ $\\mathbb{R}$. Show that there exist a positive integer $n$ and a real number $x$ such that $f^{(n)}(x)<0$.",
+  "ref": "theorem exercise_2018_a5 (f : ℝ → ℝ) (hf : ContDiff ℝ ⊤ f)\n  (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf2 : ∀ x, f x ≥ 0) :\n  ∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0 := sorry",
+  "cand": "theorem dummy {f : ℝ → ℝ} (hf : ContDiff ℝ ⊤ f) (h₀ : f 0 = 0) (h₁ : f 1 = 1) (h₂ : ∀ x, 0 ≤ f x) : ∃ (n : ℕ) (x : ℝ), 0 < n ∧ deriv^[n] f x < 0 := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 89,
+  "sheet_item": 83
+ },
+ {
+  "key": "pnv-test-375",
+  "part": "G",
+  "set": "C",
+  "nl": "If $\\sigma, \\tau$ are two permutations that disturb no common element and $\\sigma \\tau = e$, prove that $\\sigma = \\tau = e$.",
+  "ref": "theorem exercise_3_2_21 {α : Type*} [Fintype α] {σ τ: Equiv.Perm α}\n  (h1 : ∀ a : α, σ a = a ↔ τ a ≠ a) (h2 : τ ∘ σ = id) :\n  σ = 1 ∧ τ = 1 := sorry",
+  "cand": "theorem dummy {α : Type*} {σ τ : Equiv.Perm α} (h : ∀ x : α, σ x = τ x) (hστ : σ * τ = 1) : σ = τ := sorry",
+  "item": 90,
+  "sheet_item": 84
+ },
+ {
+  "key": "pnv-test-805",
+  "part": "F",
+  "nl": "Let $p \\colon X \\rightarrow Y$ be an open map. Show that if $A$ is open in $X$, then the map $q \\colon A \\rightarrow p(A)$ obtained by restricting $p$ is an open map.",
+  "ref": "theorem exercise_22_5 {X Y : Type*} [TopologicalSpace X]\n  [TopologicalSpace Y] (p : X → Y) (hp : IsOpenMap p)\n  (A : Set X) (hA : IsOpen A) : IsOpenMap (p ∘ Subtype.val : A → Y) := sorry",
+  "cand": "theorem dummy {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] {f : X → Y} (hf : IsOpenMap f) (A : Set X) : IsOpenMap (Set.restrict A f) := sorry",
+  "cell": "faithful_reject",
+  "item": 91,
+  "sheet_item": 85
+ },
+ {
+  "key": "d1-72-995",
+  "part": "S",
+  "nl": "If $G$ is a finite group, prove that there is an integer $m > 0$ such that $a^m = e$ for all $a \\in G$.",
+  "ref": "theorem Herstein_exercise_2_1_27 {G : Type*} [Group G]\n  [Fintype G] : ∃ (m : ℕ), m > 0 ∧ ∀ (a : G), a ^ m = 1 := sorry",
+  "cand": "theorem Herstein_exercise_2_1_27 {G : Type} [Group G] [Fintype G] :\n  ∃ m : ℕ, 0 < m ∧ ∀ a : G, a ^ m = 1 := by sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 92,
+  "sheet_item": 86
+ },
+ {
+  "key": "d1-135-1745",
+  "part": "S",
+  "nl": "Let $(p_n)$ be a sequence and $f:\\mathbb{N}\\to\\mathbb{N}$. The sequence $(q_k)_{k\\in\\mathbb{N}}$ with $q_k=p_{f(k)}$ is called a rearrangement of $(p_n)$. Show that if $f$ is an injection, the limit of a sequence is unaffected by rearrangement.",
+  "ref": "theorem Pugh_exercise_2_12a {α : Type*} [TopologicalSpace α]\n  (f : ℕ → ℕ) (p : ℕ → α) (a : α)\n  (hf : Injective f) (hp : Tendsto p atTop (𝓝 a)) :\n  Tendsto (λ n => p (f n)) atTop (𝓝 a) := sorry",
+  "cand": "theorem Pugh_exercise_2_12a {M : Type*} [MetricSpace M] (p : ℕ → M) (a : M)\n    (f : ℕ → ℕ) (hf : Injective f) (hp : Tendsto p atTop (𝓝 a)) :\n    Tendsto (fun k => p (f k)) atTop (𝓝 a) := by sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 93,
+  "sheet_item": 87
+ },
+ {
+  "key": "d1-19-286",
+  "part": "J",
+  "nl": "Suppose that $S, T \\in \\mathcal{L}(V)$ are such that $S T=T S$. Prove that $\\operatorname{null} (T-\\lambda I)$ is invariant under $S$ for every $\\lambda \\in \\mathbf{F}$.",
+  "ref": "theorem Axler_exercise_5_4 {F V : Type*} [AddCommGroup V] [Field F]\n    [Module F V] (S T : V →ₗ[F] V) (hST : S ∘ T = T ∘ S) (c : F) :\n    Submodule.map S (ker (T - c • LinearMap.id)) ≤ ker (T - c • LinearMap.id) := sorry",
+  "cand": "theorem Axler_exercise_5_4\n    {F V : Type*} [Field F] [AddCommGroup V] [Module F V] [FiniteDimensional F V]\n    (S T : V →ₗ[F] V) (hST : S * T = T * S) (mu : F) :\n    (LinearMap.ker (T - mu • LinearMap.id)).map S ≤\n      LinearMap.ker (T - mu • LinearMap.id) := by\n  sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 94,
+  "sheet_item": 88
+ },
+ {
+  "key": "d1-68-956",
+  "part": "S",
+  "nl": "Prove that $x^6+30x^5-15x^3 + 6x-120$ is irreducible in $\\mathbb{Z}[x]$.",
+  "ref": "theorem Dummit_Foote_exercise_9_4_2b : Irreducible\n  (X^6 + 30*X^5 - 15*X^3 + 6*X - 120 : Polynomial ℤ) := sorry",
+  "cand": "theorem Dummit_Foote_exercise_9_4_2b :\n    Irreducible (X ^ 6 + 30 * X ^ 5 - 15 * X ^ 3 + 6 * X - 120 : Polynomial ℤ) := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 95,
+  "sheet_item": 89
+ },
+ {
+  "key": "d1-267-3373",
+  "part": "S",
+  "nl": "If $P \\triangleleft G$, $P$ a $p$-Sylow subgroup of $G$, prove that $\\varphi(P) = P$ for every automorphism $\\varphi$ of $G$.",
+  "ref": "theorem Herstein_exercise_2_11_7 {G : Type*} [Group G] {p : ℕ} (hp : Nat.Prime p)\n  {P : Sylow p G} (hP : P.Normal) :\n  Subgroup.Characteristic (P : Subgroup G) := sorry",
+  "cand": "theorem Herstein_exercise_2_11_7 {G : Type*} [Group G] {p : ℕ} [Fact p.Prime]\n    (P : Sylow p G) (hP : (P : Subgroup G).Normal) (φ : G ≃* G) :\n    Subgroup.map φ.toMonoidHom (P : Subgroup G) = (P : Subgroup G) := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 96,
+  "sheet_item": 90
+ },
+ {
+  "key": "d1-4-55",
+  "part": "J",
+  "nl": "Let $V$ be a vector space which is spanned by a countably infinite set. Prove that every linearly independent subset of $V$ is finite or countably infinite.",
+  "ref": "theorem Artin_exercise_3_5_6 {K V : Type*} [Field K] [AddCommGroup V]\n  [Module K V] {S : Set V} (hS : Set.Countable S) (hSinf : S.Infinite)\n  (hS1 : span K S = ⊤) {ι : Type*} (R : ι → V)\n  (hR : LinearIndependent K R) : Countable ι := sorry",
+  "cand": "theorem Artin_exercise_3_5_6 {K V : Type*} [Field K] [AddCommGroup V]\n    [Module K V] {S : Set V} (hS : Set.Countable S)\n    (hS1 : Submodule.span K S = ⊤) {ι : Type*} (R : ι → V)\n    (hR : LinearIndependent K R) : Countable ι := by sorry",
+  "rewarded_by": [
+   "judge_opus_ref"
+  ],
+  "item": 97,
+  "sheet_item": 91
+ },
+ {
+  "key": "d1-182-2252",
+  "part": "S",
+  "nl": "Show that $\\int_0^1 \\log(\\sin \\pi x) dx = - \\log 2$.",
+  "ref": "theorem Shakarchi_exercise_3_9 : ∫ x in (0 : ℝ)..(1 : ℝ), Real.log (Real.sin (Real.pi * x)) = - Real.log 2 := sorry",
+  "cand": "theorem Shakarchi_exercise_3_9 : ∫ x in (0:ℝ)..1, Real.log (Real.sin (Real.pi * x)) = - Real.log 2 := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 98,
+  "sheet_item": 92
+ },
+ {
+  "key": "d1-153-1951",
+  "part": "S",
+  "nl": "Suppose $k \\geq 3, x, y \\in \\mathbb{R}^k, |x - y| = d > 0$, and $r > 0$. Prove that if $2r > d$, there are infinitely many $z \\in \\mathbb{R}^k$ such that $|z-x|=|z-y|=r$.",
+  "ref": "theorem Rudin_exercise_1_16a\n  (n : ℕ)\n  (d r : ℝ)\n  (x y z : EuclideanSpace ℝ (Fin n)) -- R^n\n  (h₁ : n ≥ 3)\n  (h₂ : ‖x - y‖ = d)\n  (h₃ : d > 0)\n  (h₄ : r > 0)\n  (h₅ : 2 * r > d)\n  : Set.Infinite {z : EuclideanSpace ℝ (Fin n) | ‖z - x‖ = r ∧ ‖z - y‖ = r} := sorry",
+  "cand": "theorem Rudin_exercise_1_16a\n    (k : ℕ) (hk : 3 ≤ k)\n    (x y : EuclideanSpace ℝ (Fin k))\n    (d r : ℝ)\n    (hd : ‖x - y‖ = d) (hdpos : 0 < d) (hrpos : 0 < r)\n    (h2 : d < 2 * r) :\n    Set.Infinite {z : EuclideanSpace ℝ (Fin k) | ‖z - x‖ = r ∧ ‖z - y‖ = r} := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 99,
+  "sheet_item": 93
+ },
+ {
+  "key": "pnv-test-297",
+  "part": "G",
+  "set": "C",
+  "nl": "If $P \\triangleleft G$, $P$ a $p$-Sylow subgroup of $G$, prove that $\\varphi(P) = P$ for every automorphism $\\varphi$ of $G$.",
+  "ref": "theorem exercise_2_11_7 {G : Type*} [Group G] {p : ℕ} (hp : Nat.Prime p)\n  {P : Sylow p G} (hP : P.Normal) :\n  Subgroup.Characteristic (P : Subgroup G) := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] [Fintype G] {p : ℕ} [hp : Fact p.Prime] {P : Sylow p G} (f : G ≃* G) : ↑f '' P = P := sorry",
+  "item": 100,
+  "sheet_item": 94
+ },
+ {
+  "key": "pnv-test-911",
+  "part": "G",
+  "set": "C",
+  "nl": "Suppose $T \\in \\mathcal{L}(V)$ is such that every subspace of $V$ with dimension $\\operatorname{dim} V-1$ is invariant under $T$. Prove that $T$ is a scalar multiple of the identity operator.",
+  "ref": "theorem exercise_5_13 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] [FiniteDimensional F V] {T : End F V}\n  (hS : ∀ U : Submodule F V, finrank F U = finrank F V - 1 →\n  Submodule.map T U = U) : ∃ c : F, T = c • LinearMap.id := sorry",
+  "cand": "theorem dummy {V : Type*} [NormedAddCommGroup V] [NormedSpace ℝ V] {T : V →ₗ[ℝ] V} (h : ∀ (W : Submodule ℝ V), W < (⊤ : Submodule ℝ V) → LinearMap.range T ≤ W → LinearMap.range T ≤ W.map T) : ∃ a : ℝ, T = a • LinearMap.id := sorry",
+  "item": 101,
+  "sheet_item": 95
+ },
+ {
+  "key": "d1-288-3686",
+  "part": "S",
+  "nl": "Show that $\\sin (\\pi / 12)$ is an algebraic number.",
+  "ref": "theorem Ireland_Rosen_exercise_12_12 : IsAlgebraic ℚ (sin (Real.pi/12)) := sorry",
+  "cand": "theorem Ireland_Rosen_exercise_12_12 : IsAlgebraic ℚ (Real.sin (Real.pi / 12)) := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 102,
+  "sheet_item": 96
+ },
+ {
+  "key": "d1-293-3707",
+  "part": "S",
+  "nl": "Show that the collection $\\{(a,b) \\mid a < b, a \\text{ and } b \\text{ rational}\\}$ is a basis that generates the standard topology on $\\mathbb{R}$.",
+  "ref": "theorem Munkres_exercise_13_8a :\n  IsTopologicalBasis {S : Set ℝ | ∃ a b : ℚ, a < b ∧ S = Ioo ↑a ↑b} := sorry",
+  "cand": "theorem Munkres_exercise_13_8a :\n    IsTopologicalBasis {S : Set ℝ | ∃ a b : ℚ, a < b ∧ S = Ioo (a : ℝ) (b : ℝ)} := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 103,
+  "sheet_item": 97
+ },
+ {
+  "key": "pnv-test-1114",
+  "part": "G",
+  "set": "A",
+  "nl": "Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.",
+  "ref": "theorem exercise_2_92 {α : Type*} [TopologicalSpace α]\n  {s : ℕ → Set α}\n  (hs : ∀ i, IsCompact (s i))\n  (hne : ∀ i, (s i).Nonempty)\n  (hs : ∀ i, (s i) ⊇ (s (i + 1))) :\n  (⋂ i, s i).Nonempty := sorry",
+  "cand": "theorem dummy {α : Type*} [TopologicalSpace α] [CompactSpace α] {K : ℕ → Set α} (hK : ∀ n, IsCompact (K n)) (hK_nonempty : ∀ n, (K n).Nonempty) (hK_decreasing : ∀ n, K (n + 1) ⊆ K n) : (⋂ n, K n).Nonempty := sorry",
+  "f_cell": "faithful_reject",
+  "item": 104,
+  "sheet_item": 68
+ },
+ {
+  "key": "pnv-test-310",
+  "part": "F",
+  "nl": "Given a real number $a$, we define a sequence by $x_{0}=1$, $x_{1}=x_{2}=a$, and $x_{n+1}=2 x_{n} x_{n-1}-x_{n-2}$ for $n \\geq 2$. Prove that if $x_{n}=0$ for some $n$, then the sequence is periodic.",
+  "ref": "theorem exercise_2018_b4 (a : ℝ) (x : ℕ → ℝ) (hx0 : x 0 = 1)\n  (hx1 : x 1 = a) (hx2 : x 2 = a)\n  (hxn : ∀ n : ℕ, n ≥ 2 → x (n+1) = 2*(x n)*(x (n-1)) - x (n-2))\n  (h : ∃ n, x n = 0) :\n  ∃ c ≠ 0, Function.Periodic x c := sorry",
+  "cand": "theorem dummy {a : ℝ} (x : ℕ → ℝ) (h0 : x 0 = 1) (h1 : x 1 = a) (h2 : x 2 = a) (h_rec : ∀ n ≥ 2, x (n + 1) = 2 * x n * x (n - 1) - x (n - 2)) (n : ℕ) (hn : x n = 0) : ∃ p > 0, ∀ m, x (m + p) = x m := sorry",
+  "cell": "faithful_reject",
+  "item": 105,
+  "sheet_item": 98
+ },
+ {
+  "key": "d1-67-945",
+  "part": "K",
+  "nl": "Prove that if $f(x)$ and $g(x)$ are polynomials with rational coefficients whose product $f(x) g(x)$ has integer coefficients, then the product of any coefficient of $g(x)$ with any coefficient of $f(x)$ is an integer.",
+  "ref": "theorem Dummit_Foote_exercise_9_3_2 {f g : Polynomial ℚ} (i j : ℕ)\n    (hfg : ∀ n : ℕ, ∃ a : ℤ, (f * g).coeff n = a) :\n    ∃ a : ℤ, f.coeff i * g.coeff j = a := sorry",
+  "cand": "theorem Dummit_Foote_exercise_9_3_2\n    (f g : Polynomial ℚ)\n    (h : ∀ n : ℕ, ∃ z : ℤ, (z : ℚ) = (f * g).coeff n) :\n    ∀ i j : ℕ, ∃ z : ℤ, (z : ℚ) = f.coeff i * g.coeff j := by\n  sorry",
+  "control": "equivalent",
+  "item": 106,
+  "sheet_item": 99
+ },
+ {
+  "key": "d1-45-615",
+  "part": "J",
+  "nl": "Prove that subgroups of a solvable group are solvable.",
+  "ref": "theorem Dummit_Foote_exercise_3_4_5a {G : Type*} [Group G]\n  (H : Subgroup G) [IsSolvable G] : IsSolvable H := sorry",
+  "cand": "theorem Dummit_Foote_exercise_3_4_5a {G : Type*} [Group G] [Finite G] (H : Subgroup G) \n  (hG : IsSolvable G) : IsSolvable H :=\nby sorry",
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 107,
+  "sheet_item": 100
+ },
+ {
+  "key": "d1-45-612",
+  "part": "S",
+  "nl": "Prove that subgroups of a solvable group are solvable.",
+  "ref": "theorem Dummit_Foote_exercise_3_4_5a {G : Type*} [Group G]\n  (H : Subgroup G) [IsSolvable G] : IsSolvable H := sorry",
+  "cand": "theorem Dummit_Foote_exercise_3_4_5a {G : Type*} [Group G] [Fintype G] (H : Subgroup G)\n  (h_solvable : IsSolvable G) : IsSolvable (H : Type*) := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 108,
+  "sheet_item": 101
+ },
+ {
+  "key": "d1-13-177",
+  "part": "S",
+  "nl": "Let $p$ be a prime integer. Prove that the polynomial $x^n-p$ is irreducible in $\\mathbb{Q}[x]$.",
+  "ref": "theorem Artin_exercise_11_4_8 (p : ℕ) (hp : Prime p) (n : ℕ) (hn : n > 0) :\n  Irreducible (X ^ n - (p : Polynomial ℚ) : Polynomial ℚ) := sorry",
+  "cand": "theorem Artin_exercise_11_4_8 (p : ℤ) (hp : Prime p) (n : ℕ) (hn : 0 < n) :\n    Irreducible ((Polynomial.X ^ n - Polynomial.C (p : ℚ)) : Polynomial ℚ) := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 109,
+  "sheet_item": 102
+ },
+ {
+  "key": "pnv-test-1171",
+  "part": "G",
+  "set": "C",
+  "nl": "Prove that there are unique positive integers $a, n$ such that $a^{n+1}-(a+1)^n=2001$.",
+  "ref": "theorem exercise_2001_a5 :\n  ∃! p : ℕ × ℕ, p.1 > 0 ∧ p.2 > 0 ∧ p.1^(p.2 + 1) - (p.1 + 1)^(p.2) = 2001 := sorry",
+  "cand": "theorem dummy {a : ℕ} (ha : 0 < a) : ∃! (n : ℕ), a ^ (n + 1) - (a + 1) ^ n = 2001 := sorry",
+  "item": 110,
+  "sheet_item": 103
+ },
+ {
+  "key": "d1-297-3738",
+  "part": "S",
+  "nl": "Let $A \\subset X$; let $f: A \\rightarrow Y$ be continuous; let $Y$ be Hausdorff. Show that if $f$ may be extended to a continuous function $g: \\bar{A} \\rightarrow Y$, then $g$ is uniquely determined by $f$.",
+  "ref": "theorem Munkres_exercise_18_13\n  {X : Type*} [TopologicalSpace X] {Y : Type*} [TopologicalSpace Y] [T2Space Y]\n  {A : Set X} {f : X → Y} (hf : ContinuousOn f A)\n  (g : X → Y) (g_con : ContinuousOn g (closure A))\n  (gExt : ∀ x : A, g x = f x) :\n  ∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ (∀ x : A, g' x = f x)) → (∀ x : closure A, g x = g' x) := sorry",
+  "cand": "theorem Munkres_exercise_18_13 {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y]\n    [T2Space Y] (A : Set X) (f : A → Y) (hf : Continuous f)\n    (g : closure A → Y) (hg : Continuous g)\n    (hgf : ∀ x : A, g (Set.inclusion (subset_closure : A ⊆ closure A) x) = f x) :\n    ∀ g' : closure A → Y, Continuous g' →\n      (∀ x : A, g' (Set.inclusion (subset_closure : A ⊆ closure A) x) = f x) →\n      g' = g := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 111,
+  "sheet_item": 104
+ },
+ {
+  "key": "d1-330-4217",
+  "part": "J",
+  "nl": "Let $f: \\mathbb{R} \\rightarrow \\mathbb{R}$ be an infinitely differentiable function satisfying $f(0)=0, f(1)=1$, and $f(x) \\geq 0$ for all $x \\in$ $\\mathbb{R}$. Show that there exist a positive integer $n$ and a real number $x$ such that $f^{(n)}(x)<0$.",
+  "ref": "theorem Putnam_exercise_2018_a5 (f : ℝ → ℝ) (hf : ContDiff ℝ ((⊤ : ℕ∞) : WithTop ℕ∞) f)\n  (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf2 : ∀ x, f x ≥ 0) :\n  ∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0 := sorry",
+  "cand": "theorem Putnam_exercise_2018_a5 (f : ℝ → ℝ) (hf : ContDiff ℝ ⊤ f)\n    (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hpos : ∀ x : ℝ, f x ≥ 0) :\n    ∃ n : ℕ, n > 0 ∧ ∃ x : ℝ, iteratedDeriv n f x < 0 := by sorry",
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 112,
+  "sheet_item": 12
+ },
+ {
+  "key": "d1-321-4065",
+  "part": "S",
+  "nl": "Assume that $A, B$ are compact, disjoint, nonempty subsets of $M$. Prove that there are $a_0 \\in A$ and $b_0 \\in B$ such that for all $a \\in A$ and $b \\in B$ we have $d(a_0, b_0) \\leq d(a, b)$.",
+  "ref": "theorem Pugh_exercise_2_46 {M : Type*} [MetricSpace M]\n  {A B : Set M} (hA : IsCompact A) (hB : IsCompact B)\n  (hAB : Disjoint A B) (hA₀ : A ≠ ∅) (hB₀ : B ≠ ∅) :\n  ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a : M) (b : M),\n  a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b := sorry",
+  "cand": "theorem Pugh_exercise_2_46 {M : Type*} [MetricSpace M] {A B : Set M}\n    (hAcomp : IsCompact A) (hBcomp : IsCompact B)\n    (hAdisj : Disjoint A B) (hAne : A.Nonempty) (hBne : B.Nonempty) :\n    ∃ a0 ∈ A, ∃ b0 ∈ B, ∀ a ∈ A, ∀ b ∈ B, dist a0 b0 ≤ dist a b := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 113,
+  "sheet_item": 105
+ },
+ {
+  "key": "d1-301-3794",
+  "part": "K",
+  "nl": "Let $p \\colon X \\rightarrow Y$ be an open map. Show that if $A$ is open in $X$, then the map $q \\colon A \\rightarrow p(A)$ obtained by restricting $p$ is an open map.",
+  "ref": "theorem Munkres_exercise_22_5 {X Y : Type*} [TopologicalSpace X]\n  [TopologicalSpace Y] (p : X → Y) (hp : IsOpenMap p)\n  (A : Set X) (hA : IsOpen A) :\n  IsOpenMap (Set.MapsTo.restrict p A (p '' A) (Set.mapsTo_image p A)) := sorry",
+  "cand": "theorem Munkres_exercise_22_5 {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y]\n    (p : X → Y) (hp : IsOpenMap p) (A : Set X) (hA : IsOpen A) :\n    IsOpenMap (fun x : A => (⟨p x, ⟨x, x.property, rfl⟩⟩ : p '' A)) := by\n  sorry",
+  "control": "equivalent",
+  "item": 114,
+  "sheet_item": 106
+ },
+ {
+  "key": "d1-248-3096",
+  "part": "S",
+  "nl": "Let $R=\\mathbb{Z}[\\sqrt{-n}]$ where $n$ is a squarefree integer greater than 3. Prove that $2, \\sqrt{-n}$ and $1+\\sqrt{-n}$ are irreducibles in $R$.",
+  "ref": "theorem Dummit_Foote_exercise_8_3_5a {n : ℤ} (hn0 : n > 3) (hn1 : Squarefree n) :\n  Irreducible (2 : Zsqrtd $ -n) ∧\n  Irreducible (⟨0, 1⟩ : Zsqrtd $ -n) ∧\n  Irreducible (1 + ⟨0, 1⟩ : Zsqrtd $ -n) := sorry",
+  "cand": "theorem Dummit_Foote_exercise_8_3_5a (n : ℕ) (hn_sq : Squarefree n) (hn_gt : 3 < n) :\n    Irreducible (2 : Zsqrtd (-(n : ℤ))) ∧\n    Irreducible (⟨0, 1⟩ : Zsqrtd (-(n : ℤ))) ∧\n    Irreducible ((1 : Zsqrtd (-(n : ℤ))) + (⟨0, 1⟩ : Zsqrtd (-(n : ℤ)))) := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 115,
+  "sheet_item": 107
+ },
+ {
+  "key": "pnv-test-1414",
+  "part": "F",
+  "nl": "If $G$ is a finite group, prove that, given $a \\in G$, there is a positive integer $n$, depending on $a$, such that $a^n = e$.",
+  "ref": "theorem exercise_2_1_26 {G : Type*} [Group G]\n  [Fintype G] (a : G) : ∃ (n : ℕ), n > 0 ∧ a ^ n = 1 := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] [Fintype G] (a : G) : ∃ n : ℕ, a ^ n = 1 := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 116,
+  "sheet_item": 108
+ },
+ {
+  "key": "d1-317-4003",
+  "part": "K",
+  "nl": "Let $X$ be a compact Hausdorff space that is the union of the closed subspaces $X_1$ and $X_2$. If $X_1$ and $X_2$ are metrizable, show that $X$ is metrizable.",
+  "ref": "theorem Munkres_exercise_34_9\n  (X : Type*) [TopologicalSpace X] [CompactSpace X] [T2Space X]\n  (X1 X2 : Set X) (hX1 : IsClosed X1) (hX2 : IsClosed X2)\n  (hX : X1 ∪ X2 = univ) (hX1m : MetrizableSpace X1)\n  (hX2m : MetrizableSpace X2) : MetrizableSpace X := sorry",
+  "cand": "theorem Munkres_exercise_34_9\n    (X : Type*) [TopologicalSpace X] [CompactSpace X] [T2Space X]\n    (X1 X2 : Set X) (h1 : IsClosed X1) (h2 : IsClosed X2)\n    (hcover : X1 ∪ X2 = Set.univ)\n    [MetrizableSpace X1] [MetrizableSpace X2] :\n    MetrizableSpace X := by\n  sorry",
+  "control": "equivalent",
+  "item": 117,
+  "sheet_item": 109
+ },
+ {
+  "key": "d1-315-3991",
+  "part": "J",
+  "nl": "Show that if $\\prod X_\\alpha$ is normal, then so is $X_\\alpha$. Assume that each $X_\\alpha$ is nonempty.",
+  "ref": "theorem Munkres_exercise_32_2c\n  {ι : Type*} {X : ι → Type*} [∀ i, TopologicalSpace (X i)]\n  (h : ∀ i, Nonempty (X i)) (h2 : NormalSpace (Π i, X i)) :\n  ∀ i, NormalSpace (X i) := sorry",
+  "cand": "theorem Munkres_exercise_32_2c {ι : Type*} {X : ι → Type*}\n    [∀ i, TopologicalSpace (X i)] [∀ i, Nonempty (X i)]\n    (h : T4Space (∀ i, X i)) (i : ι) : T4Space (X i) := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 118,
+  "sheet_item": 110
+ },
+ {
+  "key": "pnv-test-1042",
+  "part": "G",
+  "set": "B",
+  "nl": "Let $\\varphi: R \\rightarrow S$ be a surjective homomorphism of rings. Prove that the image of the center of $R$ is contained in the center of $S$.",
+  "ref": "theorem exercise_7_3_16 {R S : Type*} [Ring R] [Ring S]\n  {φ : R →+* S} (hf : Function.Surjective φ) :\n  φ '' (center R) ⊆ center S := sorry",
+  "cand": "theorem dummy {R S : Type*} [CommRing R] [CommRing S] (φ : R →+* S) (hφ : Function.Surjective φ) : (φ '' (center R)) ⊆ center S := sorry",
+  "item": 119,
+  "sheet_item": 111
+ },
+ {
+  "key": "d1-133-1717",
+  "part": "J",
+  "nl": "Let $X$ be completely regular, let $A$ and $B$ be disjoint closed subsets of $X$. Show that if $A$ is compact, there is a continuous function $f \\colon X \\rightarrow [0, 1]$ such that $f(A) = \\{0\\}$ and $f(B) = \\{1\\}$.",
+  "ref": "theorem Munkres_exercise_33_8\n  (X : Type*) [TopologicalSpace X] [CompletelyRegularSpace X]\n  (A B : Set X) (hA : IsClosed A) (hB : IsClosed B)\n  (hAB : Disjoint A B) (hAc : IsCompact A)\n  (hAn : A.Nonempty) (hBn : B.Nonempty) :\n  ∃ (f : X → I), Continuous f ∧ f '' A = {0} ∧ f '' B = {1} := sorry",
+  "cand": "theorem Munkres_exercise_33_8\n    {X : Type*} [TopologicalSpace X] [CompletelyRegularSpace X]\n    (A B : Set X) (hA : IsClosed A) (hB : IsClosed B) (hAB : Disjoint A B)\n    (hA_compact : IsCompact A) :\n    ∃ f : X → Set.Icc (0 : ℝ) 1,\n      Continuous f ∧\n      (∀ x ∈ A, (f x : ℝ) = 0) ∧\n      (∀ x ∈ B, (f x : ℝ) = 1) := by\n  sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 120,
+  "sheet_item": 112
+ },
+ {
+  "key": "d1-14-204",
+  "part": "K",
+  "nl": "Prove that if a prime integer $p$ has the form $2^r+1$, then it actually has the form $2^{2^k}+1$.",
+  "ref": "theorem Artin_exercise_13_4_10\n    {p : ℕ} (hp : Nat.Prime p)\n    (h : ∃ r : ℕ, 1 ≤ r ∧ p = 2 ^ r + 1) :\n    ∃ k : ℕ, p = 2 ^ (2 ^ k) + 1 := sorry",
+  "cand": "theorem Artin_exercise_13_4_10 (p : ℕ) (hp_prime : Nat.Prime p) (h : ∃ r : ℕ, p = 2 ^ r + 1) :\n  ∃ k : ℕ, p = 2 ^ (2 ^ k) + 1 := by sorry",
+  "control": "different_closed",
+  "item": 121,
+  "sheet_item": 113
+ },
+ {
+  "key": "d1-201-2473",
+  "part": "J",
+  "nl": "Suppose that $V$ is finite dimensional and that $T \\in \\mathcal{L}(V, W)$. Prove that there exists a subspace $U$ of $V$ such that $U \\cap \\operatorname{null} T=\\{0\\}$ and range $T=\\{T u: u \\in U\\}$.",
+  "ref": "theorem Axler_exercise_3_8 {F V W : Type*} [AddCommGroup V]\n  [AddCommGroup W] [Field F] [Module F V] [FiniteDimensional F V] [Module F W]\n  (L : V →ₗ[F] W) :\n  ∃ U : Submodule F V, U ⊓ (ker L) = ⊥ ∧\n  (range L = range (domRestrict L U)):= sorry",
+  "cand": "theorem Axler_exercise_3_8 {F V W : Type*} [AddCommGroup V]\n    [AddCommGroup W] [Field F] [Module F V] [Module F W]\n    (L : V →ₗ[F] W) :\n    ∃ U : Submodule F V, U ⊓ (ker L) = ⊥ ∧\n      (range L = range (domRestrict L U)) := by sorry",
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 122,
+  "sheet_item": 114
+ },
+ {
+  "key": "pnv-test-836",
+  "part": "G",
+  "set": "B",
+  "nl": "Prove that the multiplication of residue class $\\mathbb{Z}/n\\mathbb{Z}$ is associative.",
+  "ref": "theorem exercise_1_1_4 (n : ℕ) (a b c : ZMod n) :\n  (a * b) * c = a * (b * c) := sorry",
+  "cand": "theorem dummy (n : ℕ) (a b c : ℕ) : (a * b) % n * (c % n) % n = a * b * c % n := sorry",
+  "item": 123,
+  "sheet_item": 115
+ },
+ {
+  "key": "pnv-test-816",
+  "part": "F",
+  "nl": "If $a^2 = 0$ in $R$, show that $ax + xa$ commutes with $a$.",
+  "ref": "theorem exercise_4_2_6 {R : Type*} [Ring R] (a x : R)\n  (h : a ^ 2 = 0) : a * (a * x + x * a) = (a * x + x * a) * a := sorry",
+  "cand": "theorem dummy (R : Type*) [Ring R] (a x : R) (h : a^2 = 0) : Commute (x * a + a * x) a := sorry",
+  "cell": "faithful_local_accept",
+  "control": true,
+  "item": 124,
+  "sheet_item": 116
+ },
+ {
+  "key": "d1-62-859",
+  "part": "J",
+  "nl": "An ideal $N$ is called nilpotent if $N^{n}$ is the zero ideal for some $n \\geq 1$. Prove that the ideal $p \\mathbb{Z} / p^{m} \\mathbb{Z}$ is a nilpotent ideal in the ring $\\mathbb{Z} / p^{m} \\mathbb{Z}$.",
+  "ref": "theorem Dummit_Foote_exercise_7_3_37 {p m : ℕ} (hp : p.Prime) :\n  IsNilpotent (span ({↑p} : Set $ ZMod $ p^m) : Ideal $ ZMod $ p^m) := sorry",
+  "cand": "theorem Dummit_Foote_exercise_7_3_37 (p m : ℕ) :\n    ∃ n : ℕ, 1 ≤ n ∧\n      (Ideal.span { (p : ZMod (p ^ m)) } : Ideal (ZMod (p ^ m))) ^ n = ⊥ := by\n  sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 125,
+  "sheet_item": 117
+ },
+ {
+  "key": "pnv-test-1382",
+  "part": "F",
+  "nl": "If $r$ is rational $(r \\neq 0)$ and $x$ is irrational, prove that $rx$ is irrational.",
+  "ref": "theorem exercise_1_1b\n(x : ℝ)\n(y : ℚ)\n(h : y ≠ 0)\n: ( Irrational x ) -> Irrational ( x * y ) := sorry",
+  "cand": "theorem dummy {r x : ℝ} (hr : r ≠ 0) (hx : Irrational x) : Irrational (r * x) := sorry",
+  "cell": "unfaithful_reject",
+  "control": true,
+  "item": 126,
+  "sheet_item": 118
+ },
+ {
+  "key": "d1-4-36",
+  "part": "K",
+  "nl": "Let $V$ be a vector space which is spanned by a countably infinite set. Prove that every linearly independent subset of $V$ is finite or countably infinite.",
+  "ref": "theorem Artin_exercise_3_5_6 {K V : Type*} [Field K] [AddCommGroup V]\n  [Module K V] {S : Set V} (hS : Set.Countable S) (hSinf : S.Infinite)\n  (hS1 : span K S = ⊤) {ι : Type*} (R : ι → V)\n  (hR : LinearIndependent K R) : Countable ι := sorry",
+  "cand": "import Mathlib\nopen Function Fintype Subgroup Ideal Polynomial Submodule Zsqrtd\nopen scoped BigOperators\n\ntheorem Artin_exercise_3_5_6\n    {K V : Type*} [Field K] [AddCommGroup V] [Module K V]\n    (hV : ∃ S : Set V, S.Countable ∧ S.Infinite ∧ Submodule.span K S = ⊤) :\n    ∀ T : Set V, LinearIndependent K (fun x : T => (x : V)) → T.Finite ∨ T.Countable := by\n  sorry",
+  "control": "reject_nonstrict",
+  "item": 127,
+  "sheet_item": 119
+ },
+ {
+  "key": "pnv-test-142",
+  "part": "F",
+  "nl": "If $a, b$ are integers and if $a$ divides $b$ in the ring of Gauss integers, then $a$ divides $b$ in $\\mathbb{Z}$.",
+  "ref": "theorem exercise_11_2_13 (a b : ℤ) :\n  (ofInt a : GaussianInt) ∣ ofInt b → a ∣ b := sorry",
+  "cand": "theorem dummy (a b : ℤ) (ha : a ∣ b) : a ∣ (b : ℤ) := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 128,
+  "sheet_item": 2
+ },
+ {
+  "key": "d1-13-187",
+  "part": "J",
+  "nl": "Let $p$ be a prime integer. Prove that the polynomial $x^n-p$ is irreducible in $\\mathbb{Q}[x]$.",
+  "ref": "theorem Artin_exercise_11_4_8 (p : ℕ) (hp : Prime p) (n : ℕ) (hn : n > 0) :\n  Irreducible (X ^ n - (p : Polynomial ℚ) : Polynomial ℚ) := sorry",
+  "cand": "theorem Artin_exercise_11_4_8 (p : ℕ) [hp : Fact p.Prime] (n : ℕ) (hn : 1 < n) :\n  Irreducible (Polynomial.X ^ n - Polynomial.C (p : ℚ)) := by sorry",
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 129,
+  "sheet_item": 120
+ },
+ {
+  "key": "d1-199-2437",
+  "part": "J",
+  "nl": "Prove that if $a \\in \\mathbf{F}$, $v \\in V$, and $av = 0$, then $a = 0$ or $v = 0$.",
+  "ref": "theorem Axler_exercise_1_4 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] (v : V) (a : F): a • v = 0 → a = 0 ∨ v = 0 := sorry",
+  "cand": "theorem Axler_exercise_1_4 {𝕜 : Type*} [Field 𝕜] {V : Type*} [AddCommGroup V] [Module 𝕜 V] [Nontrivial V]\n  (a : 𝕜) (v : V) (h : a • v = 0) : a = 0 ∨ v = 0 := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 130,
+  "sheet_item": 121
+ },
+ {
+  "key": "pnv-test-72",
+  "part": "G",
+  "set": "B",
+  "nl": "For any two real sequences $\\left\\{a_{n}\\right\\},\\left\\{b_{n}\\right\\}$, prove that $\\limsup _{n \\rightarrow \\infty}\\left(a_{n}+b_{n}\\right) \\leq \\limsup _{n \\rightarrow \\infty} a_{n}+\\limsup _{n \\rightarrow \\infty} b_{n},$ provided the sum on the right is not of the form $\\infty-\\infty$.",
+  "ref": "theorem exercise_3_5\n    (a b : ℕ → EReal)\n    (hareal : ∀ n, a n ≠ ⊤ ∧ a n ≠ ⊥)\n    (hbreal : ∀ n, b n ≠ ⊤ ∧ b n ≠ ⊥)\n    (ha : limsup a ≠ ⊤)\n    (hb : limsup b ≠ ⊥) :\n    limsup (λ n => a n + b n) ≤ limsup a + limsup b := sorry",
+  "cand": "theorem dummy (a b : ℕ → ℝ) : limsup (a + b) ≤ limsup a + limsup b := sorry",
+  "item": 131,
+  "sheet_item": 122
+ },
+ {
+  "key": "pnv-test-892",
+  "part": "G",
+  "set": "B",
+  "nl": "Prove that every compact metric space $K$ has a countable base.",
+  "ref": "theorem exercise_2_25 {K : Type*} [MetricSpace K] [CompactSpace K] :\n  ∃ (B : Set (Set K)), Set.Countable B ∧ IsTopologicalBasis B := sorry",
+  "cand": "theorem dummy {K : Type*} [TopologicalSpace K] [CompactSpace K] [MetrizableSpace K] : ∃ b : Set (Set K), (∀ s ∈ b, IsOpen s) ∧ (∀ t, IsOpen t → ∃ u ⊆ b, ⋃₀ u = t) ∧ Countable b := sorry",
+  "item": 132,
+  "sheet_item": 123
+ },
+ {
+  "key": "pnv-test-123",
+  "part": "G",
+  "set": "C",
+  "nl": "If $F$ is of characteristic $p \\neq 0$, show that all the roots of $x^m - x$, where $m = p^n$, are distinct.",
+  "ref": "theorem exercise_5_6_14 {p m n: ℕ} (hp : p ≠ 0) (hn : n > 0)\n  {F : Type*} [Field F] [CharP F p] (hm : m = p ^ n) :\n  (X ^ m - X : Polynomial F).Separable := sorry",
+  "cand": "theorem dummy {F : Type*} [Field F] {p n : ℕ} [hf : CharP F p] : ∀ m : ℕ, m = p^n → ∀ x y : F, x^m = x → y^m = y → x = y := sorry",
+  "item": 133,
+  "sheet_item": 124
+ },
+ {
+  "key": "pnv-test-167",
+  "part": "F",
+  "nl": "Let $G$ be a finite group which possesses an automorphism $\\sigma$ such that $\\sigma(g)=g$ if and only if $g=1$. If $\\sigma^{2}$ is the identity map from $G$ to $G$, prove that $G$ is abelian.",
+  "ref": "theorem exercise_1_6_23 {G : Type*}\n  [Group G] (σ : MulAut G) (hs : ∀ g : G, σ g = g ↔ g = 1)\n  (hs2 : ∀ g : G, σ (σ g) = g) :\n  ∀ x y : G, x*y = y*x := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] [Fintype G] (σ : G →* G) (hσ : ∀ g : G, σ (σ g) = g) (hσ_fix : ∀ g : G, σ g = g ↔ g = 1) : ∀ a b : G, a * b = b * a := sorry",
+  "cell": "faithful_reject",
+  "item": 134,
+  "sheet_item": 125
+ },
+ {
+  "key": "d1-137-1782",
+  "part": "S",
+  "nl": "Let $\\|\\cdot\\|$ be any norm on $\\mathbb{R}^{m}$ and let $B=\\left\\{x \\in \\mathbb{R}^{m}:\\|x\\| \\leq 1\\right\\}$. Prove that $B$ is compact.",
+  "ref": "theorem Pugh_exercise_2_41\n    (m : ℕ) (E : Type*) [NormedAddCommGroup E] [NormedSpace ℝ E]\n    [FiniteDimensional ℝ E] (hdim : Module.finrank ℝ E = m) :\n    IsCompact (Metric.closedBall (0 : E) 1) :=\n    sorry := sorry",
+  "cand": "theorem Pugh_exercise_2_41 (m : ℕ) (N : (Fin m → ℝ) → ℝ)\n    (h_zero : ∀ x, N x = 0 ↔ x = 0)\n    (h_smul : ∀ (c : ℝ) (x : Fin m → ℝ), N (c • x) = |c| * N x)\n    (h_add : ∀ x y : Fin m → ℝ, N (x + y) ≤ N x + N y) :\n    IsCompact {x : Fin m → ℝ | N x ≤ 1} := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 135,
+  "sheet_item": 126
+ },
+ {
+  "key": "pnv-test-1010",
+  "part": "F",
+  "nl": "Let $G$ be a finite group and $\\varphi$ an automorphism of $G$ such that $\\varphi(x) = x^{-1}$ for more than three-fourths of the elements of $G$. Prove that $\\varphi(y) = y^{-1}$ for all $y \\in G$, and so $G$ is abelian.",
+  "ref": "theorem exercise_2_5_52 {G : Type*} [Group G] [Fintype G]\n  (φ : G ≃* G) {I : Finset G} (hI : ∀ x ∈ I, φ x = x⁻¹)\n  (hI1 : (0.75 : ℚ) * card G ≤ card I) :\n  (∀ x : G, φ x = x⁻¹) ∧ ∀ x y : G, x*y = y*x := sorry",
+  "cand": "theorem dummy {G : Type*} [Fintype G] [Group G] (φ : G ≃* G) (hφ : ∃ S : Finset G, S.card > (3 * Fintype.card G) / 4 ∧ ∀ x ∈ S, φ x = x⁻¹) : (∀ y : G, φ y = y⁻¹) ∧ (∀ a b : G, a * b = b * a) := sorry",
+  "cell": "faithful_reject",
+  "item": 136,
+  "sheet_item": 127
+ },
+ {
+  "key": "d1-10-146",
+  "part": "S",
+  "nl": "Let $R$ be a ring, with $M$ an ideal of $R$. Suppose that every element of $R$ which is not in $M$ is a unit of $R$. Prove that $M$ is a maximal ideal and that moreover it is the only maximal ideal of $R$.",
+  "ref": "theorem Artin_exercise_10_7_10 {R : Type*} [Ring R]\n  (M : Ideal R) (hM : ∀ (x : R), x ∉ M → IsUnit x)\n  (hProper : ∃ x : R, x ∉ M) :\n  IsMaximal M ∧ ∀ (N : Ideal R), IsMaximal N → N = M := sorry",
+  "cand": "theorem Artin_exercise_10_7_10 {R : Type*} [CommRing R]\n    (M : Ideal R) (hProper : M ≠ ⊤) (hM : ∀ x : R, x ∉ M → IsUnit x) :\n    M.IsMaximal ∧ ∀ N : Ideal R, N.IsMaximal → N = M := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 137,
+  "sheet_item": 128
+ },
+ {
+  "key": "d1-145-1859",
+  "part": "S",
+  "nl": "Suppose that $f(x)=\\sum_{i=0}^{\\infty} c_{i} x^{i}$ is a power series for which each coefficient $c_{i}$ is 0 or 1 . Show that if $f(2 / 3)=3 / 2$, then $f(1 / 2)$ must be irrational.",
+  "ref": "theorem Putnam_exercise_2017_b3 (f : ℝ → ℝ) (c : ℕ → ℝ)\n  (hf : f = λ x => (∑' (i : ℕ), (c i) * x^i))\n  (hc : ∀ n, c n = 0 ∨ c n = 1)\n  (hf1 : f (2/3) = 3/2) :\n  Irrational (f (1/2)) := sorry",
+  "cand": "theorem Putnam_exercise_2017_b3\n    (c : ℕ → ℕ)\n    (hc : ∀ i, c i = 0 ∨ c i = 1)\n    (h : (∑' i : ℕ, (c i : ℝ) * (2 / 3 : ℝ) ^ i) = 3 / 2) :\n    Irrational (∑' i : ℕ, (c i : ℝ) * (1 / 2 : ℝ) ^ i) := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 138,
+  "sheet_item": 50
+ },
+ {
+  "key": "pnv-test-1007",
+  "part": "G",
+  "set": "C",
+  "nl": "Show that if $\\prod X_\\alpha$ is normal, then so is $X_\\alpha$. Assume that each $X_\\alpha$ is nonempty.",
+  "ref": "theorem exercise_32_2c\n  {ι : Type*} {X : ι → Type*} [∀ i, TopologicalSpace (X i)]\n  (h : ∀ i, Nonempty (X i)) (h2 : NormalSpace (Π i, X i)) :\n  ∀ i, NormalSpace (X i) := sorry",
+  "cand": "theorem dummy {ι : Type*} {X : ι → Type*} [∀ i, TopologicalSpace (X i)] (h : NormalSpace (Π i, X i)) (i : ι) : NormalSpace (X i) := sorry",
+  "item": 139,
+  "sheet_item": 129
+ },
+ {
+  "key": "pnv-test-428",
+  "part": "F",
+  "nl": "Prove that if $a \\in \\mathbf{F}$, $v \\in V$, and $av = 0$, then $a = 0$ or $v = 0$.",
+  "ref": "theorem exercise_1_4 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] (v : V) (a : F): a • v = 0 → a = 0 ∨ v = 0 := sorry",
+  "cand": "theorem dummy {R : Type*} [Semiring R] {M : Type*} [AddCommMonoid M] [Module R M] (a : R) (v : M) (h : a • v = 0) : a = 0 ∨ v = 0 := sorry",
+  "cell": "faithful_reject",
+  "item": 140,
+  "sheet_item": 130
+ },
+ {
+  "key": "d1-341-4320",
+  "part": "S",
+  "nl": "Prove that every open set in $\\mathbb{R}$ is the union of an at most countable collection of disjoint segments.",
+  "ref": "theorem Rudin_exercise_2_29 (U : Set ℝ) (hU : IsOpen U) :\n  ∃ (f : ℕ → Set ℝ),\n    (∀ n, ∃ a b : EReal, f n = {x : ℝ | a < (x : EReal) ∧ (x : EReal) < b}) ∧\n    (∀ n, f n ⊆ U) ∧\n    (∀ n m, n ≠ m → f n ∩ f m = ∅) ∧\n    U = ⋃ n, f n := sorry",
+  "cand": "theorem Rudin_exercise_2_29 (U : Set ℝ) (hU : IsOpen U) :\n    ∃ S : Set (EReal × EReal), S.Countable ∧ (∀ p ∈ S, p.1 < p.2) ∧\n      S.PairwiseDisjoint (fun p => {x : ℝ | p.1 < (x : EReal) ∧ (x : EReal) < p.2}) ∧\n      U = ⋃ p ∈ S, {x : ℝ | p.1 < (x : EReal) ∧ (x : EReal) < p.2} := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 141,
+  "sheet_item": 131
+ },
+ {
+  "key": "pnv-test-866",
+  "part": "G",
+  "set": "B",
+  "nl": "Let $x$ be an element of $G$. Prove that if $|x|=n$ for some positive integer $n$ then $x^{-1}=x^{n-1}$.",
+  "ref": "theorem exercise_1_1_17 {G : Type*} [Group G] {x : G} {n : ℕ+}\n  (hxn: orderOf x = n) :\n  x⁻¹ = x ^ (n - 1 : ℕ) := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] {x : G} {n : ℕ} (hn : 0 < n) (hx : x ^ n = 1) : x⁻¹ = x ^ (n - 1) := sorry",
+  "item": 142,
+  "sheet_item": 132
+ },
+ {
+  "key": "pnv-test-222",
+  "part": "F",
+  "nl": "Prove that if $a \\in \\mathbf{F}$, $v \\in V$, and $av = 0$, then $a = 0$ or $v = 0$.",
+  "ref": "theorem exercise_1_4 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] (v : V) (a : F): a • v = 0 → a = 0 ∨ v = 0 := sorry",
+  "cand": "theorem dummy {F : Type*} [Field F] {V : Type*} [AddCommGroup V] [Module F V] {a : F} {v : V} (h : a • v = 0) : a = 0 ∨ v = 0 := sorry",
+  "cell": "faithful_local_accept",
+  "control": true,
+  "item": 143,
+  "sheet_item": 133
+ },
+ {
+  "key": "d1-339-4283",
+  "part": "S",
+  "nl": "Prove that every compact metric space $K$ has a countable base.",
+  "ref": "theorem Rudin_exercise_2_25 {K : Type*} [MetricSpace K] [CompactSpace K] :\n  ∃ (B : Set (Set K)), Set.Countable B ∧ IsTopologicalBasis B := sorry",
+  "cand": "theorem Rudin_exercise_2_25 (K : Type _) [MetricSpace K] [CompactSpace K] : ∃ (B : Set (Set K)), Countable B ∧ IsTopologicalBasis B := by sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 144,
+  "sheet_item": 134
+ },
+ {
+  "key": "d1-202-2479",
+  "part": "J",
+  "nl": "Suppose $T \\in \\mathcal{L}(V)$. Prove that if $U_{1}, \\ldots, U_{m}$ are subspaces of $V$ invariant under $T$, then $U_{1}+\\cdots+U_{m}$ is invariant under $T$.",
+  "ref": "theorem Axler_exercise_5_1 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] {T : V →ₗ[F] V} {n : ℕ} (U : Fin n → Submodule F V)\n  (hU : ∀ i : Fin n, Submodule.map T (U i) ≤ U i) :\n  Submodule.map T (∑ i : Fin n, U i : Submodule F V) ≤\n  (∑ i : Fin n, U i : Submodule F V) := sorry",
+  "cand": "theorem Axler_exercise_5_1\n    {K V : Type*} [Field K] [AddCommGroup V] [Module K V] [FiniteDimensional K V]\n    (T : Module.End K V) (m : ℕ) (U : Fin m → Submodule K V)\n    (hU : ∀ i, Submodule.map T (U i) ≤ U i) :\n    Submodule.map T (⨆ i : Fin m, U i) ≤ ⨆ i : Fin m, U i := by\n  sorry",
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 145,
+  "sheet_item": 135
+ },
+ {
+  "key": "pnv-test-8",
+  "part": "F",
+  "nl": "Prove that every nonzero ideal in the ring of Gauss integers contains a nonzero integer.",
+  "ref": "theorem exercise_10_6_7 {I : Ideal GaussianInt}\n  (hI : I ≠ ⊥) : ∃ (z : I), z ≠ 0 ∧ (z : GaussianInt).im = 0 := sorry",
+  "cand": "theorem dummy {I : Ideal (GaussianInt)} (hI : I ≠ ⊥) : ∃ n ≠ (0 : ℤ), (n : GaussianInt) ∈ I := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 146,
+  "sheet_item": 136
+ },
+ {
+  "key": "pnv-test-528",
+  "part": "F",
+  "nl": "Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.",
+  "ref": "theorem exercise_2_92 {α : Type*} [TopologicalSpace α]\n  {s : ℕ → Set α}\n  (hs : ∀ i, IsCompact (s i))\n  (hne : ∀ i, (s i).Nonempty)\n  (hs : ∀ i, (s i) ⊇ (s (i + 1))) :\n  (⋂ i, s i).Nonempty := sorry",
+  "cand": "theorem dummy {X : Type*} [TopologicalSpace X] [CompactSpace X] (K : ℕ → Set X) (hK : ∀ n, IsCompact (K n)) (hne : ∀ n, (K n).Nonempty) (hdec : ∀ n, K (n+1) ⊆ K n) : (⋂ n, K n).Nonempty := sorry",
+  "cell": "faithful_reject",
+  "item": 147,
+  "sheet_item": 68
+ },
+ {
+  "key": "d1-268-3392",
+  "part": "K",
+  "nl": "If $\\sigma, \\tau$ are two permutations that disturb no common element and $\\sigma \\tau = e$, prove that $\\sigma = \\tau = e$.",
+  "ref": "theorem Herstein_exercise_3_2_21 {α : Type*} {σ τ : Equiv.Perm α}\n  (h1 : ∀ a : α, ¬(σ a ≠ a ∧ τ a ≠ a)) (h2 : τ * σ = 1) :\n  σ = 1 ∧ τ = 1 := sorry",
+  "cand": "theorem Herstein_exercise_3_2_21 {α : Type*} (σ τ : Equiv.Perm α)\n    (h : ∀ x, ¬ (σ x ≠ x ∧ τ x ≠ x)) (hστ : σ * τ = 1) :\n    σ = 1 ∧ τ = 1 := by\n  sorry",
+  "control": "equivalent",
+  "item": 148,
+  "sheet_item": 137
+ },
+ {
+  "key": "pnv-test-365",
+  "part": "G",
+  "set": "A",
+  "nl": "Let $G$ be a finite group which possesses an automorphism $\\sigma$ such that $\\sigma(g)=g$ if and only if $g=1$. If $\\sigma^{2}$ is the identity map from $G$ to $G$, prove that $G$ is abelian.",
+  "ref": "theorem exercise_1_6_23 {G : Type*}\n  [Group G] (σ : MulAut G) (hs : ∀ g : G, σ g = g ↔ g = 1)\n  (hs2 : ∀ g : G, σ (σ g) = g) :\n  ∀ x y : G, x*y = y*x := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] [Fintype G] (σ : G ≃* G) (hσ : ∀ g : G, σ g = g ↔ g = 1) (hσ2 : ∀ g : G, σ (σ g) = g) : ∀ a b : G, a * b = b * a := sorry",
+  "f_cell": "faithful_reject",
+  "item": 149,
+  "sheet_item": 138
+ },
+ {
+  "key": "pnv-test-778",
+  "part": "F",
+  "nl": "Prove that a group of order 56 has a normal Sylow $p$-subgroup for some prime $p$ dividing its order.",
+  "ref": "theorem exercise_4_5_13 {G : Type*} [Group G] [Fintype G]\n  (hG : card G = 56) :\n  ∃ (p : ℕ) (P : Sylow p G), p.Prime ∧ (p ∣ card G) ∧ P.Normal := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] {n : ℕ} [Fintype G] (hn : Fintype.card G = n) (h : 56 ∣ n) : ∃ (p : ℕ) (hp : p.Prime) (H : Sylow p G), H.Normal := sorry",
+  "cell": "faithful_reject",
+  "item": 150,
+  "sheet_item": 139
+ },
+ {
+  "key": "d1-337-4265",
+  "part": "S",
+  "nl": "If $k = 1$ and $\\mathbf{x} \\in R^{k}$, $\\mathbf{x} \\neq 0$, prove that there does not exist $\\mathbf{y} \\in R^{k}$ such that $\\mathbf{y} \\neq 0$ but $\\mathbf{x} \\cdot \\mathbf{y}=0$",
+  "ref": "theorem Rudin_exercise_1_18b\n  : ∀ (x : ℝ), x ≠ 0 → ¬ ∃ (y : ℝ), y ≠ 0 ∧ x * y = 0 := sorry",
+  "cand": "theorem Rudin_exercise_1_18b {x y : ℝ → ℝ} (h : (Finset.range 1).sum (λ i => x i ^ 2) ≠ 0)\n  (hy : (Finset.range 1).sum (λ i => y i ^ 2) ≠ 0) : (Finset.range 1).sum (λ i => x i * y i) ≠ 0 := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 151,
+  "sheet_item": 140
+ },
+ {
+  "key": "d1-90-1216",
+  "part": "S",
+  "nl": "Show that there is an infinite number of integers a such that $f(x) = x^7 + 15x^2 - 30x + a$ is irreducible in $Q[x]$.",
+  "ref": "theorem Herstein_exercise_4_6_3 :\n  Infinite {a : ℤ | Irreducible (X^7 + 15*X^2 - 30*X + (a : Polynomial ℚ) : Polynomial ℚ)} := sorry",
+  "cand": "theorem Herstein_exercise_4_6_3 :\n    Set.Infinite {a : ℤ |\n      Irreducible ((Polynomial.X : ℚ[X]) ^ 7 + Polynomial.C (15 : ℚ) * (Polynomial.X : ℚ[X]) ^ 2 -\n        Polynomial.C (30 : ℚ) * (Polynomial.X : ℚ[X]) + Polynomial.C (a : ℚ))} := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 152,
+  "sheet_item": 141
+ },
+ {
+  "key": "d1-310-3904",
+  "part": "S",
+  "nl": "Show that $[0, 1]^\\omega$ is not locally compact in the uniform topology.",
+  "ref": "theorem Munkres_exercise_29_4 :\n    ¬ LocallyCompactSpace (ℕ →ᵇ I) := sorry",
+  "cand": "theorem Munkres_exercise_29_4 :\n    ¬ LocallyCompactSpace (ℕ →ᵇ unitInterval) := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 153,
+  "sheet_item": 142
+ },
+ {
+  "key": "d1-39-544",
+  "part": "S",
+  "nl": "Show that the subgroup of all rotations in a dihedral group is a maximal subgroup.",
+  "ref": "theorem Dummit_Foote_exercise_2_4_16b {n : ℕ} {hn : n ≠ 0}\n  {R : Subgroup (DihedralGroup n)}\n  (hR : R = Subgroup.closure {DihedralGroup.r 1}) :\n  R ≠ ⊤ ∧\n  ∀ K : Subgroup (DihedralGroup n), R ≤ K → K = R ∨ K = ⊤ := sorry",
+  "cand": "theorem Dummit_Foote_exercise_2_4_16b {n : ℕ}\n    (R : Subgroup (DihedralGroup n))\n    (hR : ∀ g : DihedralGroup n, g ∈ R ↔ ∃ i : ZMod n, g = DihedralGroup.r i) :\n    IsCoatom R := by sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 154,
+  "sheet_item": 143
+ },
+ {
+  "key": "d1-8-108",
+  "part": "S",
+  "nl": "Prove that in the ring $\\mathbb{Z}[x],(2) \\cap(x)=(2 x)$.",
+  "ref": "theorem Artin_exercise_10_2_4 :\n  span ({2} : Set $ Polynomial ℤ) ⊓ (span {X}) =\n  span ({2 * X} : Set $ Polynomial ℤ) := sorry",
+  "cand": "theorem Artin_exercise_10_2_4 :\n    (Ideal.span ({(2 : Polynomial ℤ)} : Set (Polynomial ℤ))) ⊓\n        (Ideal.span ({Polynomial.X} : Set (Polynomial ℤ))) =\n      Ideal.span ({(2 : Polynomial ℤ) * Polynomial.X} : Set (Polynomial ℤ)) := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 155,
+  "sheet_item": 144
+ },
+ {
+  "key": "d1-4-43",
+  "part": "K",
+  "nl": "Let $V$ be a vector space which is spanned by a countably infinite set. Prove that every linearly independent subset of $V$ is finite or countably infinite.",
+  "ref": "theorem Artin_exercise_3_5_6 {K V : Type*} [Field K] [AddCommGroup V]\n  [Module K V] {S : Set V} (hS : Set.Countable S) (hSinf : S.Infinite)\n  (hS1 : span K S = ⊤) {ι : Type*} (R : ι → V)\n  (hR : LinearIndependent K R) : Countable ι := sorry",
+  "cand": "theorem Artin_exercise_3_5_6\n    {K V : Type*} [Field K] [AddCommGroup V] [Module K V]\n    (hV : ∃ S : Set V, S.Countable ∧ S.Infinite ∧ Submodule.span K S = ⊤) :\n    ∀ s : Set V, LinearIndependent K (fun x : s => (x : V)) → s.Countable := by\n  sorry",
+  "control": "reject_nonstrict",
+  "item": 156,
+  "sheet_item": 145
+ },
+ {
+  "key": "pnv-test-595",
+  "part": "F",
+  "nl": "Let $G$ be a finite group which possesses an automorphism $\\sigma$ such that $\\sigma(g)=g$ if and only if $g=1$. If $\\sigma^{2}$ is the identity map from $G$ to $G$, prove that $G$ is abelian.",
+  "ref": "theorem exercise_1_6_23 {G : Type*}\n  [Group G] (σ : MulAut G) (hs : ∀ g : G, σ g = g ↔ g = 1)\n  (hs2 : ∀ g : G, σ (σ g) = g) :\n  ∀ x y : G, x*y = y*x := sorry",
+  "cand": "theorem dummy (G : Type*) [Group G] [Fintype G] (σ : G →* G) (hs : ∀ g : G, σ g = g ↔ g = 1) : (∀ g : G, σ (σ g) = g) → ∀ (a b : G), a * b = b * a := sorry",
+  "cell": "faithful_reject",
+  "item": 157,
+  "sheet_item": 146
+ },
+ {
+  "key": "d1-359-4534",
+  "part": "J",
+  "nl": "Suppose $f$ is a real, three times differentiable function on $[-1,1]$, such that $f(-1)=0, \\quad f(0)=0, \\quad f(1)=1, \\quad f^{\\prime}(0)=0 .$ Prove that $f^{(3)}(x) \\geq 3$ for some $x \\in(-1,1)$.",
+  "ref": "theorem Rudin_exercise_5_17\n  {f : ℝ → ℝ}\n  (hf' : DifferentiableOn ℝ f (Icc (-1) 1))\n  (hf'' : DifferentiableOn ℝ (deriv f) (Icc (-1) 1))\n  (hf''' : DifferentiableOn ℝ (deriv (deriv f)) (Icc (-1) 1))\n  (hf0 : f (-1) = 0)\n  (hf1 : f 0 = 0)\n  (hf2 : f 1 = 1)\n  (hf3 : deriv f 0 = 0) :\n  ∃ x, x ∈ Ioo (-1 : ℝ) 1 ∧ deriv (deriv (deriv f)) x ≥ 3 := sorry",
+  "cand": "theorem Rudin_exercise_5_17\n  {f : ℝ → ℝ}\n  (hf : ContDiffOn ℝ 2 f (Set.Icc (-1) 1))\n  (hf3 : DifferentiableOn ℝ (iteratedDerivWithin 2 f (Set.Icc (-1) 1)) (Set.Icc (-1) 1))\n  (hfm1 : f (-1) = 0)\n  (hf0 : f 0 = 0)\n  (hf1 : f 1 = 1)\n  (hd0 : deriv f 0 = 0) :\n  ∃ x, x ∈ Set.Ioo (-1 : ℝ) 1 ∧ iteratedDerivWithin 3 f (Set.Icc (-1) 1) x ≥ 3 := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 158,
+  "sheet_item": 147
+ },
+ {
+  "key": "d1-75-1017",
+  "part": "J",
+  "nl": "If $a > 1$ is an integer, show that $n \\mid \\varphi(a^n - 1)$, where $\\phi$ is the Euler $\\varphi$-function.",
+  "ref": "theorem Herstein_exercise_2_4_36 {a n : ℕ} (h : a > 1) :\n  n ∣ (a ^ n - 1).totient := sorry",
+  "cand": "theorem Herstein_exercise_2_4_36 (a n : ℕ) (ha : 1 < a) (hn : 0 < n) : n ∣ Nat.totient (a ^ n - 1) := by\n  sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 159,
+  "sheet_item": 148
+ },
+ {
+  "key": "d1-88-1209",
+  "part": "S",
+  "nl": "Let $F = \\mathbb{Z}_p$ be the field of integers $\\mod p$, where $p$ is a prime, and let $q(x) \\in F[x]$ be irreducible of degree $n$. Show that $F[x]/(q(x))$ is a field having at exactly $p^n$ elements.",
+  "ref": "theorem Herstein_exercise_4_5_16 {p n: ℕ} (hp : Nat.Prime p)\n  {q : Polynomial (ZMod p)} (hq : Irreducible q) (hn : q.degree = n) :\n  (∃ is_fin : Fintype $ Polynomial (ZMod p) ⧸ span ({q}),\n  @card (Polynomial (ZMod p) ⧸ span {q}) is_fin = p ^ n) ∧\n  IsField (Polynomial (ZMod p) ⧸ span {q}) := sorry",
+  "cand": "theorem Herstein_exercise_4_5_16 {p n : ℕ} (hp : Nat.Prime p)\n    {q : Polynomial (ZMod p)} (hq : Irreducible q) (hn : q.natDegree = n) :\n    IsField (Polynomial (ZMod p) ⧸ Ideal.span ({q} : Set (Polynomial (ZMod p)))) ∧\n    Nat.card (Polynomial (ZMod p) ⧸ Ideal.span ({q} : Set (Polynomial (ZMod p)))) = p ^ n := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 160,
+  "sheet_item": 149
+ },
+ {
+  "key": "pnv-test-41",
+  "part": "G",
+  "set": "C",
+  "nl": "Let $p: X \\rightarrow Y$ be a closed continuous surjective map such that $p^{-1}(\\{y\\})$ is compact, for each $y \\in Y$. (Such a map is called a perfect map.) Show that if $Y$ is compact, then $X$ is compact.",
+  "ref": "theorem exercise_26_12 {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y]\n  (p : X → Y) (h : Function.Surjective p) (hc : Continuous p)\n  (hp : IsClosedMap p) (hp : ∀ y, IsCompact (p ⁻¹' {y}))\n  (hY : CompactSpace Y) : CompactSpace X := sorry",
+  "cand": "theorem dummy {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] (p : X → Y) (h : CompactSpace Y) (h' : Continuous p) (h'' : Function.Surjective p) (hc : ∀ y : Y, IsCompact (p ⁻¹' {y})) : CompactSpace X := sorry",
+  "item": 161,
+  "sheet_item": 150
+ },
+ {
+  "key": "d1-305-3848",
+  "part": "S",
+  "nl": "Let $f \\colon X \\rightarrow X$ be continuous. Show that if $X = [0, 1]$, there is a point $x$ such that $f(x) = x$. (The point $x$ is called a fixed point of $f$.)",
+  "ref": "theorem Munkres_exercise_24_3a (f : I → I) (hf : Continuous f) :\n  ∃ (x : I), f x = x := sorry",
+  "cand": "theorem Munkres_exercise_24_3a\n    (f : ContinuousMap (Set.Icc (0 : ℝ) 1) (Set.Icc (0 : ℝ) 1)) :\n    ∃ x : Set.Icc (0 : ℝ) 1, f x = x := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 162,
+  "sheet_item": 151
+ },
+ {
+  "key": "pnv-test-38",
+  "part": "F",
+  "nl": "Let $E$ be a nonempty subset of an ordered set; suppose $\\alpha$ is a lower bound of $E$ and $\\beta$ is an upper bound of $E$. Prove that $\\alpha \\leq \\beta$.",
+  "ref": "theorem exercise_1_4\n(α : Type*) [PartialOrder α]\n(s : Set α)\n(x y : α)\n(h₀ : Set.Nonempty s)\n(h₁ : x ∈ lowerBounds s)\n(h₂ : y ∈ upperBounds s)\n: x ≤ y := sorry",
+  "cand": "theorem dummy {α : Type u} [PartialOrder α] {E : Set α} {a b : α} (ha : IsLUB E a) (hb : IsGLB E b) : a ≤ b := sorry",
+  "cell": "faithful_reject",
+  "item": 163,
+  "sheet_item": 152
+ },
+ {
+  "key": "d1-283-3600",
+  "part": "S",
+  "nl": "If $n$ is not a prime, show that $(n-1) ! \\equiv 0(n)$, except when $n=4$.",
+  "ref": "theorem Ireland_Rosen_exercise_3_10 {n : ℕ+} (hn0 : ¬ n.Prime) :\n  Nat.factorial (n-1) ≡ 0 [MOD n] ↔ n ≠ 4 := sorry",
+  "cand": "theorem Ireland_Rosen_exercise_3_10 (n : ℕ) (hn : ¬Prime n) (hne : n ≠ 4) (hnpos : 2 ≤ n) :\n  (Nat.factorial (n - 1)) % n = 0 := by sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 164,
+  "sheet_item": 153
+ },
+ {
+  "key": "d1-130-1706",
+  "part": "J",
+  "nl": "Show that a closed subspace of a normal space is normal.",
+  "ref": "theorem Munkres_exercise_32_1 {X : Type*} [TopologicalSpace X]\n  (hX : NormalSpace X) (A : Set X) (hA : IsClosed A) :\n  NormalSpace {x // x ∈ A} := sorry",
+  "cand": "theorem Munkres_exercise_32_1 {X : Type*} [TopologicalSpace X] [T4Space X]\n    {A : Set X} (hA : IsClosed A) : T4Space A := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 165,
+  "sheet_item": 154
+ },
+ {
+  "key": "pnv-test-532",
+  "part": "G",
+  "set": "B",
+  "nl": "If $a \\in K$ is such that $a^2$ is algebraic over the subfield $F$ of $K$, show that a is algebraic over $F$.",
+  "ref": "theorem exercise_5_3_7 {K : Type*} [Field K] {F : Subfield K}\n  {a : K} (ha : IsAlgebraic F (a ^ 2)) : IsAlgebraic F a := sorry",
+  "cand": "theorem dummy {F K : Type*} [Field F] [Field K] [Algebra F K] (a : K) (h : IsAlgebraic F (a^2)) : IsAlgebraic F a := sorry",
+  "item": 166,
+  "sheet_item": 67
+ },
+ {
+  "key": "pnv-test-899",
+  "part": "F",
+  "nl": "Let $G$ be a finite group and $\\varphi$ an automorphism of $G$ such that $\\varphi(x) = x^{-1}$ for more than three-fourths of the elements of $G$. Prove that $\\varphi(y) = y^{-1}$ for all $y \\in G$, and so $G$ is abelian.",
+  "ref": "theorem exercise_2_5_52 {G : Type*} [Group G] [Fintype G]\n  (φ : G ≃* G) {I : Finset G} (hI : ∀ x ∈ I, φ x = x⁻¹)\n  (hI1 : (0.75 : ℚ) * card G ≤ card I) :\n  (∀ x : G, φ x = x⁻¹) ∧ ∀ x y : G, x*y = y*x := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] [Fintype G] (φ : G ≃* G) (hφ : ∃ S : Finset G, S.card > (3 * Fintype.card G) / 4 ∧ ∀ x ∈ S, φ x = x⁻¹) : ∀ y : G, φ y = y⁻¹ ∧ ∀ a b : G, a * b = b * a := sorry",
+  "cell": "faithful_reject",
+  "item": 167,
+  "sheet_item": 155
+ },
+ {
+  "key": "pnv-test-379",
+  "part": "F",
+  "nl": "If $k = 1$ and $\\mathbf{x} \\in R^{k}$, $\\mathbf{x} \\neq 0$, prove that there does not exist $\\mathbf{y} \\in R^{k}$ such that $\\mathbf{y} \\neq 0$ but $\\mathbf{x} \\cdot \\mathbf{y}=0$",
+  "ref": "theorem exercise_1_18b\n  : ∀ (x : ℝ), x ≠ 0 → ¬ ∃ (y : ℝ), y ≠ 0 ∧ x * y = 0 := sorry",
+  "cand": "theorem dummy (R : Type*) [Ring R] {x : R} (hx : x ≠ 0) : ∀ {y : R}, y ≠ 0 → x * y ≠ 0 := sorry",
+  "cell": "faithful_reject",
+  "item": 168,
+  "sheet_item": 156
+ },
+ {
+  "key": "pnv-test-569",
+  "part": "F",
+  "nl": "Let $H$ be a subgroup of the additive group of rational numbers with the property that $1 / x \\in H$ for every nonzero element $x$ of $H$. Prove that $H=0$ or $\\mathbb{Q}$.",
+  "ref": "theorem exercise_2_1_13 (H : AddSubgroup ℚ) {x : ℚ}\n  (hH : (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H):\n  H = ⊥ ∨ H = ⊤ := sorry",
+  "cand": "theorem dummy (H : AddSubgroup ℚ) (hH : ∀ x ∈ H, x ≠ 0 → (1 / x) ∈ H) : H = ⊥ ∨ H = ⊤ := sorry",
+  "cell": "faithful_reject",
+  "item": 169,
+  "sheet_item": 8
+ },
+ {
+  "key": "d1-278-3532",
+  "part": "J",
+  "nl": "If $F$ is of characteristic $p \\neq 0$, show that all the roots of $x^m - x$, where $m = p^n$, are distinct.",
+  "ref": "theorem Herstein_exercise_5_6_14 {p m n: ℕ} (hp : p ≠ 0) (hn : n > 0)\n  {F : Type*} [Field F] [CharP F p] (hm : m = p ^ n) :\n  (X ^ m - X : Polynomial F).Separable := sorry",
+  "cand": "theorem Herstein_exercise_5_6_14 (F : Type*) [Field F] (p n : ℕ) [CharP F p]\n    (hp : p ≠ 0) :\n    (Polynomial.X ^ (p ^ n) - Polynomial.X : Polynomial F).roots.Nodup := by\n  sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 170,
+  "sheet_item": 157
+ },
+ {
+  "key": "pnv-test-1259",
+  "part": "F",
+  "nl": "Let $P_n(x)=1+2 x+3 x^2+\\cdots+n x^{n-1} .$ Prove that the polynomials $P_j(x)$ and $P_k(x)$ are relatively prime for all positive integers $j$ and $k$ with $j \\neq k$.",
+  "ref": "theorem exercise_2014_a5 (P : ℕ → Polynomial ℤ)\n  (hP : ∀ n, P n = ∑ i : Fin n, (n+1) * Polynomial.X ^ n) :\n  ∀ (j k : ℕ), j ≠ k → IsCoprime (P j) (P k) := sorry",
+  "cand": "theorem dummy {p : ℕ} (hp : 2 < p) (hpr : p.Prime) {a b : ℕ} (ha : 0 < a) (hb : 0 < b) (hab : a < b) (hab2 : a < b ^ 2) : ∃ (x y z w : ℕ), p = x ^ 2 + y ^ 2 + z ^ 2 + w ^ 2 := sorry",
+  "cell": "unfaithful_reject",
+  "control": true,
+  "item": 171,
+  "sheet_item": 158
+ },
+ {
+  "key": "pnv-test-253",
+  "part": "G",
+  "set": "A",
+  "nl": "Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.",
+  "ref": "theorem exercise_2_92 {α : Type*} [TopologicalSpace α]\n  {s : ℕ → Set α}\n  (hs : ∀ i, IsCompact (s i))\n  (hne : ∀ i, (s i).Nonempty)\n  (hs : ∀ i, (s i) ⊇ (s (i + 1))) :\n  (⋂ i, s i).Nonempty := sorry",
+  "cand": "theorem dummy {α : Type*} [TopologicalSpace α] [CompactSpace α] {K : ℕ → Set α} (hK : ∀ n, IsCompact (K n)) (hne : ∀ n, (K n).Nonempty) (hdec : ∀ n, K (n + 1) ⊆ K n) : (⋂ n, K n).Nonempty := sorry",
+  "f_cell": "faithful_reject",
+  "item": 172,
+  "sheet_item": 68
+ },
+ {
+  "key": "pnv-test-1201",
+  "part": "F",
+  "nl": "Let $H$ be a subgroup of the additive group of rational numbers with the property that $1 / x \\in H$ for every nonzero element $x$ of $H$. Prove that $H=0$ or $\\mathbb{Q}$.",
+  "ref": "theorem exercise_2_1_13 (H : AddSubgroup ℚ) {x : ℚ}\n  (hH : (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H):\n  H = ⊥ ∨ H = ⊤ := sorry",
+  "cand": "theorem dummy {H : AddSubgroup ℚ} (h : ∀ x : ℚ, x ≠ 0 → x ∈ H → 1 / x ∈ H) : H = ⊥ ∨ H = ⊤ := sorry",
+  "cell": "faithful_reject",
+  "item": 173,
+  "sheet_item": 8
+ },
+ {
+  "key": "pnv-test-1208",
+  "part": "F",
+  "nl": "Let $f$ be a real function with a continuous third derivative such that $f(x), f^{\\prime}(x), f^{\\prime \\prime}(x), f^{\\prime \\prime \\prime}(x)$ are positive for all $x$. Suppose that $f^{\\prime \\prime \\prime}(x) \\leq f(x)$ for all $x$. Show that $f^{\\prime}(x)<2 f(x)$ for all $x$.",
+  "ref": "theorem exercise_1999_b4 (f : ℝ → ℝ) (hf: ContDiff ℝ 3 f)\n  (hf1 : ∀ n ≤ 3, ∀ x : ℝ, iteratedDeriv n f x > 0)\n  (hf2 : ∀ x : ℝ, iteratedDeriv 3 f x ≤ f x) :\n  ∀ x : ℝ, deriv f x < 2 * f x := sorry",
+  "cand": "theorem dummy {f : ℝ → ℝ} (h_cont : ∀ n ≤ 3, Continuous (deriv^[n] f)) (h_pos : ∀ x, (∀ n ≤ 3, (deriv^[n] f) x > 0)) (h_bound : ∀ x, (deriv^[3] f) x ≤ f x) : ∀ x, deriv f x < 2 * f x := sorry",
+  "cell": "faithful_local_accept",
+  "control": true,
+  "item": 174,
+  "sheet_item": 159
+ },
+ {
+  "key": "d1-318-4043",
+  "part": "S",
+  "nl": "Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces; let $Y$ be complete. Let $A \\subset X$. Show that if $f \\colon A \\rightarrow Y$ is uniformly continuous, then $f$ can be uniquely extended to a continuous function $g \\colon \\bar{A} \\rightarrow Y$, and $g$ is uniformly continuous.",
+  "ref": "theorem Munkres_exercise_43_2 {X : Type*} [MetricSpace X]\n    {Y : Type*} [MetricSpace Y] [CompleteSpace Y] (A : Set X)\n    (f : X → Y) (hf : UniformContinuousOn f A) :\n    ∃ (g : closure A → Y),\n      UniformContinuous g ∧\n        (∀ x : A, g ⟨x, subset_closure x.property⟩ = f x) ∧\n        (∀ g' : closure A → Y, Continuous g' →\n          (∀ x : A, g' ⟨x, subset_closure x.property⟩ = f x) → g' = g) := sorry",
+  "cand": "theorem Munkres_exercise_43_2 {X Y : Type*} [MetricSpace X] [MetricSpace Y]\n    [CompleteSpace Y] (A : Set X) (f : A → Y) (hf : UniformContinuous f) :\n    ∃ g : closure A → Y,\n      (Continuous g ∧ UniformContinuous g ∧\n        ∀ x : A, g ⟨x.1, subset_closure x.2⟩ = f x) ∧\n      ∀ g' : closure A → Y, Continuous g' →\n        (∀ x : A, g' ⟨x.1, subset_closure x.2⟩ = f x) → g' = g := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 175,
+  "sheet_item": 160
+ },
+ {
+  "key": "d1-60-838",
+  "part": "S",
+  "nl": "A ring $R$ is called a Boolean ring if $a^{2}=a$ for all $a \\in R$. Prove that every Boolean ring is commutative.",
+  "ref": "theorem Dummit_Foote_exercise_7_1_15 {R : Type*} [Ring R] (hR : ∀ a : R, a^2 = a) :\n∀ a b : R, a*b = b*a := sorry",
+  "cand": "theorem Dummit_Foote_exercise_7_1_15 {R : Type*} [NonUnitalRing R]\n    (hR : ∀ a : R, a * a = a) : ∀ a b : R, a * b = b * a := by sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 176,
+  "sheet_item": 161
+ },
+ {
+  "key": "d1-346-4359",
+  "part": "J",
+  "nl": "If $\\left\\{E_{n}\\right\\}$ is a sequence of closed nonempty and bounded sets in a complete metric space $X$, if $E_{n} \\supset E_{n+1}$, and if $\\lim _{n \\rightarrow \\infty} \\operatorname{diam} E_{n}=0,$ then $\\bigcap_{1}^{\\infty} E_{n}$ consists of exactly one point.",
+  "ref": "theorem Rudin_exercise_3_21\n  {X : Type*} [MetricSpace X] [CompleteSpace X]\n  (E : ℕ → Set X)\n  (hEcl : ∀ n, IsClosed (E n))\n  (hEne : ∀ n, (E n).Nonempty)\n  (hEbdd : ∀ n, Bornology.IsBounded (E n))\n  (hE : ∀ n, E n ⊇ E (n + 1))\n  (hE' : Tendsto (λ n => Metric.diam (E n)) atTop (𝓝 0)) :\n  ∃ a, Set.iInter E = {a} := sorry",
+  "cand": "theorem Rudin_exercise_3_21\n  {X : Type*} [MetricSpace X] [CompleteSpace X] (E : ℕ → Set X)\n  (hE : ∀ n, E n ⊃ E (n + 1))\n  (hE' : Tendsto (λ n => Metric.diam (E n)) atTop (𝓝 0))\n  (hE'' : ∀ n, IsClosed (E n))\n  (hE''' : ∀ n, (E n).Nonempty)\n  (hE'''' : ∀ n, Bornology.IsBounded (E n)) :\n  ∃ a, Set.iInter E = {a} := by sorry",
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 177,
+  "sheet_item": 162
+ },
+ {
+  "key": "pnv-test-487",
+  "part": "F",
+  "nl": "Prove that a set $U \\subset M$ is open if and only if none of its points are limits of its complement.",
+  "ref": "theorem exercise_2_26 {M : Type*} [TopologicalSpace M]\n  (U : Set M) : IsOpen U ↔ ∀ x ∈ U, ¬ ClusterPt x (𝓟 Uᶜ) := sorry",
+  "cand": "theorem dummy {α : Type u} [TopologicalSpace α] {s : Set α} : IsOpen s ↔ ∀ x ∈ s, s ∈ nhds x := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 178,
+  "sheet_item": 163
+ },
+ {
+  "key": "d1-43-585",
+  "part": "J",
+  "nl": "Prove that $\\mathbb{Q}$ has no proper subgroups of finite index.",
+  "ref": "theorem Dummit_Foote_exercise_3_2_21a (H : AddSubgroup ℚ) (hH : H ≠ ⊤) : H.index = 0 := sorry",
+  "cand": "theorem Dummit_Foote_exercise_3_2_21a : ∀ H : AddSubgroup ℚ, H.FiniteIndex → H = ⊤ := by\n  sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 179,
+  "sheet_item": 164
+ },
+ {
+  "key": "d1-347-4362",
+  "part": "S",
+  "nl": "Suppose $f$ is a real function defined on $\\mathbb{R}$ which satisfies $\\lim_{h \\rightarrow 0} f(x + h) - f(x - h) = 0$ for every $x \\in \\mathbb{R}$. Show that $f$ does not need to be continuous.",
+  "ref": "theorem Rudin_exercise_4_1a\n  : ∃ (f : ℝ → ℝ), (∀ (x : ℝ), Tendsto (λ y => f (x + y) - f (x - y)) (𝓝 0) (𝓝 0)) ∧ ¬ Continuous f := sorry",
+  "cand": "theorem Rudin_exercise_4_1a :\n    ∃ f : ℝ → ℝ,\n      (∀ x : ℝ, Tendsto (fun h : ℝ => f (x + h) - f (x - h)) (𝓝 0) (𝓝 0)) ∧\n        ¬ Continuous f := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 180,
+  "sheet_item": 165
+ },
+ {
+  "key": "pnv-test-1435",
+  "part": "F",
+  "nl": "If $A$ and $B$ are disjoint closed sets in some metric space $X$, prove that they are separated.",
+  "ref": "theorem exercise_2_19a {X : Type*} [MetricSpace X]\n  (A B : Set X) (hA : IsClosed A) (hB : IsClosed B) (hAB : Disjoint A B) :\n  SeparatedNhds A B := sorry",
+  "cand": "theorem dummy {X : Type*} [MetricSpace X] {A B : Set X} (hA : IsClosed A) (hB : IsClosed B) (hAB : Disjoint A B) : SeparatedNhds A B := sorry",
+  "cell": "faithful_local_accept",
+  "control": true,
+  "item": 181,
+  "sheet_item": 166
+ },
+ {
+  "key": "d1-245-3046",
+  "part": "S",
+  "nl": "Let $\\varphi: R \\rightarrow S$ be a surjective homomorphism of rings. Prove that the image of the center of $R$ is contained in the center of $S$.",
+  "ref": "theorem Dummit_Foote_exercise_7_3_16 {R S : Type*} [Ring R] [Ring S]\n   {φ : R →+* S} (hf : Function.Surjective φ) :\n   φ '' (center R) ⊆ center S := sorry",
+  "cand": "theorem Dummit_Foote_exercise_7_3_16\n    {R S : Type*} [Ring R] [Ring S] (φ : R →+* S) (hφ : Function.Surjective φ) :\n    ∀ x ∈ Subring.center R, φ x ∈ Subring.center S := by\n  sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 182,
+  "sheet_item": 167
+ },
+ {
+  "key": "pnv-test-153",
+  "part": "F",
+  "nl": "Show that the equation $3 x^{2}+2=y^{2}$ has no solution in integers.",
+  "ref": "theorem exercise_3_4 : ¬ ∃ x y : ℤ, 3*x^2 + 2 = y^2 := sorry",
+  "cand": "theorem dummy {p : ℤ} : ¬ ∃ (x : ℤ), 3 * x ^ 2 + 2 = x ^ 2 := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 183,
+  "sheet_item": 168
+ },
+ {
+  "key": "pnv-test-338",
+  "part": "F",
+  "nl": "Prove that there exists a normal subgroup that is not characteristic.",
+  "ref": "theorem exercise_4_4_6b :\n  ∃ (G : Type*) (hG : Group G) (H : @Subgroup G hG), @Normal G hG H ∧ ¬ @Characteristic G hG H := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] : ∃ (N : Subgroup G), N.Normal ∧ ¬ N.Characteristic := sorry",
+  "cell": "faithful_reject",
+  "item": 184,
+  "sheet_item": 40
+ },
+ {
+  "key": "d1-121-1586",
+  "part": "S",
+  "nl": "Let $f: S^{1} \\rightarrow \\mathbb{R}$ be a continuous map. Show there exists a point $x$ of $S^{1}$ such that $f(x)=f(-x)$.",
+  "ref": "theorem Munkres_exercise_24_2\n    {f : (Metric.sphere (0 : ℂ) 1 : Set ℂ) → ℝ}\n    (hf : Continuous f) : ∃ x, f x = f (-x) := sorry",
+  "cand": "theorem Munkres_exercise_24_2\n    (f : EuclideanSpace ℝ (Fin 2) → ℝ)\n    (hf : ContinuousOn f (Metric.sphere (0 : EuclideanSpace ℝ (Fin 2)) 1)) :\n    ∃ x ∈ Metric.sphere (0 : EuclideanSpace ℝ (Fin 2)) 1, f x = f (-x) := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "judge_opus_ref"
+  ],
+  "item": 185,
+  "sheet_item": 169
+ },
+ {
+  "key": "d1-187-2313",
+  "part": "K",
+  "nl": "Let $V$ be a vector space over an infinite field $F$. Prove that $V$ is not the union of finitely many proper subspaces.",
+  "ref": "theorem Artin_exercise_3_7_2 {K V : Type*} [Field K] [Infinite K] [AddCommGroup V]\n  [Module K V] {ι : Type*} [Fintype ι] (γ : ι → Submodule K V)\n  (h : ∀ i : ι, γ i ≠ ⊤) :\n  (⋃ (i : ι), (γ i : Set V)) ≠ ⊤ := sorry",
+  "cand": "theorem Artin_exercise_3_7_2 {K V : Type*} [Field K] [Infinite K] [AddCommGroup V]\n    [Module K V] {ι : Type*} [Finite ι] (γ : ι → Submodule K V)\n    (h : ∀ i : ι, γ i ≠ ⊤) :\n    (⋃ i : ι, (γ i : Set V)) ≠ Set.univ := by sorry",
+  "control": "reject_nonstrict",
+  "item": 186,
+  "sheet_item": 170
+ },
+ {
+  "key": "d1-100-1371",
+  "part": "S",
+  "nl": "Consider a prime $p$ of the form $4 t+3$. Show that $a$ is a primitive root modulo $p$ iff $-a$ has order $(p-1) / 2$.",
+  "ref": "theorem Ireland_Rosen_exercise_4_5 {p t : ℕ} (hp0 : p.Prime) (hp1 : p = 4 * t + 3)\n  (a : (ZMod p)ˣ) :\n  IsPrimitiveRoot (a : ZMod p) (p - 1) ↔\n    IsPrimitiveRoot (- (a : ZMod p)) ((p - 1) / 2) := sorry",
+  "cand": "theorem Ireland_Rosen_exercise_4_5 {p t : ℕ} (hp : p.Prime) (hpt : p = 4 * t + 3)\n    (a : ZMod p) :\n    IsPrimitiveRoot a (p - 1) ↔ orderOf (-a) = (p - 1) / 2 := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 187,
+  "sheet_item": 171
+ },
+ {
+  "key": "pnv-test-693",
+  "part": "G",
+  "set": "A",
+  "nl": "Prove that if $a \\in \\mathbf{F}$, $v \\in V$, and $av = 0$, then $a = 0$ or $v = 0$.",
+  "ref": "theorem exercise_1_4 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] (v : V) (a : F): a • v = 0 → a = 0 ∨ v = 0 := sorry",
+  "cand": "theorem dummy {F : Type*} [Field F] {V : Type*} [AddCommGroup V] [Module F V] (a : F) (v : V) : a • v = 0 ↔ a = 0 ∨ v = 0 := sorry",
+  "f_cell": "faithful_reject",
+  "item": 188,
+  "sheet_item": 172
+ },
+ {
+  "key": "d1-195-2385",
+  "part": "S",
+  "nl": "Prove that $x^3 - 9$ is irreducible in $\\mathbb{F}_{31}$.",
+  "ref": "theorem Artin_exercise_11_4_6c : Irreducible (X^3 - 9 : Polynomial (ZMod 31)) := sorry",
+  "cand": "theorem Artin_exercise_11_4_6c : Irreducible (X ^ 3 - 9 : Polynomial (ZMod 31)) := by sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 189,
+  "sheet_item": 173
+ },
+ {
+  "key": "d1-104-1441",
+  "part": "K",
+  "nl": "Show that 1729 is the smallest positive integer expressible as the sum of two different integral cubes in two ways.",
+  "ref": "theorem Ireland_Rosen_exercise_18_4 :\n    1729 = sInf (fun n => 0 < n ∧\n      ∃ x y z w : ℕ,\n        0 < x ∧ 0 < y ∧ 0 < z ∧ 0 < w ∧\n          x ^ 3 + y ^ 3 = n ∧\n          z ^ 3 + w ^ 3 = n ∧\n            x ≠ y ∧ w ≠ z ∧\n            x ≠ z ∧ x ≠ w ∧\n            y ≠ z ∧ y ≠ w) := sorry",
+  "cand": "theorem Ireland_Rosen_exercise_18_4 :\n    (∃ a b c d : ℤ,\n      a ≠ b ∧ c ≠ d ∧\n      a ^ 3 + b ^ 3 = (1729 : ℤ) ∧ c ^ 3 + d ^ 3 = (1729 : ℤ) ∧\n      ¬ ((a = c ∧ b = d) ∨ (a = d ∧ b = c))) ∧\n    ∀ n : ℕ,\n      0 < n → n < 1729 →\n      ¬ ∃ a b c d : ℤ,\n        a ≠ b ∧ c ≠ d ∧\n        a ^ 3 + b ^ 3 = (n : ℤ) ∧ c ^ 3 + d ^ 3 = (n : ℤ) ∧\n        ¬ ((a = c ∧ b = d) ∨ (a = d ∧ b = c)) := by\n  sorry",
+  "control": "different_closed",
+  "item": 190,
+  "sheet_item": 174
+ },
+ {
+  "key": "pnv-test-1102",
+  "part": "F",
+  "nl": "Suppose that $f$ is holomorphic in an open set $\\Omega$. Prove that if $\\text{Im}(f)$ is constant, then $f$ is constant.",
+  "ref": "theorem exercise_1_13b {f : ℂ → ℂ} (Ω : Set ℂ) (a b : Ω) (h : IsOpen Ω)\n  (hf : DifferentiableOn ℂ f Ω) (hc : ∃ (c : ℝ), ∀ z ∈ Ω, (f z).im = c) :\n  f a = f b := sorry",
+  "cand": "theorem dummy {Ω : Set ℂ} (h : IsOpen Ω) {f : ℂ → ℂ} (hf : AnalyticOn ℂ f Ω) (hc : ∀ z ∈ Ω, (f z).im = (f 0).im) : (∀ z ∈ Ω, f z = f 0) := sorry",
+  "cell": "faithful_reject",
+  "item": 191,
+  "sheet_item": 175
+ },
+ {
+  "key": "pnv-test-983",
+  "part": "F",
+  "nl": "An element $x$ of a ring $R$ is called nilpotent if some power of $x$ is zero. Prove that if $x$ is nilpotent, then $1+x$ is a unit in $R$.",
+  "ref": "theorem exercise_10_1_13 {R : Type*} [Ring R] {x : R}\n  (hx : IsNilpotent x) : IsUnit (1 + x) := sorry",
+  "cand": "theorem dummy {R : Type*} [Ring R] (x : R) (h : ∃ n : ℕ, x ^ n = 0) : IsUnit (1 + x) := sorry",
+  "cell": "faithful_local_accept",
+  "control": true,
+  "item": 192,
+  "sheet_item": 176
+ },
+ {
+  "key": "d1-299-3785",
+  "part": "S",
+  "nl": "Define $f_{n}:[0,1] \\rightarrow \\mathbb{R}$ by the equation $f_{n}(x)=x^{n}$. Show that the sequence $\\left(f_{n}\\right)$ does not converge uniformly.",
+  "ref": "theorem Munkres_exercise_21_6b\n  (f : ℕ → I → ℝ)\n  (h : ∀ x n, f n x = ↑x ^ n) :\n  ¬ ∃ f₀, TendstoUniformly f f₀ atTop := sorry",
+  "cand": "theorem Munkres_exercise_21_6b :\n    ¬ ∃ g : Icc (0:ℝ) 1 → ℝ,\n      TendstoUniformly (fun (n : ℕ) (x : Icc (0:ℝ) 1) => (x:ℝ) ^ n) g atTop := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 193,
+  "sheet_item": 177
+ },
+ {
+  "key": "pnv-test-1429",
+  "part": "F",
+  "nl": "Let $\\left\\{A_{\\alpha}\\right\\}$ be a collection of connected subspaces of $X$; let $A$ be a connected subset of $X$. Show that if $A \\cap A_{\\alpha} \\neq \\varnothing$ for all $\\alpha$, then $A \\cup\\left(\\bigcup A_{\\alpha}\\right)$ is connected.",
+  "ref": "theorem exercise_23_3 {X α : Type*} [TopologicalSpace X]\n  {A : α → Set X}\n  (hAa : ∀ a, IsConnected (A a))\n  (A₀ : Set X)\n  (hA : IsConnected A₀)\n  (h : ∀ a, A₀ ∩ A a ≠ ∅) :\n  IsConnected (A₀ ∪ (⋃ a, A a)) := sorry",
+  "cand": "theorem dummy {X : Type*} [TopologicalSpace X] {A : Set X} {σ : Type*} (A' : σ → Set X) (hA' : ∀ (α : σ), IsConnected (A' α)) (hInt : ∀ (α : σ), (A ∩ A' α) ≠ ∅) : IsConnected (A ∪ (⋃ (α : σ), A' α)) := sorry",
+  "cell": "unfaithful_reject",
+  "control": true,
+  "item": 194,
+  "sheet_item": 178
+ },
+ {
+  "key": "d1-329-4199",
+  "part": "S",
+  "nl": "Let $P_n(x)=1+2 x+3 x^2+\\cdots+n x^{n-1} .$ Prove that the polynomials $P_j(x)$ and $P_k(x)$ are relatively prime for all positive integers $j$ and $k$ with $j \\neq k$.",
+  "ref": "theorem Putnam_exercise_2014_a5\n    (P : ℕ → Polynomial ℚ)\n    (hP : ∀ n, P n = ∑ i : Fin n, (↑(i : ℕ) + 1) * Polynomial.X ^ (i : ℕ)) :\n    ∀ {j k : ℕ}, 0 < j → 0 < k → j ≠ k → IsCoprime (P j) (P k) := sorry",
+  "cand": "theorem Putnam_exercise_2014_a5 (P : ℕ → Polynomial ℂ)\n    (hP : ∀ n, P n = ∑ i ∈ Finset.range n, Polynomial.C ((i : ℂ) + 1) * Polynomial.X ^ i)\n    (j k : ℕ) (hj : 0 < j) (hk : 0 < k) (hjk : j ≠ k) :\n    IsCoprime (P j) (P k) := by sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 195,
+  "sheet_item": 179
+ },
+ {
+  "key": "d1-211-2608",
+  "part": "S",
+  "nl": "Prove the the operation $\\star$ on $\\mathbb{Z}$ defined by $a\\star b=a-b$ is not commutative.",
+  "ref": "theorem Dummit_Foote_exercise_1_1_2a : ∃ a b : ℤ, a - b ≠ b - a := sorry",
+  "cand": "theorem Dummit_Foote_exercise_1_1_2a : ¬ ∀ a b : ℤ, a - b = b - a := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 196,
+  "sheet_item": 180
+ },
+ {
+  "key": "d1-186-2293",
+  "part": "K",
+  "nl": "Prove that every homomorphism of fields is injective.",
+  "ref": "theorem Artin_exercise_3_2_7 {F : Type*} [Field F] {G : Type*} [Field G]\n  (φ : F →+* G) : Injective φ := sorry",
+  "cand": "theorem Artin_exercise_3_2_7 {K L : Type*} [Field K] [Field L] (f : K →+* L) :\n    Function.Injective f := by\n  sorry",
+  "control": "equivalent",
+  "item": 197,
+  "sheet_item": 181
+ },
+ {
+  "key": "d1-285-3630",
+  "part": "S",
+  "nl": "If $p=2^{n}+1$ is a Fermat prime, show that 3 is a primitive root modulo $p$.",
+  "ref": "theorem Ireland_Rosen_exercise_4_6 {p n : ℕ} (hp : p.Prime) (hpn : p = 2 ^ n + 1)\n    (hn : 2 ≤ n) :\n    IsPrimitiveRoot (3 : ZMod p) (p - 1) := sorry",
+  "cand": "theorem Ireland_Rosen_exercise_4_6\n    (n p : ℕ) (hp : p = 2 ^ n + 1) (hprime : Nat.Prime p) (hpgt : 3 < p) :\n    IsPrimitiveRoot (3 : ZMod p) (p - 1) := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 198,
+  "sheet_item": 182
+ },
+ {
+  "key": "d1-153-1955",
+  "part": "S",
+  "nl": "Suppose $k \\geq 3, x, y \\in \\mathbb{R}^k, |x - y| = d > 0$, and $r > 0$. Prove that if $2r > d$, there are infinitely many $z \\in \\mathbb{R}^k$ such that $|z-x|=|z-y|=r$.",
+  "ref": "theorem Rudin_exercise_1_16a\n  (n : ℕ)\n  (d r : ℝ)\n  (x y z : EuclideanSpace ℝ (Fin n)) -- R^n\n  (h₁ : n ≥ 3)\n  (h₂ : ‖x - y‖ = d)\n  (h₃ : d > 0)\n  (h₄ : r > 0)\n  (h₅ : 2 * r > d)\n  : Set.Infinite {z : EuclideanSpace ℝ (Fin n) | ‖z - x‖ = r ∧ ‖z - y‖ = r} := sorry",
+  "cand": "theorem Rudin_exercise_1_16a\n    (k : ℕ) (hk : 3 ≤ k) (x y : EuclideanSpace ℝ (Fin k)) (d r : ℝ)\n    (hd_pos : 0 < d) (hxy : ‖x - y‖ = d) (hr_pos : 0 < r) (h2r : 2 * r > d) :\n    Set.Infinite {z : EuclideanSpace ℝ (Fin k) | ‖z - x‖ = r ∧ ‖z - y‖ = r} := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 199,
+  "sheet_item": 183
+ },
+ {
+  "key": "pnv-test-1038",
+  "part": "F",
+  "nl": "Prove that $\\sum 1/k(\\log(k))^p$ converges when $p > 1$.",
+  "ref": "theorem exercise_3_63a (p : ℝ) (f : ℕ → ℝ) (hp : p > 1)\n  (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)) :\n  ∃ l, Tendsto f atTop (𝓝 l) := sorry",
+  "cand": "theorem dummy {p : ℝ} (hp : 1 < p) : Tendsto (fun (k : ℕ) => 1/(k * (log k)^p) : ℕ → ℝ) atTop (𝓝 0) := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 200,
+  "sheet_item": 184
+ },
+ {
+  "key": "pnv-test-796",
+  "part": "G",
+  "set": "B",
+  "nl": "Use Lagrange's Theorem in the multiplicative group $(\\mathbb{Z} / p \\mathbb{Z})^{\\times}$to prove Fermat's Little Theorem: if $p$ is a prime then $a^{p} \\equiv a(\\bmod p)$ for all $a \\in \\mathbb{Z}$.",
+  "ref": "theorem exercise_3_2_16 (p : ℕ) (hp : Nat.Prime p) (a : ℤ) :\n  a ^ p ≡ a [ZMOD p] := sorry",
+  "cand": "theorem dummy (p : ℕ) [Fact p.Prime] (a : ℕ) : a ^ p ≡ a [MOD p] := sorry",
+  "item": 201,
+  "sheet_item": 10
+ },
+ {
+  "key": "d1-78-1078",
+  "part": "K",
+  "nl": "Prove that a group of order $p^2$, $p$ a prime, has a normal subgroup of order $p$.",
+  "ref": "theorem Herstein_exercise_2_5_44 {G : Type*} [Group G] [Fintype G] {p : ℕ}\n  (hp : Nat.Prime p) (hG : card G = p^2) :\n  ∃ (N : Subgroup G) (Fin : Fintype N), @card N Fin = p ∧ N.Normal := sorry",
+  "cand": "theorem Herstein_exercise_2_5_44 {G : Type*} [Group G] [Fintype G] {p : ℕ}\n    (hp : Nat.Prime p) (hG : card G = p ^ 2) :\n    ∃ (N : Subgroup G) (Fin : Fintype N), @card N Fin = p ∧ N.Normal := by sorry",
+  "control": "equivalent",
+  "item": 202,
+  "sheet_item": 185
+ },
+ {
+  "key": "d1-118-1559",
+  "part": "S",
+  "nl": "Let $\\left\\{A_{n}\\right\\}$ be a sequence of connected subspaces of $X$, such that $A_{n} \\cap A_{n+1} \\neq \\varnothing$ for all $n$. Show that $\\bigcup A_{n}$ is connected.",
+  "ref": "theorem Munkres_exercise_23_2 {X : Type*}\n  [TopologicalSpace X] {A : ℕ → Set X} (hA : ∀ n, IsConnected (A n))\n  (hAn : ∀ n, A n ∩ A (n + 1) ≠ ∅) :\n  IsConnected (⋃ n, A n) := sorry",
+  "cand": "theorem Munkres_exercise_23_2 {X : Type*}\n  [TopologicalSpace X] [TopologicalSpace X] {A : ℕ → Set X}\n  (hA : ∀ n, IsConnected (A n))\n  (hAn : ∀ n, A n ∩ A (n + 1) ≠ ∅) :\n  IsConnected (⋃ n, A n) := by sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 203,
+  "sheet_item": 186
+ },
+ {
+  "key": "d1-59-829",
+  "part": "S",
+  "nl": "Prove that if $R$ is an integral domain and $x^{2}=1$ for some $x \\in R$ then $x=\\pm 1$.",
+  "ref": "theorem Dummit_Foote_exercise_7_1_11 {R : Type*} [CommRing R] [IsDomain R]\n  {x : R} (hx : x^2 = 1) : x = 1 ∨ x = -1 := sorry",
+  "cand": "theorem Dummit_Foote_exercise_7_1_11 {R : Type*} [Ring R] [IsDomain R]\n    {x : R} (hx : x ^ 2 = 1) : x = 1 ∨ x = -1 := by sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 204,
+  "sheet_item": 187
+ },
+ {
+  "key": "d1-128-1661",
+  "part": "J",
+  "nl": "Show that if $X$ has a countable dense subset, every collection of disjoint open sets in $X$ is countable.",
+  "ref": "theorem Munkres_exercise_30_13 {X : Type*} [TopologicalSpace X]\n  (h : ∃ (s : Set X), Countable s ∧ Dense s) (U : Set (Set X))\n  (hU : ∀ (x y : Set X), x ∈ U → y ∈ U → x ≠ y → x ∩ y = ∅)\n  (hUopen : ∀ (u : Set X), u ∈ U → IsOpen u) :\n  Countable U := sorry",
+  "cand": "theorem Munkres_exercise_30_13 (X : Type*) [TopologicalSpace X] [SeparableSpace X]\n    (S : Set (Set X))\n    (h_open : ∀ U ∈ S, IsOpen U)\n    (h_nonempty : ∀ U ∈ S, U.Nonempty)\n    (h_disjoint : ∀ U ∈ S, ∀ V ∈ S, U ≠ V → Disjoint U V) :\n    S.Countable := by\n  sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 205,
+  "sheet_item": 188
+ },
+ {
+  "key": "d1-365-4574",
+  "part": "S",
+  "nl": "Show that $ \\int_{-\\infty}^{\\infty} \\frac{x \\sin x}{x^2 + a^2} dx = \\pi e^{-a}$ for $a > 0$.",
+  "ref": "theorem Shakarchi_exercise_3_4 (a : ℝ) (ha : 0 < a) :\n    Tendsto (λ y => ∫ x in -y..y, x * Real.sin x / (x ^ 2 + a ^ 2))\n    atTop (𝓝 (Real.pi * (Real.exp (-a)))) := sorry",
+  "cand": "theorem Shakarchi_exercise_3_4 (a : ℝ) (ha : 0 < a) :\n    Tendsto (fun p : ℝ × ℝ => ∫ x in (-p.1)..p.2, x * Real.sin x / (x ^ 2 + a ^ 2))\n      (atTop ×ˢ atTop) (𝓝 (π * Real.exp (-a))) := by sorry",
+  "selectors": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 206,
+  "sheet_item": 189
+ },
+ {
+  "key": "pnv-test-430",
+  "part": "F",
+  "nl": "Prove that the products $a b$ and $b a$ are conjugate elements in a group.",
+  "ref": "theorem exercise_2_3_2 {G : Type*} [Group G] (a b : G) :\n  ∃ g : G, b* a = g * a * b * g⁻¹ := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] {a b : G} (h : Commute a b) : IsConj a b := sorry",
+  "cell": "unfaithful_reject",
+  "control": true,
+  "item": 207,
+  "sheet_item": 190
+ },
+ {
+  "key": "pnv-test-91",
+  "part": "F",
+  "nl": "If $a, b$ are integers and if $a$ divides $b$ in the ring of Gauss integers, then $a$ divides $b$ in $\\mathbb{Z}$.",
+  "ref": "theorem exercise_11_2_13 (a b : ℤ) :\n  (ofInt a : GaussianInt) ∣ ofInt b → a ∣ b := sorry",
+  "cand": "theorem dummy {a b : ℤ} (h : a ∣ b) : a ∣ b := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 208,
+  "sheet_item": 2
+ },
+ {
+  "key": "d1-88-1196",
+  "part": "S",
+  "nl": "Let $F = \\mathbb{Z}_p$ be the field of integers $\\mod p$, where $p$ is a prime, and let $q(x) \\in F[x]$ be irreducible of degree $n$. Show that $F[x]/(q(x))$ is a field having at exactly $p^n$ elements.",
+  "ref": "theorem Herstein_exercise_4_5_16 {p n: ℕ} (hp : Nat.Prime p)\n  {q : Polynomial (ZMod p)} (hq : Irreducible q) (hn : q.degree = n) :\n  (∃ is_fin : Fintype $ Polynomial (ZMod p) ⧸ span ({q}),\n  @card (Polynomial (ZMod p) ⧸ span {q}) is_fin = p ^ n) ∧\n  IsField (Polynomial (ZMod p) ⧸ span {q}) := sorry",
+  "cand": "theorem Herstein_exercise_4_5_16\n    (p n : ℕ) [Fact p.Prime] (q : Polynomial (ZMod p))\n    (hq : Irreducible q) (hdeg : q.natDegree = n) :\n    IsField (Polynomial (ZMod p) ⧸ Ideal.span {q}) ∧\n      Nat.card (Polynomial (ZMod p) ⧸ Ideal.span {q}) = p ^ n := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 209,
+  "sheet_item": 191
+ },
+ {
+  "key": "pnv-test-311",
+  "part": "G",
+  "set": "A",
+  "nl": "Let $H$ be a subgroup of the additive group of rational numbers with the property that $1 / x \\in H$ for every nonzero element $x$ of $H$. Prove that $H=0$ or $\\mathbb{Q}$.",
+  "ref": "theorem exercise_2_1_13 (H : AddSubgroup ℚ) {x : ℚ}\n  (hH : (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H):\n  H = ⊥ ∨ H = ⊤ := sorry",
+  "cand": "theorem dummy {H : AddSubgroup ℚ} (h : ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H) : H = ⊥ ∨ H = ⊤ := sorry",
+  "f_cell": "faithful_reject",
+  "item": 210,
+  "sheet_item": 8
+ },
+ {
+  "key": "d1-20-307",
+  "part": "J",
+  "nl": "Suppose $T \\in \\mathcal{L}(V)$ is such that every vector in $V$ is an eigenvector of $T$. Prove that $T$ is a scalar multiple of the identity operator.",
+  "ref": "theorem Axler_exercise_5_12 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] {S : End F V}\n  (hS : ∀ v : V, ∃ c : F, v ∈ eigenspace S c) :\n  ∃ c : F, S = c • LinearMap.id := sorry",
+  "cand": "theorem Axler_exercise_5_12\n    {𝕜 V : Type*} [Field 𝕜] [AddCommGroup V] [Module 𝕜 V] [FiniteDimensional 𝕜 V]\n    (T : V →ₗ[𝕜] V)\n    (h : ∀ v : V, v ≠ 0 → ∃ a : 𝕜, T v = a • v) :\n    ∃ c : 𝕜, T = c • (1 : V →ₗ[𝕜] V) := by\n  sorry",
+  "rewarded_by": [
+   "closed"
+  ],
+  "item": 211,
+  "sheet_item": 192
+ },
+ {
+  "key": "d1-14-193",
+  "part": "K",
+  "nl": "Prove that if a prime integer $p$ has the form $2^r+1$, then it actually has the form $2^{2^k}+1$.",
+  "ref": "theorem Artin_exercise_13_4_10\n    {p : ℕ} (hp : Nat.Prime p)\n    (h : ∃ r : ℕ, 1 ≤ r ∧ p = 2 ^ r + 1) :\n    ∃ k : ℕ, p = 2 ^ (2 ^ k) + 1 := sorry",
+  "cand": "theorem Artin_exercise_13_4_10 (p : ℕ) (hp : Nat.Prime p) :\n    (∃ r : ℕ, p = 2^r + 1) → (∃ k : ℕ, p = 2^(2^k) + 1) := by\n  sorry",
+  "control": "different_closed",
+  "item": 212,
+  "sheet_item": 193
+ },
+ {
+  "key": "d1-141-1826",
+  "part": "K",
+  "nl": "Prove that $\\sum 1/k(\\log(k))^p$ diverges when $p \\leq 1$.",
+  "ref": "theorem Pugh_exercise_3_63b (p : ℝ) (f : ℕ → ℝ) (hp : p ≤ 1)\n    (h : f = fun k : ℕ => 1 / (k * (Real.log k) ^ p)) :\n    ¬ Summable f := sorry",
+  "cand": "theorem Pugh_exercise_3_63b (p : ℝ) (hp : p ≤ 1) :\n  ¬ Summable (fun k : ℕ => (1 / (k * (log k) ^ p))) :=\nby sorry",
+  "control": "equivalent",
+  "item": 213,
+  "sheet_item": 194
+ },
+ {
+  "key": "d1-82-1152",
+  "part": "J",
+  "nl": "If $P$ is a $p$-Sylow subgroup of $G$ and $P \\triangleleft G$, prove that $P$ is the only $p$-Sylow subgroup of $G$.",
+  "ref": "theorem Herstein_exercise_2_11_6 {G : Type*} [Group G] {p : ℕ} (hp : Nat.Prime p)\n  {P : Sylow p G} (hP : P.Normal) :\n  ∀ (Q : Sylow p G), P = Q := sorry",
+  "cand": "theorem Herstein_exercise_2_11_6 {G : Type*} [Group G] [Finite G] {p : ℕ} (hp : Nat.Prime p)\n    {P : Sylow p G} (hP : (P : Subgroup G).Normal) :\n    ∀ (Q : Sylow p G), P = Q := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 214,
+  "sheet_item": 195
+ },
+ {
+  "key": "d1-28-413",
+  "part": "J",
+  "nl": "Prove that the addition of residue classes $\\mathbb{Z}/n\\mathbb{Z}$ is associative.",
+  "ref": "theorem Dummit_Foote_exercise_1_1_3 (n : ℕ) : \n  ∀ (x y z : ZMod n), (x + y) + z = x + (y + z) := sorry",
+  "cand": "theorem Dummit_Foote_exercise_1_1_3 (n : ℕ) (hn : 0 < n) :\n  ∀ a b c : ZMod n, (a + b) + c = a + (b + c) := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 215,
+  "sheet_item": 196
+ },
+ {
+  "key": "d1-164-2030",
+  "part": "S",
+  "nl": "If $f$ is a continuous mapping of a metric space $X$ into a metric space $Y$, prove that $f(\\overline{E}) \\subset \\overline{f(E)}$ for every set $E \\subset X$. ($\\overline{E}$ denotes the closure of $E$).",
+  "ref": "theorem Rudin_exercise_4_2a\n  {α : Type} [MetricSpace α]\n  {β : Type} [MetricSpace β]\n  (f : α → β)\n  (h₁ : Continuous f)\n  : ∀ (x : Set α), f '' (closure x) ⊆ closure (f '' x) := sorry",
+  "cand": "theorem Rudin_exercise_4_2a\n  {α : Type*} [MetricSpace α]\n  {β : Type*} [MetricSpace β]\n  (f : α → β)\n  (h₁ : Continuous f)\n  : ∀ (x : Set α), f '' (closure x) ⊆ closure (f '' x) := by sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 216,
+  "sheet_item": 197
+ },
+ {
+  "key": "pnv-test-1081",
+  "part": "F",
+  "nl": "Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.",
+  "ref": "theorem exercise_2_92 {α : Type*} [TopologicalSpace α]\n  {s : ℕ → Set α}\n  (hs : ∀ i, IsCompact (s i))\n  (hne : ∀ i, (s i).Nonempty)\n  (hs : ∀ i, (s i) ⊇ (s (i + 1))) :\n  (⋂ i, s i).Nonempty := sorry",
+  "cand": "theorem dummy {X : Type*} [TopologicalSpace X] [CompactSpace X] {K : ℕ → Set X} (hK : ∀ n, IsCompact (K n)) (hK1 : ∀ n, K n ≠ ∅) (hK2 : ∀ m n, m ≥ n → K m ⊆ K n) : ∃ x, ∀ n, x ∈ K n := sorry",
+  "cell": "faithful_reject",
+  "item": 217,
+  "sheet_item": 198
+ },
+ {
+  "key": "pnv-test-1144",
+  "part": "F",
+  "nl": "If $p=2^{n}+1$ is a Fermat prime, show that 3 is a primitive root modulo $p$.",
+  "ref": "theorem exercise_4_6 {p n : ℕ} (hp : p.Prime) (hpn : p = 2^n + 1) :\n  IsPrimitiveRoot (3 : ZMod p) p := sorry",
+  "cand": "theorem dummy {p : ℕ} (hp : ∃ n : ℕ, p = 2^n + 1 ∧ Nat.Prime p) : IsPrimitiveRoot 3 p := sorry",
+  "cell": "unfaithful_reject",
+  "control": true,
+  "item": 218,
+  "sheet_item": 199
+ },
+ {
+  "key": "d1-76-1042",
+  "part": "S",
+  "nl": "Suppose that $|G| = pm$, where $p \\nmid m$ and $p$ is a prime. If $H$ is a normal subgroup of order $p$ in $G$, prove that $H$ is characteristic.",
+  "ref": "theorem Herstein_exercise_2_5_30 {G : Type*} [Group G] [Fintype G]\n  {p m : ℕ} (hp : Nat.Prime p) (hp1 : ¬ p ∣ m) (hG : card G = p*m)\n  {H : Subgroup G} [Fintype H] [H.Normal] (hH : card H = p):\n  Subgroup.Characteristic H := sorry",
+  "cand": "theorem Herstein_exercise_2_5_30 {G : Type*} [Group G] [Fintype G]\n    {p m : ℕ} (hp : Nat.Prime p) (hp1 : ¬ p ∣ m) (hG : Fintype.card G = p * m)\n    {H : Subgroup G} [H.Normal] (hH1 : Nat.card H = p) :\n    H.Characteristic := by sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 219,
+  "sheet_item": 200
+ },
+ {
+  "key": "pnv-test-213",
+  "part": "F",
+  "nl": "Prove that the products $a b$ and $b a$ are conjugate elements in a group.",
+  "ref": "theorem exercise_2_3_2 {G : Type*} [Group G] (a b : G) :\n  ∃ g : G, b* a = g * a * b * g⁻¹ := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] (a b : G) : ∃ c : G, c * a * c⁻¹ = b * a * b⁻¹ := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 220,
+  "sheet_item": 201
+ },
+ {
+  "key": "d1-34-474",
+  "part": "J",
+  "nl": "If $x$ is an element of infinite order in $G$, prove that the elements $x^{n}, n \\in \\mathbb{Z}$ are all distinct.",
+  "ref": "theorem Dummit_Foote_exercise_1_1_34 {G : Type*} [Group G] {x : G}\n  (hx_inf : orderOf x = 0) (n m : ℤ) (hnm : n ≠ m) :\n  x ^ n ≠ x ^ m := sorry",
+  "cand": "theorem Dummit_Foote_exercise_1_1_34 {G : Type*} [Group G] {x : G}\n    (hx_inf : orderOf x = 0) (n m : ℤ) (h : x ^ n = x ^ m) :\n    n = m := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 221,
+  "sheet_item": 202
+ },
+ {
+  "key": "d1-183-2274",
+  "part": "J",
+  "nl": "Show that there is no holomorphic function $f$ in the unit disc $D$ that extends continuously to $\\partial D$ such that $f(z) = 1/z$ for $z \\in \\partial D$.",
+  "ref": "theorem Shakarchi_exercise_3_22 (D : Set ℂ) (hD : D = ball 0 1) (f : ℂ → ℂ)\n    (hf : DifferentiableOn ℂ f D) (hfc : ContinuousOn f (closure D)) :\n    ¬ ∀ z ∈ (sphere (0 : ℂ) 1), f z = 1 / z := sorry",
+  "cand": "theorem Shakarchi_exercise_3_22 :\n    ¬ ∃ f : ℂ → ℂ, DifferentiableOn ℂ f (ball (0 : ℂ) 1) ∧\n      ContinuousOn f (closedBall (0 : ℂ) 1) ∧\n      ∀ z ∈ sphere (0 : ℂ) 1, f z = 1 / z := by sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 222,
+  "sheet_item": 203
+ },
+ {
+  "key": "d1-115-1512",
+  "part": "K",
+  "nl": "Define $f_{n}:[0,1] \\rightarrow \\mathbb{R}$ by the equation $f_{n}(x)=x^{n}$. Show that the sequence $\\left(f_{n}(x)\\right)$ converges for each $x \\in[0,1]$.",
+  "ref": "theorem Munkres_exercise_21_6a\n  (f : ℕ → I → ℝ)\n  (h : ∀ x n, f n x = ↑x ^ n) :\n  ∀ x, ∃ y, Tendsto (λ n => f n x) atTop (𝓝 y) := sorry",
+  "cand": "theorem Munkres_exercise_21_6a\n    (f : ℕ → Set.Icc (0 : ℝ) 1 → ℝ)\n    (hf : ∀ (n : ℕ) (x : Set.Icc (0 : ℝ) 1), f n x = (x : ℝ) ^ n) :\n    ∀ x : Set.Icc (0 : ℝ) 1, ∃ y : ℝ, Tendsto (fun n => f n x) atTop (𝓝 y) := by\n  sorry",
+  "control": "equivalent",
+  "item": 223,
+  "sheet_item": 204
+ },
+ {
+  "key": "pnv-test-254",
+  "part": "F",
+  "nl": "If $a, b$ are integers and if $a$ divides $b$ in the ring of Gauss integers, then $a$ divides $b$ in $\\mathbb{Z}$.",
+  "ref": "theorem exercise_11_2_13 (a b : ℤ) :\n  (ofInt a : GaussianInt) ∣ ofInt b → a ∣ b := sorry",
+  "cand": "theorem dummy {a b : ℤ} (hab : a ∣ b) : a ∣ b := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 224,
+  "sheet_item": 2
+ },
+ {
+  "key": "pnv-test-1135",
+  "part": "G",
+  "set": "A",
+  "nl": "If $G$ is a finite group, prove that, given $a \\in G$, there is a positive integer $n$, depending on $a$, such that $a^n = e$.",
+  "ref": "theorem exercise_2_1_26 {G : Type*} [Group G]\n  [Fintype G] (a : G) : ∃ (n : ℕ), n > 0 ∧ a ^ n = 1 := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] [Finite G] (a : G) : ∃ n : ℕ, n ≠ 0 ∧ a ^ n = 1 := sorry",
+  "f_cell": "faithful_reject",
+  "item": 225,
+  "sheet_item": 205
+ },
+ {
+  "key": "d1-319-4057",
+  "part": "S",
+  "nl": "Prove that a set $U \\subset M$ is open if and only if none of its points are limits of its complement.",
+  "ref": "theorem Pugh_exercise_2_26 {M : Type*} [TopologicalSpace M]\n  (U : Set M) : IsOpen U ↔ ∀ x ∈ U, ¬ ClusterPt x (𝓟 Uᶜ) := sorry",
+  "cand": "theorem Pugh_exercise_2_26 {M : Type*} [MetricSpace M] (U : Set M) :\n    IsOpen U ↔ ∀ p ∈ U, ¬ ∃ x : ℕ → M, (∀ n, x n ∈ Uᶜ) ∧ Tendsto x atTop (𝓝 p) := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 226,
+  "sheet_item": 206
+ },
+ {
+  "key": "pnv-test-1098",
+  "part": "G",
+  "set": "B",
+  "nl": "Prove that the multiplication of residue class $\\mathbb{Z}/n\\mathbb{Z}$ is associative.",
+  "ref": "theorem exercise_1_1_4 (n : ℕ) (a b c : ZMod n) :\n  (a * b) * c = a * (b * c) := sorry",
+  "cand": "theorem dummy (n : ℕ) (a b c : ℤ) : (a * b)%n * c %n = a * (b * c) %n := sorry",
+  "item": 227,
+  "sheet_item": 207
+ },
+ {
+  "key": "d1-82-1151",
+  "part": "S",
+  "nl": "If $P$ is a $p$-Sylow subgroup of $G$ and $P \\triangleleft G$, prove that $P$ is the only $p$-Sylow subgroup of $G$.",
+  "ref": "theorem Herstein_exercise_2_11_6 {G : Type*} [Group G] {p : ℕ} (hp : Nat.Prime p)\n  {P : Sylow p G} (hP : P.Normal) :\n  ∀ (Q : Sylow p G), P = Q := sorry",
+  "cand": "theorem Herstein_exercise_2_11_6 {G : Type*} [Group G] [Fintype G] {p : ℕ}\n    [hp : Fact p.Prime] {P : Sylow p G} (hP : (P : Subgroup G).Normal) :\n    ∀ (Q : Sylow p G), Q = P := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 228,
+  "sheet_item": 208
+ },
+ {
+  "key": "pnv-test-1072",
+  "part": "G",
+  "set": "C",
+  "nl": "If $\\left\\{E_{n}\\right\\}$ is a sequence of closed nonempty and bounded sets in a complete metric space $X$, if $E_{n} \\supset E_{n+1}$, and if $\\lim _{n \\rightarrow \\infty} \\operatorname{diam} E_{n}=0,$ then $\\bigcap_{1}^{\\infty} E_{n}$ consists of exactly one point.",
+  "ref": "theorem exercise_3_21\n  {X : Type*} [MetricSpace X] [CompleteSpace X]\n  (E : ℕ → Set X)\n  (hEcl : ∀ n, IsClosed (E n))\n  (hEne : ∀ n, (E n).Nonempty)\n  (hEbdd : ∀ n, Bornology.IsBounded (E n))\n  (hE : ∀ n, E n ⊇ E (n + 1))\n  (hE' : Tendsto (λ n => Metric.diam (E n)) atTop (𝓝 0)) :\n  ∃ a, Set.iInter E = {a} := sorry",
+  "cand": "theorem dummy {X : Type u} [MetricSpace X] {s t : Set X} (hs : IsClosed s) (ht : IsClosed t) (h's : Set.Nonempty s) (h't : Set.Nonempty t) : (∃ x ∈ s, ∃ y ∈ t, x = y) ↔ s = t := sorry",
+  "item": 229,
+  "sheet_item": 209
+ },
+ {
+  "key": "pnv-test-453",
+  "part": "G",
+  "set": "B",
+  "nl": "Prove that the union of two subspaces of $V$ is a subspace of $V$ if and only if one of the subspaces is contained in the other.",
+  "ref": "theorem exercise_1_9 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] (U W : Submodule F V):\n  (∃ U' : Submodule F V, U'.carrier = ↑U ∪ ↑W) ↔ (U ≤ W ∨ W ≤ U) := sorry",
+  "cand": "theorem dummy {V : Type*} [AddCommGroup V] [Module ℤ V] (W₁ W₂ : Submodule ℤ V) : (W₁ ≤ W₂) ∧ (W₂ ≤ W₁) → (W₁ ⊔ W₂ = W₁) ∨ (W₁ ⊔ W₂ = W₂) := sorry",
+  "item": 230,
+  "sheet_item": 210
+ },
+ {
+  "key": "pnv-test-571",
+  "part": "F",
+  "nl": "Suppose $E\\subset\\mathbb{R}^k$ is uncountable, and let $P$ be the set of condensation points of $E$. Prove that at most countably many points of $E$ are not in $P$.",
+  "ref": "theorem exercise_2_27b (k : ℕ) (E P : Set (EuclideanSpace ℝ (Fin k)))\n  (hE : ¬ Set.Countable E)\n  (hP : P = {x | ∀ U ∈ 𝓝 x, ¬ Set.Countable (U ∩ E)}) :\n  Set.Countable (E \\ P) := sorry",
+  "cand": "theorem dummy (E : Set ℝ) [hs : Uncountable E] : Set.Countable (frontier E \\ E) := sorry",
+  "cell": "unfaithful_reject",
+  "control": true,
+  "item": 231,
+  "sheet_item": 211
+ },
+ {
+  "key": "d1-48-666",
+  "part": "S",
+  "nl": "Let $G$ be a transitive permutation group on the finite set $A$ with $|A|>1$. Show that there is some $\\sigma \\in G$ such that $\\sigma(a) \\neq a$ for all $a \\in A$.",
+  "ref": "theorem Dummit_Foote_exercise_4_3_26 {α : Type*} [Fintype α] (ha : Fintype.card α > 1)\n  (G : Subgroup (Equiv.Perm α))\n  (h_tran : ∀ a b : α, ∃ σ : G, (σ : Equiv.Perm α) a = b) :\n  ∃ σ : G, ∀ a : α, (σ : Equiv.Perm α) a ≠ a := sorry",
+  "cand": "theorem Dummit_Foote_exercise_4_3_26 {G : Type*} [Group G] {A : Type*} [Fintype A] (Gsub : Subgroup (Equiv.Perm A)) \n  (hG : ∀ a b : A, ∃ σ ∈ Gsub, σ a = b) (hne : Fintype.card A > 1) :\n  ∃ σ ∈ Gsub, ∀ a : A, σ a ≠ a := by sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 232,
+  "sheet_item": 212
+ },
+ {
+  "key": "pnv-test-766",
+  "part": "F",
+  "nl": "Consider a prime $p$ of the form $4 t+1$. Show that $a$ is a primitive root modulo $p$ iff $-a$ is a primitive root modulo $p$.",
+  "ref": "theorem exercise_4_4 {p t: ℕ} (hp0 : p.Prime) (hp1 : p = 4*t + 1)\n  (a : ZMod p) :\n  IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p := sorry",
+  "cand": "theorem dummy {p : ℕ} [hp : Fact p.Prime] (hp1 : p % 4 = 1) (a : ℤ) : IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p := sorry",
+  "cell": "unfaithful_reject",
+  "control": true,
+  "item": 233,
+  "sheet_item": 213
+ },
+ {
+  "key": "pnv-test-137",
+  "part": "F",
+  "nl": "Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.",
+  "ref": "theorem exercise_2_92 {α : Type*} [TopologicalSpace α]\n  {s : ℕ → Set α}\n  (hs : ∀ i, IsCompact (s i))\n  (hne : ∀ i, (s i).Nonempty)\n  (hs : ∀ i, (s i) ⊇ (s (i + 1))) :\n  (⋂ i, s i).Nonempty := sorry",
+  "cand": "theorem dummy {X : Type*} [TopologicalSpace X] [CompactSpace X] {K : ℕ → Set X} (hK : ∀ n, IsCompact (K n)) (hK_decreasing : ∀ n, K n ⊇ K (n + 1)) (hK_nonempty : ∀ n, Set.Nonempty (K n)) : ∃ x : X, ∀ n, x ∈ K n := sorry",
+  "cell": "faithful_reject",
+  "item": 234,
+  "sheet_item": 214
+ },
+ {
+  "key": "pnv-test-1308",
+  "part": "F",
+  "nl": "Assume that $A, B$ are compact, disjoint, nonempty subsets of $M$. Prove that there are $a_0 \\in A$ and $b_0 \\in B$ such that for all $a \\in A$ and $b \\in B$ we have $d(a_0, b_0) \\leq d(a, b)$.",
+  "ref": "theorem exercise_2_46 {M : Type*} [MetricSpace M]\n  {A B : Set M} (hA : IsCompact A) (hB : IsCompact B)\n  (hAB : Disjoint A B) (hA₀ : A ≠ ∅) (hB₀ : B ≠ ∅) :\n  ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a : M) (b : M),\n  a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b := sorry",
+  "cand": "theorem dummy {M : Type*} [MetricSpace M] {A B : Set M} (hA : CompactSpace A) (hB : CompactSpace B) (hA_nonempty : A.Nonempty) (hB_nonempty : B.Nonempty) (hA_disj_B : Disjoint A B) : ∃ a₀ ∈ A, ∃ b₀ ∈ B, ∀ a ∈ A, ∀ b ∈ B, dist a₀ b₀ ≤ dist a b := sorry",
+  "cell": "faithful_local_accept",
+  "control": true,
+  "item": 235,
+  "sheet_item": 215
+ },
+ {
+  "key": "pnv-test-809",
+  "part": "F",
+  "nl": "Suppose $f$ is defined and differentiable for every $x>0$, and $f^{\\prime}(x) \\rightarrow 0$ as $x \\rightarrow+\\infty$. Put $g(x)=f(x+1)-f(x)$. Prove that $g(x) \\rightarrow 0$ as $x \\rightarrow+\\infty$.",
+  "ref": "theorem exercise_5_5\n  {f : ℝ → ℝ}\n  (hfd : DifferentiableOn ℝ f (Ioi 0))\n  (hf : Tendsto (deriv f) atTop (𝓝 0)) :\n  Tendsto (λ x => f (x + 1) - f x) atTop (𝓝 0) := sorry",
+  "cand": "theorem dummy {f : ℝ → ℝ} (h_diff : ∀ x > 0, DifferentiableAt ℝ f x) (h_tendsto : Tendsto (fun x => deriv f x) atTop (𝓝 0)) : Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) := sorry",
+  "cell": "faithful_local_accept",
+  "control": true,
+  "item": 236,
+  "sheet_item": 14
+ },
+ {
+  "key": "pnv-test-1083",
+  "part": "F",
+  "nl": "If $G$ is a group in which $(a b)^{i}=a^{i} b^{i}$ for three consecutive integers $i$, prove that $G$ is abelian.",
+  "ref": "theorem exercise_2_2_3 {G : Type*} [Group G]\n  {P : ℕ → Prop} {hP : P = λ i => ∀ a b : G, (a*b)^i = a^i * b^i}\n  (hP1 : ∃ n : ℕ, P n ∧ P (n+1) ∧ P (n+2)) : \n  ∀ a b : G, a*b = b*a := sorry",
+  "cand": "theorem dummy {G : Type*} [Group G] (h : ∀ a b : G, ∀ i j k : ℤ, (a * b) ^ i * (a * b) ^ j = (a ^ i) * (b ^ i) * (a ^ j) * (b ^ j)) : ∀ a b : G, a * b = b * a := sorry",
+  "cell": "unfaithful_local_accept",
+  "item": 237,
+  "sheet_item": 216
+ },
+ {
+  "key": "d1-218-2658",
+  "part": "S",
+  "nl": "Prove that if $\\Omega=\\{1,2,3, \\ldots\\}$ then $S_{\\Omega}$ is an infinite group",
+  "ref": "theorem Dummit_Foote_exercise_1_3_8 : Infinite (Equiv.Perm ℕ) := sorry",
+  "cand": "theorem Dummit_Foote_exercise_1_3_8 : Infinite (Equiv.Perm ℕ+) := by\n  sorry",
+  "selectors": [
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 238,
+  "sheet_item": 217
+ },
+ {
+  "key": "pnv-test-406",
+  "part": "G",
+  "set": "B",
+  "nl": "If $a \\in K$ is such that $a^2$ is algebraic over the subfield $F$ of $K$, show that a is algebraic over $F$.",
+  "ref": "theorem exercise_5_3_7 {K : Type*} [Field K] {F : Subfield K}\n  {a : K} (ha : IsAlgebraic F (a ^ 2)) : IsAlgebraic F a := sorry",
+  "cand": "theorem dummy {K : Type*} [Field K] {F : Type*} [Field F] [Algebra F K] (a : K) (ha : IsAlgebraic F (a ^ 2)) : IsAlgebraic F a := sorry",
+  "item": 239,
+  "sheet_item": 67
+ },
+ {
+  "key": "pnv-test-925",
+  "part": "F",
+  "nl": "Show that $(p - 1)/2$ of the numbers $1, 2, \\ldots, p - 1$ are quadratic residues and $(p - 1)/2$ are quadratic nonresidues $\\mod p$.",
+  "ref": "theorem exercise_4_4_9 (p : ℕ) (hp : Nat.Prime p) (hodd : p % 2 = 1) :\n  (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ∃ x : ZMod p, x^2 = q) ∧\n  (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ¬ ∃ x : ZMod p, x^2 = q) := sorry",
+  "cand": "theorem dummy (p : ℕ) [Fact (Nat.Prime p)] : (p - 1)/2 = ((Finset.range (p - 1)).filter (fun x : ℕ => x^2 ≡ 1 [MOD p])).card := sorry",
+  "cell": "unfaithful_reject",
+  "control": true,
+  "item": 240,
+  "sheet_item": 218
+ },
+ {
+  "key": "d1-1-0",
+  "part": "S",
+  "nl": "Let $H$ be the subgroup generated by two elements $a, b$ of a group $G$. Prove that if $a b=b a$, then $H$ is an abelian group.",
+  "ref": "theorem Artin_exercise_2_2_9 {G : Type*} [Group G] {a b : G}\n  (h : a * b = b * a) :\n  ∀ x y : closure {x | x = a ∨ x = b}, x * y = y * x := sorry",
+  "cand": "theorem Artin_exercise_2_2_9 {G : Type*} [Group G] (a b : G)\n    (H : Subgroup G) (hH : H = Subgroup.closure ({a, b} : Set G))\n    (hab : a * b = b * a) : ∀ x y : H, x * y = y * x := by\n  sorry",
+  "selectors": [
+   "closed",
+   "ours"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 241,
+  "sheet_item": 219
+ },
+ {
+  "key": "d1-360-4548",
+  "part": "S",
+  "nl": "Suppose that $f$ is holomorphic in an open set $\\Omega$. Prove that if $\\text{Im}(f)$ is constant, then $f$ is constant.",
+  "ref": "theorem Shakarchi_exercise_1_13b {f : ℂ → ℂ} {Ω : Set ℂ}\n    (hΩ : IsOpen Ω) (hConn : IsPreconnected Ω)\n    (hf : DifferentiableOn ℂ f Ω)\n    (hc : ∃ c : ℝ, ∀ z ∈ Ω, (f z).im = c) :\n    ∀ a b : Ω, f a = f b := sorry",
+  "cand": "theorem Shakarchi_exercise_1_13b {f : ℂ → ℂ} (Ω : Set ℂ) (hΩ : IsOpen Ω)\n    (hconn : IsPreconnected Ω)\n    (hf : DifferentiableOn ℂ f Ω) (hc : ∃ c : ℝ, ∀ z ∈ Ω, (f z).im = c) :\n    ∃ w : ℂ, ∀ z ∈ Ω, f z = w := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 242,
+  "sheet_item": 220
+ },
+ {
+  "key": "pnv-test-738",
+  "part": "G",
+  "set": "A",
+  "nl": "Prove that $\\sum 1/k(\\log(k))^p$ converges when $p > 1$.",
+  "ref": "theorem exercise_3_63a (p : ℝ) (f : ℕ → ℝ) (hp : p > 1)\n  (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)) :\n  ∃ l, Tendsto f atTop (𝓝 l) := sorry",
+  "cand": "theorem dummy (p : ℝ) (hp : 1 < p) : Summable fun k => 1 / (↑k * (log ↑k) ^ p) := sorry",
+  "f_cell": "faithful_reject",
+  "item": 243,
+  "sheet_item": 221
+ },
+ {
+  "key": "d1-104-1458",
+  "part": "S",
+  "nl": "Show that 1729 is the smallest positive integer expressible as the sum of two different integral cubes in two ways.",
+  "ref": "theorem Ireland_Rosen_exercise_18_4 :\n    1729 = sInf (fun n => 0 < n ∧\n      ∃ x y z w : ℕ,\n        0 < x ∧ 0 < y ∧ 0 < z ∧ 0 < w ∧\n          x ^ 3 + y ^ 3 = n ∧\n          z ^ 3 + w ^ 3 = n ∧\n            x ≠ y ∧ w ≠ z ∧\n            x ≠ z ∧ x ≠ w ∧\n            y ≠ z ∧ y ≠ w) := sorry",
+  "cand": "theorem Ireland_Rosen_exercise_18_4 :\n    IsLeast {n : ℕ | 0 < n ∧ ∃ a b c d : ℕ, 0 < a ∧ a < b ∧ 0 < c ∧ c < d ∧\n      (a, b) ≠ (c, d) ∧ a ^ 3 + b ^ 3 = n ∧ c ^ 3 + d ^ 3 = n} 1729 := by\n  sorry",
+  "selectors": [
+   "judge_opus_ref"
+  ],
+  "rewarded_by": [
+   "judge_opus_ref",
+   "ours"
+  ],
+  "item": 244,
+  "sheet_item": 222
+ },
+ {
+  "key": "pnv-test-1426",
+  "part": "F",
+  "nl": "Use Lagrange's Theorem in the multiplicative group $(\\mathbb{Z} / p \\mathbb{Z})^{\\times}$to prove Fermat's Little Theorem: if $p$ is a prime then $a^{p} \\equiv a(\\bmod p)$ for all $a \\in \\mathbb{Z}$.",
+  "ref": "theorem exercise_3_2_16 (p : ℕ) (hp : Nat.Prime p) (a : ℤ) :\n  a ^ p ≡ a [ZMOD p] := sorry",
+  "cand": "theorem dummy (p : ℕ) (hp : Nat.Prime p) (a : ℤ) : a ^ p ≡ a [ZMOD p] := sorry",
+  "cell": "faithful_local_accept",
+  "control": true,
+  "item": 245,
+  "sheet_item": 223
+ },
+ {
+  "key": "d1-83-1172",
+  "part": "S",
+  "nl": "Show that any subgroup of order $p^{n-1}$ in a group $G$ of order $p^n$ is normal in $G$.",
+  "ref": "theorem Herstein_exercise_2_11_22 {p : ℕ} {n : ℕ} {G : Type*} [Fintype G]\n  [Group G] (hp : Nat.Prime p) (hG : card G = p ^ n) {K : Subgroup G}\n  [Fintype K] (hK : card K = p ^ (n-1)) :\n  K.Normal := sorry",
+  "cand": "theorem Herstein_exercise_2_11_22 {p : ℕ} {n : ℕ} {G : Type*} [Group G] [Finite G]\n    (hp : Nat.Prime p) (hG : Nat.card G = p ^ n) {K : Subgroup G}\n    (hK : Nat.card K = p ^ (n - 1)) :\n    K.Normal := by sorry",
+  "selectors": [
+   "closed"
+  ],
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 246,
+  "sheet_item": 224
+ },
+ {
+  "key": "pnv-test-913",
+  "part": "G",
+  "set": "A",
+  "nl": "Suppose $T \\in \\mathcal{L}(V)$ is such that every subspace of $V$ with dimension $\\operatorname{dim} V-1$ is invariant under $T$. Prove that $T$ is a scalar multiple of the identity operator.",
+  "ref": "theorem exercise_5_13 {F V : Type*} [AddCommGroup V] [Field F]\n  [Module F V] [FiniteDimensional F V] {T : End F V}\n  (hS : ∀ U : Submodule F V, finrank F U = finrank F V - 1 →\n  Submodule.map T U = U) : ∃ c : F, T = c • LinearMap.id := sorry",
+  "cand": "theorem dummy {K V : Type*} [Field K] [AddCommGroup V] [Module K V] [FiniteDimensional K V] (T : End K V) (h : ∀ (U : Subspace K V), finrank K V - 1 = finrank K U → T '' U ≤ U) : ∃ (c : K), T = c • 1 := sorry",
+  "f_cell": "faithful_reject",
+  "item": 247,
+  "sheet_item": 225
+ },
+ {
+  "key": "pnv-test-1370",
+  "part": "F",
+  "nl": "Suppose $g$ is a real function on $R^{1}$, with bounded derivative (say $\\left|g^{\\prime}\\right| \\leq M$ ). Fix $\\varepsilon>0$, and define $f(x)=x+\\varepsilon g(x)$. Prove that $f$ is one-to-one if $\\varepsilon$ is small enough.",
+  "ref": "theorem exercise_5_3 {g : ℝ → ℝ} (hg : Continuous g)\n  (hg' : ∃ M : ℝ, ∀ x : ℝ, |deriv g x| ≤ M) :\n  ∃ N, ∀ ε > 0, ε < N → Function.Injective (λ x : ℝ => x + ε * g x) := sorry",
+  "cand": "theorem dummy {g : ℝ → ℝ} (M : ℝ) (hg : ∀ x, |deriv g x| ≤ M) (ε : ℝ) (hε : 0 < ε) (f : ℝ → ℝ) (hf : ∀ x, f x = x + ε * g x) : ∃ δ > 0, ε < δ → Function.Injective f := sorry",
+  "cell": "faithful_reject",
+  "item": 248,
+  "sheet_item": 82
+ },
+ {
+  "key": "d1-51-728",
+  "part": "J",
+  "nl": "Prove that if $P \\in \\operatorname{Syl}_{p}(G)$ and $H$ is a subgroup of $G$ containing $P$ then $P \\in \\operatorname{Syl}_{p}(H)$.",
+  "ref": "theorem Dummit_Foote_exercise_4_5_1a {p : ℕ} {G : Type*} [Group G]\n  {P : Sylow p G} (H : Subgroup G) (hH : P ≤ H) :\n  IsPGroup p (P.subgroupOf H) ∧\n  ∀ (Q : Subgroup H), IsPGroup p Q → (P.subgroupOf H) ≤ Q → Q = (P.subgroupOf H) := sorry",
+  "cand": "theorem Dummit_Foote_exercise_4_5_1a {p : ℕ} [Fact p.Prime] {G : Type*} [Group G] [Finite G]\n    (P : Sylow p G) (H : Subgroup G) (hPH : (P : Subgroup G) ≤ H) :\n    ∃ Q : Sylow p H, (Q : Subgroup H) = (P : Subgroup G).subgroupOf H := by\n  sorry",
+  "rewarded_by": [
+   "closed",
+   "judge_opus_ref"
+  ],
+  "item": 249,
+  "sheet_item": 226
+ }
+]

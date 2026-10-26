@@ -1,0 +1,41 @@
+pairs 100
+closed llm tier 7953s jobs 356
+decomposed 8574s
+split ok 46 8613s
+tactic tier 8686s
+llm tier 9557s jobs 46
+{
+  "model": "deepseek/deepseek-v4.1-flash",
+  "n_neg": 60,
+  "n_pos": 40,
+  "max_tokens": 16384,
+  "closed_llm_jobs": 356,
+  "label_inequivalent": {
+    "no_alignment": 36,
+    "closed_unknown": 59,
+    "closed_unknown->no_alignment": 35,
+    "unknown": 16,
+    "closed_unknown->unknown": 16,
+    "split_fail": 6,
+    "closed_unknown->split_fail": 6,
+    "closed_proved": 1,
+    "closed_proved->no_alignment": 1,
+    "reject": 2,
+    "closed_unknown->reject": 2
+  },
+  "label_equivalent": {
+    "no_alignment": 8,
+    "closed_unknown": 25,
+    "closed_unknown->no_alignment": 8,
+    "split_fail": 4,
+    "closed_unknown->split_fail": 4,
+    "accept": 20,
+    "closed_unknown->accept": 6,
+    "closed_proved": 15,
+    "closed_proved->accept": 14,
+    "unknown": 8,
+    "closed_unknown->unknown": 7,
+    "closed_proved->unknown": 1
+  },
+  "seconds": 9557.3
+}

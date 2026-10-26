@@ -1,0 +1,113 @@
+{
+  "g1": {
+    "statements": {
+      "structural": 509,
+      "arith+": 57,
+      "presburger": 18,
+      "rcf": 4,
+      "arith": 12
+    },
+    "pairs": {
+      "structural": 264,
+      "arith+": 24,
+      "presburger": 7,
+      "rcf": 2,
+      "arith": 3
+    },
+    "verdict_by_class": {
+      "structural": {
+        "accept": 118,
+        "unknown": 89,
+        "reject": 57
+      },
+      "arith+": {
+        "accept": 7,
+        "unknown": 14,
+        "reject": 3
+      },
+      "presburger": {
+        "accept": 5,
+        "reject": 2
+      },
+      "rcf": {
+        "accept": 1,
+        "reject": 1
+      },
+      "arith": {
+        "unknown": 3
+      }
+    }
+  },
+  "g4": {
+    "statements": {
+      "structural": 555,
+      "arith+": 66,
+      "presburger": 8,
+      "fail": 1,
+      "arith": 2,
+      "rcf": 2
+    },
+    "pairs": {
+      "structural": 278,
+      "arith+": 32,
+      "presburger": 4,
+      "fail": 1,
+      "arith": 1,
+      "rcf": 1
+    },
+    "verdict_by_class": {
+      "structural": {
+        "accept": 214,
+        "reject": 37,
+        "unknown": 27
+      },
+      "arith+": {
+        "reject": 3,
+        "unknown": 3,
+        "accept": 26
+      },
+      "presburger": {
+        "accept": 4
+      },
+      "fail": {
+        "canon_fail": 1
+      },
+      "arith": {
+        "accept": 1
+      },
+      "rcf": {
+        "accept": 1
+      }
+    }
+  },
+  "pns": {
+    "statements": {
+      "structural": 297,
+      "arith+": 32,
+      "fail": 23,
+      "presburger": 4,
+      "arith": 1,
+      "rcf": 1
+    }
+  },
+  "mf": {
+    "statements": {
+      "fail": 2,
+      "arith": 53,
+      "rcf": 92,
+      "structural": 175,
+      "arith+": 100,
+      "presburger": 66
+    }
+  },
+  "pb": {
+    "statements": {
+      "structural": 593,
+      "arith+": 54,
+      "fail": 18,
+      "rcf": 2,
+      "arith": 4,
+      "presburger": 1
+    }
+  }
+}

@@ -1,0 +1,34 @@
+== test Rudin|exercise_3_5
+import Mathlib |  | open Topology Filter Real Complex TopologicalSpace Finset | open scoped BigOperators |  | 
+theorem exercise_3_5
+    (a b : 鈩?鈫?EReal)
+    (hareal : 鈭€ n, a n 鈮?鈯?鈭?a n 鈮?鈯?
+    (hbreal : 鈭€ n, b n 鈮?鈯?鈭?b n 鈮?鈯?
+    (ha : limsup a 鈮?鈯?
+    (hb : limsup b 鈮?鈯? :
+    limsup (位 n => a n + b n) 鈮?limsup a + limsup b :=
+== test Herstein|exercise_2_5_43
+import Mathlib |  | open Fintype Set Real Ideal Polynomial | open scoped BigOperators |  | 
+theorem exercise_2_5_43 (G : Type*) [Group G] [Fintype G]
+  (hG : card G = 9) :
+  Nonempty (CommGroup G) :=
+== valid Rudin|exercise_2_24
+import Mathlib |  | open Topology Filter Real Complex TopologicalSpace Finset | open scoped BigOperators |  | 
+theorem exercise_2_24 {X : Type*} [MetricSpace X]
+  (hX : 鈭€ (A : Set X), Infinite A 鈫?鈭?(x : X), x 鈭?closure A) :
+  SeparableSpace X :=
+== valid Herstein|exercise_4_2_5
+import Mathlib |  | open Fintype Set Real Ideal Polynomial | open scoped BigOperators |  | 
+theorem exercise_4_2_5 {R : Type*} [Ring R]
+  (h : 鈭€ x : R, x ^ 3 = x) : Nonempty (CommRing R) :=
+== valid Rudin|exercise_4_8b
+import Mathlib |  | open Topology Filter Real Complex TopologicalSpace Finset | open scoped BigOperators |  | 
+theorem exercise_4_8b
+  (E : Set 鈩? (h : Bornology.IsBounded E) :
+  鈭?f : 鈩?鈫?鈩? UniformContinuousOn f E 鈭?卢 Bornology.IsBounded (Set.image f E) :=
+== valid Ireland-Rosen|exercise_2_21
+import Mathlib |  | open Real | open scoped BigOperators |  | 
+theorem exercise_2_21 {l : 鈩?鈫?鈩潁
+  (hl : 鈭€ p n : 鈩? p.Prime 鈫?l (p^n) = log p )
+  (hl1 : 鈭€ m : 鈩? 卢 IsPrimePow m 鈫?l m = 0) :
+  l = 位 n => 鈭?d : Nat.divisors n, ArithmeticFunction.moebius (n/d) * log d  :=

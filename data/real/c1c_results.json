@@ -1,0 +1,5915 @@
+{
+  "summary": {
+    "anthropic_haiku45_full_eval30": {
+      "unparseable": 4,
+      "certified_correct": 24,
+      "certified_wrong": 2
+    },
+    "anthropic_haiku45_full_eval51": {
+      "unparseable": 11,
+      "certified_correct": 29,
+      "certified_wrong": 4,
+      "unknown": 7
+    },
+    "anthropic_haiku45_full_repair1_eval51": {
+      "unparseable": 5,
+      "certified_correct": 39,
+      "certified_wrong": 4,
+      "unknown": 3
+    },
+    "anthropic_haiku45_full_repair1_nogold_eval51": {
+      "unparseable": 14,
+      "certified_correct": 28,
+      "certified_wrong": 4,
+      "unknown": 5
+    },
+    "anthropic_haiku45_full_repair1b_eval30": {
+      "unparseable": 4,
+      "certified_correct": 24,
+      "certified_wrong": 2
+    },
+    "anthropic_sonnet46_full_eval51": {
+      "unparseable": 12,
+      "certified_correct": 31,
+      "unknown": 2,
+      "certified_wrong": 6
+    },
+    "anthropic_sonnet46_full_repair1_eval51": {
+      "unparseable": 9,
+      "certified_correct": 35,
+      "unknown": 1,
+      "certified_wrong": 6
+    },
+    "anthropic_sonnet46_full_repair1_nogold_eval51": {
+      "unparseable": 12,
+      "certified_correct": 31,
+      "unknown": 2,
+      "certified_wrong": 6
+    },
+    "goedel_v2_8b_full_eval51_v2": {
+      "unparseable": 5,
+      "certified_correct": 21,
+      "certified_wrong": 23,
+      "unknown": 2
+    },
+    "openai_gpt41_full_eval51": {
+      "unparseable": 18,
+      "certified_correct": 28,
+      "certified_wrong": 4,
+      "unknown": 1
+    },
+    "openai_gpt41_full_repair1_eval51": {
+      "unparseable": 6,
+      "certified_correct": 41,
+      "certified_wrong": 3,
+      "unknown": 1
+    },
+    "openai_gpt41_full_repair1_nogold_eval51": {
+      "unparseable": 19,
+      "certified_correct": 26,
+      "certified_wrong": 5,
+      "unknown": 1
+    },
+    "openai_gpt41mini_full_eval204": {
+      "unparseable": 43,
+      "certified_correct": 132,
+      "certified_wrong": 19,
+      "unknown": 10
+    },
+    "openai_gpt41mini_full_eval30": {
+      "unparseable": 5,
+      "certified_correct": 24,
+      "certified_wrong": 1
+    },
+    "openai_gpt41mini_full_eval51": {
+      "unparseable": 19,
+      "certified_correct": 27,
+      "certified_wrong": 2,
+      "unknown": 3
+    },
+    "openai_gpt41mini_full_repair1_eval51": {
+      "unparseable": 9,
+      "certified_correct": 40,
+      "certified_wrong": 2
+    },
+    "openai_gpt41mini_full_repair1_nogold_eval204": {
+      "unparseable": 43,
+      "certified_correct": 132,
+      "certified_wrong": 18,
+      "unknown": 11
+    },
+    "openai_gpt41mini_full_repair1_nogold_eval51": {
+      "unparseable": 20,
+      "certified_correct": 27,
+      "certified_wrong": 1,
+      "unknown": 3
+    }
+  },
+  "items": [
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval30",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_haiku45_full_repair1b_eval30",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unknown"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "anthropic_sonnet46_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unknown"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "unknown"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "goedel_v2_8b_full_eval51_v2",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0005",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0014",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0026",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0027",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0028",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0029",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0030",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0031",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0032",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0033",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0034",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0035",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0036",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0037",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0038",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0039",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0040",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0041",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0042",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0043",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0044",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0045",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0047",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0048",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0049",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0050",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0051",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0052",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0053",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0054",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0055",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0056",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0057",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0058",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0059",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0060",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0061",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0062",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0063",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0064",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0065",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0066",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0067",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0068",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0069",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0070",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0071",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0072",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0073",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0074",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0075",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0076",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0077",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0078",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0079",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0080",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0081",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0082",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0083",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0084",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0085",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0086",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0087",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0088",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0089",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0090",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0091",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0092",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0093",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0094",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0095",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0096",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0097",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0098",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0099",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0100",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0101",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0102",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0103",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0104",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0105",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0106",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0107",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0108",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0109",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0110",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0111",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0112",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0113",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0114",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0115",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0116",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0117",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0118",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0119",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0120",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0121",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0122",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0123",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0124",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0125",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0126",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0127",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0128",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0129",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0130",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0131",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0132",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0133",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0134",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0135",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0136",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0137",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0138",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0139",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0140",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0141",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0142",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0143",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0144",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0145",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0146",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0147",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0148",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0149",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0150",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0151",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0152",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_exp_0153",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval204",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval30",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0005",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0014",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0026",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0027",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0028",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0029",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0030",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0031",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0032",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0033",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0034",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0035",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0036",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0037",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0038",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0039",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0040",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0041",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0042",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0043",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0044",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0045",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0047",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0048",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0049",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0050",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0051",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0052",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0053",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0054",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0055",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0056",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0057",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0058",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0059",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0060",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0061",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0062",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0063",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0064",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0065",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0066",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0067",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0068",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0069",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0070",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0071",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0072",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0073",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0074",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0075",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0076",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0077",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0078",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0079",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0080",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0081",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0082",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0083",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0084",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0085",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0086",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0087",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0088",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0089",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0090",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0091",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0092",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0093",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0094",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0095",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0096",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0097",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0098",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0099",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0100",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0101",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0102",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0103",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0104",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0105",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0106",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0107",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0108",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0109",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0110",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0111",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0112",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0113",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0114",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0115",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0116",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0117",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0118",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0119",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0120",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0121",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0122",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0123",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0124",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0125",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0126",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0127",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0128",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0129",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0130",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0131",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0132",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0133",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0134",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0135",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0136",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0137",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0138",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0139",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0140",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0141",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0142",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0143",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0144",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0145",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0146",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0147",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0148",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0149",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0150",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0151",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0152",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_exp_0153",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval204",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0001",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0003",
+      "verdict": "certified_wrong"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0005",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0008",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0016",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0017",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0020",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0023",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0025",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0027",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0029",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0036",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0037",
+      "verdict": "unknown"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0042",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0046",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0049",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0050",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0054",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0061",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0063",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0065",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0066",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0067",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0072",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_dev_0076",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0001",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0002",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0003",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0004",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0005",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0006",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0007",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0008",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0009",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0010",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0011",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0012",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0013",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0014",
+      "verdict": "unparseable"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0015",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0016",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0017",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0018",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0019",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0020",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0021",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0022",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0023",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0024",
+      "verdict": "certified_correct"
+    },
+    {
+      "run": "openai_gpt41mini_full_repair1_nogold_eval51",
+      "idx": "formalrx_cc_seed_0025",
+      "verdict": "certified_correct"
+    }
+  ]
+}

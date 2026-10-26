@@ -1,0 +1,73 @@
+{
+  "lean_env": "lean/ Mathlib v4.27.0-rc1",
+  "proofnetverif_test": {
+    "gold_ok": [
+      168,
+      178
+    ],
+    "pred_ok": [
+      1326,
+      1452
+    ],
+    "usable_pairs": 1308,
+    "usable_equivalent": 473,
+    "usable_inequivalent": 835
+  },
+  "formaltcs": {
+    "ok": [
+      94,
+      143
+    ]
+  },
+  "top_first_errors": [
+    [
+      "object file '<HOME>\\Desktop\\ai4math\\lean\\.lake\\packa",
+      39
+    ],
+    [
+      "unexpected token 'in'; expected ','",
+      6
+    ],
+    [
+      "Function expected at",
+      4
+    ],
+    [
+      "Unexpected name `RealItem0` after `end`: The current section",
+      2
+    ],
+    [
+      "(lean.synthInstanceFailed): failed to synthesize instance of",
+      1
+    ],
+    [
+      "invalid binder annotation, type is not a class instance",
+      1
+    ],
+    [
+      "(lean.unknownIdentifier): Unknown identifier `ContDiff`",
+      1
+    ],
+    [
+      "(lean.unknownIdentifier): Unknown identifier `EuclideanSpace",
+      1
+    ],
+    [
+      "(lean.unknownIdentifier): Unknown constant `Real.rpow`",
+      1
+    ],
+    [
+      "failed to compile definition, compiler IR check failed at `R",
+      1
+    ],
+    [
+      "unexpected identifier; expected command",
+      1
+    ],
+    [
+      "(lean.unknownIdentifier): Unknown identifier `Asymptotics.Is",
+      1
+    ]
+  ],
+  "seconds": 759.4
+}

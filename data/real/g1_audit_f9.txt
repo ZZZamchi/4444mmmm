@@ -1,0 +1,407 @@
+label, union verdict, shared prefix, split checked -> count
+  (False, 'accept', 'shared0', 'split'): 3
+  (False, 'accept', 'shared>0', 'split'): 7
+  (False, 'reject', 'shared0', 'nosplit'): 1
+  (False, 'reject', 'shared0', 'split'): 5
+  (False, 'reject', 'shared>0', 'nosplit'): 9
+  (False, 'reject', 'shared>0', 'split'): 15
+  (False, 'unknown', 'shared0', 'nosplit'): 6
+  (False, 'unknown', 'shared0', 'split'): 6
+  (False, 'unknown', 'shared>0', 'nosplit'): 3
+  (False, 'unknown', 'shared>0', 'split'): 5
+  (True, 'accept', 'shared0', 'nosplit'): 1
+  (True, 'accept', 'shared0', 'split'): 6
+  (True, 'accept', 'shared>0', 'split'): 20
+  (True, 'reject', 'shared>0', 'nosplit'): 1
+  (True, 'reject', 'shared>0', 'split'): 2
+  (True, 'unknown', 'shared0', 'nosplit'): 1
+  (True, 'unknown', 'shared0', 'split'): 1
+  (True, 'unknown', 'shared>0', 'nosplit'): 1
+  (True, 'unknown', 'shared>0', 'split'): 7
+
+===== pnv-test-773 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=2/3 prefix_s=2/6 shared=2
+proved: ['ncin', 'ncomp', 'split_r']  tactic: ['split_r']
+NL: Prove that $(a_1a_2\dots a_n)^{-1} = a_n^{-1}a_{n-1}^{-1}\dots a_1^{-1}$ for all $a_1, a_2, \dots, a_n\in G$.
+G: ∀ {G : Type*} [Group G] (as : List G), as.prod⁻¹ = (as.reverse.map (λ x => x⁻¹)).prod
+P: ∀ {G : Type*} [Group G] (a b c d : G) (hb : a * b = c) (hd : c * d = 1), d * b = a
+nhyp: ¬∀ {G : Type u} [Group G], True ↔ True
+ncin: ¬∀ {G : Type u} [inst : Group G],     True →       ((∀ (as : List G), as.prod⁻¹ = (List.map (fun x => x⁻¹) as.reverse).prod) ↔         ∀ (a b d : G), a * b * d = 1 → d * b = a)
+acc: ∀ {G : Type u} [inst : Group G],   (True ↔ True) ∧     ((∀ (as : List G), as.prod⁻¹ = (List.map (fun x => x⁻¹) as.reverse).prod) ↔       ∀ (a b d : G), a * b * d = 1 → d * b = a)
+
+===== pnv-test-123 label=False union=reject closed=unknown ambiguous=true full=false prefix_r=7/7 prefix_s=5/9 shared=4
+proved: ['nhyp', 'split_r']  tactic: ['split_r']
+NL: If $F$ is of characteristic $p \neq 0$, show that all the roots of $x^m - x$, where $m = p^n$, are distinct.
+G: ∀ {p m n: ℕ} (hp : p ≠ 0) (hn : n > 0) {F : Type*} [Field F] [CharP F p] (hm : m = p ^ n), (X ^ m - X : Polynomial F).Separable
+P: ∀ {F : Type*} [Field F] {p n : ℕ} [hf : CharP F p], ∀ m : ℕ, m = p^n → ∀ x y : F, x^m = x → y^m = y → x = y
+nhyp: ¬∀ {p n : ℕ} {F : Type u} [inst : Field F], p ≠ 0 ∧ n > 0 ∧ CharP F p ↔ CharP F p
+ncin: ¬∀ {p n : ℕ} {F : Type u} [inst : Field F],     p ≠ 0 ∧ n > 0 ∧ CharP F p → ((X ^ p ^ n - X).Separable ↔ ∀ (x y : F), x ^ p ^ n = x → y ^ p ^ n = y → x = y)
+acc: ∀ {p n : ℕ} {F : Type u} [inst : Field F],   (p ≠ 0 ∧ n > 0 ∧ CharP F p ↔ CharP F p) ∧     ((X ^ p ^ n - X).Separable ↔ ∀ (x y : F), x ^ p ^ n = x → y ^ p ^ n = y → x = y)
+
+===== pnv-test-1431 label=False union=reject closed=unknown ambiguous=true full=false prefix_r=11/14 prefix_s=12/12 shared=7
+proved: ['ncomp', 'nhyp', 'split_s']  tactic: ['split_s']
+NL: Let $A \subset X$; let $f: A \rightarrow Y$ be continuous; let $Y$ be Hausdorff. Show that if $f$ may be extended to a continuous function $g: \bar{A} \rightarrow Y$, then $g$ is uniquely determined by $f$.
+G: ∀ {X : Type*} [TopologicalSpace X] {Y : Type*} [TopologicalSpace Y] [T2Space Y] {A : Set X} {f : X → Y} (hf : ContinuousOn f A) (g : X → Y) (g_con : ContinuousOn g (closure A)) (gExt : ∀ x : A, g x = f x), ∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ (∀ x : A, g' x = f x)) → (∀ x : closure A, g x = g' x)
+P: ∀ {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] [T2Space Y] {A : Set X} (h : IsClosed (closure Aᶜ : Set X)) {f : X → Y} (hf : ContinuousOn f A) (g : X → Y) (hg : ContinuousOn g A) (hfg : Set.EqOn f g (closure Aᶜ)), Set.EqOn f g A
+nhyp: ¬∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] {A : Set X}     {f : X → Y} (g : X → Y),     (T2Space Y ∧ ContinuousOn f A ∧ ContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x) ↔       T2Space Y ∧ IsClosed (closure Aᶜ) ∧ ContinuousOn f A ∧ ContinuousOn g A ∧ EqOn f g (closure Aᶜ)
+ncin: ¬∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] {A : Set X}     {f : X → Y} (g : X → Y),     (T2Space Y ∧ ContinuousOn f A ∧ ContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x) →       ((∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ ∀ (x : ↑A), g' ↑x = f ↑x) → ∀ (x : ↑(closure A)), g ↑x = g' ↑x) ↔         EqOn f g A)
+acc: ∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] {A : Set X}   {f : X → Y} (g : X → Y),   ((T2Space Y ∧ ContinuousOn f A ∧ ContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x) ↔       T2Space Y ∧ IsClosed (closure Aᶜ) ∧ ContinuousOn f A ∧ ContinuousOn g A ∧ EqOn f g (closure Aᶜ)) ∧     ((∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ ∀ (x : ↑A), g' ↑x = f ↑x) → ∀ (x : ↑(closure A)), g ↑x = g' ↑x) ↔       EqOn f g A)
+
+===== pnv-test-1098 label=False union=accept closed=unknown ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1
+proved: ['acc', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Prove that the multiplication of residue class $\mathbb{Z}/n\mathbb{Z}$ is associative.
+G: ∀ (n : ℕ) (a b c : ZMod n), (a * b) * c = a * (b * c)
+P: ∀ (n : ℕ) (a b c : ℤ), (a * b)%n * c %n = a * (b * c) %n
+nhyp: ¬∀ (n : ℕ), True ↔ True
+ncin: ¬∀ (n : ℕ),     True → ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℤ), a * b % ↑n * c % ↑n = a * (b * c) % ↑n)
+acc: ∀ (n : ℕ),   (True ↔ True) ∧     ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℤ), a * b % ↑n * c % ↑n = a * (b * c) % ↑n)
+
+===== pnv-test-97 label=False union=reject closed=unknown ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1
+proved: ['ncomp', 'nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Show that $x^{4} \equiv 2(p)$ has a solution for $p \equiv 1(4)$ iff $p$ is of the form $A^{2}+64 B^{2}$.
+G: ∀ {p : ℕ} (hp : p.Prime) (hp1 : p ≡ 1 [MOD 4]), (∃ x, x^4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A^2 + 64*B^2
+P: ∀ {p : ℕ} (hp : p % 4 = 1), ∃ x : ℕ, x^4 ≡ 2 [MOD p] ↔ ∃ A B : ℕ, p = A^2 + 64*B^2
+nhyp: ¬∀ {p : ℕ}, Nat.Prime p ∧ p ≡ 1 [MOD 4] ↔ p % 4 = 1
+ncin: ¬∀ {p : ℕ},     Nat.Prime p ∧ p ≡ 1 [MOD 4] →       (((∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2) ↔         ∃ x, x ^ 4 ≡ 2 [MOD p] ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2)
+acc: ∀ {p : ℕ},   (Nat.Prime p ∧ p ≡ 1 [MOD 4] ↔ p % 4 = 1) ∧     (((∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2) ↔       ∃ x, x ^ 4 ≡ 2 [MOD p] ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2)
+
+===== pnv-test-836 label=False union=accept closed=proved ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1
+proved: ['acc', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Prove that the multiplication of residue class $\mathbb{Z}/n\mathbb{Z}$ is associative.
+G: ∀ (n : ℕ) (a b c : ZMod n), (a * b) * c = a * (b * c)
+P: ∀ (n : ℕ) (a b c : ℕ), (a * b) % n * (c % n) % n = a * b * c % n
+nhyp: ¬∀ (n : ℕ), True ↔ True
+ncin: ¬∀ (n : ℕ),     True → ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℕ), a * b % n * (c % n) % n = a * b * c % n)
+acc: ∀ (n : ℕ),   (True ↔ True) ∧     ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℕ), a * b % n * (c % n) % n = a * b * c % n)
+
+===== pnv-test-739 label=False union=reject closed=unknown ambiguous=true full=true prefix_r=10/10 prefix_s=8/8 shared=5
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Let $p: X \rightarrow Y$ be a closed continuous surjective map such that $p^{-1}(\{y\})$ is compact, for each $y \in Y$. (Such a map is called a perfect map.) Show that if $Y$ is compact, then $X$ is compact.
+G: ∀ {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] (p : X → Y) (h : Function.Surjective p) (hc : Continuous p) (hp : IsClosedMap p) (hp : ∀ y, IsCompact (p ⁻¹' {y})) (hY : CompactSpace Y), CompactSpace X
+P: ∀ {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] (p : X → Y) (hp : Continuous p) (hps : ∀ y, IsCompact (p ⁻¹' {y} : Set X)) (hY : CompactSpace Y), CompactSpace X
+nhyp: ¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),     Function.Surjective p ∧ Continuous p ∧ IsClosedMap p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y ↔       Continuous p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y
+ncin: ¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),     Function.Surjective p ∧ Continuous p ∧ IsClosedMap p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y →       (CompactSpace X ↔ CompactSpace X)
+acc: ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),   (Function.Surjective p ∧ Continuous p ∧ IsClosedMap p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y ↔       Continuous p ∧ (∀ (y : Y), IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y) ∧     (CompactSpace X ↔ CompactSpace X)
+
+===== pnv-test-1288 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=0/1 prefix_s=0/0 shared=0
+proved: ['ncin', 'ncomp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Prove that there are infinitely many primes congruent to $-1$ (modulo $4$).
+G: ∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]
+P: ∃ f : ℕ → ℕ, ∀ n : ℕ, 1 ≤ n → ((f n : ℤ) % 4 = -1) ∧ Prime (f n)
+nhyp: ¬(True ↔ True)
+ncin: ¬(True →     ((∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔ ∃ f, ∀ (n : ℕ), 1 ≤ n → ↑(f n) % 4 = -1 ∧ Prime (f n)))
+acc: (True ↔ True) ∧   ((∀ (N : ℕ), ∃ p ≥ N, Nat.Prime p ∧ p + 1 ≡ 0 [MOD 4]) ↔ ∃ f, ∀ (n : ℕ), 1 ≤ n → ↑(f n) % 4 = -1 ∧ Prime (f n))
+
+===== pnv-test-427 label=False union=reject closed=unknown ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Let $f: \mathbb{R} \rightarrow \mathbb{R}$ be an infinitely differentiable function satisfying $f(0)=0, f(1)=1$, and $f(x) \geq 0$ for all $x \in$ $\mathbb{R}$. Show that there exist a positive integer $n$ and a real number $x$ such that $f^{(n)}(x)<0$.
+G: ∀ (f : ℝ → ℝ) (hf : ContDiff ℝ ⊤ f) (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf2 : ∀ x, f x ≥ 0), ∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0
+P: ∀ {f : ℝ → ℝ} (hf : ∀ n, Differentiable ℝ (deriv^[n] f)) (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf_nonneg : ∀ x, 0 ≤ f x), ∃ (n : ℕ) (x : ℝ), (deriv^[n] f) x < 0
+nhyp: ¬∀ (f : ℝ → ℝ),     (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔       (∀ (n : ℕ), Differentiable ℝ (deriv^[n] f)) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), 0 ≤ f x
+ncin: ¬∀ (f : ℝ → ℝ),     (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) →       ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0)
+acc: ∀ (f : ℝ → ℝ),   ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔       (∀ (n : ℕ), Differentiable ℝ (deriv^[n] f)) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), 0 ≤ f x) ∧     ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0)
+
+===== pnv-test-275 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0
+proved: ['ncin', 'ncomp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Prove the the operation $\star$ on $\mathbb{Z}$ defined by $a\star b=a-b$ is not commutative.
+G: ∃ a b : ℤ, a - b ≠ b - a
+P: ∀ {a b : ℤ}, a - b ≠ b - a
+nhyp: ¬(True ↔ True)
+ncin: ¬(True → ((∃ a b, a - b ≠ b - a) ↔ ∀ {a b : ℤ}, a - b = b - a → False))
+acc: (True ↔ True) ∧ ((∃ a b, a - b ≠ b - a) ↔ ∀ {a b : ℤ}, a - b = b - a → False)
+
+===== pnv-test-1257 label=False union=reject closed=unknown ambiguous=true full=false prefix_r=3/10 prefix_s=3/10 shared=3
+proved: ['ncin', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Suppose that $V$ is finite dimensional and that $T \in \mathcal{L}(V, W)$. Prove that there exists a subspace $U$ of $V$ such that $U \cap \operatorname{null} T=\{0\}$ and range $T=\{T u: u \in U\}$.
+G: ∀ {F V W : Type*} [AddCommGroup V] [AddCommGroup W] [Field F] [Module F V] [FiniteDimensional F V] [Module F W] (L : V →ₗ[F] W), ∃ U : Submodule F V, U ⊓ (ker L) = ⊥ ∧ (range L = range (domRestrict L U))
+P: ∀ {K V W : Type*} [DivisionRing K] [AddCommGroup V] [Module K V] [AddCommGroup W] [Module K W] [FiniteDimensional K V] (T : V →ₗ[K] W), ∃ U : Submodule K V, (∀ u₁ u₂ : U, T u₁ = T u₂ → u₁ = u₂) ∧ (∀ w : W, ∃ v : U, T v = w)
+nhyp: ¬∀ {F V W : Type u}, True ↔ True
+ncin: ¬∀ {F V W : Type u},     True →       ((∀ [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F] [inst_3 : Module F V]           [FiniteDimensional F V] [inst_5 : Module F W] (L : V →ₗ[F] W),           ∃ U, U ⊓ ker L = ⊥ ∧ range L = range (L.domRestrict U)) ↔         ∀ [inst : DivisionRing F] [inst_1 : AddCommGroup V] [inst_2 : Module F V] [inst_3 : AddCommGroup W]           [inst_4 : Module F W] [FiniteDimensional F V] (T : V →ₗ[F] W),           ∃ U, (∀ (u₁ u₂ : ↥U), T ↑u₁ = T ↑u₂
+acc: ∀ {F V W : Type u},   (True ↔ True) ∧     ((∀ [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F] [inst_3 : Module F V]         [FiniteDimensional F V] [inst_5 : Module F W] (L : V →ₗ[F] W),         ∃ U, U ⊓ ker L = ⊥ ∧ range L = range (L.domRestrict U)) ↔       ∀ [inst : DivisionRing F] [inst_1 : AddCommGroup V] [inst_2 : Module F V] [inst_3 : AddCommGroup W]         [inst_4 : Module F W] [FiniteDimensional F V] (T : V →ₗ[F] W),         ∃ U, (∀ (u₁ u₂ : ↥U), T ↑u₁ = T ↑u₂ → u₁ 
+
+===== pnv-test-532 label=False union=accept closed=unknown ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1
+proved: ['acc', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: If $a \in K$ is such that $a^2$ is algebraic over the subfield $F$ of $K$, show that a is algebraic over $F$.
+G: ∀ {K : Type*} [Field K] {F : Subfield K} {a : K} (ha : IsAlgebraic F (a ^ 2)), IsAlgebraic F a
+P: ∀ {F K : Type*} [Field F] [Field K] [Algebra F K] (a : K) (h : IsAlgebraic F (a^2)), IsAlgebraic F a
+nhyp: ¬∀ {K : Type u}, True ↔ True
+ncin: ¬∀ {K : Type u},     True →       ((∀ [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a) ↔         ∀ {K_1 : Type u} [inst : Field K] [inst_1 : Field K_1] [inst_2 : Algebra K K_1] (a : K_1),           IsAlgebraic K (a ^ 2) → IsAlgebraic K a)
+acc: ∀ {K : Type u},   (True ↔ True) ∧     ((∀ [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a) ↔       ∀ {K_1 : Type u} [inst : Field K] [inst_1 : Field K_1] [inst_2 : Algebra K K_1] (a : K_1),         IsAlgebraic K (a ^ 2) → IsAlgebraic K a)
+
+===== pnv-test-1031 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=2/6 prefix_s=2/9 shared=2
+proved: ['ncin', 'ncomp', 'split_r']  tactic: ['split_r']
+NL: Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.
+G: ∀ {α : Type*} [TopologicalSpace α] {s : ℕ → Set α} (hs : ∀ i, IsCompact (s i)) (hne : ∀ i, (s i).Nonempty) (hs : ∀ i, (s i) ⊇ (s (i + 1))), (⋂ i, s i).Nonempty
+P: ∀ {X : Type u} [TopologicalSpace X] {s : Set X} (h : IsCompact s) (u : X → Set X) (hc : ∀ x, IsCompact (closure (u x))) (ho : ∀ x, IsOpen (u x)) (hu : ∀ x, s ⊆ u x), (⋂ x, closure (u x)) ≠ ∅
+nhyp: ¬∀ {α : Type u} [TopologicalSpace α], True ↔ True
+ncin: ¬∀ {α : Type u} [inst : TopologicalSpace α],     True →       ((∀ {s : ℕ → Set α},           (∀ (i : ℕ), IsCompact (s i)) →             (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty) ↔         ∀ {s : Set α},           IsCompact s →             ∀ (u : α → Set α),               (∀ (x : α), IsCompact (closure (u x))) →                 (∀ (x : α), IsOpen (u x)) → (∀ (x : α), s ⊆ u x) → ⋂ x, closure (u x) = ∅ → False)
+acc: ∀ {α : Type u} [inst : TopologicalSpace α],   (True ↔ True) ∧     ((∀ {s : ℕ → Set α},         (∀ (i : ℕ), IsCompact (s i)) →           (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → (⋂ i, s i).Nonempty) ↔       ∀ {s : Set α},         IsCompact s →           ∀ (u : α → Set α),             (∀ (x : α), IsCompact (closure (u x))) →               (∀ (x : α), IsOpen (u x)) → (∀ (x : α), s ⊆ u x) → ⋂ x, closure (u x) = ∅ → False)
+
+===== pnv-test-1117 label=False union=accept closed=unknown ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=4
+proved: ['acc', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Let $A \subset X$. Show that if $C$ is a connected subspace of $X$ that intersects both $A$ and $X-A$, then $C$ intersects $\operatorname{Bd} A$.
+G: ∀ {X : Type*} [TopologicalSpace X] {A C : Set X} (hc : IsConnected C) (hCA : C ∩ A ≠ ∅) (hCXA : C ∩ Aᶜ ≠ ∅), C ∩ (frontier A) ≠ ∅
+P: ∀ {X : Type*} [TopologicalSpace X] {A : Set X} {C : Set X} (hA : IsConnected C) (hAC : C ∩ A ≠ ∅) (hAC' : C ∩ closure Aᶜ ≠ ∅), C ∩ @frontier X _ A ≠ ∅
+nhyp: ¬∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},     IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅ ↔       IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ closure Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅
+ncin: ¬∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},     IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅ → (False ↔ False)
+acc: ∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},   (IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅ ↔       IsConnected C ∧ C ∩ A ≠ ∅ ∧ C ∩ closure Aᶜ ≠ ∅ ∧ C ∩ frontier A = ∅) ∧     (False ↔ False)
+
+===== pnv-test-916 label=False union=reject closed=unknown ambiguous=true full=false prefix_r=3/4 prefix_s=3/4 shared=2
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: A continuous, strictly increasing function $\mu \colon (0, \infty) \rightarrow (0, \infty)$ is a modulus of continuity if $\mu(s) \rightarrow 0$ as $s \rightarrow 0$. A function $f \colon [a, b] \rightarrow \mathbb{R}$ has modulus of continuity $\mu$ if $|f(s) - f(t)| \leq \mu(|s - t|)$ for all $s, 
+G: ∀ (a b : ℝ) (hab : a ≤ b) (f : Icc a b → ℝ), UniformContinuous f ↔ ∃ (μ : ℝ → ℝ), ∀ (x : ℝ), (x > 0 → μ x > 0) ∧ StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ (∀ s t : Icc a b, |f s - f t| ≤ μ (|s - t|))
+P: ∀ {a b : ℝ} (hab : a < b) (f : ℝ → ℝ), (UniformContinuousOn f (Set.Icc a b)) ↔ ∃ μ : ℝ → ℝ, μ =O[atTop] (fun x => x) ∧ ∀ s t : ℝ, a ≤ s → s ≤ t → t ≤ b → |f t - f s| ≤ μ (|t - s|)
+nhyp: ¬∀ (a b : ℝ), a ≤ b ↔ a < b
+ncin: ¬∀ (a b : ℝ),     a ≤ b →       ((∀ (f : ↑(Icc a b) → ℝ),           UniformContinuous f ↔             ∃ μ,               ∀ (x : ℝ),                 (x > 0 → μ x > 0) ∧                   StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ ∀ (s t : ↑(Icc a b)), |f s - f t| ≤ μ |↑s - ↑t|) ↔         ∀ (f : ℝ → ℝ),           UniformContinuousOn f (Icc a b) ↔             ∃ μ, (μ =O[atTop] fun x => x) ∧ ∀ (s t : ℝ), a ≤ s → s ≤ t → t ≤ b → |f t - f s| ≤ μ |t - s|)
+acc: ∀ (a b : ℝ),   (a ≤ b ↔ a < b) ∧     ((∀ (f : ↑(Icc a b) → ℝ),         UniformContinuous f ↔           ∃ μ,             ∀ (x : ℝ),               (x > 0 → μ x > 0) ∧                 StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ ∀ (s t : ↑(Icc a b)), |f s - f t| ≤ μ |↑s - ↑t|) ↔       ∀ (f : ℝ → ℝ),         UniformContinuousOn f (Icc a b) ↔           ∃ μ, (μ =O[atTop] fun x => x) ∧ ∀ (s t : ℝ), a ≤ s → s ≤ t → t ≤ b → |f t - f s| ≤ μ |t - s|)
+
+===== pnv-test-1355 label=False union=accept closed=unknown ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1
+proved: ['acc', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z} / p \mathbb{Z})^{\times}$to prove Fermat's Little Theorem: if $p$ is a prime then $a^{p} \equiv a(\bmod p)$ for all $a \in \mathbb{Z}$.
+G: ∀ (p : ℕ) (hp : Nat.Prime p) (a : ℤ), a ^ p ≡ a [ZMOD p]
+P: ∀ (p : ℕ) [Fact (Nat.Prime p)] (a : ℕ), a ^ p ≡ a [MOD p]
+nhyp: ¬∀ (p : ℕ), Nat.Prime p ↔ Fact (Nat.Prime p)
+ncin: ¬∀ (p : ℕ), Nat.Prime p → ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p])
+acc: ∀ (p : ℕ),   (Nat.Prime p ↔ Fact (Nat.Prime p)) ∧ ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p])
+
+===== pnv-test-680 label=False union=accept closed=unknown ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0
+proved: ['acc', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Show that the collection $\{(a,b) \mid a < b, a \text{ and } b \text{ rational}\}$ is a basis that generates the standard topology on $\mathbb{R}$.
+G: IsTopologicalBasis {S : Set ℝ | ∃ a b : ℚ, a < b ∧ S = Ioo ↑a ↑b}
+P: TopologicalSpace.IsTopologicalBasis (Set.range fun p : ℚ × ℚ => Ioo p.1 p.2)
+nhyp: ¬(True ↔ True)
+ncin: ¬(True →     (IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔ IsTopologicalBasis (range fun p => Ioo p.1 p.2)))
+acc: (True ↔ True) ∧   (IsTopologicalBasis {S | ∃ a b, a < b ∧ S = Ioo ↑a ↑b} ↔ IsTopologicalBasis (range fun p => Ioo p.1 p.2))
+
+===== pnv-test-840 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=1/1 prefix_s=0/3 shared=0
+proved: ['nhyp', 'split_r']  tactic: ['split_r']
+NL: Show that $\sum^{\prime} 1 / n$, the sum being over square free integers, diverges.
+G: ¬ Summable (λ i : {p : ℤ // Squarefree p} => (1 : ℚ) / i)
+P: ∀ (n : ℕ), ¬∃ (N : ℕ), ∀ (d : ℕ), d ∣ N → d ∣ n → d = 1
+nhyp: ¬((Summable fun i => 1 / ↑↑i) ↔ True)
+ncin: ¬((Summable fun i => 1 / ↑↑i) → (False ↔ ∀ (n N : ℕ), (∀ (d : ℕ), d ∣ N → d ∣ n → d = 1) → False))
+acc: ((Summable fun i => 1 / ↑↑i) ↔ True) ∧   (False ↔ ∀ (n N : ℕ), (∀ (d : ℕ), d ∣ N → d ∣ n → d = 1) → False)
+
+===== pnv-test-262 label=False union=reject closed=unknown ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Let $G$ be a group with subgroups $H$ and $K$ with $H \leq K$. Prove that if $H$ is characteristic in $K$ and $K$ is normal in $G$ then $H$ is normal in $G$.
+G: ∀ {G : Type*} [Group G] (H K : Subgroup G) (hHK : H ≤ K) [hHK1 : (H.subgroupOf K).Characteristic] [hK : K.Normal], H.Normal
+P: ∀ {G : Type*} [Group G] {H K : Subgroup G} (hHK : H ≤ K) (hHcharK : H.Characteristic) (hKnormalG : K.Normal), H.Normal
+nhyp: ¬∀ {G : Type u} [inst : Group G] (H K : Subgroup G),     H ≤ K ∧ (H.subgroupOf K).Characteristic ∧ K.Normal ↔ H ≤ K ∧ H.Characteristic ∧ K.Normal
+ncin: ¬∀ {G : Type u} [inst : Group G] (H K : Subgroup G),     H ≤ K ∧ (H.subgroupOf K).Characteristic ∧ K.Normal → (H.Normal ↔ H.Normal)
+acc: ∀ {G : Type u} [inst : Group G] (H K : Subgroup G),   (H ≤ K ∧ (H.subgroupOf K).Characteristic ∧ K.Normal ↔ H ≤ K ∧ H.Characteristic ∧ K.Normal) ∧ (H.Normal ↔ H.Normal)
+
+===== pnv-test-533 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=3/3 prefix_s=2/5 shared=2
+proved: ['nhyp', 'split_r']  tactic: ['split_r']
+NL: If a group $G$ has no proper subgroups, prove that $G$ is cyclic of order $p$, where $p$ is a prime number.
+G: ∀ {G : Type*} [Group G] (hG : ∀ H : Subgroup G, H = ⊤ ∨ H = ⊥), IsCyclic G ∧ ∃ (p : ℕ) (Fin : Fintype G), Nat.Prime p ∧ @card G Fin = p
+P: ∀ {G : Type*} [Group G] {p : ℕ} [hp : Fact (Nat.Prime p)] [Fact (Nat.card G = p)], IsCyclic G
+nhyp: ¬∀ {G : Type u} [inst : Group G], (∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) ↔ True
+ncin: ¬∀ {G : Type u} [inst : Group G],     (∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) →       ((IsCyclic G ∧ ∃ p Fin, Nat.Prime p ∧ card G = p) ↔         ∀ {p : ℕ} [hp : Fact (Nat.Prime p)] [Fact (Nat.card G = p)], IsCyclic G)
+acc: ∀ {G : Type u} [inst : Group G],   ((∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) ↔ True) ∧     ((IsCyclic G ∧ ∃ p Fin, Nat.Prime p ∧ card G = p) ↔       ∀ {p : ℕ} [hp : Fact (Nat.Prime p)] [Fact (Nat.card G = p)], IsCyclic G)
+
+===== pnv-test-743 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=0/2 prefix_s=0/2 shared=0
+proved: ['ncin', 'ncomp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: If $n$ is not a prime, show that $(n-1) ! \equiv 0(n)$, except when $n=4$.
+G: ∀ {n : ℕ+} (hn0 : ¬ n.Prime), Nat.factorial (n-1) ≡ 0 [MOD n] ↔ n ≠ 4
+P: ∀ {n : ℕ} (hn : ¬Prime n), n.pred.factorial = 0
+nhyp: ¬(True ↔ True)
+ncin: ¬(True →     ((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔ ∀ {n : ℕ}, ¬Prime n → n.pred.factorial = 0))
+acc: (True ↔ True) ∧   ((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔ ∀ {n : ℕ}, ¬Prime n → n.pred.factorial = 0)
+
+===== pnv-test-769 label=False union=accept closed=unknown ambiguous=true full=false prefix_r=4/4 prefix_s=4/6 shared=4
+proved: ['acc', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Deduce that $|a b|=|b a|$ for all $a, b \in G$.
+G: ∀ {G: Type*} [Group G] (a b : G), orderOf (a * b) = orderOf (b * a)
+P: ∀ {G : Type*} [Group G] {a b c : G}, a * b = a * c → b = c
+nhyp: ¬∀ {G : Type u} [Group G] (a b : G), True ↔ True
+ncin: ¬∀ {G : Type u} [inst : Group G] (a b : G),     True → (orderOf (a * b) = orderOf (b * a) ↔ ∀ {c : G}, a * b = a * c → b = c)
+acc: ∀ {G : Type u} [inst : Group G] (a b : G),   (True ↔ True) ∧ (orderOf (a * b) = orderOf (b * a) ↔ ∀ {c : G}, a * b = a * c → b = c)
+
+===== pnv-test-475 label=False union=accept closed=unknown ambiguous=false full=false prefix_r=0/4 prefix_s=0/2 shared=0
+proved: ['acc', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: If $p=2^{n}+1$ is a Fermat prime, show that 3 is a primitive root modulo $p$.
+G: ∀ {p n : ℕ} (hp : p.Prime) (hpn : p = 2^n + 1), IsPrimitiveRoot (3 : ZMod p) p
+P: ∀ (n : ℕ) (h : Nat.Prime (2 ^ n + 1)), IsPrimitiveRoot 3 (2 ^ n + 1)
+nhyp: ¬(True ↔ True)
+ncin: ¬(True →     ((∀ {p n : ℕ}, Nat.Prime p → p = 2 ^ n + 1 → IsPrimitiveRoot 3 p) ↔       ∀ (n : ℕ), Nat.Prime (2 ^ n + 1) → IsPrimitiveRoot 3 (2 ^ n + 1)))
+acc: (True ↔ True) ∧   ((∀ {p n : ℕ}, Nat.Prime p → p = 2 ^ n + 1 → IsPrimitiveRoot 3 p) ↔     ∀ (n : ℕ), Nat.Prime (2 ^ n + 1) → IsPrimitiveRoot 3 (2 ^ n + 1))
+
+===== pnv-test-453 label=False union=accept closed=unknown ambiguous=false full=false prefix_r=0/7 prefix_s=0/6 shared=0
+proved: ['acc', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Prove that the union of two subspaces of $V$ is a subspace of $V$ if and only if one of the subspaces is contained in the other.
+G: ∀ {F V : Type*} [AddCommGroup V] [Field F] [Module F V] (U W : Submodule F V), (∃ U' : Submodule F V, U'.carrier = ↑U ∪ ↑W) ↔ (U ≤ W ∨ W ≤ U)
+P: ∀ {V : Type*} [AddCommGroup V] [Module ℤ V] (W₁ W₂ : Submodule ℤ V), (W₁ ≤ W₂) ∧ (W₂ ≤ W₁) → (W₁ ⊔ W₂ = W₁) ∨ (W₁ ⊔ W₂ = W₂)
+nhyp: ¬(True ↔ True)
+ncin: ¬(True →     ((∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (U W : Submodule F V),         (∃ U', U'.carrier = ↑U ∪ ↑W) ↔ U ≤ W ∨ W ≤ U) ↔       ∀ {V : Type u} [inst : AddCommGroup V] [inst_1 : Module ℤ V] (W₁ W₂ : Submodule ℤ V),         W₁ ≤ W₂ ∧ W₂ ≤ W₁ → W₁ ⊔ W₂ = W₁ ∨ W₁ ⊔ W₂ = W₂))
+acc: (True ↔ True) ∧   ((∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (U W : Submodule F V),       (∃ U', U'.carrier = ↑U ∪ ↑W) ↔ U ≤ W ∨ W ≤ U) ↔     ∀ {V : Type u} [inst : AddCommGroup V] [inst_1 : Module ℤ V] (W₁ W₂ : Submodule ℤ V),       W₁ ≤ W₂ ∧ W₂ ≤ W₁ → W₁ ⊔ W₂ = W₁ ∨ W₁ ⊔ W₂ = W₂)
+
+===== pnv-test-1169 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=1/5 prefix_s=3/4 shared=1
+proved: ['ncin', 'ncomp', 'nhyp', 'split_s']  tactic: ['split_s']
+NL: Consider a prime $p$ of the form $4 t+1$. Show that $a$ is a primitive root modulo $p$ iff $-a$ is a primitive root modulo $p$.
+G: ∀ {p t: ℕ} (hp0 : p.Prime) (hp1 : p = 4*t + 1) (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p
+P: ∀ {p : ℕ} [hp : Fact p.Prime] (h : p % 4 = 1) (a : ℤ), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p
+nhyp: ¬∀ {p : ℕ}, True ↔ Fact (Nat.Prime p) ∧ p % 4 = 1
+ncin: ¬∀ {p : ℕ},     True →       ((∀ {t : ℕ}, Nat.Prime p → p = 4 * t + 1 → ∀ (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p) ↔         ∀ (a : ℤ), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p)
+acc: ∀ {p : ℕ},   (True ↔ Fact (Nat.Prime p) ∧ p % 4 = 1) ∧     ((∀ {t : ℕ}, Nat.Prime p → p = 4 * t + 1 → ∀ (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p) ↔       ∀ (a : ℤ), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p)
+
+===== pnv-test-315 label=False union=reject closed=unknown ambiguous=false full=true prefix_r=4/4 prefix_s=5/5 shared=3
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: If $G$ is a finite group of even order, show that there must be an element $a \neq e$ such that $a=a^{-1}$.
+G: ∀ {G : Type*} [Group G] [Fintype G] (hG2 : Even (card G)), ∃ (a : G), a ≠ 1 ∧ a = a⁻¹
+P: ∀ {G : Type*} [Group G] [Fintype G] (hG : Fintype.card G % 2 = 0) (hG' : Fintype.card G > 2), ∃ x : G, x ≠ 1 ∧ x ^ 2 = 1
+nhyp: ¬∀ {G : Type u} [Group G] [inst : Fintype G], Even (card G) ↔ card G % 2 = 0 ∧ card G > 2
+ncin: ¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],     Even (card G) → ((∃ a, a ≠ 1 ∧ a = a⁻¹) ↔ ∃ x, x ≠ 1 ∧ x ^ 2 = 1)
+acc: ∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],   (Even (card G) ↔ card G % 2 = 0 ∧ card G > 2) ∧ ((∃ a, a ≠ 1 ∧ a = a⁻¹) ↔ ∃ x, x ≠ 1 ∧ x ^ 2 = 1)
+
+===== pnv-test-285 label=False union=reject closed=unknown ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=3
+proved: ['ncin', 'ncomp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: If $R$ is a commutative ring and $a \in R$, let $L(a) = \{x \in R \mid xa = 0\}$. Prove that $L(a)$ is an ideal of $R$.
+G: ∀ {R : Type*} [CommRing R] (a : R), ∃ I : Ideal R, {x : R | x*a=0} = I
+P: ∀ {R : Type u} [CommRing R] (a : R), IsPrime (Ideal.span { a })
+nhyp: ¬∀ {R : Type u} [CommRing R] (a : R), True ↔ True
+ncin: ¬∀ {R : Type u} [inst : CommRing R] (a : R),     True → ((∃ I, {x | x * a = 0} = ↑I) ↔ (span {a}).IsPrime)
+acc: ∀ {R : Type u} [inst : CommRing R] (a : R),   (True ↔ True) ∧ ((∃ I, {x | x * a = 0} = ↑I) ↔ (span {a}).IsPrime)
+
+===== pnv-test-377 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0
+proved: ['ncin', 'ncomp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Prove the the operation $\star$ on $\mathbb{Z}$ defined by $a\star b=a-b$ is not commutative.
+G: ∃ a b : ℤ, a - b ≠ b - a
+P: ∀ a b : ℤ, a ⊓ b = 0 → a ⊔ b = 0
+nhyp: ¬(True ↔ True)
+ncin: ¬(True → ((∃ a b, a - b ≠ b - a) ↔ ∀ (a b : ℤ), min a b = 0 → max a b = 0))
+acc: (True ↔ True) ∧ ((∃ a b, a - b ≠ b - a) ↔ ∀ (a b : ℤ), min a b = 0 → max a b = 0)
+
+===== pnv-test-1116 label=False union=reject closed=unknown ambiguous=true full=false prefix_r=7/9 prefix_s=6/9 shared=4
+proved: ['ncomp', 'nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: If $F$ is a field of characteristic $p \neq 0$, show that $(a + b)^m = a^m + b^m$, where $m = p^n$, for all $a, b \in F$ and any positive integer $n$.
+G: ∀ {p m n: ℕ} {F : Type*} [Field F] (hp : p ≠ 0) (hn : n > 0) (hF : CharP F p) (a b : F) (hm : m = p ^ n), (a + b) ^ m = a^m + b^m
+P: ∀ (F : Type*) [Field F] (p : ℕ) [hp : Fact p.Prime] [CharP F p] (m n : ℕ) (a b : F), (a + b) ^ (p ^ n) = a ^ (p ^ n) + b ^ (p ^ n)
+nhyp: ¬∀ {p n : ℕ} {F : Type u} [inst : Field F],     p ≠ 0 ∧ n > 0 ∧ CharP F p ↔ Fact (Nat.Prime p) ∧ CharP F p
+ncin: ¬∀ {p n : ℕ} {F : Type u} [inst : Field F],     p ≠ 0 ∧ n > 0 ∧ CharP F p →       ((∀ (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n) ↔         ∀ (n : ℕ) (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n)
+acc: ∀ {p n : ℕ} {F : Type u} [inst : Field F],   (p ≠ 0 ∧ n > 0 ∧ CharP F p ↔ Fact (Nat.Prime p) ∧ CharP F p) ∧     ((∀ (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n) ↔       ∀ (n : ℕ) (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n)
+
+===== pnv-test-201 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=3/6 prefix_s=1/3 shared=1
+proved: ['nhyp', 'split_r']  tactic: ['split_r']
+NL: Let $q \in \mathbb{Z}$ be a prime with $q \equiv 3 \bmod 4$. Prove that the quotient ring $\mathbb{Z}[i] /(q)$ is a field with $q^{2}$ elements.
+G: ∀ {q : ℕ} (hq0 : q.Prime) (hq1 : q ≡ 3 [ZMOD 4]) {R : Type} [Ring R] (hR : R = (GaussianInt ⧸ span ({↑q} : Set GaussianInt))), IsField R ∧ ∃ finR : Fintype R, @card R finR = q^2
+P: ∀ (q : ℕ) [Fact (q.Prime)] (hq : q ≡ 3 [MOD 4]), Fintype.card (ZMod q) = q^2
+nhyp: ¬∀ {q : ℕ}, Nat.Prime q ∧ ↑q ≡ 3 [ZMOD 4] ↔ True
+ncin: ¬∀ {q : ℕ},     Nat.Prime q ∧ ↑q ≡ 3 [ZMOD 4] →       ((∀ {R : Type} [inst : Ring R], R = (GaussianInt ⧸ span {↑q}) → IsField R ∧ ∃ finR, card R = q ^ 2) ↔         ∀ [inst : Fact (Nat.Prime q)], q ≡ 3 [MOD 4] → card (ZMod q) = q ^ 2)
+acc: ∀ {q : ℕ},   (Nat.Prime q ∧ ↑q ≡ 3 [ZMOD 4] ↔ True) ∧     ((∀ {R : Type} [inst : Ring R], R = (GaussianInt ⧸ span {↑q}) → IsField R ∧ ∃ finR, card R = q ^ 2) ↔       ∀ [inst : Fact (Nat.Prime q)], q ≡ 3 [MOD 4] → card (ZMod q) = q ^ 2)
+
+===== pnv-test-366 label=False union=reject closed=unknown ambiguous=true full=true prefix_r=7/7 prefix_s=8/8 shared=6
+proved: ['ncin', 'ncomp', 'nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: If $\varphi$ is a homomorphism of $G$ onto $G'$ and $N \triangleleft G$, show that $\varphi(N) \triangleleft G'$.
+G: ∀ {G : Type*} [Group G] {G' : Type*} [Group G'] (φ : G →* G') (N : Subgroup G) [N.Normal], (Subgroup.map φ N).Normal
+P: ∀ {G G' : Type*} [Group G] [Group G'] (φ : G →* G') (hφ : Function.Surjective φ) (N : Subgroup G) (hN : N ≤ center G), φ '' N ≤ center G'
+nhyp: ¬∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),     N.Normal ↔ Function.Surjective ⇑φ ∧ ↑N ≤ center G
+ncin: ¬∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),     N.Normal → ((Subgroup.map φ N).Normal ↔ ⇑φ '' ↑N ≤ center G')
+acc: ∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),   (N.Normal ↔ Function.Surjective ⇑φ ∧ ↑N ≤ center G) ∧ ((Subgroup.map φ N).Normal ↔ ⇑φ '' ↑N ≤ center G')
+
+===== pnv-test-925 label=False union=reject closed=unknown ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Show that $(p - 1)/2$ of the numbers $1, 2, \ldots, p - 1$ are quadratic residues and $(p - 1)/2$ are quadratic nonresidues $\mod p$.
+G: ∀ (p : ℕ) (hp : Nat.Prime p) (hodd : p % 2 = 1), (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ∃ x : ZMod p, x^2 = q) ∧ (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ¬ ∃ x : ZMod p, x^2 = q)
+P: ∀ (p : ℕ) [Fact (Nat.Prime p)], (p - 1)/2 = ((Finset.range (p - 1)).filter (fun x : ℕ => x^2 ≡ 1 [MOD p])).card
+nhyp: ¬∀ (p : ℕ), Nat.Prime p ∧ p % 2 = 1 ↔ Fact (Nat.Prime p)
+ncin: ¬∀ (p : ℕ),     Nat.Prime p ∧ p % 2 = 1 →       (((∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ∃ x, x ^ 2 = q) ∧           ∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ¬∃ x, x ^ 2 = q) ↔         (p - 1) / 2 = {x ∈ Finset.range (p - 1) | x ^ 2 ≡ 1 [MOD p]}.card)
+acc: ∀ (p : ℕ),   (Nat.Prime p ∧ p % 2 = 1 ↔ Fact (Nat.Prime p)) ∧     (((∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ∃ x, x ^ 2 = q) ∧         ∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ¬∃ x, x ^ 2 = q) ↔       (p - 1) / 2 = {x ∈ Finset.range (p - 1) | x ^ 2 ≡ 1 [MOD p]}.card)
+
+===== pnv-test-250 label=False union=reject closed=unknown ambiguous=false full=true prefix_r=1/1 prefix_s=0/0 shared=0
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Show that $\sum^{\prime} 1 / n$, the sum being over square free integers, diverges.
+G: ¬ Summable (λ i : {p : ℤ // Squarefree p} => (1 : ℚ) / i)
+P: Summable (fun n : ℕ => (1 : ℝ) / (n : ℝ))
+nhyp: ¬((Summable fun i => 1 / ↑↑i) ↔ True)
+ncin: ¬((Summable fun i => 1 / ↑↑i) → (False ↔ Summable fun n => 1 / ↑n))
+acc: ((Summable fun i => 1 / ↑↑i) ↔ True) ∧ (False ↔ Summable fun n => 1 / ↑n)
+
+===== pnv-test-1156 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=4/6 prefix_s=3/8 shared=3
+proved: ['nhyp', 'split_r']  tactic: ['split_r']
+NL: If $P \triangleleft G$, $P$ a $p$-Sylow subgroup of $G$, prove that $\varphi(P) = P$ for every automorphism $\varphi$ of $G$.
+G: ∀ {G : Type*} [Group G] {p : ℕ} (hp : Nat.Prime p) {P : Sylow p G} (hP : P.Normal), Subgroup.Characteristic (P : Subgroup G)
+P: ∀ {G : Type*} [Group G] {p : ℕ} {P : Subgroup G} [hp : Fact p.Prime] (hP : P.Normal) (hSylow : IsPGroup p P) (ϕ : G ≃* G), ϕ.toMonoidHom '' P = P
+nhyp: ¬∀ {G : Type u} [Group G] {p : ℕ}, Nat.Prime p ↔ True
+ncin: ¬∀ {G : Type u} [inst : Group G] {p : ℕ},     Nat.Prime p →       ((∀ {P : Sylow p G}, (↑P).Normal → (↑P).Characteristic) ↔         ∀ {P : Subgroup G} [hp : Fact (Nat.Prime p)],           P.Normal → IsPGroup p ↥P → ∀ (ϕ : G ≃* G), ⇑ϕ.toMonoidHom '' ↑P = ↑P)
+acc: ∀ {G : Type u} [inst : Group G] {p : ℕ},   (Nat.Prime p ↔ True) ∧     ((∀ {P : Sylow p G}, (↑P).Normal → (↑P).Characteristic) ↔       ∀ {P : Subgroup G} [hp : Fact (Nat.Prime p)],         P.Normal → IsPGroup p ↥P → ∀ (ϕ : G ≃* G), ⇑ϕ.toMonoidHom '' ↑P = ↑P)
+
+===== pnv-test-893 label=False union=reject closed=unknown ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Let $f: \mathbb{R} \rightarrow \mathbb{R}$ be an infinitely differentiable function satisfying $f(0)=0, f(1)=1$, and $f(x) \geq 0$ for all $x \in$ $\mathbb{R}$. Show that there exist a positive integer $n$ and a real number $x$ such that $f^{(n)}(x)<0$.
+G: ∀ (f : ℝ → ℝ) (hf : ContDiff ℝ ⊤ f) (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf2 : ∀ x, f x ≥ 0), ∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0
+P: ∀ (f : ℝ → ℝ) (hf_smooth : ∀ n, Differentiable ℝ (f^[n])) (hf0 : f 0 = 0) (hf1 : f 1 = 1) (hf_nonneg : ∀ x, f x ≥ 0), ∃ n : ℕ, ∃ x : ℝ, deriv^[n] f x < 0
+nhyp: ¬∀ (f : ℝ → ℝ),     (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔       (∀ (n : ℕ), Differentiable ℝ f^[n]) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0
+ncin: ¬∀ (f : ℝ → ℝ),     (ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) →       ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0)
+acc: ∀ (f : ℝ → ℝ),   ((ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ↔       (∀ (n : ℕ), Differentiable ℝ f^[n]) ∧ f 0 = 0 ∧ f 1 = 1 ∧ ∀ (x : ℝ), f x ≥ 0) ∧     ((∃ n x, iteratedDeriv (↑n) f x < 0) ↔ ∃ n x, deriv^[n] f x < 0)
+
+===== pnv-test-438 label=False union=reject closed=unknown ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1
+proved: ['nhyp', 'split_r']  tactic: ['split_r']
+NL: Prove that no order can be defined in the complex field that turns it into an ordered field.
+G: ¬ ∃ (r : ℂ → ℂ → Prop), IsLinearOrder ℂ r
+P: ¬ ∃ (r : ℂ → ℂ → Prop), IsStrictTotalOrder ℂ r ∧ ∀ x y z : ℂ, r x y → r (x + z) (y + z) ∧ (∀ x y : ℂ, r 0 x → r 0 (x * y))
+nhyp: ¬∀ (r : ℂ → ℂ → Prop),     IsLinearOrder ℂ r ↔       IsStrictTotalOrder ℂ r ∧ ∀ (x y z : ℂ), r x y → r (x + z) (y + z) ∧ ∀ (x y : ℂ), r 0 x → r 0 (x * y)
+ncin: ¬∀ (r : ℂ → ℂ → Prop), IsLinearOrder ℂ r → (False ↔ False)
+acc: ∀ (r : ℂ → ℂ → Prop),   (IsLinearOrder ℂ r ↔       IsStrictTotalOrder ℂ r ∧ ∀ (x y z : ℂ), r x y → r (x + z) (y + z) ∧ ∀ (x y : ℂ), r 0 x → r 0 (x * y)) ∧     (False ↔ False)
+
+===== pnv-test-796 label=False union=accept closed=unknown ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1
+proved: ['acc', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z} / p \mathbb{Z})^{\times}$to prove Fermat's Little Theorem: if $p$ is a prime then $a^{p} \equiv a(\bmod p)$ for all $a \in \mathbb{Z}$.
+G: ∀ (p : ℕ) (hp : Nat.Prime p) (a : ℤ), a ^ p ≡ a [ZMOD p]
+P: ∀ (p : ℕ) [Fact p.Prime] (a : ℕ), a ^ p ≡ a [MOD p]
+nhyp: ¬∀ (p : ℕ), Nat.Prime p ↔ Fact (Nat.Prime p)
+ncin: ¬∀ (p : ℕ), Nat.Prime p → ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p])
+acc: ∀ (p : ℕ),   (Nat.Prime p ↔ Fact (Nat.Prime p)) ∧ ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p])
+
+===== pnv-test-638 label=False union=reject closed=unknown ambiguous=false full=true prefix_r=3/3 prefix_s=4/4 shared=1
+proved: ['ncin', 'ncomp', 'nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Suppose $f$ is defined and differentiable for every $x>0$, and $f^{\prime}(x) \rightarrow 0$ as $x \rightarrow+\infty$. Put $g(x)=f(x+1)-f(x)$. Prove that $g(x) \rightarrow 0$ as $x \rightarrow+\infty$.
+G: ∀ {f : ℝ → ℝ} (hfd : DifferentiableOn ℝ f (Ioi 0)) (hf : Tendsto (deriv f) atTop (𝓝 0)), Tendsto (λ x => f (x + 1) - f x) atTop (𝓝 0)
+P: ∀ {f : ℝ → ℝ} (h_deriv : Tendsto (deriv f) atTop (𝓝 0)) (h_cont : Continuous f) (h_mono : Monotone f), Tendsto f atTop (𝓝 0)
+nhyp: ¬∀ {f : ℝ → ℝ},     DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) ↔       Tendsto (deriv f) atTop (𝓝 0) ∧ Continuous f ∧ Monotone f
+ncin: ¬∀ {f : ℝ → ℝ},     DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) →       (Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) ↔ Tendsto f atTop (𝓝 0))
+acc: ∀ {f : ℝ → ℝ},   (DifferentiableOn ℝ f (Set.Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0) ↔       Tendsto (deriv f) atTop (𝓝 0) ∧ Continuous f ∧ Monotone f) ∧     (Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0) ↔ Tendsto f atTop (𝓝 0))
+
+===== pnv-test-663 label=False union=reject closed=unknown ambiguous=false full=false prefix_r=2/5 prefix_s=3/5 shared=2
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: A subgroup $M$ of a group $G$ is called a maximal subgroup if $M \neq G$ and the only subgroups of $G$ which contain $M$ are $M$ and $G$. Prove that if $H$ is a proper subgroup of the finite group $G$ then there is a maximal subgroup of $G$ containing $H$.
+G: ∀ {G : Type*} [Group G] [Fintype G] {H : Subgroup G} (hH : H ≠ ⊤), ∃ M : Subgroup G, M ≠ ⊤ ∧ (∀ K : Subgroup G, M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M
+P: ∀ {G : Type*} [Group G] [Finite G] {H : Subgroup G} (hH : H ≠ ⊤), ∃ (M : Subgroup G) (hM : M ≠ ⊤), H ≤ M ∧ ∀ (K : Subgroup G), H ≤ K → M = K ∨ K = ⊤
+nhyp: ¬∀ {G : Type u} [Group G], True ↔ Finite G
+ncin: ¬∀ {G : Type u} [inst : Group G],     True →       ((∀ [Fintype G] {H : Subgroup G}, H ≠ ⊤ → ∃ M, M ≠ ⊤ ∧ (∀ (K : Subgroup G), M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M) ↔         ∀ {H : Subgroup G}, H ≠ ⊤ → ∃ M, ∃ (_ : M ≠ ⊤), H ≤ M ∧ ∀ (K : Subgroup G), H ≤ K → M = K ∨ K = ⊤)
+acc: ∀ {G : Type u} [inst : Group G],   (True ↔ Finite G) ∧     ((∀ [Fintype G] {H : Subgroup G}, H ≠ ⊤ → ∃ M, M ≠ ⊤ ∧ (∀ (K : Subgroup G), M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M) ↔       ∀ {H : Subgroup G}, H ≠ ⊤ → ∃ M, ∃ (_ : M ≠ ⊤), H ≤ M ∧ ∀ (K : Subgroup G), H ≤ K → M = K ∨ K = ⊤)
+
+===== pnv-test-776 label=False union=reject closed=unknown ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Let $R$ be a commutative ring with $1 \neq 0$. Prove that if $a$ is a nilpotent element of $R$ then $1-a b$ is a unit for all $b \in R$.
+G: ∀ {R : Type*} [CommRing R] (hR : (0 : R) ≠ 1) {a : R} (ha : IsNilpotent a) (b : R), IsUnit (1-a*b)
+P: ∀ {R : Type*} [CommRing R] {a b : R} (ha : IsNilpotent a) (hb : b ≠ 0), IsUnit (1 - a * b)
+nhyp: ¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R), 0 ≠ 1 ∧ IsNilpotent a ↔ IsNilpotent a ∧ b ≠ 0
+ncin: ¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R),     0 ≠ 1 ∧ IsNilpotent a → (IsUnit (1 - a * b) ↔ IsUnit (1 - a * b))
+acc: ∀ {R : Type u} [inst : CommRing R] {a : R} (b : R),   (0 ≠ 1 ∧ IsNilpotent a ↔ IsNilpotent a ∧ b ≠ 0) ∧ (IsUnit (1 - a * b) ↔ IsUnit (1 - a * b))
+
+===== pnv-test-311 label=True union=reject closed=unknown ambiguous=false full=false prefix_r=1/3 prefix_s=2/2 shared=1
+proved: ['nhyp', 'split_s']  tactic: ['split_s']
+NL: Let $H$ be a subgroup of the additive group of rational numbers with the property that $1 / x \in H$ for every nonzero element $x$ of $H$. Prove that $H=0$ or $\mathbb{Q}$.
+G: ∀ (H : AddSubgroup ℚ) {x : ℚ} (hH : (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H), H = ⊥ ∨ H = ⊤
+P: ∀ {H : AddSubgroup ℚ} (h : ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H), H = ⊥ ∨ H = ⊤
+nhyp: ¬∀ (H : AddSubgroup ℚ), True ↔ ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H
+ncin: ¬∀ (H : AddSubgroup ℚ),     True → ((∀ {x : ℚ}, (x ∈ H ∧ x ≠ 0 → 1 / x ∈ H) → H = ⊥ ∨ H = ⊤) ↔ H = ⊥ ∨ H = ⊤)
+acc: ∀ (H : AddSubgroup ℚ),   (True ↔ ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H) ∧ ((∀ {x : ℚ}, (x ∈ H ∧ x ≠ 0 → 1 / x ∈ H) → H = ⊥ ∨ H = ⊤) ↔ H = ⊥ ∨ H = ⊤)
+
+===== pnv-test-253 label=True union=reject closed=unknown ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3
+proved: ['nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.
+G: ∀ {α : Type*} [TopologicalSpace α] {s : ℕ → Set α} (hs : ∀ i, IsCompact (s i)) (hne : ∀ i, (s i).Nonempty) (hs : ∀ i, (s i) ⊇ (s (i + 1))), (⋂ i, s i).Nonempty
+P: ∀ {α : Type*} [TopologicalSpace α] [CompactSpace α] {K : ℕ → Set α} (hK : ∀ n, IsCompact (K n)) (hne : ∀ n, (K n).Nonempty) (hdec : ∀ n, K (n + 1) ⊆ K n), (⋂ n, K n).Nonempty
+nhyp: ¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},     ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔       CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), (s n).Nonempty) ∧ ∀ (n : ℕ), s (n + 1) ⊆ s n
+ncin: ¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},     ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) →       ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty)
+acc: ∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},   (((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔       CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), (s n).Nonempty) ∧ ∀ (n : ℕ), s (n + 1) ⊆ s n) ∧     ((⋂ i, s i).Nonempty ↔ (⋂ n, s n).Nonempty)
+
+===== pnv-test-693 label=True union=reject closed=proved ambiguous=true full=true prefix_r=8/8 prefix_s=7/7 shared=7
+proved: ['ncomp', 'nhyp', 'split_r', 'split_s']  tactic: ['split_r', 'split_s']
+NL: Prove that if $a \in \mathbf{F}$, $v \in V$, and $av = 0$, then $a = 0$ or $v = 0$.
+G: ∀ {F V : Type*} [AddCommGroup V] [Field F] [Module F V] (v : V) (a : F), a • v = 0 → a = 0 ∨ v = 0
+P: ∀ {F : Type*} [Field F] {V : Type*} [AddCommGroup V] [Module F V] (a : F) (v : V), a • v = 0 ↔ a = 0 ∨ v = 0
+nhyp: ¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),     a • v = 0 ↔ True
+ncin: ¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),     a • v = 0 → (a = 0 ∨ v = 0 ↔ (a • v = 0 ↔ a = 0 ∨ v = 0))
+acc: ∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),   (a • v = 0 ↔ True) ∧ (a = 0 ∨ v = 0 ↔ (a • v = 0 ↔ a = 0 ∨ v = 0))

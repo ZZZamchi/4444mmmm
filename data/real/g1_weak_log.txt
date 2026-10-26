@@ -1,0 +1,57 @@
+model deepseek/deepseek-v4.1-flash pairs 300
+canon Counter({'ok': 300}) 0s
+tactic tier Counter({'unknown': 227, 'accept': 72, 'reject': 1}) 1s
+component done 4823s
+{
+  "model": "deepseek/deepseek-v4.1-flash",
+  "label_inequivalent": {
+    "closed_unknown": 148,
+    "comp_unknown": 103,
+    "comp_unknown_shared>0": 67,
+    "comp_unknown_nosplit": 23,
+    "closed_unknown->comp_unknown": 102,
+    "comp_unknown_split": 80,
+    "comp_unknown_shared0": 36,
+    "comp_accept": 13,
+    "comp_accept_shared>0": 7,
+    "comp_accept_split": 12,
+    "closed_unknown->comp_accept": 12,
+    "comp_reject": 34,
+    "comp_reject_shared>0": 28,
+    "comp_reject_split": 22,
+    "closed_unknown->comp_reject": 34,
+    "union_reject": 34,
+    "closed_proved": 2,
+    "closed_proved->comp_accept": 1,
+    "comp_reject_shared0": 6,
+    "comp_reject_nosplit": 12,
+    "comp_accept_shared0": 6,
+    "comp_accept_nosplit": 1,
+    "closed_proved->comp_unknown": 1
+  },
+  "label_equivalent": {
+    "closed_unknown": 77,
+    "comp_unknown": 44,
+    "comp_unknown_shared0": 14,
+    "comp_unknown_split": 32,
+    "closed_unknown->comp_unknown": 43,
+    "comp_unknown_nosplit": 12,
+    "comp_unknown_shared>0": 30,
+    "closed_proved": 73,
+    "comp_accept": 99,
+    "comp_accept_shared>0": 81,
+    "comp_accept_split": 93,
+    "closed_proved->comp_accept": 71,
+    "closed_unknown->comp_accept": 28,
+    "comp_accept_shared0": 18,
+    "closed_proved->comp_unknown": 1,
+    "comp_reject": 7,
+    "comp_reject_shared>0": 7,
+    "comp_reject_split": 7,
+    "closed_unknown->comp_reject": 6,
+    "union_reject": 7,
+    "comp_accept_nosplit": 6,
+    "closed_proved->comp_reject": 1
+  },
+  "seconds": 4822.5
+}

@@ -1,0 +1,474 @@
+{
+  "n_candidates": 60,
+  "n_with_dependent_successors": 57,
+  "n_targets": 20,
+  "by_drift": {
+    "false": {
+      "applicable": 20,
+      "missed": 0,
+      "miss_rate": 0.0,
+      "successor_pass_rate": 0.016
+    },
+    "lt": {
+      "applicable": 5,
+      "missed": 0,
+      "miss_rate": 0.0,
+      "successor_pass_rate": 0.0
+    },
+    "drop_hyp": {
+      "applicable": 6,
+      "missed": 0,
+      "miss_rate": 0.0,
+      "successor_pass_rate": 0.0
+    }
+  },
+  "overall_miss_rate": 0.0,
+  "targets_with_some_miss": 0,
+  "seconds": 640.2,
+  "targets": {
+    "mul_mem_upperBounds_mul": {
+      "file": "Mathlib/Algebra/Order/Group/Pointwise/Bounds.lean",
+      "n_successors": 2,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "drop_hyp": {
+          "kind": "drop_hyp",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "mk_le_mk": {
+      "file": "Mathlib/Order/Quotient.lean",
+      "n_successors": 2,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "lt": {
+          "kind": "lt",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "biInter_mem": {
+      "file": "Mathlib/Order/Filter/Finite.lean",
+      "n_successors": 3,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "drop_hyp": {
+          "kind": "drop_hyp",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "permutationsAux2_snd_cons": {
+      "file": "Mathlib/Data/List/Permutation.lean",
+      "n_successors": 3,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "dens_ne_zero": {
+      "file": "Mathlib/Data/Finset/Density.lean",
+      "n_successors": 2,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "left_notMem_Ioo": {
+      "file": "Mathlib/Order/Interval/Multiset.lean",
+      "n_successors": 2,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            true,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "le_closure": {
+      "file": "Mathlib/Order/Closure.lean",
+      "n_successors": 8,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "lt": {
+          "kind": "lt",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "antidiagonal_eq_map": {
+      "file": "Mathlib/Data/Finset/NatAntidiagonal.lean",
+      "n_successors": 2,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "encard_univ": {
+      "file": "Mathlib/Data/Set/Card.lean",
+      "n_successors": 3,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "mem_of_isAtom_of_le_sSup_atoms": {
+      "file": "Mathlib/Order/BooleanGenerators.lean",
+      "n_successors": 3,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "drop_hyp": {
+          "kind": "drop_hyp",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "mul_le_mul_of_nonneg_left": {
+      "file": "Mathlib/Algebra/Order/GroupWithZero/Unbundled/Defs.lean",
+      "n_successors": 8,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "lt": {
+          "kind": "lt",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "drop_hyp": {
+          "kind": "drop_hyp",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "preimage_kernImage": {
+      "file": "Mathlib/Data/Set/Lattice/Image.lean",
+      "n_successors": 2,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "infIrred_Ici": {
+      "file": "Mathlib/Order/Birkhoff.lean",
+      "n_successors": 4,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "transfiniteIterate_succ": {
+      "file": "Mathlib/Order/TransfiniteIteration.lean",
+      "n_successors": 2,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "drop_hyp": {
+          "kind": "drop_hyp",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "mabs_div_le_iff": {
+      "file": "Mathlib/Algebra/Order/Group/Abs.lean",
+      "n_successors": 4,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "lt": {
+          "kind": "lt",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "mem_keys": {
+      "file": "Mathlib/Data/List/AList.lean",
+      "n_successors": 3,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "choose_le_descFactorial": {
+      "file": "Mathlib/Data/Nat/Choose/Bounds.lean",
+      "n_successors": 2,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "lt": {
+          "kind": "lt",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "cardinal_sInter_mem": {
+      "file": "Mathlib/Order/Filter/CardinalInter.lean",
+      "n_successors": 3,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        },
+        "drop_hyp": {
+          "kind": "drop_hyp",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "finite_Icc": {
+      "file": "Mathlib/Order/Interval/Finset/Defs.lean",
+      "n_successors": 2,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    },
+    "mem_erase": {
+      "file": "Mathlib/Data/Finset/Erase.lean",
+      "n_successors": 2,
+      "drifts": {
+        "false": {
+          "kind": "false",
+          "timeout": false,
+          "successors_pass": [
+            false,
+            false
+          ],
+          "all_pass": false
+        }
+      }
+    }
+  }
+}

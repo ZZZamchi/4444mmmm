@@ -1,0 +1,60 @@
+canon Counter({(False, 'ok'): 60, (True, 'ok'): 40}) 57s
+tactic tier Counter({(False, 'unknown'): 60, (True, 'unknown'): 23, (True, 'accept'): 17}) split checked 77 570s
+deepseek/deepseek-v4.1-flash one-shot Counter({(False, 'unknown'): 51, (True, 'unknown'): 22, (True, 'accept'): 18, (False, 'reject'): 7, (False, 'accept'): 2})
+deepseek/deepseek-v4.1-flash repair Counter({(False, 'unknown'): 34, (True, 'unknown'): 22, (False, 'reject'): 18, (True, 'accept'): 18, (False, 'accept'): 8}) 3372s
+anthropic/claude-sonnet-5.5 one-shot Counter({(False, 'unknown'): 31, (False, 'reject'): 23, (True, 'accept'): 23, (True, 'unknown'): 14, (False, 'accept'): 6, (True, 'reject'): 3})
+anthropic/claude-sonnet-5.5 repair Counter({(False, 'unknown'): 31, (False, 'reject'): 23, (True, 'accept'): 23, (True, 'unknown'): 14, (False, 'accept'): 6, (True, 'reject'): 3}) 4887s
+openai/gpt-5.6-sol one-shot Counter({(False, 'unknown'): 46, (True, 'accept'): 24, (True, 'unknown'): 15, (False, 'reject'): 8, (False, 'accept'): 6, (True, 'reject'): 1})
+openai/gpt-5.6-sol repair Counter({(False, 'unknown'): 33, (True, 'accept'): 26, (False, 'reject'): 19, (True, 'unknown'): 11, (False, 'accept'): 8, (True, 'reject'): 3}) 5913s
+{
+  "models": [
+    "deepseek/deepseek-v4.1-flash",
+    "anthropic/claude-sonnet-5.5",
+    "openai/gpt-5.6-sol"
+  ],
+  "label_inequivalent": {
+    "canon_ok": 60,
+    "f7_no_alignment": 36,
+    "closed_unknown": 59,
+    "tactic_unknown": 60,
+    "union_reject": 30,
+    "deepseek/deepseek-v4.1-flash_unknown": 34,
+    "anthropic/claude-sonnet-5.5_reject": 23,
+    "openai/gpt-5.6-sol_reject": 19,
+    "f7_unknown": 16,
+    "union_unknown": 20,
+    "anthropic/claude-sonnet-5.5_unknown": 31,
+    "openai/gpt-5.6-sol_unknown": 33,
+    "f7_split_fail": 6,
+    "union_accept": 10,
+    "deepseek/deepseek-v4.1-flash_accept": 8,
+    "openai/gpt-5.6-sol_accept": 8,
+    "deepseek/deepseek-v4.1-flash_reject": 18,
+    "closed_proved": 1,
+    "anthropic/claude-sonnet-5.5_accept": 6,
+    "f7_reject": 2
+  },
+  "label_equivalent": {
+    "canon_ok": 40,
+    "f7_no_alignment": 8,
+    "closed_unknown": 25,
+    "tactic_unknown": 23,
+    "union_accept": 27,
+    "deepseek/deepseek-v4.1-flash_unknown": 22,
+    "anthropic/claude-sonnet-5.5_accept": 23,
+    "openai/gpt-5.6-sol_accept": 26,
+    "f7_split_fail": 4,
+    "f7_accept": 20,
+    "anthropic/claude-sonnet-5.5_unknown": 14,
+    "closed_proved": 15,
+    "tactic_accept": 17,
+    "deepseek/deepseek-v4.1-flash_accept": 18,
+    "f7_unknown": 8,
+    "union_unknown": 10,
+    "openai/gpt-5.6-sol_unknown": 11,
+    "union_reject": 3,
+    "anthropic/claude-sonnet-5.5_reject": 3,
+    "openai/gpt-5.6-sol_reject": 3
+  },
+  "seconds": 5913.2
+}

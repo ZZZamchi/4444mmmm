@@ -1,0 +1,1709 @@
+{
+  "model": "deepseek/deepseek-v4.1-flash",
+  "n_neg": 60,
+  "n_pos": 40,
+  "max_tokens": 16384,
+  "closed_llm_jobs": 356,
+  "label_inequivalent": {
+    "no_alignment": 36,
+    "closed_unknown": 59,
+    "closed_unknown->no_alignment": 35,
+    "unknown": 16,
+    "closed_unknown->unknown": 16,
+    "split_fail": 6,
+    "closed_unknown->split_fail": 6,
+    "closed_proved": 1,
+    "closed_proved->no_alignment": 1,
+    "reject": 2,
+    "closed_unknown->reject": 2
+  },
+  "label_equivalent": {
+    "no_alignment": 8,
+    "closed_unknown": 25,
+    "closed_unknown->no_alignment": 8,
+    "split_fail": 4,
+    "closed_unknown->split_fail": 4,
+    "accept": 20,
+    "closed_unknown->accept": 6,
+    "closed_proved": 15,
+    "closed_proved->accept": 14,
+    "unknown": 8,
+    "closed_unknown->unknown": 7,
+    "closed_proved->unknown": 1
+  },
+  "seconds": 9557.3,
+  "pairs": [
+    {
+      "row_id": "pnv-test-773",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-574",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{α : Type u} [TopologicalSpace α] {s : ℕ → Set α}",
+        "Hr": "(∀ i, IsCompact (s i)) ∧ (∀ i, (s i).Nonempty) ∧ (∀ i, (s i) ⊇ (s (i + 1)))",
+        "Cr": "(⋂ i, s i).Nonempty",
+        "Hs": "(∀ n, IsCompact (s n)) ∧ (∀ n, IsOpen (s n)) ∧ (∀ n, (s n ∩ s (n + 1)).Nonempty)",
+        "Cs": "(⋂ n, s n).Nonempty",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-643",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "split_fail",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(a b : ℕ → ℝ)",
+        "Hr": "(∀ n, (a n : EReal) ≠ ⊤ ∧ (a n : EReal) ≠ ⊥) ∧ (∀ n, (b n : EReal) ≠ ⊤ ∧ (b n : EReal) ≠ ⊥) ∧ (limsup (fun n => (a n : EReal)) ≠ ⊤) ∧ (limsup (fun n => (b n : EReal)) ≠ ⊥)",
+        "Cr": "limsup (fun n => (a n : EReal) + (b n : EReal)) ≤ limsup (fun n => (a n : EReal)) + limsup (fun n => (b n : EReal))",
+        "Hs": "(Tendsto a atTop atTop) ∧ (Tendsto b atTop atTop) ∧ (∃ l, Tendsto a atTop (𝓝 l)) ∧ (∃ l, Tendsto b atTop (𝓝 l))",
+        "Cs": "limsup (a + b) ≤ limsup a + limsup b",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-123",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "split_fail",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{F : Type u} [Field F] {p n m : ℕ} [CharP F p]",
+        "Hr": "(p ≠ 0) ∧ (n > 0) ∧ (m = p ^ n)",
+        "Cr": "(X ^ m - X : Polynomial F).Separable",
+        "Hs": "(m = p ^ n)",
+        "Cs": "∀ x y : F, x ^ m = x → y ^ m = y → x = y",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1431",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "split_fail",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{X Y : Type u} [TopologicalSpace X] [TopologicalSpace Y] [T2Space Y] {A : Set X} {f : X → Y} (g : X → Y)",
+        "Hr": "ContinuousOn f A ∧ ContinuousOn g (closure A) ∧ (∀ x : A, g x = f x)",
+        "Cr": "∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ (∀ x : A, g' x = f x)) → (∀ x : closure A, g x = g' x)",
+        "Hs": "IsClosed (closure Aᶜ : Set X) ∧ ContinuousOn f A ∧ ContinuousOn g A ∧ Set.EqOn f g (closure Aᶜ)",
+        "Cs": "Set.EqOn f g A",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1098",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-97",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{p : ℕ}",
+        "Hr": "p.Prime ∧ p ≡ 1 [MOD 4]",
+        "Cr": "(∃ x : ℕ, x^4 ≡ 2 [MOD p]) ↔ (∃ A B : ℕ, p = A^2 + 64 * B^2)",
+        "Hs": "p % 4 = 1",
+        "Cs": "∃ x : ℕ, (x^4 ≡ 2 [MOD p] ↔ (∃ A B : ℕ, p = A^2 + 64 * B^2))",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-836",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-739",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{X Y : Type u} [TopologicalSpace X] [TopologicalSpace Y] (p : X → Y)",
+        "Hr": "Function.Surjective p ∧ Continuous p ∧ IsClosedMap p ∧ (∀ y, IsCompact (p ⁻¹' {y})) ∧ CompactSpace Y",
+        "Cr": "CompactSpace X",
+        "Hs": "Continuous p ∧ (∀ y, IsCompact (p ⁻¹' {y} : Set X)) ∧ CompactSpace Y",
+        "Cs": "CompactSpace X",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1288",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-427",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(f : ℝ → ℝ)",
+        "Hr": "ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ (∀ x, f x ≥ 0)",
+        "Cr": "∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0",
+        "Hs": "(∀ n, Differentiable ℝ (deriv^[n] f)) ∧ f 0 = 0 ∧ f 1 = 1 ∧ (∀ x, 0 ≤ f x)",
+        "Cs": "∃ (n : ℕ) (x : ℝ), (deriv^[n] f) x < 0",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1363",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-275",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-800",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{ι : Type u} {X : ι → Type u} [∀ i, TopologicalSpace (X i)]",
+        "Hr": "(∀ i, Nonempty (X i)) ∧ NormalSpace (Π i, X i)",
+        "Cr": "∀ i, NormalSpace (X i)",
+        "Hs": "(∀ i j, NormalSpace (X i ⊕ X j)) ∧ (∀ i, Nonempty (X i))",
+        "Cs": "NormalSpace (∀ i, X i)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1257",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-532",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-1142",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "split_fail",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{G : Type u} [Group G] {x : G} {n : ℕ} (H : Subgroup G)",
+        "Hr": "1 ≤ n ∧ orderOf x = n ∧ G = Subgroup.closure {x}",
+        "Cr": "(∃ p : ℕ, Prime p ∧ p ∣ n ∧ H = Subgroup.closure {x ^ p}) ↔ (H ≠ ⊤ ∧ ∀ K : Subgroup G, H ≤ K → K = H ∨ K = ⊤)",
+        "Hs": "1 ≤ n ∧ x ^ n = 1",
+        "Cs": "(H ≤ Subgroup.zpowers x ∧ H ≠ ⊥ ∧ ∀ K : Subgroup G, H < K → K = ⊤) ↔ ∃ p : ℕ, Nat.Prime p ∧ p ∣ n ∧ H = Subgroup.zpowers (x ^ (n / p))",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1031",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-1117",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{X : Type u} [TopologicalSpace X] {A C : Set X}",
+        "Hr": "((IsConnected C) ∧ ((C ∩ A) ≠ ∅) ∧ ((C ∩ (Aᶜ)) ≠ ∅))",
+        "Cr": "((C ∩ frontier A) ≠ ∅)",
+        "Hs": "((IsConnected C) ∧ ((C ∩ A) ≠ ∅) ∧ ((C ∩ closure (Aᶜ)) ≠ ∅))",
+        "Cs": "((C ∩ frontier A) ≠ ∅)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1415",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-1427",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(f : ℝ → ℝ)",
+        "Hr": "ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ (∀ x, f x ≥ 0)",
+        "Cr": "∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0",
+        "Hs": "ContDiff ℝ ⊤ f ∧ f 0 = 0 ∧ f 1 = 1 ∧ (∀ x, 0 ≤ f x)",
+        "Cs": "∃ n : ℕ, ∃ x : ℝ, f ^[n] x < 0",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-440",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-437",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-942",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-916",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-1355",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-680",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "",
+        "Hr": "True",
+        "Cr": "IsTopologicalBasis {S : Set ℝ | ∃ a b : ℚ, a < b ∧ S = Ioo ↑a ↑b}",
+        "Hs": "True",
+        "Cs": "TopologicalSpace.IsTopologicalBasis (Set.range fun p : ℚ × ℚ => Ioo p.1 p.2)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-840",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-262",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{G : Type u} [Group G] (H K : Subgroup G)",
+        "Hr": "H ≤ K ∧ (H.subgroupOf K).Characteristic ∧ K.Normal",
+        "Cr": "H.Normal",
+        "Hs": "H ≤ K ∧ H.Characteristic ∧ K.Normal",
+        "Cs": "H.Normal",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-717",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-533",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "split_fail",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{G : Type u} [Group G]",
+        "Hr": "(∀ H : Subgroup G, H = ⊤ ∨ H = ⊥)",
+        "Cr": "IsCyclic G ∧ ∃ (p : ℕ) (Fin : Fintype G), Nat.Prime p ∧ @card G Fin = p",
+        "Hs": "∃ (p : ℕ), Nat.Prime p ∧ Nat.card G = p",
+        "Cs": "IsCyclic G",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-607",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{X : Type u} [MetricSpace X] [CompactSpace X] (f : X → X)",
+        "Hr": "Isometry f",
+        "Cr": "Continuous f ∧ Bijective f ∧ IsOpenMap f",
+        "Hs": "∀ x y : X, dist (f x) (f y) = dist x y",
+        "Cs": "Function.Bijective f",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-743",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-769",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-475",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-453",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-1169",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-315",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{G : Type u} [Group G] [Fintype G]",
+        "Hr": "Even (Fintype.card G)",
+        "Cr": "∃ (a : G), a ≠ 1 ∧ a = a⁻¹",
+        "Hs": "(Fintype.card G % 2 = 0) ∧ (Fintype.card G > 2)",
+        "Cs": "∃ x : G, x ≠ 1 ∧ x ^ 2 = 1",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-285",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{R : Type u} [CommRing R] (a : R)",
+        "Hr": "True",
+        "Cr": "∃ I : Ideal R, {x : R | x*a=0} = I",
+        "Hs": "True",
+        "Cs": "IsPrime (Ideal.span { a })",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1430",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-11",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-239",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-377",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-626",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-1116",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(F : Type u) [Field F] (p : ℕ) (m n : ℕ) (a b : F)",
+        "Hr": "(p ≠ 0) ∧ (n > 0) ∧ (CharP F p) ∧ (m = p ^ n)",
+        "Cr": "(a + b) ^ m = a ^ m + b ^ m",
+        "Hs": "(Fact p.Prime) ∧ (CharP F p)",
+        "Cs": "(a + b) ^ (p ^ n) = a ^ (p ^ n) + b ^ (p ^ n)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-201",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-366",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{G : Type u} [Group G] {G' : Type u} [Group G'] (φ : G →* G') (N : Subgroup G)",
+        "Hr": "N.Normal",
+        "Cr": "(Subgroup.map φ N).Normal",
+        "Hs": "Function.Surjective φ ∧ N ≤ center G",
+        "Cs": "φ '' N ≤ center G'",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1356",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-925",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "reject",
+      "tactic": [],
+      "proved": [
+        "ncin",
+        "ncomp",
+        "nhyp"
+      ],
+      "decomposition": {
+        "binders": "(p : ℕ)",
+        "Hr": "Nat.Prime p ∧ p % 2 = 1",
+        "Cr": "(∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ∃ x : ZMod p, x^2 = q) ∧ (∃ S : Finset (ZMod p), 0 ∉ S ∧ S.card = (p-1)/2 ∧ ∀ q ∈ S, ¬ ∃ x : ZMod p, x^2 = q)",
+        "Hs": "Fact (Nat.Prime p)",
+        "Cs": "(p - 1)/2 = ((Finset.range (p - 1)).filter (fun x : ℕ => x^2 ≡ 1 [MOD p])).card",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-231",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-250",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-1156",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-692",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-893",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(f : ℝ → ℝ)",
+        "Hr": "((ContDiff ℝ ⊤ f) ∧ f 0 = 0 ∧ f 1 = 1 ∧ (∀ x, f x ≥ 0))",
+        "Cr": "∃ (n : ℕ+) (x : ℝ), iteratedDeriv n f x < 0",
+        "Hs": "((∀ n, Differentiable ℝ (f^[n])) ∧ f 0 = 0 ∧ f 1 = 1 ∧ (∀ x, f x ≥ 0))",
+        "Cs": "∃ n : ℕ, ∃ x : ℝ, deriv^[n] f x < 0",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-438",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "split_fail",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(r : ℂ → ℂ → Prop)",
+        "Hr": "IsLinearOrder ℂ r",
+        "Cr": "False",
+        "Hs": "IsStrictTotalOrder ℂ r ∧ ∀ x y z : ℂ, r x y → r (x + z) (y + z) ∧ (∀ x y : ℂ, r 0 x → r 0 (x * y))",
+        "Cs": "False",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-796",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-638",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{f : ℝ → ℝ}",
+        "Hr": "DifferentiableOn ℝ f (Ioi 0) ∧ Tendsto (deriv f) atTop (𝓝 0)",
+        "Cr": "Tendsto (λ x => f (x + 1) - f x) atTop (𝓝 0)",
+        "Hs": "Tendsto (deriv f) atTop (𝓝 0) ∧ Continuous f ∧ Monotone f",
+        "Cs": "Tendsto f atTop (𝓝 0)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-216",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-663",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-776",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "reject",
+      "tactic": [],
+      "proved": [
+        "nhyp"
+      ],
+      "decomposition": {
+        "binders": "{R : Type u} [CommRing R] (a b : R)",
+        "Hr": "((0 : R) ≠ 1) ∧ IsNilpotent a",
+        "Cr": "IsUnit (1 - a * b)",
+        "Hs": "IsNilpotent a ∧ (b ≠ 0)",
+        "Cs": "IsUnit (1 - a * b)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1157",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-247",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "split_fail",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{X Y : Type u} [MetricSpace X] [MetricSpace Y] {f g : X → Y} {P : Set X}",
+        "Hr": "Continuous f ∧ Continuous g ∧ Dense P ∧ (∀ x ∈ P, f x = g x)",
+        "Cr": "f = g",
+        "Hs": "Dense P ∧ Continuous f ∧ Continuous g ∧ (∀ p ∈ P, f p = g p)",
+        "Cs": "∀ x, f x = g x",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-212",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "accept",
+      "tactic": [],
+      "proved": [
+        "acc"
+      ],
+      "decomposition": {
+        "binders": "{G H : Type u} [Group G] [Group H]",
+        "Hr": "True",
+        "Cr": "Nonempty (center (G × H) ≃* (center G) × (center H))",
+        "Hs": "True",
+        "Cs": "center (G × H) = (center G).prod (center H)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-813",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "(A : Set ℕ)",
+        "Hr": "True",
+        "Cr": "IsClopen A",
+        "Hs": "True",
+        "Cs": "IsClopen A",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-100",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-1005",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(f : ℝ → ℝ) (x : ℝ)",
+        "Hr": "ContDiff ℝ 3 f ∧ (∀ n ≤ 3, ∀ x : ℝ, iteratedDeriv n f x > 0) ∧ (∀ x : ℝ, iteratedDeriv 3 f x ≤ f x)",
+        "Cr": "deriv f x < 2 * f x",
+        "Hs": "(∀ n ≤ 3, Continuous (deriv^[n] f)) ∧ (∀ x, 0 < f x ∧ 0 < deriv f x ∧ 0 < deriv^[2] f x ∧ 0 < deriv^[3] f x) ∧ (∀ x, deriv^[3] f x ≤ f x)",
+        "Cs": "deriv f x < 2 * f x",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-101",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "(f : ℝ → ℝ)",
+        "Hr": "∀ x y : ℝ, |(f x - f y)| ≤ (x - y) ^ 2",
+        "Cr": "∃ c, f = λ x => c",
+        "Hs": "∀ x y : ℝ, |f x - f y| ≤ (x - y)^2",
+        "Cs": "∃ c : ℝ, ∀ x : ℝ, f x = c",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-85",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{M : Type u} [MetricSpace M] {A B : Set M} (hA : IsCompact A) (hB : IsCompact B) (hAB : Disjoint A B)",
+        "Hr": "A ≠ ∅ ∧ B ≠ ∅",
+        "Cr": "∃ (a₀ : M) (b₀ : M), a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a : M) (b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b",
+        "Hs": "(A : Set M).Nonempty ∧ (B : Set M).Nonempty",
+        "Cs": "∃ (a₀ : M) (b₀ : M), a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a : M) (b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-954",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "{X Y : Type u} [TopologicalSpace X] [TopologicalSpace Y] [LinearOrder Y] [OrderTopology Y] {f g : X → Y}",
+        "Hr": "Continuous f ∧ Continuous g",
+        "Cr": "IsClosed {x | f x ≤ g x}",
+        "Hs": "Continuous f ∧ Continuous g",
+        "Cs": "IsClosed {x : X | f x ≤ g x}",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-92",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "{f : ℂ → ℂ}",
+        "Hr": "Differentiable ℂ f ∧ Function.Injective f",
+        "Cr": "∃ (a b : ℂ), f = (λ z => a * z + b) ∧ a ≠ 0",
+        "Hs": "Differentiable ℂ f ∧ Function.Injective f",
+        "Cs": "∃ (a b : ℂ), a ≠ 0 ∧ ∀ z, f z = a * z + b",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-124",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "",
+        "Hr": "True",
+        "Cr": "Irreducible (X^4 + 4*X^3 + 6*X^2 + 2*X + 1 : Polynomial ℤ)",
+        "Hs": "True",
+        "Cs": "Irreducible (X^4 + 4*X^3 + 6*X^2 + 2*X + 1 : Polynomial ℤ)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-673",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "",
+        "Hr": "True",
+        "Cr": "IsAlgebraic ℚ (sin (Real.pi/12))",
+        "Hs": "True",
+        "Cs": "IsAlgebraic ℤ (sin (π/12))",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-381",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(X : Type u) [TopologicalSpace X] [CompactSpace X] [T2Space X] (X1 X2 : Set X)",
+        "Hr": "IsClosed X1 ∧ IsClosed X2 ∧ X1 ∪ X2 = univ ∧ MetrizableSpace X1 ∧ MetrizableSpace X2",
+        "Cr": "MetrizableSpace X",
+        "Hs": "IsClosed X1 ∧ IsClosed X2 ∧ X = X1 ∪ X2 ∧ MetrizableSpace X1 ∧ MetrizableSpace X2",
+        "Cs": "MetrizableSpace X",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-289",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "{G : Type u} [Fintype G] [Group G]",
+        "Hr": "Fintype.card G = 6545",
+        "Cr": "¬ IsSimpleGroup G",
+        "Hs": "Fintype.card G = 6545",
+        "Cs": "¬ IsSimpleGroup G",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-889",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "(m n : ℤ)",
+        "Hr": "3*m^2 + 2 = n^2",
+        "Cr": "False",
+        "Hs": "3*m^2 + 2 = n^2",
+        "Cs": "False",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-678",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{X Y : Type u} [TopologicalSpace X] [TopologicalSpace Y] (p : X → Y) (A : Set X)",
+        "Hr": "IsOpenMap p ∧ IsOpen A",
+        "Cr": "IsOpenMap (p ∘ Subtype.val : A → Y)",
+        "Hs": "IsOpenMap p ∧ IsOpen A",
+        "Cs": "IsOpen (p '' A)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1247",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "(A : Set ℕ)",
+        "Hr": "True",
+        "Cr": "IsClopen A",
+        "Hs": "True",
+        "Cs": "IsOpen A ∧ IsClosed A",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-410",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-1135",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "split_fail",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{G : Type u} [Group G] (a : G)",
+        "Hr": "Finite G",
+        "Cr": "∃ (n : ℕ), n > 0 ∧ a ^ n = 1",
+        "Hs": "Finite G",
+        "Cs": "∃ n : ℕ, n ≠ 0 ∧ a ^ n = 1",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-311",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "split_fail",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(H : AddSubgroup ℚ)",
+        "Hr": "∃ x : ℚ, (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H",
+        "Cr": "H = ⊥ ∨ H = ⊤",
+        "Hs": "∀ x ∈ H, x ≠ 0 → (1 / x) ∈ H",
+        "Cs": "H = ⊥ ∨ H = ⊤",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-238",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "{f : ℝ → ℝ}",
+        "Hr": "Continuous f ∧ IsOpenMap f",
+        "Cr": "Monotone f",
+        "Hs": "Continuous f ∧ (∀ U : Set ℝ, IsOpen U → IsOpen (f '' U))",
+        "Cs": "Monotone f",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1114",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-253",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-967",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "{G : Type u} [Group G] {n : ℕ} (a b : G)",
+        "Hr": "(n > 1) ∧ (∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n)",
+        "Cr": "(a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1",
+        "Hs": "(1 < n) ∧ (∀ a b : G, (a * b) ^ n = a ^ n * b ^ n)",
+        "Cs": "(a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-436",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "{R S : Type u} [Ring R] [Ring S] {φ : R →+* S}",
+        "Hr": "Function.Surjective φ",
+        "Cr": "φ '' (center R) ⊆ center S",
+        "Hs": "Function.Surjective φ",
+        "Cs": "φ '' (center R) ⊆ center S",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-226",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "accept",
+      "tactic": [],
+      "proved": [
+        "acc"
+      ],
+      "decomposition": {
+        "binders": "{f : ℝ → ℝ}",
+        "Hr": "∀ x y, |f x - f y| ≤ |x - y| ^ 2",
+        "Cr": "∃ c, f = λ x => c",
+        "Hs": "∀ x y : ℝ, abs (f x - f y) ≤ (abs (x - y))^2",
+        "Cs": "∀ x y : ℝ, f x = f y",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-693",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{F : Type u} [Field F] {V : Type u} [AddCommGroup V] [Module F V] (a : F) (v : V)",
+        "Hr": "a • v = 0",
+        "Cr": "a = 0 ∨ v = 0",
+        "Hs": "True",
+        "Cs": "a • v = 0 ↔ a = 0 ∨ v = 0",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1218",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "split_fail",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "{n : ℕ}",
+        "Hr": "0 < n ∧ ¬ Nat.Prime n",
+        "Cr": "Nat.factorial (n - 1) ≡ 0 [MOD n] ↔ n ≠ 4",
+        "Hs": "¬ Nat.Prime n ∧ n ≠ 4",
+        "Cs": "(Nat.factorial (n - 1)) % n = 0",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-867",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "(f : ℝ → ℝ)",
+        "Hr": "Continuous f ∧ IsOpenMap f",
+        "Cr": "Monotone f",
+        "Hs": "Continuous f ∧ IsOpenMap f",
+        "Cs": "Monotone f",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1215",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "{R : Type u} [Ring R] (x : R)",
+        "Hr": "IsNilpotent x",
+        "Cr": "IsUnit (1 + x)",
+        "Hs": "∃ n : ℕ, x ^ n = 0",
+        "Cs": "IsUnit (1 + x)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-695",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(p : ℝ) (f : ℕ → ℝ)",
+        "Hr": "p > 1 ∧ f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)",
+        "Cr": "∃ l, Tendsto f atTop (𝓝 l)",
+        "Hs": "1 < p",
+        "Cs": "Summable (fun k => 1 / (k * (log k)^p))",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-622",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "(p : Polynomial ℤ)",
+        "Hr": "p = X^4 + 4*X^3 + 6*X^2 + 2*X + 1",
+        "Cr": "Irreducible p",
+        "Hs": "p = X^4 + 4*X^3 + 6*X^2 + 2*X + 1",
+        "Cs": "Irreducible p",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-504",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-1446",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "{f : ℝ → ℝ}",
+        "Hr": "∀ x y : ℝ, |f x - f y| ≤ |x - y| ^ 2",
+        "Cr": "∃ c, f = λ x => c",
+        "Hs": "∀ x y : ℝ, |f x - f y| ≤ |x - y| ^ 2",
+        "Cs": "∃ c : ℝ, ∀ x : ℝ, f x = c",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1128",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [],
+      "proved": [
+        "acc"
+      ],
+      "decomposition": {
+        "binders": "{R : Type u} [CommRing R] (a b : R)",
+        "Hr": "(0 : R) ≠ 1 ∧ IsNilpotent a",
+        "Cr": "IsUnit (1 - a * b)",
+        "Hs": "Nontrivial R ∧ IsNilpotent a",
+        "Cs": "IsUnit (1 - a * b)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-1291",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "{F V : Type u} [AddCommGroup V] [Field F] [Module F V] (v : V) (a : F)",
+        "Hr": "a • v = 0",
+        "Cr": "a = 0 ∨ v = 0",
+        "Hs": "a • v = 0",
+        "Cs": "a = 0 ∨ v = 0",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-192",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "tactic": [
+        "acc",
+        "cond"
+      ],
+      "proved": [
+        "acc",
+        "cond"
+      ],
+      "decomposition": {
+        "binders": "{R : Type u} [CommRing R] (I J : Ideal R)",
+        "Hr": "I + J = ⊤",
+        "Cr": "I * J = I ⊓ J",
+        "Hs": "I + J = ⊤",
+        "Cs": "I * J = I ⊓ J",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-738",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "binders": "(p : ℝ)",
+        "Hr": "p > 1",
+        "Cr": "∃ l, Tendsto (λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)) atTop (𝓝 l)",
+        "Hs": "1 < p",
+        "Cs": "Summable fun k => 1 / (↑k * (log ↑k) ^ p)",
+        "aligned": true
+      }
+    },
+    {
+      "row_id": "pnv-test-995",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    },
+    {
+      "row_id": "pnv-test-31",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "no_alignment",
+      "tactic": [],
+      "proved": [],
+      "decomposition": {
+        "aligned": false
+      }
+    }
+  ]
+}

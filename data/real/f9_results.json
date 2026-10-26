@@ -1,0 +1,3378 @@
+{
+  "models": [
+    "deepseek/deepseek-v4.1-flash",
+    "anthropic/claude-sonnet-5.5",
+    "openai/gpt-5.6-sol"
+  ],
+  "label_inequivalent": {
+    "canon_ok": 60,
+    "f7_no_alignment": 36,
+    "closed_unknown": 59,
+    "tactic_unknown": 60,
+    "union_reject": 30,
+    "deepseek/deepseek-v4.1-flash_unknown": 34,
+    "anthropic/claude-sonnet-5.5_reject": 23,
+    "openai/gpt-5.6-sol_reject": 19,
+    "f7_unknown": 16,
+    "union_unknown": 20,
+    "anthropic/claude-sonnet-5.5_unknown": 31,
+    "openai/gpt-5.6-sol_unknown": 33,
+    "f7_split_fail": 6,
+    "union_accept": 10,
+    "deepseek/deepseek-v4.1-flash_accept": 8,
+    "openai/gpt-5.6-sol_accept": 8,
+    "deepseek/deepseek-v4.1-flash_reject": 18,
+    "closed_proved": 1,
+    "anthropic/claude-sonnet-5.5_accept": 6,
+    "f7_reject": 2
+  },
+  "label_equivalent": {
+    "canon_ok": 40,
+    "f7_no_alignment": 8,
+    "closed_unknown": 25,
+    "tactic_unknown": 23,
+    "union_accept": 27,
+    "deepseek/deepseek-v4.1-flash_unknown": 22,
+    "anthropic/claude-sonnet-5.5_accept": 23,
+    "openai/gpt-5.6-sol_accept": 26,
+    "f7_split_fail": 4,
+    "f7_accept": 20,
+    "anthropic/claude-sonnet-5.5_unknown": 14,
+    "closed_proved": 15,
+    "tactic_accept": 17,
+    "deepseek/deepseek-v4.1-flash_accept": 18,
+    "f7_unknown": 8,
+    "union_unknown": 10,
+    "openai/gpt-5.6-sol_unknown": 11,
+    "union_reject": 3,
+    "anthropic/claude-sonnet-5.5_reject": 3,
+    "openai/gpt-5.6-sol_reject": 3
+  },
+  "seconds": 5913.2,
+  "pairs": [
+    {
+      "row_id": "pnv-test-773",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/6 shared=2",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncin",
+          "ncomp",
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "ncin",
+          "ncomp",
+          "split_r"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-574",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=6/6 shared=3",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-643",
+      "label": false,
+      "closed": "unknown",
+      "f7": "split_fail",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/6 shared=0",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-123",
+      "label": false,
+      "closed": "unknown",
+      "f7": "split_fail",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=false prefix_r=7/7 prefix_s=5/9 shared=4",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1431",
+      "label": false,
+      "closed": "unknown",
+      "f7": "split_fail",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=false prefix_r=11/14 prefix_s=12/12 shared=7",
+      "tactic": [
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "ncomp",
+          "nhyp",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1098",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-97",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncomp",
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "ncomp",
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-836",
+      "label": false,
+      "closed": "proved",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-739",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=8/8 shared=5",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1288",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/1 prefix_s=0/0 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-427",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1363",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=1/7 prefix_s=1/9 shared=1",
+      "tactic": [],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [],
+        "anthropic/claude-sonnet-5.5": [],
+        "openai/gpt-5.6-sol": []
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-275",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-800",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=5/6 prefix_s=5/5 shared=3",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-1257",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=false prefix_r=3/10 prefix_s=3/10 shared=3",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncin",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-532",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-1142",
+      "label": false,
+      "closed": "unknown",
+      "f7": "split_fail",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/7 shared=0",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-1031",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=2/9 shared=2",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncin",
+          "ncomp",
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1117",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=4",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-1415",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=1/1 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-1427",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-440",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=1/3 prefix_s=1/3 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-437",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-942",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/6 shared=0",
+      "tactic": [],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [],
+        "anthropic/claude-sonnet-5.5": [],
+        "openai/gpt-5.6-sol": []
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-916",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=false prefix_r=3/4 prefix_s=3/4 shared=2",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1355",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-680",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-840",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=1/1 prefix_s=0/3 shared=0",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "nhyp",
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-262",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-717",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-533",
+      "label": false,
+      "closed": "unknown",
+      "f7": "split_fail",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=3/3 prefix_s=2/5 shared=2",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-607",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=3",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-743",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/2 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-769",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=false prefix_r=4/4 prefix_s=4/6 shared=4",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-475",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/2 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-453",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/6 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-1169",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=3/4 shared=1",
+      "tactic": [
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "nhyp",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncin",
+          "ncomp",
+          "nhyp",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "ncin",
+          "ncomp",
+          "nhyp",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-315",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=5/5 shared=3",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-285",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=3",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1430",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=1/6 prefix_s=1/6 shared=1",
+      "tactic": [],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [],
+        "anthropic/claude-sonnet-5.5": [],
+        "openai/gpt-5.6-sol": []
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-11",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=false prefix_r=5/5 prefix_s=4/6 shared=4",
+      "tactic": [],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [],
+        "anthropic/claude-sonnet-5.5": [],
+        "openai/gpt-5.6-sol": []
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-239",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/4 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-377",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "ncin",
+          "ncomp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-626",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "ncomp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-1116",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=false prefix_r=7/9 prefix_s=6/9 shared=4",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncomp",
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "ncomp",
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-201",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=3/6 prefix_s=1/3 shared=1",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-366",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=8/8 shared=6",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncin",
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncin",
+          "ncomp",
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1356",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/5 shared=0",
+      "tactic": [],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [],
+        "anthropic/claude-sonnet-5.5": [],
+        "openai/gpt-5.6-sol": []
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-925",
+      "label": false,
+      "closed": "unknown",
+      "f7": "reject",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-231",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-250",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=1/1 prefix_s=0/0 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1156",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=4/6 prefix_s=3/8 shared=3",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-692",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0",
+      "tactic": [
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncomp",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-893",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-438",
+      "label": false,
+      "closed": "unknown",
+      "f7": "split_fail",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1",
+      "tactic": [
+        "split_r"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "nhyp",
+          "split_r"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-796",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-638",
+      "label": false,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=4/4 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncin",
+          "ncomp",
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-216",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/2 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-663",
+      "label": false,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=2/5 prefix_s=3/5 shared=2",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-776",
+      "label": false,
+      "closed": "unknown",
+      "f7": "reject",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "reject",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1157",
+      "label": true,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/4 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-247",
+      "label": true,
+      "closed": "unknown",
+      "f7": "split_fail",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/12 shared=0",
+      "tactic": [],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [],
+        "anthropic/claude-sonnet-5.5": [
+          "acc"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-212",
+      "label": true,
+      "closed": "unknown",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-813",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=1/1 prefix_s=1/1 shared=1",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-100",
+      "label": true,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/5 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-1005",
+      "label": true,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=2",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-101",
+      "label": true,
+      "closed": "unknown",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-85",
+      "label": true,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=8/8 shared=4",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-954",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=7",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-92",
+      "label": true,
+      "closed": "unknown",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-124",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-673",
+      "label": true,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-381",
+      "label": true,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=11/11 prefix_s=11/11 shared=4",
+      "tactic": [],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [],
+        "anthropic/claude-sonnet-5.5": [],
+        "openai/gpt-5.6-sol": []
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-289",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=3",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-889",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=3/3 prefix_s=3/3 shared=2",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-678",
+      "label": true,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-1247",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=1/1 prefix_s=1/1 shared=1",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-410",
+      "label": true,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/1 prefix_s=0/0 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-1135",
+      "label": true,
+      "closed": "unknown",
+      "f7": "split_fail",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=2/4 prefix_s=3/4 shared=2",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-311",
+      "label": true,
+      "closed": "unknown",
+      "f7": "split_fail",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=1/3 prefix_s=2/2 shared=1",
+      "tactic": [
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-238",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-1114",
+      "label": true,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-253",
+      "label": true,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-967",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=5",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-436",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=5",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-226",
+      "label": true,
+      "closed": "unknown",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=2/2 prefix_s=2/4 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-693",
+      "label": true,
+      "closed": "proved",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=7/7 shared=7",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "reject",
+        "openai/gpt-5.6-sol": "reject"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncomp",
+          "nhyp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "ncomp",
+          "nhyp",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "reject"
+    },
+    {
+      "row_id": "pnv-test-1218",
+      "label": true,
+      "closed": "unknown",
+      "f7": "split_fail",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/3 shared=0",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-867",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-1215",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-695",
+      "label": true,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-622",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-504",
+      "label": true,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=1/3 prefix_s=1/3 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-1446",
+      "label": true,
+      "closed": "unknown",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-1128",
+      "label": true,
+      "closed": "unknown",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-1291",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=7",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-192",
+      "label": true,
+      "closed": "proved",
+      "f7": "accept",
+      "canon": "ok",
+      "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4",
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "accept",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "cond",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    },
+    {
+      "row_id": "pnv-test-738",
+      "label": true,
+      "closed": "unknown",
+      "f7": "unknown",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "ncomp",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-995",
+      "label": true,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/12 shared=0",
+      "tactic": [],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "unknown",
+        "openai/gpt-5.6-sol": "unknown"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [],
+        "anthropic/claude-sonnet-5.5": [],
+        "openai/gpt-5.6-sol": []
+      },
+      "union": "unknown"
+    },
+    {
+      "row_id": "pnv-test-31",
+      "label": true,
+      "closed": "unknown",
+      "f7": "no_alignment",
+      "canon": "ok",
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1",
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "verdicts": {
+        "deepseek/deepseek-v4.1-flash": "unknown",
+        "anthropic/claude-sonnet-5.5": "accept",
+        "openai/gpt-5.6-sol": "accept"
+      },
+      "proved": {
+        "deepseek/deepseek-v4.1-flash": [
+          "split_r",
+          "split_s"
+        ],
+        "anthropic/claude-sonnet-5.5": [
+          "acc",
+          "split_r",
+          "split_s"
+        ],
+        "openai/gpt-5.6-sol": [
+          "acc",
+          "split_r",
+          "split_s"
+        ]
+      },
+      "union": "accept"
+    }
+  ]
+}

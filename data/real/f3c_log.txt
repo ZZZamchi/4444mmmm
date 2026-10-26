@@ -1,0 +1,156 @@
+compiled pairs 190 of 360 0s
+canon Counter({'ok': 174, 'canon_fail': 12, 'elab_fail': 4}) 154s
+tactic tier Counter({'unknown': 107, 'accept': 67}) 1381s
+component done 2856s
+{
+  "model": "anthropic/claude-opus-5.5",
+  "n_problems": 60,
+  "scores": {
+    "anthropic/claude-sonnet-5.5": {
+      "comp_accept": 0.6,
+      "comp_reject": 0.1,
+      "comp_off_domain": 0.0,
+      "compile": 0.983,
+      "t0": 0.333,
+      "t1": 0.35,
+      "t2": 0.35
+    },
+    "deepseek/deepseek-v4.1-flash": {
+      "comp_accept": 0.5,
+      "comp_reject": 0.033,
+      "comp_off_domain": 0.017,
+      "compile": 0.583,
+      "t0": 0.267,
+      "t1": 0.283,
+      "t2": 0.283
+    },
+    "qwen/qwen3.5-27b": {
+      "comp_accept": 0.433,
+      "comp_reject": 0.05,
+      "comp_off_domain": 0.033,
+      "compile": 0.95,
+      "t0": 0.25,
+      "t1": 0.267,
+      "t2": 0.267
+    },
+    "openai/gpt-4.1-mini": {
+      "comp_accept": 0.2,
+      "comp_reject": 0.017,
+      "comp_off_domain": 0.0,
+      "compile": 0.3,
+      "t0": 0.117,
+      "t1": 0.117,
+      "t2": 0.117
+    },
+    "openai/gpt-4o-mini": {
+      "comp_accept": 0.117,
+      "comp_reject": 0.017,
+      "comp_off_domain": 0.0,
+      "compile": 0.167,
+      "t0": 0.083,
+      "t1": 0.083,
+      "t2": 0.083
+    },
+    "google/gemini-2.5-flash-lite": {
+      "comp_accept": 0.1,
+      "comp_reject": 0.0,
+      "comp_off_domain": 0.0,
+      "compile": 0.233,
+      "t0": 0.083,
+      "t1": 0.083,
+      "t2": 0.083
+    }
+  },
+  "rankings": {
+    "comp_accept": [
+      "anthropic/claude-sonnet-5.5",
+      "deepseek/deepseek-v4.1-flash",
+      "qwen/qwen3.5-27b",
+      "openai/gpt-4.1-mini",
+      "openai/gpt-4o-mini",
+      "google/gemini-2.5-flash-lite"
+    ],
+    "compile": [
+      "anthropic/claude-sonnet-5.5",
+      "qwen/qwen3.5-27b",
+      "deepseek/deepseek-v4.1-flash",
+      "openai/gpt-4.1-mini",
+      "google/gemini-2.5-flash-lite",
+      "openai/gpt-4o-mini"
+    ],
+    "t0": [
+      "anthropic/claude-sonnet-5.5",
+      "deepseek/deepseek-v4.1-flash",
+      "qwen/qwen3.5-27b",
+      "openai/gpt-4.1-mini",
+      "openai/gpt-4o-mini",
+      "google/gemini-2.5-flash-lite"
+    ],
+    "t1": [
+      "anthropic/claude-sonnet-5.5",
+      "deepseek/deepseek-v4.1-flash",
+      "qwen/qwen3.5-27b",
+      "openai/gpt-4.1-mini",
+      "openai/gpt-4o-mini",
+      "google/gemini-2.5-flash-lite"
+    ],
+    "t2": [
+      "anthropic/claude-sonnet-5.5",
+      "deepseek/deepseek-v4.1-flash",
+      "qwen/qwen3.5-27b",
+      "openai/gpt-4.1-mini",
+      "openai/gpt-4o-mini",
+      "google/gemini-2.5-flash-lite"
+    ]
+  },
+  "tau_closed_vs_comp": {
+    "compile": 0.733,
+    "t0": 0.966,
+    "t1": 0.966,
+    "t2": 0.966
+  },
+  "bootstrap_comp_self_tau_mean": 0.927,
+  "verdict_counts": {
+    "anthropic/claude-sonnet-5.5": {
+      "accept": 36,
+      "unknown": 17,
+      "reject": 6,
+      "no_compile": 1
+    },
+    "deepseek/deepseek-v4.1-flash": {
+      "accept": 30,
+      "no_compile": 25,
+      "reject": 2,
+      "off_domain": 1,
+      "unknown": 2
+    },
+    "qwen/qwen3.5-27b": {
+      "accept": 26,
+      "no_compile": 6,
+      "unknown": 16,
+      "canon_fail": 3,
+      "off_domain": 2,
+      "elab_fail": 4,
+      "reject": 3
+    },
+    "openai/gpt-4.1-mini": {
+      "no_compile": 42,
+      "accept": 12,
+      "unknown": 4,
+      "canon_fail": 1,
+      "reject": 1
+    },
+    "openai/gpt-4o-mini": {
+      "no_compile": 50,
+      "accept": 7,
+      "unknown": 2,
+      "reject": 1
+    },
+    "google/gemini-2.5-flash-lite": {
+      "no_compile": 46,
+      "accept": 6,
+      "canon_fail": 8
+    }
+  },
+  "seconds": 2856.2
+}

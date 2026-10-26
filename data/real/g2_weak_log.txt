@@ -1,0 +1,30 @@
+distinct references 129
+mutants Counter({'ok': 386, 'mutate_fail': 130}) 0s
+tactic tier Counter({'unknown': 251, 'accept': 131, 'reject': 3, 'off_domain': 1}) 1s
+{
+  "model": "deepseek/deepseek-v4.1-flash",
+  "n_refs": 129,
+  "table": {
+    "id": {
+      "accept": 129
+    },
+    "drop": {
+      "reject": 44,
+      "mutate_fail": 36,
+      "unknown": 48,
+      "accept": 1
+    },
+    "neg": {
+      "reject": 33,
+      "unknown": 38,
+      "mutate_fail": 58
+    },
+    "offdom": {
+      "off_domain": 29,
+      "unknown": 61,
+      "mutate_fail": 36,
+      "accept": 3
+    }
+  },
+  "seconds": 6209.2
+}

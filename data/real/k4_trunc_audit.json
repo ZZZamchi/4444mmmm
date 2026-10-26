@@ -1,0 +1,683 @@
+{
+ "summary": {
+  "bodies": 122,
+  "kind": {
+   "import": 122
+  },
+  "alone_ok": 0,
+  "alone_detail": {
+   "truncated": 114
+  },
+  "prefix_ok": 96,
+  "prefix_ok_items": [
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0003:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0003:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0003:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0036:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0036:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0036:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0042:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0042:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0042:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0049:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0049:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0049:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0002:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0002:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0002:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0003:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0003:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0003:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0004:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0004:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0004:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0005:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0005:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0005:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0006:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0006:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0006:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0007:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0007:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0007:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0008:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0008:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0008:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0009:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0009:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0009:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0010:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0010:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0010:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0011:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0011:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0011:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0012:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0012:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0012:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0013:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0013:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0013:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0014:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0014:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0014:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0015:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0015:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0015:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0016:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0016:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0016:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0017:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0017:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0017:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0019:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0019:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0019:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0020:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0020:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0020:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0022:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0022:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0022:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0023:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0023:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0023:orig",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0024:c_is_i",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0024:i_is_c",
+   "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0024:orig",
+   "openai_gpt41_full_eval51:formalrx_cc_seed_0009:c_is_i",
+   "openai_gpt41_full_eval51:formalrx_cc_seed_0009:i_is_c",
+   "openai_gpt41_full_eval51:formalrx_cc_seed_0009:orig",
+   "openai_gpt41_full_eval51:formalrx_cc_seed_0017:c_is_i",
+   "openai_gpt41_full_eval51:formalrx_cc_seed_0017:i_is_c",
+   "openai_gpt41_full_eval51:formalrx_cc_seed_0017:orig",
+   "openai_gpt41mini_full_eval204:formalrx_cc_dev_0067:c_is_i",
+   "openai_gpt41mini_full_eval204:formalrx_cc_dev_0067:i_is_c",
+   "openai_gpt41mini_full_eval204:formalrx_cc_dev_0067:orig",
+   "openai_gpt41mini_full_eval204:formalrx_cc_exp_0038:c_is_i",
+   "openai_gpt41mini_full_eval204:formalrx_cc_exp_0038:i_is_c",
+   "openai_gpt41mini_full_eval204:formalrx_cc_exp_0038:orig",
+   "openai_gpt41mini_full_eval204:formalrx_cc_exp_0132:c_is_i",
+   "openai_gpt41mini_full_eval204:formalrx_cc_exp_0132:i_is_c",
+   "openai_gpt41mini_full_eval204:formalrx_cc_exp_0132:orig",
+   "openai_gpt41mini_full_eval51:formalrx_cc_dev_0072:c_is_i",
+   "openai_gpt41mini_full_eval51:formalrx_cc_dev_0072:i_is_c",
+   "openai_gpt41mini_full_eval51:formalrx_cc_dev_0072:orig",
+   "openai_gpt41mini_full_eval51:formalrx_cc_seed_0013:c_is_i",
+   "openai_gpt41mini_full_eval51:formalrx_cc_seed_0013:i_is_c",
+   "openai_gpt41mini_full_eval51:formalrx_cc_seed_0013:orig"
+  ]
+ },
+ "items": {
+  "pnv-test-418:k8:pfalse": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "pnv-test-1256:k8r:pfalse": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "g4-7:g4kr:pfalse": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "g4-9:g4kr:pfalse": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "g4-12:g4kr:pfalse": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "g4-55:g4kr:pfalse": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "g4-184:g4kr:pfalse": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "g4-213:g4kr:pfalse": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "g4-265:g4kr:nfwd": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "openai_gpt41mini_full_eval204:formalrx_cc_dev_0067:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval204:formalrx_cc_dev_0067:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval204:formalrx_cc_dev_0067:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval204:formalrx_cc_exp_0038:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval204:formalrx_cc_exp_0038:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval204:formalrx_cc_exp_0038:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval204:formalrx_cc_exp_0132:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval204:formalrx_cc_exp_0132:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval204:formalrx_cc_exp_0132:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0001:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0001:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0001:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0002:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0002:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0002:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0003:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0003:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0003:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0004:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0004:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0004:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0005:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0005:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0005:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0006:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0006:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0006:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0007:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0007:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0007:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0008:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0008:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0008:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0009:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0009:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0009:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0010:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0010:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0010:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0011:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0011:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0011:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0012:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0012:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0012:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0013:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0013:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0013:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0014:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0014:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0014:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0015:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0015:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0015:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0016:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0016:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0016:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0017:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0017:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0017:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0019:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0019:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0019:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0020:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0020:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0020:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0021:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0021:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0021:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0022:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0022:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0022:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0023:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0023:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0023:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0024:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0024:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_seed_0024:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0003:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0003:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0003:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0036:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0036:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0036:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0042:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0042:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0042:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0046:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0046:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0046:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": false
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0049:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0049:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "anthropic_sonnet46_full_eval51:formalrx_cc_dev_0049:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41_full_eval51:formalrx_cc_seed_0009:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41_full_eval51:formalrx_cc_seed_0009:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41_full_eval51:formalrx_cc_seed_0009:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41_full_eval51:formalrx_cc_seed_0017:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41_full_eval51:formalrx_cc_seed_0017:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41_full_eval51:formalrx_cc_seed_0017:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval51:formalrx_cc_seed_0013:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval51:formalrx_cc_seed_0013:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval51:formalrx_cc_seed_0013:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval51:formalrx_cc_dev_0072:orig": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval51:formalrx_cc_dev_0072:c_is_i": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  },
+  "openai_gpt41mini_full_eval51:formalrx_cc_dev_0072:i_is_c": {
+   "alone_ok": false,
+   "alone_detail": "truncated",
+   "prefix_ok": true
+  }
+ }
+}

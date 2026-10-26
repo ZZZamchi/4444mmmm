@@ -1,0 +1,35 @@
+===== deepseek/deepseek-v4.1-flash|Dummit-Foote|exercise_4_5_15
+PRED: theorem stmt_Dummit_Foote_exercise_4_5_15
+    (G : Type*) [Group G] [Fintype G] (hG : Fintype.card G = 351) :
+    鈭?p : 鈩? p.Prime 鈭?p 鈭?351 鈭?鈭?P : Sylow p G, (P : Subgroup G).Normal := by
+  sorry
+INFO ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0
+ACC : 鈭€ {G : Type u} [inst : Group G] [inst_1 : Fintype G],
+  (card G = 351 鈫?card G = 351) 鈭?
+    ((鈭?p P, Nat.Prime p 鈭?p 鈭?card G 鈭?(鈫慞).Normal) 鈫?鈭?p, Nat.Prime p 鈭?p 鈭?351 鈭?鈭?P, (鈫慞).Normal)
+===== qwen/qwen3.5-27b|Dummit-Foote|exercise_4_5_15
+PRED: import Mathlib
+
+open Fintype Subgroup Set Polynomial Ideal
+open scoped BigOperators
+
+theorem stmt_Dummit_Foote_exercise_4_5_15 (G : Type*) [Group G] [Fintype G] 
+  (h : Fintype.card G = 351) : 
+  鈭?p : 鈩? Nat.Prime p 鈭?p 鈭?351 鈭?鈭?P : Sylow p G, P.Normal := by sorry
+INFO ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0
+ACC : 鈭€ {G : Type u} [inst : Group G] [inst_1 : Fintype G],
+  (card G = 351 鈫?card G = 351) 鈭?
+    ((鈭?p P, Nat.Prime p 鈭?p 鈭?card G 鈭?(鈫慞).Normal) 鈫?鈭?p, Nat.Prime p 鈭?p 鈭?351 鈭?鈭?P, (鈫慞).Normal)
+===== qwen/qwen3.5-27b|Dummit-Foote|exercise_4_5_13
+PRED: import Mathlib
+
+open Fintype Subgroup Set Polynomial Ideal
+open scoped BigOperators
+
+theorem stmt_Dummit_Foote_exercise_4_5_13 (G : Type*) [Group G] [Fintype G] 
+  (h : Fintype.card G = 56) : 
+  鈭?p : 鈩? Nat.Prime p 鈭?p 鈭?56 鈭?鈭?P : Sylow p G, 鈫慞.Normal := by sorry
+INFO ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0
+ACC : 鈭€ {G : Type u} [inst : Group G] [inst_1 : Fintype G],
+  (card G = 56 鈫?card G = 56) 鈭?
+    ((鈭?p P, Nat.Prime p 鈭?p 鈭?card G 鈭?(鈫慞).Normal) 鈫?鈭?p, Nat.Prime p 鈭?p 鈭?56 鈭?鈭?P, (鈫慞).Normal)

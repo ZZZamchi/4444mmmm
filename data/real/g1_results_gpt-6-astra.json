@@ -1,0 +1,6796 @@
+{
+  "model": "openai/gpt-6-astra",
+  "label_inequivalent": {
+    "closed_refuted": 28,
+    "comp_reject": 75,
+    "comp_reject_shared>0": 61,
+    "comp_reject_nosplit": 16,
+    "closed_refuted->comp_reject": 21,
+    "union_reject": 82,
+    "closed_unknown": 71,
+    "comp_reject_split": 59,
+    "closed_unknown->comp_reject": 36,
+    "comp_reject_shared0": 14,
+    "comp_unknown": 52,
+    "comp_unknown_shared>0": 25,
+    "comp_unknown_nosplit": 16,
+    "closed_unknown->comp_unknown": 34,
+    "closed_proved": 51,
+    "comp_accept": 23,
+    "comp_accept_shared>0": 16,
+    "comp_accept_split": 19,
+    "closed_proved->comp_accept": 22,
+    "comp_unknown_split": 36,
+    "closed_refuted->comp_unknown": 7,
+    "closed_proved->comp_reject": 18,
+    "comp_accept_shared0": 7,
+    "closed_proved->comp_unknown": 11,
+    "comp_unknown_shared0": 27,
+    "closed_unknown->comp_accept": 1,
+    "comp_accept_nosplit": 4
+  },
+  "label_equivalent": {
+    "closed_proved": 128,
+    "comp_accept": 115,
+    "comp_accept_shared0": 26,
+    "comp_accept_split": 104,
+    "closed_proved->comp_accept": 112,
+    "comp_accept_nosplit": 11,
+    "comp_accept_shared>0": 89,
+    "comp_unknown": 20,
+    "comp_unknown_shared>0": 16,
+    "comp_unknown_split": 15,
+    "closed_proved->comp_unknown": 8,
+    "closed_unknown": 19,
+    "closed_unknown->comp_accept": 3,
+    "comp_unknown_nosplit": 5,
+    "closed_unknown->comp_unknown": 10,
+    "comp_reject": 15,
+    "comp_reject_shared>0": 13,
+    "comp_reject_split": 12,
+    "closed_proved->comp_reject": 8,
+    "union_reject": 17,
+    "comp_reject_nosplit": 3,
+    "closed_unknown->comp_reject": 6,
+    "closed_refuted": 3,
+    "comp_reject_shared0": 2,
+    "closed_refuted->comp_reject": 1,
+    "comp_unknown_shared0": 4,
+    "closed_refuted->comp_unknown": 2
+  },
+  "seconds": 2012.4,
+  "pairs": [
+    {
+      "row_id": "pnv-test-1157",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-247",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/12 shared=0 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-212",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-813",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=1/1 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-100",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1005",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-101",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-85",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=8/8 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-954",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 7,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=7 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-92",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-124",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-673",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-381",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 4,
+      "split_checked": false,
+      "canon_info": "ambiguous=true full=true prefix_r=11/11 prefix_s=11/11 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-289",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-889",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=2/2 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-678",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 6,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1247",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=1/1 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-410",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/1 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1135",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/4 prefix_s=3/4 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-311",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-238",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd",
+        "pfalse"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1114",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-253",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-967",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-436",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-226",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/2 prefix_s=2/4 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-693",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 7,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=7/7 shared=7 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1218",
+      "label": true,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-867",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd",
+        "pfalse"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1215",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-695",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-622",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-504",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/3 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1446",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1128",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1291",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 7,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=7 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-192",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-738",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-995",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 0,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/12 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-31",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-547",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-370",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=6/10 prefix_s=6/8 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1375",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=5 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "llm"
+      }
+    },
+    {
+      "row_id": "pnv-test-1279",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/4 prefix_s=2/4 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1300",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=3/3 prefix_s=3/3 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-459",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/6 prefix_s=1/5 shared=1 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-1283",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-819",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-305",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1122",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-503",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-68",
+      "label": true,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=6/10 prefix_s=6/8 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-345",
+      "label": true,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1435",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1270",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1361",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1309",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=4/5 prefix_s=4/5 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-565",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-474",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1137",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1256",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1111",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 6,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-553",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-647",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-890",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-686",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-26",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-264",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-588",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-307",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=2/2 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-838",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-585",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 6,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-705",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-365",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 2,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=2/7 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1399",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-10",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd",
+        "pfalse"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/1 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-992",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1326",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-860",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-354",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 6,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-80",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-249",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=2/2 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1268",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=1/1 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1195",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-296",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-217",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-592",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1212",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=3/10 prefix_s=3/10 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-648",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1298",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-312",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=2/2 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-849",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1230",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1353",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-579",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/8 prefix_s=1/8 shared=1 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-483",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1139",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/12 shared=0 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-812",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-89",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-358",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=3/3 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-28",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/7 prefix_s=1/10 shared=1 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-1149",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1184",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1109",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=9/9 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-576",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=3/3 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-1209",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-300",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-855",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-784",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/9 prefix_s=1/9 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1297",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-679",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=3/7 prefix_s=3/6 shared=3 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-70",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/7 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1222",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1084",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/8 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "llm",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-824",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-362",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1091",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-751",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-418",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=4/4 prefix_s=4/4 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-913",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 6,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-20",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/3 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-51",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1262",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-489",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-428",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/8 prefix_s=1/8 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-383",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-222",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 7,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=7 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-495",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-972",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-707",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-287",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd",
+        "pfalse"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1335",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 4,
+      "split_checked": false,
+      "canon_info": "ambiguous=true full=true prefix_r=11/11 prefix_s=11/11 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-806",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-537",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-86",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/5 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1140",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-525",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=2/2 prefix_s=2/2 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-195",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1407",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "llm",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-293",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/8 prefix_s=1/8 shared=1 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-1152",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=4/5 prefix_s=4/5 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-816",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-742",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/9 prefix_s=0/7 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1026",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-78",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1078",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1411",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/12 shared=0 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-1199",
+      "label": true,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 4,
+      "split_checked": false,
+      "canon_info": "ambiguous=true full=true prefix_r=11/11 prefix_s=11/11 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-54",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=10/10 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-429",
+      "label": true,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "acc",
+        "cond",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-773",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/6 shared=2 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_s": "llm"
+      }
+    },
+    {
+      "row_id": "pnv-test-574",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=6/6 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-643",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-123",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=7/7 prefix_s=5/9 shared=4 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_s": "llm"
+      }
+    },
+    {
+      "row_id": "pnv-test-1431",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 7,
+      "split_checked": false,
+      "canon_info": "ambiguous=true full=false prefix_r=11/14 prefix_s=12/12 shared=7 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1098",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-97",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-836",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-739",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=8/8 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1288",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/1 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-427",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1363",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 1,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=1/7 prefix_s=1/9 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-275",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-800",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=5/6 prefix_s=5/5 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1257",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=3/10 prefix_s=3/10 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-532",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1142",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/7 shared=0 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-1031",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 2,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1117",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1415",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd",
+        "pfalse"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/1 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1427",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-440",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/3 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-437",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 0,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-942",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 0,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-916",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=3/4 prefix_s=3/4 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1355",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-680",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-840",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-262",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-717",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-533",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=3/3 prefix_s=2/5 shared=2 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-607",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-743",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-769",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=4/4 prefix_s=4/6 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-475",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-453",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1169",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=3/4 shared=1 hoist_r=1 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-315",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=5/5 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-285",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1430",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 1,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=1/6 prefix_s=1/6 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-11",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=5/5 prefix_s=4/6 shared=4 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "llm",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-239",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-377",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-626",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1116",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=7/9 prefix_s=6/9 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-201",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=3/6 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=1",
+      "split_source": {
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-366",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 6,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1356",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 0,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-925",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-231",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-250",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1156",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 3,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=4/6 prefix_s=3/8 shared=3 hoist_r=0 hoist_s=1"
+    },
+    {
+      "row_id": "pnv-test-692",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-893",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-438",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=1/1 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-796",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-638",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=4/4 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-216",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-663",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/5 prefix_s=3/5 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-776",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-560",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-633",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 4,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1086",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1007",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1328",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1192",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/4 prefix_s=3/4 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-297",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=2/7 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1417",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1002",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-72",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/6 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-892",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/3 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-218",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 0,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1311",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=3/7 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-807",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-132",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1019",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/4 prefix_s=3/7 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1441",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1074",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-202",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-41",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=10/10 prefix_s=9/9 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-401",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/4 prefix_s=1/6 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-618",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=6/6 prefix_s=4/7 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-639",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=7/7 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_s": "llm"
+      }
+    },
+    {
+      "row_id": "pnv-test-1351",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=6/6 prefix_s=6/13 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-997",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=5/5 prefix_s=5/6 shared=4 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "llm"
+      }
+    },
+    {
+      "row_id": "pnv-test-375",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/6 prefix_s=1/5 shared=1 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-753",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=1"
+    },
+    {
+      "row_id": "pnv-test-1042",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=2/6 prefix_s=2/6 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-406",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/5 prefix_s=2/7 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1342",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=5/5 shared=2 hoist_r=1 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-1357",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=5/5 prefix_s=4/6 shared=4 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "llm",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-598",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-518",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=7/7 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1011",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 0,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=0/11 prefix_s=0/9 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1352",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/7 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-604",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-388",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-966",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-567",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-991",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_s": "llm"
+      }
+    },
+    {
+      "row_id": "pnv-test-754",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-596",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 6,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-897",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/5 prefix_s=2/7 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1319",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [],
+      "tactic": [],
+      "shared": 1,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=1/7 prefix_s=1/8 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-261",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-853",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-93",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/5 prefix_s=3/5 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-761",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=1/6 shared=1 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-645",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-886",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-987",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 0,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=false prefix_r=0/3 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-56",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-701",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-538",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/4 prefix_s=3/6 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1072",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=3/9 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-848",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=1/1 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1171",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-610",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=6/6 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-911",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/8 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-623",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=4/7 prefix_s=4/9 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-55",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "ncomp"
+      ],
+      "tactic": [],
+      "shared": 1,
+      "split_checked": false,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-990",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=4/5 prefix_s=4/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-927",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-866",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=3/5 prefix_s=3/6 shared=3 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-1360",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd",
+        "pfalse"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/7 prefix_s=0/10 shared=0 hoist_r=0 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2",
+        "split_s": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-665",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-671",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1133",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-189",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=7/7 prefix_s=6/11 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-186",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/1 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-930",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-766",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=3/4 shared=1 hoist_r=1 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-630",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd",
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-118",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1147",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=false prefix_r=6/10 prefix_s=6/8 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-290",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=1/5 prefix_s=4/6 shared=1 hoist_r=1 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-506",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "pfalse"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/0 prefix_s=0/1 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-986",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 4,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-420",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 3,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-33",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "accept",
+      "proved": [
+        "acc",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=0/0 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-87",
+      "label": false,
+      "closed": "refuted",
+      "closed_proved": [
+        "bwd",
+        "nfwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/2 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-505",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncin",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 7,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=7/7 shared=7 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-716",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=3/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-929",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "ncomp",
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1396",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=3/3 prefix_s=2/4 shared=1 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-1070",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_s"
+      ],
+      "shared": 2,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=2/6 prefix_s=5/5 shared=2 hoist_r=1 hoist_s=0",
+      "split_source": {
+        "split_r": "tactic2"
+      }
+    },
+    {
+      "row_id": "pnv-test-341",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 5,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=7/7 prefix_s=6/6 shared=5 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-718",
+      "label": false,
+      "closed": "proved",
+      "closed_proved": [
+        "bwd",
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 0,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=false prefix_r=0/4 prefix_s=0/4 shared=0 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-500",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "bwd",
+        "pfalse"
+      ],
+      "verdict": "reject",
+      "proved": [
+        "nhyp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 6,
+      "split_checked": true,
+      "canon_info": "ambiguous=true full=true prefix_r=9/9 prefix_s=7/7 shared=6 hoist_r=0 hoist_s=0"
+    },
+    {
+      "row_id": "pnv-test-628",
+      "label": false,
+      "closed": "unknown",
+      "closed_proved": [
+        "fwd"
+      ],
+      "verdict": "unknown",
+      "proved": [
+        "ncomp",
+        "split_r",
+        "split_s"
+      ],
+      "tactic": [
+        "split_r",
+        "split_s"
+      ],
+      "shared": 1,
+      "split_checked": true,
+      "canon_info": "ambiguous=false full=true prefix_r=8/8 prefix_s=6/6 shared=1 hoist_r=0 hoist_s=0"
+    }
+  ]
+}

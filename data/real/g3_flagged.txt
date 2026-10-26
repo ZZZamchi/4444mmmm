@@ -1,0 +1,180 @@
+===== idle_unsure test Dummit-Foote|exercise_4_2_8 k= 0 ['idle']
+NL: Prove that if $H$ has finite index $n$ then there is a normal subgroup $K$ of $G$ with $K \leq H$ and $|G: K| \leq n!$.
+S : 鈭€ {G : Type u} [Group G] {H : Subgroup G} {n : 鈩晑 (hn : n > 0) (hH : H.index = n), 鈭?K 鈮?H, K.Normal 鈭?K.index 鈮?n.factorial
+H : 鈭€ {G : Type u} [inst : Group G] {H : Subgroup G} {n : 鈩晑, H.index = n 鈫?n > 0
+===== implied test Dummit-Foote|exercise_4_2_9a k= 1 ['idle', 'implied']
+NL: Prove that if $p$ is a prime and $G$ is a group of order $p^{\alpha}$ for some $\alpha \in \mathbb{Z}^{+}$, then every subgroup of index $p$ is normal in $G$.
+S : 鈭€ {G : Type u} [Fintype G] [Group G] {p 伪 : 鈩晑 (hp : p.Prime) (ha : 伪 > 0) (hG : card G = p ^ 伪), 鈭€ H : Subgroup G, H.index = p 鈫?H.Normal
+H : 鈭€ {G : Type u} [inst : Fintype G] [inst_1 : Group G] {p 伪 : 鈩晑,   Nat.Prime p 鈫?card G = p ^ 伪 鈫?鈭€ (H : Subgroup G), H.index = p 鈫?伪 > 0
+===== implied test Dummit-Foote|exercise_7_1_12 k= 0 ['idle', 'implied']
+NL: Prove that any subring of a field which contains the identity is an integral domain.
+S : 鈭€ {F : Type u} [Field F] {K : Subring F} (hK : (1 : F) 鈭?K), IsDomain K
+H : 鈭€ {F : Type u} [inst : Field F] {K : Subring F}, 1 鈭?K
+===== idle test Herstein|exercise_2_2_6c k= 0 ['idle', 'nimplied']
+NL: Let $G$ be a group in which $(a b)^{n}=a^{n} b^{n}$ for some fixed integer $n>1$ for all $a, b \in G$. For all $a, b \in G$, prove that $\left(a b a^{-1} b^{-1}\right)^{n(n-1)}=e$.
+S : 鈭€ {G : Type u} [Group G] {n : 鈩晑 (hn : n > 1) (h : 鈭€ (a b : G), (a * b) ^ n = a ^ n * b ^ n), 鈭€ (a b : G), (a * b * a鈦宦?* b鈦宦? ^ (n * (n - 1)) = 1
+H : 鈭€ {G : Type u} [inst : Group G] {n : 鈩晑,   (鈭€ (a b : G), (a * b) ^ n = a ^ n * b ^ n) 鈫?鈭€ (a b : G), n > 1
+===== idle test Herstein|exercise_2_5_43 k= 0 ['idle', 'nimplied']
+NL: Prove that a group of order 9 must be abelian.
+S : 鈭€ (G : Type u) [Group G] [Fintype G] (hG : card G = 9), Nonempty (CommGroup G)
+H : 鈭€ (G : Type u) [Group G] [inst : Fintype G], card G = 9
+===== idle_unsure test Herstein|exercise_2_10_1 k= 0 ['idle']
+NL: Let $A$ be a normal subgroup of a group $G$, and suppose that $b \in G$ is an element of prime order $p$, and that $b \not\in A$. Show that $A \cap (b) = (e)$.
+S : 鈭€ {G : Type u} [Group G] (A : Subgroup G) [A.Normal] {b : G} (hb : b 鈭?A) (hp : Nat.Prime (orderOf b)), A 鈯?(Subgroup.closure {b}) = 鈯?
+H : 鈭€ {G : Type u} [inst : Group G] (A : Subgroup G) {b : G},   b 鈭?A 鈫?Nat.Prime (orderOf b) 鈫?A.Normal
+===== idle test Herstein|exercise_2_11_7 k= 0 ['idle', 'nimplied']
+NL: If $P \triangleleft G$, $P$ a $p$-Sylow subgroup of $G$, prove that $\varphi(P) = P$ for every automorphism $\varphi$ of $G$.
+S : 鈭€ {G : Type u} [Group G] {p : 鈩晑 (hp : Nat.Prime p) {P : Sylow p G} (hP : P.Normal), Subgroup.Characteristic (P : Subgroup G)
+H : 鈭€ {G : Type u} [inst : Group G] {p : 鈩晑 {P : Sylow p G}, (鈫慞).Normal 鈫?Nat.Prime p
+===== idle test Herstein|exercise_4_4_9 k= 1 ['idle', 'nimplied']
+NL: Show that $(p - 1)/2$ of the numbers $1, 2, \ldots, p - 1$ are quadratic residues and $(p - 1)/2$ are quadratic nonresidues $\mod p$.
+S : 鈭€ (p : 鈩? (hp : Nat.Prime p) (hodd : p % 2 = 1), (鈭?S : Finset (ZMod p), 0 鈭?S 鈭?S.card = (p-1)/2 鈭?鈭€ q 鈭?S, 鈭?x : ZMod p, x^2 = q) 鈭?(鈭?S : Finset (ZMod p), 0 鈭?S 鈭?S.card = (p-1)/2 鈭?鈭€ q 鈭?S, 卢 鈭?x : ZMod p, x^2 = q)
+H : 鈭€ (p : 鈩?, Nat.Prime p 鈫?p % 2 = 1
+===== idle_unsure test Herstein|exercise_5_1_8 k= 1 ['idle']
+NL: If $F$ is a field of characteristic $p \neq 0$, show that $(a + b)^m = a^m + b^m$, where $m = p^n$, for all $a, b \in F$ and any positive integer $n$.
+S : 鈭€ {p m n: 鈩晑 {F : Type u} [Field F] (hp : p 鈮?0) (hn : n > 0) (hF : CharP F p) (a b : F) (hm : m = p ^ n), (a + b) ^ m = a^m + b^m
+H : 鈭€ {p n : 鈩晑 {F : Type u} [inst : Field F], p 鈮?0 鈫?CharP F p 鈫?鈭€ (a b : F), n > 0
+===== idle test Herstein|exercise_5_6_14 k= 0 ['idle', 'nimplied']
+NL: If $F$ is of characteristic $p \neq 0$, show that all the roots of $x^m - x$, where $m = p^n$, are distinct.
+S : 鈭€ {p m n: 鈩晑 (hp : p 鈮?0) (hn : n > 0) {F : Type u} [Field F] [CharP F p] (hm : m = p ^ n), (X ^ m - X : Polynomial F).Separable
+H : 鈭€ {p n : 鈩晑, n > 0 鈫?鈭€ {F : Type u} [inst : Field F] [CharP F p], p 鈮?0
+===== idle test Ireland-Rosen|exercise_4_4 k= 1 ['idle', 'nimplied']
+NL: Consider a prime $p$ of the form $4 t+1$. Show that $a$ is a primitive root modulo $p$ iff $-a$ is a primitive root modulo $p$.
+S : 鈭€ {p t: 鈩晑 (hp0 : p.Prime) (hp1 : p = 4*t + 1) (a : ZMod p), IsPrimitiveRoot a p 鈫?IsPrimitiveRoot (-a) p
+H : 鈭€ {p t : 鈩晑, Nat.Prime p 鈫?鈭€ (a : ZMod p), p = 4 * t + 1
+===== implied test Munkres|exercise_18_13 k= 1 ['idle', 'implied']
+NL: Let $A \subset X$; let $f: A \rightarrow Y$ be continuous; let $Y$ be Hausdorff. Show that if $f$ may be extended to a continuous function $g: \bar{A} \rightarrow Y$, then $g$ is uniquely determined by $f$.
+S : 鈭€ {X : Type u} [TopologicalSpace X] {Y : Type u} [TopologicalSpace Y] [T2Space Y] {A : Set X} {f : X 鈫?Y} (hf : ContinuousOn f A) (g : X 鈫?Y) (g_con : ContinuousOn g (closure A)) (gExt : 鈭€ x : A, g x = f x), 鈭€ (g' : X 鈫?Y), (ContinuousOn g' (closure A) 鈭?(鈭€ x : A, g' x = f x)) 鈫?(鈭€ x : closure A, g x = g' x)
+H : 鈫?Y} (g : X 鈫?Y),   ContinuousOn g (closure A) 鈫?    (鈭€ (x : 鈫慉), g 鈫憍 = f 鈫憍) 鈫?      鈭€ (g' : X 鈫?Y), (ContinuousOn g' (closure A) 鈭?鈭€ (x : 鈫慉), g' 鈫憍 = f 鈫憍) 鈫?鈭€ (x : 鈫?closure A)), ContinuousOn f A
+===== implied test Munkres|exercise_24_3a k= 0 ['idle', 'implied']
+NL: Let $f \colon X \rightarrow X$ be continuous. Show that if $X = [0, 1]$, there is a point $x$ such that $f(x) = x$. (The point $x$ is called a fixed point of $f$.)
+S : 鈭€ (f : Icc 0 1 鈫?Icc 0 1) (hf : Continuous f), 鈭?(x : Icc 0 1), f x = x
+H : 鈭€ (f : 鈫?Icc 0 1) 鈫?鈫?Icc 0 1)), Continuous f
+===== idle test Munkres|exercise_26_12 k= 0 ['idle', 'nimplied']
+NL: Let $p: X \rightarrow Y$ be a closed continuous surjective map such that $p^{-1}(\{y\})$ is compact, for each $y \in Y$. (Such a map is called a perfect map.) Show that if $Y$ is compact, then $X$ is compact.
+S : 鈭€ {X Y : Type u} [TopologicalSpace X] [TopologicalSpace Y] (p : X 鈫?Y) (h : Function.Surjective p) (hc : Continuous p) (hp : IsClosedMap p) (hp : 鈭€ y, IsCompact (p 鈦宦? {y})) (hY : CompactSpace Y), CompactSpace X
+H : 鈭€ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X 鈫?Y),   Continuous p 鈫?IsClosedMap p 鈫?(鈭€ (y : Y), IsCompact (p 鈦宦? {y})) 鈫?CompactSpace Y 鈫?Function.Surjective p
+===== idle test Pugh|exercise_2_46 k= 2 ['idle', 'nimplied']
+NL: Assume that $A, B$ are compact, disjoint, nonempty subsets of $M$. Prove that there are $a_0 \in A$ and $b_0 \in B$ such that for all $a \in A$ and $b \in B$ we have $d(a_0, b_0) \leq d(a, b)$.
+S : 鈭€ {M : Type u} [MetricSpace M] {A B : Set M} (hA : IsCompact A) (hB : IsCompact B) (hAB : Disjoint A B) (hA鈧€ : A 鈮?鈭? (hB鈧€ : B 鈮?鈭?, 鈭?a鈧€ b鈧€, a鈧€ 鈭?A 鈭?b鈧€ 鈭?B 鈭?鈭€ (a : M) (b : M), a 鈭?A 鈫?b 鈭?B 鈫?dist a鈧€ b鈧€ 鈮?dist a b
+H : 鈭€ {M : Type u} [inst : MetricSpace M] {A B : Set M},   IsCompact A 鈫?IsCompact B 鈫?A 鈮?鈭?鈫?B 鈮?鈭?鈫?Disjoint A B
+===== idle test Pugh|exercise_4_15a k= 0 ['idle', 'nimplied']
+NL: A continuous, strictly increasing function $\mu \colon (0, \infty) \rightarrow (0, \infty)$ is a modulus of continuity if $\mu(s) \rightarrow 0$ as $s \rightarrow 0$. A function $f \colon [a, b] \rightarrow \mathbb{R}$ has modulus of continuity $\mu$ if $|f(s) - f(t)| \leq \mu(|s - t|)$ for all $s, 
+S : 鈭€ (a b : 鈩? (hab : a 鈮?b) (f : Icc a b 鈫?鈩?, UniformContinuous f 鈫?鈭?(渭 : 鈩?鈫?鈩?, 鈭€ (x : 鈩?, (x > 0 鈫?渭 x > 0) 鈭?StrictMonoOn 渭 (Ioi 0) 鈭?Tendsto 渭 (饾摑 0) (饾摑 0) 鈭?(鈭€ s t : Icc a b, |f s - f t| 鈮?渭 (|s - t|))
+H : 鈭€ (a b : 鈩? (f : 鈫?Icc a b) 鈫?鈩?, a 鈮?b
+===== idle test Rudin|exercise_2_27b k= 0 ['idle', 'nimplied']
+NL: Suppose $E\subset\mathbb{R}^k$ is uncountable, and let $P$ be the set of condensation points of $E$. Prove that at most countably many points of $E$ are not in $P$.
+S : 鈭€ (k : 鈩? (E P : Set (EuclideanSpace 鈩?(Fin k))) (hE : 卢 Set.Countable E) (hP : P = {x | 鈭€ U 鈭?饾摑 x, 卢 Set.Countable (U 鈭?E)}), Set.Countable (E \ P)
+H : 鈭€ (k : 鈩? (E : Set (EuclideanSpace 鈩?(Fin k))), 卢E.Countable
+===== implied test Rudin|exercise_3_5 k= 2 ['idle', 'implied']
+NL: For any two real sequences $\left\{a_{n}\right\},\left\{b_{n}\right\}$, prove that $\limsup _{n \rightarrow \infty}\left(a_{n}+b_{n}\right) \leq \limsup _{n \rightarrow \infty} a_{n}+\limsup _{n \rightarrow \infty} b_{n},$ provided the sum on the right is not of the form $\infty-\infty$.
+S : 鈭€ (a b : 鈩?鈫?EReal) (hareal : 鈭€ n, a n 鈮?鈯?鈭?a n 鈮?鈯? (hbreal : 鈭€ n, b n 鈮?鈯?鈭?b n 鈮?鈯? (ha : limsup a 鈮?鈯? (hb : limsup b 鈮?鈯?, limsup (位 n => a n + b n) 鈮?limsup a + limsup b
+H : 鈭€ (a b : 鈩?鈫?EReal),   (鈭€ (n : 鈩?, a n 鈮?鈯?鈭?a n 鈮?鈯? 鈫?(鈭€ (n : 鈩?, b n 鈮?鈯?鈭?b n 鈮?鈯? 鈫?limsup b 鈮?鈯?鈫?limsup a 鈮?鈯?
+===== idle test Rudin|exercise_5_3 k= 0 ['idle', 'nimplied']
+NL: Suppose $g$ is a real function on $R^{1}$, with bounded derivative (say $\left|g^{\prime}\right| \leq M$ ). Fix $\varepsilon>0$, and define $f(x)=x+\varepsilon g(x)$. Prove that $f$ is one-to-one if $\varepsilon$ is small enough.
+S : 鈭€ {g : 鈩?鈫?鈩潁 (hg : Continuous g) (hg' : 鈭?M : 鈩? 鈭€ x : 鈩? |deriv g x| 鈮?M), 鈭?N, 鈭€ 蔚 > 0, 蔚 < N 鈫?Function.Injective (位 x : 鈩?=> x + 蔚 * g x)
+H : 鈭€ {g : 鈩?鈫?鈩潁, (鈭?M, 鈭€ (x : 鈩?, |deriv g x| 鈮?M) 鈫?Continuous g
+===== idle_unsure test Rudin|exercise_5_3 k= 1 ['idle']
+NL: Suppose $g$ is a real function on $R^{1}$, with bounded derivative (say $\left|g^{\prime}\right| \leq M$ ). Fix $\varepsilon>0$, and define $f(x)=x+\varepsilon g(x)$. Prove that $f$ is one-to-one if $\varepsilon$ is small enough.
+S : 鈭€ {g : 鈩?鈫?鈩潁 (hg : Continuous g) (hg' : 鈭?M : 鈩? 鈭€ x : 鈩? |deriv g x| 鈮?M), 鈭?N, 鈭€ 蔚 > 0, 蔚 < N 鈫?Function.Injective (位 x : 鈩?=> x + 蔚 * g x)
+H : 鈭€ {g : 鈩?鈫?鈩潁, Continuous g 鈫?鈭?M, 鈭€ (x : 鈩?, |deriv g x| 鈮?M
+===== implied test Rudin|exercise_5_7 k= 1 ['idle', 'implied']
+NL: Suppose $f^{\prime}(x), g^{\prime}(x)$ exist, $g^{\prime}(x) \neq 0$, and $f(x)=g(x)=0$. Prove that $\lim _{t \rightarrow x} \frac{f(t)}{g(t)}=\frac{f^{\prime}(x)}{g^{\prime}(x)}.$
+S : 鈭€ {f g : 鈩?鈫?鈩潁 {x : 鈩潁 (hf' : DifferentiableAt 鈩?f x) (hg' : DifferentiableAt 鈩?g x) (hg'_ne_0 : deriv g x 鈮?0) (f0 : f x = 0) (g0 : g x = 0), Tendsto (位 t => f t / g t) (饾摑 x) (饾摑 (deriv f x / deriv g x))
+H : 鈭€ {f g : 鈩?鈫?鈩潁 {x : 鈩潁,   DifferentiableAt 鈩?f x 鈫?deriv g x 鈮?0 鈫?f x = 0 鈫?g x = 0 鈫?DifferentiableAt 鈩?g x
+===== implied valid Axler|exercise_3_1 k= 0 ['idle', 'implied']
+NL: Show that every linear map from a one-dimensional vector space to itself is multiplication by some scalar. More precisely, prove that if $\operatorname{dim} V=1$ and $T \in \mathcal{L}(V, V)$, then there exists $a \in \mathbf{F}$ such that $T v=a v$ for all $v \in V$.
+S : 鈭€ {F V : Type u} [AddCommGroup V] [Field F] [Module F V] [FiniteDimensional F V] (T : V 鈫掆倵[F] V) (hT : finrank F V = 1), 鈭?c : F, 鈭€ v : V, T v = c 鈥?v
+H : 鈭€ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]   (T : V 鈫掆倵[F] V), finrank F V = 1 鈫?FiniteDimensional F V
+===== implied valid Axler|exercise_7_14 k= 1 ['idle', 'implied']
+NL: Suppose $T \in \mathcal{L}(V)$ is self-adjoint, $\lambda \in \mathbf{F}$, and $\epsilon>0$. Prove that if there exists $v \in V$ such that $\|v\|=1$ and $\|T v-\lambda v\|<\epsilon,$ then $T$ has an eigenvalue $\lambda^{\prime}$ such that $\left|\lambda-\lambda^{\prime}\right|<\epsilon$.
+S : 鈭€ {饾暅 V : Type u} [RCLike 饾暅] [NormedAddCommGroup V] [InnerProductSpace 饾暅 V] [FiniteDimensional 饾暅 V] {T : Module.End 饾暅 V} (hT : IsSelfAdjoint T) {l : 饾暅} {蔚 : 鈩潁 (he : 蔚 > 0), (鈭?v : V, 鈥杤鈥? 1 鈭?鈥朤 v - l 鈥?v鈥?< 蔚) 鈫?(鈭?l' : T.Eigenvalues, 鈥杔 - l'鈥?< 蔚)
+H :  饾暅] [inst_1 : NormedAddCommGroup V]   [inst_2 : InnerProductSpace 饾暅 V] [inst_3 : FiniteDimensional 饾暅 V] {T : End 饾暅 V},   IsSelfAdjoint T 鈫?鈭€ {l : 饾暅} {蔚 : 鈩潁, (鈭?v, 鈥杤鈥?= 1 鈭?鈥朤 v - l 鈥?v鈥?< 蔚) 鈫?蔚 > 0
+===== idle valid Dummit-Foote|exercise_3_1_22b k= 0 ['idle', 'nimplied']
+NL: Prove that the intersection of an arbitrary nonempty collection of normal subgroups of a group is a normal subgroup (do not assume the collection is countable).
+S : 鈭€ {G : Type u} [Group G] (I : Type u) [Nonempty I] (H : I 鈫?Subgroup G) (hH : 鈭€ i : I, Normal (H i)), Normal (猕?(i : I), H i)
+H : 鈭€ {G : Type u} [inst : Group G] (I : Type u) (H : I 鈫?Subgroup G),   (鈭€ (i : I), (H i).Normal) 鈫?Nonempty I
+===== idle valid Dummit-Foote|exercise_8_1_12 k= 0 ['idle', 'nimplied']
+NL: Let $N$ be a positive integer. Let $M$ be an integer relatively prime to $N$ and let $d$ be an integer relatively prime to $\varphi(N)$, where $\varphi$ denotes Euler's $\varphi$-function. Prove that if $M_{1} \equiv M^{d} \pmod N$ then $M \equiv M_{1}^{d^{\prime}} \pmod N$ where $d^{\prime}$ is the
+S : 鈭€ {N : 鈩晑 (hN : N > 0) {M M': 鈩 {d : 鈩晑 (hMN : M.gcd N = 1) (hMd : d.gcd N.totient = 1) (hM' : M' 鈮?M^d [ZMOD N]), 鈭?d' : 鈩? d' * d 鈮?1 [ZMOD N.totient] 鈭?M 鈮?M'^d' [ZMOD N]
+H : 鈭€ {N : 鈩晑 {M M' : 鈩 {d : 鈩晑, M.gcd 鈫慛 = 1 鈫?d.gcd N.totient = 1 鈫?M' 鈮?M ^ d [ZMOD 鈫慛] 鈫?N > 0
+===== implied valid Herstein|exercise_2_5_37 k= 0 ['idle', 'implied']
+NL: If $G$ is a nonabelian group of order 6, prove that $G \simeq S_3$.
+S : 鈭€ (G : Type u) [Group G] [Fintype G] (hG : card G = 6) (hG' : IsEmpty (CommGroup G)), Nonempty (G 鈮? Equiv.Perm (Fin 3))
+H : 鈭€ (G : Type u) [Group G] [inst : Fintype G], IsEmpty (CommGroup G) 鈫?card G = 6
+===== implied valid Herstein|exercise_2_8_12 k= 0 ['idle', 'implied']
+NL: Prove that any two nonabelian groups of order 21 are isomorphic.
+S : 鈭€ {G H : Type u} [Fintype G] [Fintype H] [Group G] [Group H] (hG : card G = 21) (hH : card H = 21) (hG1 : IsEmpty (CommGroup G)) (hH1 : IsEmpty (CommGroup H)), Nonempty (G 鈮? H)
+H : 鈭€ {G H : Type u} [inst : Fintype G] [inst_1 : Fintype H] [Group G] [Group H],   card H = 21 鈫?IsEmpty (CommGroup G) 鈫?IsEmpty (CommGroup H) 鈫?card G = 21
+===== implied valid Herstein|exercise_2_8_12 k= 1 ['idle', 'implied']
+NL: Prove that any two nonabelian groups of order 21 are isomorphic.
+S : 鈭€ {G H : Type u} [Fintype G] [Fintype H] [Group G] [Group H] (hG : card G = 21) (hH : card H = 21) (hG1 : IsEmpty (CommGroup G)) (hH1 : IsEmpty (CommGroup H)), Nonempty (G 鈮? H)
+H : 鈭€ {G H : Type u} [inst : Fintype G] [inst_1 : Fintype H] [Group G] [Group H],   card G = 21 鈫?IsEmpty (CommGroup G) 鈫?IsEmpty (CommGroup H) 鈫?card H = 21
+===== implied valid Herstein|exercise_2_8_12 k= 2 ['idle', 'implied']
+NL: Prove that any two nonabelian groups of order 21 are isomorphic.
+S : 鈭€ {G H : Type u} [Fintype G] [Fintype H] [Group G] [Group H] (hG : card G = 21) (hH : card H = 21) (hG1 : IsEmpty (CommGroup G)) (hH1 : IsEmpty (CommGroup H)), Nonempty (G 鈮? H)
+H : 鈭€ {G H : Type u} [inst : Fintype G] [inst_1 : Fintype H] [Group G] [Group H],   card G = 21 鈫?card H = 21 鈫?IsEmpty (CommGroup H) 鈫?IsEmpty (CommGroup G)
+===== implied valid Herstein|exercise_2_8_12 k= 3 ['idle', 'implied']
+NL: Prove that any two nonabelian groups of order 21 are isomorphic.
+S : 鈭€ {G H : Type u} [Fintype G] [Fintype H] [Group G] [Group H] (hG : card G = 21) (hH : card H = 21) (hG1 : IsEmpty (CommGroup G)) (hH1 : IsEmpty (CommGroup H)), Nonempty (G 鈮? H)
+H : 鈭€ {G H : Type u} [inst : Fintype G] [inst_1 : Fintype H] [Group G] [Group H],   card G = 21 鈫?card H = 21 鈫?IsEmpty (CommGroup G) 鈫?IsEmpty (CommGroup H)
+===== idle valid Herstein|exercise_2_11_6 k= 0 ['idle', 'nimplied']
+NL: If $P$ is a $p$-Sylow subgroup of $G$ and $P \triangleleft G$, prove that $P$ is the only $p$-Sylow subgroup of $G$.
+S : 鈭€ {G : Type u} [Group G] {p : 鈩晑 (hp : Nat.Prime p) {P : Sylow p G} (hP : P.Normal), 鈭€ (Q : Sylow p G), P = Q
+H : 鈭€ {G : Type u} [inst : Group G] {p : 鈩晑 {P : Sylow p G},   (鈫慞).Normal 鈫?鈭€ (Q : Sylow p G), Nat.Prime p
+===== idle valid Herstein|exercise_4_2_5 k= 0 ['idle', 'nimplied']
+NL: Let $R$ be a ring in which $x^3 = x$ for every $x \in R$. Prove that $R$ is commutative.
+S : 鈭€ {R : Type u} [Ring R] (h : 鈭€ x : R, x ^ 3 = x), Nonempty (CommRing R)
+H : 鈭€ {R : Type u} [inst : Ring R] (x : R), x ^ 3 = x
+===== implied valid Ireland-Rosen|exercise_2_21 k= 1 ['idle', 'implied']
+NL: Define $\wedge(n)=\log p$ if $n$ is a power of $p$ and zero otherwise. Prove that $\sum_{A \mid n} \mu(n / d) \log d$ $=\wedge(n)$.
+S : 鈭€ {l : 鈩?鈫?鈩潁 (hl : 鈭€ p n : 鈩? p.Prime 鈫?l (p^n) = log p ) (hl1 : 鈭€ m : 鈩? 卢 IsPrimePow m 鈫?l m = 0), l = 位 n => 鈭?d : Nat.divisors n, ArithmeticFunction.moebius (n/d) * log d
+H : 鈭€ {l : 鈩?鈫?鈩潁,   (鈭€ (p n : 鈩?, Nat.Prime p 鈫?l (p ^ n) = log 鈫憄) 鈫?鈭€ (m : 鈩?, 卢IsPrimePow m 鈫?l m = 0
+===== idle valid Ireland-Rosen|exercise_5_37 k= 2 ['idle', 'nimplied']
+NL: Show that if $a$ is negative then $p \equiv q(4 a)$ together with $p\not | a$ imply $(a / p)=(a / q)$.
+S : 鈭€ {p q : 鈩晑 [Fact (p.Prime)] [Fact (q.Prime)] {a : 鈩 (ha : a < 0) (h0 : p 鈮?q [ZMOD 4*a]) (h1 : 卢 ((p : 鈩? 鈭?a)), legendreSym p a = legendreSym q a
+H : 鈭€ {p q : 鈩晑 [Fact (Nat.Prime p)] [Fact (Nat.Prime q)] {a : 鈩,   a < 0 鈫?鈫憄 鈮?鈫憅 [ZMOD 4 * a] 鈫?卢鈫憄 鈭?a
+===== idle valid Rudin|exercise_1_1a k= 0 ['idle', 'nimplied']
+NL: If $r$ is rational $(r \neq 0)$ and $x$ is irrational, prove that $r+x$ is irrational.
+S : 鈭€ (x : 鈩? (y : 鈩? (hy : y 鈮?0), ( Irrational x ) -> Irrational ( x + y )
+H : 鈭€ (x : 鈩? (y : 鈩?, Irrational x 鈫?y 鈮?0
+===== idle valid Rudin|exercise_1_5 k= 0 ['idle', 'nimplied']
+NL: Let $A$ be a nonempty set of real numbers which is bounded below. Let $-A$ be the set of all numbers $-x$, where $x \in A$. Prove that $\inf A=-\sup (-A)$.
+S : 鈭€ (A minus_A : Set 鈩? (hA : A.Nonempty) (hA_bdd_below : BddBelow A) (hminus_A : minus_A = {x | -x 鈭?A}), sInf A = - sSup minus_A
+H : 鈭€ (A : Set 鈩?, BddBelow A 鈫?A.Nonempty
+===== idle valid Rudin|exercise_1_5 k= 1 ['idle', 'nimplied']
+NL: Let $A$ be a nonempty set of real numbers which is bounded below. Let $-A$ be the set of all numbers $-x$, where $x \in A$. Prove that $\inf A=-\sup (-A)$.
+S : 鈭€ (A minus_A : Set 鈩? (hA : A.Nonempty) (hA_bdd_below : BddBelow A) (hminus_A : minus_A = {x | -x 鈭?A}), sInf A = - sSup minus_A
+H : 鈭€ (A : Set 鈩?, A.Nonempty 鈫?BddBelow A
+===== idle valid Rudin|exercise_1_16a k= 1 ['idle', 'nimplied']
+NL: Suppose $k \geq 3, x, y \in \mathbb{R}^k, |x - y| = d > 0$, and $r > 0$. Prove that if $2r > d$, there are infinitely many $z \in \mathbb{R}^k$ such that $|z-x|=|z-y|=r$.
+S : 鈭€ (n : 鈩? (d r : 鈩? (x y z : EuclideanSpace 鈩?(Fin n)) (h鈧?: n 鈮?3) (h鈧?: 鈥杧 - y鈥?= d) (h鈧?: d > 0) (h鈧?: r > 0) (h鈧?: 2 * r > d), Set.Infinite {z : EuclideanSpace 鈩?(Fin n) | 鈥杬 - x鈥?= r 鈭?鈥杬 - y鈥?= r}
+H : 鈭€ (n : 鈩? (r : 鈩? (x y z : EuclideanSpace 鈩?(Fin n)),   n 鈮?3 鈫?r > 0 鈫?2 * r > 鈥杧 - y鈥?鈫?鈥杧 - y鈥?> 0
+===== implied valid Rudin|exercise_1_16a k= 2 ['idle', 'implied']
+NL: Suppose $k \geq 3, x, y \in \mathbb{R}^k, |x - y| = d > 0$, and $r > 0$. Prove that if $2r > d$, there are infinitely many $z \in \mathbb{R}^k$ such that $|z-x|=|z-y|=r$.
+S : 鈭€ (n : 鈩? (d r : 鈩? (x y z : EuclideanSpace 鈩?(Fin n)) (h鈧?: n 鈮?3) (h鈧?: 鈥杧 - y鈥?= d) (h鈧?: d > 0) (h鈧?: r > 0) (h鈧?: 2 * r > d), Set.Infinite {z : EuclideanSpace 鈩?(Fin n) | 鈥杬 - x鈥?= r 鈭?鈥杬 - y鈥?= r}
+H : 鈭€ (n : 鈩? (r : 鈩? (x y z : EuclideanSpace 鈩?(Fin n)),   n 鈮?3 鈫?鈥杧 - y鈥?> 0 鈫?2 * r > 鈥杧 - y鈥?鈫?r > 0
+===== implied valid Rudin|exercise_2_24 k= 0 ['idle', 'implied']
+NL: Let $X$ be a metric space in which every infinite subset has a limit point. Prove that $X$ is separable.
+S : 鈭€ {X : Type u} [MetricSpace X] (hX : 鈭€ (A : Set X), Infinite A 鈫?鈭?(x : X), x 鈭?closure A), SeparableSpace X
+H : 鈭€ {X : Type u} [inst : MetricSpace X] (A : Set X), Infinite 鈫慉 鈫?鈭?x, x 鈭?closure A
+===== idle valid Rudin|exercise_2_27a k= 0 ['idle', 'nimplied']
+NL: Suppose $E\subset\mathbb{R}^k$ is uncountable, and let $P$ be the set of condensation points of $E$. Prove that $P$ is perfect.
+S : 鈭€ (k : 鈩? (E P : Set (EuclideanSpace 鈩?(Fin k))) (hE : 卢 Set.Countable E) (hP : P = {x | 鈭€ U 鈭?饾摑 x, 卢 Set.Countable (U 鈭?E)}), Perfect P
+H : 鈭€ (k : 鈩? (E : Set (EuclideanSpace 鈩?(Fin k))), 卢E.Countable
+===== idle valid Rudin|exercise_4_8b k= 0 ['idle', 'nimplied']
+NL: Let $E$ be a bounded set in $R^{1}$. Prove that there exists a real function $f$ such that $f$ is uniformly continuous and is not bounded on $E$.
+S : 鈭€ (E : Set 鈩? (h : Bornology.IsBounded E), 鈭?f : 鈩?鈫?鈩? UniformContinuousOn f E 鈭?卢 Bornology.IsBounded (Set.image f E)
+H : 鈭€ (E : Set 鈩?, Bornology.IsBounded E
+===== idle valid Rudin|exercise_4_24 k= 1 ['idle', 'nimplied']
+NL: Assume that $f$ is a continuous real function defined in $(a, b)$ such that $f\left(\frac{x+y}{2}\right) \leq \frac{f(x)+f(y)}{2}$ for all $x, y \in(a, b)$. Prove that $f$ is convex.
+S : 鈭€ {f : 鈩?鈫?鈩潁 (hf : Continuous f) (a b : 鈩? (hab : a < b) (h : 鈭€ x y : 鈩? a < x 鈫?x < b 鈫?a < y 鈫?y < b 鈫?f ((x + y) / 2) 鈮?(f x + f y) / 2), ConvexOn 鈩?(Set.Ioo a b) f
+H : 鈭€ {f : 鈩?鈫?鈩潁,   Continuous f 鈫?鈭€ (a b : 鈩?, (鈭€ (x y : 鈩?, a < x 鈫?x < b 鈫?a < y 鈫?y < b 鈫?f ((x + y) / 2) 鈮?(f x + f y) / 2) 鈫?a < b
+===== implied valid Shakarchi|exercise_1_26 k= 0 ['idle', 'implied']
+NL: Suppose $f$ is continuous in a region $\Omega$. Prove that any two primitives of $f$ (if they exist) differ by a constant.
+S : 鈭€ (f F鈧?F鈧?: 鈩?鈫?鈩? (惟 : Set 鈩? (h0 : Nonempty 惟) (h1 : IsOpen 惟) (h2 : IsConnected 惟) (hf : ContinuousOn f 惟) (hF鈧?: DifferentiableOn 鈩?F鈧?惟) (hF鈧?: DifferentiableOn 鈩?F鈧?惟) (hdF鈧?: 鈭€ x 鈭?惟, deriv F鈧?x = f x) (hdF鈧?: 鈭€ x 鈭?惟, deriv F鈧?x = f x), 鈭?c : 鈩? 鈭€ x, F鈧?x = F鈧?x + c
+H :    IsOpen 惟 鈫?    IsConnected 惟 鈫?      ContinuousOn f 惟 鈫?        DifferentiableOn 鈩?F鈧?惟 鈫?          DifferentiableOn 鈩?F鈧?惟 鈫?(鈭€ x 鈭?惟, deriv F鈧?x = f x) 鈫?(鈭€ x 鈭?惟, deriv F鈧?x = f x) 鈫?Nonempty 鈫懳?
+===== implied valid Shakarchi|exercise_1_26 k= 3 ['idle', 'implied']
+NL: Suppose $f$ is continuous in a region $\Omega$. Prove that any two primitives of $f$ (if they exist) differ by a constant.
+S : 鈭€ (f F鈧?F鈧?: 鈩?鈫?鈩? (惟 : Set 鈩? (h0 : Nonempty 惟) (h1 : IsOpen 惟) (h2 : IsConnected 惟) (hf : ContinuousOn f 惟) (hF鈧?: DifferentiableOn 鈩?F鈧?惟) (hF鈧?: DifferentiableOn 鈩?F鈧?惟) (hdF鈧?: 鈭€ x 鈭?惟, deriv F鈧?x = f x) (hdF鈧?: 鈭€ x 鈭?惟, deriv F鈧?x = f x), 鈭?c : 鈩? 鈭€ x, F鈧?x = F鈧?x + c
+H :    Nonempty 鈫懳?鈫?    IsOpen 惟 鈫?      IsConnected 惟 鈫?        DifferentiableOn 鈩?F鈧?惟 鈫?          DifferentiableOn 鈩?F鈧?惟 鈫?(鈭€ x 鈭?惟, deriv F鈧?x = f x) 鈫?(鈭€ x 鈭?惟, deriv F鈧?x = f x) 鈫?ContinuousOn f 惟

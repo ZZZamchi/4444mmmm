@@ -1,0 +1,88 @@
+Counter({(True, 'e0', 'u0'): 29, (False, 'e0', 'u0'): 18, (False, 'extra>0', 'uref>0'): 13, (False, 'extra>0', 'u0'): 13, (False, 'e0', 'uref>0'): 6, (True, 'e0', 'uref>0'): 3, (True, 'extra>0', 'u0'): 2, (True, 'extra>0', 'uref>0'): 1})
+pnv-test-773 False ambiguous=false extra=3 unmatched_ref=1
+  G: (鈭€ {G : Type u} [inst : Group G] (as : List G),     as.prod鈦宦?= (List.map (fun x => x鈦宦? as.reverse).prod) 鈫?  鈭€ {G : Type u} [inst : Group G] (as : List G), True 鈫?as.prod鈦宦?= (List.map (fun x => x鈦宦? as.reverse).prod
+  S: (鈭€ {G : Type u} [inst : Group G] (a b c d : G), a * b = c 鈫?c * d = 1 鈫?d * b = a) 鈫?  鈭€ {G : Type u} [inst : Group G] (a b d : G), a * b * d = 1 鈫?d * b = a
+pnv-test-643 False ambiguous=false extra=2 unmatched_ref=2
+  G: (鈭€ (a b : 鈩?鈫?EReal),     (鈭€ (n : 鈩?, a n 鈮?鈯?鈭?a n 鈮?鈯? 鈫?      (鈭€ (n : 鈩?, b n 鈮?鈯?鈭?b n 鈮?鈯? 鈫?        limsup a 鈮?鈯?鈫?limsup b 鈮?鈯?鈫?(limsup fun n => a n + b n) 鈮?limsup a + limsup b) 鈫?  鈭€ (a b : 鈩?鈫?EReal),     (鈭€ (n : 鈩?, a n 鈮?鈯?鈭?a n 鈮?鈯? 鈭?(鈭€ (n : 鈩?, b n 鈮?鈯?鈭?b n 鈮?鈯? 鈭?limsup a 鈮?鈯?鈭?lim
+  S: (鈭€ {a b : 鈩?鈫?鈩潁,     Tendsto a atTop atTop 鈫?      Tendsto b atTop atTop 鈫?        (鈭?l, Tendsto a atTop (饾摑 l)) 鈫?(鈭?l, Tendsto b atTop (饾摑 l)) 鈫?limsup (a + b) 鈮?limsup a + limsup b) 鈫?  鈭€ {a b : 鈩?鈫?鈩潁,     (Tendsto a atTop atTop 鈭?Tendsto b atTop atTop 鈭?(鈭?l, Tendsto a atTop (饾摑 l)) 鈭?鈭?l, Tendst
+pnv-test-123 False ambiguous=true extra=2 unmatched_ref=0
+  G: (鈭€ {p m n : 鈩晑,     p 鈮?0 鈫?n > 0 鈫?鈭€ {F : Type u} [inst : Field F] [CharP F p], m = p ^ n 鈫?(X ^ m - X).Separable) 鈫?  鈭€ {p n : 鈩晑 {F : Type u} [inst : Field F], p 鈮?0 鈭?n > 0 鈭?CharP F p 鈫?(X ^ p ^ n - X).Separable
+  S: (鈭€ {F : Type u} [inst : Field F] {p n : 鈩晑 [hf : CharP F p] (m : 鈩?,     m = p ^ n 鈫?鈭€ (x y : F), x ^ m = x 鈫?y ^ m = y 鈫?x = y) 鈫?  鈭€ {F : Type u} [inst : Field F] {p n : 鈩晑 (x y : F), CharP F p 鈭?x ^ p ^ n = x 鈭?y ^ p ^ n = y 鈫?x = y
+pnv-test-1098 False ambiguous=false extra=3 unmatched_ref=3
+  G: (鈭€ (n : 鈩? (a b c : ZMod n), a * b * c = a * (b * c)) 鈫?  鈭€ (n : 鈩? (a b c : ZMod n), True 鈫?a * b * c = a * (b * c)
+  S: (鈭€ (n : 鈩? (a b c : 鈩?, a * b % 鈫憂 * c % 鈫憂 = a * (b * c) % 鈫憂) 鈫?  鈭€ (n : 鈩? (a b c : 鈩?, True 鈫?a * b % 鈫憂 * c % 鈫憂 = a * (b * c) % 鈫憂
+pnv-test-836 False ambiguous=false extra=3 unmatched_ref=3
+  G: (鈭€ (n : 鈩? (a b c : ZMod n), a * b * c = a * (b * c)) 鈫?  鈭€ (n : 鈩? (a b c : ZMod n), True 鈫?a * b * c = a * (b * c)
+  S: (鈭€ (n a b c : 鈩?, a * b % n * (c % n) % n = a * b * c % n) 鈫?  鈭€ (n a b c : 鈩?, True 鈫?a * b % n * (c % n) % n = a * b * c % n
+pnv-test-275 False ambiguous=false extra=2 unmatched_ref=0
+  G: (鈭?a b, a - b 鈮?b - a) 鈫?True 鈫?鈭?a b, a - b 鈮?b - a
+  S: (鈭€ {a b : 鈩, a - b 鈮?b - a) 鈫?鈭€ {a b : 鈩, True 鈫?a - b 鈮?b - a
+pnv-test-1142 False ambiguous=false extra=1 unmatched_ref=1
+  G: (鈭€ {n : 鈩?} {G : Type u} [inst : Group G] {x : G},     orderOf x = 鈫憂 鈫?      G = 鈫?Subgroup.closure {x}) 鈫?        鈭€ (H : Subgroup G),           (鈭?p, Prime p 鈭?p 鈭?鈫憂 鈭?H = Subgroup.closure {x ^ p}) 鈫?H 鈮?鈯?鈭?鈭€ (K : Subgroup G), H 鈮?K 鈫?K = H 鈭?K = 鈯? 鈫?  鈭€ {n : 鈩?} {G : Type u} [inst : Group G] {
+  S: (鈭€ {G : Type u} [inst : Group G] {x : G} {n : 鈩晑,     x ^ n = 1 鈫?      1 鈮?n 鈫?        鈭€ (H : Subgroup G),           (H 鈮?zpowers x 鈭?H 鈮?鈯?鈭?鈭€ (K : Subgroup G), H < K 鈫?K = 鈯? 鈫?            鈭?p, Nat.Prime p 鈭?p 鈭?n 鈭?H = zpowers (x ^ (n / p))) 鈫?  鈭€ {G : Type u} [inst : Group G] {x : G} {n : 鈩晑 (H
+pnv-test-1031 False ambiguous=false extra=2 unmatched_ref=1
+  G: (鈭€ {伪 : Type u} [inst : TopologicalSpace 伪] {s : 鈩?鈫?Set 伪},     (鈭€ (i : 鈩?, IsCompact (s i)) 鈫?(鈭€ (i : 鈩?, (s i).Nonempty) 鈫?(鈭€ (i : 鈩?, s i 鈯?s (i + 1)) 鈫?(鈰?i, s i).Nonempty) 鈫?  鈭€ {伪 : Type u} [inst : TopologicalSpace 伪] {s : 鈩?鈫?Set 伪},     ((鈭€ (i : 鈩?, IsCompact (s i)) 鈭?(鈭€ (i : 鈩?, (s i).None
+  S: (鈭€ {X : Type u} [inst : TopologicalSpace X] {s : Set X},     IsCompact s 鈫?      鈭€ (u : X 鈫?Set X),         (鈭€ (x : X), IsCompact (closure (u x))) 鈫?          (鈭€ (x : X), IsOpen (u x)) 鈫?(鈭€ (x : X), s 鈯?u x) 鈫?鈰?x, closure (u x) 鈮?鈭? 鈫?  鈭€ {X : Type u} [inst : TopologicalSpace X] {s : Set X} (u : X 
+pnv-test-437 False ambiguous=false extra=2 unmatched_ref=0
+  G: (鈭? p, p.1 > 0 鈭?p.2 > 0 鈭?p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) 鈫?  True 鈫?鈭? p, p.1 > 0 鈭?p.2 > 0 鈭?p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001
+  S: (鈭€ (a n : 鈩?, a ^ (n + 1) - (a + 1) ^ n = 2001 鈫?a = 3 鈭?n = 6) 鈫?  鈭€ (a n : 鈩?, a ^ (n + 1) - (a + 1) ^ n = 2001 鈫?a = 3 鈭?n = 6
+pnv-test-916 False ambiguous=true extra=1 unmatched_ref=1
+  G: (鈭€ (a b : 鈩?,     a 鈮?b 鈫?      鈭€ (f : 鈫?Icc a b) 鈫?鈩?,         UniformContinuous f 鈫?          鈭?渭,             鈭€ (x : 鈩?,               (x > 0 鈫?渭 x > 0) 鈭?                StrictMonoOn 渭 (Ioi 0) 鈭?Tendsto 渭 (饾摑 0) (饾摑 0) 鈭?鈭€ (s t : 鈫?Icc a b)), |f s - f t| 鈮?渭 |鈫憇 - 鈫憈|) 鈫?  鈭€ (a b : 鈩? (f : 鈫?Icc a
+  S: (鈭€ {a b : 鈩潁,     a < b 鈫?      鈭€ (f : 鈩?鈫?鈩?,         UniformContinuousOn f (Icc a b) 鈫?          鈭?渭, (渭 =O[atTop] fun x => x) 鈭?鈭€ (s t : 鈩?, a 鈮?s 鈫?s 鈮?t 鈫?t 鈮?b 鈫?|f t - f s| 鈮?渭 |t - s|) 鈫?  鈭€ {a b : 鈩潁 (f : 鈩?鈫?鈩?,     a < b 鈫?      (UniformContinuousOn f (Icc a b) 鈫?        鈭?渭, (渭 =O[atTop]
+pnv-test-1355 False ambiguous=false extra=1 unmatched_ref=1
+  G: (鈭€ (p : 鈩?, Nat.Prime p 鈫?鈭€ (a : 鈩?, a ^ p 鈮?a [ZMOD 鈫憄]) 鈫?  鈭€ (p : 鈩? (a : 鈩?, Nat.Prime p 鈫?a ^ p 鈮?a [ZMOD 鈫憄]
+  S: (鈭€ (p : 鈩? [Fact (Nat.Prime p)] (a : 鈩?, a ^ p 鈮?a [MOD p]) 鈫?  鈭€ (p a : 鈩?, Fact (Nat.Prime p) 鈫?a ^ p 鈮?a [MOD p]
+pnv-test-840 False ambiguous=false extra=1 unmatched_ref=0
+  G: (卢Summable fun i => 1 / 鈫戔啈i) 鈫?True 鈫?卢Summable fun i => 1 / 鈫戔啈i
+  S: (鈭€ (n : 鈩?, 卢鈭?N, 鈭€ (d : 鈩?, d 鈭?N 鈫?d 鈭?n 鈫?d = 1) 鈫?  鈭€ (n : 鈩?, True 鈫?卢鈭?N, 鈭€ (d : 鈩?, d 鈭?N 鈫?d 鈭?n 鈫?d = 1
+pnv-test-717 False ambiguous=false extra=1 unmatched_ref=0
+  G: IsTopologicalBasis {S | 鈭?a b, a < b 鈭?S = Ioo 鈫慳 鈫慴} 鈫?  True 鈫?IsTopologicalBasis {S | 鈭?a b, a < b 鈭?S = Ioo 鈫慳 鈫慴}
+  S: (鈭€ (x : 鈩?, 鈭?a, 鈭?b > a, 鈭€ (A : Set 鈩?, IsOpen A 鈭?x 鈭?A 鈫?鈭?n, 鈫慳 鈮?鈫憂 鈭?n < b 鈭?鈫憂 鈭?A) 鈫?  鈭€ (x : 鈩?, True 鈫?鈭?a, 鈭?b > a, 鈭€ (A : Set 鈩?, IsOpen A 鈭?x 鈭?A 鈫?鈭?n, 鈫慳 鈮?鈫憂 鈭?n < b 鈭?鈫憂 鈭?A
+pnv-test-533 False ambiguous=false extra=1 unmatched_ref=0
+  G: (鈭€ {G : Type u} [inst : Group G],     (鈭€ (H : Subgroup G), H = 鈯?鈭?H = 鈯? 鈫?IsCyclic G 鈭?鈭?p Fin, Nat.Prime p 鈭?card G = p) 鈫?  鈭€ {G : Type u} [inst : Group G], (鈭€ (H : Subgroup G), H = 鈯?鈭?H = 鈯? 鈫?IsCyclic G 鈭?鈭?p Fin, Nat.Prime p 鈭?card G = p
+  S: (鈭€ {G : Type u} [inst : Group G] {p : 鈩晑 [hp : Fact (Nat.Prime p)] [Fact (Nat.card G = p)],     IsCyclic G) 鈫?  鈭€ {G : Type u} [inst : Group G] {p : 鈩晑, Fact (Nat.Prime p) 鈭?Fact (Nat.card G = p) 鈫?IsCyclic G
+pnv-test-743 False ambiguous=false extra=1 unmatched_ref=1
+  G: (鈭€ {n : 鈩?}, 卢n.Prime 鈫?((鈫憂 - 1).factorial 鈮?0 [MOD 鈫憂] 鈫?n 鈮?4)) 鈫?  鈭€ {n : 鈩?}, 卢n.Prime 鈫?((鈫憂 - 1).factorial 鈮?0 [MOD 鈫憂] 鈫?n 鈮?4)
+  S: (鈭€ {n : 鈩晑, 卢Prime n 鈫?n.pred.factorial = 0) 鈫?鈭€ {n : 鈩晑, 卢Prime n 鈫?n.pred.factorial = 0
+pnv-test-769 False ambiguous=true extra=1 unmatched_ref=0
+  G: (鈭€ {G : Type u} [inst : Group G] (a b : G), orderOf (a * b) = orderOf (b * a)) 鈫?  鈭€ {G : Type u} [inst : Group G] (a b : G), True 鈫?orderOf (a * b) = orderOf (b * a)
+  S: (鈭€ {G : Type u} [inst : Group G] {a b c : G}, a * b = a * c 鈫?b = c) 鈫?  鈭€ {G : Type u} [inst : Group G] {a b c : G}, a * b = a * c 鈫?b = c
+pnv-test-1169 False ambiguous=true extra=1 unmatched_ref=2
+  G: (鈭€ {p t : 鈩晑,     Nat.Prime p 鈫?p = 4 * t + 1 鈫?鈭€ (a : ZMod p), IsPrimitiveRoot a p 鈫?IsPrimitiveRoot (-a) p) 鈫?  鈭€ {p t : 鈩晑 (a : ZMod p), Nat.Prime p 鈭?p = 4 * t + 1 鈫?(IsPrimitiveRoot a p 鈫?IsPrimitiveRoot (-a) p)
+  S: (鈭€ {p : 鈩晑 [hp : Fact (Nat.Prime p)],     p % 4 = 1 鈫?鈭€ (a : 鈩?, IsPrimitiveRoot a p 鈫?IsPrimitiveRoot (-a) p) 鈫?  鈭€ {p : 鈩晑 (a : 鈩?, Fact (Nat.Prime p) 鈭?p % 4 = 1 鈫?(IsPrimitiveRoot a p 鈫?IsPrimitiveRoot (-a) p)
+pnv-test-11 False ambiguous=true extra=1 unmatched_ref=0
+  G: (鈭€ {G : Type u} [inst : Group G] {P : 鈩?鈫?Prop}     {hP : P = fun i => 鈭€ (a b : G), (a * b) ^ i = a ^ i * b ^ i},     (鈭?n, P n 鈭?P (n + 1) 鈭?P (n + 2)) 鈫?鈭€ (a b : G), a * b = b * a) 鈫?  鈭€ {G : Type u} [inst : Group G] (a b : G),     (鈭?n,         (fun i => 鈭€ (a b : G), (a * b) ^ i = a ^ i * b ^ i) 
+  S: (鈭€ {G : Type u} [inst : Group G] (a b : G) (i : 鈩?,     (鈭€ j 鈭?{i - 1, i, i + 1}, (a * b) ^ j = a ^ j * b ^ j) 鈫?Commute a b) 鈫?  鈭€ {G : Type u} [inst : Group G] (a b : G) (i : 鈩?,     (鈭€ j 鈭?{i - 1, i, i + 1}, (a * b) ^ j = a ^ j * b ^ j) 鈫?Commute a b
+pnv-test-377 False ambiguous=false extra=2 unmatched_ref=0
+  G: (鈭?a b, a - b 鈮?b - a) 鈫?True 鈫?鈭?a b, a - b 鈮?b - a
+  S: (鈭€ (a b : 鈩?, min a b = 0 鈫?max a b = 0) 鈫?鈭€ (a b : 鈩?, min a b = 0 鈫?max a b = 0
+pnv-test-626 False ambiguous=false extra=2 unmatched_ref=0
+  G: (鈭? p, p.1 > 0 鈭?p.2 > 0 鈭?p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) 鈫?  True 鈫?鈭? p, p.1 > 0 鈭?p.2 > 0 鈭?p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001
+  S: (鈭€ {a : 鈩晑 {n : 鈩晑, 0 < a 鈫?鈭? n, 0 < n 鈭?a ^ (n + 1) - (a + 1) ^ n = 2001) 鈫?  鈭€ {a : 鈩晑 {n : 鈩晑, 0 < a 鈫?鈭? n, 0 < n 鈭?a ^ (n + 1) - (a + 1) ^ n = 2001
+pnv-test-1116 False ambiguous=true extra=1 unmatched_ref=0
+  G: (鈭€ {p m n : 鈩晑 {F : Type u} [inst : Field F],     p 鈮?0 鈫?n > 0 鈫?CharP F p 鈫?鈭€ (a b : F), m = p ^ n 鈫?(a + b) ^ m = a ^ m + b ^ m) 鈫?  鈭€ {p n : 鈩晑 {F : Type u} [inst : Field F] (a b : F),     p 鈮?0 鈭?n > 0 鈭?CharP F p 鈫?(a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n
+  S: (鈭€ (F : Type u) [inst : Field F] (p : 鈩? [hp : Fact (Nat.Prime p)] [CharP F p] (m n : 鈩?     (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n) 鈫?  鈭€ (F : Type u) [inst : Field F] (p m n : 鈩? (a b : F),     Fact (Nat.Prime p) 鈭?CharP F p 鈫?(a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n
+pnv-test-231 False ambiguous=false extra=2 unmatched_ref=0
+  G: (鈭? p, p.1 > 0 鈭?p.2 > 0 鈭?p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001) 鈫?  True 鈫?鈭? p, p.1 > 0 鈭?p.2 > 0 鈭?p.1 ^ (p.2 + 1) - (p.1 + 1) ^ p.2 = 2001
+  S: (鈭€ (a n : 鈩?, 0 < a 鈫?0 < n 鈫?a ^ (n + 1) - (a + 1) ^ n = 2001) 鈫?  鈭€ (a n : 鈩?, 0 < a 鈭?0 < n 鈫?a ^ (n + 1) - (a + 1) ^ n = 2001
+pnv-test-1156 False ambiguous=false extra=2 unmatched_ref=1
+  G: (鈭€ {G : Type u} [inst : Group G] {p : 鈩晑,     Nat.Prime p 鈫?鈭€ {P : Sylow p G}, (鈫慞).Normal 鈫?(鈫慞).Characteristic) 鈫?  鈭€ {G : Type u} [inst : Group G] {p : 鈩晑 {P : Sylow p G}, Nat.Prime p 鈭?(鈫慞).Normal 鈫?(鈫慞).Characteristic
+  S: (鈭€ {G : Type u} [inst : Group G] {p : 鈩晑 {P : Subgroup G} [hp : Fact (Nat.Prime p)],     P.Normal 鈫?IsPGroup p 鈫 鈫?鈭€ (蠒 : G 鈮? G), 鈬懴?toMonoidHom '' 鈫慞 = 鈫慞) 鈫?  鈭€ {G : Type u} [inst : Group G] {p : 鈩晑 {P : Subgroup G} (蠒 : G 鈮? G),     Fact (Nat.Prime p) 鈭?P.Normal 鈭?IsPGroup p 鈫 鈫?鈬懴?toMonoidHom
+pnv-test-692 False ambiguous=false extra=2 unmatched_ref=0
+  G: (鈭€ {f : 鈩?鈫?MvPolynomial 鈩?鈩,     (f = fun i => MvPolynomial.X (2 * i) * MvPolynomial.X (2 * i + 1)) 鈫?      Infinite 鈫?minimalPrimes (MvPolynomial 鈩?鈩?猝?span (range f)))) 鈫?  True 鈫?    Infinite       鈫?minimalPrimes (MvPolynomial 鈩?鈩?猝?span (range fun i => MvPolynomial.X (2 * i) * MvPolynomial.X 
+  S: (鈭€ {p : 鈩晑,     Prime p 鈫?      鈭€ k 鈮?1,         鈭?f,           鈭?(_ : StrictAnti f),             (鈭€ (i : 鈩?, f i 鈮?1 鈫?f (i + 1) 鈮?f i + 1) 鈭?              (鈭€ (i : 鈩?, f i 鈮?1 鈫?f (i + 1) 鈮?f i + 2) 鈭?                (鈭€ (i : 鈩?, f (2 * i) 鈮?p ^ 2) 鈭?(鈭€ (i : 鈩?, f (2 * i + 1) 鈮?p ^ 2) 鈭?鈭€ i 鈮?k, p 鈭?
+pnv-test-796 False ambiguous=false extra=1 unmatched_ref=1
+  G: (鈭€ (p : 鈩?, Nat.Prime p 鈫?鈭€ (a : 鈩?, a ^ p 鈮?a [ZMOD 鈫憄]) 鈫?  鈭€ (p : 鈩? (a : 鈩?, Nat.Prime p 鈫?a ^ p 鈮?a [ZMOD 鈫憄]
+  S: (鈭€ (p : 鈩? [Fact (Nat.Prime p)] (a : 鈩?, a ^ p 鈮?a [MOD p]) 鈫?  鈭€ (p a : 鈩?, Fact (Nat.Prime p) 鈫?a ^ p 鈮?a [MOD p]
+pnv-test-216 False ambiguous=false extra=1 unmatched_ref=1
+  G: (鈭€ (f : 鈩?鈫?鈫?Icc 0 1) 鈫?鈩?,     (鈭€ (x : 鈫?Icc 0 1)) (n : 鈩?, f n x = 鈫戔啈x ^ n) 鈫?卢鈭?f鈧€, TendstoUniformly f f鈧€ atTop) 鈫?  鈭€ (f : 鈩?鈫?鈫?Icc 0 1) 鈫?鈩?, (鈭€ (x : 鈫?Icc 0 1)) (n : 鈩?, f n x = 鈫戔啈x ^ n) 鈫?卢鈭?f鈧€, TendstoUniformly f f鈧€ atTop
+  S: (鈭€ {n : 鈩晑, 卢TendstoUniformlyOn (fun n x => x ^ n) (fun x => x) atTop (Icc 0 1)) 鈫?  鈭€ {n : 鈩晑, True 鈫?卢TendstoUniformlyOn (fun n x => x ^ n) (fun x => x) atTop (Icc 0 1)
+pnv-test-889 True ambiguous=false extra=2 unmatched_ref=0
+  G: (卢鈭?x y, 3 * x ^ 2 + 2 = y ^ 2) 鈫?True 鈫?卢鈭?x y, 3 * x ^ 2 + 2 = y ^ 2
+  S: (鈭€ (m n : 鈩?, 3 * m ^ 2 + 2 = n ^ 2 鈫?False) 鈫?鈭€ (m n : 鈩?, 3 * m ^ 2 + 2 = n ^ 2 鈫?False
+pnv-test-226 True ambiguous=false extra=2 unmatched_ref=0
+  G: (鈭€ {f : 鈩?鈫?鈩潁, (鈭€ (x y : 鈩?, |f x - f y| 鈮?|x - y| ^ 2) 鈫?鈭?c, f = fun x => c) 鈫?  鈭€ {f : 鈩?鈫?鈩潁, (鈭€ (x y : 鈩?, |f x - f y| 鈮?|x - y| ^ 2) 鈫?鈭?c, f = fun x => c
+  S: (鈭€ {f : 鈩?鈫?鈩潁, (鈭€ (t x : 鈩?, |f t - f x| 鈮?|t - x| ^ 2) 鈫?鈭€ (x y : 鈩?, f x = f y) 鈫?  鈭€ {f : 鈩?鈫?鈩潁 (x y : 鈩?, (鈭€ (t x : 鈩?, |f t - f x| 鈮?|t - x| ^ 2) 鈫?f x = f y
+pnv-test-1218 True ambiguous=false extra=1 unmatched_ref=1
+  G: (鈭€ {n : 鈩?}, 卢n.Prime 鈫?((鈫憂 - 1).factorial 鈮?0 [MOD 鈫憂] 鈫?n 鈮?4)) 鈫?  鈭€ {n : 鈩?}, 卢n.Prime 鈫?((鈫憂 - 1).factorial 鈮?0 [MOD 鈫憂] 鈫?n 鈮?4)
+  S: (鈭€ {n : 鈩晑, 卢Nat.Prime n 鈫?n 鈮?4 鈫?(n - 1).factorial % n = 0) 鈫?  鈭€ {n : 鈩晑, 卢Nat.Prime n 鈭?n 鈮?4 鈫?(n - 1).factorial % n = 0

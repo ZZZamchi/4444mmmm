@@ -1,0 +1,22 @@
+['id', 'nl_statement', 'nl_proof', 'lean4_src_header', 'lean4_formalization'] 186
+== test Munkres|exercise_24_3a
+theorem exercise_24_3a (f : Icc 0 1 鈫?Icc 0 1) (hf : Continuous f) :
+  鈭?(x : Icc 0 1), f x = x :=
+== test Pugh|exercise_3_63a
+theorem exercise_3_63a (p : 鈩? (f : 鈩?鈫?鈩? (hp : p > 1)
+  (h : f = 位 (k : 鈩? => (1 : 鈩? / (k * (log k) ^ p)) :
+  鈭?l, Tendsto f atTop (饾摑 l) :=
+== test Ireland-Rosen|exercise_4_4
+theorem exercise_4_4 {p t: 鈩晑 (hp0 : p.Prime) (hp1 : p = 4*t + 1)
+  (a : ZMod p) :
+  IsPrimitiveRoot a p 鈫?IsPrimitiveRoot (-a) p :=
+== test Rudin|exercise_5_3
+theorem exercise_5_3 {g : 鈩?鈫?鈩潁 (hg : Continuous g)
+  (hg' : 鈭?M : 鈩? 鈭€ x : 鈩? |deriv g x| 鈮?M) :
+  鈭?N, 鈭€ 蔚 > 0, 蔚 < N 鈫?Function.Injective (位 x : 鈩?=> x + 蔚 * g x) :=
+== valid Axler|exercise_4_4
+theorem exercise_4_4 (p : Polynomial 鈩? :
+  p.degree = @card (rootSet p 鈩? (rootSetFintype p 鈩? 鈫?
+  Disjoint
+  (@card (rootSet (derivative p) 鈩? (rootSetFintype (derivative p) 鈩?)
+  (@card (rootSet p 鈩? (rootSetFintype p 鈩?) :=

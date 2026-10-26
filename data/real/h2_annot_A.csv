@@ -1,0 +1,227 @@
+item,faithful,kind,note
+1,yes,,
+2,no,hyp_missing,候选前提与结论均为 a∣b，缺失高斯整数环中的整除假设
+3,yes,,
+4,no,hyp_missing,缺少三阶导数连续性(ContDiff ℝ 3 f)假设
+5,yes,,
+6,yes,,
+7,no,hyp_extra,要求极限点在 closure S \ S，强于通常极限点
+8,yes,,
+9,no,type_drift,f 取 ℝ→ℝ 并附加区间不变性，而非 Icc 0 1→Icc 0 1
+10,no,type_drift,a 取 ℕ 而非 ℤ
+11,yes,,
+12,yes,,
+13,yes,,
+14,yes,,
+15,no,hyp_extra,使用 T4Space（NormalSpace + T1Space）代替 NormalSpace
+16,yes,,
+17,yes,,
+18,no,conclusion_diff,候选结论为 range T = ⊤（满射），NL 只要求 range T = range(T|_U)
+19,yes,,
+20,no,conclusion_diff,候选假设给定 a,n 满足等式，而非断言唯一存在性
+21,no,hyp_extra,上界条件用严格不等式 x < b
+22,yes,,
+23,yes,,
+24,yes,,
+25,no,conclusion_diff,极大性条件用 H ≤ K 而非 M ≤ K
+26,no,type_drift,使用 Semiring 而非 Ring，代数结构弱于 NL 的 group ring
+27,yes,,
+28,no,conclusion_diff,候选证明消去律，与元素阶无关
+29,no,vacuous,额外收敛假设互相矛盾（趋于∞与趋于有限极限），使命题空洞成立
+30,yes,,
+31,no,hyp_extra,添加 Nontrivial V
+32,no,type_drift,End 未知且 T '' (U i) 类型错误
+33,yes,,
+34,no,hyp_missing,缺失 E 非空，且结构由 PartialOrder 减弱为 LE
+35,no,type_drift,log 未限定为 Real.log，类型推断错误
+36,yes,,
+37,no,hyp_missing,缺少三阶导数连续性
+38,yes,,
+39,yes,,
+40,no,false_statement,声称对任意给定 G 都存在，单群反例
+41,no,conclusion_diff,候选证明 (a*b=c)→a⁻¹*b⁻¹=c⁻¹，与逆序乘积公式无关
+42,yes,,
+43,yes,,
+44,yes,,CharP F p 且 p≠0 在域上等价于 Nat.Prime p，属等价改写
+45,yes,,
+46,yes,,
+47,no,type_drift,使用 H.Characteristic（在 G 中特征）而非在 K 中特征
+48,yes,,
+49,no,conclusion_diff,使用 f^[n]（函数迭代）而非 n 阶导数
+50,yes,,
+51,yes,,
+52,yes,,
+53,no,hyp_missing,缺少 p 为奇素数（p=2 时命题不成立）
+54,no,hyp_missing,缺少 G 非平凡
+55,no,hyp_missing,缺少 Ω 连通
+56,no,false_statement,缺少首项系数=1，存在满足系数条件但可约的三次多项式
+57,yes,,
+58,yes,,
+59,yes,,IsCoatom 是 Mathlib 中极大子群的标准表示
+60,no,conclusion_diff,使用闭区间 Icc 而非开区间 Ioo
+61,yes,,
+62,yes,,IsPreconnected 不要求非空，与 Munkres 连通集定义一致
+63,yes,,
+64,yes,,
+65,yes,,
+66,no,hyp_missing,允许 n=0（ℝ⁰ 不同构于 ℝ）
+67,yes,,
+68,no,hyp_extra,添加 CompactSpace α
+69,no,conclusion_diff,只断言双射，未断言同胚
+70,yes,,
+71,yes,,
+72,no,false_statement,任意交换环中的错误结论（I=⊤ 反例），与高斯整数环无关
+73,no,false_statement,错误的拓扑基陈述
+74,yes,,
+75,yes,,
+76,yes,,
+77,yes,,
+78,no,type_drift,将度量空间推广为 T2 拓扑空间
+79,yes,,
+80,yes,,
+81,yes,,
+82,no,false_statement,固定 ε 后断言 f 单射，对大 ε 为假
+83,yes,,deriv^[n] f 即 n 阶导数
+84,no,conclusion_diff,结论只断言 σ=τ，未断言均为单位元
+85,no,hyp_missing,缺少 A 为开集的假设
+86,yes,,
+87,yes,,
+88,yes,,Axler 默认有限维，候选显式化 FiniteDimensional 合理
+89,yes,,
+90,yes,,
+91,no,hyp_missing,缺少 S.Infinite
+92,yes,,
+93,yes,,
+94,no,hyp_missing,缺少 P.Normal
+95,no,hyp_missing,候选假设被替换为 range T 的包含关系，NL 的余维一子空间不变性假设缺失
+96,yes,,
+97,yes,,IsTopologicalBasis 未限定命名空间，但语义正确
+98,yes,,
+99,yes,,
+100,no,hyp_extra,添加 Finite G
+101,no,type_drift,IsSolvable (H : Type*) 类型错误，H 是子群而非类型
+102,yes,,
+103,no,conclusion_diff,固定 a 只断言唯一 n，而非唯一存在 a 和 n
+104,yes,,
+105,yes,,
+106,yes,,
+107,yes,,
+108,no,conclusion_diff,缺少 n>0
+109,yes,,
+110,no,hyp_extra,使用 T4Space 代替 NormalSpace
+111,no,hyp_extra,将 R,S 限制为交换环
+112,no,hyp_missing,缺少 A,B 非空
+113,no,hyp_missing,缺少 1 ≤ r
+114,no,type_drift,ker/domRestrict/range 用法类型错误且缺少 FiniteDimensional
+115,no,type_drift,使用整数模运算而非 ZMod n
+116,yes,,
+117,no,hyp_missing,缺少 p 是素数（候选声称对任意 p，强于 NL）
+118,no,type_drift,r 取 ℝ 而非 ℚ
+119,yes,,
+120,no,hyp_extra,要求 n > 1 而非 n > 0（排除了 n=1）
+121,no,hyp_extra,添加 Nontrivial V
+122,no,type_drift,实数 limsup 且未处理 ∞-∞
+123,no,type_drift,使用 MetrizableSpace 替代 MetricSpace，且 binder 注解错误
+124,no,false_statement,声称至多一个根，与所有根不同矛盾
+125,yes,,
+126,yes,,
+127,yes,,
+128,no,hyp_extra,将环限制为交换环
+129,no,hyp_extra,使用 T4Space 代替 NormalSpace
+130,no,false_statement,半环模上的错误陈述
+131,yes,,
+132,no,hyp_missing,用 x^n=1 代替精确的 orderOf x = n
+133,yes,,
+134,no,type_drift,IsTopologicalBasis 未限定命名空间，类型推断错误
+135,yes,,Axler 默认有限维，候选显式化 FiniteDimensional 合理
+136,yes,,候选即“非零理想含非零整数”，与 NL 一致
+137,yes,,
+138,yes,,
+139,no,conclusion_diff,假设 56∣n 而非 n=56
+140,no,type_drift,完全不同的陈述（关于函数值平方和）
+141,no,type_drift,ℚ[X] 写法无效，应 Polynomial ℚ，候选类型错误
+142,no,type_drift,unitInterval 未限定，类型推断错误
+143,yes,,IsCoatom 是 Mathlib 中极大子群的标准表示
+144,yes,,
+145,yes,,
+146,yes,,
+147,no,hyp_extra,ContDiffOn 2 要求二阶导连续，比 NL 的三阶可微更强
+148,yes,,
+149,yes,,
+150,no,hyp_missing,缺少 IsClosedMap
+151,yes,,
+152,no,hyp_extra,使用 IsLUB/IsGLB 代替上下界
+153,no,hyp_extra,添加 2 ≤ n，排除 n=1
+154,no,hyp_extra,使用 T4Space 代替 NormalSpace
+155,yes,,
+156,no,false_statement,任意环中命题为假（含零因子环反例）
+157,yes,,
+158,no,false_statement,候选陈述拉格朗日四平方定理，与 NL 无关
+159,yes,,deriv^[n] f 即 n 阶导数，h_cont 给出连续性
+160,yes,,
+161,no,type_drift,使用 NonUnitalRing 代替 Ring
+162,yes,,
+163,yes,,邻域刻画与开集/补集极限点条件等价
+164,yes,,
+165,yes,,
+166,yes,,
+167,yes,,
+168,no,type_drift,候选把两个变量 x,y 换成单个变量 x
+169,yes,,
+170,yes,,
+171,yes,,
+172,yes,,
+173,yes,,
+174,yes,,
+175,no,conclusion_diff,候选结论指定常数为 f 0，需 0 ∈ Ω 或改为存在 c
+176,yes,,
+177,yes,,
+178,yes,,
+179,yes,,
+180,yes,,
+181,yes,,
+182,yes,,
+183,yes,,
+184,no,conclusion_diff,只断言项趋于 0，而非级数收敛
+185,no,type_drift,card 未限定为 Fintype.card，类型推断错误
+186,yes,,
+187,no,hyp_missing,IsDomain 不要求交换，缺少 NL 的交换性假设
+188,no,hyp_extra,额外要求 h_nonempty 且使用 SeparableSpace 而非可数稠密子集
+189,yes,,
+190,no,conclusion_diff,候选结论是 a 与 b 共轭，NL 结论是 ab 与 ba 共轭
+191,yes,,
+192,yes,,
+193,no,hyp_missing,缺少 1 ≤ r
+194,no,type_drift,log 未限定为 Real.log，类型推断错误
+195,yes,,
+196,no,hyp_extra,添加 hn : 0 < n
+197,yes,,
+198,no,hyp_extra,添加 CompactSpace X
+199,no,conclusion_diff,IsPrimitiveRoot 3 p 阶数写错，应为 p-1
+200,yes,,
+201,no,conclusion_diff,候选的共轭陈述与 NL 不同
+202,yes,,
+203,no,type_drift,ball/closedBall/sphere 未限定，类型推断错误
+204,yes,,
+205,yes,,
+206,yes,,
+207,no,type_drift,使用整数模运算而非 ZMod n
+208,yes,,
+209,no,false_statement,关于两个闭集相等的错误陈述
+210,no,conclusion_diff,陈述交的并集，而非两子空间并集
+211,no,false_statement,使用 frontier E \ E 而非凝聚点集
+212,yes,,
+213,no,type_drift,a 取 ℤ 而非 ZMod p
+214,no,hyp_extra,添加 CompactSpace X
+215,yes,,
+216,no,hyp_extra,对任意 i,j,k 而非三个连续整数（假设过强）
+217,yes,,
+218,no,false_statement,计数 x²≡1 的解而非二次剩余
+219,yes,,
+220,yes,,
+221,no,type_drift,log 未限定为 Real.log，类型推断错误
+222,yes,,
+223,yes,,
+224,yes,,
+225,no,type_drift,End/Subspace/finrank 未限定且 Subspace 非 Mathlib 标准名
+226,yes,,

@@ -1,0 +1,223 @@
+overlap with F9 (label, F9 union, G1 verdict) -> count
+  (False, 'accept', 'accept'): 7
+  (False, 'accept', 'reject'): 1
+  (False, 'accept', 'unknown'): 2
+  (False, 'reject', 'reject'): 20
+  (False, 'reject', 'unknown'): 10
+  (False, 'unknown', 'reject'): 2
+  (False, 'unknown', 'unknown'): 18
+  (True, 'accept', 'accept'): 26
+  (True, 'accept', 'unknown'): 1
+  (True, 'reject', 'reject'): 3
+  (True, 'unknown', 'reject'): 4
+  (True, 'unknown', 'unknown'): 6
+
+===== pnv-test-1135 label=True comp=reject closed=proved ['bwd', 'fwd']
+proved=['ncin', 'ncomp', 'nhyp', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=2/4 prefix_s=3/4 shared=2 hoist_r=0 hoist_s=0
+NL: If $G$ is a finite group, prove that, given $a \in G$, there is a positive integer $n$, depending on $a$, such that $a^n = e$.
+G: ∀ {G : Type*} [Group G] [Fintype G] (a : G), ∃ (n : ℕ), n > 0 ∧ a ^ n = 1
+P: ∀ {G : Type*} [Group G] [Finite G] (a : G), ∃ n : ℕ, n ≠ 0 ∧ a ^ n = 1
+nhyp: ¬∀ {G : Type u} [Group G], True ↔ Finite G
+ncin: ¬∀ {G : Type u} [inst : Group G],     True → ((∀ [Fintype G] (a : G), ∃ n > 0, a ^ n = 1) ↔ ∀ (a : G), ∃ n, n ≠ 0 ∧ a ^ n = 1)
+ncomp: ¬∀ {G : Type u} [inst : Group G],     (∀ [Fintype G] (a : G), ∃ n > 0, a ^ n = 1) ↔ ∀ (a : G), ∃ n, n ≠ 0 ∧ a ^ n = 1
+
+===== pnv-test-311 label=True comp=reject closed=unknown ['fwd']
+proved=['nhyp', 'split_s'] ambiguous=false full=false prefix_r=1/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0
+NL: Let $H$ be a subgroup of the additive group of rational numbers with the property that $1 / x \in H$ for every nonzero element $x$ of $H$. Prove that $H=0$ or $\mathbb{Q}$.
+G: ∀ (H : AddSubgroup ℚ) {x : ℚ} (hH : (x ∈ H ∧ x ≠ 0) → (1 / x) ∈ H), H = ⊥ ∨ H = ⊤
+P: ∀ {H : AddSubgroup ℚ} (h : ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H), H = ⊥ ∨ H = ⊤
+nhyp: ¬∀ (H : AddSubgroup ℚ), True ↔ ∀ x ∈ H, x ≠ 0 → 1 / x ∈ H
+
+===== pnv-test-1114 label=True comp=reject closed=proved ['bwd', 'fwd']
+proved=['nhyp', 'split_r', 'split_s'] ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3 hoist_r=0 hoist_s=0
+NL: Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.
+G: ∀ {α : Type*} [TopologicalSpace α] {s : ℕ → Set α} (hs : ∀ i, IsCompact (s i)) (hne : ∀ i, (s i).Nonempty) (hs : ∀ i, (s i) ⊇ (s (i + 1))), (⋂ i, s i).Nonempty
+P: ∀ {α : Type*} [TopologicalSpace α] [CompactSpace α] {K : ℕ → Set α} (hK : ∀ n, IsCompact (K n)) (hK_nonempty : ∀ n, (K n).Nonempty) (hK_decreasing : ∀ n, K (n + 1) ⊆ K n), (⋂ n, K n).Nonempty
+nhyp: ¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},     ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔       CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), (s n).Nonempty) ∧ ∀ (n : ℕ), s (n + 1) ⊆ s n
+
+===== pnv-test-253 label=True comp=reject closed=proved ['bwd', 'fwd']
+proved=['nhyp', 'split_r', 'split_s'] ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3 hoist_r=0 hoist_s=0
+NL: Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.
+G: ∀ {α : Type*} [TopologicalSpace α] {s : ℕ → Set α} (hs : ∀ i, IsCompact (s i)) (hne : ∀ i, (s i).Nonempty) (hs : ∀ i, (s i) ⊇ (s (i + 1))), (⋂ i, s i).Nonempty
+P: ∀ {α : Type*} [TopologicalSpace α] [CompactSpace α] {K : ℕ → Set α} (hK : ∀ n, IsCompact (K n)) (hne : ∀ n, (K n).Nonempty) (hdec : ∀ n, K (n + 1) ⊆ K n), (⋂ n, K n).Nonempty
+nhyp: ¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},     ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔       CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), (s n).Nonempty) ∧ ∀ (n : ℕ), s (n + 1) ⊆ s n
+
+===== pnv-test-693 label=True comp=reject closed=proved ['bwd', 'fwd']
+proved=['ncomp', 'nhyp', 'split_r', 'split_s'] ambiguous=true full=true prefix_r=8/8 prefix_s=7/7 shared=7 hoist_r=0 hoist_s=0
+NL: Prove that if $a \in \mathbf{F}$, $v \in V$, and $av = 0$, then $a = 0$ or $v = 0$.
+G: ∀ {F V : Type*} [AddCommGroup V] [Field F] [Module F V] (v : V) (a : F), a • v = 0 → a = 0 ∨ v = 0
+P: ∀ {F : Type*} [Field F] {V : Type*} [AddCommGroup V] [Module F V] (a : F) (v : V), a • v = 0 ↔ a = 0 ∨ v = 0
+nhyp: ¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),     a • v = 0 ↔ True
+ncomp: ¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),     a = 0 ∨ v = 0 ↔ (a • v = 0 ↔ a = 0 ∨ v = 0)
+
+===== pnv-test-695 label=True comp=reject closed=unknown ['bwd', 'pfalse']
+proved=['ncin', 'ncomp', 'split_r', 'split_s'] ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0
+NL: Prove that $\sum 1/k(\log(k))^p$ converges when $p > 1$.
+G: ∀ (p : ℝ) (f : ℕ → ℝ) (hp : p > 1) (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)), ∃ l, Tendsto f atTop (𝓝 l)
+P: ∀ (p : ℝ) (hp : 1 < p), Summable fun k => 1 / (k * (log k)^p)
+ncin: ¬∀ p > 1,     (∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p)
+ncomp: ¬∀ (p : ℝ),     (∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p)
+
+===== pnv-test-738 label=True comp=reject closed=unknown ['pfalse']
+proved=['ncin', 'ncomp', 'split_r', 'split_s'] ambiguous=false full=true prefix_r=2/2 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0
+NL: Prove that $\sum 1/k(\log(k))^p$ converges when $p > 1$.
+G: ∀ (p : ℝ) (f : ℕ → ℝ) (hp : p > 1) (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)), ∃ l, Tendsto f atTop (𝓝 l)
+P: ∀ (p : ℝ) (hp : 1 < p), Summable fun k => 1 / (↑k * (log ↑k) ^ p)
+ncin: ¬∀ p > 1,     (∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p)
+ncomp: ¬∀ (p : ℝ),     (∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p)
+
+===== pnv-test-345 label=True comp=unknown closed=refuted ['bwd', 'nfwd', 'pfalse']
+proved=['ncomp', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0
+NL: Prove that there exists a normal subgroup that is not characteristic.
+G: ∃ (G : Type*) (hG : Group G) (H : @Subgroup G hG), @Normal G hG H ∧ ¬ @Characteristic G hG H
+P: ∀ (G : Type*) [Group G], ∃ N : Subgroup G, Normal N ∧ ¬Characteristic N
+
+===== pnv-test-365 label=True comp=reject closed=unknown ['fwd']
+proved=['ncin', 'ncomp'] ambiguous=false full=false prefix_r=2/7 prefix_s=2/8 shared=2 hoist_r=0 hoist_s=0
+NL: Let $G$ be a finite group which possesses an automorphism $\sigma$ such that $\sigma(g)=g$ if and only if $g=1$. If $\sigma^{2}$ is the identity map from $G$ to $G$, prove that $G$ is abelian.
+G: ∀ {G : Type*} [Group G] (σ : MulAut G) (hs : ∀ g : G, σ g = g ↔ g = 1) (hs2 : ∀ g : G, σ (σ g) = g), ∀ x y : G, x*y = y*x
+P: ∀ {G : Type*} [Group G] [Fintype G] (σ : G ≃* G) (hσ : ∀ g : G, σ g = g ↔ g = 1) (hσ2 : ∀ g : G, σ (σ g) = g), ∀ a b : G, a * b = b * a
+ncin: ¬∀ {G : Type u} [inst : Group G],     True →       ((∀ (σ : MulAut G), (∀ (g : G), σ g = g ↔ g = 1) → (∀ (g : G), σ (σ g) = g) → ∀ (x y : G), x * y = y * x) ↔         ∀ [Fintype G] (σ : G ≃* G),           (∀ (g : G), σ g = g ↔ g = 1) → (∀ (g : G), σ (σ g) = g) → ∀ (a b : G), a * b = b * a)
+ncomp: ¬∀ {G : Type u} [inst : Group G],     (∀ (σ : MulAut G), (∀ (g : G), σ g = g ↔ g = 1) → (∀ (g : G), σ (σ g) = g) → ∀ (x y : G), x * y = y * x) ↔       ∀ [Fintype G] (σ : G ≃* G), (∀ (g : G), σ g = g ↔ g = 1) → (∀ (g : G), σ (σ g) = g) → ∀ (a b : G), a * b = b * a
+
+===== pnv-test-992 label=True comp=reject closed=proved ['bwd', 'fwd']
+proved=['nhyp', 'split_r', 'split_s'] ambiguous=false full=true prefix_r=6/6 prefix_s=7/7 shared=3 hoist_r=0 hoist_s=0
+NL: Give a direct proof that the nested decreasing intersection of nonempty covering compact sets is nonempty.
+G: ∀ {α : Type*} [TopologicalSpace α] {s : ℕ → Set α} (hs : ∀ i, IsCompact (s i)) (hne : ∀ i, (s i).Nonempty) (hs : ∀ i, (s i) ⊇ (s (i + 1))), (⋂ i, s i).Nonempty
+P: ∀ {α : Type*} [TopologicalSpace α] [CompactSpace α] {K : ℕ → Set α} (hK : ∀ n, IsCompact (K n)) (hdec : ∀ n, K (n + 1) ⊆ K n) (hne : ∀ n, (K n).Nonempty), (⋂ n, K n).Nonempty
+nhyp: ¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},     ((∀ (i : ℕ), IsCompact (s i)) ∧ (∀ (i : ℕ), (s i).Nonempty) ∧ ∀ (i : ℕ), s i ⊇ s (i + 1)) ↔       CompactSpace α ∧ (∀ (n : ℕ), IsCompact (s n)) ∧ (∀ (n : ℕ), s (n + 1) ⊆ s n) ∧ ∀ (n : ℕ), (s n).Nonempty
+
+===== pnv-test-358 label=True comp=reject closed=proved ['bwd', 'fwd']
+proved=['ncin', 'ncomp', 'nhyp', 'split_r', 'split_s'] ambiguous=true full=true prefix_r=3/3 prefix_s=4/4 shared=2 hoist_r=0 hoist_s=0
+NL: If $k = 1$ and $\mathbf{x} \in R^{k}$, $\mathbf{x} \neq 0$, prove that there does not exist $\mathbf{y} \in R^{k}$ such that $\mathbf{y} \neq 0$ but $\mathbf{x} \cdot \mathbf{y}=0$
+G: ∀ (x : ℝ), x ≠ 0 → ¬ ∃ (y : ℝ), y ≠ 0 ∧ x * y = 0
+P: ∀ {x y : ℝ} (hx : x ≠ 0) (hxy : x * y = 0), y = 0
+nhyp: ¬∀ (x y : ℝ), x ≠ 0 ↔ x ≠ 0 ∧ x * y = 0
+ncin: ¬∀ (x y : ℝ), x ≠ 0 → (¬(y ≠ 0 ∧ x * y = 0) ↔ y = 0)
+ncomp: ¬∀ (x y : ℝ), ¬(y ≠ 0 ∧ x * y = 0) ↔ y = 0
+
+===== pnv-test-576 label=True comp=reject closed=proved ['bwd', 'fwd']
+proved=['nhyp', 'split_r'] ambiguous=false full=false prefix_r=3/3 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0
+NL: Suppose $g$ is a real function on $R^{1}$, with bounded derivative (say $\left|g^{\prime}\right| \leq M$ ). Fix $\varepsilon>0$, and define $f(x)=x+\varepsilon g(x)$. Prove that $f$ is one-to-one if $\varepsilon$ is small enough.
+G: ∀ {g : ℝ → ℝ} (hg : Continuous g) (hg' : ∃ M : ℝ, ∀ x : ℝ, |deriv g x| ≤ M), ∃ N, ∀ ε > 0, ε < N → Function.Injective (λ x : ℝ => x + ε * g x)
+P: ∀ {g : ℝ → ℝ} (M : ℝ) (hM : ∀ x, |deriv g x| ≤ M) (ε : ℝ) (hε : ε > 0) (f : ℝ → ℝ) (hf : ∀ x, f x = x + ε * g x), ∃ δ > 0, (ε < δ) → Function.Injective f
+nhyp: ¬∀ {g : ℝ → ℝ}, (Continuous g ∧ ∃ M, ∀ (x : ℝ), |deriv g x| ≤ M) ↔ True
+
+===== pnv-test-913 label=True comp=reject closed=unknown ['bwd']
+proved=['nhyp', 'split_r', 'split_s'] ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0
+NL: Suppose $T \in \mathcal{L}(V)$ is such that every subspace of $V$ with dimension $\operatorname{dim} V-1$ is invariant under $T$. Prove that $T$ is a scalar multiple of the identity operator.
+G: ∀ {F V : Type*} [AddCommGroup V] [Field F] [Module F V] [FiniteDimensional F V] {T : End F V} (hS : ∀ U : Submodule F V, finrank F U = finrank F V - 1 → Submodule.map T U = U), ∃ c : F, T = c • LinearMap.id
+P: ∀ {K V : Type*} [Field K] [AddCommGroup V] [Module K V] [FiniteDimensional K V] (T : End K V) (h : ∀ (U : Subspace K V), finrank K V - 1 = finrank K U → T '' U ≤ U), ∃ (c : K), T = c • 1
+nhyp: ¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] {T : End F V},     (FiniteDimensional F V ∧ ∀ (U : Submodule F V), finrank F ↥U = finrank F V - 1 → Submodule.map T U = U) ↔       FiniteDimensional F V ∧ ∀ (U : Subspace F V), finrank F V - 1 = finrank F ↥U → ⇑T '' ↑U ≤ ↑U
+
+===== pnv-test-428 label=True comp=unknown closed=refuted ['bwd', 'nfwd', 'pfalse']
+proved=['split_r', 'split_s'] ambiguous=false full=false prefix_r=1/8 prefix_s=1/8 shared=1 hoist_r=0 hoist_s=0
+NL: Prove that if $a \in \mathbf{F}$, $v \in V$, and $av = 0$, then $a = 0$ or $v = 0$.
+G: ∀ {F V : Type*} [AddCommGroup V] [Field F] [Module F V] (v : V) (a : F), a • v = 0 → a = 0 ∨ v = 0
+P: ∀ {R : Type*} [Semiring R] {M : Type*} [AddCommMonoid M] [Module R M] (a : R) (v : M) (h : a • v = 0), a = 0 ∨ v = 0
+
+===== pnv-test-1026 label=True comp=reject closed=unknown ['bwd', 'pfalse']
+proved=['ncin', 'ncomp', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0
+NL: Prove that there exists a normal subgroup that is not characteristic.
+G: ∃ (G : Type*) (hG : Group G) (H : @Subgroup G hG), @Normal G hG H ∧ ¬ @Characteristic G hG H
+P: ∀ (G : Type*) [Group G], ∃ H : Subgroup G, H.Normal ∧ ¬ H.Characteristic
+ncin: ¬(True →     ((∃ G hG H, H.Normal ∧ ¬H.Characteristic) ↔ ∀ (G : Type u) [inst : Group G], ∃ H, H.Normal ∧ ¬H.Characteristic))
+ncomp: ¬((∃ G hG H, H.Normal ∧ ¬H.Characteristic) ↔     ∀ (G : Type u) [inst : Group G], ∃ H, H.Normal ∧ ¬H.Characteristic)
+
+===== pnv-test-1098 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0
+NL: Prove that the multiplication of residue class $\mathbb{Z}/n\mathbb{Z}$ is associative.
+G: ∀ (n : ℕ) (a b c : ZMod n), (a * b) * c = a * (b * c)
+P: ∀ (n : ℕ) (a b c : ℤ), (a * b)%n * c %n = a * (b * c) %n
+acc: ∀ (n : ℕ),   (True ↔ True) ∧     ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℤ), a * b % ↑n * c % ↑n = a * (b * c) % ↑n)
+
+===== pnv-test-836 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0
+NL: Prove that the multiplication of residue class $\mathbb{Z}/n\mathbb{Z}$ is associative.
+G: ∀ (n : ℕ) (a b c : ZMod n), (a * b) * c = a * (b * c)
+P: ∀ (n : ℕ) (a b c : ℕ), (a * b) % n * (c % n) % n = a * b * c % n
+acc: ∀ (n : ℕ),   (True ↔ True) ∧     ((∀ (a b c : ZMod n), a * b * c = a * (b * c)) ↔ ∀ (a b c : ℕ), a * b % n * (c % n) % n = a * b * c % n)
+
+===== pnv-test-532 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0
+NL: If $a \in K$ is such that $a^2$ is algebraic over the subfield $F$ of $K$, show that a is algebraic over $F$.
+G: ∀ {K : Type*} [Field K] {F : Subfield K} {a : K} (ha : IsAlgebraic F (a ^ 2)), IsAlgebraic F a
+P: ∀ {F K : Type*} [Field F] [Field K] [Algebra F K] (a : K) (h : IsAlgebraic F (a^2)), IsAlgebraic F a
+acc: ∀ {K : Type u},   (True ↔ True) ∧     ((∀ [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a) ↔       ∀ {K_1 : Type u} [inst : Field K] [inst_1 : Field K_1] [inst_2 : Algebra K K_1] (a : K_1),         IsAlgebraic K (a ^ 2) → IsAlgebraic K a)
+
+===== pnv-test-1355 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1 hoist_r=0 hoist_s=0
+NL: Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z} / p \mathbb{Z})^{\times}$to prove Fermat's Little Theorem: if $p$ is a prime then $a^{p} \equiv a(\bmod p)$ for all $a \in \mathbb{Z}$.
+G: ∀ (p : ℕ) (hp : Nat.Prime p) (a : ℤ), a ^ p ≡ a [ZMOD p]
+P: ∀ (p : ℕ) [Fact (Nat.Prime p)] (a : ℕ), a ^ p ≡ a [MOD p]
+acc: ∀ (p : ℕ),   (Nat.Prime p ↔ Fact (Nat.Prime p)) ∧ ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p])
+
+===== pnv-test-769 label=False comp=accept closed=unknown ['fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=true full=false prefix_r=4/4 prefix_s=4/6 shared=4 hoist_r=0 hoist_s=0
+NL: Deduce that $|a b|=|b a|$ for all $a, b \in G$.
+G: ∀ {G: Type*} [Group G] (a b : G), orderOf (a * b) = orderOf (b * a)
+P: ∀ {G : Type*} [Group G] {a b c : G}, a * b = a * c → b = c
+acc: ∀ {G : Type u} [inst : Group G] (a b : G),   (True ↔ True) ∧ (orderOf (a * b) = orderOf (b * a) ↔ ∀ {c : G}, a * b = a * c → b = c)
+
+===== pnv-test-453 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=0/7 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0
+NL: Prove that the union of two subspaces of $V$ is a subspace of $V$ if and only if one of the subspaces is contained in the other.
+G: ∀ {F V : Type*} [AddCommGroup V] [Field F] [Module F V] (U W : Submodule F V), (∃ U' : Submodule F V, U'.carrier = ↑U ∪ ↑W) ↔ (U ≤ W ∨ W ≤ U)
+P: ∀ {V : Type*} [AddCommGroup V] [Module ℤ V] (W₁ W₂ : Submodule ℤ V), (W₁ ≤ W₂) ∧ (W₂ ≤ W₁) → (W₁ ⊔ W₂ = W₁) ∨ (W₁ ⊔ W₂ = W₂)
+acc: (True ↔ True) ∧   ((∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (U W : Submodule F V),       (∃ U', U'.carrier = ↑U ∪ ↑W) ↔ U ≤ W ∨ W ≤ U) ↔     ∀ {V : Type u} [inst : AddCommGroup V] [inst_1 : Module ℤ V] (W₁ W₂ : Submodule ℤ V),       W₁ ≤ W₂ ∧ W₂ ≤ W₁ → W₁ ⊔ W₂ = W₁ ∨ W₁ ⊔ W₂ = W₂)
+
+===== pnv-test-796 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1 hoist_r=0 hoist_s=0
+NL: Use Lagrange's Theorem in the multiplicative group $(\mathbb{Z} / p \mathbb{Z})^{\times}$to prove Fermat's Little Theorem: if $p$ is a prime then $a^{p} \equiv a(\bmod p)$ for all $a \in \mathbb{Z}$.
+G: ∀ (p : ℕ) (hp : Nat.Prime p) (a : ℤ), a ^ p ≡ a [ZMOD p]
+P: ∀ (p : ℕ) [Fact p.Prime] (a : ℕ), a ^ p ≡ a [MOD p]
+acc: ∀ (p : ℕ),   (Nat.Prime p ↔ Fact (Nat.Prime p)) ∧ ((∀ (a : ℤ), a ^ p ≡ a [ZMOD ↑p]) ↔ ∀ (a : ℕ), a ^ p ≡ a [MOD p])
+
+===== pnv-test-72 label=False comp=accept closed=unknown ['pfalse']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=0/6 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0
+NL: For any two real sequences $\left\{a_{n}\right\},\left\{b_{n}\right\}$, prove that $\limsup _{n \rightarrow \infty}\left(a_{n}+b_{n}\right) \leq \limsup _{n \rightarrow \infty} a_{n}+\limsup _{n \rightarrow \infty} b_{n},$ provided the sum on the right is not of the form $\infty-\infty$.
+G: ∀ (a b : ℕ → EReal) (hareal : ∀ n, a n ≠ ⊤ ∧ a n ≠ ⊥) (hbreal : ∀ n, b n ≠ ⊤ ∧ b n ≠ ⊥) (ha : limsup a ≠ ⊤) (hb : limsup b ≠ ⊥), limsup (λ n => a n + b n) ≤ limsup a + limsup b
+P: ∀ (a b : ℕ → ℝ), limsup (a + b) ≤ limsup a + limsup b
+acc: (True ↔ True) ∧   ((∀ (a b : ℕ → EReal),       (∀ (n : ℕ), a n ≠ ⊤ ∧ a n ≠ ⊥) →         (∀ (n : ℕ), b n ≠ ⊤ ∧ b n ≠ ⊥) →           limsup a ≠ ⊤ → limsup b ≠ ⊥ → (limsup fun n => a n + b n) ≤ limsup a + limsup b) ↔     ∀ (a b : ℕ → ℝ), limsup (a + b) ≤ limsup a + limsup b)
+
+===== pnv-test-892 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=1/3 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0
+NL: Prove that every compact metric space $K$ has a countable base.
+G: ∀ {K : Type*} [MetricSpace K] [CompactSpace K], ∃ (B : Set (Set K)), Set.Countable B ∧ IsTopologicalBasis B
+P: ∀ {K : Type*} [TopologicalSpace K] [CompactSpace K] [MetrizableSpace K], ∃ b : Set (Set K), (∀ s ∈ b, IsOpen s) ∧ (∀ t, IsOpen t → ∃ u ⊆ b, ⋃₀ u = t) ∧ Countable b
+acc: ∀ {K : Type u},   (True ↔ True) ∧     ((∀ [inst : MetricSpace K] [CompactSpace K], ∃ B, B.Countable ∧ IsTopologicalBasis B) ↔       ∀ [inst : TopologicalSpace K] [CompactSpace K] [MetrizableSpace K],         ∃ b, (∀ s ∈ b, IsOpen s) ∧ (∀ (t : Set K), IsOpen t → ∃ u ⊆ b, ⋃₀ u = t) ∧ Countable ↑b)
+
+===== pnv-test-1441 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0
+NL: If $a \in K$ is such that $a^2$ is algebraic over the subfield $F$ of $K$, show that a is algebraic over $F$.
+G: ∀ {K : Type*} [Field K] {F : Subfield K} {a : K} (ha : IsAlgebraic F (a ^ 2)), IsAlgebraic F a
+P: ∀ {F K : Type*} [Field F] [Field K] [Algebra F K] {a : K} (h : IsAlgebraic F (a^2)), IsAlgebraic F a
+acc: ∀ {K : Type u},   (True ↔ True) ∧     ((∀ [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a) ↔       ∀ {K_1 : Type u} [inst : Field K] [inst_1 : Field K_1] [inst_2 : Algebra K K_1] {a : K_1},         IsAlgebraic K (a ^ 2) → IsAlgebraic K a)
+
+===== pnv-test-1042 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=true full=false prefix_r=2/6 prefix_s=2/6 shared=2 hoist_r=0 hoist_s=0
+NL: Let $\varphi: R \rightarrow S$ be a surjective homomorphism of rings. Prove that the image of the center of $R$ is contained in the center of $S$.
+G: ∀ {R S : Type*} [Ring R] [Ring S] {φ : R →+* S} (hf : Function.Surjective φ), φ '' (center R) ⊆ center S
+P: ∀ {R S : Type*} [CommRing R] [CommRing S] (φ : R →+* S) (hφ : Function.Surjective φ), (φ '' (center R)) ⊆ center S
+acc: ∀ {R S : Type u},   (True ↔ True) ∧     ((∀ [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S}, Function.Surjective ⇑φ → ⇑φ '' Set.center R ⊆ Set.center S) ↔       ∀ [inst : CommRing R] [inst_1 : CommRing S] (φ : R →+* S),         Function.Surjective ⇑φ → ⇑φ '' Set.center R ⊆ Set.center S)
+
+===== pnv-test-406 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=2/5 prefix_s=2/7 shared=2 hoist_r=0 hoist_s=0
+NL: If $a \in K$ is such that $a^2$ is algebraic over the subfield $F$ of $K$, show that a is algebraic over $F$.
+G: ∀ {K : Type*} [Field K] {F : Subfield K} {a : K} (ha : IsAlgebraic F (a ^ 2)), IsAlgebraic F a
+P: ∀ {K : Type*} [Field K] {F : Type*} [Field F] [Algebra F K] (a : K) (ha : IsAlgebraic F (a ^ 2)), IsAlgebraic F a
+acc: ∀ {K : Type u} [inst : Field K],   (True ↔ True) ∧     ((∀ {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → IsAlgebraic (↥F) a) ↔       ∀ {F : Type u} [inst_1 : Field F] [inst_2 : Algebra F K] (a : K), IsAlgebraic F (a ^ 2) → IsAlgebraic F a)
+
+===== pnv-test-754 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=0/4 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0
+NL: Let $f$ be a continuous real function on a metric space $X$. Let $Z(f)$ (the zero set of $f$ ) be the set of all $p \in X$ at which $f(p)=0$. Prove that $Z(f)$ is closed.
+G: ∀ {α : Type} [MetricSpace α] (f : α → ℝ) (h : Continuous f) (z : Set α) (g : z = f⁻¹' {0}), IsClosed z
+P: ∀ {X : Type*} [TopologicalSpace X] [T2Space X] {f : X → ℝ} (hf : Continuous f), IsClosed {p : X | f p = 0}
+acc: (True ↔ True) ∧   ((∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ), Continuous f → IsClosed (f ⁻¹' {0})) ↔     ∀ {X : Type u} [inst : TopologicalSpace X] [T2Space X] {f : X → ℝ}, Continuous f → IsClosed {p | f p = 0})
+
+===== pnv-test-866 label=False comp=accept closed=proved ['bwd', 'fwd']
+proved=['acc', 'split_r'] ambiguous=false full=false prefix_r=3/5 prefix_s=3/6 shared=3 hoist_r=0 hoist_s=0
+NL: Let $x$ be an element of $G$. Prove that if $|x|=n$ for some positive integer $n$ then $x^{-1}=x^{n-1}$.
+G: ∀ {G : Type*} [Group G] {x : G} {n : ℕ+} (hxn: orderOf x = n), x⁻¹ = x ^ (n - 1 : ℕ)
+P: ∀ {G : Type*} [Group G] {x : G} {n : ℕ} (hn : 0 < n) (hx : x ^ n = 1), x⁻¹ = x ^ (n - 1)
+acc: ∀ {G : Type u} [inst : Group G] {x : G},   (True ↔ True) ∧ ((∀ {n : ℕ+}, orderOf x = ↑n → x⁻¹ = x ^ (↑n - 1)) ↔ ∀ {n : ℕ}, 0 < n → x ^ n = 1 → x⁻¹ = x ^ (n - 1))

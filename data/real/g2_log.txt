@@ -1,0 +1,30 @@
+distinct references 129
+mutants Counter({'ok': 386, 'mutate_fail': 130}) 326s
+tactic tier Counter({'unknown': 251, 'accept': 131, 'reject': 3, 'off_domain': 1}) 2735s
+{
+  "model": "anthropic/claude-opus-5.5",
+  "n_refs": 129,
+  "table": {
+    "id": {
+      "accept": 129
+    },
+    "drop": {
+      "reject": 77,
+      "mutate_fail": 36,
+      "unknown": 14,
+      "accept": 2
+    },
+    "neg": {
+      "reject": 61,
+      "unknown": 10,
+      "mutate_fail": 58
+    },
+    "offdom": {
+      "off_domain": 69,
+      "unknown": 17,
+      "accept": 7,
+      "mutate_fail": 36
+    }
+  },
+  "seconds": 4017.5
+}

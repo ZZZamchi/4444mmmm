@@ -1,0 +1,3383 @@
+{
+  "n_pairs": 480,
+  "label_inequivalent": {
+    "beq_plus_not": 335,
+    "beq_plus_equiv": 65
+  },
+  "label_equivalent": {
+    "beq_plus_equiv": 80
+  },
+  "stages": {
+    "d0_exact": 282,
+    "d0_assumption": 10,
+    "d0_apply": 24,
+    "d0_have": 82,
+    "d0_convert0": 1,
+    "d1_exact": 78,
+    "d1_apply": 60,
+    "d1_have": 7
+  },
+  "seconds": 1621.1,
+  "pairs": [
+    {
+      "row_id": "pnv-test-1033~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1033~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1033~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1033~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1033~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1033~absorbsimp",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-116~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-116~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-116~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-116~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-116~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-116~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-45~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-45~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-45~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-45~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-45~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-45~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1113~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1113~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1113~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1113~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1113~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1113~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1332~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1332~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1332~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1332~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1332~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1332~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1246~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1246~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1246~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1246~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1246~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1246~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1077~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1077~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1077~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1077~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1077~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1077~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1010~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1010~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1010~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1010~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1010~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1010~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1023~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1023~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1023~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1023~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1023~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1023~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1014~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1014~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1014~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1014~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1014~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1014~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1307~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1307~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1307~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1307~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1307~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1307~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1106~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1106~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1106~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1106~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1106~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1106~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1291~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1291~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1291~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1291~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1291~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1291~absorbsimp",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-121~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-121~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-121~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-121~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-121~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-121~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-320~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-320~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-320~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-320~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-320~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-320~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1091~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1091~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1091~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1091~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1091~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1091~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1072~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1072~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1072~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1072~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1072~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1072~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1043~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1043~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1043~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1043~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1043~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1043~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-730~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-730~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-730~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-730~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-730~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-730~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-285~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-285~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-285~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-285~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-285~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-285~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1038~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1038~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1038~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1038~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1038~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1038~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1259~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1259~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1259~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1259~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1259~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1259~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1233~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1233~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1233~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1233~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1233~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1233~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1313~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1313~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1313~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1313~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1313~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1313~absorbsimp",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1003~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1003~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1003~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1003~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1003~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1003~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1237~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1237~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1237~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1237~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1237~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1237~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1070~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1070~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1070~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1070~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1070~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1070~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-117~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-117~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-117~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-117~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-117~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-117~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1105~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1105~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1105~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1105~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1105~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1105~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-100~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-100~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-100~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-100~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-100~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-100~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1020~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1020~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1020~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1020~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1020~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1020~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1021~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1021~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1021~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1021~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1021~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1021~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1142~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1142~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1142~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1142~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1142~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1142~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1024~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1024~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1024~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1024~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1024~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1024~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-911~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-911~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-911~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-911~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-911~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-911~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-539~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-539~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-539~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-539~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-539~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-539~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1090~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1090~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1090~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1090~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1090~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1090~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1118~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1118~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1118~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1118~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1118~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1118~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1143~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1143~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1143~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1143~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1143~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1143~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-714~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-714~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-714~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-714~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-714~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-714~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-640~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-640~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-640~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-640~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-640~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-640~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1069~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1069~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1069~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1069~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1069~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1069~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1019~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1019~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1019~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1019~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1019~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1019~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1366~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1366~top",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1366~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1366~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1366~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1366~absorbsimp",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-386~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-386~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-386~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-386~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-386~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-386~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-108~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-108~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-108~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-108~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-108~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-108~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1045~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1045~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1045~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1045~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1045~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1045~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1068~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1068~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1068~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1068~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1068~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1068~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1080~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1080~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1080~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1080~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1080~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1080~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1098~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1098~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1098~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1098~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1098~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1098~absorbsimp",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1007~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1007~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1007~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1007~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1007~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1007~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1204~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1204~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1204~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1204~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1204~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1204~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1073~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1073~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1073~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1073~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1073~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1073~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1065~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1065~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1065~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1065~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1065~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1065~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1002~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1002~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1002~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1002~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1002~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1002~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1000~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1000~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1000~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1000~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1000~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1000~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1331~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1331~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1331~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1331~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1331~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1331~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1018~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1018~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1018~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1018~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1018~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1018~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-112~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-112~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-112~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-112~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-112~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-112~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1058~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1058~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1058~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1058~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1058~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1058~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-10~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-10~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-10~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-10~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-10~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-10~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1119~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1119~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1119~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1119~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1119~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1119~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1079~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1079~top",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1079~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1079~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1079~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1079~absorbsimp",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1215~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1215~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1215~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1215~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1215~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1215~absorbsimp",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1025~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1025~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1025~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1025~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1025~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1025~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-123~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-123~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-123~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-123~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-123~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-123~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1205~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1205~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1205~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1205~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1205~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1205~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-157~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-157~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-157~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-157~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-157~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-157~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1076~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1076~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1076~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1076~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1076~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1076~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1157~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1157~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1157~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1157~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1157~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1157~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1343~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1343~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1343~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1343~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1343~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1343~absorbsimp",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1051~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1051~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1051~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1051~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1051~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1051~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1120~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1120~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1120~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1120~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1120~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1120~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-550~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-550~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-550~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-550~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-550~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-550~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1166~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1166~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1166~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1166~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1166~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1166~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1220~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1220~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1220~absorb",
+      "label": false,
+      "beq_plus": false,
+      "d0": "skip_assumption",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1220~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1220~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1220~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-23~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-23~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-23~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-23~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-23~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-23~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1015~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1015~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1015~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1015~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1015~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1015~absorbsimp",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-240~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-240~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-240~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-240~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-240~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-240~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1298~id",
+      "label": true,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1298~top",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1298~absorb",
+      "label": false,
+      "beq_plus": true,
+      "d0": "proved",
+      "d1": "proved"
+    },
+    {
+      "row_id": "pnv-test-1298~vac",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    },
+    {
+      "row_id": "pnv-test-1298~topsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "failed",
+      "d1": null
+    },
+    {
+      "row_id": "pnv-test-1298~absorbsimp",
+      "label": false,
+      "beq_plus": false,
+      "d0": "proved",
+      "d1": "failed"
+    }
+  ]
+}

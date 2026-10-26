@@ -1,0 +1,66 @@
+===== pnv-test-1098 ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0
+G: theorem exercise_1_1_4 (n : 鈩? (a b c : ZMod n) :
+  (a * b) * c = a * (b * c) := sorry
+P: theorem dummy (n : 鈩? (a b c : 鈩? : (a * b)%n * c %n = a * (b * c) %n := sorry
+===== pnv-test-836 ambiguous=false full=false prefix_r=1/4 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0
+G: theorem exercise_1_1_4 (n : 鈩? (a b c : ZMod n) :
+  (a * b) * c = a * (b * c) := sorry
+P: theorem dummy (n : 鈩? (a b c : 鈩? : (a * b) % n * (c % n) % n = a * b * c % n := sorry
+===== pnv-test-532 ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0
+G: theorem exercise_5_3_7 {K : Type*} [Field K] {F : Subfield K}
+  {a : K} (ha : IsAlgebraic F (a ^ 2)) : IsAlgebraic F a := sorry
+P: theorem dummy {F K : Type*} [Field F] [Field K] [Algebra F K] (a : K) (h : IsAlgebraic F (a^2)) : IsAlgebraic F a := sorry
+===== pnv-test-1355 ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1 hoist_r=0 hoist_s=0
+G: theorem exercise_3_2_16 (p : 鈩? (hp : Nat.Prime p) (a : 鈩? :
+  a ^ p 鈮?a [ZMOD p] := sorry
+P: theorem dummy (p : 鈩? [Fact (Nat.Prime p)] (a : 鈩? : a ^ p 鈮?a [MOD p] := sorry
+===== pnv-test-769 ambiguous=true full=false prefix_r=4/4 prefix_s=4/6 shared=4 hoist_r=0 hoist_s=0
+G: theorem exercise_1_1_22b {G: Type*} [Group G] (a b : G) :
+  orderOf (a * b) = orderOf (b * a) := sorry
+P: theorem dummy {G : Type*} [Group G] {a b c : G} : a * b = a * c 鈫?b = c := sorry
+===== pnv-test-453 ambiguous=false full=false prefix_r=0/7 prefix_s=0/6 shared=0 hoist_r=0 hoist_s=0
+G: theorem exercise_1_9 {F V : Type*} [AddCommGroup V] [Field F]
+  [Module F V] (U W : Submodule F V):
+  (鈭?U' : Submodule F V, U'.carrier = 鈫慤 鈭?鈫慦) 鈫?(U 鈮?W 鈭?W 鈮?U) := sorry
+P: theorem dummy {V : Type*} [AddCommGroup V] [Module 鈩?V] (W鈧?W鈧?: Submodule 鈩?V) : (W鈧?鈮?W鈧? 鈭?(W鈧?鈮?W鈧? 鈫?(W鈧?鈯?W鈧?= W鈧? 鈭?(W鈧?鈯?W鈧?= W鈧? := sorry
+===== pnv-test-796 ambiguous=false full=false prefix_r=2/3 prefix_s=2/3 shared=1 hoist_r=0 hoist_s=0
+G: theorem exercise_3_2_16 (p : 鈩? (hp : Nat.Prime p) (a : 鈩? :
+  a ^ p 鈮?a [ZMOD p] := sorry
+P: theorem dummy (p : 鈩? [Fact p.Prime] (a : 鈩? : a ^ p 鈮?a [MOD p] := sorry
+===== pnv-test-72 ambiguous=false full=false prefix_r=0/6 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0
+G: theorem exercise_3_5
+    (a b : 鈩?鈫?EReal)
+    (hareal : 鈭€ n, a n 鈮?鈯?鈭?a n 鈮?鈯?
+    (hbreal : 鈭€ n, b n 鈮?鈯?鈭?b n 鈮?鈯?
+    (ha : limsup a 鈮?鈯?
+    (hb : limsup b 鈮?鈯? :
+    limsup (位 n => a n + b n) 鈮?limsup a + limsup b := sorry
+P: theorem dummy (a b : 鈩?鈫?鈩? : limsup (a + b) 鈮?limsup a + limsup b := sorry
+===== pnv-test-892 ambiguous=false full=false prefix_r=1/3 prefix_s=1/4 shared=1 hoist_r=0 hoist_s=0
+G: theorem exercise_2_25 {K : Type*} [MetricSpace K] [CompactSpace K] :
+  鈭?(B : Set (Set K)), Set.Countable B 鈭?IsTopologicalBasis B := sorry
+P: theorem dummy {K : Type*} [TopologicalSpace K] [CompactSpace K] [MetrizableSpace K] : 鈭?b : Set (Set K), (鈭€ s 鈭?b, IsOpen s) 鈭?(鈭€ t, IsOpen t 鈫?鈭?u 鈯?b, 鈰冣個 u = t) 鈭?Countable b := sorry
+===== pnv-test-1441 ambiguous=false full=false prefix_r=1/5 prefix_s=1/7 shared=1 hoist_r=0 hoist_s=0
+G: theorem exercise_5_3_7 {K : Type*} [Field K] {F : Subfield K}
+  {a : K} (ha : IsAlgebraic F (a ^ 2)) : IsAlgebraic F a := sorry
+P: theorem dummy {F K : Type*} [Field F] [Field K] [Algebra F K] {a : K} (h : IsAlgebraic F (a^2)) : IsAlgebraic F a := sorry
+===== pnv-test-1042 ambiguous=true full=false prefix_r=2/6 prefix_s=2/6 shared=2 hoist_r=0 hoist_s=0
+G: theorem exercise_7_3_16 {R S : Type*} [Ring R] [Ring S]
+  {蠁 : R 鈫?* S} (hf : Function.Surjective 蠁) :
+  蠁 '' (center R) 鈯?center S := sorry
+P: theorem dummy {R S : Type*} [CommRing R] [CommRing S] (蠁 : R 鈫?* S) (h蠁 : Function.Surjective 蠁) : (蠁 '' (center R)) 鈯?center S := sorry
+===== pnv-test-406 ambiguous=false full=false prefix_r=2/5 prefix_s=2/7 shared=2 hoist_r=0 hoist_s=0
+G: theorem exercise_5_3_7 {K : Type*} [Field K] {F : Subfield K}
+  {a : K} (ha : IsAlgebraic F (a ^ 2)) : IsAlgebraic F a := sorry
+P: theorem dummy {K : Type*} [Field K] {F : Type*} [Field F] [Algebra F K] (a : K) (ha : IsAlgebraic F (a ^ 2)) : IsAlgebraic F a := sorry
+===== pnv-test-754 ambiguous=false full=false prefix_r=0/4 prefix_s=0/5 shared=0 hoist_r=0 hoist_s=0
+G: theorem exercise_4_3
+  {伪 : Type} [MetricSpace 伪]
+  (f : 伪 鈫?鈩? (h : Continuous f) (z : Set 伪) (g : z = f鈦宦? {0})
+  : IsClosed z := sorry
+P: theorem dummy {X : Type*} [TopologicalSpace X] [T2Space X] {f : X 鈫?鈩潁 (hf : Continuous f) : IsClosed {p : X | f p = 0} := sorry
+===== pnv-test-866 ambiguous=false full=false prefix_r=3/5 prefix_s=3/6 shared=3 hoist_r=0 hoist_s=0
+G: theorem exercise_1_1_17 {G : Type*} [Group G] {x : G} {n : 鈩?}
+  (hxn: orderOf x = n) :
+  x鈦宦?= x ^ (n - 1 : 鈩? := sorry
+P: theorem dummy {G : Type*} [Group G] {x : G} {n : 鈩晑 (hn : 0 < n) (hx : x ^ n = 1) : x鈦宦?= x ^ (n - 1) := sorry

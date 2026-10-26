@@ -1,0 +1,179 @@
+====================================================================================================
+pnv-test-97 label False 
+NL: Show that $x^{4} \equiv 2(p)$ has a solution for $p \equiv 1(4)$ iff $p$ is of the form $A^{2}+64 B^{2}$. 
+GOLD: theorem exercise_5_28 {p : 鈩晑 (hp : p.Prime) (hp1 : p 鈮?1 [MOD 4]):
+  (鈭?x, x^4 鈮?2 [MOD p]) 鈫?鈭?A B, p = A^2 + 64*B^2 := sorry 
+PRED: theorem dummy {p : 鈩晑 (hp : p % 4 = 1) : 鈭?x : 鈩? x^4 鈮?2 [MOD p] 鈫?鈭?A B : 鈩? p = A^2 + 64*B^2 := sorry
+binders: {p : 鈩晑 
+Hr: p.Prime 鈭?p 鈮?1 [MOD 4] 
+Cr: (鈭?x : 鈩? x^4 鈮?2 [MOD p]) 鈫?(鈭?A B : 鈩? p = A^2 + 64 * B^2) 
+Hs: p % 4 = 1 
+Cs: 鈭?x : 鈩? (x^4 鈮?2 [MOD p] 鈫?(鈭?A B : 鈩? p = A^2 + 64 * B^2))
+--- nhyp  ok=False
+卢 (鈭€ {p : 鈩晑, (p.Prime 鈭?p 鈮?1 [MOD 4]) 鈫?(p % 4 = 1))
+  by
+    intro h
+    have h鈧?:= h (p := 1)
+    have hr : 1 % 4 = 1 := by norm_num
+    have hp : Nat.Prime 1 := (h鈧?mpr hr).1
+    norm_num at hp
+ERR: unexpected token 'by'; expected '{' or tactic
+unsolved goals
+鈯?卢鈭€ {p : 鈩晑, Nat.Prime p 鈭?p 鈮?1 [MOD 4] 鈫?p % 4 = 1
+--- ncomp  ok=False
+卢 (鈭€ {p : 鈩晑, ((鈭?x : 鈩? x^4 鈮?2 [MOD p]) 鈫?(鈭?A B : 鈩? p = A^2 + 64 * B^2)) 鈫?(鈭?x : 鈩? (x^4 鈮?2 [MOD p] 鈫?(鈭?A B : 鈩? p = A^2 + 64 * B^2))))
+  by
+    intro h
+    have h鈧?:= h (p := 2)
+  
+    have hY : 卢 鈭?A B : 鈩? 2 = A ^ 2 + 64 * B ^ 2 := by
+      rintro 鉄ˋ, B, hab鉄?
+      have hB : B = 0 := by
+        by_contra hb
+        have hbpow : B ^ 2 鈮?0 := pow_ne_zero 2 hb
+        have hb鈧?: 1 鈮?B ^ 2 := Nat.one_le_iff_ne_zero.mpr hbpow
+        omega
+      subst B
+      simp at hab
+      have ha_lt : A < 2 := by
+        by_contra hn
+        have ha : 2 鈮?A := by omega
+        have hs : 2 * 2 鈮?A * A := Nat.mul_le_mul ha ha
+        rw [pow_two] at hab
+        omega
+      interval_cases A <;> norm_num at hab
+  
+    have hX : 鈭?x : 鈩? x ^ 4 鈮?2 [MOD 2] := by
+      exact 鉄?, by norm_num [Nat.ModEq]鉄?
+  
+    have hP鈧?: 卢 (1 ^ 4 鈮?2 [MOD 2]) := by
+      norm_num [Nat.ModEq]
+  
+    have hR :
+        鈭?x : 鈩?
+          (x ^ 4 鈮?2 [MOD 2] 鈫?
+            鈭?A B : 鈩? 2 = A ^ 2 + 64 * B ^ 2) := by
+      exact 鉄?, iff_of_false hP鈧?hY鉄?
+  
+    have hL :
+        卢 ((鈭?x : 鈩? x ^ 4 鈮?2 [MOD 2]) 鈫?
+          鈭?A B : 鈩? 2 = A ^ 2 + 64 * B ^ 2) := by
+      intro hx
+      exact hY (hx.mp hX)
+  
+    exact hL (h鈧?mpr hR)
+ERR: unexpected token 'by'; expected '{' or tactic
+unsolved goals
+鈯?卢鈭€ {p : 鈩晑,
+      ((鈭?x, x ^ 4 鈮?2 [MOD p]) 鈫?鈭?A B, p = A ^ 2 + 64 * B ^ 2) 鈫?
+        鈭?x, x ^ 4 鈮?2 [MOD p] 鈫?鈭?A B, p = A ^ 2 + 64 * B ^ 2
+====================================================================================================
+pnv-test-285 label False 
+NL: If $R$ is a commutative ring and $a \in R$, let $L(a) = \{x \in R \mid xa = 0\}$. Prove that $L(a)$ is an ideal of $R$. 
+GOLD: theorem exercise_4_3_1 {R : Type*} [CommRing R] (a : R) :
+  鈭?I : Ideal R, {x : R | x*a=0} = I := sorry 
+PRED: theorem dummy {R : Type u} [CommRing R] (a : R) : IsPrime (Ideal.span { a }) := sorry
+binders: {R : Type u} [CommRing R] (a : R) 
+Hr: True 
+Cr: 鈭?I : Ideal R, {x : R | x*a=0} = I 
+Hs: True 
+Cs: IsPrime (Ideal.span { a })
+--- ncin  ok=False
+卢 (鈭€ {R : Type u} [CommRing R] (a : R), (True) 鈫?((鈭?I : Ideal R, {x : R | x*a=0} = I) 鈫?(IsPrime (Ideal.span { a }))))
+  by
+    intro h
+    have hi := h (R := ZMod 4) (0 : ZMod 4) trivial
+    have hex :
+        鈭?I : Ideal (ZMod 4), {x : ZMod 4 | x * 0 = 0} = I := by
+      refine 鉄ㄢ姢, ?_鉄?
+      ext x
+      simp
+    have hp : IsPrime (Ideal.span ({0} : Set (ZMod 4))) := hi.mp hex
+    have hs : Ideal.span ({0} : Set (ZMod 4)) = 鈯?:= by
+      apply le_antisymm
+      路 apply Ideal.span_le.2
+        intro x hx
+        simp only [Set.mem_singleton_iff] at hx
+        subst x
+        exact (鈯?: Ideal (ZMod 4)).zero_mem
+      路 exact bot_le
+    have hm :
+        (2 : ZMod 4) * 2 鈭?Ideal.span ({0} : Set (ZMod 4)) := by
+      rw [hs]
+      norm_num
+    have hne : (2 : ZMod 4) 鈮?0 := by
+      norm_num
+    rcases hp.mem_or_mem hm with h2 | h2
+    路 apply hne
+      simpa [hs] using h2
+    路 apply hne
+      simpa [hs] using h2
+ERR: unexpected token 'by'; expected '{' or tactic
+unsolved goals
+鈯?卢鈭€ {R : Type u} [inst : CommRing R] (a : R), True 鈫?((鈭?I, {x | x * a = 0} = 鈫慖) 鈫?(span {a}).IsPrime)
+--- ncomp  ok=False
+卢 (鈭€ {R : Type u} [CommRing R] (a : R), (鈭?I : Ideal R, {x : R | x*a=0} = I) 鈫?(IsPrime (Ideal.span { a })))
+  by
+    intro h
+    have hi := h (R := ZMod 4) (0 : ZMod 4)
+    have hex :
+        鈭?I : Ideal (ZMod 4), {x : ZMod 4 | x * 0 = 0} = I := by
+      refine 鉄ㄢ姢, ?_鉄?
+      ext x
+      simp
+    have hp : IsPrime (Ideal.span ({0} : Set (ZMod 4))) := hi.mp hex
+    have hs : Ideal.span ({0} : Set (ZMod 4)) = 鈯?:= by
+      apply le_antisymm
+      路 apply Ideal.span_le.2
+        intro x hx
+        simp only [Set.mem_singleton_iff] at hx
+        subst x
+        exact (鈯?: Ideal (ZMod 4)).zero_mem
+      路 exact bot_le
+    have hm :
+        (2 : ZMod 4) * 2 鈭?Ideal.span ({0} : Set (ZMod 4)) := by
+      rw [hs]
+      norm_num
+    have hne : (2 : ZMod 4) 鈮?0 := by
+      norm_num
+    rcases hp.mem_or_mem hm with h2 | h2
+    路 apply hne
+      simpa [hs] using h2
+    路 apply hne
+      simpa [hs] using h2
+ERR: unexpected token 'by'; expected '{' or tactic
+unsolved goals
+鈯?卢鈭€ {R : Type u} [inst : CommRing R] (a : R), (鈭?I, {x | x * a = 0} = 鈫慖) 鈫?(span {a}).IsPrime
+====================================================================================================
+pnv-test-693 label True 
+NL: Prove that if $a \in \mathbf{F}$, $v \in V$, and $av = 0$, then $a = 0$ or $v = 0$. 
+GOLD: theorem exercise_1_4 {F V : Type*} [AddCommGroup V] [Field F]
+  [Module F V] (v : V) (a : F): a 鈥?v = 0 鈫?a = 0 鈭?v = 0 := sorry 
+PRED: theorem dummy {F : Type*} [Field F] {V : Type*} [AddCommGroup V] [Module F V] (a : F) (v : V) : a 鈥?v = 0 鈫?a = 0 鈭?v = 0 := sorry
+binders: {F : Type u} [Field F] {V : Type u} [AddCommGroup V] [Module F V] (a : F) (v : V) 
+Hr: a 鈥?v = 0 
+Cr: a = 0 鈭?v = 0 
+Hs: True 
+Cs: a 鈥?v = 0 鈫?a = 0 鈭?v = 0
+--- nhyp  ok=False
+卢 (鈭€ {F : Type u} [Field F] {V : Type u} [AddCommGroup V] [Module F V] (a : F) (v : V), (a 鈥?v = 0) 鈫?(True))
+  by
+    intro h
+    have h' :=
+      h (F := ULift.{u} 鈩? (V := ULift.{u} 鈩? (1 : ULift.{u} 鈩? (1 : ULift.{u} 鈩?
+    simpa using h'
+ERR: unexpected token 'by'; expected '{' or tactic
+unsolved goals
+鈯?卢鈭€ {F : Type u} [inst : Field F] {V : Type u} [inst_1 : AddCommGroup V] [inst_2 : Module F V] (a : F) (v : V),
+      a 鈥?v = 0 鈫?True
+--- ncomp  ok=False
+卢 (鈭€ {F : Type u} [Field F] {V : Type u} [AddCommGroup V] [Module F V] (a : F) (v : V), (a = 0 鈭?v = 0) 鈫?(a 鈥?v = 0 鈫?a = 0 鈭?v = 0))
+  by
+    intro h
+    have h' :=
+      h (F := ULift.{u} 鈩? (V := ULift.{u} 鈩? (1 : ULift.{u} 鈩? (1 : ULift.{u} 鈩?
+    simpa using h'
+ERR: unexpected token 'by'; expected '{' or tactic
+unsolved goals
+鈯?卢鈭€ {F : Type u} [inst : Field F] {V : Type u} [inst_1 : AddCommGroup V] [inst_2 : Module F V] (a : F) (v : V),
+      a = 0 鈭?v = 0 鈫?(a 鈥?v = 0 鈫?a = 0 鈭?v = 0)

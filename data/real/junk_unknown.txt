@@ -1,0 +1,125 @@
+===== pnv-test-1005 PARTIAL closed unknown ['bwd'] proved ['split_r', 'split_s'] ambiguous=false full=true prefix_r=5/5 prefix_s=5/5 shared=2 hoist_r=0 hoist_s=0
+NL: Let $f$ be a real function with a continuous third derivative such that $f(x), f^{\prime}(x), f^{\prime \prime}(x), f^{\prime \prime \prime}(x)$ are positive for all $x$. Suppose that $f^{\prime \prime \prime}(x) \leq f(x)$ for all $x$. Show that $f^
+G: ∀ (f : ℝ → ℝ) (hf: ContDiff ℝ 3 f) (hf1 : ∀ n ≤ 3, ∀ x : ℝ, iteratedDeriv n f x > 0) (hf2 : ∀ x : ℝ, iteratedDeriv 3 f x ≤ f x), ∀ x : ℝ, deriv f x < 2 * f x
+P: ∀ {f : ℝ → ℝ} (h_cont : ∀ n ≤ 3, Continuous (deriv^[n] f)) (h_pos : ∀ x, 0 < f x ∧ 0 < deriv f x ∧ 0 < deriv^[2] f x ∧ 0 < deriv^[3] f x) (h_ineq : ∀ x, deriv^[3] f x ≤ f x), ∀ x, deriv f x < 2 * f x
+ncomp goal: ¬∀ (f : ℝ → ℝ) (x : ℝ), deriv f x < 2 * f x ↔ deriv f x < 2 * f x
+===== pnv-test-381  closed unknown [] proved [] ambiguous=true full=true prefix_r=11/11 prefix_s=11/11 shared=4 hoist_r=0 hoist_s=0
+NL: Let $X$ be a compact Hausdorff space that is the union of the closed subspaces $X_1$ and $X_2$. If $X_1$ and $X_2$ are metrizable, show that $X$ is metrizable.
+G: ∀ (X : Type*) [TopologicalSpace X] [CompactSpace X] [T2Space X] (X1 X2 : Set X) (hX1 : IsClosed X1) (hX2 : IsClosed X2) (hX : X1 ∪ X2 = univ) (hX1m : MetrizableSpace X1) (hX2m : MetrizableSpace X2), MetrizableSpace X
+P: ∀ {X : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] {X₁ X₂ : Set X} (hX₁ : IsClosed X₁) (hX₂ : IsClosed X₂) (h : X = X₁ ∪ X₂) (h₁ : MetrizableSpace X₁) (h₂ : MetrizableSpace X₂), MetrizableSpace X
+ncomp goal: ¬∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X), MetrizableSpace X ↔ MetrizableSpace X
+===== pnv-test-678  closed proved ['bwd', 'fwd'] proved ['split_r', 'split_s'] ambiguous=true full=true prefix_r=8/8 prefix_s=8/8 shared=6 hoist_r=0 hoist_s=0
+NL: Let $p \colon X \rightarrow Y$ be an open map. Show that if $A$ is open in $X$, then the map $q \colon A \rightarrow p(A)$ obtained by restricting $p$ is an open map.
+G: ∀ {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] (p : X → Y) (hp : IsOpenMap p) (A : Set X) (hA : IsOpen A), IsOpenMap (p ∘ Subtype.val : A → Y)
+P: ∀ {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] (p : X → Y) (hp : IsOpenMap p) (A : Set X) (hA : IsOpen A), IsOpen (p '' A)
+ncomp goal: ¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y)     (A : Set X), IsOpenMap (p ∘ Subtype.val) ↔ IsOpen (p '' A)
+===== pnv-test-1218 PARTIAL closed unknown ['bwd', 'pfalse'] proved ['split_r', 'split_s'] ambiguous=false full=false prefix_r=0/2 prefix_s=0/3 shared=0 hoist_r=0 hoist_s=0
+NL: If $n$ is not a prime, show that $(n-1) ! \equiv 0(n)$, except when $n=4$.
+G: ∀ {n : ℕ+} (hn0 : ¬ n.Prime), Nat.factorial (n-1) ≡ 0 [MOD n] ↔ n ≠ 4
+P: ∀ {n : ℕ} (hn : ¬ Nat.Prime n) (hne4 : n ≠ 4), (Nat.factorial (n - 1)) % n = 0
+ncomp goal: ¬((∀ {n : ℕ+}, ¬n.Prime → ((↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4)) ↔     ∀ {n : ℕ}, ¬Nat.Prime n → n ≠ 4 → (n - 1).factorial % n = 0)
+===== pnv-test-504  closed unknown ['fwd'] proved ['split_r', 'split_s'] ambiguous=false full=false prefix_r=1/3 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=0
+NL: Let $p(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}$ be an element of the polynomial ring $R[x]$. Prove that $p(x)$ is a zero divisor in $R[x]$ if and only if there is a nonzero $b \in R$ such that $b p(x)=0$.
+G: ∀ {R : Type*} [Ring R] (p : Polynomial R), p ∣ 0 ↔ ∃ b : R, b ≠ 0 ∧ b • p = 0
+P: ∀ {R : Type*} [CommRing R] {p : R[X]}, (∃ q : R[X], q ≠ 0 ∧ p * q = 0) ↔ ∃ b : R, b ≠ 0 ∧ b • p = 0
+ncomp goal: ¬∀ {R : Type u},     (∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔       ∀ [inst : CommRing R] {p : R[X]}, (∃ q, q ≠ 0 ∧ p * q = 0) ↔ ∃ b, b ≠ 0 ∧ b • p = 0
+===== pnv-test-1128  closed proved ['bwd', 'fwd'] proved ['split_r', 'split_s'] ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0
+NL: Let $R$ be a commutative ring with $1 \neq 0$. Prove that if $a$ is a nilpotent element of $R$ then $1-a b$ is a unit for all $b \in R$.
+G: ∀ {R : Type*} [CommRing R] (hR : (0 : R) ≠ 1) {a : R} (ha : IsNilpotent a) (b : R), IsUnit (1-a*b)
+P: ∀ {R : Type*} [CommRing R] [Nontrivial R] (a b : R) (ha : IsNilpotent a), IsUnit (1 - a * b)
+ncomp goal: ¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R), IsUnit (1 - a * b) ↔ IsUnit (1 - a * b)
+===== pnv-test-995  closed unknown ['bwd'] proved [] ambiguous=false full=false prefix_r=0/11 prefix_s=0/12 shared=0 hoist_r=0 hoist_s=0
+NL: Let $f$ and $g$ be continuous mappings of a metric space $X$ into a metric space $Y$, and let $P$ be a dense subset of $X$. Prove that if $g(p) = f(p)$ for all $p \in P$ then $g(p) = f(p)$ for all $p \in X$.
+G: ∀ {α : Type} [MetricSpace α] {β : Type} [MetricSpace β] (f g : α → β) (s : Set α) (h₁ : Continuous f) (h₂ : Continuous g) (h₃ : Dense s) (h₄ : ∀ x ∈ s, f x = g x), f = g
+P: ∀ {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] {f g : X → Y} {E : Set X} (hf : Continuous f) (hg : Continuous g) (hE : Dense E) (he : ∀ p ∈ E, g p = f p), ∀ p, g p = f p
+ncomp goal: ¬((∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β)       (s : Set α), Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → f = g) ↔     ∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] {f g : X → Y} {E : Set X},       Continuous f → Continuous g → Dense E → (∀ p ∈ E, g p = f p) → ∀ (p : X), g p = f p)
+===== pnv-test-459  closed proved ['bwd', 'fwd'] proved [] ambiguous=false full=false prefix_r=1/6 prefix_s=1/5 shared=1 hoist_r=0 hoist_s=0
+NL: If $\sigma, \tau$ are two permutations that disturb no common element and $\sigma \tau = e$, prove that $\sigma = \tau = e$.
+G: ∀ {α : Type*} [Fintype α] {σ τ: Equiv.Perm α} (h1 : ∀ a : α, σ a = a ↔ τ a ≠ a) (h2 : τ ∘ σ = id), σ = 1 ∧ τ = 1
+P: ∀ {α : Type*} (σ τ : Equiv.Perm α) (h : ∀ x : α, (σ x = x ∨ τ x = x) ∧ ¬(σ x = x ∧ τ x = x)) (h_mul_eq_one : σ * τ = 1), σ = 1 ∧ τ = 1
+ncomp goal: ¬∀ {α : Type u},     (∀ [Fintype α] {σ τ : Equiv.Perm α}, (∀ (a : α), σ a = a ↔ τ a ≠ a) → ⇑τ ∘ ⇑σ = id → σ = 1 ∧ τ = 1) ↔       ∀ (σ τ : Equiv.Perm α), (∀ (x : α), (σ x = x ∨ τ x = x) ∧ ¬(σ x = x ∧ τ x = x)) → σ * τ = 1 → σ = 1 ∧ τ = 1
+===== pnv-test-1283  closed proved ['bwd', 'fwd'] proved ['ncomp', 'split_r', 'split_s'] ambiguous=false full=true prefix_r=4/4 prefix_s=4/4 shared=3 hoist_r=0 hoist_s=0
+NL: Prove that a group of order 56 has a normal Sylow $p$-subgroup for some prime $p$ dividing its order.
+G: ∀ {G : Type*} [Group G] [Fintype G] (hG : card G = 56), ∃ (p : ℕ) (P : Sylow p G), p.Prime ∧ (p ∣ card G) ∧ P.Normal
+P: ∀ {G : Type*} [Group G] [Fintype G] (hG : Fintype.card G = 56), ∃ (p : ℕ) (hp : Nat.Prime p) (H : Sylow p G), H.Normal
+ncomp goal: ¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],     (∃ p P, Nat.Prime p ∧ p ∣ card G ∧ (↑P).Normal) ↔ ∃ p, ∃ (_ : Nat.Prime p), ∃ H, (↑H).Normal
+===== pnv-test-68  closed unknown ['bwd'] proved ['split_r', 'split_s'] ambiguous=true full=false prefix_r=6/10 prefix_s=6/8 shared=5 hoist_r=0 hoist_s=0
+NL: Let $V$ be a vector space over an infinite field $F$. Prove that $V$ is not the union of finitely many proper subspaces.
+G: ∀ {K V : Type*} [Field K] [Infinite K] [AddCommGroup V] [Module K V] {ι : Type*} [Fintype ι] (γ : ι → Submodule K V) (h : ∀ i : ι, γ i ≠ ⊤), (⋃ (i : ι), (γ i : Set V)) ≠ ⊤
+P: ∀ {F V : Type*} [Field F] [Infinite F] [AddCommGroup V] [Module F V], ¬ ∃ (s : Finset (Submodule F V)) (hs : ∀ (p : Submodule F V), p ∈ s → p ≠ ⊤), (⊤ : Submodule F V) = s.sup id
+ncomp goal: ¬∀ {K V : Type u} [inst : Field K] [inst_1 : AddCommGroup V] [inst_2 : Module K V],     (∀ {ι : Type u} [Fintype ι] (γ : ι → Submodule K V), (∀ (i : ι), γ i ≠ ⊤) → ⋃ i, ↑(γ i) ≠ ⊤) ↔       ∀ (s : Finset (Submodule K V)), (∀ p ∈ s, p ≠ ⊤) → ¬⊤ = s.sup id
+===== pnv-test-345  closed refuted ['bwd', 'nfwd', 'pfalse'] proved ['ncomp', 'split_r', 'split_s'] ambiguous=false full=false prefix_r=0/0 prefix_s=0/2 shared=0 hoist_r=0 hoist_s=0
+NL: Prove that there exists a normal subgroup that is not characteristic.
+G: ∃ (G : Type*) (hG : Group G) (H : @Subgroup G hG), @Normal G hG H ∧ ¬ @Characteristic G hG H
+P: ∀ (G : Type*) [Group G], ∃ N : Subgroup G, Normal N ∧ ¬Characteristic N
+ncomp goal: ¬((∃ G hG H, H.Normal ∧ ¬H.Characteristic) ↔     ∀ (G : Type u) [inst : Group G], ∃ N, N.Normal ∧ ¬N.Characteristic)
+===== pnv-test-588 PARTIAL closed unknown ['fwd'] proved ['split_r', 'split_s'] ambiguous=true full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0
+NL: Prove that, for any integers $a, b, c$, there exists a positive integer $n$ such that $\sqrt{n^3+a n^2+b n+c}$ is not an integer.
+G: ∀ (a b c : ℤ), ∃ n : ℤ, n > 0 ∧ ¬ ∃ m : ℤ, Real.sqrt (n^3 + a*n^2 + b*n + c) = m
+P: ∀ (a b c : ℤ), ∃ n : ℕ, 0 < n ∧ ¬ ∃ k : ℤ, k^2 = n^3 + a * n^2 + b * n + c
+ncomp goal: ¬∀ (a b c : ℤ),     (∃ n > 0, ¬∃ m, √(↑n ^ 3 + ↑a * ↑n ^ 2 + ↑b * ↑n + ↑c) = ↑m) ↔       ∃ n, 0 < n ∧ ¬∃ k, k ^ 2 = ↑n ^ 3 + a * ↑n ^ 2 + b * ↑n + c
+===== pnv-test-10  closed proved ['bwd', 'fwd', 'pfalse'] proved ['split_r', 'split_s'] ambiguous=false full=false prefix_r=0/1 prefix_s=0/0 shared=0 hoist_r=0 hoist_s=0
+NL: Show that $[0, 1]^\omega$ is not locally compact in the uniform topology.
+G: ∀ [TopologicalSpace (ℕ → Icc 0 1)], ¬ LocallyCompactSpace (ℕ → Icc 0 1)
+P: ¬ LocallyCompactSpace (ℕ → Icc (0 : ℝ) 1)
+ncomp goal: ¬((∀ [inst : TopologicalSpace (ℕ → ↑(Icc 0 1))], ¬LocallyCompactSpace (ℕ → ↑(Icc 0 1))) ↔     ¬LocallyCompactSpace (ℕ → ↑(Icc 0 1)))
+===== pnv-test-860 PARTIAL closed unknown ['fwd'] proved ['split_r', 'split_s'] ambiguous=true full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0
+NL: Prove that, for any integers $a, b, c$, there exists a positive integer $n$ such that $\sqrt{n^3+a n^2+b n+c}$ is not an integer.
+G: ∀ (a b c : ℤ), ∃ n : ℤ, n > 0 ∧ ¬ ∃ m : ℤ, Real.sqrt (n^3 + a*n^2 + b*n + c) = m
+P: ∀ (a b c : ℤ), ∃ (n : ℤ) (H : n > 0), ¬(∃ (m : ℤ), n ^ 3 + a * n ^ 2 + b * n + c = m ^ 2)
+ncomp goal: ¬∀ (a b c : ℤ),     (∃ n > 0, ¬∃ m, √(↑n ^ 3 + ↑a * ↑n ^ 2 + ↑b * ↑n + ↑c) = ↑m) ↔       ∃ n, ∃ (_ : n > 0), ¬∃ m, n ^ 3 + a * n ^ 2 + b * n + c = m ^ 2
+===== pnv-test-1268  closed proved ['bwd', 'fwd'] proved ['split_r', 'split_s'] ambiguous=false full=false prefix_r=0/2 prefix_s=1/1 shared=0 hoist_r=0 hoist_s=0
+NL: Show that the equation $3 x^{2}+2=y^{2}$ has no solution in integers.
+G: ¬ ∃ x y : ℤ, 3*x^2 + 2 = y^2
+P: ∀ { h : ¬ ∃ (x y : ℤ), 3 * x ^ 2 + 2 = y ^ 2 }, true
+ncomp goal: ¬((∀ (x y : ℤ), ¬3 * x ^ 2 + 2 = y ^ 2) ↔ true = true)
+===== pnv-test-1195  closed proved ['bwd', 'fwd'] proved ['split_r', 'split_s'] ambiguous=true full=true prefix_r=6/6 prefix_s=6/6 shared=4 hoist_r=0 hoist_s=0
+NL: Let $R$ be a commutative ring with $1 \neq 0$. Prove that if $a$ is a nilpotent element of $R$ then $1-a b$ is a unit for all $b \in R$.
+G: ∀ {R : Type*} [CommRing R] (hR : (0 : R) ≠ 1) {a : R} (ha : IsNilpotent a) (b : R), IsUnit (1-a*b)
+P: ∀ {R : Type*} [CommRing R] [Nontrivial R] {a : R} (ha : IsNilpotent a) (b : R), IsUnit (1 - a * b)
+ncomp goal: ¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R), IsUnit (1 - a * b) ↔ IsUnit (1 - a * b)
+===== pnv-test-1212  closed unknown ['bwd'] proved ['split_r', 'split_s'] ambiguous=true full=false prefix_r=3/10 prefix_s=3/10 shared=3 hoist_r=0 hoist_s=0
+NL: Let $Y$ be an ordered set in the order topology. Let $f, g: X \rightarrow Y$ be continuous. Show that the set $\{x \mid f(x) \leq g(x)\}$ is closed in $X$.
+G: ∀ {X Y : Type*} [TopologicalSpace X] [TopologicalSpace Y] [LinearOrder Y] [OrderTopology Y] {f g : X → Y} (hf : Continuous f) (hg : Continuous g), IsClosed {x | f x ≤ g x}
+P: ∀ {X Y : Type*} [TopologicalSpace X] [Preorder Y] [TopologicalSpace Y] [OrderTopology Y] {f g : X → Y} (hf : Continuous f) (hg : Continuous g), IsClosed {x | f x ≤ g x}
+ncomp goal: ¬∀ {X Y : Type u} [inst : TopologicalSpace X],     (∀ [inst_1 : TopologicalSpace Y] [inst_2 : LinearOrder Y] [OrderTopology Y] {f g : X → Y},         Continuous f → Continuous g → IsClosed {x | f x ≤ g x}) ↔       ∀ [inst_1 : Preorder Y] [inst_2 : TopologicalSpace Y] [OrderTopology Y] {f g : X → Y},         Continuous f → Continuous g → IsClosed {x | f x ≤ g x}
+===== pnv-test-679 PARTIAL closed unknown ['fwd'] proved ['ncomp'] ambiguous=false full=false prefix_r=3/7 prefix_s=3/6 shared=3 hoist_r=0 hoist_s=0
+NL: Let $G$ be a finite group and $\varphi$ an automorphism of $G$ such that $\varphi(x) = x^{-1}$ for more than three-fourths of the elements of $G$. Prove that $\varphi(y) = y^{-1}$ for all $y \in G$, and so $G$ is abelian.
+G: ∀ {G : Type*} [Group G] [Fintype G] (φ : G ≃* G) {I : Finset G} (hI : ∀ x ∈ I, φ x = x⁻¹) (hI1 : (0.75 : ℚ) * card G ≤ card I), (∀ x : G, φ x = x⁻¹) ∧ ∀ x y : G, x*y = y*x
+P: ∀ {G : Type*} [Group G] [Fintype G] (φ : G →* G) (hφ : ∃ S : Finset G, S.card > (3 * Fintype.card G) / 4 ∧ ∀ x ∈ S, φ x = x⁻¹), ∀ y : G, φ y = y⁻¹ ∧ ∀ a b : G, a * b = b * a
+ncomp goal: ¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],     (∀ (φ : G ≃* G) {I : Finset G},         (∀ x ∈ I, φ x = x⁻¹) → 0.75 * ↑(card G) ≤ ↑(card ↥I) → (∀ (x : G), φ x = x⁻¹) ∧ ∀ (x y : G), x * y = y * x) ↔       ∀ (φ : G →* G),         (∃ S, S.card > 3 * card G / 4 ∧ ∀ x ∈ S, φ x = x⁻¹) → ∀ (y : G), φ y = y⁻¹ ∧ ∀ (a b : G), a * b = b * a
+===== pnv-test-20  closed unknown ['fwd'] proved ['split_r', 'split_s'] ambiguous=false full=false prefix_r=1/3 prefix_s=1/3 shared=1 hoist_r=0 hoist_s=0
+NL: Let $p(x)=a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}$ be an element of the polynomial ring $R[x]$. Prove that $p(x)$ is a zero divisor in $R[x]$ if and only if there is a nonzero $b \in R$ such that $b p(x)=0$.
+G: ∀ {R : Type*} [Ring R] (p : Polynomial R), p ∣ 0 ↔ ∃ b : R, b ≠ 0 ∧ b • p = 0
+P: ∀ {R : Type*} [CommRing R] (p : R[X]), (∃ q : R[X], q ≠ 0 ∧ p * q = 0) ↔ ∃ b : R, b ≠ 0 ∧ b • p = 0
+ncomp goal: ¬∀ {R : Type u},     (∀ [inst : Ring R] (p : R[X]), p ∣ 0 ↔ ∃ b, b ≠ 0 ∧ b • p = 0) ↔       ∀ [inst : CommRing R] (p : R[X]), (∃ q, q ≠ 0 ∧ p * q = 0) ↔ ∃ b, b ≠ 0 ∧ b • p = 0
+===== pnv-test-1262  closed proved ['bwd', 'fwd'] proved ['split_r', 'split_s'] ambiguous=false full=true prefix_r=3/3 prefix_s=3/3 shared=1 hoist_r=0 hoist_s=0
+NL: Show that $x^{4} \equiv 2(p)$ has a solution for $p \equiv 1(4)$ iff $p$ is of the form $A^{2}+64 B^{2}$.
+G: ∀ {p : ℕ} (hp : p.Prime) (hp1 : p ≡ 1 [MOD 4]), (∃ x, x^4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A^2 + 64*B^2
+P: ∀ {p : ℕ} [hp : Fact p.Prime] (hp1 : p % 4 = 1), (∃ x : ℕ, x^4 % p = 2) ↔ ∃ A B : ℤ, p = A^2 + 64 * B^2
+ncomp goal: ¬∀ {p : ℕ},     ((∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2) ↔ ((∃ x, x ^ 4 % p = 2) ↔ ∃ A B, ↑p = A ^ 2 + 64 * B ^ 2)
+===== pnv-test-428  closed refuted ['bwd', 'nfwd', 'pfalse'] proved ['split_r', 'split_s'] ambiguous=false full=false prefix_r=1/8 prefix_s=1/8 shared=1 hoist_r=0 hoist_s=0
+NL: Prove that if $a \in \mathbf{F}$, $v \in V$, and $av = 0$, then $a = 0$ or $v = 0$.
+G: ∀ {F V : Type*} [AddCommGroup V] [Field F] [Module F V] (v : V) (a : F), a • v = 0 → a = 0 ∨ v = 0
+P: ∀ {R : Type*} [Semiring R] {M : Type*} [AddCommMonoid M] [Module R M] (a : R) (v : M) (h : a • v = 0), a = 0 ∨ v = 0
+ncomp goal: ¬∀ {F : Type u},     (∀ {V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V) (a : F),         a • v = 0 → a = 0 ∨ v = 0) ↔       ∀ [inst : Semiring F] {M : Type u} [inst_1 : AddCommMonoid M] [inst_2 : Module F M] (a : F) (v : M),         a • v = 0 → a = 0 ∨ v = 0
+===== pnv-test-1335  closed unknown [] proved [] ambiguous=true full=true prefix_r=11/11 prefix_s=11/11 shared=4 hoist_r=0 hoist_s=0
+NL: Let $X$ be a compact Hausdorff space that is the union of the closed subspaces $X_1$ and $X_2$. If $X_1$ and $X_2$ are metrizable, show that $X$ is metrizable.
+G: ∀ (X : Type*) [TopologicalSpace X] [CompactSpace X] [T2Space X] (X1 X2 : Set X) (hX1 : IsClosed X1) (hX2 : IsClosed X2) (hX : X1 ∪ X2 = univ) (hX1m : MetrizableSpace X1) (hX2m : MetrizableSpace X2), MetrizableSpace X
+P: ∀ {X : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] {X1 X2 : Set X} (hX1 : IsClosed X1) (hX2 : IsClosed X2) (hX : X = X1 ∪ X2) (hX1_met : MetrizableSpace X1) (hX2_met : MetrizableSpace X2), MetrizableSpace X
+ncomp goal: ¬∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X), MetrizableSpace X ↔ MetrizableSpace X
+===== pnv-test-806 PARTIAL closed unknown ['fwd'] proved ['split_r', 'split_s'] ambiguous=true full=true prefix_r=3/3 prefix_s=3/3 shared=3 hoist_r=0 hoist_s=0
+NL: Prove that, for any integers $a, b, c$, there exists a positive integer $n$ such that $\sqrt{n^3+a n^2+b n+c}$ is not an integer.
+G: ∀ (a b c : ℤ), ∃ n : ℤ, n > 0 ∧ ¬ ∃ m : ℤ, Real.sqrt (n^3 + a*n^2 + b*n + c) = m
+P: ∀ (a b c : ℤ), ∃ (n : ℕ), ¬ ∃ (m : ℤ), m ^ 2 = n ^ 3 + a * n ^ 2 + b * n + c
+ncomp goal: ¬∀ (a b c : ℤ),     (∃ n > 0, ¬∃ m, √(↑n ^ 3 + ↑a * ↑n ^ 2 + ↑b * ↑n + ↑c) = ↑m) ↔ ∃ n, ¬∃ m, m ^ 2 = ↑n ^ 3 + a * ↑n ^ 2 + b * ↑n + c
+===== pnv-test-1407  closed proved ['bwd', 'fwd'] proved [] ambiguous=true full=true prefix_r=5/5 prefix_s=5/5 shared=4 hoist_r=0 hoist_s=0
+NL: If $G$ is a group in which $(a b)^{i}=a^{i} b^{i}$ for three consecutive integers $i$, prove that $G$ is abelian.
+G: ∀ {G : Type*} [Group G] {P : ℕ → Prop} {hP : P = λ i => ∀ a b : G, (a*b)^i = a^i * b^i} (hP1 : ∃ n : ℕ, P n ∧ P (n+1) ∧ P (n+2)), ∀ a b : G, a*b = b*a
+P: ∀ {G : Type*} [Group G] (h : ∃ i : ℤ, ∀ a b : G, (a * b) ^ i = a ^ i * b ^ i ∧ (a * b) ^ (i+1) = a ^ (i+1) * b ^ (i+1) ∧ (a * b) ^ (i+2) = a ^ (i+2) * b ^ (i+2)), ∀ a b : G, a * b = b * a
+ncomp goal: ¬∀ {G : Type u} [inst : Group G] (a b : G), a * b = b * a ↔ a * b = b * a
+===== pnv-test-1199  closed unknown [] proved [] ambiguous=true full=true prefix_r=11/11 prefix_s=11/11 shared=4 hoist_r=0 hoist_s=0
+NL: Let $X$ be a compact Hausdorff space that is the union of the closed subspaces $X_1$ and $X_2$. If $X_1$ and $X_2$ are metrizable, show that $X$ is metrizable.
+G: ∀ (X : Type*) [TopologicalSpace X] [CompactSpace X] [T2Space X] (X1 X2 : Set X) (hX1 : IsClosed X1) (hX2 : IsClosed X2) (hX : X1 ∪ X2 = univ) (hX1m : MetrizableSpace X1) (hX2m : MetrizableSpace X2), MetrizableSpace X
+P: ∀ {X : Type*} [TopologicalSpace X] [CompactSpace X] [T2Space X] {X1 X2 : Set X} (hX1 : IsClosed X1) (hX2 : IsClosed X2) (hX : X = X1 ∪ X2) (hX1m : MetrizableSpace X1) (hX2m : MetrizableSpace X2), MetrizableSpace X
+ncomp goal: ¬∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X), MetrizableSpace X ↔ MetrizableSpace X

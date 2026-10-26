@@ -1,0 +1,7 @@
+02:40:49 start k4
+02:45:09 k4 exit 0 259s
+02:45:09 start k3
+04:23:26 k3 exit 0 5898s
+04:23:26 start k5
+08:41:00 k5 exit 0 15454s
+08:41:00 ALL DONE

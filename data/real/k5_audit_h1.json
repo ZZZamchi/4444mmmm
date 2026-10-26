@@ -1,0 +1,1791 @@
+{
+ "summary": {
+  "population": {
+   "h1k": 340,
+   "h1kr": 38
+  },
+  "checked": {
+   "h1k": 100,
+   "h1kr": 38
+  },
+  "passed": {
+   "h1k": 100,
+   "h1kr": 38
+  },
+  "failures": []
+ },
+ "rows": [
+  {
+   "tag": "h1k",
+   "item": "mf-valid-amc12a_2003_p24:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-amc12a_2017_p7:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-algebra_sqineq_at2malt1:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_numbertheory_185:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_159:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_110:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-amc12a_2010_p11:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-numbertheory_4x3m7y3neq2003:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_101:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-algebra_manipexpr_apbeq2cceqiacpbceqm2:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_547:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_398:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_144:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_125:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_numbertheory_495:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_numbertheory_458:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-amc12b_2021_p4:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_numbertheory_303:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_76:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_245:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_numbertheory_110:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_141:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-numbertheory_notequiv2i2jasqbsqdiv8:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-imo_1959_p1:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-amc12a_2021_p3:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-aime_1996_p5:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-induction_seq_mul2pnp1:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_433:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-imo_1960_p2:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-algebra_binomnegdiscrineq_10alt28asqp1:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-amc12b_2003_p9:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-aimeII_2020_p6:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_33:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_405:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_numbertheory_92:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-imo_1964_p1_1:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_192:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_numbertheory_222:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-amc12a_2003_p5:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_37:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-aime_1990_p4:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-amc12b_2021_p3:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-amc12a_2009_p5:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-aime_1983_p2:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_123:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-aime_1997_p11:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_487:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-aime_1990_p2:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-amc12a_2009_p6:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_293:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_412:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_478:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_129:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_327:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-imo_1966_p4:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-amc12b_2021_p1:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-amc12b_2020_p13:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-aime_1984_p15:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_151:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_119:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-imo_1968_p5_1:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-numbertheory_2pownm1prime_nprime:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_numbertheory_5:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-induction_12dvd4expnp1p20:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_509:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_96:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_numbertheory_559:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-imo_1964_p1_2:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_421:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-numbertheory_xsqpysqintdenomeq:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-aime_1983_p9:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_484:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_numbertheory_582:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_276:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_289:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_288:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-algebra_apbon2pownleqapownpbpowon2:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_67:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-induction_sum_1oktkp1:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-amc12a_2021_p18:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-amc12b_2021_p18:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-induction_pprime_pdvdapowpma:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_142:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-algebra_others_exirrpowirrrat:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_410:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_422:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-algebra_amgm_sumasqdivbsqgeqsumbdiva:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-imo_2006_p3:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-amc12a_2016_p2:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_numbertheory_321:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-algebra_2varlineareq_xpeeq7_2xpeeq3_eeq11_xeqn4:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_320:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-amc12a_2017_p2:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-algebra_apb4leq8ta4pb4:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_numbertheory_227:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-mathd_algebra_114:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-mathd_algebra_181:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-numbertheory_aneqprodakp4_anmsqrtanp1eq2:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-test-imo_1997_p5:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1k",
+   "item": "mf-valid-amc12b_2002_p11:h1k:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-imo_1969_p2:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-amc12b_2021_p21:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-mathd_numbertheory_233:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-imo_1987_p4:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-mathd_algebra_451:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-numbertheory_fxeq4powxp6powxp9powx_f2powmdvdf2pown:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-amc12_2000_p1:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-amc12a_2021_p8:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-mathd_numbertheory_314:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-algebra_apbmpcneq0_aeq0anbeq0anceq0:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-imo_1984_p6:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-mathd_numbertheory_277:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-mathd_numbertheory_552:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-imo_1993_p5:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-amc12a_2008_p25:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-amc12a_2020_p4:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-aime_1983_p3:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-amc12a_2021_p14:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-mathd_numbertheory_236:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-mathd_algebra_482:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-amc12b_2020_p21:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-mathd_numbertheory_156:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-amc12a_2019_p9:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-aime_1994_p4:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-mathd_numbertheory_780:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-numbertheory_3pow2pownm1mod2pownp3eq2pownp2:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-aime_1991_p9:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-aime_1999_p11:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-imo_1987_p6:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-imo_1965_p2:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-mathd_numbertheory_405:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-amc12a_2020_p21:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-imo_1974_p3:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-mathd_numbertheory_709:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-mathd_algebra_184:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-algebra_sum1onsqrt2to1onsqrt10000lt198:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-test-amc12a_2021_p19:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  },
+  {
+   "tag": "h1kr",
+   "item": "mf-valid-imo_1979_p1:h1kr:bwd",
+   "ok": true,
+   "timeout": false,
+   "truncated": false,
+   "errors": [],
+   "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+   ]
+  }
+ ]
+}

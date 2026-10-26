@@ -1,0 +1,118 @@
+====================================================================================================
+pnv-test-693 label True 
+NL: Prove that if $a \in \mathbf{F}$, $v \in V$, and $av = 0$, then $a = 0$ or $v = 0$. 
+GOLD: theorem exercise_1_4 {F V : Type*} [AddCommGroup V] [Field F]
+  [Module F V] (v : V) (a : F): a 鈥?v = 0 鈫?a = 0 鈭?v = 0 := sorry 
+PRED: theorem dummy {F : Type*} [Field F] {V : Type*} [AddCommGroup V] [Module F V] (a : F) (v : V) : a 鈥?v = 0 鈫?a = 0 鈭?v = 0 := sorry
+binders: {F : Type u} [Field F] {V : Type u} [AddCommGroup V] [Module F V] (a : F) (v : V) 
+Hr: a 鈥?v = 0 
+Cr: a = 0 鈭?v = 0 
+Hs: True 
+Cs: a 鈥?v = 0 鈫?a = 0 鈭?v = 0
+--- nhyp  ok=True
+卢 (鈭€ {F : Type u} [Field F] {V : Type u} [AddCommGroup V] [Module F V] (a : F) (v : V), (a 鈥?v = 0) 鈫?(True))
+  intro h
+  have h1 := (h (F := ULift.{u} 鈩? (V := ULift.{u} 鈩? 1 1).mpr trivial
+  simp at h1
+--- ncomp  ok=True
+卢 (鈭€ {F : Type u} [Field F] {V : Type u} [AddCommGroup V] [Module F V] (a : F) (v : V), (a = 0 鈭?v = 0) 鈫?(a 鈥?v = 0 鈫?a = 0 鈭?v = 0))
+  intro h
+  have h1 := h (F := ULift.{u} 鈩? (V := ULift.{u} 鈩? 1 1
+  simp at h1
+====================================================================================================
+pnv-test-695 label True 
+NL: Prove that $\sum 1/k(\log(k))^p$ converges when $p > 1$. 
+GOLD: theorem exercise_3_63a (p : 鈩? (f : 鈩?鈫?鈩? (hp : p > 1)
+  (h : f = 位 (k : 鈩? => (1 : 鈩? / (k * (log k) ^ p)) :
+  鈭?l, Tendsto f atTop (饾摑 l) := sorry 
+PRED: theorem dummy (p : 鈩? (hp : 1 < p) : Summable fun k => 1 / (k * (log k)^p) := sorry
+binders: (p : 鈩? (f : 鈩?鈫?鈩? 
+Hr: p > 1 鈭?f = 位 (k : 鈩? => (1 : 鈩? / (k * (log k) ^ p) 
+Cr: 鈭?l, Tendsto f atTop (饾摑 l) 
+Hs: 1 < p 
+Cs: Summable (fun k => 1 / (k * (log k)^p))
+--- nhyp  ok=True
+卢 (鈭€ (p : 鈩? (f : 鈩?鈫?鈩?, (p > 1 鈭?f = 位 (k : 鈩? => (1 : 鈩? / (k * (log k) ^ p)) 鈫?(1 < p))
+  intro h
+  obtain 鉄╛, h2鉄?:= (h 2 (fun _ => 0)).mpr (by norm_num)
+  have e : (0:鈩? = 1/(((2:鈩?:鈩? * (log ((2:鈩?:鈩?)^(2:鈩?) := congrFun h2 2
+  have hl : 0 < log ((2:鈩?:鈩? := Real.log_pos (by norm_num)
+  have h3 : (0:鈩? < 1/(((2:鈩?:鈩? * (log ((2:鈩?:鈩?)^(2:鈩?) := by
+    apply div_pos one_pos
+    exact mul_pos (by norm_num) (Real.rpow_pos_of_pos hl _)
+  linarith
+--- ncomp  ok=False
+卢 (鈭€ (p : 鈩? (f : 鈩?鈫?鈩?, (鈭?l, Tendsto f atTop (饾摑 l)) 鈫?(Summable (fun k => 1 / (k * (log k)^p))))
+  intro h
+  have := (h 0 (fun _ => 0)).mp 鉄?, tendsto_const_nhds鉄?
+  apply Real.not_summable_one_div_natCast
+  simpa using this
+ERR: Type mismatch: After simplification, term
+  this
+ has type
+  Summable fun (k : 鈩? => k鈦宦?
+but is expected to have type
+  Summable fun (n : 鈩? => (鈫憂)鈦宦?
+====================================================================================================
+pnv-test-97 label False 
+NL: Show that $x^{4} \equiv 2(p)$ has a solution for $p \equiv 1(4)$ iff $p$ is of the form $A^{2}+64 B^{2}$. 
+GOLD: theorem exercise_5_28 {p : 鈩晑 (hp : p.Prime) (hp1 : p 鈮?1 [MOD 4]):
+  (鈭?x, x^4 鈮?2 [MOD p]) 鈫?鈭?A B, p = A^2 + 64*B^2 := sorry 
+PRED: theorem dummy {p : 鈩晑 (hp : p % 4 = 1) : 鈭?x : 鈩? x^4 鈮?2 [MOD p] 鈫?鈭?A B : 鈩? p = A^2 + 64*B^2 := sorry
+binders: {p : 鈩晑 
+Hr: p.Prime 鈭?p 鈮?1 [MOD 4] 
+Cr: (鈭?x : 鈩? x^4 鈮?2 [MOD p]) 鈫?(鈭?A B : 鈩? p = A^2 + 64 * B^2) 
+Hs: p % 4 = 1 
+Cs: 鈭?x : 鈩? (x^4 鈮?2 [MOD p] 鈫?(鈭?A B : 鈩? p = A^2 + 64 * B^2))
+--- nhyp  ok=True
+卢 (鈭€ {p : 鈩晑, (p.Prime 鈭?p 鈮?1 [MOD 4]) 鈫?(p % 4 = 1))
+  intro h
+  have := (h (p := 1)).mpr (by norm_num)
+  exact Nat.not_prime_one this.1
+--- ncomp  ok=True
+卢 (鈭€ {p : 鈩晑, ((鈭?x : 鈩? x^4 鈮?2 [MOD p]) 鈫?(鈭?A B : 鈩? p = A^2 + 64 * B^2)) 鈫?(鈭?x : 鈩? (x^4 鈮?2 [MOD p] 鈫?(鈭?A B : 鈩? p = A^2 + 64 * B^2))))
+  intro h
+  have hQ : 卢 鈭?A B : 鈩? 2 = A^2 + 64 * B^2 := by
+    rintro 鉄ˋ, B, hAB鉄?
+    have hB : B = 0 := by
+      by_contra hb
+      have : 1 鈮?B := Nat.pos_of_ne_zero hb
+      nlinarith
+    subst hB
+    have hA : A 鈮?1 := by nlinarith
+    interval_cases A <;> simp at hAB
+  have h1 : 鈭?x : 鈩? (x^4 鈮?2 [MOD 2] 鈫?鈭?A B : 鈩? 2 = A^2 + 64 * B^2) := by
+    refine 鉄?, ?_鉄?
+    constructor
+    路 intro h'
+      exfalso
+      unfold Nat.ModEq at h'
+      norm_num at h'
+    路 intro h'
+      exact absurd h' hQ
+  have h2 := (@h 2).mpr h1
+  apply hQ
+  exact h2.mp 鉄?, by unfold Nat.ModEq; norm_num鉄?
+====================================================================================================
+pnv-test-285 label False 
+NL: If $R$ is a commutative ring and $a \in R$, let $L(a) = \{x \in R \mid xa = 0\}$. Prove that $L(a)$ is an ideal of $R$. 
+GOLD: theorem exercise_4_3_1 {R : Type*} [CommRing R] (a : R) :
+  鈭?I : Ideal R, {x : R | x*a=0} = I := sorry 
+PRED: theorem dummy {R : Type u} [CommRing R] (a : R) : IsPrime (Ideal.span { a }) := sorry
+binders: {R : Type u} [CommRing R] (a : R) 
+Hr: True 
+Cr: 鈭?I : Ideal R, {x : R | x*a=0} = I 
+Hs: True 
+Cs: IsPrime (Ideal.span { a })
+--- ncin  ok=True
+卢 (鈭€ {R : Type u} [CommRing R] (a : R), (True) 鈫?((鈭?I : Ideal R, {x : R | x*a=0} = I) 鈫?(IsPrime (Ideal.span { a }))))
+  intro h
+  have h1 := (h (R := ULift.{u} 鈩? 1 trivial).1 鉄ㄢ姤, by ext x; simp鉄?
+  rw [Ideal.span_singleton_one] at h1
+  exact h1.ne_top rfl
+--- ncomp  ok=True
+卢 (鈭€ {R : Type u} [CommRing R] (a : R), (鈭?I : Ideal R, {x : R | x*a=0} = I) 鈫?(IsPrime (Ideal.span { a })))
+  intro h
+  have h1 := (h (R := ULift.{u} 鈩? 1).1 鉄ㄢ姤, by ext x; simp鉄?
+  rw [Ideal.span_singleton_one] at h1
+  exact h1.ne_top rfl

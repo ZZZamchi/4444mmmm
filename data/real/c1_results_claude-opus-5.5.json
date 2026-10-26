@@ -1,0 +1,3222 @@
+{
+  "model": "anthropic/claude-opus-5.5",
+  "items": 204,
+  "unique_pairs": 121,
+  "confusion": {
+    "candidate_weaker": {
+      "candidate_weaker": 77
+    },
+    "local_delta": {
+      "local_delta": 52,
+      "equivalent": 1
+    },
+    "candidate_stronger": {
+      "candidate_stronger": 25
+    },
+    "candidate_vacuous": {
+      "candidate_vacuous": 25
+    },
+    "candidate_incomparable": {
+      "candidate_incomparable": 14,
+      "unknown": 10
+    }
+  },
+  "confusion_tactic_only": {
+    "candidate_weaker": {
+      "unknown": 11,
+      "inequivalent": 1,
+      "candidate_weaker": 65
+    },
+    "local_delta": {
+      "local_delta": 51,
+      "equivalent": 1,
+      "unknown": 1
+    },
+    "candidate_stronger": {
+      "candidate_stronger": 14,
+      "inequivalent": 1,
+      "unknown": 10
+    },
+    "candidate_vacuous": {
+      "candidate_vacuous": 25
+    },
+    "candidate_incomparable": {
+      "candidate_incomparable": 14,
+      "unknown": 10
+    }
+  },
+  "seconds": 13.2,
+  "pairs": [
+    {
+      "idx": "formalrx_cc_seed_0001",
+      "key": "u000",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_seed_0002",
+      "key": "u001",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0003",
+      "key": "u002",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0004",
+      "key": "u003",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "quantifier",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0005",
+      "key": "u004",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0006",
+      "key": "u005",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "concrete_instance",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0007",
+      "key": "u006",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0008",
+      "key": "u007",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0009",
+      "key": "u008",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0010",
+      "key": "u009",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0011",
+      "key": "u010",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0012",
+      "key": "u011",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0013",
+      "key": "u012",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0014",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0015",
+      "key": "u014",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0016",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0017",
+      "key": "u016",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0018",
+      "key": "u017",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0019",
+      "key": "u018",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0020",
+      "key": "u019",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0021",
+      "key": "u020",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0022",
+      "key": "u021",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0023",
+      "key": "u022",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0024",
+      "key": "u023",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_seed_0025",
+      "key": "u024",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0001",
+      "key": "u025",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0003",
+      "key": "u001",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0005",
+      "key": "u026",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "quantifier",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0008",
+      "key": "u027",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0016",
+      "key": "u028",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "equivalent",
+      "proved": [
+        "eq"
+      ],
+      "tactic": [
+        "eq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0017",
+      "key": "u016",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0020",
+      "key": "u029",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "structural",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0021",
+      "key": "u030",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0023",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0025",
+      "key": "u031",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0027",
+      "key": "u032",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0029",
+      "key": "u004",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0036",
+      "key": "u033",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0037",
+      "key": "u034",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "quantifier",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0042",
+      "key": "u035",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "structural",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0046",
+      "key": "u036",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0049",
+      "key": "u037",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0050",
+      "key": "u038",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0054",
+      "key": "u039",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0061",
+      "key": "u038",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0063",
+      "key": "u040",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0065",
+      "key": "u041",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "property_boundary",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0066",
+      "key": "u042",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_dev_0067",
+      "key": "u043",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0072",
+      "key": "u044",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "structural",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_dev_0076",
+      "key": "u045",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "structural",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0001",
+      "key": "u046",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0002",
+      "key": "u047",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0003",
+      "key": "u048",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0004",
+      "key": "u049",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0005",
+      "key": "u050",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0006",
+      "key": "u051",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0007",
+      "key": "u052",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0008",
+      "key": "u053",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0009",
+      "key": "u054",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0010",
+      "key": "u055",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0011",
+      "key": "u056",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0012",
+      "key": "u057",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0013",
+      "key": "u058",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0014",
+      "key": "u059",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0015",
+      "key": "u060",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0016",
+      "key": "u061",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0017",
+      "key": "u062",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0018",
+      "key": "u063",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0019",
+      "key": "u064",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0020",
+      "key": "u065",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0021",
+      "key": "u066",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_incomparable",
+      "proved": [
+        "nci",
+        "nic"
+      ],
+      "tactic": [
+        "nci",
+        "nic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0022",
+      "key": "u067",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "concrete_instance",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0023",
+      "key": "u068",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0024",
+      "key": "u069",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0025",
+      "key": "u070",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0026",
+      "key": "u071",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0027",
+      "key": "u072",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0028",
+      "key": "u073",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0029",
+      "key": "u074",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0030",
+      "key": "u075",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0031",
+      "key": "u076",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0032",
+      "key": "u077",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0033",
+      "key": "u078",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0034",
+      "key": "u079",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0035",
+      "key": "u080",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0036",
+      "key": "u081",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0037",
+      "key": "u082",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0038",
+      "key": "u083",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0039",
+      "key": "u084",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0040",
+      "key": "u085",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0041",
+      "key": "u086",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0042",
+      "key": "u087",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0043",
+      "key": "u088",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0044",
+      "key": "u068",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "expression_delta",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0045",
+      "key": "u089",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0046",
+      "key": "u090",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0047",
+      "key": "u091",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0048",
+      "key": "u092",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0049",
+      "key": "u093",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0050",
+      "key": "u094",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0051",
+      "key": "u095",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0052",
+      "key": "u096",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0053",
+      "key": "u097",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0054",
+      "key": "u098",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0055",
+      "key": "u099",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0056",
+      "key": "u100",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0057",
+      "key": "u101",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0058",
+      "key": "u102",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0059",
+      "key": "u103",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0060",
+      "key": "u104",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0061",
+      "key": "u105",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0062",
+      "key": "u106",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0063",
+      "key": "u107",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0064",
+      "key": "u108",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0065",
+      "key": "u109",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0066",
+      "key": "u110",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0067",
+      "key": "u111",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0068",
+      "key": "u112",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0069",
+      "key": "u113",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "property_boundary",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0070",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0071",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0072",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0073",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0074",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0075",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0076",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0077",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0078",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0079",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0080",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0081",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0082",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0083",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0084",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0085",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0086",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0087",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0088",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0089",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0090",
+      "key": "u015",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0091",
+      "key": "u114",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "quantifier",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic",
+        "nci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0092",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0093",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0094",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0095",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0096",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0097",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0098",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0099",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0100",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0101",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0102",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0103",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0104",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0105",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0106",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0107",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0108",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0109",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0110",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0111",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0112",
+      "key": "u013",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0113",
+      "key": "u115",
+      "kind": "premise",
+      "gold": "candidate_vacuous",
+      "witness_type": "vacuity",
+      "pred": "candidate_vacuous",
+      "proved": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ],
+      "tactic": [
+        "ci",
+        "nic",
+        "sat",
+        "vac"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0114",
+      "key": "u116",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "finite_model",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0115",
+      "key": "u117",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "finite_model",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0116",
+      "key": "u118",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "finite_model",
+      "pred": "unknown",
+      "proved": [],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_exp_0117",
+      "key": "u116",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "finite_model",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0118",
+      "key": "u117",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "finite_model",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0119",
+      "key": "u118",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "finite_model",
+      "pred": "unknown",
+      "proved": [],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_exp_0120",
+      "key": "u116",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "finite_model",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0121",
+      "key": "u117",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "finite_model",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0122",
+      "key": "u118",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "finite_model",
+      "pred": "unknown",
+      "proved": [],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_exp_0123",
+      "key": "u116",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "finite_model",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0124",
+      "key": "u117",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "finite_model",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0125",
+      "key": "u118",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "finite_model",
+      "pred": "unknown",
+      "proved": [],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_exp_0126",
+      "key": "u116",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "finite_model",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0127",
+      "key": "u117",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "finite_model",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0128",
+      "key": "u118",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "finite_model",
+      "pred": "unknown",
+      "proved": [],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_exp_0129",
+      "key": "u116",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "finite_model",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0130",
+      "key": "u117",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "finite_model",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0131",
+      "key": "u118",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "finite_model",
+      "pred": "unknown",
+      "proved": [],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_exp_0132",
+      "key": "u116",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "finite_model",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0133",
+      "key": "u117",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "finite_model",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0134",
+      "key": "u118",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "finite_model",
+      "pred": "unknown",
+      "proved": [],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_exp_0135",
+      "key": "u116",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "finite_model",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0136",
+      "key": "u117",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "finite_model",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0137",
+      "key": "u118",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "finite_model",
+      "pred": "unknown",
+      "proved": [],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_exp_0138",
+      "key": "u116",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "finite_model",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0139",
+      "key": "u117",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "finite_model",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0140",
+      "key": "u118",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "finite_model",
+      "pred": "unknown",
+      "proved": [],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_exp_0141",
+      "key": "u116",
+      "kind": "prop",
+      "gold": "candidate_weaker",
+      "witness_type": "finite_model",
+      "pred": "candidate_weaker",
+      "proved": [
+        "ic",
+        "nci"
+      ],
+      "tactic": [
+        "ic"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0142",
+      "key": "u117",
+      "kind": "prop",
+      "gold": "candidate_stronger",
+      "witness_type": "finite_model",
+      "pred": "candidate_stronger",
+      "proved": [
+        "ci",
+        "nic"
+      ],
+      "tactic": [
+        "ci"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0143",
+      "key": "u118",
+      "kind": "prop",
+      "gold": "candidate_incomparable",
+      "witness_type": "finite_model",
+      "pred": "unknown",
+      "proved": [],
+      "tactic": []
+    },
+    {
+      "idx": "formalrx_cc_exp_0144",
+      "key": "u119",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0145",
+      "key": "u120",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0146",
+      "key": "u119",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0147",
+      "key": "u120",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0148",
+      "key": "u119",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0149",
+      "key": "u120",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0150",
+      "key": "u119",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0151",
+      "key": "u120",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0152",
+      "key": "u119",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    },
+    {
+      "idx": "formalrx_cc_exp_0153",
+      "key": "u120",
+      "kind": "term",
+      "gold": "local_delta",
+      "witness_type": "structural",
+      "pred": "local_delta",
+      "proved": [
+        "neq"
+      ],
+      "tactic": [
+        "neq"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9930 @@
+{
+  "selection": {
+    "no_conversion": 38,
+    "elab_fail_other": 274,
+    "usable": 1140,
+    "usable_true": 446
+  },
+  "n_pairs": 1140,
+  "tiers": {
+    "t0": {
+      "label_equivalent": {
+        "unknown": 243,
+        "unknown_no_cert": 243,
+        "proved": 203
+      },
+      "label_inequivalent": {
+        "unknown": 688,
+        "unknown_no_cert": 688,
+        "proved": 6
+      },
+      "inequivalent_unknown_share": 0.991,
+      "inequivalent_certified_share": 0.009,
+      "inequivalent_refuted_share": 0.0,
+      "proved_precision": 0.971,
+      "refuted_precision": null,
+      "pred_false_precision": null
+    },
+    "t1": {
+      "label_equivalent": {
+        "unknown": 231,
+        "unknown_no_cert": 231,
+        "proved": 215
+      },
+      "label_inequivalent": {
+        "unknown": 682,
+        "unknown_no_cert": 682,
+        "proved": 12
+      },
+      "inequivalent_unknown_share": 0.983,
+      "inequivalent_certified_share": 0.017,
+      "inequivalent_refuted_share": 0.0,
+      "proved_precision": 0.947,
+      "refuted_precision": null,
+      "pred_false_precision": null
+    }
+  },
+  "seconds": 3219.3,
+  "pairs": [
+    {
+      "row_id": "pnv-test-1157",
+      "stmt_id": "Rudin|exercise_4_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-247",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-212",
+      "stmt_id": "Artin|exercise_2_8_6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-813",
+      "stmt_id": "Pugh|exercise_2_32a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-100",
+      "stmt_id": "Munkres|exercise_30_10",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1005",
+      "stmt_id": "Putnam|exercise_1999_b4",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-101",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-85",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-954",
+      "stmt_id": "Munkres|exercise_18_8a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-92",
+      "stmt_id": "Shakarchi|exercise_3_14",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-124",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-673",
+      "stmt_id": "Ireland-Rosen|exercise_12_12",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-381",
+      "stmt_id": "Munkres|exercise_34_9",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-289",
+      "stmt_id": "Dummit-Foote|exercise_4_5_19",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-889",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-678",
+      "stmt_id": "Munkres|exercise_22_5",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1247",
+      "stmt_id": "Pugh|exercise_2_32a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-410",
+      "stmt_id": "Artin|exercise_11_13_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1135",
+      "stmt_id": "Herstein|exercise_2_1_26",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-311",
+      "stmt_id": "Dummit-Foote|exercise_2_1_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-238",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1114",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-253",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-967",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-436",
+      "stmt_id": "Dummit-Foote|exercise_7_3_16",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-226",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-693",
+      "stmt_id": "Axler|exercise_1_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1218",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-867",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1215",
+      "stmt_id": "Artin|exercise_10_1_13",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-695",
+      "stmt_id": "Pugh|exercise_3_63a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-622",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-504",
+      "stmt_id": "Dummit-Foote|exercise_7_2_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1446",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1128",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1291",
+      "stmt_id": "Axler|exercise_1_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-192",
+      "stmt_id": "Artin|exercise_10_4_7a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-738",
+      "stmt_id": "Pugh|exercise_3_63a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-995",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-31",
+      "stmt_id": "Rudin|exercise_5_5",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-547",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-370",
+      "stmt_id": "Artin|exercise_3_7_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1375",
+      "stmt_id": "Artin|exercise_6_4_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1279",
+      "stmt_id": "Artin|exercise_6_4_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1300",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-459",
+      "stmt_id": "Herstein|exercise_3_2_21",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1283",
+      "stmt_id": "Dummit-Foote|exercise_4_5_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-819",
+      "stmt_id": "Dummit-Foote|exercise_7_1_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-305",
+      "stmt_id": "Dummit-Foote|exercise_1_1_29",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1122",
+      "stmt_id": "Artin|exercise_10_4_7a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-503",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-68",
+      "stmt_id": "Artin|exercise_3_7_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-345",
+      "stmt_id": "Dummit-Foote|exercise_4_4_6b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1435",
+      "stmt_id": "Rudin|exercise_2_19a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1270",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1361",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1309",
+      "stmt_id": "Dummit-Foote|exercise_3_4_5b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-565",
+      "stmt_id": "Rudin|exercise_5_5",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-474",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1137",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1256",
+      "stmt_id": "Herstein|exercise_2_5_23",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1111",
+      "stmt_id": "Rudin|exercise_4_11a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-553",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-647",
+      "stmt_id": "Artin|exercise_11_4_6a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-890",
+      "stmt_id": "Dummit-Foote|exercise_3_1_22a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-686",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-26",
+      "stmt_id": "Artin|exercise_10_4_7a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-264",
+      "stmt_id": "Dummit-Foote|exercise_3_1_22a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-588",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-307",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-838",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-585",
+      "stmt_id": "Rudin|exercise_4_11a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-705",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-365",
+      "stmt_id": "Dummit-Foote|exercise_1_6_23",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1399",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-10",
+      "stmt_id": "Munkres|exercise_29_4",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-992",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1326",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-860",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-354",
+      "stmt_id": "Munkres|exercise_22_5",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-80",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-249",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1268",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1195",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-296",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-217",
+      "stmt_id": "Dummit-Foote|exercise_7_1_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-592",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1212",
+      "stmt_id": "Munkres|exercise_18_8a",
+      "label": true,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-648",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": true,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1298",
+      "stmt_id": "Shakarchi|exercise_3_14",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-312",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-849",
+      "stmt_id": "Artin|exercise_10_1_13",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1230",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1353",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-579",
+      "stmt_id": "Rudin|exercise_1_4",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-483",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1139",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-812",
+      "stmt_id": "Herstein|exercise_2_1_18",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-89",
+      "stmt_id": "Dummit-Foote|exercise_1_6_11",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-358",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-28",
+      "stmt_id": "Dummit-Foote|exercise_4_4_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1149",
+      "stmt_id": "Artin|exercise_10_4_7a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1184",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1109",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-576",
+      "stmt_id": "Rudin|exercise_5_3",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1209",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-300",
+      "stmt_id": "Artin|exercise_13_6_10",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-855",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-784",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1297",
+      "stmt_id": "Ireland-Rosen|exercise_12_12",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-679",
+      "stmt_id": "Herstein|exercise_2_5_52",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-70",
+      "stmt_id": "Munkres|exercise_30_10",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1222",
+      "stmt_id": "Dummit-Foote|exercise_4_5_19",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1084",
+      "stmt_id": "Artin|exercise_6_4_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-824",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-362",
+      "stmt_id": "Rudin|exercise_1_1b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1091",
+      "stmt_id": "Artin|exercise_6_4_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-751",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-418",
+      "stmt_id": "Dummit-Foote|exercise_1_1_29",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-913",
+      "stmt_id": "Axler|exercise_5_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-20",
+      "stmt_id": "Dummit-Foote|exercise_7_2_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-51",
+      "stmt_id": "Dummit-Foote|exercise_4_5_23",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1262",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-489",
+      "stmt_id": "Munkres|exercise_13_8a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-428",
+      "stmt_id": "Axler|exercise_1_4",
+      "label": true,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-383",
+      "stmt_id": "Dummit-Foote|exercise_4_5_21",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-222",
+      "stmt_id": "Axler|exercise_1_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-495",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-972",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-707",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-287",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1335",
+      "stmt_id": "Munkres|exercise_34_9",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-806",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-537",
+      "stmt_id": "Ireland-Rosen|exercise_12_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-86",
+      "stmt_id": "Dummit-Foote|exercise_7_1_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1140",
+      "stmt_id": "Rudin|exercise_1_1b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-525",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-195",
+      "stmt_id": "Herstein|exercise_2_1_18",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1407",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-293",
+      "stmt_id": "Rudin|exercise_1_4",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1152",
+      "stmt_id": "Dummit-Foote|exercise_3_4_5b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-816",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-742",
+      "stmt_id": "Axler|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1026",
+      "stmt_id": "Dummit-Foote|exercise_4_4_6b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-78",
+      "stmt_id": "Artin|exercise_3_2_7",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1078",
+      "stmt_id": "Dummit-Foote|exercise_4_5_23",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1411",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1199",
+      "stmt_id": "Munkres|exercise_34_9",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-54",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-429",
+      "stmt_id": "Dummit-Foote|exercise_3_1_22a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-660",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-301",
+      "stmt_id": "Artin|exercise_3_2_7",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-468",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-40",
+      "stmt_id": "Munkres|exercise_30_10",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-725",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1090",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-757",
+      "stmt_id": "Dummit-Foote|exercise_1_1_15",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1040",
+      "stmt_id": "Dummit-Foote|exercise_2_1_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1055",
+      "stmt_id": "Pugh|exercise_2_32a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-619",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-632",
+      "stmt_id": "Dummit-Foote|exercise_7_2_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1112",
+      "stmt_id": "Dummit-Foote|exercise_2_1_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1126",
+      "stmt_id": "Dummit-Foote|exercise_1_1_20",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1282",
+      "stmt_id": "Dummit-Foote|exercise_4_5_21",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1065",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-724",
+      "stmt_id": "Dummit-Foote|exercise_4_5_23",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1102",
+      "stmt_id": "Shakarchi|exercise_1_13b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1053",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-883",
+      "stmt_id": "Dummit-Foote|exercise_4_5_17",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1039",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-650",
+      "stmt_id": "Dummit-Foote|exercise_1_1_20",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-783",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1388",
+      "stmt_id": "Axler|exercise_1_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-980",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-409",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1266",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-215",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1354",
+      "stmt_id": "Dummit-Foote|exercise_4_4_8a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1434",
+      "stmt_id": "Munkres|exercise_18_8a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1426",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-837",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-179",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-805",
+      "stmt_id": "Munkres|exercise_22_5",
+      "label": true,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1371",
+      "stmt_id": "Artin|exercise_3_2_7",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-727",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-772",
+      "stmt_id": "Munkres|exercise_18_8a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-376",
+      "stmt_id": "Pugh|exercise_3_63a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1015",
+      "stmt_id": "Rudin|exercise_1_1b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-775",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-859",
+      "stmt_id": "Munkres|exercise_23_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-113",
+      "stmt_id": "Dummit-Foote|exercise_7_3_16",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1325",
+      "stmt_id": "Axler|exercise_1_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1138",
+      "stmt_id": "Dummit-Foote|exercise_7_1_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-548",
+      "stmt_id": "Axler|exercise_1_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-771",
+      "stmt_id": "Rudin|exercise_4_11a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-946",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-273",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-564",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-337",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1136",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-687",
+      "stmt_id": "Dummit-Foote|exercise_1_1_15",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-976",
+      "stmt_id": "Herstein|exercise_4_4_9",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-114",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1374",
+      "stmt_id": "Axler|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-509",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-935",
+      "stmt_id": "Dummit-Foote|exercise_1_1_20",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-730",
+      "stmt_id": "Dummit-Foote|exercise_4_2_9a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-306",
+      "stmt_id": "Dummit-Foote|exercise_4_4_6b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1201",
+      "stmt_id": "Dummit-Foote|exercise_2_1_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-971",
+      "stmt_id": "Dummit-Foote|exercise_7_1_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-422",
+      "stmt_id": "Munkres|exercise_30_10",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-790",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-620",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-526",
+      "stmt_id": "Artin|exercise_3_2_7",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-125",
+      "stmt_id": "Artin|exercise_6_4_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-808",
+      "stmt_id": "Pugh|exercise_2_32a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-595",
+      "stmt_id": "Dummit-Foote|exercise_1_6_23",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-845",
+      "stmt_id": "Munkres|exercise_23_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1155",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-338",
+      "stmt_id": "Dummit-Foote|exercise_4_4_6b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1062",
+      "stmt_id": "Munkres|exercise_31_3",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-292",
+      "stmt_id": "Munkres|exercise_22_5",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-485",
+      "stmt_id": "Munkres|exercise_22_5",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-898",
+      "stmt_id": "Munkres|exercise_31_3",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1432",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1170",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-616",
+      "stmt_id": "Herstein|exercise_2_5_52",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1075",
+      "stmt_id": "Rudin|exercise_1_4",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-22",
+      "stmt_id": "Rudin|exercise_1_4",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-157",
+      "stmt_id": "Ireland-Rosen|exercise_2_27a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1054",
+      "stmt_id": "Dummit-Foote|exercise_4_4_6b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-912",
+      "stmt_id": "Shakarchi|exercise_3_14",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-550",
+      "stmt_id": "Herstein|exercise_2_10_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-108",
+      "stmt_id": "Axler|exercise_3_8",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-234",
+      "stmt_id": "Herstein|exercise_2_5_23",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-499",
+      "stmt_id": "Artin|exercise_6_4_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1082",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1103",
+      "stmt_id": "Dummit-Foote|exercise_7_1_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-763",
+      "stmt_id": "Dummit-Foote|exercise_1_3_8",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-129",
+      "stmt_id": "Artin|exercise_10_1_13",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-614",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-700",
+      "stmt_id": "Dummit-Foote|exercise_7_1_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-67",
+      "stmt_id": "Artin|exercise_6_4_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-688",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-190",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-612",
+      "stmt_id": "Rudin|exercise_4_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-624",
+      "stmt_id": "Axler|exercise_5_24",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-137",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-530",
+      "stmt_id": "Dummit-Foote|exercise_4_5_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-809",
+      "stmt_id": "Rudin|exercise_5_5",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1077",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1081",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1087",
+      "stmt_id": "Herstein|exercise_2_1_26",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-659",
+      "stmt_id": "Dummit-Foote|exercise_8_3_5a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-801",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1450",
+      "stmt_id": "Rudin|exercise_1_4",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-924",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-364",
+      "stmt_id": "Axler|exercise_1_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1307",
+      "stmt_id": "Rudin|exercise_3_2a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1341",
+      "stmt_id": "Dummit-Foote|exercise_7_3_16",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1443",
+      "stmt_id": "Herstein|exercise_2_5_23",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-818",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-861",
+      "stmt_id": "Herstein|exercise_2_3_16",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-936",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-342",
+      "stmt_id": "Munkres|exercise_32_2a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-782",
+      "stmt_id": "Munkres|exercise_18_8a",
+      "label": true,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-627",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1186",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-119",
+      "stmt_id": "Dummit-Foote|exercise_4_5_21",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1216",
+      "stmt_id": "Munkres|exercise_33_7",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1118",
+      "stmt_id": "Munkres|exercise_23_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1120",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1013",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-764",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-958",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1400",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-379",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": true,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-834",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-983",
+      "stmt_id": "Artin|exercise_10_1_13",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1130",
+      "stmt_id": "Rudin|exercise_1_1b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-356",
+      "stmt_id": "Munkres|exercise_31_3",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-52",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-74",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1033",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-661",
+      "stmt_id": "Axler|exercise_5_24",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1313",
+      "stmt_id": "Artin|exercise_3_2_7",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1094",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-223",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1448",
+      "stmt_id": "Munkres|exercise_29_4",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1224",
+      "stmt_id": "Artin|exercise_10_4_7a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-61",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1316",
+      "stmt_id": "Artin|exercise_2_8_6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-932",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-996",
+      "stmt_id": "Dummit-Foote|exercise_1_6_23",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-82",
+      "stmt_id": "Artin|exercise_10_1_13",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1027",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-280",
+      "stmt_id": "Dummit-Foote|exercise_7_1_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1302",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1275",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-768",
+      "stmt_id": "Dummit-Foote|exercise_4_5_21",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1173",
+      "stmt_id": "Dummit-Foote|exercise_1_1_20",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-310",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-672",
+      "stmt_id": "Dummit-Foote|exercise_2_1_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-403",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1292",
+      "stmt_id": "Axler|exercise_6_3",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-507",
+      "stmt_id": "Dummit-Foote|exercise_2_1_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-38",
+      "stmt_id": "Rudin|exercise_1_4",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1232",
+      "stmt_id": "Rudin|exercise_4_11a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1221",
+      "stmt_id": "Rudin|exercise_1_4",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-611",
+      "stmt_id": "Rudin|exercise_5_5",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1153",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-842",
+      "stmt_id": "Dummit-Foote|exercise_3_4_5b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-221",
+      "stmt_id": "Rudin|exercise_3_2a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1123",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1229",
+      "stmt_id": "Rudin|exercise_1_1b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-134",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-644",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1236",
+      "stmt_id": "Dummit-Foote|exercise_7_1_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-798",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-517",
+      "stmt_id": "Shakarchi|exercise_1_13b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1010",
+      "stmt_id": "Herstein|exercise_2_5_52",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-759",
+      "stmt_id": "Rudin|exercise_4_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1023",
+      "stmt_id": "Herstein|exercise_2_5_23",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-395",
+      "stmt_id": "Herstein|exercise_2_5_23",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-432",
+      "stmt_id": "Axler|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-905",
+      "stmt_id": "Dummit-Foote|exercise_3_1_22a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-523",
+      "stmt_id": "Dummit-Foote|exercise_7_3_16",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-908",
+      "stmt_id": "Dummit-Foote|exercise_7_1_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-696",
+      "stmt_id": "Dummit-Foote|exercise_7_1_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1172",
+      "stmt_id": "Dummit-Foote|exercise_1_1_29",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1206",
+      "stmt_id": "Dummit-Foote|exercise_3_4_5b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-75",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-286",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-245",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-162",
+      "stmt_id": "Rudin|exercise_4_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-117",
+      "stmt_id": "Munkres|exercise_13_8a",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-825",
+      "stmt_id": "Dummit-Foote|exercise_7_1_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1278",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1119",
+      "stmt_id": "Munkres|exercise_34_9",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1238",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-69",
+      "stmt_id": "Artin|exercise_10_1_13",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-349",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-350",
+      "stmt_id": "Artin|exercise_11_13_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-346",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-544",
+      "stmt_id": "Pugh|exercise_3_63a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-454",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-999",
+      "stmt_id": "Munkres|exercise_18_8a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-583",
+      "stmt_id": "Dummit-Foote|exercise_7_3_16",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1449",
+      "stmt_id": "Dummit-Foote|exercise_1_1_29",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1037",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1208",
+      "stmt_id": "Putnam|exercise_1999_b4",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-789",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-542",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1021",
+      "stmt_id": "Dummit-Foote|exercise_4_4_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1175",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1331",
+      "stmt_id": "Munkres|exercise_22_5",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1423",
+      "stmt_id": "Munkres|exercise_33_7",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-941",
+      "stmt_id": "Artin|exercise_3_7_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1233",
+      "stmt_id": "Artin|exercise_2_8_6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1274",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-228",
+      "stmt_id": "Dummit-Foote|exercise_4_5_21",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1340",
+      "stmt_id": "Herstein|exercise_2_5_23",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-546",
+      "stmt_id": "Artin|exercise_2_8_6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1287",
+      "stmt_id": "Herstein|exercise_2_1_26",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-561",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-211",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-844",
+      "stmt_id": "Munkres|exercise_34_9",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-873",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-584",
+      "stmt_id": "Rudin|exercise_1_1b",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-131",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-167",
+      "stmt_id": "Dummit-Foote|exercise_1_6_23",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-791",
+      "stmt_id": "Munkres|exercise_23_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-953",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-270",
+      "stmt_id": "Munkres|exercise_31_3",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-452",
+      "stmt_id": "Dummit-Foote|exercise_4_5_21",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-404",
+      "stmt_id": "Dummit-Foote|exercise_2_1_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-984",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-352",
+      "stmt_id": "Herstein|exercise_2_1_18",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-112",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1176",
+      "stmt_id": "Rudin|exercise_4_11a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-590",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1320",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-456",
+      "stmt_id": "Dummit-Foote|exercise_4_4_6b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-609",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-846",
+      "stmt_id": "Artin|exercise_11_4_6a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1061",
+      "stmt_id": "Dummit-Foote|exercise_4_5_19",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-4",
+      "stmt_id": "Artin|exercise_6_4_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1079",
+      "stmt_id": "Dummit-Foote|exercise_3_1_22a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1129",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1185",
+      "stmt_id": "Munkres|exercise_31_3",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-709",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1205",
+      "stmt_id": "Dummit-Foote|exercise_1_6_23",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-176",
+      "stmt_id": "Dummit-Foote|exercise_7_1_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-34",
+      "stmt_id": "Artin|exercise_10_4_7a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-957",
+      "stmt_id": "Munkres|exercise_33_7",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-110",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-493",
+      "stmt_id": "Munkres|exercise_34_9",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-899",
+      "stmt_id": "Herstein|exercise_2_5_52",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-785",
+      "stmt_id": "Artin|exercise_3_2_7",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1406",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-965",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-368",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1092",
+      "stmt_id": "Rudin|exercise_1_4",
+      "label": true,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1056",
+      "stmt_id": "Dummit-Foote|exercise_1_1_20",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-581",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-778",
+      "stmt_id": "Dummit-Foote|exercise_4_5_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-636",
+      "stmt_id": "Munkres|exercise_13_8a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-184",
+      "stmt_id": "Artin|exercise_11_4_6a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-973",
+      "stmt_id": "Dummit-Foote|exercise_4_5_23",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-820",
+      "stmt_id": "Munkres|exercise_23_3",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-597",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1146",
+      "stmt_id": "Munkres|exercise_18_8a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-120",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1213",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-181",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-569",
+      "stmt_id": "Dummit-Foote|exercise_2_1_13",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-284",
+      "stmt_id": "Munkres|exercise_30_10",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1044",
+      "stmt_id": "Munkres|exercise_18_8a",
+      "label": true,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1322",
+      "stmt_id": "Axler|exercise_1_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1179",
+      "stmt_id": "Dummit-Foote|exercise_7_1_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-931",
+      "stmt_id": "Dummit-Foote|exercise_1_1_20",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-476",
+      "stmt_id": "Axler|exercise_1_2",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1308",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1068",
+      "stmt_id": "Artin|exercise_3_7_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-177",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1246",
+      "stmt_id": "Dummit-Foote|exercise_1_1_2a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1380",
+      "stmt_id": "Rudin|exercise_5_5",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-528",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": true,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-267",
+      "stmt_id": "Artin|exercise_6_4_12",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-862",
+      "stmt_id": "Dummit-Foote|exercise_7_3_16",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-396",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1014",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-646",
+      "stmt_id": "Axler|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-826",
+      "stmt_id": "Munkres|exercise_28_6",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-563",
+      "stmt_id": "Munkres|exercise_22_5",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1370",
+      "stmt_id": "Rudin|exercise_5_3",
+      "label": true,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1290",
+      "stmt_id": "Dummit-Foote|exercise_7_3_16",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-726",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-841",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-881",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-490",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-77",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-760",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": true,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1255",
+      "stmt_id": "Pugh|exercise_3_1",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-690",
+      "stmt_id": "Dummit-Foote|exercise_3_2_8",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1402",
+      "stmt_id": "Pugh|exercise_2_32a",
+      "label": true,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-773",
+      "stmt_id": "Dummit-Foote|exercise_1_1_15",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-574",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-643",
+      "stmt_id": "Rudin|exercise_3_5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-123",
+      "stmt_id": "Herstein|exercise_5_6_14",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1431",
+      "stmt_id": "Munkres|exercise_18_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1098",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-97",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-836",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-739",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1288",
+      "stmt_id": "Artin|exercise_11_13_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-427",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1363",
+      "stmt_id": "Dummit-Foote|exercise_4_4_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-275",
+      "stmt_id": "Dummit-Foote|exercise_1_1_2a",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-800",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1257",
+      "stmt_id": "Axler|exercise_3_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-532",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1142",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1031",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1117",
+      "stmt_id": "Munkres|exercise_23_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1415",
+      "stmt_id": "Munkres|exercise_29_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1427",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-440",
+      "stmt_id": "Dummit-Foote|exercise_7_2_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-437",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-942",
+      "stmt_id": "Herstein|exercise_4_5_23",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-916",
+      "stmt_id": "Pugh|exercise_4_15a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1355",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-680",
+      "stmt_id": "Munkres|exercise_13_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-840",
+      "stmt_id": "Ireland-Rosen|exercise_2_27a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-262",
+      "stmt_id": "Dummit-Foote|exercise_4_4_8a",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-717",
+      "stmt_id": "Munkres|exercise_13_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-533",
+      "stmt_id": "Herstein|exercise_2_3_16",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-607",
+      "stmt_id": "Munkres|exercise_28_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-743",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-769",
+      "stmt_id": "Dummit-Foote|exercise_1_1_22b",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-475",
+      "stmt_id": "Ireland-Rosen|exercise_4_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-453",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1169",
+      "stmt_id": "Ireland-Rosen|exercise_4_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-315",
+      "stmt_id": "Herstein|exercise_2_1_18",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-285",
+      "stmt_id": "Herstein|exercise_4_3_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1430",
+      "stmt_id": "Herstein|exercise_3_2_21",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-11",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-239",
+      "stmt_id": "Artin|exercise_10_6_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-377",
+      "stmt_id": "Dummit-Foote|exercise_1_1_2a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-626",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1116",
+      "stmt_id": "Herstein|exercise_5_1_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-201",
+      "stmt_id": "Dummit-Foote|exercise_8_3_6b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-366",
+      "stmt_id": "Herstein|exercise_2_7_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1356",
+      "stmt_id": "Dummit-Foote|exercise_9_1_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-925",
+      "stmt_id": "Herstein|exercise_4_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-231",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-250",
+      "stmt_id": "Ireland-Rosen|exercise_2_27a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1156",
+      "stmt_id": "Herstein|exercise_2_11_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-692",
+      "stmt_id": "Dummit-Foote|exercise_9_1_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-893",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-438",
+      "stmt_id": "Rudin|exercise_1_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-796",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-638",
+      "stmt_id": "Rudin|exercise_5_5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-216",
+      "stmt_id": "Munkres|exercise_21_6b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-663",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-776",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-560",
+      "stmt_id": "Artin|exercise_11_4_6a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-633",
+      "stmt_id": "Munkres|exercise_32_2a",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1086",
+      "stmt_id": "Munkres|exercise_31_3",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1007",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1328",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1192",
+      "stmt_id": "Herstein|exercise_2_1_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-297",
+      "stmt_id": "Herstein|exercise_2_11_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1417",
+      "stmt_id": "Artin|exercise_10_6_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1002",
+      "stmt_id": "Dummit-Foote|exercise_1_1_15",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-72",
+      "stmt_id": "Rudin|exercise_3_5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-892",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-218",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1311",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-807",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-132",
+      "stmt_id": "Rudin|exercise_4_1a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1019",
+      "stmt_id": "Artin|exercise_11_4_6a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1441",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1074",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-202",
+      "stmt_id": "Dummit-Foote|exercise_3_2_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-41",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-401",
+      "stmt_id": "Munkres|exercise_31_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-618",
+      "stmt_id": "Herstein|exercise_2_11_7",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-639",
+      "stmt_id": "Herstein|exercise_2_10_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1351",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-997",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-375",
+      "stmt_id": "Herstein|exercise_3_2_21",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-753",
+      "stmt_id": "Munkres|exercise_24_3a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1042",
+      "stmt_id": "Dummit-Foote|exercise_7_3_16",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-406",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1342",
+      "stmt_id": "Dummit-Foote|exercise_8_2_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1357",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-598",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-518",
+      "stmt_id": "Putnam|exercise_1999_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1011",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1352",
+      "stmt_id": "Rudin|exercise_2_19a",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-604",
+      "stmt_id": "Munkres|exercise_24_3a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-388",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-966",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-567",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-991",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-754",
+      "stmt_id": "Rudin|exercise_4_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-596",
+      "stmt_id": "Herstein|exercise_2_7_7",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-897",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1319",
+      "stmt_id": "Dummit-Foote|exercise_4_4_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-261",
+      "stmt_id": "Munkres|exercise_20_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-853",
+      "stmt_id": "Artin|exercise_10_6_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-93",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-761",
+      "stmt_id": "Herstein|exercise_2_5_23",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-645",
+      "stmt_id": "Rudin|exercise_4_8a",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-886",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-987",
+      "stmt_id": "Dummit-Foote|exercise_8_3_5a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-56",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-701",
+      "stmt_id": "Herstein|exercise_3_2_21",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-538",
+      "stmt_id": "Artin|exercise_11_4_6a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1072",
+      "stmt_id": "Rudin|exercise_3_21",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-848",
+      "stmt_id": "Axler|exercise_1_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1171",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-610",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-911",
+      "stmt_id": "Axler|exercise_5_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-623",
+      "stmt_id": "Herstein|exercise_2_10_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-55",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-990",
+      "stmt_id": "Artin|exercise_3_2_7",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-927",
+      "stmt_id": "Pugh|exercise_3_63a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-866",
+      "stmt_id": "Dummit-Foote|exercise_1_1_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1360",
+      "stmt_id": "Shakarchi|exercise_1_13b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-665",
+      "stmt_id": "Pugh|exercise_3_63a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-671",
+      "stmt_id": "Rudin|exercise_1_1b",
+      "label": false,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1133",
+      "stmt_id": "Rudin|exercise_4_1a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-189",
+      "stmt_id": "Herstein|exercise_5_6_14",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-186",
+      "stmt_id": "Dummit-Foote|exercise_11_1_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-930",
+      "stmt_id": "Dummit-Foote|exercise_4_4_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-766",
+      "stmt_id": "Ireland-Rosen|exercise_4_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-630",
+      "stmt_id": "Ireland-Rosen|exercise_4_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-118",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1147",
+      "stmt_id": "Artin|exercise_3_7_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-290",
+      "stmt_id": "Ireland-Rosen|exercise_4_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-506",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-986",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-420",
+      "stmt_id": "Herstein|exercise_2_1_18",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-33",
+      "stmt_id": "Ireland-Rosen|exercise_12_12",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-87",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-505",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-716",
+      "stmt_id": "Herstein|exercise_4_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-929",
+      "stmt_id": "Rudin|exercise_4_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1396",
+      "stmt_id": "Rudin|exercise_5_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1070",
+      "stmt_id": "Dummit-Foote|exercise_8_2_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-341",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-718",
+      "stmt_id": "Pugh|exercise_4_15a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-500",
+      "stmt_id": "Herstein|exercise_5_1_8",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-628",
+      "stmt_id": "Rudin|exercise_5_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1058",
+      "stmt_id": "Dummit-Foote|exercise_3_2_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-552",
+      "stmt_id": "Dummit-Foote|exercise_4_4_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-878",
+      "stmt_id": "Axler|exercise_6_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1418",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-915",
+      "stmt_id": "Herstein|exercise_5_4_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1294",
+      "stmt_id": "Munkres|exercise_21_6b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-635",
+      "stmt_id": "Rudin|exercise_4_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-241",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-298",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-928",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-706",
+      "stmt_id": "Axler|exercise_6_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1365",
+      "stmt_id": "Rudin|exercise_5_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-235",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-539",
+      "stmt_id": "Dummit-Foote|exercise_1_1_22b",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1265",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-685",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-49",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-367",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-172",
+      "stmt_id": "Pugh|exercise_4_15a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1333",
+      "stmt_id": "Herstein|exercise_2_7_7",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1332",
+      "stmt_id": "Munkres|exercise_18_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-740",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1438",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-926",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-208",
+      "stmt_id": "Rudin|exercise_2_29",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1106",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-45",
+      "stmt_id": "Rudin|exercise_2_27b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1076",
+      "stmt_id": "Ireland-Rosen|exercise_12_12",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-139",
+      "stmt_id": "Munkres|exercise_21_6b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-12",
+      "stmt_id": "Axler|exercise_6_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-513",
+      "stmt_id": "Artin|exercise_13_6_10",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-979",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1409",
+      "stmt_id": "Dummit-Foote|exercise_9_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1416",
+      "stmt_id": "Munkres|exercise_29_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-715",
+      "stmt_id": "Dummit-Foote|exercise_11_1_13",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-244",
+      "stmt_id": "Putnam|exercise_2014_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1410",
+      "stmt_id": "Herstein|exercise_2_1_18",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1190",
+      "stmt_id": "Ireland-Rosen|exercise_4_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-482",
+      "stmt_id": "Dummit-Foote|exercise_9_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-477",
+      "stmt_id": "Herstein|exercise_4_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-266",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-240",
+      "stmt_id": "Herstein|exercise_4_5_23",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-220",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-755",
+      "stmt_id": "Munkres|exercise_28_6",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1254",
+      "stmt_id": "Rudin|exercise_1_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-708",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1425",
+      "stmt_id": "Rudin|exercise_2_19a",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1144",
+      "stmt_id": "Ireland-Rosen|exercise_4_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-599",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-524",
+      "stmt_id": "Pugh|exercise_2_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-733",
+      "stmt_id": "Munkres|exercise_24_3a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1227",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-888",
+      "stmt_id": "Dummit-Foote|exercise_11_1_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-850",
+      "stmt_id": "Putnam|exercise_2014_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-868",
+      "stmt_id": "Herstein|exercise_4_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-514",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-360",
+      "stmt_id": "Herstein|exercise_2_5_43",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-625",
+      "stmt_id": "Dummit-Foote|exercise_3_4_5b",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1259",
+      "stmt_id": "Putnam|exercise_2014_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-981",
+      "stmt_id": "Munkres|exercise_34_9",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-219",
+      "stmt_id": "Herstein|exercise_2_1_18",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-196",
+      "stmt_id": "Dummit-Foote|exercise_1_1_15",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1000",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1421",
+      "stmt_id": "Munkres|exercise_21_6b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-575",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-59",
+      "stmt_id": "Munkres|exercise_32_2a",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1160",
+      "stmt_id": "Munkres|exercise_20_2",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1405",
+      "stmt_id": "Putnam|exercise_1999_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-314",
+      "stmt_id": "Putnam|exercise_2014_a5",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-803",
+      "stmt_id": "Herstein|exercise_2_5_43",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1368",
+      "stmt_id": "Herstein|exercise_2_7_7",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-720",
+      "stmt_id": "Herstein|exercise_4_5_23",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1241",
+      "stmt_id": "Dummit-Foote|exercise_3_2_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-169",
+      "stmt_id": "Herstein|exercise_2_7_7",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-391",
+      "stmt_id": "Pugh|exercise_4_15a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-355",
+      "stmt_id": "Dummit-Foote|exercise_1_1_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-486",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-158",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-689",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-336",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-804",
+      "stmt_id": "Rudin|exercise_4_21a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-856",
+      "stmt_id": "Rudin|exercise_4_1a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1269",
+      "stmt_id": "Artin|exercise_11_4_6a",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1162",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-229",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1429",
+      "stmt_id": "Munkres|exercise_23_3",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1234",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1389",
+      "stmt_id": "Artin|exercise_3_7_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1346",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-691",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-756",
+      "stmt_id": "Dummit-Foote|exercise_8_2_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-385",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-35",
+      "stmt_id": "Munkres|exercise_23_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1364",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1163",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-2",
+      "stmt_id": "Herstein|exercise_2_3_16",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-557",
+      "stmt_id": "Ireland-Rosen|exercise_4_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-857",
+      "stmt_id": "Munkres|exercise_32_2a",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-258",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-205",
+      "stmt_id": "Dummit-Foote|exercise_1_1_15",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-9",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1387",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1338",
+      "stmt_id": "Herstein|exercise_2_5_52",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-566",
+      "stmt_id": "Ireland-Rosen|exercise_4_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-27",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-555",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1296",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-682",
+      "stmt_id": "Rudin|exercise_4_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1067",
+      "stmt_id": "Pugh|exercise_2_32a",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-71",
+      "stmt_id": "Dummit-Foote|exercise_8_2_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-554",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-351",
+      "stmt_id": "Dummit-Foote|exercise_8_3_5a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-558",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-543",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-933",
+      "stmt_id": "Herstein|exercise_2_5_43",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1310",
+      "stmt_id": "Herstein|exercise_2_1_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1401",
+      "stmt_id": "Ireland-Rosen|exercise_12_12",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-920",
+      "stmt_id": "Dummit-Foote|exercise_7_2_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-947",
+      "stmt_id": "Pugh|exercise_4_15a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1099",
+      "stmt_id": "Herstein|exercise_2_5_52",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-163",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1249",
+      "stmt_id": "Herstein|exercise_2_5_52",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-448",
+      "stmt_id": "Putnam|exercise_2014_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1093",
+      "stmt_id": "Pugh|exercise_2_32a",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-694",
+      "stmt_id": "Axler|exercise_6_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-960",
+      "stmt_id": "Pugh|exercise_2_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1182",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-160",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1272",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-492",
+      "stmt_id": "Putnam|exercise_2014_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1373",
+      "stmt_id": "Herstein|exercise_5_1_8",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-304",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1359",
+      "stmt_id": "Rudin|exercise_2_19a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1063",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-462",
+      "stmt_id": "Munkres|exercise_18_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-127",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-589",
+      "stmt_id": "Munkres|exercise_24_3a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1057",
+      "stmt_id": "Pugh|exercise_3_63a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-950",
+      "stmt_id": "Rudin|exercise_2_19a",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-154",
+      "stmt_id": "Dummit-Foote|exercise_8_3_6b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-577",
+      "stmt_id": "Munkres|exercise_20_2",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1181",
+      "stmt_id": "Rudin|exercise_1_1b",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-316",
+      "stmt_id": "Artin|exercise_6_4_12",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1047",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1273",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1178",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-822",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-587",
+      "stmt_id": "Munkres|exercise_29_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-142",
+      "stmt_id": "Artin|exercise_11_2_13",
+      "label": false,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-998",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1239",
+      "stmt_id": "Artin|exercise_10_1_13",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-333",
+      "stmt_id": "Dummit-Foote|exercise_1_1_15",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-282",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-985",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-39",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1289",
+      "stmt_id": "Herstein|exercise_5_6_14",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-657",
+      "stmt_id": "Artin|exercise_3_7_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-224",
+      "stmt_id": "Herstein|exercise_4_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-313",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1378",
+      "stmt_id": "Dummit-Foote|exercise_8_3_5a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1009",
+      "stmt_id": "Axler|exercise_6_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-904",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-821",
+      "stmt_id": "Putnam|exercise_1999_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1393",
+      "stmt_id": "Herstein|exercise_2_3_16",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-900",
+      "stmt_id": "Dummit-Foote|exercise_11_1_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-582",
+      "stmt_id": "Dummit-Foote|exercise_8_2_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-446",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-278",
+      "stmt_id": "Shakarchi|exercise_1_13b",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-735",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1145",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-291",
+      "stmt_id": "Artin|exercise_10_4_7a",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1121",
+      "stmt_id": "Munkres|exercise_29_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-23",
+      "stmt_id": "Shakarchi|exercise_2_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-308",
+      "stmt_id": "Herstein|exercise_5_1_8",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-451",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-605",
+      "stmt_id": "Dummit-Foote|exercise_9_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1166",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1022",
+      "stmt_id": "Dummit-Foote|exercise_9_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-115",
+      "stmt_id": "Ireland-Rosen|exercise_4_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-786",
+      "stmt_id": "Axler|exercise_6_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-473",
+      "stmt_id": "Dummit-Foote|exercise_1_1_15",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1045",
+      "stmt_id": "Herstein|exercise_5_1_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-669",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-606",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1385",
+      "stmt_id": "Herstein|exercise_2_3_16",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-698",
+      "stmt_id": "Munkres|exercise_28_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-138",
+      "stmt_id": "Munkres|exercise_23_6",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-831",
+      "stmt_id": "Axler|exercise_5_11",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-242",
+      "stmt_id": "Dummit-Foote|exercise_9_1_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-961",
+      "stmt_id": "Herstein|exercise_5_4_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-745",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-684",
+      "stmt_id": "Dummit-Foote|exercise_4_4_6b",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-497",
+      "stmt_id": "Rudin|exercise_5_5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1244",
+      "stmt_id": "Dummit-Foote|exercise_1_1_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-962",
+      "stmt_id": "Dummit-Foote|exercise_1_3_8",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-793",
+      "stmt_id": "Rudin|exercise_5_5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-535",
+      "stmt_id": "Dummit-Foote|exercise_9_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-99",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1220",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1336",
+      "stmt_id": "Munkres|exercise_23_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-512",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1131",
+      "stmt_id": "Shakarchi|exercise_1_13b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1250",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1433",
+      "stmt_id": "Dummit-Foote|exercise_8_3_6b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-384",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-937",
+      "stmt_id": "Dummit-Foote|exercise_4_5_15",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-271",
+      "stmt_id": "Rudin|exercise_2_29",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-204",
+      "stmt_id": "Dummit-Foote|exercise_1_3_8",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1073",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-847",
+      "stmt_id": "Herstein|exercise_2_3_16",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-780",
+      "stmt_id": "Munkres|exercise_24_3a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-447",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1032",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1127",
+      "stmt_id": "Putnam|exercise_1999_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1263",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-747",
+      "stmt_id": "Rudin|exercise_5_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1226",
+      "stmt_id": "Munkres|exercise_23_6",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-621",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-934",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-303",
+      "stmt_id": "Herstein|exercise_3_2_21",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-133",
+      "stmt_id": "Munkres|exercise_30_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-874",
+      "stmt_id": "Rudin|exercise_5_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-105",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-519",
+      "stmt_id": "Rudin|exercise_1_4",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-955",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-869",
+      "stmt_id": "Munkres|exercise_30_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-968",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1436",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1339",
+      "stmt_id": "Herstein|exercise_2_7_7",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-781",
+      "stmt_id": "Munkres|exercise_28_6",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-839",
+      "stmt_id": "Dummit-Foote|exercise_4_5_33",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-7",
+      "stmt_id": "Dummit-Foote|exercise_8_3_6b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-461",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-895",
+      "stmt_id": "Pugh|exercise_2_46",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-64",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-586",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1237",
+      "stmt_id": "Munkres|exercise_32_2a",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-417",
+      "stmt_id": "Dummit-Foote|exercise_9_1_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-699",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-494",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1115",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1398",
+      "stmt_id": "Dummit-Foote|exercise_8_3_5a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-400",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-704",
+      "stmt_id": "Herstein|exercise_5_4_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1304",
+      "stmt_id": "Herstein|exercise_4_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-471",
+      "stmt_id": "Herstein|exercise_3_2_21",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-652",
+      "stmt_id": "Herstein|exercise_4_3_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-943",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-797",
+      "stmt_id": "Herstein|exercise_5_1_8",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1025",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-608",
+      "stmt_id": "Herstein|exercise_3_2_21",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-326",
+      "stmt_id": "Herstein|exercise_4_5_23",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-470",
+      "stmt_id": "Dummit-Foote|exercise_9_1_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-858",
+      "stmt_id": "Dummit-Foote|exercise_7_2_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-91",
+      "stmt_id": "Artin|exercise_11_2_13",
+      "label": false,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-758",
+      "stmt_id": "Dummit-Foote|exercise_4_5_33",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1100",
+      "stmt_id": "Pugh|exercise_2_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-444",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-18",
+      "stmt_id": "Rudin|exercise_2_19a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1315",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1231",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-53",
+      "stmt_id": "Dummit-Foote|exercise_1_3_8",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-731",
+      "stmt_id": "Axler|exercise_6_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-469",
+      "stmt_id": "Rudin|exercise_4_1a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-419",
+      "stmt_id": "Dummit-Foote|exercise_4_5_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-944",
+      "stmt_id": "Dummit-Foote|exercise_4_5_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-910",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-810",
+      "stmt_id": "Munkres|exercise_31_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1413",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1105",
+      "stmt_id": "Rudin|exercise_4_1a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1235",
+      "stmt_id": "Dummit-Foote|exercise_4_4_8a",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-347",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-248",
+      "stmt_id": "Ireland-Rosen|exercise_2_27a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-864",
+      "stmt_id": "Munkres|exercise_23_6",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-148",
+      "stmt_id": "Herstein|exercise_2_5_52",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-170",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-424",
+      "stmt_id": "Munkres|exercise_13_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-182",
+      "stmt_id": "Dummit-Foote|exercise_9_1_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-334",
+      "stmt_id": "Ireland-Rosen|exercise_4_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-641",
+      "stmt_id": "Pugh|exercise_3_63a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-591",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-126",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1317",
+      "stmt_id": "Rudin|exercise_4_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1113",
+      "stmt_id": "Ireland-Rosen|exercise_4_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-213",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1204",
+      "stmt_id": "Dummit-Foote|exercise_8_3_5a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1347",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-615",
+      "stmt_id": "Artin|exercise_3_2_7",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1343",
+      "stmt_id": "Artin|exercise_13_6_10",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1064",
+      "stmt_id": "Dummit-Foote|exercise_2_1_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-521",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-373",
+      "stmt_id": "Herstein|exercise_2_7_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-407",
+      "stmt_id": "Dummit-Foote|exercise_3_4_5b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1020",
+      "stmt_id": "Munkres|exercise_23_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-30",
+      "stmt_id": "Dummit-Foote|exercise_4_5_33",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-152",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-279",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-765",
+      "stmt_id": "Herstein|exercise_5_4_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1386",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1196",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-136",
+      "stmt_id": "Dummit-Foote|exercise_1_1_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-501",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1071",
+      "stmt_id": "Dummit-Foote|exercise_9_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-164",
+      "stmt_id": "Munkres|exercise_20_2",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-917",
+      "stmt_id": "Dummit-Foote|exercise_8_3_5a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-257",
+      "stmt_id": "Munkres|exercise_28_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1240",
+      "stmt_id": "Dummit-Foote|exercise_9_1_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-24",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-748",
+      "stmt_id": "Dummit-Foote|exercise_1_1_2a",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-413",
+      "stmt_id": "Dummit-Foote|exercise_4_5_33",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-320",
+      "stmt_id": "Rudin|exercise_3_5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-6",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-802",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1214",
+      "stmt_id": "Herstein|exercise_2_11_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-956",
+      "stmt_id": "Dummit-Foote|exercise_8_3_5a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-787",
+      "stmt_id": "Rudin|exercise_2_19a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-736",
+      "stmt_id": "Munkres|exercise_13_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-723",
+      "stmt_id": "Axler|exercise_1_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-233",
+      "stmt_id": "Dummit-Foote|exercise_9_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1",
+      "stmt_id": "Putnam|exercise_1998_b6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-236",
+      "stmt_id": "Munkres|exercise_33_7",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-165",
+      "stmt_id": "Dummit-Foote|exercise_7_2_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-949",
+      "stmt_id": "Herstein|exercise_4_5_23",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-658",
+      "stmt_id": "Rudin|exercise_4_1a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1003",
+      "stmt_id": "Munkres|exercise_43_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-411",
+      "stmt_id": "Dummit-Foote|exercise_9_1_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-885",
+      "stmt_id": "Herstein|exercise_4_5_23",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-255",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1051",
+      "stmt_id": "Rudin|exercise_2_25",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-8",
+      "stmt_id": "Artin|exercise_10_6_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-206",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-390",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-386",
+      "stmt_id": "Axler|exercise_5_11",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1080",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1134",
+      "stmt_id": "Herstein|exercise_2_3_16",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-402",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-144",
+      "stmt_id": "Pugh|exercise_2_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1167",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-392",
+      "stmt_id": "Rudin|exercise_4_1a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1083",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-276",
+      "stmt_id": "Dummit-Foote|exercise_11_1_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-777",
+      "stmt_id": "Munkres|exercise_30_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-361",
+      "stmt_id": "Rudin|exercise_5_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1187",
+      "stmt_id": "Dummit-Foote|exercise_1_1_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-923",
+      "stmt_id": "Rudin|exercise_4_15",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-975",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-556",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1180",
+      "stmt_id": "Ireland-Rosen|exercise_4_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-467",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-746",
+      "stmt_id": "Munkres|exercise_18_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-479",
+      "stmt_id": "Rudin|exercise_2_19a",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-496",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-852",
+      "stmt_id": "Ireland-Rosen|exercise_4_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1312",
+      "stmt_id": "Herstein|exercise_2_1_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1006",
+      "stmt_id": "Rudin|exercise_2_29",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-788",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-180",
+      "stmt_id": "Munkres|exercise_23_6",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1107",
+      "stmt_id": "Rudin|exercise_4_1a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1403",
+      "stmt_id": "Dummit-Foote|exercise_1_1_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-121",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-76",
+      "stmt_id": "Axler|exercise_1_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-894",
+      "stmt_id": "Axler|exercise_1_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1141",
+      "stmt_id": "Rudin|exercise_2_29",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1329",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-907",
+      "stmt_id": "Rudin|exercise_3_2a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1260",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1395",
+      "stmt_id": "Dummit-Foote|exercise_7_3_16",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-251",
+      "stmt_id": "Rudin|exercise_2_29",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-670",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-902",
+      "stmt_id": "Dummit-Foote|exercise_9_1_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1379",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-214",
+      "stmt_id": "Pugh|exercise_2_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-508",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1397",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-60",
+      "stmt_id": "Herstein|exercise_4_5_23",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-570",
+      "stmt_id": "Munkres|exercise_43_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1024",
+      "stmt_id": "Herstein|exercise_4_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1327",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-102",
+      "stmt_id": "Dummit-Foote|exercise_7_1_12",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-175",
+      "stmt_id": "Artin|exercise_3_7_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-770",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-963",
+      "stmt_id": "Rudin|exercise_3_2a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-430",
+      "stmt_id": "Artin|exercise_2_3_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1295",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-945",
+      "stmt_id": "Artin|exercise_11_4_6c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-843",
+      "stmt_id": "Munkres|exercise_30_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-94",
+      "stmt_id": "Ireland-Rosen|exercise_4_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-426",
+      "stmt_id": "Munkres|exercise_13_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1089",
+      "stmt_id": "Munkres|exercise_23_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-265",
+      "stmt_id": "Axler|exercise_1_4",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-649",
+      "stmt_id": "Munkres|exercise_20_2",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-833",
+      "stmt_id": "Pugh|exercise_2_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1203",
+      "stmt_id": "Herstein|exercise_2_5_52",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-656",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-272",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-737",
+      "stmt_id": "Herstein|exercise_3_2_21",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-989",
+      "stmt_id": "Dummit-Foote|exercise_9_1_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-143",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-246",
+      "stmt_id": "Herstein|exercise_2_5_23",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1035",
+      "stmt_id": "Axler|exercise_1_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1217",
+      "stmt_id": "Herstein|exercise_5_1_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-439",
+      "stmt_id": "Artin|exercise_10_6_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-749",
+      "stmt_id": "Munkres|exercise_20_2",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1382",
+      "stmt_id": "Rudin|exercise_1_1b",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-714",
+      "stmt_id": "Munkres|exercise_16_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-283",
+      "stmt_id": "Artin|exercise_11_4_6a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-81",
+      "stmt_id": "Dummit-Foote|exercise_1_1_22b",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1334",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1177",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-994",
+      "stmt_id": "Munkres|exercise_21_6b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-232",
+      "stmt_id": "Munkres|exercise_34_9",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-116",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1391",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-832",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-988",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1189",
+      "stmt_id": "Rudin|exercise_1_1b",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-887",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-762",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-332",
+      "stmt_id": "Herstein|exercise_5_1_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-193",
+      "stmt_id": "Dummit-Foote|exercise_3_2_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1038",
+      "stmt_id": "Pugh|exercise_3_63a",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-309",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1253",
+      "stmt_id": "Axler|exercise_1_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1012",
+      "stmt_id": "Munkres|exercise_43_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1345",
+      "stmt_id": "Munkres|exercise_24_3a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-135",
+      "stmt_id": "Herstein|exercise_5_6_14",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-734",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-637",
+      "stmt_id": "Ireland-Rosen|exercise_4_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-527",
+      "stmt_id": "Pugh|exercise_2_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-277",
+      "stmt_id": "Munkres|exercise_33_7",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-363",
+      "stmt_id": "Putnam|exercise_1999_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-146",
+      "stmt_id": "Herstein|exercise_2_2_6c",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-827",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-830",
+      "stmt_id": "Herstein|exercise_2_10_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-877",
+      "stmt_id": "Munkres|exercise_28_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-668",
+      "stmt_id": "Rudin|exercise_3_2a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-580",
+      "stmt_id": "Rudin|exercise_3_5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1043",
+      "stmt_id": "Ireland-Rosen|exercise_3_10",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1324",
+      "stmt_id": "Herstein|exercise_2_3_16",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-732",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-568",
+      "stmt_id": "Dummit-Foote|exercise_1_1_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1219",
+      "stmt_id": "Putnam|exercise_1999_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1069",
+      "stmt_id": "Pugh|exercise_4_15a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-667",
+      "stmt_id": "Herstein|exercise_2_11_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-408",
+      "stmt_id": "Dummit-Foote|exercise_3_2_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-0",
+      "stmt_id": "Dummit-Foote|exercise_9_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-42",
+      "stmt_id": "Putnam|exercise_1999_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-515",
+      "stmt_id": "Munkres|exercise_43_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-835",
+      "stmt_id": "Rudin|exercise_2_29",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1018",
+      "stmt_id": "Dummit-Foote|exercise_9_4_2c",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-896",
+      "stmt_id": "Dummit-Foote|exercise_4_5_15",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1125",
+      "stmt_id": "Artin|exercise_10_6_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-640",
+      "stmt_id": "Ireland-Rosen|exercise_4_11",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-463",
+      "stmt_id": "Ireland-Rosen|exercise_4_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-914",
+      "stmt_id": "Munkres|exercise_43_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-178",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1088",
+      "stmt_id": "Dummit-Foote|exercise_7_1_12",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-207",
+      "stmt_id": "Dummit-Foote|exercise_1_1_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1228",
+      "stmt_id": "Munkres|exercise_34_9",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-83",
+      "stmt_id": "Herstein|exercise_4_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1060",
+      "stmt_id": "Ireland-Rosen|exercise_4_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1110",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-823",
+      "stmt_id": "Artin|exercise_10_6_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1066",
+      "stmt_id": "Axler|exercise_1_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-799",
+      "stmt_id": "Dummit-Foote|exercise_2_4_16a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-977",
+      "stmt_id": "Rudin|exercise_5_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-324",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-357",
+      "stmt_id": "Munkres|exercise_43_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-728",
+      "stmt_id": "Dummit-Foote|exercise_8_3_6b",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-951",
+      "stmt_id": "Munkres|exercise_18_13",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-32",
+      "stmt_id": "Rudin|exercise_4_4b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-664",
+      "stmt_id": "Herstein|exercise_2_1_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-96",
+      "stmt_id": "Herstein|exercise_5_3_7",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-281",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-498",
+      "stmt_id": "Dummit-Foote|exercise_8_3_5a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1330",
+      "stmt_id": "Putnam|exercise_2001_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-95",
+      "stmt_id": "Axler|exercise_6_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1085",
+      "stmt_id": "Munkres|exercise_20_2",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-200",
+      "stmt_id": "Putnam|exercise_2018_b4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-153",
+      "stmt_id": "Ireland-Rosen|exercise_3_4",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-993",
+      "stmt_id": "Rudin|exercise_3_5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-651",
+      "stmt_id": "Dummit-Foote|exercise_1_1_17",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1248",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-817",
+      "stmt_id": "Herstein|exercise_2_5_52",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-340",
+      "stmt_id": "Artin|exercise_11_2_13",
+      "label": false,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1305",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-573",
+      "stmt_id": "Artin|exercise_6_4_12",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1377",
+      "stmt_id": "Axler|exercise_6_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1101",
+      "stmt_id": "Axler|exercise_1_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-90",
+      "stmt_id": "Dummit-Foote|exercise_3_2_16",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-711",
+      "stmt_id": "Herstein|exercise_4_2_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-703",
+      "stmt_id": "Munkres|exercise_29_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-741",
+      "stmt_id": "Putnam|exercise_2018_a5",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-15",
+      "stmt_id": "Herstein|exercise_4_6_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-487",
+      "stmt_id": "Pugh|exercise_2_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1321",
+      "stmt_id": "Munkres|exercise_31_3",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1143",
+      "stmt_id": "Rudin|exercise_1_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1414",
+      "stmt_id": "Herstein|exercise_2_1_26",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1362",
+      "stmt_id": "Rudin|exercise_4_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1050",
+      "stmt_id": "Rudin|exercise_1_4",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-713",
+      "stmt_id": "Ireland-Rosen|exercise_5_28",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1046",
+      "stmt_id": "Dummit-Foote|exercise_4_4_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1095",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1442",
+      "stmt_id": "Artin|exercise_11_13_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1366",
+      "stmt_id": "Dummit-Foote|exercise_1_3_8",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-872",
+      "stmt_id": "Axler|exercise_1_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1194",
+      "stmt_id": "Munkres|exercise_31_1",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-322",
+      "stmt_id": "Dummit-Foote|exercise_1_1_15",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1028",
+      "stmt_id": "Munkres|exercise_21_6b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1284",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": false,
+      "t0": [],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1394",
+      "stmt_id": "Munkres|exercise_24_3a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-331",
+      "stmt_id": "Rudin|exercise_4_8a",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1154",
+      "stmt_id": "Dummit-Foote|exercise_4_4_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-779",
+      "stmt_id": "Shakarchi|exercise_1_13b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-815",
+      "stmt_id": "Ireland-Rosen|exercise_4_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-969",
+      "stmt_id": "Munkres|exercise_28_6",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-445",
+      "stmt_id": "Dummit-Foote|exercise_4_4_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-237",
+      "stmt_id": "Munkres|exercise_13_8a",
+      "label": false,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-318",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1344",
+      "stmt_id": "Munkres|exercise_23_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-481",
+      "stmt_id": "Shakarchi|exercise_1_13b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-98",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1376",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-464",
+      "stmt_id": "Dummit-Foote|exercise_4_5_33",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-571",
+      "stmt_id": "Rudin|exercise_2_27b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-854",
+      "stmt_id": "Rudin|exercise_1_18b",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-1049",
+      "stmt_id": "Dummit-Foote|exercise_9_4_9",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-260",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-450",
+      "stmt_id": "Munkres|exercise_31_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-959",
+      "stmt_id": "Shakarchi|exercise_3_14",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1104",
+      "stmt_id": "Herstein|exercise_2_7_7",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-62",
+      "stmt_id": "Herstein|exercise_2_2_3",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-151",
+      "stmt_id": "Herstein|exercise_2_3_16",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-254",
+      "stmt_id": "Artin|exercise_11_2_13",
+      "label": false,
+      "t0": [
+        "bwd",
+        "fwd"
+      ],
+      "t1": [
+        "bwd",
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-774",
+      "stmt_id": "Munkres|exercise_26_12",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-433",
+      "stmt_id": "Dummit-Foote|exercise_1_1_4",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-922",
+      "stmt_id": "Munkres|exercise_32_2c",
+      "label": false,
+      "t0": [
+        "bwd"
+      ],
+      "t1": [
+        "bwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-372",
+      "stmt_id": "Rudin|exercise_4_5b",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-1251",
+      "stmt_id": "Rudin|exercise_3_21",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-578",
+      "stmt_id": "Pugh|exercise_2_92",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-488",
+      "stmt_id": "Dummit-Foote|exercise_4_4_2",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-794",
+      "stmt_id": "Dummit-Foote|exercise_4_5_21",
+      "label": false,
+      "t0": [],
+      "t1": []
+    },
+    {
+      "row_id": "pnv-test-198",
+      "stmt_id": "Dummit-Foote|exercise_7_4_27",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    },
+    {
+      "row_id": "pnv-test-909",
+      "stmt_id": "Herstein|exercise_2_7_7",
+      "label": false,
+      "t0": [
+        "fwd"
+      ],
+      "t1": [
+        "fwd"
+      ]
+    }
+  ]
+}

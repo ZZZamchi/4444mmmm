@@ -1,0 +1,51 @@
+{
+ "g1_results.json": {
+  "model": "anthropic/claude-opus-5.5",
+  "faithful_local": 73,
+  "faithful_residual": 39,
+  "unfaithful_residual": 19
+ },
+ "g1_results_deepseek-v4.1-flash.json": {
+  "model": "deepseek/deepseek-v4.1-flash",
+  "faithful_local": 74,
+  "faithful_residual": 34,
+  "unfaithful_residual": 11
+ },
+ "g1_results_gpt-4.1-mini.json": {
+  "model": "openai/gpt-4.1-mini",
+  "faithful_local": 58,
+  "faithful_residual": 19
+ },
+ "g1_results_qwen3.8-27b-nothink.json": {
+  "model": "qwen/qwen3.8-27b-nothink",
+  "faithful_local": 62,
+  "faithful_residual": 20,
+  "unfaithful_residual": 1
+ },
+ "g4_results.json": {
+  "model": "anthropic/claude-opus-5.5",
+  "faithful_local": 197,
+  "faithful_residual": 41,
+  "unfaithful_local": 4,
+  "unfaithful_residual": 4
+ },
+ "g4_results_deepseek-v4.1-flash.json": {
+  "model": "deepseek/deepseek-v4.1-flash",
+  "faithful_local": 196,
+  "faithful_residual": 40,
+  "unfaithful_local": 2,
+  "unfaithful_residual": 2
+ },
+ "g4_results_gpt-4.1-mini.json": {
+  "model": "openai/gpt-4.1-mini",
+  "faithful_local": 195,
+  "faithful_residual": 40,
+  "unfaithful_local": 1
+ },
+ "g4_results_qwen3.8-27b-nothink.json": {
+  "model": "qwen/qwen3.8-27b-nothink",
+  "faithful_local": 195,
+  "faithful_residual": 40,
+  "unfaithful_local": 1
+ }
+}

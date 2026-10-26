@@ -1,0 +1,45 @@
+{
+  "rows": 1874,
+  "by_dataset": {
+    "math2001": {
+      "rows": 1232,
+      "truncated": 50,
+      "complete": 1182
+    },
+    "Directed-Topology-Lean-4": {
+      "rows": 438,
+      "truncated": 205,
+      "complete": 233
+    },
+    "adele-ring_locally-compact": {
+      "rows": 67,
+      "complete": 67
+    },
+    "Untangle": {
+      "rows": 133,
+      "complete": 133
+    },
+    "WhitneyGraustein": {
+      "rows": 4,
+      "truncated": 4
+    }
+  },
+  "truncated_share": 0.138,
+  "truncated_last_char": {
+    "D": 71,
+    "{": 39,
+    "e": 39,
+    "₀": 23,
+    "ℕ": 16,
+    "I": 14,
+    "s": 12,
+    "x": 11,
+    "ℤ": 8,
+    "3": 7,
+    "t": 7,
+    "𝕊": 4,
+    "a": 3,
+    "C": 2,
+    "'": 2
+  }
+}

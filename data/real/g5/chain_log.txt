@@ -1,0 +1,28 @@
+09:28:34 f2_full.json present
+09:28:34 start canon
+09:32:23 canon exit 0
+09:32:23 start claude-opus-5.5
+09:32:23 start deepseek-v4.1-flash
+14:43:03 claude-opus-5.5 exit 0 18640s
+20:08:10 deepseek-v4.1-flash exit 1073807364 38147s
+20:08:10 start gpt-4.1-mini
+20:08:10 start qwen3.8-27b-nothink
+20:08:10 gpt-4.1-mini exit 3221226091 0s
+20:08:10 qwen3.8-27b-nothink exit 3221226091 0s
+20:08:10 chain done
+00:29:23 f2_full.json present
+00:29:23 start deepseek-v4.1-flash
+10:20:05 f2_full.json present
+10:20:05 start deepseek-v4.1-flash
+10:20:05 start gpt-4.1-mini
+10:20:05 start qwen3.8-27b-nothink
+13:24:12 deepseek-v4.1-flash exit 0 11047s
+13:56:46 gpt-4.1-mini exit 0 13001s
+15:12:56 f2_full.json present
+15:12:56 start qwen3.8-27b-nothink
+15:21:40 qwen3.8-27b-nothink exit 1 524s
+15:21:40 chain done
+15:22:37 f2_full.json present
+15:22:37 start qwen3.8-27b-nothink
+16:05:07 qwen3.8-27b-nothink exit 0 2551s
+16:05:07 chain done

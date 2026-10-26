@@ -1,0 +1,3241 @@
+{
+ "pns-test-Artin|exercise_2_3_2": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] (a b : G), False",
+   "nonvac": "¬∀ {G : Type u} [Group G] (a b : G), False"
+  }
+ },
+ "pns-test-Artin|exercise_2_8_6": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ {G H : Type u} [Group G] [Group H], False",
+   "nonvac": "¬∀ {G H : Type u} [Group G] [Group H], False"
+  }
+ },
+ "pns-test-Artin|exercise_3_2_7": {
+  "status": "ok",
+  "info": "free=0 binders=5",
+  "goals": {
+   "vacuous": "∀ {F : Type u} [inst : Field F] {G : Type u} [inst_1 : Field G] (φ : F →+* G), False",
+   "nonvac": "¬∀ {F : Type u} [inst : Field F] {G : Type u} [inst_1 : Field G] (φ : F →+* G), False"
+  }
+ },
+ "pns-test-Artin|exercise_3_7_2": {
+  "status": "ok",
+  "info": "free=2 binders=10",
+  "goals": {
+   "vacuous": "∀ {K V : Type u} [inst : Field K] [Infinite K] [inst_2 : AddCommGroup V] [inst_3 : Module K V]\n  {ι : Type u} [Fintype ι] (γ : ι → Submodule K V), (∀ (i : ι), γ i ≠ ⊤) → False",
+   "nonvac": "¬∀ {K V : Type u} [inst : Field K] [Infinite K] [inst_2 : AddCommGroup V] [inst_3 : Module K V]\n    {ι : Type u} [Fintype ι] (γ : ι → Submodule K V), (∀ (i : ι), γ i ≠ ⊤) → False",
+   "trivial": "∀ {K V : Type u} [inst : Field K] [inst_1 : AddCommGroup V] [inst_2 : Module K V] {ι : Type u}\n  [Fintype ι] (γ : ι → Submodule K V), ⋃ i, ↑(γ i) ≠ ⊤",
+   "nontrivial": "¬∀ {K V : Type u} [inst : Field K] [inst_1 : AddCommGroup V] [inst_2 : Module K V]\n    {ι : Type u} [Fintype ι] (γ : ι → Submodule K V), ⋃ i, ↑(γ i) ≠ ⊤"
+  }
+ },
+ "pns-test-Artin|exercise_6_4_2": {
+  "status": "ok",
+  "info": "free=3 binders=8",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [inst : Fintype G] {p q : ℕ}, Prime p → Prime q → card G = p * q → False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [inst : Fintype G] {p q : ℕ}, Prime p → Prime q → card G = p * q → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G] {p q : ℕ}, ¬IsSimpleGroup G",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G] {p q : ℕ}, ¬IsSimpleGroup G"
+  }
+ },
+ "pns-test-Artin|exercise_6_4_12": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [inst : Fintype G], card G = 224 → False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [inst : Fintype G], card G = 224 → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G], ¬IsSimpleGroup G",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G], ¬IsSimpleGroup G"
+  }
+ },
+ "pns-test-Artin|exercise_10_1_13": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : Ring R] {x : R}, IsNilpotent x → False",
+   "nonvac": "¬∀ {R : Type u} [inst : Ring R] {x : R}, IsNilpotent x → False",
+   "trivial": "∀ {R : Type u} [inst : Ring R] {x : R}, IsUnit (1 + x)",
+   "nontrivial": "¬∀ {R : Type u} [inst : Ring R] {x : R}, IsUnit (1 + x)"
+  }
+ },
+ "pns-test-Artin|exercise_10_4_7a": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : CommRing R] (I J : Ideal R), I + J = ⊤ → False",
+   "nonvac": "¬∀ {R : Type u} [inst : CommRing R] (I J : Ideal R), I + J = ⊤ → False",
+   "trivial": "∀ {R : Type u} [inst : CommRing R] (I J : Ideal R), I * J = I ⊓ J",
+   "nontrivial": "¬∀ {R : Type u} [inst : CommRing R] (I J : Ideal R), I * J = I ⊓ J"
+  }
+ },
+ "pns-test-Artin|exercise_10_6_7": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ {I : Ideal GaussianInt}, I ≠ ⊥ → False",
+   "nonvac": "¬∀ {I : Ideal GaussianInt}, I ≠ ⊥ → False",
+   "trivial": "∀ {I : Ideal GaussianInt}, ∃ z, z ≠ 0 ∧ (↑z).im = 0",
+   "nontrivial": "¬∀ {I : Ideal GaussianInt}, ∃ z, z ≠ 0 ∧ (↑z).im = 0"
+  }
+ },
+ "pns-test-Artin|exercise_11_2_13": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (a b : ℤ), ofInt a ∣ ofInt b → False",
+   "nonvac": "¬∀ (a b : ℤ), ofInt a ∣ ofInt b → False",
+   "trivial": "∀ (a b : ℤ), a ∣ b",
+   "nontrivial": "¬∀ (a b : ℤ), a ∣ b"
+  }
+ },
+ "pns-test-Artin|exercise_11_4_6a": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {F : Type u} [Field F] [inst : Fintype F], card F = 2 → False",
+   "nonvac": "¬∀ {F : Type u} [Field F] [inst : Fintype F], card F = 2 → False",
+   "trivial": "∀ {F : Type u} [inst : Field F] [Fintype F], Irreducible (X ^ 2 + X + 1)",
+   "nontrivial": "¬∀ {F : Type u} [inst : Field F] [Fintype F], Irreducible (X ^ 2 + X + 1)"
+  }
+ },
+ "pns-test-Artin|exercise_11_4_6c": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Artin|exercise_11_13_3": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ (N : ℕ), False",
+   "nonvac": "¬∀ (N : ℕ), False"
+  }
+ },
+ "pns-test-Artin|exercise_13_6_10": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {K : Type u} [inst : Field K] [Fintype Kˣ], False",
+   "nonvac": "¬∀ {K : Type u} [inst : Field K] [Fintype Kˣ], False"
+  }
+ },
+ "pns-test-Axler|exercise_1_2": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Axler|exercise_1_4": {
+  "status": "ok",
+  "info": "free=1 binders=8",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V)\n  (a : F), a • v = 0 → False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] (v : V)\n    (a : F), a • v = 0 → False",
+   "trivial": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [Module F V] (v : V) (a : F),\n  a = 0 ∨ v = 0",
+   "nontrivial": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [Module F V] (v : V) (a : F),\n    a = 0 ∨ v = 0"
+  }
+ },
+ "pns-test-Axler|exercise_1_7": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Axler|exercise_1_9": {
+  "status": "ok",
+  "info": "free=0 binders=7",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n  (U W : Submodule F V), False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    (U W : Submodule F V), False"
+  }
+ },
+ "pns-test-Axler|exercise_3_8": {
+  "status": "ok",
+  "info": "free=1 binders=10",
+  "goals": {
+   "vacuous": "∀ {F V W : Type u} [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F]\n  [inst_3 : Module F V] [FiniteDimensional F V] [inst_5 : Module F W] (L : V →ₗ[F] W), False",
+   "nonvac": "¬∀ {F V W : Type u} [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F]\n    [inst_3 : Module F V] [FiniteDimensional F V] [inst_5 : Module F W] (L : V →ₗ[F] W), False",
+   "trivial": "∀ {F V W : Type u} [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F]\n  [inst_3 : Module F V] [inst_4 : Module F W] (L : V →ₗ[F] W), ∃ U, U ⊓ ker L = ⊥ ∧ range L = range (L.domRestrict U)",
+   "nontrivial": "¬∀ {F V W : Type u} [inst : AddCommGroup V] [inst_1 : AddCommGroup W] [inst_2 : Field F]\n    [inst_3 : Module F V] [inst_4 : Module F W] (L : V →ₗ[F] W), ∃ U, U ⊓ ker L = ⊥ ∧ range L = range (L.domRestrict U)"
+  }
+ },
+ "pns-test-Axler|exercise_5_1": {
+  "status": "ok",
+  "info": "free=1 binders=9",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] {L : V →ₗ[F] V}\n  {n : ℕ} (U : Fin n → Submodule F V), (∀ (i : Fin n), Submodule.map L (U i) = U i) → False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] {L : V →ₗ[F] V}\n    {n : ℕ} (U : Fin n → Submodule F V), (∀ (i : Fin n), Submodule.map L (U i) = U i) → False",
+   "trivial": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] {L : V →ₗ[F] V}\n  {n : ℕ} (U : Fin n → Submodule F V), Submodule.map L (∑ i, U i) = ∑ i, U i",
+   "nontrivial": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    {L : V →ₗ[F] V} {n : ℕ} (U : Fin n → Submodule F V), Submodule.map L (∑ i, U i) = ∑ i, U i"
+  }
+ },
+ "pns-test-Axler|exercise_5_11": {
+  "status": "ok",
+  "info": "free=0 binders=7",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n  (S T : End F V), False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    (S T : End F V), False"
+  }
+ },
+ "pns-test-Axler|exercise_5_13": {
+  "status": "ok",
+  "info": "free=2 binders=8",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n  [FiniteDimensional F V] {T : End F V},\n  (∀ (U : Submodule F V), finrank F ↥U = finrank F V - 1 → Submodule.map T U = U) → False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    [FiniteDimensional F V] {T : End F V},\n    (∀ (U : Submodule F V), finrank F ↥U = finrank F V - 1 → Submodule.map T U = U) → False",
+   "trivial": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] {T : End F V},\n  ∃ c, T = c • LinearMap.id",
+   "nontrivial": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    {T : End F V}, ∃ c, T = c • LinearMap.id"
+  }
+ },
+ "pns-test-Axler|exercise_5_24": {
+  "status": "probe_fail",
+  "detail": "CANON_FAIL CANON_FAIL metavariables in statement"
+ },
+ "pns-test-Axler|exercise_6_3": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {n : ℕ} (a b : Fin n → ℝ), False",
+   "nonvac": "¬∀ {n : ℕ} (a b : Fin n → ℝ), False"
+  }
+ },
+ "pns-test-Axler|exercise_6_13": {
+  "status": "probe_fail",
+  "detail": "CANON_FAIL CANON_FAIL metavariables in statement"
+ },
+ "pns-test-Axler|exercise_7_5": {
+  "status": "probe_fail",
+  "detail": "CANON_FAIL CANON_FAIL metavariables in statement"
+ },
+ "pns-test-Axler|exercise_7_9": {
+  "status": "ok",
+  "info": "free=1 binders=6",
+  "goals": {
+   "vacuous": "∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n  [inst_2 : FiniteDimensional ℂ V] (T : End ℂ V), T * adjoint T = adjoint T * T → False",
+   "nonvac": "¬∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n    [inst_2 : FiniteDimensional ℂ V] (T : End ℂ V), T * adjoint T = adjoint T * T → False",
+   "trivial": "∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n  [inst_2 : FiniteDimensional ℂ V] (T : End ℂ V), IsSelfAdjoint T ↔ ∀ (e : T.Eigenvalues), (↑T 1 e).im = 0",
+   "nontrivial": "¬∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n    [inst_2 : FiniteDimensional ℂ V] (T : End ℂ V), IsSelfAdjoint T ↔ ∀ (e : T.Eigenvalues), (↑T 1 e).im = 0"
+  }
+ },
+ "pns-test-Axler|exercise_7_11": {
+  "status": "ok",
+  "info": "free=1 binders=6",
+  "goals": {
+   "vacuous": "∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n  [inst_2 : FiniteDimensional ℂ V] {T : End ℂ V}, T * adjoint T = adjoint T * T → False",
+   "nonvac": "¬∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n    [inst_2 : FiniteDimensional ℂ V] {T : End ℂ V}, T * adjoint T = adjoint T * T → False",
+   "trivial": "∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n  [FiniteDimensional ℂ V] {T : End ℂ V}, ∃ S, S ^ 2 = T",
+   "nontrivial": "¬∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n    [FiniteDimensional ℂ V] {T : End ℂ V}, ∃ S, S ^ 2 = T"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_1_1_2a": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_1_1_4": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ (n : ℕ) (a b c : ZMod n), False",
+   "nonvac": "¬∀ (n : ℕ) (a b c : ZMod n), False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_1_1_15": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] (as : List G), False",
+   "nonvac": "¬∀ {G : Type u} [Group G] (as : List G), False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_1_1_17": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {x : G} {n : ℕ+}, orderOf x = ↑n → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {x : G} {n : ℕ+}, orderOf x = ↑n → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {x : G} {n : ℕ+}, x⁻¹ = x ^ (↑n - 1)",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {x : G} {n : ℕ+}, x⁻¹ = x ^ (↑n - 1)"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_1_1_20": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] {x : G}, False",
+   "nonvac": "¬∀ {G : Type u} [Group G] {x : G}, False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_1_1_22b": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] (a b : G), False",
+   "nonvac": "¬∀ {G : Type u} [Group G] (a b : G), False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_1_1_29": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ {A B : Type u} [Group A] [Group B], False",
+   "nonvac": "¬∀ {A B : Type u} [Group A] [Group B], False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_1_3_8": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_1_6_11": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ {A B : Type u} [Group A] [Group B], False",
+   "nonvac": "¬∀ {A B : Type u} [Group A] [Group B], False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_1_6_23": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] (σ : MulAut G),\n  (∀ (g : G), σ g = g ↔ g = 1) → (∀ (g : G), σ (σ g) = g) → ∀ (x y : G), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] (σ : MulAut G),\n    (∀ (g : G), σ g = g ↔ g = 1) → (∀ (g : G), σ (σ g) = g) → ∀ (x y : G), False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (σ : MulAut G) (x y : G), x * y = y * x",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (σ : MulAut G) (x y : G), x * y = y * x"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_2_1_13": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (H : AddSubgroup ℚ) {x : ℚ}, (x ∈ H ∧ x ≠ 0 → 1 / x ∈ H) → False",
+   "nonvac": "¬∀ (H : AddSubgroup ℚ) {x : ℚ}, (x ∈ H ∧ x ≠ 0 → 1 / x ∈ H) → False",
+   "trivial": "∀ (H : AddSubgroup ℚ) {x : ℚ}, H = ⊥ ∨ H = ⊤",
+   "nontrivial": "¬∀ (H : AddSubgroup ℚ) {x : ℚ}, H = ⊥ ∨ H = ⊤"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_2_4_16a": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] [Fintype G] {H : Subgroup G}, H ≠ ⊤ → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] [Fintype G] {H : Subgroup G}, H ≠ ⊤ → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G] {H : Subgroup G},\n  ∃ M, M ≠ ⊤ ∧ (∀ (K : Subgroup G), M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G] {H : Subgroup G},\n    ∃ M, M ≠ ⊤ ∧ (∀ (K : Subgroup G), M ≤ K → K = M ∨ K = ⊤) ∧ H ≤ M"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_2_4_16c": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {n : ℕ+} {G : Type u} [inst : Group G] {x : G},\n  orderOf x = ↑n → G = ↥(Subgroup.closure {x}) → ∀ (H : Subgroup G), False",
+   "nonvac": "¬∀ {n : ℕ+} {G : Type u} [inst : Group G] {x : G},\n    orderOf x = ↑n → G = ↥(Subgroup.closure {x}) → ∀ (H : Subgroup G), False",
+   "trivial": "∀ {n : ℕ+} {G : Type u} [inst : Group G] {x : G} (H : Subgroup G),\n  (∃ p, Prime p ∧ p ∣ ↑n ∧ H = Subgroup.closure {x ^ p}) ↔ H ≠ ⊤ ∧ ∀ (K : Subgroup G), H ≤ K → K = H ∨ K = ⊤",
+   "nontrivial": "¬∀ {n : ℕ+} {G : Type u} [inst : Group G] {x : G} (H : Subgroup G),\n    (∃ p, Prime p ∧ p ∣ ↑n ∧ H = Subgroup.closure {x ^ p}) ↔ H ≠ ⊤ ∧ ∀ (K : Subgroup G), H ≤ K → K = H ∨ K = ⊤"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_3_1_22a": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ (G : Type u) [inst : Group G] (H K : Subgroup G) [H.Normal] [K.Normal], False",
+   "nonvac": "¬∀ (G : Type u) [inst : Group G] (H K : Subgroup G) [H.Normal] [K.Normal], False",
+   "trivial": "∀ (G : Type u) [inst : Group G] (H K : Subgroup G), (H ⊓ K).Normal",
+   "nontrivial": "¬∀ (G : Type u) [inst : Group G] (H K : Subgroup G), (H ⊓ K).Normal"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_3_2_8": {
+  "status": "ok",
+  "info": "free=1 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] (H K : Subgroup G) [inst_1 : Fintype ↥H] [inst_2 : Fintype ↥K],\n  (card ↥H).Coprime (card ↥K) → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] (H K : Subgroup G) [inst_1 : Fintype ↥H] [inst_2 : Fintype ↥K],\n    (card ↥H).Coprime (card ↥K) → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (H K : Subgroup G) [Fintype ↥H] [Fintype ↥K], H ⊓ K = ⊥",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (H K : Subgroup G) [Fintype ↥H] [Fintype ↥K], H ⊓ K = ⊥"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_3_2_16": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (p : ℕ), Nat.Prime p → ∀ (a : ℤ), False",
+   "nonvac": "¬∀ (p : ℕ), Nat.Prime p → ∀ (a : ℤ), False",
+   "trivial": "∀ (p : ℕ) (a : ℤ), a ^ p ≡ a [ZMOD ↑p]",
+   "nontrivial": "¬∀ (p : ℕ) (a : ℤ), a ^ p ≡ a [ZMOD ↑p]"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_3_3_3": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {p : Nat.Primes} {G : Type u} [inst : Group G] {H : Subgroup G} [hH : H.Normal],\n  H.index = ↑p → ∀ (K : Subgroup G), False",
+   "nonvac": "¬∀ {p : Nat.Primes} {G : Type u} [inst : Group G] {H : Subgroup G} [hH : H.Normal],\n    H.index = ↑p → ∀ (K : Subgroup G), False",
+   "trivial": "∀ {p : Nat.Primes} {G : Type u} [inst : Group G] {H : Subgroup G} (K : Subgroup G),\n  K ≤ H ∨ H ⊔ K = ⊤ ∧ (K ⊓ H).relindex K = ↑p",
+   "nontrivial": "¬∀ {p : Nat.Primes} {G : Type u} [inst : Group G] {H : Subgroup G} (K : Subgroup G),\n    K ≤ H ∨ H ⊔ K = ⊤ ∧ (K ⊓ H).relindex K = ↑p"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_3_4_4": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [CommGroup G] [inst : Fintype G] {n : ℕ}, n ∣ card G → False",
+   "nonvac": "¬∀ {G : Type u} [CommGroup G] [inst : Fintype G] {n : ℕ}, n ∣ card G → False",
+   "trivial": "∀ {G : Type u} [inst : CommGroup G] [Fintype G] {n : ℕ}, ∃ H H_fin, card ↥H = n",
+   "nontrivial": "¬∀ {G : Type u} [inst : CommGroup G] [Fintype G] {n : ℕ}, ∃ H H_fin, card ↥H = n"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_3_4_5b": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] [IsSolvable G] (H : Subgroup G) [H.Normal], False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] [IsSolvable G] (H : Subgroup G) [H.Normal], False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (H : Subgroup G) [inst_1 : H.Normal], IsSolvable (G ⧸ H)",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (H : Subgroup G) [inst_1 : H.Normal], IsSolvable (G ⧸ H)"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_2_8": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {H : Subgroup G} {n : ℕ}, n > 0 → H.index = n → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {H : Subgroup G} {n : ℕ}, n > 0 → H.index = n → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {H : Subgroup G} {n : ℕ},\n  ∃ K ≤ H, K.Normal ∧ K.index ≤ n.factorial",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {H : Subgroup G} {n : ℕ},\n    ∃ K ≤ H, K.Normal ∧ K.index ≤ n.factorial"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_2_9a": {
+  "status": "ok",
+  "info": "free=4 binders=10",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G] {p α : ℕ},\n  Nat.Prime p → α > 0 → card G = p ^ α → ∀ (H : Subgroup G), H.index = p → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G] {p α : ℕ},\n    Nat.Prime p → α > 0 → card G = p ^ α → ∀ (H : Subgroup G), H.index = p → False",
+   "trivial": "∀ {G : Type u} [Fintype G] [inst : Group G] {p α : ℕ} (H : Subgroup G), H.Normal",
+   "nontrivial": "¬∀ {G : Type u} [Fintype G] [inst : Group G] {p α : ℕ} (H : Subgroup G), H.Normal"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_4_2": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Fintype G] [CommGroup G] {p q : Nat.Primes},\n  p ≠ q → card G = ↑p * ↑q → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Fintype G] [CommGroup G] {p q : Nat.Primes},\n    p ≠ q → card G = ↑p * ↑q → False",
+   "trivial": "∀ {G : Type u} [Fintype G] [inst : CommGroup G] {p q : Nat.Primes}, IsCyclic G",
+   "nontrivial": "¬∀ {G : Type u} [Fintype G] [inst : CommGroup G] {p q : Nat.Primes}, IsCyclic G"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_4_6b": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_4_8a": {
+  "status": "ok",
+  "info": "free=3 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] (H K : Subgroup G),\n  H ≤ K → ∀ [hHK1 : (H.subgroupOf K).Characteristic] [hK : K.Normal], False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] (H K : Subgroup G),\n    H ≤ K → ∀ [hHK1 : (H.subgroupOf K).Characteristic] [hK : K.Normal], False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (H K : Subgroup G), H.Normal",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (H K : Subgroup G), H.Normal"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_5_13": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [inst : Fintype G], card G = 56 → False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [inst : Fintype G], card G = 56 → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n  ∃ p P, Nat.Prime p ∧ p ∣ card G ∧ (↑P).Normal",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n    ∃ p P, Nat.Prime p ∧ p ∣ card G ∧ (↑P).Normal"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_5_15": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [inst : Fintype G], card G = 351 → False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [inst : Fintype G], card G = 351 → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n  ∃ p P, Nat.Prime p ∧ p ∣ card G ∧ (↑P).Normal",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n    ∃ p P, Nat.Prime p ∧ p ∣ card G ∧ (↑P).Normal"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_5_17": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Fintype G] [Group G], card G = 105 → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Fintype G] [Group G], card G = 105 → False",
+   "trivial": "∀ {G : Type u} [Fintype G] [inst : Group G], (∃ P, (↑P).Normal) ∧ ∃ P, (↑P).Normal",
+   "nontrivial": "¬∀ {G : Type u} [Fintype G] [inst : Group G], (∃ P, (↑P).Normal) ∧ ∃ P, (↑P).Normal"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_5_19": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Fintype G] [Group G], card G = 6545 → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Fintype G] [Group G], card G = 6545 → False",
+   "trivial": "∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G",
+   "nontrivial": "¬∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_5_21": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Fintype G] [Group G], card G = 2907 → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Fintype G] [Group G], card G = 2907 → False",
+   "trivial": "∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G",
+   "nontrivial": "¬∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_5_23": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Fintype G] [Group G], card G = 462 → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Fintype G] [Group G], card G = 462 → False",
+   "trivial": "∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G",
+   "nontrivial": "¬∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_4_5_33": {
+  "status": "ok",
+  "info": "free=1 binders=8",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] [Fintype G] {p : ℕ} (P : Sylow p G) [hP : (↑P).Normal]\n  (H : Subgroup G) [Fintype ↥H], False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] [Fintype G] {p : ℕ} (P : Sylow p G) [hP : (↑P).Normal]\n    (H : Subgroup G) [Fintype ↥H], False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G] {p : ℕ} (P : Sylow p G) (H : Subgroup G)\n  [Fintype ↥H], (∀ (R : Sylow p ↥H), ↑R = (H ⊓ ↑P).subgroupOf H) ∧ Nonempty (Sylow p ↥H)",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G] {p : ℕ} (P : Sylow p G) (H : Subgroup G)\n    [Fintype ↥H], (∀ (R : Sylow p ↥H), ↑R = (H ⊓ ↑P).subgroupOf H) ∧ Nonempty (Sylow p ↥H)"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_7_1_2": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : Ring R] {u : R}, IsUnit u → False",
+   "nonvac": "¬∀ {R : Type u} [inst : Ring R] {u : R}, IsUnit u → False",
+   "trivial": "∀ {R : Type u} [inst : Ring R] {u : R}, IsUnit (-u)",
+   "nontrivial": "¬∀ {R : Type u} [inst : Ring R] {u : R}, IsUnit (-u)"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_7_1_12": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {F : Type u} [inst : Field F] {K : Subring F}, 1 ∈ K → False",
+   "nonvac": "¬∀ {F : Type u} [inst : Field F] {K : Subring F}, 1 ∈ K → False",
+   "trivial": "∀ {F : Type u} [inst : Field F] {K : Subring F}, IsDomain ↥K",
+   "nontrivial": "¬∀ {F : Type u} [inst : Field F] {K : Subring F}, IsDomain ↥K"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_7_2_2": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : Ring R] (p : R[X]), False",
+   "nonvac": "¬∀ {R : Type u} [inst : Ring R] (p : R[X]), False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_7_3_16": {
+  "status": "ok",
+  "info": "free=1 binders=6",
+  "goals": {
+   "vacuous": "∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S}, Function.Surjective ⇑φ → False",
+   "nonvac": "¬∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S}, Function.Surjective ⇑φ → False",
+   "trivial": "∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S},\n  ⇑φ '' Set.center R ⊆ Set.center S",
+   "nontrivial": "¬∀ {R S : Type u} [inst : Ring R] [inst_1 : Ring S] {φ : R →+* S},\n    ⇑φ '' Set.center R ⊆ Set.center S"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_7_4_27": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : CommRing R], 0 ≠ 1 → ∀ {a : R}, IsNilpotent a → ∀ (b : R), False",
+   "nonvac": "¬∀ {R : Type u} [inst : CommRing R], 0 ≠ 1 → ∀ {a : R}, IsNilpotent a → ∀ (b : R), False",
+   "trivial": "∀ {R : Type u} [inst : CommRing R] {a : R} (b : R), IsUnit (1 - a * b)",
+   "nontrivial": "¬∀ {R : Type u} [inst : CommRing R] {a : R} (b : R), IsUnit (1 - a * b)"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_8_2_4": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsDomain R] [inst_2 : GCDMonoid R],\n  (∀ (a b : R), a ≠ 0 → b ≠ 0 → ∃ r s, gcd a b = r * a + s * b) →\n    (∀ (a : ℕ → R), (∀ (i : ℕ), a i ≠ 0 ∧ a (i + 1) ∣ a i) → ∃ N, ∀ n ≥ N, ∃ u, IsUnit u ∧ a n = u * a N) → False",
+   "nonvac": "¬∀ {R : Type u} [inst : CommRing R] [inst_1 : IsDomain R] [inst_2 : GCDMonoid R],\n    (∀ (a b : R), a ≠ 0 → b ≠ 0 → ∃ r s, gcd a b = r * a + s * b) →\n      (∀ (a : ℕ → R), (∀ (i : ℕ), a i ≠ 0 ∧ a (i + 1) ∣ a i) → ∃ N, ∀ n ≥ N, ∃ u, IsUnit u ∧ a n = u * a N) → False",
+   "trivial": "∀ {R : Type u} [inst : CommRing R] [inst_1 : IsDomain R] [GCDMonoid R], IsPrincipalIdealRing R",
+   "nontrivial": "¬∀ {R : Type u} [inst : CommRing R] [inst_1 : IsDomain R] [GCDMonoid R],\n    IsPrincipalIdealRing R"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_8_3_5a": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ {n : ℤ}, n > 3 → Squarefree n → False",
+   "nonvac": "¬∀ {n : ℤ}, n > 3 → Squarefree n → False",
+   "trivial": "∀ {n : ℤ},\n  Irreducible 2 ∧ Irreducible { re := 0, im := 1 } ∧ Irreducible (1 + { re := 0, im := 1 })",
+   "nontrivial": "¬∀ {n : ℤ},\n    Irreducible 2 ∧ Irreducible { re := 0, im := 1 } ∧ Irreducible (1 + { re := 0, im := 1 })"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_8_3_6b": {
+  "status": "ok",
+  "info": "free=3 binders=6",
+  "goals": {
+   "vacuous": "∀ {q : ℕ},\n  Nat.Prime q → ↑q ≡ 3 [ZMOD 4] → ∀ {R : Type} [Ring R], R = (GaussianInt ⧸ span {↑q}) → False",
+   "nonvac": "¬∀ {q : ℕ},\n    Nat.Prime q → ↑q ≡ 3 [ZMOD 4] → ∀ {R : Type} [Ring R], R = (GaussianInt ⧸ span {↑q}) → False",
+   "trivial": "∀ {q : ℕ} {R : Type} [inst : Ring R], IsField R ∧ ∃ finR, card R = q ^ 2",
+   "nontrivial": "¬∀ {q : ℕ} {R : Type} [inst : Ring R], IsField R ∧ ∃ finR, card R = q ^ 2"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_9_1_10": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_9_4_2a": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_9_4_2c": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_9_4_9": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Dummit-Foote|exercise_11_1_13": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ {n : ℕ+}, False",
+   "nonvac": "¬∀ {n : ℕ+}, False"
+  }
+ },
+ "pns-test-Herstein|exercise_2_1_18": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [inst : Fintype G], Even (card G) → False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [inst : Fintype G], Even (card G) → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G], ∃ a, a ≠ 1 ∧ a = a⁻¹",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G], ∃ a, a ≠ 1 ∧ a = a⁻¹"
+  }
+ },
+ "pns-test-Herstein|exercise_2_1_26": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [Fintype G] (a : G), False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [Fintype G] (a : G), False"
+  }
+ },
+ "pns-test-Herstein|exercise_2_2_3": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G],\n  (∃ n,\n      (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) n ∧\n        (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 1) ∧\n          (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 2)) →\n    ∀ (a b : G), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G],\n    (∃ n,\n        (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) n ∧\n          (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 1) ∧\n            (fun i => ∀ (a b : G), (a * b) ^ i = a ^ i * b ^ i) (n + 2)) →\n      ∀ (a b : G), False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (a b : G), a * b = b * a",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (a b : G), a * b = b * a"
+  }
+ },
+ "pns-test-Herstein|exercise_2_2_6c": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {n : ℕ},\n  n > 1 → (∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) → ∀ (a b : G), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {n : ℕ},\n    n > 1 → (∀ (a b : G), (a * b) ^ n = a ^ n * b ^ n) → ∀ (a b : G), False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {n : ℕ} (a b : G), (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {n : ℕ} (a b : G), (a * b * a⁻¹ * b⁻¹) ^ (n * (n - 1)) = 1"
+  }
+ },
+ "pns-test-Herstein|exercise_2_3_16": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G], (∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G], (∀ (H : Subgroup G), H = ⊤ ∨ H = ⊥) → False",
+   "trivial": "∀ {G : Type u} [inst : Group G], IsCyclic G ∧ ∃ p Fin, Nat.Prime p ∧ card G = p",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G], IsCyclic G ∧ ∃ p Fin, Nat.Prime p ∧ card G = p"
+  }
+ },
+ "pns-test-Herstein|exercise_2_5_23": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G], (∀ (H : Subgroup G), H.Normal) → ∀ (a b : G), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G], (∀ (H : Subgroup G), H.Normal) → ∀ (a b : G), False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (a b : G), ∃ j, b * a = a ^ j * b",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (a b : G), ∃ j, b * a = a ^ j * b"
+  }
+ },
+ "pns-test-Herstein|exercise_2_5_31": {
+  "status": "ok",
+  "info": "free=4 binders=12",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : CommGroup G] [inst_1 : Fintype G] {p m n : ℕ},\n  Nat.Prime p → ¬p ∣ m → card G = p ^ n * m → ∀ {H : Subgroup G} [inst_2 : Fintype ↥H], card ↥H = p ^ n → False",
+   "nonvac": "¬∀ {G : Type u} [inst : CommGroup G] [inst_1 : Fintype G] {p m n : ℕ},\n    Nat.Prime p → ¬p ∣ m → card G = p ^ n * m → ∀ {H : Subgroup G} [inst_2 : Fintype ↥H], card ↥H = p ^ n → False",
+   "trivial": "∀ {G : Type u} [inst : CommGroup G] [Fintype G] {p m n : ℕ} {H : Subgroup G} [Fintype ↥H],\n  H.Characteristic",
+   "nontrivial": "¬∀ {G : Type u} [inst : CommGroup G] [Fintype G] {p m n : ℕ} {H : Subgroup G} [Fintype ↥H],\n    H.Characteristic"
+  }
+ },
+ "pns-test-Herstein|exercise_2_5_43": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ (G : Type u) [Group G] [inst : Fintype G], card G = 9 → False",
+   "nonvac": "¬∀ (G : Type u) [Group G] [inst : Fintype G], card G = 9 → False",
+   "trivial": "∀ (G : Type u) [Group G] [Fintype G], Nonempty (CommGroup G)",
+   "nontrivial": "¬∀ (G : Type u) [Group G] [Fintype G], Nonempty (CommGroup G)"
+  }
+ },
+ "pns-test-Herstein|exercise_2_5_52": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G] (φ : G ≃* G) {I : Finset G},\n  (∀ x ∈ I, φ x = x⁻¹) → 0.75 * ↑(card G) ≤ ↑(card ↥I) → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G] (φ : G ≃* G) {I : Finset G},\n    (∀ x ∈ I, φ x = x⁻¹) → 0.75 * ↑(card G) ≤ ↑(card ↥I) → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G] (φ : G ≃* G) {I : Finset G},\n  (∀ (x : G), φ x = x⁻¹) ∧ ∀ (x y : G), x * y = y * x",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G] (φ : G ≃* G) {I : Finset G},\n    (∀ (x : G), φ x = x⁻¹) ∧ ∀ (x y : G), x * y = y * x"
+  }
+ },
+ "pns-test-Herstein|exercise_2_7_7": {
+  "status": "ok",
+  "info": "free=1 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G)\n  [N.Normal], False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G)\n    [N.Normal], False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G') (N : Subgroup G),\n  (Subgroup.map φ N).Normal",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {G' : Type u} [inst_1 : Group G'] (φ : G →* G')\n    (N : Subgroup G), (Subgroup.map φ N).Normal"
+  }
+ },
+ "pns-test-Herstein|exercise_2_8_15": {
+  "status": "ok",
+  "info": "free=8 binders=16",
+  "goals": {
+   "vacuous": "∀ {G H : Type u} [inst : Fintype G] [inst_1 : Group G] [inst_2 : Fintype H] [inst_3 : Group H],\n  (∃ x y, x * y ≠ y * x) →\n    (∃ x y, x * y ≠ y * x) →\n      ∀ {p q : ℕ}, Nat.Prime p → Nat.Prime q → p > q → q ∣ p - 1 → card G = p * q → card H = p * q → False",
+   "nonvac": "¬∀ {G H : Type u} [inst : Fintype G] [inst_1 : Group G] [inst_2 : Fintype H] [inst_3 : Group H],\n    (∃ x y, x * y ≠ y * x) →\n      (∃ x y, x * y ≠ y * x) →\n        ∀ {p q : ℕ}, Nat.Prime p → Nat.Prime q → p > q → q ∣ p - 1 → card G = p * q → card H = p * q → False",
+   "trivial": "∀ {G H : Type u} [Fintype G] [inst : Group G] [Fintype H] [inst_2 : Group H] {p q : ℕ},\n  Nonempty (G ≃* H)",
+   "nontrivial": "¬∀ {G H : Type u} [Fintype G] [inst : Group G] [Fintype H] [inst_2 : Group H] {p q : ℕ},\n    Nonempty (G ≃* H)"
+  }
+ },
+ "pns-test-Herstein|exercise_2_10_1": {
+  "status": "ok",
+  "info": "free=3 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] (A : Subgroup G) [A.Normal] {b : G},\n  b ∉ A → Nat.Prime (orderOf b) → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] (A : Subgroup G) [A.Normal] {b : G},\n    b ∉ A → Nat.Prime (orderOf b) → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (A : Subgroup G) {b : G}, A ⊓ Subgroup.closure {b} = ⊥",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (A : Subgroup G) {b : G}, A ⊓ Subgroup.closure {b} = ⊥"
+  }
+ },
+ "pns-test-Herstein|exercise_2_11_7": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {p : ℕ}, Nat.Prime p → ∀ {P : Sylow p G}, (↑P).Normal → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {p : ℕ}, Nat.Prime p → ∀ {P : Sylow p G}, (↑P).Normal → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {p : ℕ} {P : Sylow p G}, (↑P).Characteristic",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {p : ℕ} {P : Sylow p G}, (↑P).Characteristic"
+  }
+ },
+ "pns-test-Herstein|exercise_3_2_21": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {α : Type u} [Fintype α] {σ τ : Equiv.Perm α},\n  (∀ (a : α), σ a = a ↔ τ a ≠ a) → ⇑τ ∘ ⇑σ = id → False",
+   "nonvac": "¬∀ {α : Type u} [Fintype α] {σ τ : Equiv.Perm α},\n    (∀ (a : α), σ a = a ↔ τ a ≠ a) → ⇑τ ∘ ⇑σ = id → False",
+   "trivial": "∀ {α : Type u} [Fintype α] {σ τ : Equiv.Perm α}, σ = 1 ∧ τ = 1",
+   "nontrivial": "¬∀ {α : Type u} [Fintype α] {σ τ : Equiv.Perm α}, σ = 1 ∧ τ = 1"
+  }
+ },
+ "pns-test-Herstein|exercise_4_1_34": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Herstein|exercise_4_2_6": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : Ring R] (a x : R), a ^ 2 = 0 → False",
+   "nonvac": "¬∀ {R : Type u} [inst : Ring R] (a x : R), a ^ 2 = 0 → False",
+   "trivial": "∀ {R : Type u} [inst : Ring R] (a x : R), a * (a * x + x * a) = (a * x + x * a) * a",
+   "nontrivial": "¬∀ {R : Type u} [inst : Ring R] (a x : R), a * (a * x + x * a) = (a * x + x * a) * a"
+  }
+ },
+ "pns-test-Herstein|exercise_4_3_1": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [CommRing R] (a : R), False",
+   "nonvac": "¬∀ {R : Type u} [CommRing R] (a : R), False"
+  }
+ },
+ "pns-test-Herstein|exercise_4_4_9": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ (p : ℕ), Nat.Prime p → p % 2 = 1 → False",
+   "nonvac": "¬∀ (p : ℕ), Nat.Prime p → p % 2 = 1 → False",
+   "trivial": "∀ (p : ℕ),\n  (∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ∃ x, x ^ 2 = q) ∧\n    ∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ¬∃ x, x ^ 2 = q",
+   "nontrivial": "¬∀ (p : ℕ),\n    (∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ∃ x, x ^ 2 = q) ∧\n      ∃ S, 0 ∉ S ∧ S.card = (p - 1) / 2 ∧ ∀ q ∈ S, ¬∃ x, x ^ 2 = q"
+  }
+ },
+ "pns-test-Herstein|exercise_4_5_23": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Herstein|exercise_4_6_2": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Herstein|exercise_5_1_8": {
+  "status": "ok",
+  "info": "free=3 binders=9",
+  "goals": {
+   "vacuous": "∀ {p n : ℕ} {F : Type u} [inst : Field F], p ≠ 0 → n > 0 → CharP F p → ∀ (a b : F), False",
+   "nonvac": "¬∀ {p n : ℕ} {F : Type u} [inst : Field F], p ≠ 0 → n > 0 → CharP F p → ∀ (a b : F), False",
+   "trivial": "∀ {p n : ℕ} {F : Type u} [inst : Field F] (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n",
+   "nontrivial": "¬∀ {p n : ℕ} {F : Type u} [inst : Field F] (a b : F), (a + b) ^ p ^ n = a ^ p ^ n + b ^ p ^ n"
+  }
+ },
+ "pns-test-Herstein|exercise_5_3_7": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {K : Type u} [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → False",
+   "nonvac": "¬∀ {K : Type u} [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) (a ^ 2) → False",
+   "trivial": "∀ {K : Type u} [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) a",
+   "nontrivial": "¬∀ {K : Type u} [inst : Field K] {F : Subfield K} {a : K}, IsAlgebraic (↥F) a"
+  }
+ },
+ "pns-test-Herstein|exercise_5_4_3": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ {a : ℂ}, (fun x => x ^ 5 + ↑√2 * x ^ 3 + ↑√5 * x ^ 2 + ↑√7 * x + ↑√11) a = 0 → False",
+   "nonvac": "¬∀ {a : ℂ}, (fun x => x ^ 5 + ↑√2 * x ^ 3 + ↑√5 * x ^ 2 + ↑√7 * x + ↑√11) a = 0 → False",
+   "trivial": "∀ {a : ℂ},\n  ∃ q, q ≠ 0 ∧ q.degree ≤ 80 ∧ a ∈ q.roots ∧ ∀ (n : ↥q.support), ∃ a b, q.coeff ↑n = ↑a / ↑b",
+   "nontrivial": "¬∀ {a : ℂ},\n    ∃ q, q ≠ 0 ∧ q.degree ≤ 80 ∧ a ∈ q.roots ∧ ∀ (n : ↥q.support), ∃ a b, q.coeff ↑n = ↑a / ↑b"
+  }
+ },
+ "pns-test-Herstein|exercise_5_6_14": {
+  "status": "ok",
+  "info": "free=3 binders=7",
+  "goals": {
+   "vacuous": "∀ {p n : ℕ}, p ≠ 0 → n > 0 → ∀ {F : Type u} [inst : Field F] [CharP F p], False",
+   "nonvac": "¬∀ {p n : ℕ}, p ≠ 0 → n > 0 → ∀ {F : Type u} [inst : Field F] [CharP F p], False",
+   "trivial": "∀ {p n : ℕ} {F : Type u} [inst : Field F], (X ^ p ^ n - X).Separable",
+   "nontrivial": "¬∀ {p n : ℕ} {F : Type u} [inst : Field F], (X ^ p ^ n - X).Separable"
+  }
+ },
+ "pns-test-Ireland-Rosen|exercise_1_30": {
+  "status": "ok",
+  "info": "free=0 binders=2",
+  "goals": {
+   "vacuous": "∀ {n : ℕ} (a : ℤ), False",
+   "nonvac": "¬∀ {n : ℕ} (a : ℤ), False"
+  }
+ },
+ "pns-test-Ireland-Rosen|exercise_2_4": {
+  "status": "ok",
+  "info": "free=3 binders=6",
+  "goals": {
+   "vacuous": "∀ {a : ℤ},\n  a ≠ 0 → (sorry = fun n m => (a ^ 2 ^ n + 1).gcd (a ^ 2 ^ m + 1)) → ∀ {n m : ℕ}, n > m → False",
+   "nonvac": "¬∀ {a : ℤ},\n    a ≠ 0 → (sorry = fun n m => (a ^ 2 ^ n + 1).gcd (a ^ 2 ^ m + 1)) → ∀ {n m : ℕ}, n > m → False",
+   "trivial": "∀ {a : ℤ} {n m : ℕ}, (Odd a → sorry = 2) ∧ (Even a → sorry = 1)",
+   "nontrivial": "¬∀ {a : ℤ} {n m : ℕ}, (Odd a → sorry = 2) ∧ (Even a → sorry = 1)"
+  }
+ },
+ "pns-test-Ireland-Rosen|exercise_2_27a": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Ireland-Rosen|exercise_3_4": {
+  "status": "ok",
+  "info": "free=0 binders=2",
+  "goals": {
+   "vacuous": "∀ (x y : ℤ), False",
+   "nonvac": "¬∀ (x y : ℤ), False"
+  }
+ },
+ "pns-test-Ireland-Rosen|exercise_3_10": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ {n : ℕ+}, ¬n.Prime → False",
+   "nonvac": "¬∀ {n : ℕ+}, ¬n.Prime → False",
+   "trivial": "∀ {n : ℕ+}, (↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4",
+   "nontrivial": "¬∀ {n : ℕ+}, (↑n - 1).factorial ≡ 0 [MOD ↑n] ↔ n ≠ 4"
+  }
+ },
+ "pns-test-Ireland-Rosen|exercise_4_4": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ {p t : ℕ}, Nat.Prime p → p = 4 * t + 1 → ∀ (a : ZMod p), False",
+   "nonvac": "¬∀ {p t : ℕ}, Nat.Prime p → p = 4 * t + 1 → ∀ (a : ZMod p), False",
+   "trivial": "∀ {p : ℕ} {t : ℕ} (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p",
+   "nontrivial": "¬∀ {p : ℕ} {t : ℕ} (a : ZMod p), IsPrimitiveRoot a p ↔ IsPrimitiveRoot (-a) p"
+  }
+ },
+ "pns-test-Ireland-Rosen|exercise_4_6": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ {p n : ℕ}, Nat.Prime p → p = 2 ^ n + 1 → False",
+   "nonvac": "¬∀ {p n : ℕ}, Nat.Prime p → p = 2 ^ n + 1 → False",
+   "trivial": "∀ {p : ℕ} {n : ℕ}, IsPrimitiveRoot 3 p",
+   "nontrivial": "¬∀ {p : ℕ} {n : ℕ}, IsPrimitiveRoot 3 p"
+  }
+ },
+ "pns-test-Ireland-Rosen|exercise_4_11": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ {p : ℕ}, Nat.Prime p → ∀ (k : ℕ), False",
+   "nonvac": "¬∀ {p : ℕ}, Nat.Prime p → ∀ (k : ℕ), False",
+   "trivial": "∀ {p : ℕ} (k : ℕ),\n  (¬p - 1 ∣ k → ∑ n, (↑n + 1) ^ k ≡ 0 [MOD p]) ∧ (p - 1 ∣ k → ↑(∑ n, (↑n + 1) ^ k) ≡ -1 [ZMOD ↑p])",
+   "nontrivial": "¬∀ {p : ℕ} (k : ℕ),\n    (¬p - 1 ∣ k → ∑ n, (↑n + 1) ^ k ≡ 0 [MOD p]) ∧ (p - 1 ∣ k → ↑(∑ n, (↑n + 1) ^ k) ≡ -1 [ZMOD ↑p])"
+  }
+ },
+ "pns-test-Ireland-Rosen|exercise_5_28": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ {p : ℕ}, Nat.Prime p → p ≡ 1 [MOD 4] → False",
+   "nonvac": "¬∀ {p : ℕ}, Nat.Prime p → p ≡ 1 [MOD 4] → False",
+   "trivial": "∀ {p : ℕ}, (∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2",
+   "nontrivial": "¬∀ {p : ℕ}, (∃ x, x ^ 4 ≡ 2 [MOD p]) ↔ ∃ A B, p = A ^ 2 + 64 * B ^ 2"
+  }
+ },
+ "pns-test-Ireland-Rosen|exercise_12_12": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Munkres|exercise_13_3b": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Munkres|exercise_13_8a": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Munkres|exercise_16_1": {
+  "status": "ok",
+  "info": "free=0 binders=5",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [TopologicalSpace X] (Y : Set X) (A : Set ↑Y) (U : Set ↑A), False",
+   "nonvac": "¬∀ {X : Type u} [TopologicalSpace X] (Y : Set X) (A : Set ↑Y) (U : Set ↑A), False"
+  }
+ },
+ "pns-test-Munkres|exercise_18_8a": {
+  "status": "ok",
+  "info": "free=3 binders=10",
+  "goals": {
+   "vacuous": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y]\n  [inst_2 : LinearOrder Y] [OrderTopology Y] {f g : X → Y}, Continuous f → Continuous g → False",
+   "nonvac": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y]\n    [inst_2 : LinearOrder Y] [OrderTopology Y] {f g : X → Y}, Continuous f → Continuous g → False",
+   "trivial": "∀ {X Y : Type u} [inst : TopologicalSpace X] [TopologicalSpace Y] [inst_2 : LinearOrder Y]\n  {f g : X → Y}, IsClosed {x | f x ≤ g x}",
+   "nontrivial": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [TopologicalSpace Y] [inst_2 : LinearOrder Y]\n    {f g : X → Y}, IsClosed {x | f x ≤ g x}"
+  }
+ },
+ "pns-test-Munkres|exercise_18_13": {
+  "status": "ok",
+  "info": "free=5 binders=14",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] [T2Space Y]\n  {A : Set X} {f : X → Y},\n  ContinuousOn f A →\n    ∀ (g : X → Y),\n      ContinuousOn g (closure A) →\n        (∀ (x : ↑A), g ↑x = f ↑x) →\n          ∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ ∀ (x : ↑A), g' ↑x = f ↑x) → ∀ (x : ↑(closure A)), False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : TopologicalSpace Y] [T2Space Y]\n    {A : Set X} {f : X → Y},\n    ContinuousOn f A →\n      ∀ (g : X → Y),\n        ContinuousOn g (closure A) →\n          (∀ (x : ↑A), g ↑x = f ↑x) →\n            ∀ (g' : X → Y), (ContinuousOn g' (closure A) ∧ ∀ (x : ↑A), g' ↑x = f ↑x) → ∀ (x : ↑(closure A)), False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [TopologicalSpace Y] {A : Set X}\n  {f : X → Y} (g g' : X → Y) (x : ↑(closure A)), g ↑x = g' ↑x",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [TopologicalSpace Y] {A : Set X}\n    {f : X → Y} (g g' : X → Y) (x : ↑(closure A)), g ↑x = g' ↑x"
+  }
+ },
+ "pns-test-Munkres|exercise_20_2": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ [inst : TopologicalSpace (Lex (ℝ × ℝ))] [OrderTopology (Lex (ℝ × ℝ))], False",
+   "nonvac": "¬∀ [inst : TopologicalSpace (Lex (ℝ × ℝ))] [OrderTopology (Lex (ℝ × ℝ))], False",
+   "trivial": "∀ [inst : TopologicalSpace (Lex (ℝ × ℝ))], MetrizableSpace (Lex (ℝ × ℝ))",
+   "nontrivial": "¬∀ [inst : TopologicalSpace (Lex (ℝ × ℝ))], MetrizableSpace (Lex (ℝ × ℝ))"
+  }
+ },
+ "pns-test-Munkres|exercise_21_6b": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (f : ℕ → ↑(Icc 0 1) → ℝ),\n  (∀ (x : ↑(Icc 0 1)) (n : ℕ), f n x = ↑↑x ^ n) → ∀ (f₀ : ↑(Icc 0 1) → ℝ), False",
+   "nonvac": "¬∀ (f : ℕ → ↑(Icc 0 1) → ℝ),\n    (∀ (x : ↑(Icc 0 1)) (n : ℕ), f n x = ↑↑x ^ n) → ∀ (f₀ : ↑(Icc 0 1) → ℝ), False",
+   "trivial": "∀ (f : ℕ → ↑(Icc 0 1) → ℝ) (f₀ : ↑(Icc 0 1) → ℝ), ¬TendstoUniformly f f₀ atTop",
+   "nontrivial": "¬∀ (f : ℕ → ↑(Icc 0 1) → ℝ) (f₀ : ↑(Icc 0 1) → ℝ), ¬TendstoUniformly f f₀ atTop"
+  }
+ },
+ "pns-test-Munkres|exercise_22_2a": {
+  "status": "probe_fail",
+  "detail": "CANON_FAIL CANON_FAIL metavariables in statement"
+ },
+ "pns-test-Munkres|exercise_22_5": {
+  "status": "ok",
+  "info": "free=2 binders=8",
+  "goals": {
+   "vacuous": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n  IsOpenMap p → ∀ (A : Set X), IsOpen A → False",
+   "nonvac": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n    IsOpenMap p → ∀ (A : Set X), IsOpen A → False",
+   "trivial": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y)\n  (A : Set X), IsOpenMap (p ∘ Subtype.val)",
+   "nontrivial": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y)\n    (A : Set X), IsOpenMap (p ∘ Subtype.val)"
+  }
+ },
+ "pns-test-Munkres|exercise_23_3": {
+  "status": "ok",
+  "info": "free=3 binders=8",
+  "goals": {
+   "vacuous": "∀ {X α : Type u} [inst : TopologicalSpace X] {A : α → Set X},\n  (∀ (a : α), IsConnected (A a)) → ∀ (A₀ : Set X), IsConnected A₀ → (∀ (a : α), A₀ ∩ A a ≠ ∅) → False",
+   "nonvac": "¬∀ {X α : Type u} [inst : TopologicalSpace X] {A : α → Set X},\n    (∀ (a : α), IsConnected (A a)) → ∀ (A₀ : Set X), IsConnected A₀ → (∀ (a : α), A₀ ∩ A a ≠ ∅) → False",
+   "trivial": "∀ {X α : Type u} [inst : TopologicalSpace X] {A : α → Set X} (A₀ : Set X),\n  IsConnected (A₀ ∪ ⋃ a, A a)",
+   "nontrivial": "¬∀ {X α : Type u} [inst : TopologicalSpace X] {A : α → Set X} (A₀ : Set X),\n    IsConnected (A₀ ∪ ⋃ a, A a)"
+  }
+ },
+ "pns-test-Munkres|exercise_23_6": {
+  "status": "ok",
+  "info": "free=3 binders=7",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},\n  IsConnected C → C ∩ A ≠ ∅ → C ∩ Aᶜ ≠ ∅ → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X},\n    IsConnected C → C ∩ A ≠ ∅ → C ∩ Aᶜ ≠ ∅ → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X}, C ∩ frontier A ≠ ∅",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] {A C : Set X}, C ∩ frontier A ≠ ∅"
+  }
+ },
+ "pns-test-Munkres|exercise_23_11": {
+  "status": "probe_fail",
+  "detail": "CANON_FAIL CANON_FAIL metavariables in statement"
+ },
+ "pns-test-Munkres|exercise_24_3a": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ (f : ↑(Icc 0 1) → ↑(Icc 0 1)), Continuous f → False",
+   "nonvac": "¬∀ (f : ↑(Icc 0 1) → ↑(Icc 0 1)), Continuous f → False",
+   "trivial": "∀ (f : ↑(Icc 0 1) → ↑(Icc 0 1)), ∃ x, f x = x",
+   "nontrivial": "¬∀ (f : ↑(Icc 0 1) → ↑(Icc 0 1)), ∃ x, f x = x"
+  }
+ },
+ "pns-test-Munkres|exercise_25_9": {
+  "status": "probe_fail",
+  "detail": "CANON_FAIL CANON_FAIL metavariables in statement"
+ },
+ "pns-test-Munkres|exercise_26_12": {
+  "status": "ok",
+  "info": "free=5 binders=10",
+  "goals": {
+   "vacuous": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n  Function.Surjective p → Continuous p → IsClosedMap p → (∀ (y : Y), IsCompact (p ⁻¹' {y})) → CompactSpace Y → False",
+   "nonvac": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (p : X → Y),\n    Function.Surjective p → Continuous p → IsClosedMap p → (∀ (y : Y), IsCompact (p ⁻¹' {y})) → CompactSpace Y → False",
+   "trivial": "∀ {X Y : Type u} [inst : TopologicalSpace X] [TopologicalSpace Y] (p : X → Y), CompactSpace X",
+   "nontrivial": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [TopologicalSpace Y] (p : X → Y), CompactSpace X"
+  }
+ },
+ "pns-test-Munkres|exercise_28_6": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : MetricSpace X] [CompactSpace X] {f : X → X}, Isometry f → False",
+   "nonvac": "¬∀ {X : Type u} [inst : MetricSpace X] [CompactSpace X] {f : X → X}, Isometry f → False",
+   "trivial": "∀ {X : Type u} [inst : MetricSpace X] {f : X → X}, Continuous f ∧ Bijective f ∧ IsOpenMap f",
+   "nontrivial": "¬∀ {X : Type u} [inst : MetricSpace X] {f : X → X}, Continuous f ∧ Bijective f ∧ IsOpenMap f"
+  }
+ },
+ "pns-test-Munkres|exercise_29_4": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ [TopologicalSpace (ℕ → ↑(Icc 0 1))], False",
+   "nonvac": "¬∀ [TopologicalSpace (ℕ → ↑(Icc 0 1))], False"
+  }
+ },
+ "pns-test-Munkres|exercise_30_10": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ {X : ℕ → Type u} [inst : (i : ℕ) → TopologicalSpace (X i)],\n  (∀ (i : ℕ), ∃ s, Countable ↑s ∧ Dense s) → False",
+   "nonvac": "¬∀ {X : ℕ → Type u} [inst : (i : ℕ) → TopologicalSpace (X i)],\n    (∀ (i : ℕ), ∃ s, Countable ↑s ∧ Dense s) → False",
+   "trivial": "∀ {X : ℕ → Type u} [inst : (i : ℕ) → TopologicalSpace (X i)], ∃ s, Countable ↑s ∧ Dense s",
+   "nontrivial": "¬∀ {X : ℕ → Type u} [inst : (i : ℕ) → TopologicalSpace (X i)], ∃ s, Countable ↑s ∧ Dense s"
+  }
+ },
+ "pns-test-Munkres|exercise_31_1": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X], RegularSpace X → ∀ (x y : X), x ≠ y → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X], RegularSpace X → ∀ (x y : X), x ≠ y → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] (x y : X),\n  ∃ U V, IsOpen U ∧ IsOpen V ∧ x ∈ U ∧ y ∈ V ∧ closure U ∩ closure V = ∅",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] (x y : X),\n    ∃ U V, IsOpen U ∧ IsOpen V ∧ x ∈ U ∧ y ∈ V ∧ closure U ∩ closure V = ∅"
+  }
+ },
+ "pns-test-Munkres|exercise_31_3": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {α : Type u} [inst : PartialOrder α] [inst_1 : TopologicalSpace α], OrderTopology α → False",
+   "nonvac": "¬∀ {α : Type u} [inst : PartialOrder α] [inst_1 : TopologicalSpace α], OrderTopology α → False",
+   "trivial": "∀ {α : Type u} [PartialOrder α] [inst : TopologicalSpace α], RegularSpace α",
+   "nontrivial": "¬∀ {α : Type u} [PartialOrder α] [inst : TopologicalSpace α], RegularSpace α"
+  }
+ },
+ "pns-test-Munkres|exercise_32_2a": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n  (∀ (i : ι), Nonempty (X i)) → T2Space ((i : ι) → X i) → ∀ (i : ι), False",
+   "nonvac": "¬∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n    (∀ (i : ι), Nonempty (X i)) → T2Space ((i : ι) → X i) → ∀ (i : ι), False",
+   "trivial": "∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)] (i : ι), T2Space (X i)",
+   "nontrivial": "¬∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)] (i : ι),\n    T2Space (X i)"
+  }
+ },
+ "pns-test-Munkres|exercise_32_2c": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n  (∀ (i : ι), Nonempty (X i)) → NormalSpace ((i : ι) → X i) → ∀ (i : ι), False",
+   "nonvac": "¬∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n    (∀ (i : ι), Nonempty (X i)) → NormalSpace ((i : ι) → X i) → ∀ (i : ι), False",
+   "trivial": "∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)] (i : ι),\n  NormalSpace (X i)",
+   "nontrivial": "¬∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)] (i : ι),\n    NormalSpace (X i)"
+  }
+ },
+ "pns-test-Munkres|exercise_33_7": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X], LocallyCompactSpace X → T2Space X → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X], LocallyCompactSpace X → T2Space X → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X], CompletelyRegularSpace X",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X], CompletelyRegularSpace X"
+  }
+ },
+ "pns-test-Munkres|exercise_34_9": {
+  "status": "ok",
+  "info": "free=7 binders=11",
+  "goals": {
+   "vacuous": "∀ (X : Type u) [inst : TopologicalSpace X] [CompactSpace X] [T2Space X] (X1 X2 : Set X),\n  IsClosed X1 → IsClosed X2 → X1 ∪ X2 = univ → MetrizableSpace ↑X1 → MetrizableSpace ↑X2 → False",
+   "nonvac": "¬∀ (X : Type u) [inst : TopologicalSpace X] [CompactSpace X] [T2Space X] (X1 X2 : Set X),\n    IsClosed X1 → IsClosed X2 → X1 ∪ X2 = univ → MetrizableSpace ↑X1 → MetrizableSpace ↑X2 → False",
+   "trivial": "∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X), MetrizableSpace X",
+   "nontrivial": "¬∀ (X : Type u) [inst : TopologicalSpace X] (X1 X2 : Set X), MetrizableSpace X"
+  }
+ },
+ "pns-test-Munkres|exercise_43_2": {
+  "status": "ok",
+  "info": "free=2 binders=8",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : MetricSpace X] {Y : Type u} [inst_1 : MetricSpace Y] [CompleteSpace Y]\n  (A : Set X) (f : X → Y), UniformContinuousOn f A → False",
+   "nonvac": "¬∀ {X : Type u} [inst : MetricSpace X] {Y : Type u} [inst_1 : MetricSpace Y] [CompleteSpace Y]\n    (A : Set X) (f : X → Y), UniformContinuousOn f A → False",
+   "trivial": "∀ {X : Type u} [inst : MetricSpace X] {Y : Type u} [inst_1 : MetricSpace Y] (A : Set X)\n  (f : X → Y), ∃! g, ContinuousOn g (closure A) ∧ UniformContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x",
+   "nontrivial": "¬∀ {X : Type u} [inst : MetricSpace X] {Y : Type u} [inst_1 : MetricSpace Y] (A : Set X)\n    (f : X → Y), ∃! g, ContinuousOn g (closure A) ∧ UniformContinuousOn g (closure A) ∧ ∀ (x : ↑A), g ↑x = f ↑x"
+  }
+ },
+ "pns-test-Pugh|exercise_2_26": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {M : Type u} [TopologicalSpace M] (U : Set M), False",
+   "nonvac": "¬∀ {M : Type u} [TopologicalSpace M] (U : Set M), False"
+  }
+ },
+ "pns-test-Pugh|exercise_2_32a": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ (A : Set ℕ), False",
+   "nonvac": "¬∀ (A : Set ℕ), False"
+  }
+ },
+ "pns-test-Pugh|exercise_2_46": {
+  "status": "ok",
+  "info": "free=5 binders=9",
+  "goals": {
+   "vacuous": "∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n  IsCompact A → IsCompact B → Disjoint A B → A ≠ ∅ → B ≠ ∅ → False",
+   "nonvac": "¬∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n    IsCompact A → IsCompact B → Disjoint A B → A ≠ ∅ → B ≠ ∅ → False",
+   "trivial": "∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n  ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b",
+   "nontrivial": "¬∀ {M : Type u} [inst : MetricSpace M] {A B : Set M},\n    ∃ a₀ b₀, a₀ ∈ A ∧ b₀ ∈ B ∧ ∀ (a b : M), a ∈ A → b ∈ B → dist a₀ b₀ ≤ dist a b"
+  }
+ },
+ "pns-test-Pugh|exercise_2_92": {
+  "status": "ok",
+  "info": "free=3 binders=6",
+  "goals": {
+   "vacuous": "∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n  (∀ (i : ℕ), IsCompact (s i)) → (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → False",
+   "nonvac": "¬∀ {α : Type u} [inst : TopologicalSpace α] {s : ℕ → Set α},\n    (∀ (i : ℕ), IsCompact (s i)) → (∀ (i : ℕ), (s i).Nonempty) → (∀ (i : ℕ), s i ⊇ s (i + 1)) → False",
+   "trivial": "∀ {α : Type u} [TopologicalSpace α] {s : ℕ → Set α}, (⋂ i, s i).Nonempty",
+   "nontrivial": "¬∀ {α : Type u} [TopologicalSpace α] {s : ℕ → Set α}, (⋂ i, s i).Nonempty"
+  }
+ },
+ "pns-test-Pugh|exercise_3_1": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) → False",
+   "nonvac": "¬∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) → False",
+   "trivial": "∀ {f : ℝ → ℝ}, ∃ c, f = fun x => c",
+   "nontrivial": "¬∀ {f : ℝ → ℝ}, ∃ c, f = fun x => c"
+  }
+ },
+ "pns-test-Pugh|exercise_3_63a": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ p > 1, False",
+   "nonvac": "¬∀ p > 1, False",
+   "trivial": "∀ (p : ℝ), ∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)",
+   "nontrivial": "¬∀ (p : ℝ), ∃ l, Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)"
+  }
+ },
+ "pns-test-Pugh|exercise_4_15a": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ (a b : ℝ), a ≤ b → ∀ (f : ↑(Icc a b) → ℝ), False",
+   "nonvac": "¬∀ (a b : ℝ), a ≤ b → ∀ (f : ↑(Icc a b) → ℝ), False",
+   "trivial": "∀ (a b : ℝ) (f : ↑(Icc a b) → ℝ),\n  UniformContinuous f ↔\n    ∃ μ,\n      ∀ (x : ℝ),\n        (x > 0 → μ x > 0) ∧\n          StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ ∀ (s t : ↑(Icc a b)), |f s - f t| ≤ μ |↑s - ↑t|",
+   "nontrivial": "¬∀ (a b : ℝ) (f : ↑(Icc a b) → ℝ),\n    UniformContinuous f ↔\n      ∃ μ,\n        ∀ (x : ℝ),\n          (x > 0 → μ x > 0) ∧\n            StrictMonoOn μ (Ioi 0) ∧ Tendsto μ (𝓝 0) (𝓝 0) ∧ ∀ (s t : ↑(Icc a b)), |f s - f t| ≤ μ |↑s - ↑t|"
+  }
+ },
+ "pns-test-Putnam|exercise_1998_b6": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ (a b c : ℤ), False",
+   "nonvac": "¬∀ (a b c : ℤ), False"
+  }
+ },
+ "pns-test-Putnam|exercise_1999_b4": {
+  "status": "ok",
+  "info": "free=3 binders=5",
+  "goals": {
+   "vacuous": "∀ (f : ℝ → ℝ),\n  ContDiff ℝ 3 f →\n    (∀ n ≤ 3, ∀ (x : ℝ), iteratedDeriv n f x > 0) → (∀ (x : ℝ), iteratedDeriv 3 f x ≤ f x) → ∀ (x : ℝ), False",
+   "nonvac": "¬∀ (f : ℝ → ℝ),\n    ContDiff ℝ 3 f →\n      (∀ n ≤ 3, ∀ (x : ℝ), iteratedDeriv n f x > 0) → (∀ (x : ℝ), iteratedDeriv 3 f x ≤ f x) → ∀ (x : ℝ), False",
+   "trivial": "∀ (f : ℝ → ℝ) (x : ℝ), deriv f x < 2 * f x",
+   "nontrivial": "¬∀ (f : ℝ → ℝ) (x : ℝ), deriv f x < 2 * f x"
+  }
+ },
+ "pns-test-Putnam|exercise_2001_a5": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Putnam|exercise_2014_a5": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ (P : ℕ → Polynomial ℤ),\n  (∀ (n : ℕ), P n = ∑ i, (↑n + 1) * Polynomial.X ^ n) → ∀ (j k : ℕ), j ≠ k → False",
+   "nonvac": "¬∀ (P : ℕ → Polynomial ℤ),\n    (∀ (n : ℕ), P n = ∑ i, (↑n + 1) * Polynomial.X ^ n) → ∀ (j k : ℕ), j ≠ k → False",
+   "trivial": "∀ (P : ℕ → Polynomial ℤ) (j k : ℕ), IsCoprime (P j) (P k)",
+   "nontrivial": "¬∀ (P : ℕ → Polynomial ℤ) (j k : ℕ), IsCoprime (P j) (P k)"
+  }
+ },
+ "pns-test-Putnam|exercise_2018_a5": {
+  "status": "ok",
+  "info": "free=4 binders=5",
+  "goals": {
+   "vacuous": "∀ (f : ℝ → ℝ), ContDiff ℝ ⊤ f → f 0 = 0 → f 1 = 1 → (∀ (x : ℝ), f x ≥ 0) → False",
+   "nonvac": "¬∀ (f : ℝ → ℝ), ContDiff ℝ ⊤ f → f 0 = 0 → f 1 = 1 → (∀ (x : ℝ), f x ≥ 0) → False",
+   "trivial": "∀ (f : ℝ → ℝ), ∃ n x, iteratedDeriv (↑n) f x < 0",
+   "nontrivial": "¬∀ (f : ℝ → ℝ), ∃ n x, iteratedDeriv (↑n) f x < 0"
+  }
+ },
+ "pns-test-Putnam|exercise_2018_b4": {
+  "status": "ok",
+  "info": "free=4 binders=5",
+  "goals": {
+   "vacuous": "∀ (x : ℕ → ℝ),\n  x 0 = 1 → x 2 = x 1 → (∀ n ≥ 2, x (n + 1) = 2 * x n * x (n - 1) - x (n - 2)) → (∃ n, x n = 0) → False",
+   "nonvac": "¬∀ (x : ℕ → ℝ),\n    x 0 = 1 → x 2 = x 1 → (∀ n ≥ 2, x (n + 1) = 2 * x n * x (n - 1) - x (n - 2)) → (∃ n, x n = 0) → False",
+   "trivial": "∀ (x : ℕ → ℝ), ∃ c, c ≠ 0 ∧ Function.Periodic x c",
+   "nontrivial": "¬∀ (x : ℕ → ℝ), ∃ c, c ≠ 0 ∧ Function.Periodic x c"
+  }
+ },
+ "pns-test-Rudin|exercise_1_1b": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ (x : ℝ) (y : ℚ), y ≠ 0 → Irrational x → False",
+   "nonvac": "¬∀ (x : ℝ) (y : ℚ), y ≠ 0 → Irrational x → False",
+   "trivial": "∀ (x : ℝ) (y : ℚ), Irrational (x * ↑y)",
+   "nontrivial": "¬∀ (x : ℝ) (y : ℚ), Irrational (x * ↑y)"
+  }
+ },
+ "pns-test-Rudin|exercise_1_4": {
+  "status": "ok",
+  "info": "free=3 binders=8",
+  "goals": {
+   "vacuous": "∀ (α : Type u) [inst : PartialOrder α] (s : Set α) (x y : α),\n  s.Nonempty → x ∈ lowerBounds s → y ∈ upperBounds s → False",
+   "nonvac": "¬∀ (α : Type u) [inst : PartialOrder α] (s : Set α) (x y : α),\n    s.Nonempty → x ∈ lowerBounds s → y ∈ upperBounds s → False",
+   "trivial": "∀ (α : Type u) [inst : PartialOrder α] (s : Set α) (x y : α), x ≤ y",
+   "nontrivial": "¬∀ (α : Type u) [inst : PartialOrder α] (s : Set α) (x y : α), x ≤ y"
+  }
+ },
+ "pns-test-Rudin|exercise_1_8": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ (r : ℂ → ℂ → Prop), False",
+   "nonvac": "¬∀ (r : ℂ → ℂ → Prop), False"
+  }
+ },
+ "pns-test-Rudin|exercise_1_12": {
+  "status": "elab_fail"
+ },
+ "pns-test-Rudin|exercise_1_14": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ (z : ℂ), sorry = 1 → False",
+   "nonvac": "¬∀ (z : ℂ), sorry = 1 → False",
+   "trivial": "∀ (z : ℂ), sorry ^ 2 + sorry ^ 2 = 4",
+   "nontrivial": "¬∀ (z : ℂ), sorry ^ 2 + sorry ^ 2 = 4"
+  }
+ },
+ "pns-test-Rudin|exercise_1_17": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ (n : ℕ) (x y : EuclideanSpace ℝ (Fin n)), False",
+   "nonvac": "¬∀ (n : ℕ) (x y : EuclideanSpace ℝ (Fin n)), False"
+  }
+ },
+ "pns-test-Rudin|exercise_1_18b": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (x : ℝ), x ≠ 0 → ∀ (y : ℝ), False",
+   "nonvac": "¬∀ (x : ℝ), x ≠ 0 → ∀ (y : ℝ), False",
+   "trivial": "∀ (x y : ℝ), ¬(y ≠ 0 ∧ x * y = 0)",
+   "nontrivial": "¬∀ (x y : ℝ), ¬(y ≠ 0 ∧ x * y = 0)"
+  }
+ },
+ "pns-test-Rudin|exercise_2_19a": {
+  "status": "ok",
+  "info": "free=3 binders=7",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : MetricSpace X] (A B : Set X),\n  IsClosed A → IsClosed B → Disjoint A B → False",
+   "nonvac": "¬∀ {X : Type u} [inst : MetricSpace X] (A B : Set X),\n    IsClosed A → IsClosed B → Disjoint A B → False",
+   "trivial": "∀ {X : Type u} [inst : MetricSpace X] (A B : Set X), SeparatedNhds A B",
+   "nontrivial": "¬∀ {X : Type u} [inst : MetricSpace X] (A B : Set X), SeparatedNhds A B"
+  }
+ },
+ "pns-test-Rudin|exercise_2_25": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ {K : Type u} [inst : MetricSpace K] [CompactSpace K], False",
+   "nonvac": "¬∀ {K : Type u} [inst : MetricSpace K] [CompactSpace K], False",
+   "trivial": "∀ {K : Type u} [inst : MetricSpace K], ∃ B, B.Countable ∧ IsTopologicalBasis B",
+   "nontrivial": "¬∀ {K : Type u} [inst : MetricSpace K], ∃ B, B.Countable ∧ IsTopologicalBasis B"
+  }
+ },
+ "pns-test-Rudin|exercise_2_27b": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (k : ℕ) (E : Set (EuclideanSpace ℝ (Fin k))), ¬E.Countable → False",
+   "nonvac": "¬∀ (k : ℕ) (E : Set (EuclideanSpace ℝ (Fin k))), ¬E.Countable → False",
+   "trivial": "∀ (k : ℕ) (E : Set (EuclideanSpace ℝ (Fin k))),\n  (E \\ {x | ∀ U ∈ 𝓝 x, ¬(U ∩ E).Countable}).Countable",
+   "nontrivial": "¬∀ (k : ℕ) (E : Set (EuclideanSpace ℝ (Fin k))),\n    (E \\ {x | ∀ U ∈ 𝓝 x, ¬(U ∩ E).Countable}).Countable"
+  }
+ },
+ "pns-test-Rudin|exercise_2_29": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ (U : Set ℝ), IsOpen U → False",
+   "nonvac": "¬∀ (U : Set ℝ), IsOpen U → False",
+   "trivial": "∀ (U : Set ℝ),\n  ∃ f,\n    (∀ (n : ℕ), ∃ a b, f n = {x | a < x ∧ x < b}) ∧\n      (∀ (n : ℕ), f n ⊆ U) ∧ (∀ (n m : ℕ), n ≠ m → f n ∩ f m = ∅) ∧ U = ⋃ n, f n",
+   "nontrivial": "¬∀ (U : Set ℝ),\n    ∃ f,\n      (∀ (n : ℕ), ∃ a b, f n = {x | a < x ∧ x < b}) ∧\n        (∀ (n : ℕ), f n ⊆ U) ∧ (∀ (n m : ℕ), n ≠ m → f n ∩ f m = ∅) ∧ U = ⋃ n, f n"
+  }
+ },
+ "pns-test-Rudin|exercise_3_2a": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Rudin|exercise_3_5": {
+  "status": "ok",
+  "info": "free=4 binders=6",
+  "goals": {
+   "vacuous": "∀ (a b : ℕ → EReal),\n  (∀ (n : ℕ), a n ≠ ⊤ ∧ a n ≠ ⊥) → (∀ (n : ℕ), b n ≠ ⊤ ∧ b n ≠ ⊥) → limsup a ≠ ⊤ → limsup b ≠ ⊥ → False",
+   "nonvac": "¬∀ (a b : ℕ → EReal),\n    (∀ (n : ℕ), a n ≠ ⊤ ∧ a n ≠ ⊥) → (∀ (n : ℕ), b n ≠ ⊤ ∧ b n ≠ ⊥) → limsup a ≠ ⊤ → limsup b ≠ ⊥ → False",
+   "trivial": "∀ (a b : ℕ → EReal), (limsup fun n => a n + b n) ≤ limsup a + limsup b",
+   "nontrivial": "¬∀ (a b : ℕ → EReal), (limsup fun n => a n + b n) ≤ limsup a + limsup b"
+  }
+ },
+ "pns-test-Rudin|exercise_3_7": {
+  "status": "elab_fail"
+ },
+ "pns-test-Rudin|exercise_3_13": {
+  "status": "elab_fail"
+ },
+ "pns-test-Rudin|exercise_3_21": {
+  "status": "ok",
+  "info": "free=6 binders=9",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : MetricSpace X] [CompleteSpace X] (E : ℕ → Set X),\n  (∀ (n : ℕ), IsClosed (E n)) →\n    (∀ (n : ℕ), (E n).Nonempty) →\n      (∀ (n : ℕ), Bornology.IsBounded (E n)) →\n        (∀ (n : ℕ), E n ⊇ E (n + 1)) → Tendsto (fun n => Metric.diam (E n)) atTop (𝓝 0) → False",
+   "nonvac": "¬∀ {X : Type u} [inst : MetricSpace X] [CompleteSpace X] (E : ℕ → Set X),\n    (∀ (n : ℕ), IsClosed (E n)) →\n      (∀ (n : ℕ), (E n).Nonempty) →\n        (∀ (n : ℕ), Bornology.IsBounded (E n)) →\n          (∀ (n : ℕ), E n ⊇ E (n + 1)) → Tendsto (fun n => Metric.diam (E n)) atTop (𝓝 0) → False",
+   "trivial": "∀ {X : Type u} [MetricSpace X] (E : ℕ → Set X), ∃ a, Set.iInter E = {a}",
+   "nontrivial": "¬∀ {X : Type u} [MetricSpace X] (E : ℕ → Set X), ∃ a, Set.iInter E = {a}"
+  }
+ },
+ "pns-test-Rudin|exercise_4_1a": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Rudin|exercise_4_3": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ), Continuous f → False",
+   "nonvac": "¬∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ), Continuous f → False",
+   "trivial": "∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ), IsClosed (f ⁻¹' {0})",
+   "nontrivial": "¬∀ {α : Type} [inst : MetricSpace α] (f : α → ℝ), IsClosed (f ⁻¹' {0})"
+  }
+ },
+ "pns-test-Rudin|exercise_4_4b": {
+  "status": "ok",
+  "info": "free=4 binders=11",
+  "goals": {
+   "vacuous": "∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β)\n  (s : Set α), Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → False",
+   "nonvac": "¬∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β)\n    (s : Set α), Continuous f → Continuous g → Dense s → (∀ x ∈ s, f x = g x) → False",
+   "trivial": "∀ {α : Type} [MetricSpace α] {β : Type} [MetricSpace β] (f g : α → β) (s : Set α), f = g",
+   "nontrivial": "¬∀ {α : Type} [MetricSpace α] {β : Type} [MetricSpace β] (f g : α → β) (s : Set α), f = g"
+  }
+ },
+ "pns-test-Rudin|exercise_4_5b": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Rudin|exercise_4_8a": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ (E : Set ℝ) (f : ℝ → ℝ), UniformContinuousOn f E → Bornology.IsBounded E → False",
+   "nonvac": "¬∀ (E : Set ℝ) (f : ℝ → ℝ), UniformContinuousOn f E → Bornology.IsBounded E → False",
+   "trivial": "∀ (E : Set ℝ) (f : ℝ → ℝ), Bornology.IsBounded (f '' E)",
+   "nontrivial": "¬∀ (E : Set ℝ) (f : ℝ → ℝ), Bornology.IsBounded (f '' E)"
+  }
+ },
+ "pns-test-Rudin|exercise_4_11a": {
+  "status": "ok",
+  "info": "free=2 binders=8",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : MetricSpace X] {Y : Type u} [inst_1 : MetricSpace Y] (f : X → Y),\n  UniformContinuous f → ∀ (x : ℕ → X), CauchySeq x → False",
+   "nonvac": "¬∀ {X : Type u} [inst : MetricSpace X] {Y : Type u} [inst_1 : MetricSpace Y] (f : X → Y),\n    UniformContinuous f → ∀ (x : ℕ → X), CauchySeq x → False",
+   "trivial": "∀ {X : Type u} [MetricSpace X] {Y : Type u} [inst : MetricSpace Y] (f : X → Y) (x : ℕ → X),\n  CauchySeq fun n => f (x n)",
+   "nontrivial": "¬∀ {X : Type u} [MetricSpace X] {Y : Type u} [inst : MetricSpace Y] (f : X → Y) (x : ℕ → X),\n    CauchySeq fun n => f (x n)"
+  }
+ },
+ "pns-test-Rudin|exercise_4_15": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ {f : ℝ → ℝ}, Continuous f → IsOpenMap f → False",
+   "nonvac": "¬∀ {f : ℝ → ℝ}, Continuous f → IsOpenMap f → False",
+   "trivial": "∀ {f : ℝ → ℝ}, Monotone f",
+   "nontrivial": "¬∀ {f : ℝ → ℝ}, Monotone f"
+  }
+ },
+ "pns-test-Rudin|exercise_4_21a": {
+  "status": "ok",
+  "info": "free=3 binders=7",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : MetricSpace X] (K F : Set X),\n  IsCompact K → IsClosed F → Disjoint K F → False",
+   "nonvac": "¬∀ {X : Type u} [inst : MetricSpace X] (K F : Set X),\n    IsCompact K → IsClosed F → Disjoint K F → False",
+   "trivial": "∀ {X : Type u} [inst : MetricSpace X] (K F : Set X),\n  ∃ δ > 0, ∀ (p q : X), p ∈ K → q ∈ F → dist p q > δ",
+   "nontrivial": "¬∀ {X : Type u} [inst : MetricSpace X] (K F : Set X),\n    ∃ δ > 0, ∀ (p q : X), p ∈ K → q ∈ F → dist p q > δ"
+  }
+ },
+ "pns-test-Rudin|exercise_5_1": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) → False",
+   "nonvac": "¬∀ {f : ℝ → ℝ}, (∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) → False",
+   "trivial": "∀ {f : ℝ → ℝ}, ∃ c, f = fun x => c",
+   "nontrivial": "¬∀ {f : ℝ → ℝ}, ∃ c, f = fun x => c"
+  }
+ },
+ "pns-test-Rudin|exercise_5_3": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ {g : ℝ → ℝ}, Continuous g → (∃ M, ∀ (x : ℝ), |deriv g x| ≤ M) → False",
+   "nonvac": "¬∀ {g : ℝ → ℝ}, Continuous g → (∃ M, ∀ (x : ℝ), |deriv g x| ≤ M) → False",
+   "trivial": "∀ {g : ℝ → ℝ}, ∃ N, ∀ ε > 0, ε < N → Function.Injective fun x => x + ε * g x",
+   "nontrivial": "¬∀ {g : ℝ → ℝ}, ∃ N, ∀ ε > 0, ε < N → Function.Injective fun x => x + ε * g x"
+  }
+ },
+ "pns-test-Rudin|exercise_5_5": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ {f : ℝ → ℝ}, DifferentiableOn ℝ f (Set.Ioi 0) → Tendsto (deriv f) atTop (𝓝 0) → False",
+   "nonvac": "¬∀ {f : ℝ → ℝ}, DifferentiableOn ℝ f (Set.Ioi 0) → Tendsto (deriv f) atTop (𝓝 0) → False",
+   "trivial": "∀ {f : ℝ → ℝ}, Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0)",
+   "nontrivial": "¬∀ {f : ℝ → ℝ}, Tendsto (fun x => f (x + 1) - f x) atTop (𝓝 0)"
+  }
+ },
+ "pns-test-Rudin|exercise_5_7": {
+  "status": "ok",
+  "info": "free=5 binders=8",
+  "goals": {
+   "vacuous": "∀ {f g : ℝ → ℝ} {x : ℝ},\n  DifferentiableAt ℝ f x → DifferentiableAt ℝ g x → deriv g x ≠ 0 → f x = 0 → g x = 0 → False",
+   "nonvac": "¬∀ {f g : ℝ → ℝ} {x : ℝ},\n    DifferentiableAt ℝ f x → DifferentiableAt ℝ g x → deriv g x ≠ 0 → f x = 0 → g x = 0 → False",
+   "trivial": "∀ {f g : ℝ → ℝ} {x : ℝ}, Tendsto (fun t => f t / g t) (𝓝 x) (𝓝 (deriv f x / deriv g x))",
+   "nontrivial": "¬∀ {f g : ℝ → ℝ} {x : ℝ}, Tendsto (fun t => f t / g t) (𝓝 x) (𝓝 (deriv f x / deriv g x))"
+  }
+ },
+ "pns-test-Rudin|exercise_5_17": {
+  "status": "ok",
+  "info": "free=7 binders=8",
+  "goals": {
+   "vacuous": "∀ {f : ℝ → ℝ},\n  DifferentiableOn ℝ f (Set.Icc (-1) 1) →\n    DifferentiableOn ℝ (deriv f) (Set.Icc (-1) 1) →\n      DifferentiableOn ℝ (deriv (deriv f)) (Set.Icc (-1) 1) → f (-1) = 0 → f 0 = 0 → f 1 = 1 → deriv f 0 = 0 → False",
+   "nonvac": "¬∀ {f : ℝ → ℝ},\n    DifferentiableOn ℝ f (Set.Icc (-1) 1) →\n      DifferentiableOn ℝ (deriv f) (Set.Icc (-1) 1) →\n        DifferentiableOn ℝ (deriv (deriv f)) (Set.Icc (-1) 1) → f (-1) = 0 → f 0 = 0 → f 1 = 1 → deriv f 0 = 0 → False",
+   "trivial": "∀ {f : ℝ → ℝ}, ∃ x ∈ Set.Ioo (-1) 1, deriv (deriv (deriv f)) x ≥ 3",
+   "nontrivial": "¬∀ {f : ℝ → ℝ}, ∃ x ∈ Set.Ioo (-1) 1, deriv (deriv (deriv f)) x ≥ 3"
+  }
+ },
+ "pns-test-Shakarchi|exercise_1_13b": {
+  "status": "ok",
+  "info": "free=3 binders=7",
+  "goals": {
+   "vacuous": "∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω),\n  IsOpen Ω → DifferentiableOn ℂ f Ω → (∃ c, ∀ z ∈ Ω, (f z).im = c) → False",
+   "nonvac": "¬∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω),\n    IsOpen Ω → DifferentiableOn ℂ f Ω → (∃ c, ∀ z ∈ Ω, (f z).im = c) → False",
+   "trivial": "∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω), f ↑a = f ↑b",
+   "nontrivial": "¬∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω), f ↑a = f ↑b"
+  }
+ },
+ "pns-test-Shakarchi|exercise_1_19a": {
+  "status": "elab_fail"
+ },
+ "pns-test-Shakarchi|exercise_1_19c": {
+  "status": "elab_fail"
+ },
+ "pns-test-Shakarchi|exercise_2_2": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-test-Shakarchi|exercise_2_13": {
+  "status": "elab_fail"
+ },
+ "pns-test-Shakarchi|exercise_3_4": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ (a : ℝ), 0 < a → False",
+   "nonvac": "¬∀ (a : ℝ), 0 < a → False",
+   "trivial": "∀ (a : ℝ),\n  Tendsto (fun y => ∫ (x : ℝ) in -y..y, x * Real.sin x / (x ^ 2 + a ^ 2)) atTop (𝓝 (Real.pi * Real.exp (-a)))",
+   "nontrivial": "¬∀ (a : ℝ),\n    Tendsto (fun y => ∫ (x : ℝ) in -y..y, x * Real.sin x / (x ^ 2 + a ^ 2)) atTop (𝓝 (Real.pi * Real.exp (-a)))"
+  }
+ },
+ "pns-test-Shakarchi|exercise_3_14": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ {f : ℂ → ℂ}, Differentiable ℂ f → Injective f → False",
+   "nonvac": "¬∀ {f : ℂ → ℂ}, Differentiable ℂ f → Injective f → False",
+   "trivial": "∀ {f : ℂ → ℂ}, ∃ a b, (f = fun z => a * z + b) ∧ a ≠ 0",
+   "nontrivial": "¬∀ {f : ℂ → ℂ}, ∃ a b, (f = fun z => a * z + b) ∧ a ≠ 0"
+  }
+ },
+ "pns-test-Shakarchi|exercise_5_1": {
+  "status": "elab_fail"
+ },
+ "pns-valid-Artin|exercise_2_2_9": {
+  "status": "ok",
+  "info": "free=1 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {a b : G},\n  a * b = b * a → ∀ (x y : ↥(Subgroup.closure {x | x = a ∨ x = b})), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {a b : G},\n    a * b = b * a → ∀ (x y : ↥(Subgroup.closure {x | x = a ∨ x = b})), False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {a b : G} (x y : ↥(Subgroup.closure {x | x = a ∨ x = b})),\n  x * y = y * x",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {a b : G} (x y : ↥(Subgroup.closure {x | x = a ∨ x = b})),\n    x * y = y * x"
+  }
+ },
+ "pns-valid-Artin|exercise_2_4_19": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {x : G},\n  orderOf x = 2 → (∀ (y : G), orderOf y = 2 → y = x) → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {x : G},\n    orderOf x = 2 → (∀ (y : G), orderOf y = 2 → y = x) → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {x : G}, x ∈ center G",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {x : G}, x ∈ center G"
+  }
+ },
+ "pns-valid-Artin|exercise_2_11_3": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [inst : Fintype G], Even (card G) → False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [inst : Fintype G], Even (card G) → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G], ∃ x, orderOf x = 2",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G], ∃ x, orderOf x = 2"
+  }
+ },
+ "pns-valid-Artin|exercise_3_5_6": {
+  "status": "ok",
+  "info": "free=3 binders=11",
+  "goals": {
+   "vacuous": "∀ {K V : Type u} [inst : Field K] [inst_1 : AddCommGroup V] [inst_2 : Module K V] {S : Set V},\n  S.Countable → Submodule.span K S = ⊤ → ∀ {ι : Type u} (R : ι → V), LinearIndependent K R → False",
+   "nonvac": "¬∀ {K V : Type u} [inst : Field K] [inst_1 : AddCommGroup V] [inst_2 : Module K V] {S : Set V},\n    S.Countable → Submodule.span K S = ⊤ → ∀ {ι : Type u} (R : ι → V), LinearIndependent K R → False",
+   "trivial": "∀ {K V : Type u} [inst : Field K] [inst_1 : AddCommGroup V] [Module K V] {S : Set V} {ι : Type u}\n  (R : ι → V), Countable ι",
+   "nontrivial": "¬∀ {K V : Type u} [inst : Field K] [inst_1 : AddCommGroup V] [Module K V] {S : Set V}\n    {ι : Type u} (R : ι → V), Countable ι"
+  }
+ },
+ "pns-valid-Artin|exercise_6_1_14": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (G : Type u) [inst : Group G], IsCyclic (G ⧸ center G) → False",
+   "nonvac": "¬∀ (G : Type u) [inst : Group G], IsCyclic (G ⧸ center G) → False",
+   "trivial": "∀ (G : Type u) [inst : Group G], center G = ⊤",
+   "nontrivial": "¬∀ (G : Type u) [inst : Group G], center G = ⊤"
+  }
+ },
+ "pns-valid-Artin|exercise_6_4_3": {
+  "status": "ok",
+  "info": "free=3 binders=8",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [inst : Fintype G] {p q : ℕ},\n  Prime p → Prime q → card G = p ^ 2 * q → False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [inst : Fintype G] {p q : ℕ},\n    Prime p → Prime q → card G = p ^ 2 * q → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G] {p q : ℕ}, ¬IsSimpleGroup G",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G] {p q : ℕ}, ¬IsSimpleGroup G"
+  }
+ },
+ "pns-valid-Artin|exercise_6_8_1": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] (a b : G), False",
+   "nonvac": "¬∀ {G : Type u} [Group G] (a b : G), False"
+  }
+ },
+ "pns-valid-Artin|exercise_10_2_4": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Artin|exercise_10_4_6": {
+  "status": "ok",
+  "info": "free=0 binders=5",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : CommRing R] (I J : Ideal R) (x : ↥(I ⊓ J)), False",
+   "nonvac": "¬∀ {R : Type u} [inst : CommRing R] (I J : Ideal R) (x : ↥(I ⊓ J)), False"
+  }
+ },
+ "pns-valid-Artin|exercise_10_7_10": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : Ring R] (M : Ideal R), (∀ x ∉ M, IsUnit x) → (∃ x, x ∉ M) → False",
+   "nonvac": "¬∀ {R : Type u} [inst : Ring R] (M : Ideal R), (∀ x ∉ M, IsUnit x) → (∃ x, x ∉ M) → False",
+   "trivial": "∀ {R : Type u} [inst : Ring R] (M : Ideal R), M.IsMaximal ∧ ∀ (N : Ideal R), N.IsMaximal → N = M",
+   "nontrivial": "¬∀ {R : Type u} [inst : Ring R] (M : Ideal R),\n    M.IsMaximal ∧ ∀ (N : Ideal R), N.IsMaximal → N = M"
+  }
+ },
+ "pns-valid-Artin|exercise_11_4_1b": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Artin|exercise_11_4_6b": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {F : Type u} [Field F] [inst : Fintype F], card F = 7 → False",
+   "nonvac": "¬∀ {F : Type u} [Field F] [inst : Fintype F], card F = 7 → False",
+   "trivial": "∀ {F : Type u} [inst : Field F] [Fintype F], Irreducible (X ^ 2 + 1)",
+   "nontrivial": "¬∀ {F : Type u} [inst : Field F] [Fintype F], Irreducible (X ^ 2 + 1)"
+  }
+ },
+ "pns-valid-Artin|exercise_11_4_8": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ (p : ℕ), Prime p → ∀ n > 0, False",
+   "nonvac": "¬∀ (p : ℕ), Prime p → ∀ n > 0, False",
+   "trivial": "∀ (p n : ℕ), Irreducible (X ^ n - ↑p)",
+   "nontrivial": "¬∀ (p n : ℕ), Irreducible (X ^ n - ↑p)"
+  }
+ },
+ "pns-valid-Artin|exercise_13_4_10": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ {p : ℕ} {hp : Nat.Prime p}, (∃ r, p = 2 ^ r + 1) → False",
+   "nonvac": "¬∀ {p : ℕ} {hp : Nat.Prime p}, (∃ r, p = 2 ^ r + 1) → False",
+   "trivial": "∀ {p : ℕ}, ∃ k, p = 2 ^ 2 ^ k + 1",
+   "nontrivial": "¬∀ {p : ℕ}, ∃ k, p = 2 ^ 2 ^ k + 1"
+  }
+ },
+ "pns-valid-Axler|exercise_1_3": {
+  "status": "ok",
+  "info": "free=0 binders=6",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [Module F V] {v : V}, False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [Module F V] {v : V}, False"
+  }
+ },
+ "pns-valid-Axler|exercise_1_6": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Axler|exercise_1_8": {
+  "status": "ok",
+  "info": "free=0 binders=7",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] {ι : Type u}\n  (u : ι → Submodule F V), False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] {ι : Type u}\n    (u : ι → Submodule F V), False"
+  }
+ },
+ "pns-valid-Axler|exercise_3_1": {
+  "status": "ok",
+  "info": "free=2 binders=8",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n  [FiniteDimensional F V] (T : V →ₗ[F] V), finrank F V = 1 → False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    [FiniteDimensional F V] (T : V →ₗ[F] V), finrank F V = 1 → False",
+   "trivial": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n  (T : V →ₗ[F] V), ∃ c, ∀ (v : V), T v = c • v",
+   "nontrivial": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    (T : V →ₗ[F] V), ∃ c, ∀ (v : V), T v = c • v"
+  }
+ },
+ "pns-valid-Axler|exercise_4_4": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ (p : ℂ[X]), False",
+   "nonvac": "¬∀ (p : ℂ[X]), False"
+  }
+ },
+ "pns-valid-Axler|exercise_5_4": {
+  "status": "ok",
+  "info": "free=1 binders=9",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n  (S T : V →ₗ[F] V), ⇑S ∘ ⇑T = ⇑T ∘ ⇑S → ∀ (c : F), False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    (S T : V →ₗ[F] V), ⇑S ∘ ⇑T = ⇑T ∘ ⇑S → ∀ (c : F), False",
+   "trivial": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n  (S T : V →ₗ[F] V) (c : F), Submodule.map S (ker (T - c • LinearMap.id)) = ker (T - c • LinearMap.id)",
+   "nontrivial": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    (S T : V →ₗ[F] V) (c : F), Submodule.map S (ker (T - c • LinearMap.id)) = ker (T - c • LinearMap.id)"
+  }
+ },
+ "pns-valid-Axler|exercise_5_12": {
+  "status": "ok",
+  "info": "free=1 binders=7",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] {S : End F V},\n  (∀ (v : V), ∃ c, v ∈ S.eigenspace c) → False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] {S : End F V},\n    (∀ (v : V), ∃ c, v ∈ S.eigenspace c) → False",
+   "trivial": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V] {S : End F V},\n  ∃ c, S = c • LinearMap.id",
+   "nontrivial": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    {S : End F V}, ∃ c, S = c • LinearMap.id"
+  }
+ },
+ "pns-valid-Axler|exercise_5_20": {
+  "status": "ok",
+  "info": "free=2 binders=10",
+  "goals": {
+   "vacuous": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n  [inst_3 : FiniteDimensional F V] {S T : End F V},\n  card T.Eigenvalues = finrank F V → (∀ (v : V), (∃ c, v ∈ S.eigenspace c) ↔ ∃ c, v ∈ T.eigenspace c) → False",
+   "nonvac": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    [inst_3 : FiniteDimensional F V] {S T : End F V},\n    card T.Eigenvalues = finrank F V → (∀ (v : V), (∃ c, v ∈ S.eigenspace c) ↔ ∃ c, v ∈ T.eigenspace c) → False",
+   "trivial": "∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n  [FiniteDimensional F V] {S T : End F V}, S * T = T * S",
+   "nontrivial": "¬∀ {F V : Type u} [inst : AddCommGroup V] [inst_1 : Field F] [inst_2 : Module F V]\n    [FiniteDimensional F V] {S T : End F V}, S * T = T * S"
+  }
+ },
+ "pns-valid-Axler|exercise_6_2": {
+  "status": "probe_fail",
+  "detail": "CANON_FAIL CANON_FAIL metavariables in statement"
+ },
+ "pns-valid-Axler|exercise_6_7": {
+  "status": "ok",
+  "info": "free=0 binders=5",
+  "goals": {
+   "vacuous": "∀ {V : Type u} [inst : NormedAddCommGroup V] [InnerProductSpace ℂ V] (u v : V), False",
+   "nonvac": "¬∀ {V : Type u} [inst : NormedAddCommGroup V] [InnerProductSpace ℂ V] (u v : V), False"
+  }
+ },
+ "pns-valid-Axler|exercise_6_16": {
+  "status": "ok",
+  "info": "free=0 binders=6",
+  "goals": {
+   "vacuous": "∀ {K V : Type u} [inst : RCLike K] [inst_1 : NormedAddCommGroup V]\n  [inst_2 : InnerProductSpace K V] {U : Submodule K V}, False",
+   "nonvac": "¬∀ {K V : Type u} [inst : RCLike K] [inst_1 : NormedAddCommGroup V]\n    [inst_2 : InnerProductSpace K V] {U : Submodule K V}, False"
+  }
+ },
+ "pns-valid-Axler|exercise_7_6": {
+  "status": "probe_fail",
+  "detail": "CANON_FAIL CANON_FAIL metavariables in statement"
+ },
+ "pns-valid-Axler|exercise_7_10": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n  [inst_2 : FiniteDimensional ℂ V] (T : End ℂ V), T * adjoint T = adjoint T * T → T ^ 9 = T ^ 8 → False",
+   "nonvac": "¬∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n    [inst_2 : FiniteDimensional ℂ V] (T : End ℂ V), T * adjoint T = adjoint T * T → T ^ 9 = T ^ 8 → False",
+   "trivial": "∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n  [inst_2 : FiniteDimensional ℂ V] (T : End ℂ V), IsSelfAdjoint T ∧ T ^ 2 = T",
+   "nontrivial": "¬∀ {V : Type u} [inst : NormedAddCommGroup V] [inst_1 : InnerProductSpace ℂ V]\n    [inst_2 : FiniteDimensional ℂ V] (T : End ℂ V), IsSelfAdjoint T ∧ T ^ 2 = T"
+  }
+ },
+ "pns-valid-Axler|exercise_7_14": {
+  "status": "ok",
+  "info": "free=3 binders=12",
+  "goals": {
+   "vacuous": "∀ {𝕜 V : Type u} [inst : RCLike 𝕜] [inst_1 : NormedAddCommGroup V]\n  [inst_2 : InnerProductSpace 𝕜 V] [inst_3 : FiniteDimensional 𝕜 V] {T : End 𝕜 V},\n  IsSelfAdjoint T → ∀ {l : 𝕜} {ε : ℝ}, ε > 0 → (∃ v, ‖v‖ = 1 ∧ ‖T v - l • v‖ < ε) → False",
+   "nonvac": "¬∀ {𝕜 V : Type u} [inst : RCLike 𝕜] [inst_1 : NormedAddCommGroup V]\n    [inst_2 : InnerProductSpace 𝕜 V] [inst_3 : FiniteDimensional 𝕜 V] {T : End 𝕜 V},\n    IsSelfAdjoint T → ∀ {l : 𝕜} {ε : ℝ}, ε > 0 → (∃ v, ‖v‖ = 1 ∧ ‖T v - l • v‖ < ε) → False",
+   "trivial": "∀ {𝕜 V : Type u} [inst : RCLike 𝕜] [inst_1 : NormedAddCommGroup V]\n  [inst_2 : InnerProductSpace 𝕜 V] [FiniteDimensional 𝕜 V] {T : End 𝕜 V} {l : 𝕜} {ε : ℝ}, ∃ l', ‖l - ↑T 1 l'‖ < ε",
+   "nontrivial": "¬∀ {𝕜 V : Type u} [inst : RCLike 𝕜] [inst_1 : NormedAddCommGroup V]\n    [inst_2 : InnerProductSpace 𝕜 V] [FiniteDimensional 𝕜 V] {T : End 𝕜 V} {l : 𝕜} {ε : ℝ}, ∃ l', ‖l - ↑T 1 l'‖ < ε"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_1_1_3": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ (n : ℕ) (x y z : ZMod n), False",
+   "nonvac": "¬∀ (n : ℕ) (x y z : ZMod n), False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_1_1_5": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ (n : ℕ), 1 < n → False",
+   "nonvac": "¬∀ (n : ℕ), 1 < n → False",
+   "trivial": "∀ (n : ℕ), IsEmpty (Group (ZMod n))",
+   "nontrivial": "¬∀ (n : ℕ), IsEmpty (Group (ZMod n))"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_1_1_16": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] (x : G), False",
+   "nonvac": "¬∀ {G : Type u} [Group G] (x : G), False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_1_1_18": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] (x y : G), False",
+   "nonvac": "¬∀ {G : Type u} [Group G] (x y : G), False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_1_1_22a": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] (x g : G), False",
+   "nonvac": "¬∀ {G : Type u} [Group G] (x g : G), False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_1_1_25": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G], (∀ (x : G), x ^ 2 = 1) → ∀ (a b : G), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G], (∀ (x : G), x ^ 2 = 1) → ∀ (a b : G), False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (a b : G), a * b = b * a",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (a b : G), a * b = b * a"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_1_1_34": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {x : G}, orderOf x = 0 → ∀ (n m : ℤ), n ≠ m → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {x : G}, orderOf x = 0 → ∀ (n m : ℤ), n ≠ m → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {x : G} (n m : ℤ), x ^ n ≠ x ^ m",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {x : G} (n m : ℤ), x ^ n ≠ x ^ m"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_1_6_4": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_1_6_17": {
+  "status": "ok",
+  "info": "free=0 binders=2",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G], False",
+   "nonvac": "¬∀ {G : Type u} [Group G], False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_2_1_5": {
+  "status": "ok",
+  "info": "free=1 binders=6",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n  card G > 2 → ∀ (H : Subgroup G) [Fintype ↥H], False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n    card G > 2 → ∀ (H : Subgroup G) [Fintype ↥H], False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G] (H : Subgroup G) [inst_2 : Fintype ↥H],\n  card ↥H ≠ card G - 1",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G] (H : Subgroup G) [inst_2 : Fintype ↥H],\n    card ↥H ≠ card G - 1"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_2_4_4": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] (H : Subgroup G), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] (H : Subgroup G), False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_2_4_16b": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ {n : ℕ} {hn : n ≠ 0}, False",
+   "nonvac": "¬∀ {n : ℕ} {hn : n ≠ 0}, False",
+   "trivial": "∀ {n : ℕ},\n  Subgroup.closure {DihedralGroup.r 1} ≠ ⊤ ∧\n    ∀ (K : Subgroup (DihedralGroup n)),\n      Subgroup.closure {DihedralGroup.r 1} ≤ K → K = Subgroup.closure {DihedralGroup.r 1} ∨ K = ⊤",
+   "nontrivial": "¬∀ {n : ℕ},\n    Subgroup.closure {DihedralGroup.r 1} ≠ ⊤ ∧\n      ∀ (K : Subgroup (DihedralGroup n)),\n        Subgroup.closure {DihedralGroup.r 1} ≤ K → K = Subgroup.closure {DihedralGroup.r 1} ∨ K = ⊤"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_3_1_3a": {
+  "status": "ok",
+  "info": "free=0 binders=5",
+  "goals": {
+   "vacuous": "∀ {A : Type u} [inst : CommGroup A] (B : Subgroup A) (a b : A ⧸ B), False",
+   "nonvac": "¬∀ {A : Type u} [inst : CommGroup A] (B : Subgroup A) (a b : A ⧸ B), False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_3_1_22b": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] (I : Type u) [Nonempty I] (H : I → Subgroup G),\n  (∀ (i : I), (H i).Normal) → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] (I : Type u) [Nonempty I] (H : I → Subgroup G),\n    (∀ (i : I), (H i).Normal) → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (I : Type u) (H : I → Subgroup G), (⨅ i, H i).Normal",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (I : Type u) (H : I → Subgroup G), (⨅ i, H i).Normal"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_3_2_11": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {H K : Subgroup G}, H ≤ K → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {H K : Subgroup G}, H ≤ K → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {H K : Subgroup G}, H.index = K.index * H.relindex K",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {H K : Subgroup G}, H.index = K.index * H.relindex K"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_3_2_21a": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ (H : AddSubgroup ℚ), H ≠ ⊤ → False",
+   "nonvac": "¬∀ (H : AddSubgroup ℚ), H ≠ ⊤ → False",
+   "trivial": "∀ (H : AddSubgroup ℚ), H.index = 0",
+   "nontrivial": "¬∀ (H : AddSubgroup ℚ), H.index = 0"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_3_4_1": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (G : Type u) [inst : CommGroup G] [IsSimpleGroup G], False",
+   "nonvac": "¬∀ (G : Type u) [inst : CommGroup G] [IsSimpleGroup G], False",
+   "trivial": "∀ (G : Type u) [inst : CommGroup G], IsCyclic G ∧ ∃ G_fin, Nat.Prime (card G)",
+   "nontrivial": "¬∀ (G : Type u) [inst : CommGroup G], IsCyclic G ∧ ∃ G_fin, Nat.Prime (card G)"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_3_4_5a": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] (H : Subgroup G) [IsSolvable G], False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] (H : Subgroup G) [IsSolvable G], False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (H : Subgroup G), IsSolvable ↥H",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (H : Subgroup G), IsSolvable ↥H"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_3_4_11": {
+  "status": "ok",
+  "info": "free=3 binders=6",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] [IsSolvable G] {H : Subgroup G}, H ≠ ⊥ → ∀ [H.Normal], False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] [IsSolvable G] {H : Subgroup G}, H ≠ ⊥ → ∀ [H.Normal], False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {H : Subgroup G},\n  ∃ A ≤ H, A ≠ ⊥ ∧ A.Normal ∧ ∀ (a b : ↥A), a * b = b * a",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {H : Subgroup G},\n    ∃ A ≤ H, A ≠ ⊥ ∧ A.Normal ∧ ∀ (a b : ↥A), a * b = b * a"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_2_14": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G],\n  ¬Nat.Prime (card G) → (∀ (k : ℕ), k ∣ card G → ∃ H fH, card ↥H = k) → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G],\n    ¬Nat.Prime (card G) → (∀ (k : ℕ), k ∣ card G → ∃ H fH, card ↥H = k) → False",
+   "trivial": "∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G",
+   "nontrivial": "¬∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_3_26": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ {α : Type u} [inst : Fintype α], card α > 1 → (∀ (a b : α), ∃ σ, σ a = b) → False",
+   "nonvac": "¬∀ {α : Type u} [inst : Fintype α], card α > 1 → (∀ (a b : α), ∃ σ, σ a = b) → False",
+   "trivial": "∀ {α : Type u} [Fintype α], ∃ σ, ∀ (a : α), σ a ≠ a",
+   "nontrivial": "¬∀ {α : Type u} [Fintype α], ∃ σ, ∀ (a : α), σ a ≠ a"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_4_6a": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] (H : Subgroup G) [H.Characteristic], False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] (H : Subgroup G) [H.Characteristic], False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (H : Subgroup G), H.Normal",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (H : Subgroup G), H.Normal"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_4_7": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {H : Subgroup G} [inst_1 : Fintype ↥H],\n  (∀ (K : Subgroup G) (fK : Fintype ↥K), card ↥H = card ↥K → H = K) → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {H : Subgroup G} [inst_1 : Fintype ↥H],\n    (∀ (K : Subgroup G) (fK : Fintype ↥K), card ↥H = card ↥K → H = K) → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {H : Subgroup G} [Fintype ↥H], H.Characteristic",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {H : Subgroup G} [Fintype ↥H], H.Characteristic"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_5_1a": {
+  "status": "ok",
+  "info": "free=1 binders=6",
+  "goals": {
+   "vacuous": "∀ {p : ℕ} {G : Type u} [inst : Group G] {P : Sylow p G} (H : Subgroup G), ↑P ≤ H → False",
+   "nonvac": "¬∀ {p : ℕ} {G : Type u} [inst : Group G] {P : Sylow p G} (H : Subgroup G), ↑P ≤ H → False",
+   "trivial": "∀ {p : ℕ} {G : Type u} [inst : Group G] {P : Sylow p G} (H : Subgroup G),\n  IsPGroup p ↥((↑P).subgroupOf H) ∧ ∀ (Q : Subgroup ↥H), IsPGroup p ↥Q → (↑P).subgroupOf H ≤ Q → Q = (↑P).subgroupOf H",
+   "nontrivial": "¬∀ {p : ℕ} {G : Type u} [inst : Group G] {P : Sylow p G} (H : Subgroup G),\n    IsPGroup p ↥((↑P).subgroupOf H) ∧ ∀ (Q : Subgroup ↥H), IsPGroup p ↥Q → (↑P).subgroupOf H ≤ Q → Q = (↑P).subgroupOf H"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_5_14": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [inst : Fintype G], card G = 312 → False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [inst : Fintype G], card G = 312 → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n  ∃ p P, Nat.Prime p ∧ p ∣ card G ∧ (↑P).Normal",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n    ∃ p P, Nat.Prime p ∧ p ∣ card G ∧ (↑P).Normal"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_5_16": {
+  "status": "ok",
+  "info": "free=3 binders=9",
+  "goals": {
+   "vacuous": "∀ {p q r : ℕ} {G : Type u} [Group G] [inst : Fintype G],\n  p < q ∧ q < r → Nat.Prime p ∧ Nat.Prime q ∧ Nat.Prime r → card G = p * q * r → False",
+   "nonvac": "¬∀ {p q r : ℕ} {G : Type u} [Group G] [inst : Fintype G],\n    p < q ∧ q < r → Nat.Prime p ∧ Nat.Prime q ∧ Nat.Prime r → card G = p * q * r → False",
+   "trivial": "∀ {p q r : ℕ} {G : Type u} [inst : Group G] [Fintype G],\n  (∃ P, (↑P).Normal) ∨ (∃ P, (↑P).Normal) ∨ ∃ P, (↑P).Normal",
+   "nontrivial": "¬∀ {p q r : ℕ} {G : Type u} [inst : Group G] [Fintype G],\n    (∃ P, (↑P).Normal) ∨ (∃ P, (↑P).Normal) ∨ ∃ P, (↑P).Normal"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_5_18": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Fintype G] [Group G], card G = 200 → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Fintype G] [Group G], card G = 200 → False",
+   "trivial": "∀ {G : Type u} [Fintype G] [inst : Group G], ∃ N, (↑N).Normal",
+   "nontrivial": "¬∀ {G : Type u} [Fintype G] [inst : Group G], ∃ N, (↑N).Normal"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_5_20": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Fintype G] [Group G], card G = 1365 → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Fintype G] [Group G], card G = 1365 → False",
+   "trivial": "∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G",
+   "nontrivial": "¬∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_5_22": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Fintype G] [Group G], card G = 132 → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Fintype G] [Group G], card G = 132 → False",
+   "trivial": "∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G",
+   "nontrivial": "¬∀ {G : Type u} [Fintype G] [inst : Group G], ¬IsSimpleGroup G"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_4_5_28": {
+  "status": "ok",
+  "info": "free=2 binders=8",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n  card G = 105 → ∀ (P : Sylow 3 G) [hP : (↑P).Normal] (a b : G), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G],\n    card G = 105 → ∀ (P : Sylow 3 G) [hP : (↑P).Normal] (a b : G), False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G] (P : Sylow 3 G) (a b : G), a * b = b * a",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G] (P : Sylow 3 G) (a b : G), a * b = b * a"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_5_4_2": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] (H : Subgroup G), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] (H : Subgroup G), False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_7_1_11": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : CommRing R] [IsDomain R] {x : R}, x ^ 2 = 1 → False",
+   "nonvac": "¬∀ {R : Type u} [inst : CommRing R] [IsDomain R] {x : R}, x ^ 2 = 1 → False",
+   "trivial": "∀ {R : Type u} [inst : CommRing R] {x : R}, x = 1 ∨ x = -1",
+   "nontrivial": "¬∀ {R : Type u} [inst : CommRing R] {x : R}, x = 1 ∨ x = -1"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_7_1_15": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : Ring R], (∀ (a : R), a ^ 2 = a) → ∀ (a b : R), False",
+   "nonvac": "¬∀ {R : Type u} [inst : Ring R], (∀ (a : R), a ^ 2 = a) → ∀ (a b : R), False",
+   "trivial": "∀ {R : Type u} [inst : Ring R] (a b : R), a * b = b * a",
+   "nontrivial": "¬∀ {R : Type u} [inst : Ring R] (a b : R), a * b = b * a"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_7_2_12": {
+  "status": "ok",
+  "info": "free=0 binders=5",
+  "goals": {
+   "vacuous": "∀ {R G : Type u} [Ring R] [Group G] [Fintype G], False",
+   "nonvac": "¬∀ {R G : Type u} [Ring R] [Group G] [Fintype G], False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_7_3_37": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ {p : ℕ} {m : ℕ}, Nat.Prime p → False",
+   "nonvac": "¬∀ {p : ℕ} {m : ℕ}, Nat.Prime p → False",
+   "trivial": "∀ {p m : ℕ}, IsNilpotent (span {↑p})",
+   "nontrivial": "¬∀ {p m : ℕ}, IsNilpotent (span {↑p})"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_8_1_12": {
+  "status": "ok",
+  "info": "free=4 binders=8",
+  "goals": {
+   "vacuous": "∀ {N : ℕ},\n  N > 0 → ∀ {M M' : ℤ} {d : ℕ}, M.gcd ↑N = 1 → d.gcd N.totient = 1 → M' ≡ M ^ d [ZMOD ↑N] → False",
+   "nonvac": "¬∀ {N : ℕ},\n    N > 0 → ∀ {M M' : ℤ} {d : ℕ}, M.gcd ↑N = 1 → d.gcd N.totient = 1 → M' ≡ M ^ d [ZMOD ↑N] → False",
+   "trivial": "∀ {N : ℕ} {M M' : ℤ} {d : ℕ}, ∃ d', ↑d' * ↑d ≡ 1 [ZMOD ↑N.totient] ∧ M ≡ M' ^ d' [ZMOD ↑N]",
+   "nontrivial": "¬∀ {N : ℕ} {M M' : ℤ} {d : ℕ}, ∃ d', ↑d' * ↑d ≡ 1 [ZMOD ↑N.totient] ∧ M ≡ M' ^ d' [ZMOD ↑N]"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_8_3_4": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {n : ℤ} {r s : ℚ}, r ^ 2 + s ^ 2 = ↑n → False",
+   "nonvac": "¬∀ {n : ℤ} {r s : ℚ}, r ^ 2 + s ^ 2 = ↑n → False",
+   "trivial": "∀ {n : ℤ} {r s : ℚ}, ∃ a b, a ^ 2 + b ^ 2 = n",
+   "nontrivial": "¬∀ {n : ℤ} {r s : ℚ}, ∃ a b, a ^ 2 + b ^ 2 = n"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_8_3_6a": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ {R : Type} [Ring R], R = (GaussianInt ⧸ span {{ re := 1, im := 1 }}) → False",
+   "nonvac": "¬∀ {R : Type} [Ring R], R = (GaussianInt ⧸ span {{ re := 1, im := 1 }}) → False",
+   "trivial": "∀ {R : Type} [inst : Ring R], IsField R ∧ ∃ finR, card R = 2",
+   "nontrivial": "¬∀ {R : Type} [inst : Ring R], IsField R ∧ ∃ finR, card R = 2"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_9_1_6": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_9_3_2": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {f g : ℚ[X]} (i j : ℕ), (∀ (n : ℕ), ∃ a, (f * g).coeff = ↑a) → False",
+   "nonvac": "¬∀ {f g : ℚ[X]} (i j : ℕ), (∀ (n : ℕ), ∃ a, (f * g).coeff = ↑a) → False",
+   "trivial": "∀ {f g : ℚ[X]} (i j : ℕ), ∃ a, f.coeff i * g.coeff j = ↑a",
+   "nontrivial": "¬∀ {f g : ℚ[X]} (i j : ℕ), ∃ a, f.coeff i * g.coeff j = ↑a"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_9_4_2b": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Dummit-Foote|exercise_9_4_2d": {
+  "status": "elab_fail"
+ },
+ "pns-valid-Dummit-Foote|exercise_9_4_11": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_1_21": {
+  "status": "ok",
+  "info": "free=1 binders=6",
+  "goals": {
+   "vacuous": "∀ (G : Type u) [Group G] [inst : Fintype G], card G = 5 → ∀ (a b : G), False",
+   "nonvac": "¬∀ (G : Type u) [Group G] [inst : Fintype G], card G = 5 → ∀ (a b : G), False",
+   "trivial": "∀ (G : Type u) [inst : Group G] [Fintype G] (a b : G), a * b = b * a",
+   "nontrivial": "¬∀ (G : Type u) [inst : Group G] [Fintype G] (a b : G), a * b = b * a"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_1_27": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [Fintype G], False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [Fintype G], False"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_2_5": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G],\n  (∀ (a b : G), (a * b) ^ 3 = a ^ 3 * b ^ 3 ∧ (a * b) ^ 5 = a ^ 5 * b ^ 5) → ∀ (a b : G), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G],\n    (∀ (a b : G), (a * b) ^ 3 = a ^ 3 * b ^ 3 ∧ (a * b) ^ 5 = a ^ 5 * b ^ 5) → ∀ (a b : G), False",
+   "trivial": "∀ {G : Type u} [inst : Group G] (a b : G), a * b = b * a",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] (a b : G), a * b = b * a"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_3_17": {
+  "status": "ok",
+  "info": "free=0 binders=5",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Mul G] [Group G] (a x : G), False",
+   "nonvac": "¬∀ {G : Type u} [Mul G] [Group G] (a x : G), False"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_4_36": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ {a : ℕ} {n : ℕ}, a > 1 → False",
+   "nonvac": "¬∀ {a : ℕ} {n : ℕ}, a > 1 → False",
+   "trivial": "∀ {a n : ℕ}, n ∣ (a ^ n - 1).totient",
+   "nontrivial": "¬∀ {a n : ℕ}, n ∣ (a ^ n - 1).totient"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_5_30": {
+  "status": "ok",
+  "info": "free=5 binders=12",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G] {p m : ℕ},\n  Nat.Prime p → ¬p ∣ m → card G = p * m → ∀ {H : Subgroup G} [inst_2 : Fintype ↥H] [H.Normal], card ↥H = p → False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] [inst_1 : Fintype G] {p m : ℕ},\n    Nat.Prime p → ¬p ∣ m → card G = p * m → ∀ {H : Subgroup G} [inst_2 : Fintype ↥H] [H.Normal], card ↥H = p → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G] {p m : ℕ} {H : Subgroup G} [Fintype ↥H],\n  H.Characteristic",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G] {p m : ℕ} {H : Subgroup G} [Fintype ↥H],\n    H.Characteristic"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_5_37": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ (G : Type u) [Group G] [inst : Fintype G], card G = 6 → IsEmpty (CommGroup G) → False",
+   "nonvac": "¬∀ (G : Type u) [Group G] [inst : Fintype G], card G = 6 → IsEmpty (CommGroup G) → False",
+   "trivial": "∀ (G : Type u) [inst : Group G] [Fintype G], Nonempty (G ≃* Equiv.Perm (Fin 3))",
+   "nontrivial": "¬∀ (G : Type u) [inst : Group G] [Fintype G], Nonempty (G ≃* Equiv.Perm (Fin 3))"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_5_44": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [Group G] [inst : Fintype G] {p : ℕ}, Nat.Prime p → card G = p ^ 2 → False",
+   "nonvac": "¬∀ {G : Type u} [Group G] [inst : Fintype G] {p : ℕ}, Nat.Prime p → card G = p ^ 2 → False",
+   "trivial": "∀ {G : Type u} [inst : Group G] [Fintype G] {p : ℕ}, ∃ N Fin, card ↥N = p ∧ N.Normal",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] [Fintype G] {p : ℕ}, ∃ N Fin, card ↥N = p ∧ N.Normal"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_6_15": {
+  "status": "ok",
+  "info": "free=3 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : CommGroup G] {m n : ℕ},\n  (∃ g, orderOf g = m) → (∃ g, orderOf g = n) → m.Coprime n → False",
+   "nonvac": "¬∀ {G : Type u} [inst : CommGroup G] {m n : ℕ},\n    (∃ g, orderOf g = m) → (∃ g, orderOf g = n) → m.Coprime n → False",
+   "trivial": "∀ {G : Type u} [inst : CommGroup G] {m n : ℕ}, ∃ g, orderOf g = m * n",
+   "nontrivial": "¬∀ {G : Type u} [inst : CommGroup G] {m n : ℕ}, ∃ g, orderOf g = m * n"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_8_12": {
+  "status": "ok",
+  "info": "free=4 binders=10",
+  "goals": {
+   "vacuous": "∀ {G H : Type u} [inst : Fintype G] [inst_1 : Fintype H] [Group G] [Group H],\n  card G = 21 → card H = 21 → IsEmpty (CommGroup G) → IsEmpty (CommGroup H) → False",
+   "nonvac": "¬∀ {G H : Type u} [inst : Fintype G] [inst_1 : Fintype H] [Group G] [Group H],\n    card G = 21 → card H = 21 → IsEmpty (CommGroup G) → IsEmpty (CommGroup H) → False",
+   "trivial": "∀ {G H : Type u} [Fintype G] [Fintype H] [inst : Group G] [inst_1 : Group H], Nonempty (G ≃* H)",
+   "nontrivial": "¬∀ {G H : Type u} [Fintype G] [Fintype H] [inst : Group G] [inst_1 : Group H],\n    Nonempty (G ≃* H)"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_9_2": {
+  "status": "ok",
+  "info": "free=2 binders=8",
+  "goals": {
+   "vacuous": "∀ {G H : Type u} [Fintype G] [Fintype H] [inst : Group G] [inst_1 : Group H],\n  IsCyclic G → IsCyclic H → False",
+   "nonvac": "¬∀ {G H : Type u} [Fintype G] [Fintype H] [inst : Group G] [inst_1 : Group H],\n    IsCyclic G → IsCyclic H → False",
+   "trivial": "∀ {G H : Type u} [inst : Fintype G] [inst_1 : Fintype H] [inst_2 : Group G] [inst_3 : Group H],\n  IsCyclic (G × H) ↔ (card G).Coprime (card H)",
+   "nontrivial": "¬∀ {G H : Type u} [inst : Fintype G] [inst_1 : Fintype H] [inst_2 : Group G]\n    [inst_3 : Group H], IsCyclic (G × H) ↔ (card G).Coprime (card H)"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_11_6": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {G : Type u} [inst : Group G] {p : ℕ},\n  Nat.Prime p → ∀ {P : Sylow p G}, (↑P).Normal → ∀ (Q : Sylow p G), False",
+   "nonvac": "¬∀ {G : Type u} [inst : Group G] {p : ℕ},\n    Nat.Prime p → ∀ {P : Sylow p G}, (↑P).Normal → ∀ (Q : Sylow p G), False",
+   "trivial": "∀ {G : Type u} [inst : Group G] {p : ℕ} {P : Sylow p G} (Q : Sylow p G), P = Q",
+   "nontrivial": "¬∀ {G : Type u} [inst : Group G] {p : ℕ} {P : Sylow p G} (Q : Sylow p G), P = Q"
+  }
+ },
+ "pns-valid-Herstein|exercise_2_11_22": {
+  "status": "ok",
+  "info": "free=3 binders=10",
+  "goals": {
+   "vacuous": "∀ {p n : ℕ} {G : Type u} [inst : Fintype G] [inst_1 : Group G],\n  Nat.Prime p → card G = p ^ n → ∀ {K : Subgroup G} [inst : Fintype ↥K], card ↥K = p ^ (n - 1) → False",
+   "nonvac": "¬∀ {p n : ℕ} {G : Type u} [inst : Fintype G] [inst_1 : Group G],\n    Nat.Prime p → card G = p ^ n → ∀ {K : Subgroup G} [inst : Fintype ↥K], card ↥K = p ^ (n - 1) → False",
+   "trivial": "∀ {p n : ℕ} {G : Type u} [Fintype G] [inst : Group G] {K : Subgroup G} [Fintype ↥K], K.Normal",
+   "nontrivial": "¬∀ {p n : ℕ} {G : Type u} [Fintype G] [inst : Group G] {K : Subgroup G} [Fintype ↥K], K.Normal"
+  }
+ },
+ "pns-valid-Herstein|exercise_4_1_19": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Herstein|exercise_4_2_5": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ {R : Type u} [inst : Ring R], (∀ (x : R), x ^ 3 = x) → False",
+   "nonvac": "¬∀ {R : Type u} [inst : Ring R], (∀ (x : R), x ^ 3 = x) → False",
+   "trivial": "∀ {R : Type u} [Ring R], Nonempty (CommRing R)",
+   "nontrivial": "¬∀ {R : Type u} [Ring R], Nonempty (CommRing R)"
+  }
+ },
+ "pns-valid-Herstein|exercise_4_2_9": {
+  "status": "elab_fail"
+ },
+ "pns-valid-Herstein|exercise_4_3_25": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ (I : Ideal (Matrix (Fin 2) (Fin 2) ℝ)), False",
+   "nonvac": "¬∀ (I : Ideal (Matrix (Fin 2) (Fin 2) ℝ)), False"
+  }
+ },
+ "pns-valid-Herstein|exercise_4_5_16": {
+  "status": "ok",
+  "info": "free=3 binders=6",
+  "goals": {
+   "vacuous": "∀ {p n : ℕ}, Nat.Prime p → ∀ {q : (ZMod p)[X]}, Irreducible q → q.degree = ↑n → False",
+   "nonvac": "¬∀ {p n : ℕ}, Nat.Prime p → ∀ {q : (ZMod p)[X]}, Irreducible q → q.degree = ↑n → False",
+   "trivial": "∀ {p n : ℕ} {q : (ZMod p)[X]},\n  (∃ is_fin, card ((ZMod p)[X] ⧸ span {q}) = p ^ n) ∧ IsField ((ZMod p)[X] ⧸ span {q})",
+   "nontrivial": "¬∀ {p n : ℕ} {q : (ZMod p)[X]},\n    (∃ is_fin, card ((ZMod p)[X] ⧸ span {q}) = p ^ n) ∧ IsField ((ZMod p)[X] ⧸ span {q})"
+  }
+ },
+ "pns-valid-Herstein|exercise_4_5_25": {
+  "status": "elab_fail"
+ },
+ "pns-valid-Herstein|exercise_4_6_3": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Herstein|exercise_5_2_20": {
+  "status": "ok",
+  "info": "free=3 binders=10",
+  "goals": {
+   "vacuous": "∀ {F V ι : Type u} [Infinite F] [inst : Field F] [inst_1 : AddCommGroup V] [inst_2 : Module F V]\n  [Finite ι] {u : ι → Submodule F V}, (∀ (i : ι), u i ≠ ⊤) → False",
+   "nonvac": "¬∀ {F V ι : Type u} [Infinite F] [inst : Field F] [inst_1 : AddCommGroup V] [inst_2 : Module F V]\n    [Finite ι] {u : ι → Submodule F V}, (∀ (i : ι), u i ≠ ⊤) → False",
+   "trivial": "∀ {F V ι : Type u} [inst : Field F] [inst_1 : AddCommGroup V] [inst_2 : Module F V]\n  {u : ι → Submodule F V}, ⋃ i, ↑(u i) ≠ ⊤",
+   "nontrivial": "¬∀ {F V ι : Type u} [inst : Field F] [inst_1 : AddCommGroup V] [inst_2 : Module F V]\n    {u : ι → Submodule F V}, ⋃ i, ↑(u i) ≠ ⊤"
+  }
+ },
+ "pns-valid-Herstein|exercise_5_3_10": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Herstein|exercise_5_5_2": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_1_27": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ {n : ℕ}, Odd n → False",
+   "nonvac": "¬∀ {n : ℕ}, Odd n → False",
+   "trivial": "∀ {n : ℕ}, 8 ∣ n ^ 2 - 1",
+   "nontrivial": "¬∀ {n : ℕ}, 8 ∣ n ^ 2 - 1"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_1_31": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_2_21": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ {l : ℕ → ℝ},\n  (∀ (p n : ℕ), Nat.Prime p → l (p ^ n) = log ↑p) → (∀ (m : ℕ), ¬IsPrimePow m → l m = 0) → False",
+   "nonvac": "¬∀ {l : ℕ → ℝ},\n    (∀ (p n : ℕ), Nat.Prime p → l (p ^ n) = log ↑p) → (∀ (m : ℕ), ¬IsPrimePow m → l m = 0) → False",
+   "trivial": "∀ {l : ℕ → ℝ}, l = fun n => ∑ d, ↑(ArithmeticFunction.moebius (n / ↑d)) * log ↑↑d",
+   "nontrivial": "¬∀ {l : ℕ → ℝ}, l = fun n => ∑ d, ↑(ArithmeticFunction.moebius (n / ↑d)) * log ↑↑d"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_3_1": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_3_5": {
+  "status": "ok",
+  "info": "free=0 binders=2",
+  "goals": {
+   "vacuous": "∀ (x y : ℤ), False",
+   "nonvac": "¬∀ (x y : ℤ), False"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_3_14": {
+  "status": "ok",
+  "info": "free=5 binders=8",
+  "goals": {
+   "vacuous": "∀ {p q n : ℕ},\n  Nat.Prime p ∧ p > 2 → Nat.Prime q ∧ q > 2 → p ≠ q → p - 1 ∣ q - 1 → n.gcd (p * q) = 1 → False",
+   "nonvac": "¬∀ {p q n : ℕ},\n    Nat.Prime p ∧ p > 2 → Nat.Prime q ∧ q > 2 → p ≠ q → p - 1 ∣ q - 1 → n.gcd (p * q) = 1 → False",
+   "trivial": "∀ {p q n : ℕ}, n ^ (q - 1) ≡ 1 [MOD p * q]",
+   "nontrivial": "¬∀ {p q n : ℕ}, n ^ (q - 1) ≡ 1 [MOD p * q]"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_4_5": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ {p t : ℕ}, Nat.Prime p → p = 4 * t + 3 → ∀ (a : ZMod p), False",
+   "nonvac": "¬∀ {p t : ℕ}, Nat.Prime p → p = 4 * t + 3 → ∀ (a : ZMod p), False",
+   "trivial": "∀ {p : ℕ} {t : ℕ} (a : ZMod p),\n  IsPrimitiveRoot a p ↔ (-a) ^ ((p - 1) / 2) = 1 ∧ ∀ (k : ℕ), 0 < k ∧ k < (p - 1) / 2 → (-a) ^ k ≠ 1",
+   "nontrivial": "¬∀ {p : ℕ} {t : ℕ} (a : ZMod p),\n    IsPrimitiveRoot a p ↔ (-a) ^ ((p - 1) / 2) = 1 ∧ ∀ (k : ℕ), 0 < k ∧ k < (p - 1) / 2 → (-a) ^ k ≠ 1"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_4_8": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ {p : ℕ} {a : ZMod p}, Odd p → Nat.Prime p → False",
+   "nonvac": "¬∀ {p : ℕ} {a : ZMod p}, Odd p → Nat.Prime p → False",
+   "trivial": "∀ {p : ℕ} {a : ZMod p},\n  IsPrimitiveRoot a p ↔ ∀ (q : ℕ), q ∣ p - 1 → Nat.Prime q → ¬a ^ ((p - 1) / q) = 1",
+   "nontrivial": "¬∀ {p : ℕ} {a : ZMod p},\n    IsPrimitiveRoot a p ↔ ∀ (q : ℕ), q ∣ p - 1 → Nat.Prime q → ¬a ^ ((p - 1) / q) = 1"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_5_13": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ {p x : ℤ}, Prime p → p ∣ x ^ 4 - x ^ 2 + 1 → False",
+   "nonvac": "¬∀ {p x : ℤ}, Prime p → p ∣ x ^ 4 - x ^ 2 + 1 → False",
+   "trivial": "∀ {p : ℤ} {x : ℤ}, p ≡ 1 [ZMOD 12]",
+   "nontrivial": "¬∀ {p : ℤ} {x : ℤ}, p ≡ 1 [ZMOD 12]"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_5_37": {
+  "status": "ok",
+  "info": "free=3 binders=8",
+  "goals": {
+   "vacuous": "∀ {p q : ℕ} [Fact (Nat.Prime p)] [Fact (Nat.Prime q)] {a : ℤ},\n  a < 0 → ↑p ≡ ↑q [ZMOD 4 * a] → ¬↑p ∣ a → False",
+   "nonvac": "¬∀ {p q : ℕ} [Fact (Nat.Prime p)] [Fact (Nat.Prime q)] {a : ℤ},\n    a < 0 → ↑p ≡ ↑q [ZMOD 4 * a] → ¬↑p ∣ a → False",
+   "trivial": "∀ {p q : ℕ} [inst : Fact (Nat.Prime p)] [inst_1 : Fact (Nat.Prime q)] {a : ℤ},\n  legendreSym p a = legendreSym q a",
+   "nontrivial": "¬∀ {p q : ℕ} [inst : Fact (Nat.Prime p)] [inst_1 : Fact (Nat.Prime q)] {a : ℤ},\n    legendreSym p a = legendreSym q a"
+  }
+ },
+ "pns-valid-Ireland-Rosen|exercise_18_4": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Munkres|exercise_13_1": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ (X : Type u) [inst : TopologicalSpace X] (A : Set X),\n  (∀ x ∈ A, ∃ U, x ∈ U ∧ IsOpen U ∧ U ⊆ A) → False",
+   "nonvac": "¬∀ (X : Type u) [inst : TopologicalSpace X] (A : Set X),\n    (∀ x ∈ A, ∃ U, x ∈ U ∧ IsOpen U ∧ U ⊆ A) → False",
+   "trivial": "∀ (X : Type u) [inst : TopologicalSpace X] (A : Set X), IsOpen A",
+   "nontrivial": "¬∀ (X : Type u) [inst : TopologicalSpace X] (A : Set X), IsOpen A"
+  }
+ },
+ "pns-valid-Munkres|exercise_16_4": {
+  "status": "ok",
+  "info": "free=0 binders=4",
+  "goals": {
+   "vacuous": "∀ {X Y : Type u} [TopologicalSpace X] [TopologicalSpace Y], False",
+   "nonvac": "¬∀ {X Y : Type u} [TopologicalSpace X] [TopologicalSpace Y], False"
+  }
+ },
+ "pns-valid-Munkres|exercise_17_4": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X] (U A : Set X), IsOpen U → IsClosed A → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X] (U A : Set X), IsOpen U → IsClosed A → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] (U A : Set X), IsOpen (U \\ A) ∧ IsClosed (A \\ U)",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] (U A : Set X), IsOpen (U \\ A) ∧ IsClosed (A \\ U)"
+  }
+ },
+ "pns-valid-Munkres|exercise_18_8b": {
+  "status": "ok",
+  "info": "free=3 binders=10",
+  "goals": {
+   "vacuous": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y]\n  [inst_2 : LinearOrder Y] [OrderTopology Y] {f g : X → Y}, Continuous f → Continuous g → False",
+   "nonvac": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y]\n    [inst_2 : LinearOrder Y] [OrderTopology Y] {f g : X → Y}, Continuous f → Continuous g → False",
+   "trivial": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y]\n  [inst_2 : LinearOrder Y] {f g : X → Y}, Continuous fun x => min (f x) (g x)",
+   "nontrivial": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y]\n    [inst_2 : LinearOrder Y] {f g : X → Y}, Continuous fun x => min (f x) (g x)"
+  }
+ },
+ "pns-valid-Munkres|exercise_19_6a": {
+  "status": "ok",
+  "info": "free=0 binders=5",
+  "goals": {
+   "vacuous": "∀ {ι : Type u} {f : ι → Type u} {x : ℕ → (a : ι) → f a} (y : (i : ι) → f i)\n  [(a : ι) → TopologicalSpace (f a)], False",
+   "nonvac": "¬∀ {ι : Type u} {f : ι → Type u} {x : ℕ → (a : ι) → f a} (y : (i : ι) → f i)\n    [(a : ι) → TopologicalSpace (f a)], False"
+  }
+ },
+ "pns-valid-Munkres|exercise_21_6a": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (f : ℕ → ↑(Icc 0 1) → ℝ),\n  (∀ (x : ↑(Icc 0 1)) (n : ℕ), f n x = ↑↑x ^ n) → ∀ (x : ↑(Icc 0 1)), False",
+   "nonvac": "¬∀ (f : ℕ → ↑(Icc 0 1) → ℝ),\n    (∀ (x : ↑(Icc 0 1)) (n : ℕ), f n x = ↑↑x ^ n) → ∀ (x : ↑(Icc 0 1)), False",
+   "trivial": "∀ (f : ℕ → ↑(Icc 0 1) → ℝ) (x : ↑(Icc 0 1)), ∃ y, Tendsto (fun n => f n x) atTop (𝓝 y)",
+   "nontrivial": "¬∀ (f : ℕ → ↑(Icc 0 1) → ℝ) (x : ↑(Icc 0 1)), ∃ y, Tendsto (fun n => f n x) atTop (𝓝 y)"
+  }
+ },
+ "pns-valid-Munkres|exercise_21_8": {
+  "status": "ok",
+  "info": "free=3 binders=11",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : MetricSpace Y] {f : ℕ → X → Y}\n  {x : ℕ → X},\n  (∀ (n : ℕ), Continuous (f n)) →\n    ∀ (x₀ : X), Tendsto x atTop (𝓝 x₀) → ∀ (f₀ : X → Y), TendstoUniformly f f₀ atTop → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X] {Y : Type u} [inst_1 : MetricSpace Y] {f : ℕ → X → Y}\n    {x : ℕ → X},\n    (∀ (n : ℕ), Continuous (f n)) →\n      ∀ (x₀ : X), Tendsto x atTop (𝓝 x₀) → ∀ (f₀ : X → Y), TendstoUniformly f f₀ atTop → False",
+   "trivial": "∀ {X : Type u} [TopologicalSpace X] {Y : Type u} [inst : MetricSpace Y] {f : ℕ → X → Y}\n  {x : ℕ → X} (x₀ : X) (f₀ : X → Y), Tendsto (fun n => f n (x n)) atTop (𝓝 (f₀ x₀))",
+   "nontrivial": "¬∀ {X : Type u} [TopologicalSpace X] {Y : Type u} [inst : MetricSpace Y] {f : ℕ → X → Y}\n    {x : ℕ → X} (x₀ : X) (f₀ : X → Y), Tendsto (fun n => f n (x n)) atTop (𝓝 (f₀ x₀))"
+  }
+ },
+ "pns-valid-Munkres|exercise_22_2b": {
+  "status": "probe_fail",
+  "detail": "CANON_FAIL CANON_FAIL metavariables in statement"
+ },
+ "pns-valid-Munkres|exercise_23_2": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X] {A : ℕ → Set X},\n  (∀ (n : ℕ), IsConnected (A n)) → (∀ (n : ℕ), A n ∩ A (n + 1) ≠ ∅) → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X] {A : ℕ → Set X},\n    (∀ (n : ℕ), IsConnected (A n)) → (∀ (n : ℕ), A n ∩ A (n + 1) ≠ ∅) → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] {A : ℕ → Set X}, IsConnected (⋃ n, A n)",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] {A : ℕ → Set X}, IsConnected (⋃ n, A n)"
+  }
+ },
+ "pns-valid-Munkres|exercise_23_4": {
+  "status": "ok",
+  "info": "free=1 binders=5",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [TopologicalSpace X] [CofiniteTopology X] (s : Set X), Infinite ↑s → False",
+   "nonvac": "¬∀ {X : Type u} [TopologicalSpace X] [CofiniteTopology X] (s : Set X), Infinite ↑s → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] [CofiniteTopology X] (s : Set X), IsConnected s",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] [CofiniteTopology X] (s : Set X), IsConnected s"
+  }
+ },
+ "pns-valid-Munkres|exercise_23_9": {
+  "status": "ok",
+  "info": "free=4 binders=12",
+  "goals": {
+   "vacuous": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (A₁ A₂ : Set X)\n  (B₁ B₂ : Set Y), A₁ ⊂ A₂ → B₁ ⊂ B₂ → IsConnected A₂ → IsConnected B₂ → False",
+   "nonvac": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (A₁ A₂ : Set X)\n    (B₁ B₂ : Set Y), A₁ ⊂ A₂ → B₁ ⊂ B₂ → IsConnected A₂ → IsConnected B₂ → False",
+   "trivial": "∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (A₁ A₂ : Set X)\n  (B₁ B₂ : Set Y), IsConnected ({x | ∃ a b, x = (a, b) ∧ a ∈ A₂ ∧ b ∈ B₂} \\ {x | ∃ a b, x = (a, b) ∧ a ∈ A₁ ∧ b ∈ B₁})",
+   "nontrivial": "¬∀ {X Y : Type u} [inst : TopologicalSpace X] [inst_1 : TopologicalSpace Y] (A₁ A₂ : Set X)\n    (B₁ B₂ : Set Y), IsConnected ({x | ∃ a b, x = (a, b) ∧ a ∈ A₂ ∧ b ∈ B₂} \\ {x | ∃ a b, x = (a, b) ∧ a ∈ A₁ ∧ b ∈ B₁})"
+  }
+ },
+ "pns-valid-Munkres|exercise_24_2": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ {f : ↑(Metric.sphere 0 1) → ℝ}, Continuous f → False",
+   "nonvac": "¬∀ {f : ↑(Metric.sphere 0 1) → ℝ}, Continuous f → False",
+   "trivial": "∀ {f : ↑(Metric.sphere 0 1) → ℝ}, ∃ x, f x = f (-x)",
+   "nontrivial": "¬∀ {f : ↑(Metric.sphere 0 1) → ℝ}, ∃ x, f x = f (-x)"
+  }
+ },
+ "pns-valid-Munkres|exercise_25_4": {
+  "status": "ok",
+  "info": "free=3 binders=6",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X] [LocPathConnectedSpace X] (U : Set X),\n  IsOpen U → IsConnected U → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X] [LocPathConnectedSpace X] (U : Set X),\n    IsOpen U → IsConnected U → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] (U : Set X), IsPathConnected U",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] (U : Set X), IsPathConnected U"
+  }
+ },
+ "pns-valid-Munkres|exercise_26_11": {
+  "status": "ok",
+  "info": "free=5 binders=8",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X] [CompactSpace X] [T2Space X] (A : Set (Set X)),\n  (∀ (a b : Set X), a ∈ A → b ∈ A → a ⊆ b ∨ b ⊆ a) → (∀ a ∈ A, IsClosed a) → (∀ a ∈ A, IsConnected a) → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X] [CompactSpace X] [T2Space X] (A : Set (Set X)),\n    (∀ (a b : Set X), a ∈ A → b ∈ A → a ⊆ b ∨ b ⊆ a) → (∀ a ∈ A, IsClosed a) → (∀ a ∈ A, IsConnected a) → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] (A : Set (Set X)), IsConnected (⋂₀ A)",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] (A : Set (Set X)), IsConnected (⋂₀ A)"
+  }
+ },
+ "pns-valid-Munkres|exercise_27_4": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : MetricSpace X] [ConnectedSpace X], (∃ x y, x ≠ y) → False",
+   "nonvac": "¬∀ {X : Type u} [inst : MetricSpace X] [ConnectedSpace X], (∃ x y, x ≠ y) → False",
+   "trivial": "∀ {X : Type u} [MetricSpace X], ¬Countable ↑univ",
+   "nontrivial": "¬∀ {X : Type u} [MetricSpace X], ¬Countable ↑univ"
+  }
+ },
+ "pns-valid-Munkres|exercise_29_1": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Munkres|exercise_29_10": {
+  "status": "ok",
+  "info": "free=4 binders=8",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X] [T2Space X] (x : X),\n  (∃ U, x ∈ U ∧ IsOpen U ∧ ∃ K, U ⊆ K ∧ IsCompact K) → ∀ (U : Set X), IsOpen U → x ∈ U → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X] [T2Space X] (x : X),\n    (∃ U, x ∈ U ∧ IsOpen U ∧ ∃ K, U ⊆ K ∧ IsCompact K) → ∀ (U : Set X), IsOpen U → x ∈ U → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] (x : X) (U : Set X),\n  ∃ V, IsOpen V ∧ x ∈ V ∧ IsCompact (closure V) ∧ closure V ⊆ U",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] (x : X) (U : Set X),\n    ∃ V, IsOpen V ∧ x ∈ V ∧ IsCompact (closure V) ∧ closure V ⊆ U"
+  }
+ },
+ "pns-valid-Munkres|exercise_30_13": {
+  "status": "ok",
+  "info": "free=3 binders=6",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X],\n  (∃ s, Countable ↑s ∧ Dense s) →\n    ∀ (U : Set (Set X)), (∀ (x y : Set X), x ∈ U → y ∈ U → x ≠ y → x ∩ y = ∅) → (∀ u ∈ U, IsOpen u) → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X],\n    (∃ s, Countable ↑s ∧ Dense s) →\n      ∀ (U : Set (Set X)), (∀ (x y : Set X), x ∈ U → y ∈ U → x ≠ y → x ∩ y = ∅) → (∀ u ∈ U, IsOpen u) → False",
+   "trivial": "∀ {X : Type u} [TopologicalSpace X] (U : Set (Set X)), Countable ↑U",
+   "nontrivial": "¬∀ {X : Type u} [TopologicalSpace X] (U : Set (Set X)), Countable ↑U"
+  }
+ },
+ "pns-valid-Munkres|exercise_31_2": {
+  "status": "ok",
+  "info": "free=4 binders=8",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X] [NormalSpace X] {A B : Set X},\n  IsClosed A → IsClosed B → Disjoint A B → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X] [NormalSpace X] {A B : Set X},\n    IsClosed A → IsClosed B → Disjoint A B → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] {A B : Set X},\n  ∃ U V, IsOpen U ∧ IsOpen V ∧ A ⊆ U ∧ B ⊆ V ∧ closure U ∩ closure V = ∅",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] {A B : Set X},\n    ∃ U V, IsOpen U ∧ IsOpen V ∧ A ⊆ U ∧ B ⊆ V ∧ closure U ∩ closure V = ∅"
+  }
+ },
+ "pns-valid-Munkres|exercise_32_1": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X], NormalSpace X → ∀ (A : Set X), IsClosed A → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X], NormalSpace X → ∀ (A : Set X), IsClosed A → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X] (A : Set X), NormalSpace { x // x ∈ A }",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X] (A : Set X), NormalSpace { x // x ∈ A }"
+  }
+ },
+ "pns-valid-Munkres|exercise_32_2b": {
+  "status": "ok",
+  "info": "free=2 binders=6",
+  "goals": {
+   "vacuous": "∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n  (∀ (i : ι), Nonempty (X i)) → RegularSpace ((i : ι) → X i) → ∀ (i : ι), False",
+   "nonvac": "¬∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)],\n    (∀ (i : ι), Nonempty (X i)) → RegularSpace ((i : ι) → X i) → ∀ (i : ι), False",
+   "trivial": "∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)] (i : ι),\n  RegularSpace (X i)",
+   "nontrivial": "¬∀ {ι : Type u} {X : ι → Type u} [inst : (i : ι) → TopologicalSpace (X i)] (i : ι),\n    RegularSpace (X i)"
+  }
+ },
+ "pns-valid-Munkres|exercise_32_3": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X], LocallyCompactSpace X → T2Space X → False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X], LocallyCompactSpace X → T2Space X → False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X], RegularSpace X",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X], RegularSpace X"
+  }
+ },
+ "pns-valid-Munkres|exercise_33_8": {
+  "status": "ok",
+  "info": "free=5 binders=9",
+  "goals": {
+   "vacuous": "∀ (X : Type u) [inst : TopologicalSpace X] [CompletelyRegularSpace X] (A B : Set X),\n  IsClosed A → IsClosed B → Disjoint A B → IsCompact A → False",
+   "nonvac": "¬∀ (X : Type u) [inst : TopologicalSpace X] [CompletelyRegularSpace X] (A B : Set X),\n    IsClosed A → IsClosed B → Disjoint A B → IsCompact A → False",
+   "trivial": "∀ (X : Type u) [inst : TopologicalSpace X] (A B : Set X),\n  ∃ f, Continuous f ∧ f '' A = {0} ∧ f '' B = {1}",
+   "nontrivial": "¬∀ (X : Type u) [inst : TopologicalSpace X] (A B : Set X),\n    ∃ f, Continuous f ∧ f '' A = {0} ∧ f '' B = {1}"
+  }
+ },
+ "pns-valid-Munkres|exercise_38_6": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : TopologicalSpace X] [CompletelyRegularSpace X], False",
+   "nonvac": "¬∀ {X : Type u} [inst : TopologicalSpace X] [CompletelyRegularSpace X], False",
+   "trivial": "∀ {X : Type u} [inst : TopologicalSpace X], IsConnected univ ↔ IsConnected univ",
+   "nontrivial": "¬∀ {X : Type u} [inst : TopologicalSpace X], IsConnected univ ↔ IsConnected univ"
+  }
+ },
+ "pns-valid-Pugh|exercise_2_12a": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {α : Type u} [inst : TopologicalSpace α] (f : ℕ → ℕ) (p : ℕ → α) (a : α),\n  Injective f → Tendsto p atTop (𝓝 a) → False",
+   "nonvac": "¬∀ {α : Type u} [inst : TopologicalSpace α] (f : ℕ → ℕ) (p : ℕ → α) (a : α),\n    Injective f → Tendsto p atTop (𝓝 a) → False",
+   "trivial": "∀ {α : Type u} [inst : TopologicalSpace α] (f : ℕ → ℕ) (p : ℕ → α) (a : α),\n  Tendsto (fun n => p (f n)) atTop (𝓝 a)",
+   "nontrivial": "¬∀ {α : Type u} [inst : TopologicalSpace α] (f : ℕ → ℕ) (p : ℕ → α) (a : α),\n    Tendsto (fun n => p (f n)) atTop (𝓝 a)"
+  }
+ },
+ "pns-valid-Pugh|exercise_2_29": {
+  "status": "ok",
+  "info": "free=0 binders=2",
+  "goals": {
+   "vacuous": "∀ (M : Type u) [MetricSpace M], False",
+   "nonvac": "¬∀ (M : Type u) [MetricSpace M], False"
+  }
+ },
+ "pns-valid-Pugh|exercise_2_41": {
+  "status": "ok",
+  "info": "free=0 binders=2",
+  "goals": {
+   "vacuous": "∀ (m : ℕ) [NormedSpace ℝ (Fin m → ℝ)], False",
+   "nonvac": "¬∀ (m : ℕ) [NormedSpace ℝ (Fin m → ℝ)], False"
+  }
+ },
+ "pns-valid-Pugh|exercise_2_57": {
+  "status": "ok",
+  "info": "free=0 binders=2",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [TopologicalSpace X], False",
+   "nonvac": "¬∀ {X : Type u} [TopologicalSpace X], False"
+  }
+ },
+ "pns-valid-Pugh|exercise_2_126": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ {E : Set ℝ}, ¬E.Countable → False",
+   "nonvac": "¬∀ {E : Set ℝ}, ¬E.Countable → False",
+   "trivial": "∀ {E : Set ℝ}, ∃ p, ClusterPt p (𝓟 E)",
+   "nontrivial": "¬∀ {E : Set ℝ}, ∃ p, ClusterPt p (𝓟 E)"
+  }
+ },
+ "pns-valid-Pugh|exercise_3_4": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ (n : ℕ), False",
+   "nonvac": "¬∀ (n : ℕ), False"
+  }
+ },
+ "pns-valid-Pugh|exercise_3_63b": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ p ≤ 1, ∀ (l : ℝ), False",
+   "nonvac": "¬∀ p ≤ 1, ∀ (l : ℝ), False",
+   "trivial": "∀ (p l : ℝ), ¬Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)",
+   "nontrivial": "¬∀ (p l : ℝ), ¬Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)"
+  }
+ },
+ "pns-valid-Putnam|exercise_1998_a3": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ (f : ℝ → ℝ), ContDiff ℝ 3 f → False",
+   "nonvac": "¬∀ (f : ℝ → ℝ), ContDiff ℝ 3 f → False",
+   "trivial": "∀ (f : ℝ → ℝ), ∃ a, f a * deriv f a * iteratedDeriv 2 f a * iteratedDeriv 3 f a ≥ 0",
+   "nontrivial": "¬∀ (f : ℝ → ℝ), ∃ a, f a * deriv f a * iteratedDeriv 2 f a * iteratedDeriv 3 f a ≥ 0"
+  }
+ },
+ "pns-valid-Putnam|exercise_2000_a2": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ (N : ℕ), False",
+   "nonvac": "¬∀ (N : ℕ), False"
+  }
+ },
+ "pns-valid-Putnam|exercise_2010_a4": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ n > 0, False",
+   "nonvac": "¬∀ n > 0, False",
+   "trivial": "∀ (n : ℕ), ¬Nat.Prime (10 ^ 10 ^ 10 ^ n + 10 ^ 10 ^ n + 10 ^ n - 1)",
+   "nontrivial": "¬∀ (n : ℕ), ¬Nat.Prime (10 ^ 10 ^ 10 ^ n + 10 ^ 10 ^ n + 10 ^ n - 1)"
+  }
+ },
+ "pns-valid-Putnam|exercise_2017_b3": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ (c : ℕ → ℝ),\n  (∀ (n : ℕ), c n = 0 ∨ c n = 1) → (fun x => ∑' (i : ℕ), c i * x ^ i) (2 / 3) = 3 / 2 → False",
+   "nonvac": "¬∀ (c : ℕ → ℝ),\n    (∀ (n : ℕ), c n = 0 ∨ c n = 1) → (fun x => ∑' (i : ℕ), c i * x ^ i) (2 / 3) = 3 / 2 → False",
+   "trivial": "∀ (c : ℕ → ℝ), Irrational ((fun x => ∑' (i : ℕ), c i * x ^ i) (1 / 2))",
+   "nontrivial": "¬∀ (c : ℕ → ℝ), Irrational ((fun x => ∑' (i : ℕ), c i * x ^ i) (1 / 2))"
+  }
+ },
+ "pns-valid-Putnam|exercise_2018_b2": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ n > 0,\n  ∀ (f : ℕ → ℂ → ℂ), (∀ (n : ℕ), f n = fun z => ∑ i, (↑n - ↑↑i) * z ^ ↑i) → ∀ (z : ℂ), False",
+   "nonvac": "¬∀ n > 0,\n    ∀ (f : ℕ → ℂ → ℂ), (∀ (n : ℕ), f n = fun z => ∑ i, (↑n - ↑↑i) * z ^ ↑i) → ∀ (z : ℂ), False",
+   "trivial": "∀ (n : ℕ) (f : ℕ → ℂ → ℂ) (z : ℂ), ¬(‖z‖ ≤ 1 ∧ f n z = 0)",
+   "nontrivial": "¬∀ (n : ℕ) (f : ℕ → ℂ → ℂ) (z : ℂ), ¬(‖z‖ ≤ 1 ∧ f n z = 0)"
+  }
+ },
+ "pns-valid-Putnam|exercise_2020_b5": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ (z : Fin 4 → ℂ), (∀ (n : Fin 4), ‖z n‖ = 1) → (∀ (n : Fin 4), z n ≠ 1) → False",
+   "nonvac": "¬∀ (z : Fin 4 → ℂ), (∀ (n : Fin 4), ‖z n‖ = 1) → (∀ (n : Fin 4), z n ≠ 1) → False",
+   "trivial": "∀ (z : Fin 4 → ℂ), 3 - z 0 - z 1 - z 2 - z 3 + z 0 * z 1 * z 2 * z 3 ≠ 0",
+   "nontrivial": "¬∀ (z : Fin 4 → ℂ), 3 - z 0 - z 1 - z 2 - z 3 + z 0 * z 1 * z 2 * z 3 ≠ 0"
+  }
+ },
+ "pns-valid-Rudin|exercise_1_1a": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ (x : ℝ) (y : ℚ), y ≠ 0 → Irrational x → False",
+   "nonvac": "¬∀ (x : ℝ) (y : ℚ), y ≠ 0 → Irrational x → False",
+   "trivial": "∀ (x : ℝ) (y : ℚ), Irrational (x + ↑y)",
+   "nontrivial": "¬∀ (x : ℝ) (y : ℚ), Irrational (x + ↑y)"
+  }
+ },
+ "pns-valid-Rudin|exercise_1_2": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ (x : ℚ), False",
+   "nonvac": "¬∀ (x : ℚ), False"
+  }
+ },
+ "pns-valid-Rudin|exercise_1_5": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ (A : Set ℝ), A.Nonempty → BddBelow A → False",
+   "nonvac": "¬∀ (A : Set ℝ), A.Nonempty → BddBelow A → False",
+   "trivial": "∀ (A : Set ℝ), sInf A = -sSup {x | -x ∈ A}",
+   "nontrivial": "¬∀ (A : Set ℝ), sInf A = -sSup {x | -x ∈ A}"
+  }
+ },
+ "pns-valid-Rudin|exercise_1_11a": {
+  "status": "ok",
+  "info": "free=0 binders=1",
+  "goals": {
+   "vacuous": "∀ (z : ℂ), False",
+   "nonvac": "¬∀ (z : ℂ), False"
+  }
+ },
+ "pns-valid-Rudin|exercise_1_13": {
+  "status": "probe_fail",
+  "detail": "CANON_FAIL CANON_FAIL metavariables in statement"
+ },
+ "pns-valid-Rudin|exercise_1_16a": {
+  "status": "ok",
+  "info": "free=4 binders=9",
+  "goals": {
+   "vacuous": "∀ (n : ℕ) (r : ℝ) (x y z : EuclideanSpace ℝ (Fin n)),\n  n ≥ 3 → ‖x - y‖ > 0 → r > 0 → 2 * r > ‖x - y‖ → False",
+   "nonvac": "¬∀ (n : ℕ) (r : ℝ) (x y z : EuclideanSpace ℝ (Fin n)),\n    n ≥ 3 → ‖x - y‖ > 0 → r > 0 → 2 * r > ‖x - y‖ → False",
+   "trivial": "∀ (n : ℕ) (r : ℝ) (x y z : EuclideanSpace ℝ (Fin n)), {z | ‖z - x‖ = r ∧ ‖z - y‖ = r}.Infinite",
+   "nontrivial": "¬∀ (n : ℕ) (r : ℝ) (x y z : EuclideanSpace ℝ (Fin n)),\n    {z | ‖z - x‖ = r ∧ ‖z - y‖ = r}.Infinite"
+  }
+ },
+ "pns-valid-Rudin|exercise_1_18a": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ n > 1, ∀ (x : EuclideanSpace ℝ (Fin n)), False",
+   "nonvac": "¬∀ n > 1, ∀ (x : EuclideanSpace ℝ (Fin n)), False",
+   "trivial": "∀ (n : ℕ) (x : EuclideanSpace ℝ (Fin n)), ∃ y, y ≠ 0 ∧ sorry = 0",
+   "nontrivial": "¬∀ (n : ℕ) (x : EuclideanSpace ℝ (Fin n)), ∃ y, y ≠ 0 ∧ sorry = 0"
+  }
+ },
+ "pns-valid-Rudin|exercise_1_19": {
+  "status": "ok",
+  "info": "free=0 binders=3",
+  "goals": {
+   "vacuous": "∀ (n : ℕ) (a b : EuclideanSpace ℝ (Fin n)), False",
+   "nonvac": "¬∀ (n : ℕ) (a b : EuclideanSpace ℝ (Fin n)), False"
+  }
+ },
+ "pns-valid-Rudin|exercise_2_24": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : MetricSpace X], (∀ (A : Set X), Infinite ↑A → ∃ x, x ∈ closure A) → False",
+   "nonvac": "¬∀ {X : Type u} [inst : MetricSpace X], (∀ (A : Set X), Infinite ↑A → ∃ x, x ∈ closure A) → False",
+   "trivial": "∀ {X : Type u} [inst : MetricSpace X], SeparableSpace X",
+   "nontrivial": "¬∀ {X : Type u} [inst : MetricSpace X], SeparableSpace X"
+  }
+ },
+ "pns-valid-Rudin|exercise_2_27a": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (k : ℕ) (E : Set (EuclideanSpace ℝ (Fin k))), ¬E.Countable → False",
+   "nonvac": "¬∀ (k : ℕ) (E : Set (EuclideanSpace ℝ (Fin k))), ¬E.Countable → False",
+   "trivial": "∀ (k : ℕ) (E : Set (EuclideanSpace ℝ (Fin k))), Perfect {x | ∀ U ∈ 𝓝 x, ¬(U ∩ E).Countable}",
+   "nontrivial": "¬∀ (k : ℕ) (E : Set (EuclideanSpace ℝ (Fin k))), Perfect {x | ∀ U ∈ 𝓝 x, ¬(U ∩ E).Countable}"
+  }
+ },
+ "pns-valid-Rudin|exercise_2_28": {
+  "status": "ok",
+  "info": "free=2 binders=5",
+  "goals": {
+   "vacuous": "∀ (X : Type u) [inst : MetricSpace X] [SeparableSpace X] (A : Set X), IsClosed A → False",
+   "nonvac": "¬∀ (X : Type u) [inst : MetricSpace X] [SeparableSpace X] (A : Set X), IsClosed A → False",
+   "trivial": "∀ (X : Type u) [inst : MetricSpace X] (A : Set X),\n  ∃ P₁ P₂, A = P₁ ∪ P₂ ∧ Perfect P₁ ∧ P₂.Countable",
+   "nontrivial": "¬∀ (X : Type u) [inst : MetricSpace X] (A : Set X),\n    ∃ P₁ P₂, A = P₁ ∪ P₂ ∧ Perfect P₁ ∧ P₂.Countable"
+  }
+ },
+ "pns-valid-Rudin|exercise_3_1a": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ (f : ℕ → ℝ), (∃ a, Tendsto (fun n => f n) atTop (𝓝 a)) → False",
+   "nonvac": "¬∀ (f : ℕ → ℝ), (∃ a, Tendsto (fun n => f n) atTop (𝓝 a)) → False",
+   "trivial": "∀ (f : ℕ → ℝ), ∃ a, Tendsto (fun n => |f n|) atTop (𝓝 a)",
+   "nontrivial": "¬∀ (f : ℕ → ℝ), ∃ a, Tendsto (fun n => |f n|) atTop (𝓝 a)"
+  }
+ },
+ "pns-valid-Rudin|exercise_3_8": {
+  "status": "elab_fail"
+ },
+ "pns-valid-Rudin|exercise_3_20": {
+  "status": "ok",
+  "info": "free=2 binders=7",
+  "goals": {
+   "vacuous": "∀ {X : Type u} [inst : MetricSpace X] (p : ℕ → X) (l : ℕ+) (r : X),\n  CauchySeq p → Tendsto (fun n => p (↑l * n)) atTop (𝓝 r) → False",
+   "nonvac": "¬∀ {X : Type u} [inst : MetricSpace X] (p : ℕ → X) (l : ℕ+) (r : X),\n    CauchySeq p → Tendsto (fun n => p (↑l * n)) atTop (𝓝 r) → False",
+   "trivial": "∀ {X : Type u} [inst : MetricSpace X] (p : ℕ → X) (l : ℕ+) (r : X), Tendsto p atTop (𝓝 r)",
+   "nontrivial": "¬∀ {X : Type u} [inst : MetricSpace X] (p : ℕ → X) (l : ℕ+) (r : X), Tendsto p atTop (𝓝 r)"
+  }
+ },
+ "pns-valid-Rudin|exercise_3_22": {
+  "status": "ok",
+  "info": "free=3 binders=6",
+  "goals": {
+   "vacuous": "∀ (X : Type u) [inst : MetricSpace X] [CompleteSpace X] [Nonempty X] (G : ℕ → Set X),\n  (∀ (n : ℕ), IsOpen (G n) ∧ Dense (G n)) → False",
+   "nonvac": "¬∀ (X : Type u) [inst : MetricSpace X] [CompleteSpace X] [Nonempty X] (G : ℕ → Set X),\n    (∀ (n : ℕ), IsOpen (G n) ∧ Dense (G n)) → False",
+   "trivial": "∀ (X : Type u) [MetricSpace X] (G : ℕ → Set X), ∃ x, ∀ (n : ℕ), x ∈ G n",
+   "nontrivial": "¬∀ (X : Type u) [MetricSpace X] (G : ℕ → Set X), ∃ x, ∀ (n : ℕ), x ∈ G n"
+  }
+ },
+ "pns-valid-Rudin|exercise_4_2a": {
+  "status": "ok",
+  "info": "free=1 binders=7",
+  "goals": {
+   "vacuous": "∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f : α → β),\n  Continuous f → ∀ (x : Set α), False",
+   "nonvac": "¬∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f : α → β),\n    Continuous f → ∀ (x : Set α), False",
+   "trivial": "∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f : α → β) (x : Set α),\n  f '' closure x ⊆ closure (f '' x)",
+   "nontrivial": "¬∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f : α → β)\n    (x : Set α), f '' closure x ⊆ closure (f '' x)"
+  }
+ },
+ "pns-valid-Rudin|exercise_4_4a": {
+  "status": "ok",
+  "info": "free=2 binders=8",
+  "goals": {
+   "vacuous": "∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f : α → β) (s : Set α),\n  Continuous f → Dense s → False",
+   "nonvac": "¬∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f : α → β) (s : Set α),\n    Continuous f → Dense s → False",
+   "trivial": "∀ {α : Type} [MetricSpace α] {β : Type} [inst : MetricSpace β] (f : α → β) (s : Set α),\n  f '' Set.univ ⊆ closure (f '' s)",
+   "nontrivial": "¬∀ {α : Type} [MetricSpace α] {β : Type} [inst : MetricSpace β] (f : α → β) (s : Set α),\n    f '' Set.univ ⊆ closure (f '' s)"
+  }
+ },
+ "pns-valid-Rudin|exercise_4_5a": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ (f : ℝ → ℝ) (E : Set ℝ), IsClosed E → ContinuousOn f E → False",
+   "nonvac": "¬∀ (f : ℝ → ℝ) (E : Set ℝ), IsClosed E → ContinuousOn f E → False",
+   "trivial": "∀ (f : ℝ → ℝ) (E : Set ℝ), ∃ g, Continuous g ∧ ∀ x ∈ E, f x = g x",
+   "nontrivial": "¬∀ (f : ℝ → ℝ) (E : Set ℝ), ∃ g, Continuous g ∧ ∀ x ∈ E, f x = g x"
+  }
+ },
+ "pns-valid-Rudin|exercise_4_6": {
+  "status": "ok",
+  "info": "free=1 binders=3",
+  "goals": {
+   "vacuous": "∀ (f : ℝ → ℝ) (E : Set ℝ), IsCompact E → False",
+   "nonvac": "¬∀ (f : ℝ → ℝ) (E : Set ℝ), IsCompact E → False",
+   "trivial": "∀ (f : ℝ → ℝ) (E : Set ℝ), ContinuousOn f E ↔ IsCompact {x | ∃ x_1 ∈ E, (x_1, f x_1) = x}",
+   "nontrivial": "¬∀ (f : ℝ → ℝ) (E : Set ℝ), ContinuousOn f E ↔ IsCompact {x | ∃ x_1 ∈ E, (x_1, f x_1) = x}"
+  }
+ },
+ "pns-valid-Rudin|exercise_4_8b": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ (E : Set ℝ), Bornology.IsBounded E → False",
+   "nonvac": "¬∀ (E : Set ℝ), Bornology.IsBounded E → False",
+   "trivial": "∀ (E : Set ℝ), ∃ f, UniformContinuousOn f E ∧ ¬Bornology.IsBounded (f '' E)",
+   "nontrivial": "¬∀ (E : Set ℝ), ∃ f, UniformContinuousOn f E ∧ ¬Bornology.IsBounded (f '' E)"
+  }
+ },
+ "pns-valid-Rudin|exercise_4_12": {
+  "status": "ok",
+  "info": "free=2 binders=10",
+  "goals": {
+   "vacuous": "∀ {α β γ : Type u} [inst : UniformSpace α] [inst_1 : UniformSpace β] [inst_2 : UniformSpace γ]\n  {f : α → β} {g : β → γ}, UniformContinuous f → UniformContinuous g → False",
+   "nonvac": "¬∀ {α β γ : Type u} [inst : UniformSpace α] [inst_1 : UniformSpace β] [inst_2 : UniformSpace γ]\n    {f : α → β} {g : β → γ}, UniformContinuous f → UniformContinuous g → False",
+   "trivial": "∀ {α β γ : Type u} [inst : UniformSpace α] [UniformSpace β] [inst_2 : UniformSpace γ] {f : α → β}\n  {g : β → γ}, UniformContinuous (g ∘ f)",
+   "nontrivial": "¬∀ {α β γ : Type u} [inst : UniformSpace α] [UniformSpace β] [inst_2 : UniformSpace γ]\n    {f : α → β} {g : β → γ}, UniformContinuous (g ∘ f)"
+  }
+ },
+ "pns-valid-Rudin|exercise_4_19": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ {f : ℝ → ℝ},\n  (∀ (a b c : ℝ), a < b → f a < c → c < f b → ∃ x, a < x ∧ x < b ∧ f x = c) →\n    (∀ (r : ℚ), IsClosed {x | f x = ↑r}) → False",
+   "nonvac": "¬∀ {f : ℝ → ℝ},\n    (∀ (a b c : ℝ), a < b → f a < c → c < f b → ∃ x, a < x ∧ x < b ∧ f x = c) →\n      (∀ (r : ℚ), IsClosed {x | f x = ↑r}) → False",
+   "trivial": "∀ {f : ℝ → ℝ}, Continuous f",
+   "nontrivial": "¬∀ {f : ℝ → ℝ}, Continuous f"
+  }
+ },
+ "pns-valid-Rudin|exercise_4_24": {
+  "status": "ok",
+  "info": "free=3 binders=6",
+  "goals": {
+   "vacuous": "∀ {f : ℝ → ℝ},\n  Continuous f →\n    ∀ (a b : ℝ), a < b → (∀ (x y : ℝ), a < x → x < b → a < y → y < b → f ((x + y) / 2) ≤ (f x + f y) / 2) → False",
+   "nonvac": "¬∀ {f : ℝ → ℝ},\n    Continuous f →\n      ∀ (a b : ℝ), a < b → (∀ (x y : ℝ), a < x → x < b → a < y → y < b → f ((x + y) / 2) ≤ (f x + f y) / 2) → False",
+   "trivial": "∀ {f : ℝ → ℝ} (a b : ℝ), ConvexOn ℝ (Set.Ioo a b) f",
+   "nontrivial": "¬∀ {f : ℝ → ℝ} (a b : ℝ), ConvexOn ℝ (Set.Ioo a b) f"
+  }
+ },
+ "pns-valid-Rudin|exercise_5_2": {
+  "status": "ok",
+  "info": "free=1 binders=4",
+  "goals": {
+   "vacuous": "∀ {a b : ℝ} {f : ℝ → ℝ}, (∀ x ∈ Set.Ioo a b, deriv f x > 0) → False",
+   "nonvac": "¬∀ {a b : ℝ} {f : ℝ → ℝ}, (∀ x ∈ Set.Ioo a b, deriv f x > 0) → False",
+   "trivial": "∀ {a b : ℝ} {f : ℝ → ℝ},\n  StrictMonoOn f (Set.Ioo a b) ∧\n    DifferentiableOn ℝ f⁻¹ (Set.Ioo a b) ∧ ∀ x ∈ Set.Ioo a b, deriv f⁻¹ (f x) = 1 / deriv f x",
+   "nontrivial": "¬∀ {a b : ℝ} {f : ℝ → ℝ},\n    StrictMonoOn f (Set.Ioo a b) ∧\n      DifferentiableOn ℝ f⁻¹ (Set.Ioo a b) ∧ ∀ x ∈ Set.Ioo a b, deriv f⁻¹ (f x) = 1 / deriv f x"
+  }
+ },
+ "pns-valid-Rudin|exercise_5_4": {
+  "status": "elab_fail"
+ },
+ "pns-valid-Rudin|exercise_5_6": {
+  "status": "ok",
+  "info": "free=4 binders=5",
+  "goals": {
+   "vacuous": "∀ {f : ℝ → ℝ},\n  ContinuousOn f (Set.Ici 0) → DifferentiableOn ℝ f (Set.Ioi 0) → f 0 = 0 → MonotoneOn (deriv f) (Set.Ioi 0) → False",
+   "nonvac": "¬∀ {f : ℝ → ℝ},\n    ContinuousOn f (Set.Ici 0) → DifferentiableOn ℝ f (Set.Ioi 0) → f 0 = 0 → MonotoneOn (deriv f) (Set.Ioi 0) → False",
+   "trivial": "∀ {f : ℝ → ℝ}, MonotoneOn (fun x => f x / x) (Set.Ioi 0)",
+   "nontrivial": "¬∀ {f : ℝ → ℝ}, MonotoneOn (fun x => f x / x) (Set.Ioi 0)"
+  }
+ },
+ "pns-valid-Rudin|exercise_5_15": {
+  "status": "ok",
+  "info": "free=2 binders=4",
+  "goals": {
+   "vacuous": "∀ {f : ℝ → ℝ} (a : ℝ),\n  DifferentiableOn ℝ f (Set.Ioi a) → DifferentiableOn ℝ (deriv f) (Set.Ioi a) → False",
+   "nonvac": "¬∀ {f : ℝ → ℝ} (a : ℝ),\n    DifferentiableOn ℝ f (Set.Ioi a) → DifferentiableOn ℝ (deriv f) (Set.Ioi a) → False",
+   "trivial": "∀ {f : ℝ → ℝ} (a : ℝ),\n  sSup {x | ∃ x_1 ∈ Set.Ioi a, |deriv f x_1| = x} ^ 2 ≤\n    4 * sSup {x | ∃ x_1 ∈ Set.Ioi a, |f x_1| = x} * sSup {x | ∃ x_1 ∈ Set.Ioi a, |deriv (deriv f) x_1| = x}",
+   "nontrivial": "¬∀ {f : ℝ → ℝ} (a : ℝ),\n    sSup {x | ∃ x_1 ∈ Set.Ioi a, |deriv f x_1| = x} ^ 2 ≤\n      4 * sSup {x | ∃ x_1 ∈ Set.Ioi a, |f x_1| = x} * sSup {x | ∃ x_1 ∈ Set.Ioi a, |deriv (deriv f) x_1| = x}"
+  }
+ },
+ "pns-valid-Shakarchi|exercise_1_13a": {
+  "status": "ok",
+  "info": "free=3 binders=7",
+  "goals": {
+   "vacuous": "∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω),\n  IsOpen Ω → DifferentiableOn ℂ f Ω → (∃ c, ∀ z ∈ Ω, (f z).re = c) → False",
+   "nonvac": "¬∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω),\n    IsOpen Ω → DifferentiableOn ℂ f Ω → (∃ c, ∀ z ∈ Ω, (f z).re = c) → False",
+   "trivial": "∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω), f ↑a = f ↑b",
+   "nontrivial": "¬∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω), f ↑a = f ↑b"
+  }
+ },
+ "pns-valid-Shakarchi|exercise_1_13c": {
+  "status": "ok",
+  "info": "free=3 binders=7",
+  "goals": {
+   "vacuous": "∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω),\n  IsOpen Ω → DifferentiableOn ℂ f Ω → (∃ c, ∀ z ∈ Ω, sorry = c) → False",
+   "nonvac": "¬∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω),\n    IsOpen Ω → DifferentiableOn ℂ f Ω → (∃ c, ∀ z ∈ Ω, sorry = c) → False",
+   "trivial": "∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω), f ↑a = f ↑b",
+   "nontrivial": "¬∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : ↑Ω), f ↑a = f ↑b"
+  }
+ },
+ "pns-valid-Shakarchi|exercise_1_19b": {
+  "status": "elab_fail"
+ },
+ "pns-valid-Shakarchi|exercise_1_26": {
+  "status": "ok",
+  "info": "free=8 binders=12",
+  "goals": {
+   "vacuous": "∀ (f F₁ F₂ : ℂ → ℂ) (Ω : Set ℂ),\n  Nonempty ↑Ω →\n    IsOpen Ω →\n      IsConnected Ω →\n        ContinuousOn f Ω →\n          DifferentiableOn ℂ F₁ Ω →\n            DifferentiableOn ℂ F₂ Ω → (∀ x ∈ Ω, deriv F₁ x = f x) → (∀ x ∈ Ω, deriv F₂ x = f x) → False",
+   "nonvac": "¬∀ (f F₁ F₂ : ℂ → ℂ) (Ω : Set ℂ),\n    Nonempty ↑Ω →\n      IsOpen Ω →\n        IsConnected Ω →\n          ContinuousOn f Ω →\n            DifferentiableOn ℂ F₁ Ω →\n              DifferentiableOn ℂ F₂ Ω → (∀ x ∈ Ω, deriv F₁ x = f x) → (∀ x ∈ Ω, deriv F₂ x = f x) → False",
+   "trivial": "∀ (f F₁ F₂ : ℂ → ℂ) (Ω : Set ℂ), ∃ c, ∀ (x : ℂ), F₁ x = F₂ x + c",
+   "nontrivial": "¬∀ (f F₁ F₂ : ℂ → ℂ) (Ω : Set ℂ), ∃ c, ∀ (x : ℂ), F₁ x = F₂ x + c"
+  }
+ },
+ "pns-valid-Shakarchi|exercise_2_9": {
+  "status": "ok",
+  "info": "free=5 binders=8",
+  "goals": {
+   "vacuous": "∀ {f : ℂ → ℂ} (Ω : Set ℂ),\n  Bornology.IsBounded Ω → IsOpen Ω → DifferentiableOn ℂ f Ω → ∀ (z : ↑Ω), f ↑z = ↑z → deriv f ↑z = 1 → False",
+   "nonvac": "¬∀ {f : ℂ → ℂ} (Ω : Set ℂ),\n    Bornology.IsBounded Ω → IsOpen Ω → DifferentiableOn ℂ f Ω → ∀ (z : ↑Ω), f ↑z = ↑z → deriv f ↑z = 1 → False",
+   "trivial": "∀ {f : ℂ → ℂ} (Ω : Set ℂ) (z : ↑Ω), ∃ f_lin, ∀ x ∈ Ω, f x = f_lin x",
+   "nontrivial": "¬∀ {f : ℂ → ℂ} (Ω : Set ℂ) (z : ↑Ω), ∃ f_lin, ∀ x ∈ Ω, f x = f_lin x"
+  }
+ },
+ "pns-valid-Shakarchi|exercise_3_3": {
+  "status": "ok",
+  "info": "free=1 binders=2",
+  "goals": {
+   "vacuous": "∀ (a : ℝ), 0 < a → False",
+   "nonvac": "¬∀ (a : ℝ), 0 < a → False",
+   "trivial": "∀ (a : ℝ),\n  Tendsto (fun y => ∫ (x : ℝ) in -y..y, Real.cos x / (x ^ 2 + a ^ 2)) atTop (𝓝 (Real.pi * (Real.exp (-a) / a)))",
+   "nontrivial": "¬∀ (a : ℝ),\n    Tendsto (fun y => ∫ (x : ℝ) in -y..y, Real.cos x / (x ^ 2 + a ^ 2)) atTop (𝓝 (Real.pi * (Real.exp (-a) / a)))"
+  }
+ },
+ "pns-valid-Shakarchi|exercise_3_9": {
+  "status": "ok",
+  "info": "free=0 binders=0",
+  "goals": {
+   "vacuous": "False",
+   "nonvac": "¬False"
+  }
+ },
+ "pns-valid-Shakarchi|exercise_3_22": {
+  "status": "ok",
+  "info": "free=2 binders=3",
+  "goals": {
+   "vacuous": "∀ (f : ℂ → ℂ), DifferentiableOn ℂ f (ball 0 1) → ContinuousOn f (closure (ball 0 1)) → False",
+   "nonvac": "¬∀ (f : ℂ → ℂ), DifferentiableOn ℂ f (ball 0 1) → ContinuousOn f (closure (ball 0 1)) → False",
+   "trivial": "∀ (f : ℂ → ℂ), ¬∀ z ∈ sphere 0 1, f z = 1 / z",
+   "nontrivial": "¬∀ (f : ℂ → ℂ), ¬∀ z ∈ sphere 0 1, f z = 1 / z"
+  }
+ }
+}
