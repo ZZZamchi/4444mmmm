@@ -88,6 +88,13 @@ def compute() -> dict:
     res["our_false_accepts_semanteq_accepts"] = sum(s_acc[k] for k in shared if v[k] == "accept" and not ours_label[k])
     res["our_false_accepts"] = sum(1 for k in shared if v[k] == "accept" and not ours_label[k])
     res["accept_overlap"] = Counter(f"{'S' if s_acc[k] else '-'}{'O' if v[k] == 'accept' else '-'}" for k in shared)
+    cross: dict = {}
+    for k in shared:
+        c = cross.setdefault(f"{'accept' if s_acc[k] else 'other'}|{v[k]}", {"n": 0, "ineq_published": 0, "ineq_adjudicated": 0})
+        c["n"] += 1
+        c["ineq_published"] += not labels["published"][k]
+        c["ineq_adjudicated"] += not labels["adjudicated"][k]
+    res["crosstab"] = dict(sorted(cross.items()))
     return res
 
 

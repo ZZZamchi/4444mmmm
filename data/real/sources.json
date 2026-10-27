@@ -1,0 +1,64 @@
+{
+ "lean_toolchain": "leanprover/lean4:v4.27.0-rc1",
+ "mathlib": {
+  "url": "https://github.com/leanprover-community/mathlib4.git",
+  "rev": "32d24245c7a12ded17325299fd41d412022cd3fe"
+ },
+ "git_sources": {
+  "formalrx": {
+   "url": "https://github.com/hcWang942/FormalRx.git",
+   "commit": "5f41a19945765b60b396e7504fd434f1be74a4d4"
+  },
+  "FormalTCS": {
+   "url": "https://github.com/zirui-HIT/FormalTCS.git",
+   "commit": "021c3bf3285003a897ec3fee0b98218150e91e09"
+  },
+  "minif2f_dm": {
+   "url": "https://github.com/google-deepmind/miniF2F",
+   "commit": "f0a20e14c1eeccd859d51bb4c2b3ee487889c303"
+  },
+  "minif2f_v2": {
+   "url": "https://github.com/roozbeh-yz/miniF2F_v2",
+   "commit": "905eca84f37cf38a49ec54f0f03e7bf99b510168"
+  },
+  "oai-math": {
+   "url": "https://github.com/openai/math.git",
+   "commit": "adc7f1241b42e322a6451854ab7e4b4c146bf78a"
+  },
+  "proofnet-verified": {
+   "url": "https://github.com/marcusm117/ProofNet-Verified",
+   "commit": "160414332dc196583f6c37c310b420d2a3b07c58"
+  },
+  "putnambench": {
+   "url": "https://github.com/trishullab/PutnamBench",
+   "commit": "a635813f5edf297d928f9bd5ef8324a26bdde09c"
+  },
+  "RLMEval": {
+   "url": "https://github.com/augustepoiroux/RLMEval.git",
+   "commit": "70db69b43ca71981b23b64af047d08e6504d7e06"
+  },
+  "shadowbench": {
+   "url": "https://github.com/ldilab/shadowbench.git",
+   "commit": "cfbdeedc79dd09c92aa5ced289508fbf8dbc9308"
+  },
+  "T2": {
+   "url": "https://github.com/ldilab/T2.git",
+   "commit": "0266b7ac57fce434788833c9e21d98c88324c0ec"
+  }
+ },
+ "files_sha256": {
+  "hf/ProofNetVerif-test.parquet": "30287a8af51fc7bea2bec4fbfab6ae82ef5cf0de9f4c49b25f6ecfba4e7bb4a0",
+  "hf/ProofNetVerif-valid.parquet": "d376127a467d92bcf7b42e1410b489695692d76f7af40f04d41042769751b86c",
+  "hf/ProofNetSharp-test.parquet": "c2c2d56311f1f36396f98dd6bf76b8d03df6efd0df656a9085297372ea7d7039",
+  "hf/ProofNetSharp-valid.parquet": "739a7abe798910fd91ede202cb5e644c326781741ac7bb225e9e6b3b9f2f0d22",
+  "minif2f/minif2f.jsonl": "d6654c88476ff14db19d57dea25bd955a240525fb52171e460f89d98f83d7dd5"
+ },
+ "semanteq": {
+  "url": "https://github.com/hlxr89/SemantEq",
+  "commit": "f92767000e14d11744580946980cf874324f5d19",
+  "files": [
+   "test/results/pnv_test_verdicts.jsonl",
+   "test/campaign/manifest.jsonl"
+  ]
+ }
+}

@@ -170,7 +170,7 @@ def main() -> None:
         table[lev] = dict(sorted(c.items()))
     summary = {"model": model, "extra": EXTRA, "mismatch_L2_vs_stored": dict(mismatch), "table": table,
                "seconds": round(time.time() - t0, 1), "pairs": out_pairs}
-    out = ROOT / "data" / "real" / f"k11_budget_{short(model)}.json"
+    out = Path(os.environ.get("K11_OUT") or ROOT / "data" / "real" / f"k11_budget_{short(model)}.json")
     tmp = out.with_suffix(f".{os.getpid()}.tmp")
     tmp.write_text(json.dumps(summary, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     os.replace(tmp, out)

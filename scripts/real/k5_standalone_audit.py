@@ -46,11 +46,9 @@ def alone(it: Item, name: str) -> dict:
     return {"ok": ok, "timeout": timed_out, "truncated": sentinel not in out, "errors": errors[:2], "axioms": axioms}
 
 
-def main() -> None:
-    sys.stdout.reconfigure(encoding="utf-8")
-    per_tag = int(sys.argv[1]) if len(sys.argv) > 1 else 40
+def from_dump(name: str) -> dict[str, dict[str, tuple[Item, str]]]:
     by_tag: dict[str, dict[str, tuple[Item, str]]] = defaultdict(dict)
-    for line in (CACHE / "dump_items.jsonl").read_text(encoding="utf-8").splitlines():
+    for line in (CACHE / name).read_text(encoding="utf-8").splitlines():
         d = json.loads(line)
         parts = d["item"].split(":")
         tag = parts[1] if len(parts) >= 3 else ""
@@ -61,6 +59,28 @@ def main() -> None:
         m = NAME_RE.search(d["body"])
         if m and f.exists() and json.loads(f.read_text(encoding="utf-8"))["ok"]:
             by_tag[tag][_key(it)] = (it, m.group(1))
+    return by_tag
+
+
+def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8")
+    per_tag = int(sys.argv[1]) if len(sys.argv) > 1 else 40
+    by_tag: dict[str, dict[str, tuple[Item, str]]] = defaultdict(dict)
+    source = os.environ.get("K5_SOURCE")
+    if source:
+        # the exported accepted proofs (k21_export_proofs.py): already filtered, no cache needed
+        import gzip
+        for line in gzip.open(ROOT / source, "rt", encoding="utf-8"):
+            d = json.loads(line)
+            it = Item(d["item"], tuple(d["imports"]), d["body"])
+            if m := NAME_RE.search(d["body"]):
+                by_tag[d["tag"]][_key(it)] = (it, m.group(1))
+    else:
+        by_tag = from_dump(os.environ.get("K5_DUMP", "dump_items.jsonl"))
+    if skip := os.environ.get("K5_SKIP"):
+        # proofs already re-checked from an earlier dump (that run covered its whole population)
+        seen = {k for v in from_dump(skip).values() for k in v}
+        by_tag = defaultdict(dict, {t: {k: x for k, x in v.items() if k not in seen} for t, v in by_tag.items()})
     rng = random.Random(0)
     sample = []
     for tag in sorted(by_tag):
@@ -75,21 +95,29 @@ def main() -> None:
                 r = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            done[r["item"]] = r
-    todo = [x for x in sample if x[1].item_id not in done]
+            done[r.get("key", r["item"])] = r
+    todo = [x for x in sample if _key(x[1]) not in done]
+    # random order, so that a run stopped early has checked a uniform sample of the population
+    random.Random(1).shuffle(todo)
+    if os.environ.get("K5_SUMMARY_ONLY") == "1":
+        # summarize what a running or stopped check has done, without compiling anything
+        sample = [x for x in sample if _key(x[1]) in done or x[1].item_id in done]
+        todo = []
     lock = threading.Lock()
     print("resumed", len(done), "todo", len(todo), flush=True)
 
     def one(x):
-        r = {"tag": x[0], "item": x[1].item_id, **alone(x[1], x[2])}
+        # keyed by content: one item id can carry different proofs in different runs
+        r = {"tag": x[0], "item": x[1].item_id, "key": _key(x[1]), **alone(x[1], x[2])}
         with lock, open(part, "a", encoding="utf-8") as fh:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
         return r
 
     with ThreadPoolExecutor(max_workers=int(os.environ.get("K5_WORKERS", "4"))) as pool:
-        new = {r["item"]: r for r in pool.map(one, todo)}
-    rows = [done.get(it.item_id) or new[it.item_id] for _, it, _ in sample]
+        new = {r["key"]: r for r in pool.map(one, todo)}
+    rows = [done.get(_key(it)) or done.get(it.item_id) or new[_key(it)] for _, it, _ in sample]
     summary = {"population": {t: len(v) for t, v in by_tag.items()},
+               "complete": len(rows) == sum(len(v) for v in by_tag.values()),
                "checked": dict(Counter(r["tag"] for r in rows)),
                "passed": dict(Counter(r["tag"] for r in rows if r["ok"])),
                "failures": [r for r in rows if not r["ok"]]}

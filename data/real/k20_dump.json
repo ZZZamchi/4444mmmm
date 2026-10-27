@@ -1,0 +1,20 @@
+{
+ "k11:claude-opus-5.5": {
+  "exit": 0,
+  "tables_equal": true
+ },
+ "k11:deepseek-v4.1-flash": {
+  "exit": 0,
+  "tables_equal": true
+ },
+ "g5:qwen3.8-27b-nothink": {
+  "exit": 0,
+  "pairs": 1140,
+  "same_verdicts": 1140
+ },
+ "g5:gpt-4.1-mini": {
+  "exit": 0,
+  "pairs": 1140,
+  "same_verdicts": 1140
+ }
+}

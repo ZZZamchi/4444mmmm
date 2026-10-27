@@ -252,9 +252,10 @@ def check(
     out: dict[str, Result] = {}
     todo: list[Item] = []
     dump = os.environ.get("RUNNER_DUMP")
+    dump_file = CACHE / os.environ.get("RUNNER_DUMP_FILE", "dump_items.jsonl")
     for it in items:
         if dump and re.search(dump, it.item_id):
-            with _APPEND, open(CACHE / "dump_items.jsonl", "a", encoding="utf-8") as fh:
+            with _APPEND, open(dump_file, "a", encoding="utf-8") as fh:
                 fh.write(json.dumps({"item": it.item_id, "imports": it.imports, "body": it.body},
                                     ensure_ascii=False) + "\n")
         if TRUNCATE_RE.search(it.body):

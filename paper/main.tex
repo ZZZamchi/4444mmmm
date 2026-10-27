@@ -27,6 +27,9 @@ Measuring the Collapse of Closed Equivalence and Certifying Component Difference
 \ifanonymous
 \author{Anonymous}
 \date{}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\hypersetup{pdfauthor={},pdfcreator={},pdfproducer={}}
 \else
 \author{Anonymous}
 \date{\today}
@@ -36,27 +39,24 @@ Measuring the Collapse of Closed Equivalence and Certifying Component Difference
 \maketitle
 
 \begin{abstract}
-Reference-based faithfulness checks for autoformalization ask whether a candidate statement is
-provably equivalent to a trusted reference. Any two true statements are provably equivalent, so
-such a check loses discriminating power as its prover gets better. We measure the loss: on
-all 1,140 labelled ProofNetVerif pairs, closed equivalence accepts 2\% of the unfaithful pairs with
-fixed tactics and 39\% with Claude Opus~5.5, and raising the budget of one model takes
-them from 2\% to 44\%. We then ask what can be certified without restricting the prover. We
-compare the hypotheses and conclusions of canonical Lean telescopes against goals fixed before any
-prover runs. Every decided verdict, rejects included, is a kernel
-proof about telescopes whose closures are certified equal to the original statements; the
-canonicalization rules decide which components a verdict is about, and faithfulness needs
-evidence beyond the kernel. With the same prover our false accepts stay at 4--15 of 694, at a
-cost in coverage: 56\% of the faithful pairs are accepted, against 86\% by closed equivalence. In
-exchange, 244 of the 328 rejects of unfaithful pairs mechanically locate the difference in the
-aligned hypotheses or conclusions, 88 of them on pairs that closed equivalence accepts. Among the 30 distinct statements underlying
-the 43 component-goal rejects of labelled-equivalent pairs, two blind annotators ($\kappa=0.66$)
-agree on 26: 16 candidates are judged unfaithful, 7 are faithful despite disagreeing with an
-incorrect reference, and 3 are canonicalization artefacts. An
-accept is necessary but not sufficient: constant conclusions and
-absorption of the conclusion into the hypotheses defeat every check invariant under equivalent
-hypotheses. Applied to benchmark references, the same goals give kernel-checked evidence for 34
-errors in ProofNet\#, miniF2F and PutnamBench, 20 of them proved false or vacuous.
+Reference-based checks for autoformalization ask whether a candidate statement is provably
+equivalent to a trusted reference. Any two true statements are provably equivalent, so such a
+check loses discriminating power as its prover gets better. On all 1,140 labelled ProofNetVerif
+pairs, closed equivalence accepts 2\% of the unfaithful pairs with fixed tactics and 39\% with
+Claude Opus~5.5, and raising the budget of one model takes this from 2\% to 44\%. We introduce a
+component criterion whose comparison goals, over the hypotheses and conclusions of canonical
+Lean telescopes, are fixed before proof search, so that the prover need not be restricted.
+Kernel-checked certificates back every decided component relation, rejections included,
+while regrouping certificates tie the compared telescopes to the original statements. These
+certificates establish formal differences, not faithfulness to the informal problem; which
+components are compared depends on canonicalization and alignment, and faithfulness needs
+external evidence. With the same prover our false accepts stay at 4--15 of 694, at a measured
+cost in coverage: 56\% of the faithful pairs are accepted, against 86\% by closed equivalence.
+Applied to benchmark references, the same goals give kernel-checked evidence for 34 errors in
+ProofNet\#, miniF2F and PutnamBench, 20 of them proved false or vacuous. Accepts remain necessary
+but not sufficient: constant conclusions and the absorption of a conclusion into the hypotheses
+defeat every check that accepts any proof of the component equivalences, so certified
+differences complement checks that restrict which proofs count.
 \end{abstract}
 
 %======================================================================
@@ -77,19 +77,21 @@ pre-specified, audited transformation steps and checks the resulting proof terms
 accepting arbitrary proofs of mutual implication. Other pipelines use language-model judges, alone or as reinforcement-learning
 rewards~\cite{beyondcomp,formarl,reform,criticlean}, or BEq itself as the reward~\cite{stepfun}.
 
-Restriction trades recall for precision, and judges carry no guarantee. Two questions remain.
-First, how badly does unrestricted equivalence fail with the provers people actually use, and how
-does the failure grow with the prover? For one prover and a stronger one that proves a superset,
-the closed false-accept set can only grow; we call this logical fact the \emph{monotonicity
-paradox}. Under two of four prompts, SemantEq reports that a language model produces proofs in
-both directions for about two fifths of its non-equivalent pairs, which is why it audits proof
-terms rather than relying on compilation alone~\cite{semanteq}; we measure how the effect grows
-across models, ordered by the closed proofs they find, and across the budgets of one model. Second, which verdicts of a
-prover-based check remain meaningful as the prover gets stronger, rejects included? SemantEq
-answers this for accepts by restricting the proofs an accept may use; a rejection there means
-only that no proof passed its audits. We ask what can be certified on both sides without
-restricting the prover. This paper answers both questions on real benchmark data and is explicit
-about what is not solved.
+Restriction trades recall for precision, and judges carry no guarantee. We ask three questions.
+
+\emph{RQ1: how badly does unrestricted (closed) equivalence fail with the provers people actually
+use, and how does the failure grow with the prover?} For one prover and a stronger one that
+proves a superset, the closed false-accept set can only grow; we call this logical fact the
+\emph{monotonicity paradox}. Under two of four prompts, SemantEq reports that a language model
+produces proofs in both directions for about two fifths of its non-equivalent pairs, which is why
+it audits proof terms rather than relying on compilation alone~\cite{semanteq}; we measure how
+the effect grows across models, ordered by the closed proofs they find, and across the budgets of
+one model. \emph{RQ2: without restricting the prover, can a check give kernel-checked evidence of
+a formal difference and locate it in a fixed component?} SemantEq secures the meaning of an
+accept by restricting the proofs it may use; a rejection there means only that no proof passed
+its audits. \emph{RQ3: what does such evidence settle, what does it cost, and where does it still
+fail?} This paper answers the three on real benchmark data and is explicit about what is not
+solved.
 
 We do not claim to have found that closed equivalence collapses on true statements, nor that
 comparing hypotheses and conclusions separately is new: checks of premises, of conclusions and
@@ -124,49 +126,54 @@ where, and only a reader can confirm that a location is the reason. We keep mech
 locations and confirmed unfaithfulness apart throughout. The evidence is for candidate
 evaluation and for auditing the references themselves, and anyone can re-check it: code, data
 and the Lean developments are at \url{https://anonymous.4open.science/r/4444mmmm-FC0B/}, where
-\texttt{paper\_check.py} recomputes every main table of this paper from the stored results.
+\texttt{paper\_check.py} recomputes every main table of this paper from the stored results
+(Appendix~\ref{app:repro} lists the units, denominators and label versions of every count).
 
-\paragraph{Contributions.}
+\paragraph{Contributions.} One claim per question, each with the evidence that tests it.
 \begin{enumerate}
-\item \textbf{A certified component comparison and its guarantees}
-(\S\ref{sec:framework}). We compare the hypotheses and conclusions of the canonical Lean
-telescopes of $R$ and $S$ against five goals generated before any prover runs, with two further
-certificates binding the closures of the telescopes to the original statements. Every decided
-verdict is a kernel proof about the exhibited telescopes; once the goals, the alignment and the
-canonical form are fixed, its meaning does not depend on which prover found it. We state exactly
-what each verdict certifies and what it is relative to: the split into hypotheses and
-conclusion is part of the criterion, and no criterion that separates true statements can avoid
-depending on it (Proposition~\ref{prop:split}); a reject that is not vacuity-only certifies a
-false statement; differences outside the hypotheses are reported as \V{off-domain}; and an
-accept still collapses where the alignment ends early (\V{residual}), where the conclusion is
-constant, and where the candidate absorbs its conclusion. The theory is elementary; the proofs
-are in Appendix~\ref{app:theory}.
-\item \textbf{What the comparison recovers, what it costs, and what it finds}
-(\S\ref{sec:measure}--\ref{sec:audit}). On all 1,140 labelled ProofNetVerif
-pairs~\cite{proofnetverif}, closed false accepts rise from 1.7\% with tactics to 39\% (95\%
-interval 36--43\%) with Opus across models, and from 12 to 305 (44\%) within one model as its
-budget grows (Table~\ref{tab:budget}); ours stay at 4--15, at fewer model calls and tokens than
-the closed check spends (Table~\ref{tab:cost}). The cost is coverage, which we report
-outcome by outcome and against the closed accepts (Table~\ref{tab:dist}): 137 faithful pairs
-are accepted only by closed equivalence, 95 of them returned as \V{residual} because the
-alignment ends early, and most undecided pairs fail in canonicalization and alignment, not in
-proof search. What the cost buys is a mechanical location: 244 of the 328 rejects of unfaithful
-pairs name the aligned component that differs, which a closed verdict never does; whether it is
-where the candidate is unfaithful is for a reader to confirm. An external adjudication of the
-pairs labelled equivalent~\cite{semanteq}, selection-dependent because most of its reviews were
-prompted by another method's failures, relabels 46 of our 51 rejects there as non-equivalent. In
-a blind two-annotator audit (\S\ref{sec:blind}), the 43 component-goal rejects among them rest on
-30 distinct statements; of the 26 distinct statements on which the annotators agree, 16 are
+\item[A.] \textbf{The failure, measured} (RQ1, \S\ref{sec:measure}). Closed false accepts grow
+with proving power: on all 1,140 labelled ProofNetVerif pairs~\cite{proofnetverif}, closed false
+accepts rise from 1.7\% with tactics to 39\% (95\% interval 36--43\%) with Opus across models,
+and from 12 to 305 (44\%) within one model as its budget grows (Table~\ref{tab:budget}). The
+budget sweep nests the provers; across models, which are not nested, the growth is an observed
+association that Proposition~\ref{thm:mono} explains, not a law.
+\item[B.] \textbf{Certified component comparison} (RQ2, \S\ref{sec:framework}). Comparison goals
+over the hypotheses and conclusions of canonical Lean telescopes are fixed before proof search,
+so the prover may be unrestricted; every decided verdict, rejects included, is a kernel proof
+about the exhibited telescopes, and regrouping certificates tie the telescopes to the original
+statements. We state what each verdict certifies, what it is relative to (the canonical split
+and alignment, Proposition~\ref{prop:split}) and what it does not show: a certificate
+establishes a formal difference, not unfaithfulness (Tables~\ref{tab:layers} and
+\ref{tab:scope}).
+\item[C.] \textbf{What it gains, what it costs, and where it fails} (RQ3,
+\S\ref{sec:measure}--\ref{sec:audit}). Against those closed false accepts, with the same prover
+ours stay at 4--15, at fewer model calls and tokens than the closed check spends
+(Table~\ref{tab:cost}). The cost is coverage, reported outcome by outcome
+(Table~\ref{tab:dist}): 137 faithful pairs are accepted only by closed equivalence, 95 of them
+returned as \V{residual} because the alignment ends early, and most undecided pairs fail in
+canonicalization and alignment, not in proof search. What the cost buys is a mechanical location:
+244 of the 328 rejects of unfaithful pairs name the aligned component that differs, which a
+closed verdict never does; whether it is where the candidate is unfaithful is for a reader to
+confirm. Independent evidence bounds the claim: an external adjudication of the pairs labelled
+equivalent~\cite{semanteq}, selection-dependent because most of its reviews were prompted by
+another method's failures, relabels 46 of our 51 rejects there as non-equivalent, and in a blind
+two-annotator audit (\S\ref{sec:blind}), the 43 component-goal rejects among them rest on 30
+distinct statements; of the 26 distinct statements on which the annotators agree, 16 are
 unfaithful candidates, 7 faithful candidates whose reference says something else and 3
 canonicalization artefacts, and a reader confirms 9 of our 14 false accepts (6 of 11 distinct
-statements). Taking SemantEq's accepts and our certified rejects gives a two-sided evaluator that
-decides 54\% of the shared test pairs without a false accept. Certified rejects veto LLM-judge accepts without trusting either side, and
-the same goals, applied to benchmark references, give kernel-checked evidence for 34 errors that
-manual curation left in ProofNet\#, miniF2F and PutnamBench (\S\ref{sec:audit}).
+statements). The failures are measured too: accepts still collapse on constant conclusions and
+absorption (\S\ref{sec:survive-exp}), and rules written to remove the artefacts the audit found
+create others of the same kind (Appendix~\ref{app:k19}). Two applications use the certificates:
+combined with SemantEq's accepts, our certified rejects give a two-sided evaluator that decides
+54\% of the shared test pairs with no false accept observed under either label set, though with
+false rejects (\S\ref{sec:measure}); and applied to benchmark references, the same goals give
+kernel-checked evidence for 34 errors that manual curation left in ProofNet\#, miniF2F and
+PutnamBench (\S\ref{sec:audit}).
 \end{enumerate}
 Supporting experiments test known failure modes: candidates constructed or generated by a
 language model to collapse (\S\ref{sec:survive-exp}), which closed equivalence rewards and our
-accepts partly still do, and best-of-$n$ selection (\S\ref{sec:select}).
+accepts partly still do, and best-of-$n$ selection (\S\ref{sec:select}), where certified rejects
+veto LLM-judge accepts without trusting either side.
 We do not claim a better binary accept than BEq+, which is as precise and sometimes recalls more
 where candidates are close to the reference in form (Table~\ref{tab:g4}), or than SemantEq, whose
 model-free search reports 100\% precision on the ProofNetVerif test split with 51.4\% recall
@@ -236,7 +243,9 @@ Every verdict other than \V{unknown} is a Lean proof of one of five goals genera
 $(R,S)$ by a Lean metaprogram before any prover is called: \texttt{acc}, \texttt{cond},
 \texttt{nhyp} (hypotheses differ somewhere), \texttt{ncin} (conclusions differ inside $H$) and
 \texttt{ncomp}. Because the goals are fixed in advance, the meaning of a certificate does not
-depend on the prover, and a stronger prover can only turn \V{unknown} into a decided verdict.
+depend on the prover, and a stronger prover, one that proves a superset of what another proves,
+can only turn \V{unknown} into a decided verdict; different models need not be stronger in this
+sense, so across models this is a tendency, not a guarantee.
 \V{Unknown} is epistemic: the budget ran out. \V{Off-domain} is semantic: the statements
 provably agree on every input satisfying the hypotheses and provably differ elsewhere, as for
 the extreme value theorem against its quantifier swap ($\exists x\in K\,\forall y\in K$ vs.\
@@ -287,6 +296,25 @@ pair whose component goals stay open but whose closed equivalence is refuted, wi
 certificates, is a reject that certifies a difference without locating it. So is a component
 reject when neither telescope has a binder or a hypothesis in its prefix, since its conclusion
 goal then compares the closed statements.
+
+\paragraph{Decision procedure.} For a pair $(R,S)$ the checker
+\begin{enumerate}\setlength{\itemsep}{0pt}
+\item elaborates both statements, computes their canonical telescopes and aligns the binders; if
+canonicalization fails, the verdict is \V{unknown};
+\item generates, before any prover runs, the two regrouping goals, the five component goals and
+the closed goals: both directions of $\Cl R\leftrightarrow\Cl S$ and their negations;
+\item runs the prover budget on every goal (fixed tactics, then model proposals and repair
+rounds) and keeps a goal as proved only if the kernel checks its proof;
+\item returns \V{unknown} unless both regrouping goals are proved, and otherwise \V{accept} if
+\texttt{acc} is proved (\V{residual} if the alignment ended early), \V{reject} if \texttt{nhyp} or
+\texttt{ncin} is, \V{off-domain} if \texttt{cond} and \texttt{ncomp} are, \V{reject} if only the
+closed equivalence is refuted, and \V{unknown} otherwise;
+\item reports a reject as located when it rests on \texttt{nhyp} or \texttt{ncin} and a telescope
+has a prefix binder or a hoisted hypothesis, and attaches to an accept the one-sided triviality
+and constancy certificates of \S\ref{sec:survive} as flags, which do not change the verdict.
+\end{enumerate}
+In a consistent theory no two of the cases in step~4 can both be proved, so their order only
+fixes how a run is read.
 
 Table~\ref{tab:layers} separates what is guaranteed by the kernel from what depends on the rules
 and from what needs the informal statement. Only the first layer is unconditional; the second is
@@ -395,12 +423,12 @@ accept certifies only the hypotheses. \emph{Absorption}: for $R=(\Gamma,H,C)$ le
 $R^{\mathrm{abs}}:=(\Gamma,H\wedge C,C)$. Then $R\Ecomp R^{\mathrm{abs}}$ holds exactly when
 $\forall\bar x.\,H\to C$, i.e.\ when $R$ is true, although $R^{\mathrm{abs}}$ is a theorem by
 projection and has lost the problem. The same holds for every relation under which statements with
-provably equivalent hypotheses and identical conclusions are related, which includes every
-prover-based check: such a check cannot tell a true statement from its absorption once the prover
-proves the statement. So faithfulness is not a property of the extensions of the components, and a
-remedy has to be intensional, as the restrictions of BEq+~\cite{beq}, shadow
-benchmarks~\cite{shadowbench}, theory-level checks~\cite{tla} and SemantEq's allowed steps and
-proof-term audits~\cite{semanteq} are.
+provably equivalent hypotheses and identical conclusions are related, which includes every check
+that accepts any proof of the component equivalences: such a check cannot tell a true statement
+from its absorption once the prover proves the statement. So faithfulness is not a property of
+the extensions of the components, and a remedy has to restrict how a statement may be written or
+which proofs count, as BEq+~\cite{beq}, shadow benchmarks~\cite{shadowbench}, theory-level
+checks~\cite{tla} and SemantEq's allowed steps and proof-term audits~\cite{semanteq} do.
 
 We use two one-sided certificates that depend on one statement at a time. They annotate an
 accept without changing it, and a rule that uses them can only withhold accepts. \emph{Constancy}: the goals $\forall\bar x.\,C$ and $\forall\bar x.\,\neg C$ on the aligned
@@ -465,10 +493,10 @@ Qwen3.8-27B without thinking, GPT-4.1-mini, DeepSeek-V4.1-Flash, Gemini~4 Argon,
 Claude Opus~5.5. The closed baseline proves $\Cl R\leftrightarrow\Cl S$ with the same tactics, model
 and rounds; Table~\ref{tab:cost} compares what the two sides spend. BEq+ is our port of the LeanInteract implementation (\texttt{beq\_plus}, including
 \texttt{exact?} reference checks and \texttt{convert}-based saturation). Model proofs may not
-contain \texttt{sorry}, \texttt{admit}, \texttt{native\_decide} or new axioms; every accepted model
-proof behind the tables (6,544 proofs) was recompiled alone in a fresh file with
-\texttt{\#print axioms} and uses only \texttt{propext}, \texttt{Classical.choice} and
-\texttt{Quot.sound} (Appendix~\ref{app:repro}).
+contain \texttt{sorry}, \texttt{admit}, \texttt{native\_decide} or new axioms; accepted model
+proofs are recompiled alone in a fresh file with \texttt{\#print axioms}, and every one rechecked
+uses only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}
+(Appendix~\ref{app:repro} states which proofs this covers).
 
 \begin{table}[t]
 \centering\small
@@ -662,14 +690,55 @@ that their own method did not accept, and it covers only pairs labelled equivale
 nothing about our false accepts (\texttt{k17\_semanteq.py}).
 
 \paragraph{Combining with SemantEq.} The two criteria give evidence on opposite sides, so they
-compose. On the 1,135 test pairs that both cover, SemantEq-Eval accepts 235 and never a pair
+compose. Table~\ref{tab:common} scores them, BEq+ as SemantEq released it, and two combinations
+under ProofNetVerif's labels and under SemantEq's adjudicated ones. On the 1,135 test pairs that both cover, SemantEq-Eval accepts 235 and never a pair
 labelled inequivalent, and it decides nothing else; our criterion decides 640 (262 accepts, 14 of
-them false, and 378 certified rejects). Taking SemantEq's accepts and our certified rejects
-decides 611 pairs (54\%, against 21\% for SemantEq alone) without a false accept; of its 377
+them false, and 378 certified rejects). The two-sided rule takes SemantEq's accepts as accepts and
+our certified rejects as rejects, leaves a pair with both undecided and does not use our accepts. It
+decides 611 pairs (54\%, against 21\% for SemantEq alone) with no false accept observed under either
+label set (at most 1.6\% of its 234 accepts at 95\% confidence); of its 377
 rejects, 50 are of pairs labelled equivalent by ProofNetVerif and 4 under SemantEq's adjudicated
-labels (98.9\% precision). The two disagree on one pair, the artefact 358. SemantEq accepts none of
+labels (98.9\% precision). The two disagree on one pair, the artefact 358. Our accepts are left
+out because all our errors lie outside SemantEq's accepts: of its 235 accepts we accept 191, leave 40
+\V{residual} and 3 \V{unknown} and reject 1, while SemantEq accepts none of
 our 14 false accepts, and our accepts add 71 pairs that SemantEq does not accept, 57 of them
-labelled equivalent (\texttt{k18\_combine.py}).
+labelled equivalent. Accepting what either accepts would take on all 14; accepting only what both
+accept gives up 43 accepts and no false one. The rule follows from what each side certifies, but we
+fixed it after seeing SemantEq's verdicts, so this comparison is exploratory (\texttt{k18\_combine.py}).
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{lrrrrrrrr}
+\toprule
+& \multicolumn{4}{c}{accepts} & \multicolumn{3}{c}{rejects} & \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-8}
+check & $n$ & false & prec. & recall & $n$ & false & prec. & decided\\
+\midrule
+\multicolumn{9}{l}{\emph{ProofNetVerif labels: 444 equivalent pairs, 691 not}}\\
+BEq+ & 233 & 8 & 96.6 & 50.7 & --- & --- & --- & 20.5\\
+SemantEq-Eval & 235 & 0 & 100.0 & 52.9 & --- & --- & --- & 20.7\\
+ours & 262 & 14 & 94.7 & 55.9 & 378 & 51 & 86.5 & 56.4\\
+two-sided & 234 & 0 & 100.0 & 52.7 & 377 & 50 & 86.7 & 53.8\\
+both accept & 191 & 0 & 100.0 & 43.0 & 378 & 51 & 86.5 & 50.1\\
+\midrule
+\multicolumn{9}{l}{\emph{SemantEq's adjudicated labels: 348 equivalent pairs, 787 not}}\\
+BEq+ & 233 & 10 & 95.7 & 64.1 & --- & --- & --- & 20.5\\
+SemantEq-Eval & 235 & 0 & 100.0 & 67.5 & --- & --- & --- & 20.7\\
+ours & 262 & 17 & 93.5 & 70.4 & 378 & 5 & 98.7 & 56.4\\
+two-sided & 234 & 0 & 100.0 & 67.2 & 377 & 4 & 98.9 & 53.8\\
+both accept & 191 & 0 & 100.0 & 54.9 & 378 & 5 & 98.7 & 50.1\\
+\bottomrule
+\end{tabular}
+\caption{Reference checks on the 1,135 ProofNetVerif test pairs that SemantEq and we both cover,
+under two label sets. False: accepts of pairs labelled not equivalent, rejects of pairs labelled
+equivalent; precision, recall (share of the equivalent pairs accepted) and decided (share of all
+pairs accepted or rejected) in \%. BEq+ and SemantEq-Eval are the verdicts SemantEq released; ours
+is Claude Opus~5.5 at the budget of Table~\ref{tab:full}, with certified rejects only. Two-sided:
+SemantEq's accepts and our rejects, the one pair with both left undecided; both accept: our rejects,
+and accepts only where both accept. Provers and models differ, so this compares outcomes, not
+methods at equal cost.}
+\label{tab:common}
+\end{table}
 
 \begin{table}[t]
 \centering\small
@@ -789,7 +858,8 @@ ours, strong prover & \textbf{0} & 69 (46\%) & 73 (49\%) & 17 & 2 (1.3\%)\\
 \paragraph{The 300-pair subset (Table~\ref{tab:g1}).} The stratified subset is where we compare
 with BEq+, judges and the reject analysis in detail. With the strong prover closed equivalence
 false-accepts 61 of 150 inequivalent pairs; BEq+ has none and pays with 47\% recall. We have
-no false accept under either prover and accept 73--74 equivalent pairs; another 11--17
+no false accept under either prover (at most 2.5\% of the 150 at 95\% confidence) and accept
+73--74 equivalent pairs; another 11--17
 inequivalent and 34--39 equivalent pairs are \V{residual}. Of the rejects on labelled-equivalent
 pairs, 2 under either prover are canonicalization artefacts. The others involve a false statement
 (strong: 11, weak: 0; in four of them the false side is the reference, Pugh 2.92 or Dummit--Foote
@@ -1215,7 +1285,9 @@ that may be wrong; the sheet shows no verdict, set or selector, and the annotato
 use no Lean, language model or other tool. The mapping of each item to the kernel facts behind it
 (Table~\ref{tab:h2map}) was fixed and committed before the answers returned. The annotators
 agree on 188 of the 226 statements ($\kappa=0.66$), and a verdict counts only where both agree
-(Table~\ref{tab:h2}). The earlier classification asked whether reference and candidate agree,
+(Table~\ref{tab:h2}). The items are chosen by our verdicts, so the audit estimates how often a
+verdict of a given kind is right, not how many unfaithful pairs the criterion leaves
+\V{residual} or \V{unknown}. The earlier classification asked whether reference and candidate agree,
 not whether the candidate is faithful, and where the reference is wrong the two questions have
 opposite answers; it agrees with the new answers at $\kappa=0.46$ and $0.25$, and at $0.54$ and
 $0.34$ without the pairs whose reference it marked wrong.
@@ -1436,7 +1508,8 @@ that Lean proves false or vacuous; and \texttt{putnam\_1991\_a6} had not been re
 22 of our 24 ProofNet\# errors are also in ProofNet-Verified and each miniF2F error is fixed in
 one of the two corrected releases, so the probes rediscover what careful audits find and add a
 machine-checked reason. Their precision alone (13 of 39, 8 of 93, 2 of 87) makes them a triage
-tool, not an auditor.
+tool, not an auditor. Each of the 34 errors, with its evidence and its status in the independent
+records, is a row of \texttt{data/real/bench\_errors.csv}.
 
 \begin{table}[t]
 \centering\footnotesize
@@ -1551,25 +1624,25 @@ exploits it: Poiroux et al.\ observe that an unrestricted \texttt{exact?} makes 
 theorems'' equivalent and restrict the tactic to the other statement~\cite{beq}, and the case for
 theory-level autoformalization states the collapse and proposes restricting equivalence checks to
 an admissible fragment of the background theory~\cite{tla}. The recently introduced
-SemantEq~\cite{semanteq} defines equivalence through chains of pre-specified, audited
-transformation steps (logical rearrangement, rewriting with the library's equations and
-biconditionals, a change of variables, structural weakening), checks the resulting proof terms,
-and separates the generation of equivalence proofs from their acceptance, so that a stronger
-prover raises recall without changing what an accept means; that a rewrite preserves meaning
-rests, as its authors note, on how well the library's equations reflect mathematical usage. On
-the ProofNetVerif test split, SemantEq-Eval reports 100\% precision under its adjudicated labels,
-with 65.6\% recall, and under two of four prompts a language model produces proofs in both
-directions for about two fifths of its non-equivalent pairs, which is why it audits proof terms
-rather than relying on compilation. It is the kind of intensional remedy that absorption calls
-for (\S\ref{sec:survive}), on the accept side, and a rejection there means that no admissible
-chain passed the audits, not that the statements differ. Our criterion is the extensional
-counterpart: it leaves the prover unrestricted, and its component rejects carry kernel-checked
-evidence of a formal difference. The two kinds of evidence differ in nature, and the two
-methods address complementary problems rather than one being stronger than the other. SemantEq's authors also re-adjudicated many of the
-relevant ProofNetVerif pairs by hand and relabel 46 of our 51 rejects as non-equivalent. This is
-external evidence for our rejects, but selection-dependent: most reviewed pairs were prompted by
-SemantEq's own failures to accept them, and the review covers only pairs originally labelled
-equivalent (\S\ref{sec:measure}). We
+SemantEq~\cite{semanteq} restricts which proofs count: it accepts a pair only through chains of
+pre-specified transformation steps (logical rearrangement, rewriting with the library's
+equations and biconditionals, a change of variables, structural weakening), checked on the proof
+term, and that a rewrite preserves meaning rests, as its authors note, on how well the library's
+equations reflect mathematical usage. Because the rule is fixed before proving, a stronger prover
+raises its recall without changing what an accept means. On the ProofNetVerif test split,
+SemantEq-Eval reports 100\% precision under its adjudicated labels, with 65.6\% recall; under two
+of four prompts a language model produces proofs in both directions for about two fifths of the
+non-equivalent pairs, which is why it audits proof terms rather than relying on compilation. A
+pair it does not accept is undecided: no admissible chain passed the audits, which does not show
+that the statements differ. Our criterion restricts which propositions are proved instead: it
+fixes the component goals and accepts any kernel proof of them, so a reject is a kernel proof
+that the aligned components differ, while an accept still collapses on constant conclusions and
+absorption, which a restriction on proofs such as SemantEq's is designed to exclude
+(\S\ref{sec:survive}). The two give evidence on opposite sides and compose
+(\S\ref{sec:measure}). SemantEq's authors also re-adjudicated many of the relevant
+ProofNetVerif pairs by hand and relabel 46 of our 51 rejects as non-equivalent; this is external
+but selection-dependent evidence, since most reviewed pairs were prompted by SemantEq's own
+failures to accept them and the review covers only pairs originally labelled equivalent. We
 add a measurement of how fast the error grows with today's provers, across models and across the
 budgets of one model (Tables~\ref{tab:full}, \ref{tab:sweep} and~\ref{tab:budget}), and of what
 restricting the prover costs in recall (Table~\ref{tab:g1}). Later work reads BEq+ non-equivalence as a
@@ -1668,7 +1741,11 @@ normalize to the same telescope. On the full set, 22 of the 43 rejects of labell
 pairs that rest on component goals locate the difference on an alignment that is not total and
 may include more such cases; the blind audit finds one, Putnam 2018 B4, where an existential
 hypothesis and a binder are split differently (\S\ref{sec:blind}). A uniqueness certificate for the canonical form would
-close this gap. Second, the cross-model tables compare different models ordered by measured
+close this gap; local rules do not. The two rules of Appendix~\ref{app:k19}, one of which keeps the
+alignment going past a binder without a counterpart by reading it as a \texttt{Nonempty}
+hypothesis, remove the artefacts they target and create three of the same kind. The alignment
+itself is positional, by type and role; other strategies, such as matching binders by the
+hypotheses that mention them, are untested. Second, the cross-model tables compare different models ordered by measured
 proving power, and the controlled sweep of Table~\ref{tab:budget} varies only the number of
 proposal and repair rounds of two models; neither is a law in budget or search effort. The cost
 comparison of Table~\ref{tab:cost} counts Lean checks rather than Lean time, and it compares the
@@ -1732,7 +1809,8 @@ provability are metatheorems; the non-metamathematical parts are formalized in L
 (\texttt{lean/ExperimentsMathlib/T1--T9}, standard axioms only). Statements are aligned, so they
 share a context $\Gamma$. None of the results is deep; they fix the vocabulary of the main text.
 Table~\ref{tab:theory} lists, for each result, its Lean counterpart and the measurement that
-corresponds to it.
+corresponds to it, and Table~\ref{tab:scope} its assumptions, its scope and what it does not
+show.
 
 \begin{table}[h]
 \centering\small
@@ -1757,6 +1835,33 @@ Prop.~\ref{prop:probe} probes & \texttt{T8.implied\_iff\_comp}, \texttt{flag\_if
 \end{tabular}
 \caption{Results, their Lean counterparts and the measurements they explain.}
 \label{tab:theory}
+\end{table}
+
+\begin{table}[h]
+\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{p{0.14\linewidth}p{0.24\linewidth}p{0.2\linewidth}p{0.08\linewidth}p{0.26\linewidth}}
+\toprule
+result & setting and assumptions & scope & certs. & establishes, and does not\\
+\midrule
+Prop.~\ref{prop:cert} & Lean with Mathlib, standard axioms (classical) & the exhibited telescopes, whatever code produced them & both & a relation between the telescopes, and for an accept $\Cl R\leftrightarrow\Cl S$; not faithfulness\\
+Prop.~\ref{thm:char} & any consistent $\T$ & relations over one aligned context & -- & which relation is greatest under which closure properties\\
+Prop.~\ref{prop:vac} & any consistent $\T$ & aligned telescopes & both, to speak of $R,S$ & vacuity-only, weaker, stronger; with \texttt{npimp}, that one side is false; not which side is unfaithful\\
+Prop.~\ref{thm:mono} & a prover is a set $O\subseteq\mathrm{Thm}(\T)$ & nested provers $O\subseteq O'$ only & -- & false-accept sets grow under nesting; across different models only a tendency\\
+Prop.~\ref{prop:residue} & any consistent $\T$ & alignments that end early, provable remainders & -- & a \V{residual} certifies only the aligned hypotheses\\
+Prop.~\ref{prop:informative} & $\T$ consistent & (iii): relations invariant under provably equivalent hypotheses & -- & constancy and absorption defeat such relations; not checks that restrict proofs\\
+Prop.~\ref{thm:repr} & any $\T$ & relations closed under currying, folding, provable equivalence & -- & they collapse to $\Ecl$; the alignment is what separates\\
+Prop.~\ref{prop:split} & any consistent $\T$ & equivalence relations containing $\Ecomp$, aligned context & -- & which rejects depend on the split (vacuity-only) and which survive regrouping\\
+Prop.~\ref{thm:nogo} & any $\T$ & contexts with a point outside a hypothesis & -- & \V{off-domain} cannot be folded into accept or reject\\
+Prop.~\ref{prop:dir}, Thm.~\ref{thm:sep} & $\T\supseteq\mathsf{PA}$ consistent, recursively axiomatized; (ii) metatheorem & closed against component refutation & -- & component refutations can be much shorter; not that they are found\\
+Prop.~\ref{thm:transfer}, Cor.~\ref{cor:fragments} & decidable or arithmetical fragments & components in the fragment & -- & where \V{unknown} is avoidable and where it is not\\
+Prop.~\ref{prop:canon} & the rules of \S\ref{sec:framework}; not formalized & re-presentations (a)--(c) only & -- & invariance under those changes, not under others (Appendix~\ref{app:more})\\
+Prop.~\ref{prop:probe} & any consistent $\T$ & one statement and its weakenings & -- & idle or implied hypotheses as formal facts; an error needs a reader\\
+\bottomrule
+\end{tabular}
+\caption{Scope of each result: what it assumes, what it quantifies over, whether it needs the two
+regrouping certificates to speak about the original statements, and what it does not show. No
+result shows faithfulness to an informal statement.}
+\label{tab:scope}
 \end{table}
 
 \subsection{Closure properties and what they force}\label{sec:axioms}
@@ -2053,7 +2158,28 @@ or one-point substitutions whose intermediate hypothesis mentioned the eliminate
 7 remain open, all of them the predicted failure of (b) outside the shared prefix
 (Proposition~\ref{prop:canon}): a hoistable conjunct is joined to a non-hoistable one, or an
 instance binder inserted by elaboration breaks the positional alignment. No applied
-re-presentation produced a contradictory verdict.
+re-presentation produced a contradictory verdict. Table~\ref{tab:repr} splits the outcomes by
+kind: a swap of binders leaves the canonical form unchanged in 178 of 218 cases, while conjoined
+hypotheses need conjunct reordering in 29 of 69 and account for 5 of the 7 open ones.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+re-presentation & applied & identical & reordered & logical & open\\
+\midrule
+adjacent independent binders swapped & 218 & 178 & 36 & 2 & 2\\
+adjacent free hypotheses conjoined & 69 & 32 & 29 & 3 & 5\\
+final negation written as $C\to\mathrm{False}$ & 11 & 7 & 0 & 4 & 0\\
+conjunctive hypothesis split & 1 & 1 & 0 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\caption{Surface re-presentations of 129 ProofNetVerif references and how the \texttt{acc} goal
+of each pair closes: canonical forms identical, equal up to conjunct order, or equal up to
+propositional logic (\texttt{tauto}); open: not closed by any of the three
+(\texttt{e5\_meta.py}).}
+\label{tab:repr}
+\end{table}
 
 \paragraph{Rule sensitivity.}\label{app:sens} A copy of the canonicalizer with each rule behind
 a flag (\texttt{CanonV2Var.lean}) reproduces the canonical goals of all 300 pairs of the subset
@@ -2301,6 +2427,23 @@ correct and 1 disputed.
 
 \section{Checking the checker}\label{app:repro}
 
+\input{units.tex}
+
+\paragraph{Units and the source of every number.} Table~\ref{tab:units} fixes what each count
+means, its denominator and the labels that decide right and wrong; a false accept or false
+reject is always relative to the label set named with it, and a pair that a method does not
+accept is not thereby shown to differ. \texttt{paper\_check.py} recomputes the main tables and the
+checked prose numbers from the stored results and fails on any difference; the numbers it does
+not yet check are listed, by section, in \texttt{paper\_coverage.json}.
+
+\paragraph{What was fixed in advance.} No analysis was pre-registered, and the canonicalization
+rules were developed on the benchmarks they are evaluated on, so no number here is a held-out
+estimate. The least exposed are ProofNet-Verified (Table~\ref{tab:g4}), whose labels are
+independent of ProofNetVerif's, and the blind audit, whose items and questions were fixed before
+annotation (\S\ref{sec:blind}). Defined after the data they are scored on had been seen, and
+therefore exploratory, are the accept rules that add filters or BEq+ (Table~\ref{tab:levels}), the
+combination with SemantEq (Table~\ref{tab:common}) and the two rules of Appendix~\ref{app:k19}.
+
 All Lean checks run against one pinned Mathlib commit, and all model calls are cached by
 their full request, so every table is regenerated from the cache by one script per table. Three
 checks guard the batch harness itself.
@@ -2312,10 +2455,18 @@ command fails. Compiled alone, none of the 122 distinct model outputs containing
 \emph{Layout.} Lean's tactic blocks are indentation-sensitive, so a model proof is dedented as a
 whole and re-indented under the goal; stripping only its first line silently changes the
 structure of nested blocks.
-\emph{Standalone recheck.} We took every accepted model proof behind the reported tables
-(6544 proofs) and compiled each alone, in a fresh file without the result cache,
-followed by \texttt{\#print axioms}. All 6544 passed with no error and no axiom beyond
-\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
+\emph{Standalone recheck.} The accepted model proofs behind the reported tables are 9,984
+distinct proofs (\texttt{accepted\_proofs.jsonl.gz}). We compile each alone, in a fresh file
+without the result cache, followed by \texttt{\#print axioms}; a proof passes if the file reaches
+its end marker with no error and no axiom beyond \texttt{propext}, \texttt{Classical.choice} and
+\texttt{Quot.sound}. All 6,544 of the first recheck passed. The 3,440 that later runs added (the
+budget experiment of Table~\ref{tab:budget} and the final reruns of Table~\ref{tab:full}) are
+checked in random order by the same script, and the 249 checked at the time of writing passed as
+well (\texttt{k5\_standalone\_audit.py}).
+\emph{Replay.} Replaying those later runs from the cache, to record their proofs, reproduced
+Table~\ref{tab:budget} for both models and all 1,140 verdicts of Qwen and GPT-4.1-mini in
+Table~\ref{tab:full} (\texttt{k20\_dump.py}). The versions of Lean, Mathlib and every
+third-party source are in \texttt{data/real/sources.json}.
 Every experiment was finally rerun from the cache: calls that had failed with a gateway error
 were retried, and a single verdict changed: one inequivalent pair left \V{unknown} by DeepSeek
 became a reject. Calls that fail deterministically, because the model exhausts its token budget

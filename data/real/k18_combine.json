@@ -161,5 +161,47 @@
   "-O": 71,
   "SO": 191,
   "S-": 44
+ },
+ "crosstab": {
+  "accept|accept": {
+   "n": 191,
+   "ineq_published": 0,
+   "ineq_adjudicated": 0
+  },
+  "accept|reject": {
+   "n": 1,
+   "ineq_published": 0,
+   "ineq_adjudicated": 0
+  },
+  "accept|residual": {
+   "n": 40,
+   "ineq_published": 0,
+   "ineq_adjudicated": 0
+  },
+  "accept|unknown": {
+   "n": 3,
+   "ineq_published": 0,
+   "ineq_adjudicated": 0
+  },
+  "other|accept": {
+   "n": 71,
+   "ineq_published": 14,
+   "ineq_adjudicated": 17
+  },
+  "other|reject": {
+   "n": 377,
+   "ineq_published": 327,
+   "ineq_adjudicated": 373
+  },
+  "other|residual": {
+   "n": 152,
+   "ineq_published": 99,
+   "ineq_adjudicated": 111
+  },
+  "other|unknown": {
+   "n": 300,
+   "ineq_published": 251,
+   "ineq_adjudicated": 286
+  }
  }
 }

@@ -297,6 +297,23 @@ def expected() -> dict[str, list[list[float | None]]]:
         rows.append(row)
     rows.append([dist["U"]["n"], dist["U"]["closed_proved"], dist["F"]["n"], dist["F"]["closed_proved"]])
     exp["tab:dist"] = rows
+    e5 = json.loads((D / "e5_results.json").read_text(encoding="utf-8"))["per_kind"]
+    outcomes = ("identical", "reordered", "logical", "open")
+    exp["tab:repr"] = []
+    for kinds in (("swap0", "swap1", "swap2"), ("conj0", "conj1"), ("negpeel",), ("unconj0",)):
+        c = Counter()
+        for k in kinds:
+            c.update({o: n for o, n in e5[k].items() if o != "not_applicable"})
+        exp["tab:repr"].append([sum(c.values()), *(c[o] for o in outcomes)])
+    import k18_combine
+    sc = k18_combine.compute()["scores"]
+    pct = lambda x: round(100 * x, 1)
+    exp["tab:common"] = [[s["accept"], s["false_accept"], pct(s["accept_precision"]), pct(s["accept_recall"]),
+                          *([s["reject"], s["false_reject"], pct(s["reject_precision"])] if s["reject"] else []),
+                          pct(s["decided"])]
+                         for lab in ("published", "adjudicated")
+                         for s in (sc[f"{n}|{lab}"] for n in ("beqplus", "semanteq", "ours",
+                                                               "semanteq_accept_ours_reject", "both_accept"))]
     return exp
 
 
@@ -419,6 +436,7 @@ def prose_claims(exp: dict) -> list[tuple[str, str]]:
     sc = kc["scores"]
     two, two_adj = sc["semanteq_accept_ours_reject|published"], sc["semanteq_accept_ours_reject|adjudicated"]
     s_only, o_only = sc["semanteq|published"], sc["ours|published"]
+    both, ct = sc["both_accept|published"], kc["crosstab"]
     bo = se["by_outcome"]
     se_rej = {k: bo[f"reject:{k}"] for k in ("component", "closed")}
     se_rel = {k: v.get("non_equivalent", 0) for k, v in bo.items()}
@@ -458,9 +476,6 @@ def prose_claims(exp: dict) -> list[tuple[str, str]]:
             rf"{cost['residual']} of them returned as \\V\{{residual\}}"), "contributions, cost"),
         (ws(rf"location: {len(loc_u)} of the {opus[6]} rejects of unfaithful pairs name the aligned component"),
          "contributions, location"),
-        (ws(rf"{len(loc_u)} of the {opus[6]} rejects of unfaithful pairs mechanically locate the difference in "
-            rf"the aligned hypotheses or conclusions, {gain_loc} of them on pairs that closed equivalence accepts\."),
-         "abstract, location"),
         (ws(rf"no reader has checked the {len(loc_u)} locations"), "locations unchecked"),
         (ws(rf"and {part_f} of them locate the difference on an alignment that is not total"), "F rejects, early"),
         (ws(rf"\({part_f} of the {opus[7]} rejects of labelled-equivalent pairs locate a difference on one\)"),
@@ -473,18 +488,30 @@ def prose_claims(exp: dict) -> list[tuple[str, str]]:
         (ws(rf"our criterion decides {o_only['accept'] + o_only['reject']} \({o_only['accept']} accepts, "
             rf"{o_only['false_accept']} of them false, and {o_only['reject']} certified rejects\)"), "K18 ours alone"),
         (ws(rf"decides {two['accept'] + two['reject']} pairs \({round(100 * two['decided'])}\\%, against "
-            rf"{round(100 * s_only['decided'])}\\% for SemantEq alone\) without a false accept; of its {two['reject']} "
+            rf"{round(100 * s_only['decided'])}\\% for SemantEq alone\) with no false accept observed under either "
+            rf"label set \(at most {100 * wilson(0, two['accept'])[1]:.1f}\\% of its {two['accept']} accepts at 95\\% "
+            rf"confidence\); of its {two['reject']} "
             rf"rejects, {two['false_reject']} are of pairs labelled equivalent by ProofNetVerif and "
             rf"{two_adj['false_reject']} under SemantEq's adjudicated labels \({100 * two_adj['reject_precision']:.1f}\\% "
-            rf"precision\)") if two["false_accept"] == 0 else r"(?!)", "K18 two-sided"),
+            rf"precision\)") if two["false_accept"] == two_adj["false_accept"] == 0 else r"(?!)", "K18 two-sided"),
+        (ws(rf"of its {s_only['accept']} accepts we accept {ct['accept|accept']['n']}, leave "
+            rf"{ct['accept|residual']['n']} \\V\{{residual\}} and {ct['accept|unknown']['n']} \\V\{{unknown\}} and reject "
+            rf"{ct['accept|reject']['n']},")
+         if sum(c["n"] for k, c in ct.items() if k.startswith("accept|")) == s_only["accept"] else r"(?!)",
+         "K18 crosstab"),
+        (ws(rf"Accepting what either accepts would take on all {kc['our_false_accepts']}; accepting only what both "
+            rf"accept gives up {two['accept'] - both['accept']} accepts and no false one")
+         if ct["other|accept"]["ineq_published"] == kc["our_false_accepts"] and both["false_accept"] == 0
+         else r"(?!)", "K18 union and intersection"),
         (ws(r"The two disagree on one pair, the artefact 358") if [c["row_id"] for c in kc["conflicts"]] == ["pnv-test-358"]
          else r"(?!)", "K18 conflicts"),
         (ws(rf"SemantEq accepts none of our {kc['our_false_accepts']} false accepts, and our accepts add "
             rf"{kc['accept_overlap']['-O']} pairs that SemantEq does not accept, "
             rf"{kc['accept_overlap']['-O'] - kc['our_false_accepts']} of them labelled equivalent")
          if kc["our_false_accepts_semanteq_accepts"] == 0 else r"(?!)", "K18 accept overlap"),
-        (ws(rf"decides {round(100 * two['decided'])}\\% of the shared test pairs without a false accept"),
-         "contributions: K18"),
+        (ws(rf"decides {round(100 * two['decided'])}\\% of the shared test pairs with no false accept observed under "
+            rf"either label set, though with false rejects") if two["false_accept"] == two_adj["false_accept"] == 0
+         and two["false_reject"] > 0 and two_adj["false_reject"] > 0 else r"(?!)", "contributions: K18"),
         (ws(rf"\(ours: {100 * opus[3] / (opus[3] + opus[2]):.1f}\\% and {100 * opus[3] / 446:.1f}\\% under the "
             rf"published labels"), "precision and recall vs SemantEq"),
         (ws(rf"They relabel {se_rel['reject:component'] + se_rel['reject:closed']} of our {opus[7]} rejects as "
@@ -537,6 +564,94 @@ def prose_claims(exp: dict) -> list[tuple[str, str]]:
          "K13 red team"),
         (rf"{sep[0]} inequivalent pairs rejected with closed equivalence undecided, {sep[1]} the other way",
          "separation, tab:theory"),
+    ]
+
+
+def main_claims(exp: dict) -> list[tuple[str, str]]:
+    """Numbers of the main-result paragraphs of sec:measure that are functions of the checked tables."""
+    from h2_audit import direction
+    ws = lambda t: t.replace(" ", r"\s+")
+    full, sw, bud, cost = exp["tab:full"], exp["tab:sweep"], exp["tab:budget"], exp["tab:cost"]
+    rp = exp["tab:repr"]
+    tac, qwen, mini, ds, opus = full
+    nU = sum(not p["label"] for p in load(D / "g5" / "g1_results_claude-opus-5.5.json"))
+    sub_fa = [sw[i][0] for i in (3, 4, 5, 6)]
+    pnv_fa = [sw[i][0] for i in (10, 11, 12, 13)]
+    ours = [r[2] for r in full]
+    res_u, res_f = [r[4] for r in full], [r[5] for r in full]
+    g5 = load(D / "g5" / "g1_results_claude-opus-5.5.json")
+    k3 = json.loads((D / "k3_direction.json").read_text(encoding="utf-8"))["g5"]["pairs"]
+    frej = [p for p in g5 if p["label"] and verdict(p) == "reject"]
+    dirs = Counter("closed_only" if p["verdict"] == "unknown" else direction(k3.get(p["row_id"]), p.get("closed"))
+                   for p in frej)
+    cand_false = dirs["cand_false"] + dirs["closed_only"]
+    false_side = cand_false + dirs["ref_false"] + dirs["one_false"]
+    return [
+        (ws(rf"{tac[0]} false accepts of {nU} with tactics alone and with GPT-4.1-mini, {qwen[0]} with Qwen")
+         if mini[0] == tac[0] else r"(?!)", "paradox: weak provers"),
+        (ws(rf"{round(opus[0] / tac[0])} times the false accepts at {opus[1] / tac[1]:.1f} times the recall"),
+         "paradox: ratio"),
+        (ws(rf"closed false accepts are {sub_fa[0]}, {sub_fa[1]}, {sub_fa[2]} and {sub_fa[3]} of 150, and {pnv_fa[0]}, "
+            rf"{pnv_fa[1]}, {pnv_fa[2]} and {pnv_fa[3]} of 75"), "paradox: sweep"),
+        (ws(rf"stay at {min(ours)}--{max(ours)} of {nU} \({100 * min(ours) / nU:.1f}--{100 * max(ours) / nU:.1f}\\%\)"),
+         "paradox: our FA across models"),
+        (ws(rf"{min(res_u)} to {max(res_u)} false against {min(res_f)} to {max(res_f)} faithful"), "paradox: residual"),
+        (ws(rf"into \${false_side}\+{dirs['vacuity']}\+{dirs['direction_only']}\$\. In {false_side} of them one of the "
+            rf"two statements is certified false: in \${cand_false}\+{dirs['ref_false']}\$ of these also which one, in the "
+            rf"other {dirs['one_false']} not\. For {cand_false}, closed equivalence is refuted"),
+         "paradox: directions of the equivalent rejects"),
+        (ws(rf"{dirs['closed_only']} of them are rejects only through this refutation"), "paradox: closed-only rejects"),
+        (ws(rf"For {dirs['ref_false']}, \\texttt\{{npimp\}} and \\texttt\{{rs\}} certify"), "paradox: reference false"),
+        (ws(rf"{dirs['vacuity']} rejects are vacuity-only"), "paradox: vacuity-only"),
+        (ws(rf"The remaining {dirs['direction_only']} have a proved direction but no"), "paradox: direction only"),
+        (ws(rf"The second repair round adds {bud[3][0] - bud[2][0]} closed false accepts against {bud[3][1] - bud[2][1]} "
+            rf"closed accepts of equivalent pairs"), "budget: second repair"),
+        (ws(rf"\({bud[2][0]} here, {opus[0]} in Table"), "budget: replay vs full"),
+        (ws(rf"closed false accepts {bud[4][0]}, {bud[5][0]}, {bud[6][0]} and {bud[7][0]}, ours {bud[4][2]}, {bud[5][2]}, "
+            rf"{bud[6][2]} and {bud[7][2]}"), "budget: DeepSeek"),
+        (ws(rf"the false accepts are {bud[0][2]} against {bud[0][0]}"), "cost: tactics"),
+        (ws(rf"the closed check at {cost[0][1]}M tokens accepts {cost[0][4]} equivalent pairs, ours at {cost[2][6]}M "
+            rf"accepts {cost[2][9]} and returns \\V\{{residual\}} on {bud[3][5]} more"), "cost: coverage"),
+        (ws(rf"no false accept under either prover \(at most {100 * wilson(0, 150)[1]:.1f}\\% of the 150 at 95\\% "
+            rf"confidence\)") if exp["tab:g1"][3][0] == exp["tab:g1"][4][0] == 0 else r"(?!)", "subset: zero FA bound"),
+        (ws(rf"leaves the canonical form unchanged in {rp[0][1]} of {rp[0][0]} cases, while conjoined hypotheses "
+            rf"need conjunct reordering in {rp[1][2]} of {rp[1][0]} and account for {rp[1][4]} of the "
+            rf"{sum(r[4] for r in rp)} open ones"), "tab:repr prose"),
+    ]
+
+
+def front_claims(exp: dict) -> list[tuple[str, str]]:
+    """Sizes of the data sets wherever they occur, and the numbers of the abstract and introduction."""
+    ws = lambda t: t.replace(" ", r"\s+")
+    g5 = load(D / "g5" / "g1_results_claude-opus-5.5.json")
+    nU, nF = sum(not p["label"] for p in g5), sum(p["label"] for p in g5)
+    sub = load(D / "g1_results.json")
+    pnv = load(D / "g4_results.json")
+    se = [json.loads(l) for l in (D / "ext" / "semanteq_pnv_test_verdicts.jsonl").read_text(encoding="utf-8").splitlines()]
+    full, bud = exp["tab:full"], exp["tab:budget"]
+    tac, opus = full[0], full[4]
+    ours_fa = [row[2] for row in bud[:4]]
+    lo, hi = wilson(opus[0], nU)
+    pub_eq = [r for r in se if r["published_equivalent"]]
+    adj_eq = [r for r in se if r["adjudicated_equivalent"]]
+    s_acc = [r for r in se if r["semanteq_accept"]]
+    s_prec = sum(r["adjudicated_equivalent"] for r in s_acc) / len(s_acc)
+    return [
+        (rf"(?<![\d.]){len(g5):,}(?![\d])", "size: full set"),
+        (rf"(?<![\d.]){nU}(?![\d])", "size: inequivalent pairs of the full set"),
+        (rf"(?<![\d.]){nF}(?![\d])", "size: equivalent pairs of the full set"),
+        (rf"(?<![\d.,]){len(sub)}-pair", "size: subset"),
+        (rf"(?<![\d.]){len(pnv)}(?=\s+ProofNet-Verified|\s+ProofNet\\#\s+statements)", "size: ProofNet-Verified"),
+        (ws(rf"false accepts stay at {min(ours_fa)}--{max(ours_fa)} of {nU}"), "abstract: our FA across budgets"),
+        (ws(rf"ours stay at {min(ours_fa)}--{max(ours_fa)}, at fewer model calls"), "contributions: our FA across budgets"),
+        (ws(rf"closed false accepts rise from {100 * tac[0] / nU:.1f}\\% with tactics to {round(100 * opus[0] / nU)}\\% "
+            rf"\(95\\% interval {100 * lo:.0f}--{100 * hi:.0f}\\%\)"), "contributions: closed FA"),
+        (ws(rf"from {bud[0][0]} to {bud[3][0]} \({round(100 * bud[3][0] / nU)}\\%\) within one model"),
+         "contributions: closed FA within one model"),
+        (ws(rf"reports {100 * s_prec:.0f}\\% precision on the ProofNetVerif test split with "
+            rf"{100 * sum(r['published_equivalent'] for r in s_acc) / len(pub_eq):.1f}\\% recall under the published "
+            rf"labels and {100 * sum(r['adjudicated_equivalent'] for r in s_acc) / len(adj_eq):.1f}\\% under"),
+         "contributions: SemantEq precision and recall"),
     ]
 
 
@@ -626,11 +741,6 @@ def audit_claims() -> list[tuple[str, str]]:
             rf"{agreed(op['ours'])} of our accept \({100 * op['ours'].get('no', 0) / agreed(op['ours']):.0f}\\%, "
             rf"{ci(op['ours'])}\)"),
          "audit: open picks"),
-        (ws(rf"Among the {fr['distinct']} distinct statements underlying the {fr['sampled']} component-goal rejects "
-            rf"of labelled-equivalent pairs, two blind annotators \(\$\\kappa={kappa}\$\) agree on {agreed(fr)}: "
-            rf"{fr.get('no', 0)} candidates are judged unfaithful, {fr.get('yes', 0) - artefacts} are faithful despite "
-            rf"disagreeing with an incorrect reference, and {artefacts} are canonicalization artefacts"),
-         "abstract: audit"),
         (ws(rf"the {fr['sampled']} component-goal rejects among them rest on {fr['distinct']} distinct statements; of "
             rf"the {agreed(fr)} distinct statements on which the annotators agree, {fr.get('no', 0)} are unfaithful "
             rf"candidates, {fr.get('yes', 0) - artefacts} faithful candidates whose reference says something else and "
@@ -643,12 +753,191 @@ def audit_claims() -> list[tuple[str, str]]:
     ]
 
 
+# Spans that hold names or code, not results: masked before numbers are inventoried.
+NOT_RESULTS = [r"(?<!\\)%.*", r"\\(?:ref|label|cite|eqref|url|input|IfFileExists)\{[^}]*\}", r"\\texttt\{(?:[^{}]|\{[^{}]*\})*\}",
+               r"\$[^$]*\$", r"\\\[.*?\\\]", r"\\begin\{(tabular|lstlisting|verbatim)\}.*?\\end\{\1\}",
+               r"(?:Dummit--Foote|Herstein|Artin|Rudin|Pugh|Munkres|Axler|Ireland--Rosen|Shakarchi|Putnam)"
+               r"(?:~|\s)+(?:\d{4}\s+[AB]\d|\d+(?:\.\d+)+[a-z]?)",
+               r"(?:pairs?|candidates?|items?|row)\s+\d+(?:(?:,\s*|\s+and\s+)\d+)*",
+               r"(?:Opus|GPT|Qwen|DeepSeek|Gemini|Astra|Lean|Mathlib|ProofNet|miniF2F|PutnamBench|T\$\^2\$)[-~\s]?"
+               r"(?:[A-Za-z]*[-.]?\d[\w.\-]*)?",
+               r"\b(?:T|E|K|G|D|H|F)\d+(?:--[A-Z]?\d+)?\b", r"\b(?:19|20)\d\d(?:-\d\d-\d\d)?\b", r"\\section\{[^}]*\}"]
+
+
+def coverage(tex: str, claims: list[tuple[str, str]], exp: dict) -> dict:
+    """Numbers in the body of main.tex that no checked table and no prose claim covers."""
+    end = tex.find("\\begin{thebibliography}")
+    body = tex[:end]
+    masked = body
+    for pat in NOT_RESULTS:
+        multiline = pat.startswith((r"\\\[", r"\\begin"))
+        masked = re.sub(pat, lambda m: re.sub(r"[^\n]", " ", m.group(0)), masked, flags=re.S if multiline else 0)
+    spans = [(m.start(), m.end()) for pat, _ in claims for m in re.finditer(pat, body)]
+    for label in exp:
+        if label.startswith("tab:") and (i := body.find(f"\\label{{{label}}}")) >= 0:
+            spans.append((body.rfind("\\begin{table", 0, i), i))
+    covered = lambda a, b: any(s <= a and b <= e for s, e in spans)
+    sections = [(m.start(), m.group(1)) for m in re.finditer(r"\\(?:section|paragraph)\{([^}]*)\}", body)]
+    out: dict[str, list] = {}
+    n = 0
+    for m in re.finditer(r"(?<![\w.\-])\d+(?:\{,\}\d{3}|,\d{3})*(?:\.\d+)?(?![\w])", masked):
+        n += 1
+        if covered(m.start(), m.end()):
+            continue
+        sec = next((name for pos, name in reversed(sections) if pos < m.start()), "front")
+        line = body.count("\n", 0, m.start()) + 1
+        ctx = re.sub(r"\s+", " ", body[max(0, m.start() - 50):m.end() + 30])
+        out.setdefault(sec, []).append({"line": line, "number": m.group(0), "context": ctx})
+    return {"numbers": n, "uncovered": sum(len(v) for v in out.values()), "by_section": out}
+
+
+# One definition per quantity: what is counted, its denominator, and which labels decide right and wrong.
+DEFINITIONS = {
+    "full set": "the 1,140 labelled ProofNetVerif test pairs whose statements elaborate in our Mathlib; 694 "
+                "labelled inequivalent (U), 446 labelled equivalent (F); published ProofNetVerif labels",
+    "subset": "300 pairs of the full set stratified 150 / 150 (published labels); experiments too costly for the full set",
+    "ProofNet-Verified": "317 ProofNet# problems with the corrected references of ProofNet-Verified; 75 originals "
+                         "unfaithful, 242 faithful by its own labels",
+    "shared SemantEq set": "the 1,135 full-set pairs that SemantEq-Eval also scores; published labels and SemantEq's "
+                           "adjudicated labels (102 originally equivalent pairs relabelled inequivalent)",
+    "false accept (FA)": "an accept of a pair labelled inequivalent under the label set named with it; published "
+                         "labels unless stated",
+    "false reject": "a reject of a pair labelled equivalent under the named labels; a certified formal difference, "
+                    "not a proof of unfaithfulness",
+    "decided": "accept, reject or off-domain with both regrouping certificates; residual is reported separately "
+               "and counted as decided only where stated",
+    "residual": "a proof of component equivalence on an alignment that ends early; never an accept",
+    "located reject": "a reject whose certificate is a component goal (nhyp or ncin) on telescopes with a nonempty "
+                      "prefix or a hoisted hypothesis; a mechanical location, counted per pair",
+    "component-goal reject": "a reject decided by a component goal rather than by a refuted closed equivalence; "
+                             "counted per pair (43 on labelled-equivalent pairs, resting on 30 distinct statements)",
+    "blind audit": "249 items shown as 226 distinct statements; a verdict counts only when both annotators agree; "
+                   "rates count distinct statements",
+    "selection": "317 problems, 7,608 draws, 2,879 distinct candidates; classes from kernel facts against the "
+                 "corrected reference",
+    "reference error": "a benchmark statement that the probes flag and that is unfaithful to its informal text "
+                       "after review; counted per statement",
+}
+
+
+UNITS = ROOT / "paper" / "units.tex"
+
+
+def definition_errors() -> list[str]:
+    """The sizes stated in DEFINITIONS, recomputed from the data."""
+    g5 = load(D / "g5" / "g1_results_claude-opus-5.5.json")
+    sub = load(D / "g1_results.json")
+    pnv = load(D / "g4_results.json")
+    se = [json.loads(l) for l in (D / "ext" / "semanteq_pnv_test_verdicts.jsonl").read_text(encoding="utf-8").splitlines()]
+    shared = {f"pnv-test-{int(re.match(r'pnv:test:(\d+):', r['id']).group(1))}" for r in se} & {p["row_id"] for p in g5}
+    relab = sum(r["published_equivalent"] and not r["adjudicated_equivalent"] for r in se)
+    items = json.loads((D / "h2_items.json").read_text(encoding="utf-8"))
+    fr = json.loads((D / "h2_scores.json").read_text(encoding="utf-8"))["full_faithful_reject"]
+    d1 = json.loads((D / "d1_candidates.json").read_text(encoding="utf-8"))
+    facts = {"1,140": len(g5), "694": sum(not p["label"] for p in g5), "446": sum(p["label"] for p in g5),
+             "300": len(sub), "150 / 150": (sum(p["label"] for p in sub), sum(not p["label"] for p in sub)),
+             "317": len(pnv), "75": sum(p["relation"] != "faithful" for p in pnv),
+             "242": sum(p["relation"] == "faithful" for p in pnv), "1,135": len(shared), "102": relab,
+             "249": len(items), "226": len({it["sheet_item"] for it in items}), "43": fr["sampled"],
+             "30": fr["distinct"], "7,608": len(d1["draws"]), "2,879": len(d1["candidates"])}
+    want = {"1,140": 1140, "694": 694, "446": 446, "300": 300, "150 / 150": (150, 150), "317": 317, "75": 75,
+            "242": 242, "1,135": 1135, "102": 102, "249": 249, "226": 226, "43": 43, "30": 30, "7,608": 7608,
+            "2,879": 2879}
+    text = " ".join(DEFINITIONS.values())
+    errs = [f"definitions: {k} is {facts[k]} in the data" for k in want if facts[k] != want[k]]
+    errs += [f"definitions: '{k}' does not occur" for k in want if k not in text]
+    return errs
+
+
+def render_units() -> str:
+    esc = lambda s: s.replace("#", "\\#").replace("%", "\\%")
+    rows = [f"{esc(k)} & {esc(v)}\\\\" for k, v in DEFINITIONS.items()]
+    return "\n".join(["% generated by scripts/real/paper_check.py from DEFINITIONS; do not edit",
+                      "\\begin{table}[h]", "\\centering\\footnotesize",
+                      "\\begin{tabular}{p{0.2\\linewidth}p{0.74\\linewidth}}", "\\toprule", "quantity & definition\\\\",
+                      "\\midrule", *rows, "\\bottomrule", "\\end{tabular}",
+                      "\\caption{Units, denominators and label versions. Every number in the main tables and in the "
+                      "checked prose is computed from the stored results under these definitions by "
+                      "\\texttt{paper\\_check.py}, which also writes a machine-readable list of the checked numbers "
+                      "(\\texttt{paper\\_manifest.json}) and of the numbers it does not yet check "
+                      "(\\texttt{paper\\_coverage.json}).}", "\\label{tab:units}", "\\end{table}", ""])
+
+
+def manifest(tex: str, exp: dict, claims: list[tuple[str, str]], cov: dict) -> dict:
+    """Machine-readable list of every checked number: table cells and prose claims with their lines."""
+    line = lambda pos: tex.count("\n", 0, pos) + 1
+    prose = []
+    for pat, what in claims:
+        hits = [{"line": line(m.start()), "text": re.sub(r"\s+", " ", m.group(0))[:200]} for m in re.finditer(pat, tex)]
+        prose.append({"claim": what, "occurrences": hits})
+    return {"definitions": DEFINITIONS,
+            "tables": {k: v for k, v in exp.items() if k.startswith("tab:")},
+            "prose": prose,
+            "coverage": {"numbers": cov["numbers"], "uncovered": cov["uncovered"],
+                         "uncovered_by_section": {s: len(v) for s, v in cov["by_section"].items()}}}
+
+
+def bench_claims() -> list[tuple[str, str]]:
+    """The benchmark reference errors of sec:audit, from data/real/bench_errors.csv (one row per error)."""
+    import csv
+    ws = lambda t: t.replace(" ", r"\s+")
+    rows = list(csv.DictReader((D / "bench_errors.csv").open(encoding="utf-8")))
+    hard = [r for r in rows if r["evidence"] in ("proved_false", "proved_vacuous")]
+    by = lambda bench, rs: sum(r["benchmark"] == bench for r in rs)
+    pn = [r for r in rows if r["benchmark"] == "ProofNet#"]
+    pn_neg = sum(r["evidence"] == "proved_false" for r in pn)
+    pn_vac = sum(r["evidence"] == "proved_vacuous" for r in pn)
+    in_pnv = sum("unfaithful" in r["independent_record"] for r in pn)
+    putnam_hard = [r["statement"] for r in hard if r["benchmark"] == "PutnamBench"]
+    return [
+        (ws(rf"evidence for {len(rows)} errors in ProofNet\\#, miniF2F and PutnamBench, {len(hard)} of them proved "
+            rf"false or vacuous"), "abstract: benchmark errors"),
+        (ws(rf"The {len(rows)} errors rest on evidence of two strengths\. For {len(hard)}, Lean"), "audit: evidence strengths"),
+        (ws(rf"{pn_neg} ProofNet\\# negations"), "audit: ProofNet# negations"),
+        (ws(rf"the {pn_vac} ProofNet\\# statements whose\s+hypotheses the \\texttt\{{vacuous\}} probe refutes, "
+            rf"{by('miniF2F', hard)} miniF2F statements and") if putnam_hard == ["putnam_1991_a6"] else r"(?!)",
+         "audit: vacuous and competition"),
+        (ws(rf"For the other {len(rows) - len(hard)} the kernel"), "audit: degeneracies"),
+        (ws(rf"{in_pnv} of our {len(pn)} ProofNet\\# errors are also in ProofNet-Verified"), "audit: in ProofNet-Verified"),
+        (ws(rf"The {len(pn)} ProofNet\\# reference errors"), "tab:refs caption"),
+        (ws(rf"Table~\\ref\{{tab:refs\}} lists the {len(pn)} errors"), "app:refs count"),
+    ]
+
+
+def recheck_claims() -> list[tuple[str, str]]:
+    """The standalone recheck and the replay of app:repro (k5_standalone_audit.py, k20_dump.py)."""
+    import gzip
+    ws = lambda t: t.replace(" ", r"\s+")
+    k5 = lambda f: json.loads((D / f).read_text(encoding="utf-8"))["summary"]
+    first, post = k5("k5_standalone_audit.json"), k5("k5_standalone_post.json")
+    n = lambda c: sum(c.values())
+    exported = sum(1 for _ in gzip.open(D / "accepted_proofs.jsonl.gz", "rt", encoding="utf-8"))
+    k20 = json.loads((D / "k20_dump.json").read_text(encoding="utf-8"))
+    replay_ok = (all(r["exit"] == 0 for r in k20.values())
+                 and k20["k11:claude-opus-5.5"]["tables_equal"] and k20["k11:deepseek-v4.1-flash"]["tables_equal"]
+                 and all(k20[k]["same_verdicts"] == k20[k]["pairs"] for k in ("g5:qwen3.8-27b-nothink", "g5:gpt-4.1-mini")))
+    first_ok = n(first["population"]) == n(first["checked"]) == n(first["passed"]) and not first["failures"]
+    post_ok = n(post["checked"]) == n(post["passed"]) and not post["failures"]
+    later = (rf"and the {n(post['checked'])} checked at the time of writing passed as well" if not post["complete"]
+             else r"and all of them passed")
+    return [
+        (ws(rf"tables are {exported:,} distinct proofs") if exported == n(first["population"]) + n(post["population"])
+         else r"(?!)", "recheck: exported proofs"),
+        (ws(rf"All {n(first['passed']):,} of the first recheck passed") if first_ok else r"(?!)", "recheck: first"),
+        (ws(rf"The {n(post['population']):,} that later runs added") + r"[\s\S]{0,260}?" + ws(later)
+         if post_ok else r"(?!)", "recheck: later runs"),
+        (ws(r"reproduced Table~\\ref\{tab:budget\} for both models and all 1,140 verdicts of Qwen and GPT-4.1-mini")
+         if replay_ok else r"(?!)", "replay"),
+    ]
+
+
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     tex = TEX.read_text(encoding="utf-8")
     exp = expected()
     errs = compare_tables(tex, exp)
-    claims = prose_claims(exp) + audit_claims()
+    claims = (prose_claims(exp) + audit_claims() + front_claims(exp) + main_claims(exp) + bench_claims()
+              + recheck_claims())
     for pat, what in claims:
         if not re.search(pat, tex):
             errs.append(f"prose: {what}: /{pat}/ not found")
@@ -658,8 +947,19 @@ def main() -> int:
     elif h2_tex.OUT.exists() and h2_tex.OUT.read_text(encoding="utf-8") != h2_tex.render(
             json.loads(h2_tex.SCORES.read_text(encoding="utf-8"))):
         errs.append("h2: paper/h2_results.tex is stale; run h2_tex.py")
+    errs += definition_errors()
+    if "--write-units" in sys.argv[1:]:
+        UNITS.write_text(render_units(), encoding="utf-8")
+    elif not UNITS.exists() or UNITS.read_text(encoding="utf-8") != render_units():
+        errs.append("units: paper/units.tex is missing or stale; run paper_check.py --write-units")
     out = {"tables": exp, "distribution_opus_full": distribution()}
     (D / "paper_numbers.json").write_text(json.dumps(out, indent=1) + "\n", encoding="utf-8")
+    cov = coverage(tex, claims, exp)
+    (D / "paper_coverage.json").write_text(json.dumps(cov, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    (D / "paper_manifest.json").write_text(json.dumps(manifest(tex, exp, claims, cov), indent=1, ensure_ascii=False)
+                                           + "\n", encoding="utf-8")
+    print(f"{cov['numbers']} result numbers in the body, {cov['uncovered']} not covered by a check "
+          f"(data/real/paper_coverage.json)")
     for e in errs:
         print("MISMATCH", e)
     tabs = {k: v for k, v in exp.items() if k.startswith("tab:")}

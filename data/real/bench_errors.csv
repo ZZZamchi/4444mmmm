@@ -1,0 +1,35 @@
+benchmark,statement,split,probe,defect,evidence,lean_evidence,independent_record
+ProofNet#,Munkres exercise_24_3a,test,H0 implied,Icc 0 1 taken in Nat; statement false,proved_false,BenchErrors.munkres_24_3a_false; g3_probe.py,ProofNet-Verified: marked faithful
+ProofNet#,Ireland_Rosen exercise_4_4,test,H1 idle,order of the primitive root written p; vacuous,degeneracy_and_reader,g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Rudin exercise_5_3,test,H0 idle,exists N without N>0; conclusion trivially true,degeneracy_and_reader,g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Herstein exercise_2_5_43,test,H0 idle,conclusion Nonempty (CommGroup G) holds for every group,degeneracy_and_reader,g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Herstein exercise_4_2_5,valid,H0 idle,conclusion Nonempty (CommRing R) holds for every ring,degeneracy_and_reader,g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Herstein exercise_2_5_37,valid,H0 implied,IsEmpty (CommGroup G) contradictory; vacuous,proved_vacuous,e6_global.py (vacuous probe); g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Herstein exercise_2_8_12,valid,H0-H3 implied,IsEmpty (CommGroup G) contradictory; vacuous,proved_vacuous,e6_global.py (vacuous probe); g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Ireland_Rosen exercise_2_21,valid,H1 implied,case n=0 makes the hypotheses inconsistent,proved_vacuous,e6_global.py (vacuous probe); g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Rudin exercise_2_24,valid,H0 implied,limit point written as in the closure; false,degeneracy_and_reader,g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Rudin exercise_3_5,test,H2 implied,limsup without a filter compares functions,degeneracy_and_reader,g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Rudin exercise_4_8b,valid,H0 idle,informal statement inverted; formal statement false,degeneracy_and_reader,g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Pugh exercise_3_63a,test,H0 idle,series written as sequence; p>1 redundant,degeneracy_and_reader,g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Munkres exercise_24_2,valid,H0 implied,circle written as the unit sphere of R (two points); statement false,proved_false,BenchErrors.munkres_24_2_false; g3_probe.py,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Munkres exercise_21_6b,test,closed refutation,Icc 0 1 taken in Nat; x^n eventually constant; statement false,proved_false,BenchErrors.munkres_21_6b_false; ProofNet-Verified closed refutation,ProofNet-Verified: marked faithful
+ProofNet#,Dummit_Foote exercise_2_1_13,test,pairwise reject (311 and 7 more),hypothesis for one x instead of all; Z <= Q refutes it,proved_false,BenchErrors.dummit_foote_2_1_13_false; npimp and rs of the pairs,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Pugh exercise_2_92,test,pairwise reject (1114 and 4 more),no Hausdorff assumption; nested compact sets may have empty intersection,proved_false,BenchErrors.pugh_2_92_false; npimp and rs of the pairs,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Herstein exercise_2_3_16,test,"pairwise reject (533, 847, 1324)",trivial group allowed; its order 1 is not prime,proved_false,BenchErrors.herstein_2_3_16_false; npimp and rs of the pairs,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Herstein exercise_2_7_7,test,pairwise reject (366),phi not assumed surjective,proved_false,BenchErrors.herstein_2_7_7_false; npimp and rs of the pair,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Munkres exercise_31_1,test,pairwise reject (1351),RegularSpace without T1; fails for two indistinguishable points,proved_false,BenchErrors.munkres_31_1_false; npimp and rs of the pair,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Rudin exercise_1_8,test,pairwise reject (438),every set carries a linear order; the field structure is missing,proved_false,BenchErrors.rudin_1_8_false; npimp and rs of the pair,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Rudin exercise_4_15,test,"pairwise reject (1328, 1145, 923)",Monotone for monotonic; x -> -x refutes it,proved_false,BenchErrors.rudin_4_15_false; npimp and rs of the pairs,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Rudin exercise_2_29,test,pairwise reject (1006),intervals bounded; R has no such decomposition,proved_false,BenchErrors.rudin_2_29_false; npimp and rs of the pair,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Ireland_Rosen exercise_4_6,test,"pairwise reject (1190, 557)",order of the primitive root written p instead of p-1,proved_false,BenchErrors.ireland_rosen_4_6_false; npimp and rs of the pairs,ProofNet-Verified: unfaithful or informal wrong
+ProofNet#,Putnam exercise_2014_a5,test,pairwise reject (1259),summand X^n for X^i; P_1=2X and P_2=6X^2,proved_false,BenchErrors.putnam_2014_a5_false; npimp and rs of the pair,ProofNet-Verified: unfaithful or informal wrong
+miniF2F,aime_1996_p5,,"H1, H2, H3 implied",cubic has one real root; hypotheses unsatisfiable,proved_vacuous,BenchErrors.aime_1996_p5_vacuous; g3_probe.py,miniF2F-v2: kept; DeepMind fork: fixed
+miniF2F,amc12a_2003_p25,,H0 implied,Real.sqrt total so the domain is R; h2 never holds,proved_vacuous,BenchErrors.amc12a_2003_p25_vacuous; g3_probe.py,miniF2F-v2: still wrong; DeepMind fork: fixed
+miniF2F,amc12a_2020_p13,,H2 implied,1/c in Nat is 0; h2 reads 1=1; statement false,proved_false,BenchErrors.amc12a_2020_p13_false; g3_probe.py,miniF2F-v2: kept; DeepMind fork: fixed
+miniF2F,mathd_algebra_76,,H0 idle,proves f(4)=-1 instead of f^5(4)=1; odd branch unused,degeneracy_and_reader,g3_probe.py,miniF2F-v2: fixed; DeepMind fork: kept
+miniF2F,amc12a_2002_p6,,H0 idle,exists p with m*p <= m+p holds with p=0; trivially true,degeneracy_and_reader,g3_probe.py,miniF2F-v2: fixed; DeepMind fork: kept
+miniF2F,mathd_algebra_144,,H0 idle,count of triangles replaced by the bound d<10; d>0 unused,degeneracy_and_reader,g3_probe.py,miniF2F-v2: fixed; DeepMind fork: kept
+miniF2F,amc12_2000_p6,,H1 idle,proves pq-(p+q) != 194; unrelated to the answer 119,degeneracy_and_reader,g3_probe.py,miniF2F-v2: fixed; DeepMind fork: kept
+miniF2F,imo_1984_p2,,H1-H3 idle,find a pair replaced by the bound 19 <= a+b,degeneracy_and_reader,g3_probe.py,miniF2F-v2: v2c only; DeepMind fork: kept
+PutnamBench,putnam_1991_a6,,"H0, H2, H3 implied",-> binds weaker than /\; counted set infinite; vacuous,proved_vacuous,BenchErrors.putnam_1991_a6_vacuous; g3_probe.py,PutnamBench: reported to the maintainers
+PutnamBench,putnam_1966_b2,,H0 idle,adds n>0 to any ten consecutive integers; weaker than stated,degeneracy_and_reader,g3_probe.py,PutnamBench: unchanged
