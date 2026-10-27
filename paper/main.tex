@@ -38,7 +38,7 @@ Measuring the Collapse of Closed Equivalence and Certifying Component Difference
 \begin{abstract}
 Reference-based faithfulness checks for autoformalization ask whether a candidate statement is
 provably equivalent to a trusted reference. Any two true statements are provably equivalent, so
-such a check loses its power to discriminate as its prover gets better. We measure the loss: on
+such a check loses discriminating power as its prover gets better. We measure the loss: on
 all 1,140 labelled ProofNetVerif pairs, closed equivalence accepts 2\% of the unfaithful pairs with
 fixed tactics and 39\% with Claude Opus~5.5, and raising the budget of one model takes
 them from 2\% to 44\%. We then ask what can be certified without restricting the prover. We
@@ -49,14 +49,14 @@ canonicalization rules decide which components a verdict is about, and faithfuln
 evidence beyond the kernel. With the same prover our false accepts stay at 4--15 of 694, at a
 cost in coverage: 56\% of the faithful pairs are accepted, against 86\% by closed equivalence. In
 exchange, 244 of the 328 rejects of unfaithful pairs mechanically locate the difference in the
-aligned hypotheses or conclusions, 88 of them on pairs that closed equivalence accepts. Of the 26 rejects of labelled-equivalent pairs on
-which two blind annotators agree ($\kappa=0.66$), three are canonicalization artefacts; the
-others reject unfaithful candidates or faithful ones whose reference says something else. An
+aligned hypotheses or conclusions, 88 of them on pairs that closed equivalence accepts. Among the 30 distinct statements underlying
+the 43 component-goal rejects of labelled-equivalent pairs, two blind annotators ($\kappa=0.66$)
+agree on 26: 16 candidates are judged unfaithful, 7 are faithful despite disagreeing with an
+incorrect reference, and 3 are canonicalization artefacts. An
 accept is necessary but not sufficient: constant conclusions and
 absorption of the conclusion into the hypotheses defeat every check invariant under equivalent
 hypotheses. Applied to benchmark references, the same goals give kernel-checked evidence for 34
-errors in ProofNet\#, miniF2F and PutnamBench; for 20 of them Lean proves the statement false or
-vacuous.
+errors in ProofNet\#, miniF2F and PutnamBench, 20 of them proved false or vacuous.
 \end{abstract}
 
 %======================================================================
@@ -155,9 +155,12 @@ pairs name the aligned component that differs, which a closed verdict never does
 where the candidate is unfaithful is for a reader to confirm. An external adjudication of the
 pairs labelled equivalent~\cite{semanteq}, selection-dependent because most of its reviews were
 prompted by another method's failures, relabels 46 of our 51 rejects there as non-equivalent. In
-a blind two-annotator audit (\S\ref{sec:blind}), the 26 of these rejects on which the annotators
-agree are 16 unfaithful candidates, 7 faithful candidates whose reference says something else and
-3 canonicalization artefacts, and a reader confirms 9 of our 14 false accepts. Certified rejects veto LLM-judge accepts without trusting either side, and
+a blind two-annotator audit (\S\ref{sec:blind}), the 43 component-goal rejects among them rest on
+30 distinct statements; of the 26 distinct statements on which the annotators agree, 16 are
+unfaithful candidates, 7 faithful candidates whose reference says something else and 3
+canonicalization artefacts, and a reader confirms 9 of our 14 false accepts (6 of 11 distinct
+statements). Taking SemantEq's accepts and our certified rejects gives a two-sided evaluator that
+decides 54\% of the shared test pairs without a false accept. Certified rejects veto LLM-judge accepts without trusting either side, and
 the same goals, applied to benchmark references, give kernel-checked evidence for 34 errors that
 manual curation left in ProofNet\#, miniF2F and PutnamBench (\S\ref{sec:audit}).
 \end{enumerate}
@@ -657,6 +660,16 @@ reject 46, accept 3 and leave 12 \V{residual} and 35 \V{unknown}. The adjudicati
 independent of our verdicts but not of theirs, since most of its reviews were prompted by pairs
 that their own method did not accept, and it covers only pairs labelled equivalent, so it says
 nothing about our false accepts (\texttt{k17\_semanteq.py}).
+
+\paragraph{Combining with SemantEq.} The two criteria give evidence on opposite sides, so they
+compose. On the 1,135 test pairs that both cover, SemantEq-Eval accepts 235 and never a pair
+labelled inequivalent, and it decides nothing else; our criterion decides 640 (262 accepts, 14 of
+them false, and 378 certified rejects). Taking SemantEq's accepts and our certified rejects
+decides 611 pairs (54\%, against 21\% for SemantEq alone) without a false accept; of its 377
+rejects, 50 are of pairs labelled equivalent by ProofNetVerif and 4 under SemantEq's adjudicated
+labels (98.9\% precision). The two disagree on one pair, the artefact 358. SemantEq accepts none of
+our 14 false accepts, and our accepts add 71 pairs that SemantEq does not accept, 57 of them
+labelled equivalent (\texttt{k18\_combine.py}).
 
 \begin{table}[t]
 \centering\small
@@ -1233,7 +1246,9 @@ number and the sum ranges over $\mathbb R$, the reading the sheet warns about. B
 of the 7 candidates certified false are judged unfaithful, and the seventh is this one. A location
 is not always the reader's: in the three Dummit--Foote 1.6.23 candidates, \texttt{[Fintype G]} is
 an instance binder without a counterpart, so the alignment ends there and the difference, a
-finiteness hypothesis that the reference lacks, is reported in the conclusion. Where an annotator
+finiteness hypothesis that the reference lacks, is reported in the conclusion. Two rules written
+after the audit remove these artefacts and two of the mislocations, but create three new artefacts
+of the same kind (Appendix~\ref{app:k19}). Where an annotator
 calls a rejected candidate unfaithful and names a missing, extra or vacuous hypothesis or a
 different conclusion, the located component matches it in 29 of 32 cases for the first annotator
 and 35 of 43 for the second.
@@ -1499,8 +1514,8 @@ without restricting the prover. Each of these exists separately in earlier work.
 method & \makecell{evidence for\\``equivalent''} & \makecell{evidence for\\``different''} & \makecell{locates the\\difference} & \makecell{reduces false\\accepts among true,\\non-equivalent pairs} & \makecell{undecided\\reported}\\
 \midrule
 closed equivalence, unrestricted & kernel & kernel & no & no & yes\\
-BEq+~\cite{beq} & kernel & no & no & by restriction & no\\
-SemantEq~\cite{semanteq} & \makecell{kernel,\\audited} & no & no & by restriction & no\\
+BEq+~\cite{beq} & kernel & no & no & \makecell{by restricted\\search} & no\\
+SemantEq~\cite{semanteq} & \makecell{kernel,\\audited} & no & no & \makecell{by allowed-step\\relation} & no\\
 symbolic equivalence~\cite{symeq} & prover & no & components & yes & no\\
 SA-Pass~\cite{shadowbench} & kernel & no & by shadow & by restriction & no\\
 fingerprints~\cite{bpf}, T$^2$~\cite{t2} & kernel & no & no & \makecell{no (complete\\oracle)} & no\\
@@ -1513,8 +1528,12 @@ ours & kernel & kernel & \makecell{component,\\or closed only} & \makecell{on al
 ``Reduces false accepts among true, non-equivalent pairs'': avoids accepting as equivalent two
 statements that are both true but make different mathematical claims. It does not mean that a
 pair the method does not accept is proved different; that is the column ``evidence for
-different''. ``By restriction'': only because the prover or the allowed proofs are restricted,
-so a pair that is not accepted may still be equivalent. ``Undecided
+different''. ``By restriction'', ``by restricted search'', ``by allowed-step relation'': only
+because the prover, the allowed proofs or the admitted relation are restricted (BEq+ requires each
+proof to use the other statement; SemantEq admits only chains of pre-specified steps), so a pair
+that is not accepted may still be equivalent. ``Kernel, audited'': the kernel checks the proof
+term, and an audit decides whether the proof stays within the allowed relation. No evidence for
+``equivalent'' in this table shows faithfulness to the informal statement. ``Undecided
 reported'': not accepting is split into a separate undecided verdict whose causes are reported;
 a ``no'' does not mean that a paper reports no recall or no count of pairs it does not accept.
 ``--'': not an aim of the method.
@@ -2052,6 +2071,24 @@ pointwise claims agree and the new reject is vacuity-only. No reject certified b
 \texttt{npimp} changes under any variant. A more liberal one-point rule changes 7 telescopes and
 no decided verdict. The rules matter, but only where Proposition~\ref{prop:split} says they
 can.
+
+\paragraph{Two rules from the audit.}\label{app:k19} After the blind audit we added two rules to
+a copy of the canonicalizer: a hypothesis $\exists x,\ P\,x$ that nothing mentions is read as a
+binder $x$ and a hypothesis $P\,x$, and a data or instance binder of type $T$ that nothing
+mentions, and that is not known to be nonempty, is read as a hypothesis \texttt{Nonempty}~$T$.
+They change the goals of 116 of the 1,140 pairs, which we reproved with the budget of
+Table~\ref{tab:full}. Both artefacts they target become accepts (Putnam 2018 B4 and pair 1135),
+and two of the three Dummit--Foote 1.6.23 candidates are now located in the hypotheses, where
+the audit puts the difference; the third becomes \V{unknown}. Two false accepts become
+non-accepts, Herstein 2.2.3 and 2.1.26, both judged unfaithful by the audit, and no pair becomes
+a false accept. The three rejects of audited labelled-equivalent pairs that disappear are all
+judged faithful. But the rules create artefacts of the same kind: three Artin 10.1.13 candidates
+that write $\exists n,\ x^n=0$ where the reference writes \texttt{IsNilpotent x}, the same
+existential behind a definition, lose their accept, since only the explicit existential is
+unfolded; both statements are true, so these rejects are vacuity-only, as
+Proposition~\ref{prop:split} predicts. Local rules trade one presentation choice for another, so
+we keep the rules of \S\ref{sec:framework} and report this variant only as a measurement
+(\texttt{k19\_rules.py}).
 
 \paragraph{Where \V{unknown} comes from.}\label{app:unk} The strong run leaves 83 of the 300
 pairs \V{unknown} (Table~\ref{tab:g1}). In 26 of them a regrouping certificate is missing, so no

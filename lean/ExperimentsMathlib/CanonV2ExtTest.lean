@@ -32,3 +32,15 @@ canon2x_prove "classdec" dec_split
 
 canon2x_prove "dropunused" unused_split ((∀ (m : ℕ) (x : ℝ), x ^ 2 ≥ 0)) ((∀ x : ℝ, x ^ 2 ≥ 0)) split_r := by
   simp only [forall_const]
+
+#canon2x_goals "exhyp" "exhyp"
+  (∀ (x : ℕ → ℝ), (∃ n, x n = 0) → ∃ c, c ≠ 0 ∧ x c = x 0)
+  (∀ (x : ℕ → ℝ) (n : ℕ), x n = 0 → ∃ c, c ≠ 0 ∧ x c = x 0)
+
+#canon2x_goals "nonempty" "nonempty"
+  (∀ (G : Type) [Group G] (s : G ≃* G), (∀ g, s g = g ↔ g = 1) → ∀ a b : G, a * b = b * a)
+  (∀ (G : Type) [Group G] [Fintype G] (s : G ≃* G), (∀ g, s g = g ↔ g = 1) → ∀ a b : G, a * b = b * a)
+
+#canon2x_goals "finite" "nonempty"
+  (∀ (G : Type) [Group G] [Finite G] (a : G), ∃ n : ℕ, 0 < n ∧ a ^ n = 1)
+  (∀ (G : Type) [Group G] [Fintype G] (a : G), ∃ n : ℕ, 0 < n ∧ a ^ n = 1)

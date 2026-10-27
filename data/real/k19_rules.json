@@ -1,0 +1,100 @@
+{
+ "changed": 116,
+ "flips": {
+  "F:accept->accept": 4,
+  "F:accept->reject": 3,
+  "F:reject->accept": 2,
+  "F:reject->reject": 11,
+  "F:reject->unknown": 1,
+  "F:residual->residual": 2,
+  "F:unknown->accept": 1,
+  "F:unknown->reject": 3,
+  "F:unknown->residual": 3,
+  "F:unknown->unknown": 1,
+  "U:accept->reject": 1,
+  "U:accept->unknown": 1,
+  "U:reject->reject": 25,
+  "U:reject->residual": 3,
+  "U:reject->unknown": 11,
+  "U:residual->reject": 1,
+  "U:residual->residual": 5,
+  "U:unknown->reject": 18,
+  "U:unknown->residual": 4,
+  "U:unknown->unknown": 16
+ },
+ "targets": {
+  "pnv-test-310": {
+   "exercise": "Putnam 2018 B4",
+   "old": "reject",
+   "new": "accept",
+   "old_loc": "H",
+   "new_loc": null
+  },
+  "pnv-test-1135": {
+   "exercise": "Herstein 2.1.26",
+   "old": "reject",
+   "new": "accept",
+   "old_loc": "HC",
+   "new_loc": null
+  },
+  "pnv-test-358": {
+   "exercise": "Rudin 1.18b",
+   "old": "unchanged",
+   "new": "unchanged",
+   "old_loc": "HC",
+   "new_loc": null
+  },
+  "pnv-test-365": {
+   "exercise": "Dummit-Foote 1.6.23",
+   "old": "reject",
+   "new": "unknown",
+   "old_loc": "C",
+   "new_loc": null
+  },
+  "pnv-test-167": {
+   "exercise": "Dummit-Foote 1.6.23",
+   "old": "reject",
+   "new": "reject",
+   "old_loc": "C",
+   "new_loc": "H"
+  },
+  "pnv-test-595": {
+   "exercise": "Dummit-Foote 1.6.23",
+   "old": "reject",
+   "new": "reject",
+   "old_loc": "C",
+   "new_loc": "H"
+  }
+ },
+ "equivalent_rejects": {
+  "before": 43,
+  "changed": 14,
+  "no_longer_reject": {
+   "accept|yes": 2,
+   "unknown|yes": 1
+  },
+  "still_reject": 11
+ },
+ "new_false_accepts": [],
+ "lost_faithful_accepts": [
+  "pnv-test-1215",
+  "pnv-test-849",
+  "pnv-test-983"
+ ],
+ "new_faithful_accepts": [
+  "pnv-test-1135",
+  "pnv-test-310",
+  "pnv-test-459"
+ ],
+ "inequivalent_reject_locations": {
+  "H->C": 3,
+  "closed->H": 1,
+  "H->H": 9,
+  "closed->closed": 2,
+  "C->H": 2,
+  "HC->HC": 3,
+  "C->C": 2,
+  "H->closed": 1,
+  "HC->H": 2
+ }
+}

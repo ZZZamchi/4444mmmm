@@ -413,7 +413,12 @@ def prose_claims(exp: dict) -> list[tuple[str, str]]:
     ws = lambda s: s.replace(" ", r"\s+")
     wo, wd = where("claude-opus-5.5"), where("deepseek-v4.1-flash")
     import k17_semanteq
+    import k18_combine
     se = k17_semanteq.compute()
+    kc = k18_combine.compute()
+    sc = kc["scores"]
+    two, two_adj = sc["semanteq_accept_ours_reject|published"], sc["semanteq_accept_ours_reject|adjudicated"]
+    s_only, o_only = sc["semanteq|published"], sc["ours|published"]
     bo = se["by_outcome"]
     se_rej = {k: bo[f"reject:{k}"] for k in ("component", "closed")}
     se_rel = {k: v.get("non_equivalent", 0) for k, v in bo.items()}
@@ -463,6 +468,23 @@ def prose_claims(exp: dict) -> list[tuple[str, str]]:
         (ws(rf"{part_f} of the {comp_f} rejects of labelled-equivalent pairs that rest on component goals locate"),
          "limitations, F rejects"),
         (ws(rf"{se['shared']} of our {se['ours_equivalent']} equivalent pairs are among them"), "SemantEq coverage"),
+        (ws(rf"On the {kc['shared']:,} test pairs that both cover, SemantEq-Eval accepts {s_only['accept']} and "
+            rf"never a pair labelled inequivalent") if s_only["false_accept"] == 0 else r"(?!)", "K18 SemantEq alone"),
+        (ws(rf"our criterion decides {o_only['accept'] + o_only['reject']} \({o_only['accept']} accepts, "
+            rf"{o_only['false_accept']} of them false, and {o_only['reject']} certified rejects\)"), "K18 ours alone"),
+        (ws(rf"decides {two['accept'] + two['reject']} pairs \({round(100 * two['decided'])}\\%, against "
+            rf"{round(100 * s_only['decided'])}\\% for SemantEq alone\) without a false accept; of its {two['reject']} "
+            rf"rejects, {two['false_reject']} are of pairs labelled equivalent by ProofNetVerif and "
+            rf"{two_adj['false_reject']} under SemantEq's adjudicated labels \({100 * two_adj['reject_precision']:.1f}\\% "
+            rf"precision\)") if two["false_accept"] == 0 else r"(?!)", "K18 two-sided"),
+        (ws(r"The two disagree on one pair, the artefact 358") if [c["row_id"] for c in kc["conflicts"]] == ["pnv-test-358"]
+         else r"(?!)", "K18 conflicts"),
+        (ws(rf"SemantEq accepts none of our {kc['our_false_accepts']} false accepts, and our accepts add "
+            rf"{kc['accept_overlap']['-O']} pairs that SemantEq does not accept, "
+            rf"{kc['accept_overlap']['-O'] - kc['our_false_accepts']} of them labelled equivalent")
+         if kc["our_false_accepts_semanteq_accepts"] == 0 else r"(?!)", "K18 accept overlap"),
+        (ws(rf"decides {round(100 * two['decided'])}\\% of the shared test pairs without a false accept"),
+         "contributions: K18"),
         (ws(rf"\(ours: {100 * opus[3] / (opus[3] + opus[2]):.1f}\\% and {100 * opus[3] / 446:.1f}\\% under the "
             rf"published labels"), "precision and recall vs SemantEq"),
         (ws(rf"They relabel {se_rel['reject:component'] + se_rel['reject:closed']} of our {opus[7]} rejects as "
@@ -553,7 +575,19 @@ def audit_claims() -> list[tuple[str, str]]:
     names = sum(ann[0][r]["faithful"] == "no" and bool(unqualified.search(notes[0][r])) and ann[1][r]["faithful"] == "yes"
                 for r in ann[0])
     share = [100 * x["agree"] / x["n"] for x in lk]
+    import k19_rules
+    k19 = k19_rules.compute()
+    tg = k19["targets"]
+    k19_ok = (tg["pnv-test-310"]["new"] == tg["pnv-test-1135"]["new"] == "accept"
+              and [tg[k]["new_loc"] for k in ("pnv-test-167", "pnv-test-595")] == ["H", "H"]
+              and tg["pnv-test-365"]["new"] == "unknown" and not k19["new_false_accepts"]
+              and k19["flips"].get("U:accept->reject", 0) + k19["flips"].get("U:accept->unknown", 0) == 2
+              and set(k19["equivalent_rejects"]["no_longer_reject"]) <= {"accept|yes", "unknown|yes"}
+              and sum(k19["equivalent_rejects"]["no_longer_reject"].values()) == 3
+              and len(k19["lost_faithful_accepts"]) == 3)
     return [
+        (ws(rf"They change the goals of {k19['changed']} of the 1,140 pairs") if k19_ok else r"(?!)",
+         "K19 rules from the audit"),
         (ws(rf"agree on {kb['agree']} of the {kb['n']} statements \(\$\\kappa={kappa}\$\)"), "audit: kappa"),
         (ws(rf"at \$\\kappa={k1[0]}\$ and \${k1[1]}\$, and at \${k2[0]}\$ and \${k2[1]}\$ without"),
          "audit: kappa against the first classification"),
@@ -592,11 +626,16 @@ def audit_claims() -> list[tuple[str, str]]:
             rf"{agreed(op['ours'])} of our accept \({100 * op['ours'].get('no', 0) / agreed(op['ours']):.0f}\\%, "
             rf"{ci(op['ours'])}\)"),
          "audit: open picks"),
-        (ws(rf"agree \(\$\\kappa={kappa}\$\), {word(artefacts)} are canonicalization artefacts"), "abstract: audit"),
-        (ws(rf"the {agreed(fr)} of these rejects on which the annotators agree are {fr.get('no', 0)} unfaithful "
+        (ws(rf"Among the {fr['distinct']} distinct statements underlying the {fr['sampled']} component-goal rejects "
+            rf"of labelled-equivalent pairs, two blind annotators \(\$\\kappa={kappa}\$\) agree on {agreed(fr)}: "
+            rf"{fr.get('no', 0)} candidates are judged unfaithful, {fr.get('yes', 0) - artefacts} are faithful despite "
+            rf"disagreeing with an incorrect reference, and {artefacts} are canonicalization artefacts"),
+         "abstract: audit"),
+        (ws(rf"the {fr['sampled']} component-goal rejects among them rest on {fr['distinct']} distinct statements; of "
+            rf"the {agreed(fr)} distinct statements on which the annotators agree, {fr.get('no', 0)} are unfaithful "
             rf"candidates, {fr.get('yes', 0) - artefacts} faithful candidates whose reference says something else and "
-            rf"{artefacts} canonicalization artefacts, and a reader confirms {fa_no} of our {fa['sampled']} false"),
-         "contributions: audit"),
+            rf"{artefacts} canonicalization artefacts, and a reader confirms {fa_no} of our {fa['sampled']} false "
+            rf"accepts \({fa.get('no', 0)} of {fa['distinct']} distinct statements\)"), "contributions: audit"),
         (ws(rf"agree on {round(100 * kb['agree'] / kb['n'])}\\% of the statements \(\$\\kappa={kappa}\$\)"),
          "limitations: audit"),
         (ws(rf"which judges {fr.get('no', 0)} of the {agreed(fr)} statements it agrees on unfaithful and finds "

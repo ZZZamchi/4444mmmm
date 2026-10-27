@@ -11,7 +11,11 @@ rules. The flag string is a comma-separated subset of
 * `noonept`   do not eliminate one-point binders `x = t`,
 * `nohoist`   do not hoist hypotheses after the dependency cut into `H`,
 * `onept2`    eliminate a one-point binder `x = t` also when binders between `x` and the
-  equation mention `x`, provided every variable of `t` is bound before each of them.
+  equation mention `x`, provided every variable of `t` is bound before each of them,
+* `exhyp`     read a hypothesis `∃ x, P x` that nothing mentions as a binder `x` and a
+  hypothesis `P x`,
+* `nonempty`  read a data or instance binder of type `T` that nothing mentions, and that is not
+  known to be nonempty, as a hypothesis `Nonempty T` in the same place.
 
 With the empty string the goals are those of `CanonV2`.
 `#canon2x_goals "tag" "flags" (R) (S)` prints the goals;
@@ -32,13 +36,16 @@ structure Flags where
   classDec : Bool := false
   dropUnused : Bool := false
   univ0 : Bool := false
+  exHyp : Bool := false
+  nonempty : Bool := false
 
 def Flags.parse (s : String) : Flags :=
   let ws := s.splitOn ","
   { notEx := !ws.contains "nonotex", bot := !ws.contains "nobot",
     onePt := !ws.contains "noonept", hoist := !ws.contains "nohoist", onePt2 := ws.contains "onept2",
     subtype := ws.contains "subtype", classDec := ws.contains "classdec",
-    dropUnused := ws.contains "dropunused", univ0 := ws.contains "univ0" }
+    dropUnused := ws.contains "dropunused", univ0 := ws.contains "univ0",
+    exHyp := ws.contains "exhyp", nonempty := ws.contains "nonempty" }
 
 /-- Instantiate every universe parameter with `0`; the goals are then about this instance. -/
 def univZero (e : Expr) : Expr :=
@@ -100,6 +107,12 @@ partial def peel {α} (f : Flags) (e : Expr) (xs : Array Expr) (k : Array Expr �
           withLocalDecl (n.appendAfter "_prop") .default (p.beta #[y]) fun h => do
             let v ← mkAppOptM ``Subtype.mk #[α, p, y, h]
             peel f (← valToBase v y (b.instantiate1 v)) ((xs.push y).push h) k
+    if f.exHyp && !b.hasLooseBVars then
+      let t' := (← instantiateMVars t).consumeMData
+      if t'.isAppOfArity ``Exists 2 then
+        if let .lam xn xt xb _ := t'.appArg!.consumeMData then
+          return ← withLocalDecl xn .default xt fun x =>
+            peel f (.forallE n (xb.instantiate1 x) b bi) (xs.push x) k
     return ← withLocalDecl n bi t fun x => peel f (b.instantiate1 x) (xs.push x) k
   if f.notEx && e.isAppOfArity ``Not 1 then
     let p := e.appArg!.consumeMData
@@ -167,12 +180,29 @@ def dropUnused (t : Tel) : MetaM Tel := do
     unless drop do keep := keep.push i
   return { fvars := keep.map (t.fvars[·]!), types := keep.map (t.types[·]!), body := t.body }
 
+/-- From position `i` on, replace each data binder that nothing mentions, and whose type is not
+known to be nonempty, by a hypothesis `Nonempty T` in the same place. -/
+partial def nonemptyHyps {α} (t : Tel) (i : Nat) (k : Tel → MetaM α) : MetaM α := do
+  if h : i < t.fvars.size then
+    let id := t.fvars[i].fvarId!
+    let ty := t.types[i]!
+    let n := t.fvars.size
+    let used := t.body.containsFVar id || (List.range n).any fun j => j > i && t.types[j]!.containsFVar id
+    if used || (← isProp ty) then return ← nonemptyHyps t (i + 1) k
+    let ne := mkApp (mkConst ``Nonempty [← getLevel ty]) ty
+    if (← synthInstance? ne).isSome then return ← nonemptyHyps t (i + 1) k
+    let d ← id.getDecl
+    withLocalDecl (d.userName.appendAfter "_nonempty") .default ne fun hne =>
+      nonemptyHyps { t with fvars := t.fvars.set! i hne, types := t.types.set! i ne } (i + 1) k
+  else k t
+
 def withCanon {α} (f : Flags) (e : Expr) (k : Tel → MetaM α) : MetaM α :=
   peel f e #[] fun xs body => do
     let t : Tel := { fvars := xs, types := ← xs.mapM inferType, body }
     let t ← if f.bot then unpeelBot t else pure t
     let t ← if f.onePt then onePoint f.onePt2 t else pure t
-    k (← if f.dropUnused then dropUnused t else pure t)
+    let t ← if f.dropUnused then dropUnused t else pure t
+    if f.nonempty then nonemptyHyps t 0 k else k t
 
 def depCut (t : Tel) (hyp : Array Bool) : Nat := Id.run do
   for i in [:t.fvars.size] do
