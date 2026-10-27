@@ -872,8 +872,9 @@ embedding alignment, counted as accepts in Table~\ref{tab:sweep}) and leaves 62 
 alignment, and only 26 are fully aligned with every component goal open
 (Appendix~\ref{app:unk}). Our accepts have no false accept on this subset under any of the
 seven configurations we ran on it. On the full 1,140-pair set they have 4--14
-(Table~\ref{tab:full}): the zero is a property of the subset, not of the criterion, and
-\S\ref{sec:survive-exp} explains the full-set cases. With the strong prover, 54 of the 73
+(Table~\ref{tab:full}): the zero is a property of the subset, not of the criterion. The subset is
+also where the canonicalization rules were developed, and every full-set false accept lies outside
+it (Appendix~\ref{app:repro}); \S\ref{sec:survive-exp} explains these cases. With the strong prover, 54 of the 73
 accepts on equivalent pairs are informative (Proposition~\ref{prop:informative}), 16 are
 pointwise collapses and 3 are unclassified; of the 19 \V{residual} verdicts on inequivalent
 pairs (17 plus the 2 later turned \V{off-image}), 17 are collapses of the remainder and 2 have an informative remainder (pairs 796 and
@@ -2436,12 +2437,18 @@ accept is not thereby shown to differ. \texttt{paper\_check.py} recomputes the m
 checked prose numbers from the stored results and fails on any difference; the numbers it does
 not yet check are listed, by section, in \texttt{paper\_coverage.json}.
 
-\paragraph{What was fixed in advance.} No analysis was pre-registered, and the canonicalization
-rules were developed on the benchmarks they are evaluated on, so no number here is a held-out
-estimate. The least exposed are ProofNet-Verified (Table~\ref{tab:g4}), whose labels are
-independent of ProofNetVerif's, and the blind audit, whose items and questions were fixed before
-annotation (\S\ref{sec:blind}). Defined after the data they are scored on had been seen, and
-therefore exploratory, are the accept rules that add filters or BEq+ (Table~\ref{tab:levels}), the
+\paragraph{What was fixed in advance.} No analysis was pre-registered. The canonicalization rules
+(\texttt{CanonV2.lean}) were written after pilot runs on 100 pairs of the 300-pair subset and fixed
+with the run on the subset itself, and they have not changed since. The subset is a random sample
+of 150 pairs per label; the other 840 pairs of the full set, ProofNet-Verified
+(Table~\ref{tab:g4}), the competition benchmarks and FormalRx-CC were first run after the rules
+were fixed. Against this split all our false accepts lie outside the subset: 0 of its 150
+inequivalent pairs against 14 of the other 544 with Opus (Fisher $p=0.049$, counting pairs, which
+share statements) and 0 against 9 with DeepSeek ($p=0.22$), while equivalent pairs are accepted
+more often outside it (59\% against 49\% with Opus). The rules may thus fit the pairs they were
+developed on, and the full-set rates, not the subset's, are the ones to quote. The blind audit's
+items and questions were fixed before annotation (\S\ref{sec:blind}). Defined after the data they
+are scored on had been seen, and therefore exploratory, are the accept rules that add filters or BEq+ (Table~\ref{tab:levels}), the
 combination with SemantEq (Table~\ref{tab:common}) and the two rules of Appendix~\ref{app:k19}.
 
 All Lean checks run against one pinned Mathlib commit, and all model calls are cached by

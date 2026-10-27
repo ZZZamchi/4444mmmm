@@ -904,6 +904,43 @@ def bench_claims() -> list[tuple[str, str]]:
     ]
 
 
+def devsplit_claims() -> list[tuple[str, str]]:
+    """The 300-pair subset as the development set of the canonicalization rules (app:repro, sec:exp)."""
+    from scipy.stats import fisher_exact
+    ws = lambda t: t.replace(" ", r"\s+")
+    dev = {p["row_id"] for p in load(D / "g1_results.json")}
+    f7 = json.loads((D / "f7_results.json").read_text(encoding="utf-8"))
+    pilot = {p["row_id"] for p in (f7["pairs"] if isinstance(f7, dict) else f7)}
+    f2 = {p["row_id"]: set(p["t1"]) for p in load(D / "g5" / "f2_full.json")}
+    base = load(D / "g5" / "g1_results_claude-opus-5.5.json")
+    label = {p["row_id"]: p["label"] for p in base}
+    runs = {"tactics": {p["row_id"]: verdict(p, set(p.get("tactic") or []), classify(set(p.get("tactic") or [])),
+                                             closed_of(f2[p["row_id"]])) if p["verdict"] != "canon_fail" else "unknown"
+                        for p in base}}
+    for name, f in FULL_TIERS:
+        runs[name] = {p["row_id"]: verdict(p) for p in load(D / "g5" / f"g1_results_{f}.json")}
+    cnt = lambda v, lab, inside, what: sum(1 for r, x in v.items() if x == what and label[r] == lab and (r in dev) == inside)
+    n = lambda lab, inside: sum(1 for r in label if label[r] == lab and (r in dev) == inside)
+    fa = {k: (cnt(v, False, True, "accept"), cnt(v, False, False, "accept")) for k, v in runs.items()}
+    p = {k: fisher_exact([[a, n(False, True) - a], [b, n(False, False) - b]])[1] for k, (a, b) in fa.items()}
+    acc_in = 100 * cnt(runs["opus"], True, True, "accept") / n(True, True)
+    acc_out = 100 * cnt(runs["opus"], True, False, "accept") / n(True, False)
+    return [
+        (ws(r"were written after pilot runs on 100 pairs of the 300-pair subset")
+         if len(pilot) == 100 and pilot <= dev else r"(?!)", "devsplit: pilot"),
+        (ws(rf"The subset is a random sample of {n(False, True)} pairs per label; the other {len(label) - len(dev)} pairs")
+         if n(False, True) == n(True, True) else r"(?!)", "devsplit: subset"),
+        (ws(rf"0 of its {n(False, True)} inequivalent pairs against {fa['opus'][1]} of the other {n(False, False)} with "
+            rf"Opus \(Fisher \$p={p['opus']:.3f}\$") if fa["opus"][0] == 0 else r"(?!)", "devsplit: Opus"),
+        (ws(rf"0 against {fa['deepseek'][1]} with DeepSeek \(\$p={p['deepseek']:.2f}\$\)")
+         if fa["deepseek"][0] == 0 else r"(?!)", "devsplit: DeepSeek"),
+        (ws(rf"accepted more often outside it \({round(acc_out)}\\% against {round(acc_in)}\\% with Opus\)"),
+         "devsplit: equivalent accepts"),
+        (ws(r"every full-set false accept lies outside") if all(a == 0 for a, _ in fa.values()) else r"(?!)",
+         "devsplit: all configurations"),
+    ]
+
+
 def recheck_claims() -> list[tuple[str, str]]:
     """The standalone recheck and the replay of app:repro (k5_standalone_audit.py, k20_dump.py)."""
     import gzip
@@ -945,7 +982,7 @@ def main() -> int:
     exp = expected()
     errs = compare_tables(tex, exp)
     claims = (prose_claims(exp) + audit_claims() + front_claims(exp) + main_claims(exp) + bench_claims()
-              + recheck_claims())
+              + recheck_claims() + devsplit_claims())
     for pat, what in claims:
         if not re.search(pat, tex):
             errs.append(f"prose: {what}: /{pat}/ not found")
