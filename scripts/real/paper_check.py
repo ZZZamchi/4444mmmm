@@ -918,8 +918,14 @@ def recheck_claims() -> list[tuple[str, str]]:
                  and all(k20[k]["same_verdicts"] == k20[k]["pairs"] for k in ("g5:qwen3.8-27b-nothink", "g5:gpt-4.1-mini")))
     first_ok = n(first["population"]) == n(first["checked"]) == n(first["passed"]) and not first["failures"]
     post_ok = n(post["checked"]) == n(post["passed"]) and not post["failures"]
-    later = (rf"and the {n(post['checked'])} checked at the time of writing passed as well" if not post["complete"]
+    later = (rf"and the {n(post['checked'])} checked at the time of writing passed as well" if not post.get("complete")
              else r"and all of them passed")
+    sorry = json.loads((D / "accepted_proofs_sorry.json").read_text(encoding="utf-8"))
+    rid = sorry[0]["item"].split(":")[0] if sorry else ""
+    k11 = [next(p for p in json.loads(f.read_text(encoding="utf-8"))["pairs"] if p["row_id"] == rid)
+           for f in sorted(D.glob("k11_budget_*.json"))] if rid else []
+    sorry_ok = (len(sorry) == 1 and "sorryAx" in sorry[0]["body"] and sorry[0]["tag"] in ("k8", "k8r", "k8rr")
+                and k11 and all(not p["label"] and "proved" not in p["closed"].values() for p in k11))
     return [
         (ws(rf"tables are {exported:,} distinct proofs") if exported == n(first["population"]) + n(post["population"])
          else r"(?!)", "recheck: exported proofs"),
@@ -928,6 +934,8 @@ def recheck_claims() -> list[tuple[str, str]]:
          if post_ok else r"(?!)", "recheck: later runs"),
         (ws(r"reproduced Table~\\ref\{tab:budget\} for both models and all 1,140 verdicts of Qwen and GPT-4.1-mini")
          if replay_ok else r"(?!)", "replay"),
+        (ws(r"One further proof, for a closed goal of an inequivalent pair, calls \\texttt\{sorryAx\} by name")
+         if sorry_ok else r"(?!)", "recheck: the sorryAx proof"),
     ]
 
 

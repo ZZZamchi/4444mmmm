@@ -1,5 +1,5 @@
 {
- "numbers": 856,
+ "numbers": 855,
  "uncovered": 503,
  "by_section": {
   "front": [
@@ -2611,12 +2611,12 @@
   ],
   "Case study: a Lean-verified research counterexample": [
    {
-    "line": 2478,
+    "line": 2481,
     "number": "2",
     "context": "'s direct finiteness conjecture in characteristic~2 and in one odd characteristic"
    },
    {
-    "line": 2481,
+    "line": 2484,
     "number": "2",
     "context": "only the three standard axioms. In characteristic~2 the manuscript's main theorem"
    }

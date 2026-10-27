@@ -1546,7 +1546,7 @@
      "text": "1,140"
     },
     {
-     "line": 2467,
+     "line": 2470,
      "text": "1,140"
     }
    ]
@@ -1982,7 +1982,7 @@
    "occurrences": [
     {
      "line": 2458,
-     "text": "tables are 9,984 distinct proofs"
+     "text": "tables are 9,983 distinct proofs"
     }
    ]
   },
@@ -2000,7 +2000,7 @@
    "occurrences": [
     {
      "line": 2462,
-     "text": "The 3,440 that later runs added (the budget experiment of Table~\\ref{tab:budget} and the final reruns of Table~\\ref{tab:full}) are checked in random order by the same script, and the 249 checked at th"
+     "text": "The 3,439 that later runs added (the budget experiment of Table~\\ref{tab:budget} and the final reruns of Table~\\ref{tab:full}) were checked by the same script, and all of them passed"
     }
    ]
   },
@@ -2008,14 +2008,23 @@
    "claim": "replay",
    "occurrences": [
     {
-     "line": 2466,
+     "line": 2469,
      "text": "reproduced Table~\\ref{tab:budget} for both models and all 1,140 verdicts of Qwen and GPT-4.1-mini"
+    }
+   ]
+  },
+  {
+   "claim": "recheck: the sorryAx proof",
+   "occurrences": [
+    {
+     "line": 2464,
+     "text": "One further proof, for a closed goal of an inequivalent pair, calls \\texttt{sorryAx} by name"
     }
    ]
   }
  ],
  "coverage": {
-  "numbers": 856,
+  "numbers": 855,
   "uncovered": 503,
   "uncovered_by_section": {
    "front": 5,

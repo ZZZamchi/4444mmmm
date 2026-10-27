@@ -2455,14 +2455,17 @@ command fails. Compiled alone, none of the 122 distinct model outputs containing
 \emph{Layout.} Lean's tactic blocks are indentation-sensitive, so a model proof is dedented as a
 whole and re-indented under the goal; stripping only its first line silently changes the
 structure of nested blocks.
-\emph{Standalone recheck.} The accepted model proofs behind the reported tables are 9,984
+\emph{Standalone recheck.} The accepted model proofs behind the reported tables are 9,983
 distinct proofs (\texttt{accepted\_proofs.jsonl.gz}). We compile each alone, in a fresh file
 without the result cache, followed by \texttt{\#print axioms}; a proof passes if the file reaches
 its end marker with no error and no axiom beyond \texttt{propext}, \texttt{Classical.choice} and
-\texttt{Quot.sound}. All 6,544 of the first recheck passed. The 3,440 that later runs added (the
-budget experiment of Table~\ref{tab:budget} and the final reruns of Table~\ref{tab:full}) are
-checked in random order by the same script, and the 249 checked at the time of writing passed as
-well (\texttt{k5\_standalone\_audit.py}).
+\texttt{Quot.sound}. All 6,544 of the first recheck passed. The 3,439 that later runs added (the
+budget experiment of Table~\ref{tab:budget} and the final reruns of Table~\ref{tab:full}) were
+checked by the same script, and all of them passed (\texttt{k5\_standalone\_audit.py}). One
+further proof, for a closed goal of an inequivalent pair, calls \texttt{sorryAx} by name, which
+the text filter does not catch; the checker flags it as using \texttt{sorry}, so the run counted
+the goal as unproved and no table contains it, and alone it fails on the same axiom
+(\texttt{accepted\_proofs\_sorry.json}).
 \emph{Replay.} Replaying those later runs from the cache, to record their proofs, reproduced
 Table~\ref{tab:budget} for both models and all 1,140 verdicts of Qwen and GPT-4.1-mini in
 Table~\ref{tab:full} (\texttt{k20\_dump.py}). The versions of Lean, Mathlib and every

@@ -57,7 +57,8 @@ def from_dump(name: str) -> dict[str, dict[str, tuple[Item, str]]]:
         it = Item(d["item"], tuple(d["imports"]), d["body"])
         f = CACHE / f"{_key(it)}.json"
         m = NAME_RE.search(d["body"])
-        if m and f.exists() and json.loads(f.read_text(encoding="utf-8"))["ok"]:
+        res = json.loads(f.read_text(encoding="utf-8")) if m and f.exists() else {}
+        if res.get("ok") and not res.get("uses_sorry"):
             by_tag[tag][_key(it)] = (it, m.group(1))
     return by_tag
 
