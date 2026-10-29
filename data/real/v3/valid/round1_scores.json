@@ -1,0 +1,137 @@
+{
+ "split": "valid",
+ "pairs": 1478,
+ "inequivalent": 953,
+ "equivalent": 525,
+ "metrics": {
+  "closed": {
+   "false_accept": 435,
+   "false_accept_pct": 45.65,
+   "false_accept_ci": [
+    42.51,
+    48.82
+   ],
+   "accept": 460,
+   "accept_pct": 87.62,
+   "accept_ci": [
+    84.53,
+    90.17
+   ],
+   "reject_inequivalent": 221,
+   "reject_equivalent": 13,
+   "reject_precision_pct": 94.44,
+   "decided_pct": 76.39,
+   "verdicts": {
+    "F:accept": 460,
+    "F:undecided": 52,
+    "F:reject": 13,
+    "U:reject": 221,
+    "U:accept": 435,
+    "U:undecided": 297
+   }
+  },
+  "v2": {
+   "false_accept": 26,
+   "false_accept_pct": 2.73,
+   "false_accept_ci": [
+    1.87,
+    3.97
+   ],
+   "accept": 280,
+   "accept_pct": 53.33,
+   "accept_ci": [
+    49.06,
+    57.56
+   ],
+   "reject_inequivalent": 451,
+   "reject_equivalent": 63,
+   "reject_precision_pct": 87.74,
+   "decided_pct": 55.48,
+   "verdicts": {
+    "F:accept": 280,
+    "F:unknown": 66,
+    "F:residual": 115,
+    "F:reject": 63,
+    "F:off_domain": 1,
+    "U:reject": 451,
+    "U:residual": 130,
+    "U:unknown": 346,
+    "U:accept": 26
+   },
+   "located_rejects": 366,
+   "located_pct": 81.15
+  },
+  "v2.1": {
+   "false_accept": 26,
+   "false_accept_pct": 2.73,
+   "false_accept_ci": [
+    1.87,
+    3.97
+   ],
+   "accept": 302,
+   "accept_pct": 57.52,
+   "accept_ci": [
+    53.26,
+    61.68
+   ],
+   "reject_inequivalent": 476,
+   "reject_equivalent": 63,
+   "reject_precision_pct": 88.31,
+   "decided_pct": 58.66,
+   "verdicts": {
+    "F:accept": 302,
+    "F:unknown": 66,
+    "F:residual": 93,
+    "F:reject": 63,
+    "F:off_domain": 1,
+    "U:reject": 476,
+    "U:residual": 130,
+    "U:unknown": 321,
+    "U:accept": 26
+   },
+   "located_rejects": 367,
+   "located_pct": 77.1
+  }
+ },
+ "hypotheses": {
+  "H1_closed_vs_v2_false_accepts": {
+   "discordant": [
+    410,
+    1
+   ],
+   "p": 1.5581131532401554e-121,
+   "holds": true
+  },
+  "H2_v21_vs_v2_accepts": {
+   "discordant": [
+    22,
+    0
+   ],
+   "p_one_sided": 2.384185791015625e-07,
+   "false_accept_increase_pp": 0.0,
+   "holds": true
+  },
+  "H4_v2_valid_vs_test_outside_dev": {
+   "valid": [
+    26,
+    953
+   ],
+   "test": [
+    14,
+    544
+   ],
+   "p": 1.0,
+   "holds": true
+  }
+ },
+ "located": {
+  "v2": {
+   "located": 366,
+   "share_pct": 81.15
+  },
+  "v2.1": {
+   "located": 367,
+   "share_pct": 77.1
+  }
+ }
+}

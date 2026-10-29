@@ -34,6 +34,7 @@ from runner import ROOT, Item, check, split_imports, tactic_body
 from stmt import to_prop
 
 OUT = ROOT / "data" / "real" / "f2_results.json"
+SPLIT = "test"
 PROPOSER = "deepseek/deepseek-v4.1-flash"
 N_PER_LABEL = 150
 SEED = 0
@@ -78,7 +79,7 @@ def theorem(name: str, goal: str, proof: str, heartbeats: int) -> str:
 
 
 def select_pairs() -> tuple[list[tuple[PnvRow, str, str]], dict]:
-    rows = proofnetverif("test")
+    rows = proofnetverif(SPLIT)
     conv = []
     stats = Counter()
     for r in rows:

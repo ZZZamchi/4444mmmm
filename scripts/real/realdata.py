@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -44,7 +45,20 @@ class PnvRow:
     correct: bool
 
 
+FREEZE = ROOT / "data" / "real" / "v3_freeze.json"
+
+
+def held_out_unlocked() -> bool:
+    """The valid split is the held-out set of notes/protocol-v3.md: readable only after the rules and
+    analysis are frozen (v3_freeze.json) and only by a process that names the frozen commit."""
+    if not FREEZE.exists():
+        return False
+    return os.environ.get("PNV_VALID_UNLOCK") == json.loads(FREEZE.read_text(encoding="utf-8"))["commit"]
+
+
 def proofnetverif(split: str) -> list[PnvRow]:
+    if split != "test" and not held_out_unlocked():
+        raise PermissionError(f"ProofNetVerif {split} is held out until the v3 freeze (notes/protocol-v3.md)")
     d = pd.read_parquet(RAW / "hf" / f"ProofNetVerif-{split}.parquet")
     rows = []
     for i, r in d.iterrows():

@@ -7,7 +7,9 @@
   "false accept (FA)": "an accept of a pair labelled inequivalent under the label set named with it; published labels unless stated",
   "false reject": "a reject of a pair labelled equivalent under the named labels; a certified formal difference, not a proof of unfaithfulness",
   "decided": "accept, reject or off-domain with both regrouping certificates; residual is reported separately and counted as decided only where stated",
-  "residual": "a proof of component equivalence on an alignment that ends early; never an accept",
+  "residual": "a proof of component equivalence on an alignment that ends early; never an accept in v2, while v2.1 accepts it when the two sides are the same proposition up to reducible unfolding",
+  "held-out set": "the 1,478 labelled ProofNetVerif valid pairs whose statements elaborate (953 U, 525 F), from 183 problems none of which is in the test split; published labels; read only after the protocol was frozen",
+  "v2, v2.1": "v2: the criterion of Section 2, used in every development table; v2.1: v2 with regrouping certificates completed for every pair and the reducible-identity accept above, fixed on the full set before the freeze",
   "located reject": "a reject whose certificate is a component goal (nhyp or ncin) on telescopes with a nonempty prefix or a hoisted hypothesis; a mechanical location, counted per pair",
   "component-goal reject": "a reject decided by a component goal rather than by a refuted closed equivalence; counted per pair (43 on labelled-equivalent pairs, resting on 30 distinct statements)",
   "blind audit": "249 items shown as 226 distinct statements; a verdict counts only when both annotators agree; rates count distinct statements",
@@ -801,7 +803,7 @@
    "claim": "where, Opus counts",
    "occurrences": [
     {
-     "line": 636,
+     "line": 640,
      "text": "the hypotheses differ in 146, the conclusions inside the hypotheses in 59, and both in 39"
     }
    ]
@@ -810,7 +812,7 @@
    "claim": "where, Opus closed",
    "occurrences": [
     {
-     "line": 648,
+     "line": 652,
      "text": "Closed equivalence proves 65 of the 146 (45\\%) and 16 of the 39, but only 7 of the 59 (12\\%), and it refutes 27 of the 59"
     }
    ]
@@ -819,7 +821,7 @@
    "claim": "where, DeepSeek",
    "occurrences": [
     {
-     "line": 653,
+     "line": 657,
      "text": "19 of 104, 2 of 8 and 0 of 31"
     }
    ]
@@ -828,7 +830,7 @@
    "claim": "coverage with residual",
    "occurrences": [
     {
-     "line": 631,
+     "line": 635,
      "text": "we decide 64\\% of the inequivalent and 88\\% of the equivalent"
     }
    ]
@@ -837,7 +839,7 @@
    "claim": "coverage without residual",
    "occurrences": [
     {
-     "line": 632,
+     "line": 636,
      "text": "49\\% and 67\\% without it"
     }
    ]
@@ -846,7 +848,7 @@
    "claim": "unknown causes",
    "occurrences": [
     {
-     "line": 632,
+     "line": 636,
      "text": "Of the 252 \\V{unknown} inequivalent pairs only 75 have"
     }
    ]
@@ -855,7 +857,7 @@
    "claim": "unknown causes, front end",
    "occurrences": [
     {
-     "line": 633,
+     "line": 637,
      "text": "the other 177 fail earlier"
     }
    ]
@@ -864,7 +866,7 @@
    "claim": "located rejects on an alignment that is not total",
    "occurrences": [
     {
-     "line": 642,
+     "line": 646,
      "text": "104 of the 244 located rejects have an alignment that is not total, and in the 82 of them"
     }
    ]
@@ -873,7 +875,7 @@
    "claim": "not located",
    "occurrences": [
     {
-     "line": 637,
+     "line": 641,
      "text": "The other 84 certify a difference of the closed statements without locating it: for 54 no component goal is decided"
     }
    ]
@@ -882,7 +884,7 @@
    "claim": "not located, empty",
    "occurrences": [
     {
-     "line": 640,
+     "line": 644,
      "text": "for 30 neither telescope has a binder or a hypothesis in its prefix"
     }
    ]
@@ -891,7 +893,7 @@
    "claim": "coverage cost",
    "occurrences": [
     {
-     "line": 627,
+     "line": 631,
      "text": "Of the 137 equivalent pairs that only closed equivalence accepts, 95 are \\V{residual}, 29 \\V{unknown} and 13 rejected"
     }
    ]
@@ -900,7 +902,7 @@
    "claim": "what the cost buys",
    "occurrences": [
     {
-     "line": 629,
+     "line": 633,
      "text": "of the 259 closed false accepts that we do not accept, 88 are \\V{residual}, 83 \\V{unknown} and 88 rejects that locate the difference, 54 of them on a total alignment"
     }
    ]
@@ -918,7 +920,7 @@
    "claim": "contributions, cost",
    "occurrences": [
     {
-     "line": 152,
+     "line": 156,
      "text": "137 faithful pairs are accepted only by closed equivalence, 95 of them returned as \\V{residual}"
     }
    ]
@@ -927,7 +929,7 @@
    "claim": "contributions, location",
    "occurrences": [
     {
-     "line": 154,
+     "line": 158,
      "text": "location: 244 of the 328 rejects of unfaithful pairs name the aligned component"
     }
    ]
@@ -936,7 +938,7 @@
    "claim": "locations unchecked",
    "occurrences": [
     {
-     "line": 645,
+     "line": 649,
      "text": "no reader has checked the 244 locations"
     }
    ]
@@ -945,7 +947,7 @@
    "claim": "F rejects, early",
    "occurrences": [
     {
-     "line": 670,
+     "line": 674,
      "text": "and 22 of them locate the difference on an alignment that is not total"
     }
    ]
@@ -954,7 +956,7 @@
    "claim": "tab:layers, F rejects",
    "occurrences": [
     {
-     "line": 334,
+     "line": 338,
      "text": "(22 of the 51 rejects of labelled-equivalent pairs locate a difference on one)"
     }
    ]
@@ -963,7 +965,7 @@
    "claim": "limitations, F rejects",
    "occurrences": [
     {
-     "line": 1741,
+     "line": 1781,
      "text": "22 of the 43 rejects of labelled-equivalent pairs that rest on component goals locate"
     }
    ]
@@ -972,7 +974,7 @@
    "claim": "SemantEq coverage",
    "occurrences": [
     {
-     "line": 677,
+     "line": 681,
      "text": "444 of our 446 equivalent pairs are among them"
     }
    ]
@@ -981,7 +983,7 @@
    "claim": "K18 SemantEq alone",
    "occurrences": [
     {
-     "line": 694,
+     "line": 698,
      "text": "On the 1,135 test pairs that both cover, SemantEq-Eval accepts 235 and never a pair labelled inequivalent"
     }
    ]
@@ -990,7 +992,7 @@
    "claim": "K18 ours alone",
    "occurrences": [
     {
-     "line": 695,
+     "line": 699,
      "text": "our criterion decides 640 (262 accepts, 14 of them false, and 378 certified rejects)"
     }
    ]
@@ -999,7 +1001,7 @@
    "claim": "K18 two-sided",
    "occurrences": [
     {
-     "line": 698,
+     "line": 702,
      "text": "decides 611 pairs (54\\%, against 21\\% for SemantEq alone) with no false accept observed under either label set (at most 1.6\\% of its 234 accepts at 95\\% confidence); of its 377 rejects, 50 are of pair"
     }
    ]
@@ -1008,7 +1010,7 @@
    "claim": "K18 crosstab",
    "occurrences": [
     {
-     "line": 702,
+     "line": 706,
      "text": "of its 235 accepts we accept 191, leave 40 \\V{residual} and 3 \\V{unknown} and reject 1,"
     }
    ]
@@ -1017,7 +1019,7 @@
    "claim": "K18 union and intersection",
    "occurrences": [
     {
-     "line": 705,
+     "line": 709,
      "text": "Accepting what either accepts would take on all 14; accepting only what both accept gives up 43 accepts and no false one"
     }
    ]
@@ -1026,7 +1028,7 @@
    "claim": "K18 conflicts",
    "occurrences": [
     {
-     "line": 701,
+     "line": 705,
      "text": "The two disagree on one pair, the artefact 358"
     }
    ]
@@ -1035,7 +1037,7 @@
    "claim": "K18 accept overlap",
    "occurrences": [
     {
-     "line": 703,
+     "line": 707,
      "text": "SemantEq accepts none of our 14 false accepts, and our accepts add 71 pairs that SemantEq does not accept, 57 of them labelled equivalent"
     }
    ]
@@ -1044,7 +1046,7 @@
    "claim": "contributions: K18",
    "occurrences": [
     {
-     "line": 167,
+     "line": 171,
      "text": "decides 54\\% of the shared test pairs with no false accept observed under either label set, though with false rejects"
     }
    ]
@@ -1053,7 +1055,7 @@
    "claim": "precision and recall vs SemantEq",
    "occurrences": [
     {
-     "line": 180,
+     "line": 184,
      "text": "(ours: 94.7\\% and 55.6\\% under the published labels"
     }
    ]
@@ -1062,7 +1064,7 @@
    "claim": "SemantEq rejects",
    "occurrences": [
     {
-     "line": 678,
+     "line": 682,
      "text": "They relabel 46 of our 51 rejects as non-equivalent: all 8 rejects through a refuted closed equivalence and 38 of the 43 that rest on component goals"
     }
    ]
@@ -1071,7 +1073,7 @@
    "claim": "SemantEq kept",
    "occurrences": [
     {
-     "line": 679,
+     "line": 683,
      "text": "Of the 5 they keep equivalent, 4 are vacuity-only"
     }
    ]
@@ -1080,7 +1082,7 @@
    "claim": "SemantEq non-vacuity",
    "occurrences": [
     {
-     "line": 682,
+     "line": 686,
      "text": "Of the 35 component rejects that are not vacuity-only, 34 are relabelled"
     }
    ]
@@ -1089,7 +1091,7 @@
    "claim": "SemantEq accepts",
    "occurrences": [
     {
-     "line": 684,
+     "line": 688,
      "text": "Of our 248 accepts they relabel 3, all Artin 2.8.6"
     }
    ]
@@ -1098,7 +1100,7 @@
    "claim": "SemantEq reverse",
    "occurrences": [
     {
-     "line": 686,
+     "line": 690,
      "text": "of the 96 pairs they relabel that we cover, we reject 46, accept 3 and leave 12 \\V{residual} and 35 \\V{unknown}"
     }
    ]
@@ -1107,7 +1109,7 @@
    "claim": "contributions, SemantEq",
    "occurrences": [
     {
-     "line": 159,
+     "line": 163,
      "text": "relabels 46 of our 51 rejects there as non-equivalent"
     }
    ]
@@ -1116,7 +1118,7 @@
    "claim": "SemantEq artefacts",
    "occurrences": [
     {
-     "line": 681,
+     "line": 685,
      "text": "(1135 and 358; their proof audit certifies 358 in both directions"
     }
    ]
@@ -1125,7 +1127,7 @@
    "claim": "no off-domain on the full set",
    "occurrences": [
     {
-     "line": 558,
+     "line": 562,
      "text": "no pair is \\V{off-domain}"
     }
    ]
@@ -1152,7 +1154,7 @@
    "claim": "BEq+ row of tab:full",
    "occurrences": [
     {
-     "line": 515,
+     "line": 519,
      "text": "FA 2, acc 207"
     }
    ]
@@ -1161,7 +1163,7 @@
    "claim": "closed FA, Opus, full set",
    "occurrences": [
     {
-     "line": 608,
+     "line": 612,
      "text": "false accepts are 108 with DeepSeek and 273 (39\\%) with Opus"
     }
    ]
@@ -1170,7 +1172,7 @@
    "claim": "closed acc",
    "occurrences": [
     {
-     "line": 609,
+     "line": 613,
      "text": "accepted equivalent pairs are 215 with tactics and 384 with Opus"
     }
    ]
@@ -1179,7 +1181,7 @@
    "claim": "budget, closed FA",
    "occurrences": [
     {
-     "line": 774,
+     "line": 778,
      "text": "from 12 to 218, 274 and 305 of 694 (44\\%)"
     }
    ]
@@ -1188,7 +1190,7 @@
    "claim": "budget, our FA",
    "occurrences": [
     {
-     "line": 776,
+     "line": 780,
      "text": "Our false accepts go from 4 to 15"
     }
    ]
@@ -1197,7 +1199,7 @@
    "claim": "budget, residual FA",
    "occurrences": [
     {
-     "line": 777,
+     "line": 781,
      "text": "from 1 to 104."
     }
    ]
@@ -1206,7 +1208,7 @@
    "claim": "McNemar FA",
    "occurrences": [
     {
-     "line": 623,
+     "line": 627,
      "text": "259 inequivalent pairs are accepted only by closed equivalence and none only"
     }
    ]
@@ -1215,7 +1217,7 @@
    "claim": "McNemar acc",
    "occurrences": [
     {
-     "line": 624,
+     "line": 628,
      "text": "cost of 137 against 1 equivalent"
     }
    ]
@@ -1224,7 +1226,7 @@
    "claim": "vs BEq+",
    "occurrences": [
     {
-     "line": 1076,
+     "line": 1116,
      "text": "81 accepted only by us and 40 only by BEq+"
     }
    ]
@@ -1233,7 +1235,7 @@
    "claim": "residual precision",
    "occurrences": [
     {
-     "line": 415,
+     "line": 419,
      "text": "(95 faithful against 100 unfaithful pairs with Opus, against 384 and 273"
     }
    ]
@@ -1242,7 +1244,7 @@
    "claim": "our FA range",
    "occurrences": [
     {
-     "line": 620,
+     "line": 624,
      "text": "stay at 4--14 of 694"
     }
    ]
@@ -1251,7 +1253,7 @@
    "claim": "faithful rejects, Opus",
    "occurrences": [
     {
-     "line": 653,
+     "line": 657,
      "text": "rejects 51 of 446"
     }
    ]
@@ -1260,7 +1262,7 @@
    "claim": "certified rejects U",
    "occurrences": [
     {
-     "line": 634,
+     "line": 638,
      "text": "from 5 to 328 on inequivalent"
     }
    ]
@@ -1269,7 +1271,7 @@
    "claim": "cost, Opus",
    "occurrences": [
     {
-     "line": 792,
+     "line": 796,
      "text": "1{,}747 calls and 6.5M tokens against 3{,}914 and 8.1M, with 15 against 218"
     }
    ]
@@ -1278,7 +1280,7 @@
    "claim": "cost, DeepSeek",
    "occurrences": [
     {
-     "line": 793,
+     "line": 797,
      "text": "2{,}000 calls and 41.5M tokens against 3{,}930 and 75.4M, with 10 against 62"
     }
    ]
@@ -1287,7 +1289,7 @@
    "claim": "K13 red team",
    "occurrences": [
     {
-     "line": 1133,
+     "line": 1173,
      "text": "We accept 8, reject 49 with certificates (14 of them rewarded by closed equivalence), and return \\V{residual} for 29 and \\V{unknown} for 64"
     }
    ]
@@ -1296,7 +1298,7 @@
    "claim": "separation, tab:theory",
    "occurrences": [
     {
-     "line": 1831,
+     "line": 1871,
      "text": "111 inequivalent pairs rejected with closed equivalence undecided, 29 the other way"
     }
    ]
@@ -1305,7 +1307,7 @@
    "claim": "K19 rules from the audit",
    "occurrences": [
     {
-     "line": 2206,
+     "line": 2246,
      "text": "They change the goals of 116 of the 1,140 pairs"
     }
    ]
@@ -1314,7 +1316,7 @@
    "claim": "audit: kappa",
    "occurrences": [
     {
-     "line": 1288,
+     "line": 1328,
      "text": "agree on 188 of the 226 statements ($\\kappa=0.66$)"
     }
    ]
@@ -1323,7 +1325,7 @@
    "claim": "audit: kappa against the first classification",
    "occurrences": [
     {
-     "line": 1293,
+     "line": 1333,
      "text": "at $\\kappa=0.46$ and $0.25$, and at $0.54$ and $0.34$ without"
     }
    ]
@@ -1332,7 +1334,7 @@
    "claim": "audit: unqualified names",
    "occurrences": [
     {
-     "line": 1299,
+     "line": 1339,
      "text": "It concerns 10 statements, on all of which the other annotator answered ``faithful''"
     }
    ]
@@ -1341,7 +1343,7 @@
    "claim": "measure: location against kind",
    "occurrences": [
     {
-     "line": 647,
+     "line": 651,
      "text": "matches it in 81--91\\% of the cases"
     }
    ]
@@ -1350,7 +1352,7 @@
    "claim": "select: audit",
    "occurrences": [
     {
-     "line": 1233,
+     "line": 1273,
      "text": "finds 13 of the 23 rewarded strict rejects it can judge unfaithful"
     }
    ]
@@ -1359,7 +1361,7 @@
    "claim": "select: unfaithful picks at n=24",
    "occurrences": [
     {
-     "line": 1268,
+     "line": 1308,
      "text": "and by this rate an unfaithful one for about 1.6\\%"
     }
    ]
@@ -1368,7 +1370,7 @@
    "claim": "audit: rejects",
    "occurrences": [
     {
-     "line": 1303,
+     "line": 1343,
      "text": "agree on 26 of the 30 statements behind the 43 component-goal rejects. 16 candidates are unfaithful"
     }
    ]
@@ -1377,7 +1379,7 @@
    "claim": "audit: faithful rejects",
    "occurrences": [
     {
-     "line": 1307,
+     "line": 1347,
      "text": "Of the 10 faithful ones"
     }
    ]
@@ -1386,7 +1388,7 @@
    "claim": "audit: candidates certified false",
    "occurrences": [
     {
-     "line": 1318,
+     "line": 1358,
      "text": "6 of the 7 candidates certified false are judged unfaithful"
     }
    ]
@@ -1395,7 +1397,7 @@
    "claim": "audit: location against kind",
    "occurrences": [
     {
-     "line": 1326,
+     "line": 1366,
      "text": "matches it in 29 of 32 cases for the first annotator and 35 of 43 for the second"
     }
    ]
@@ -1404,7 +1406,7 @@
    "claim": "audit: false accepts",
    "occurrences": [
     {
-     "line": 1329,
+     "line": 1369,
      "text": "Of the 11 statements behind the 14 false accepts, the annotators agree on all 11. Six are unfaithful"
     }
    ]
@@ -1413,7 +1415,7 @@
    "claim": "audit: label errors among false accepts",
    "occurrences": [
     {
-     "line": 1332,
+     "line": 1372,
      "text": "Five are faithful, so their label is wrong"
     }
    ]
@@ -1422,7 +1424,7 @@
    "claim": "audit: confirmed false accepts",
    "occurrences": [
     {
-     "line": 1335,
+     "line": 1375,
      "text": "A reader thus confirms 9 of the 14 false accepts"
     }
    ]
@@ -1431,7 +1433,7 @@
    "claim": "audit: controls",
    "occurrences": [
     {
-     "line": 1339,
+     "line": 1379,
      "text": "10 sampled accepts of equivalent pairs with an informative conclusion, all 10 are judged faithful; of 10 sampled rejects of inequivalent pairs, 9 are judged unfaithful and 1 is split"
     }
    ]
@@ -1440,7 +1442,7 @@
    "claim": "audit: certified-equivalent controls",
    "occurrences": [
     {
-     "line": 1341,
+     "line": 1381,
      "text": "7 of the 10 candidates certified equivalent to the corrected reference are judged faithful and 3 are split"
     }
    ]
@@ -1449,7 +1451,7 @@
    "claim": "audit: rewarded strict rejects",
    "occurrences": [
     {
-     "line": 1262,
+     "line": 1302,
      "text": "Of the 34 rewarded strict rejects, the annotators agree on 23 and judge 13 unfaithful (57\\%, 95\\% interval 37--74\\%)"
     }
    ]
@@ -1458,7 +1460,7 @@
    "claim": "audit: open picks",
    "occurrences": [
     {
-     "line": 1264,
+     "line": 1304,
      "text": "4 of the 28 agreed picks of closed equivalence are unfaithful (14\\%, 95\\% interval 6--32\\%), 2 of the 22 of the Opus judge with the reference, and 1 of the 25 of our accept (4\\%, 1--20\\%)"
     }
    ]
@@ -1467,7 +1469,7 @@
    "claim": "contributions: audit",
    "occurrences": [
     {
-     "line": 160,
+     "line": 164,
      "text": "the 43 component-goal rejects among them rest on 30 distinct statements; of the 26 distinct statements on which the annotators agree, 16 are unfaithful candidates, 7 faithful candidates whose referenc"
     }
    ]
@@ -1476,7 +1478,7 @@
    "claim": "limitations: audit",
    "occurrences": [
     {
-     "line": 1757,
+     "line": 1797,
      "text": "agree on 83\\% of the statements ($\\kappa=0.66$)"
     }
    ]
@@ -1485,7 +1487,7 @@
    "claim": "measure: audit",
    "occurrences": [
     {
-     "line": 672,
+     "line": 676,
      "text": "which judges 16 of the 26 statements it agrees on unfaithful and finds three canonicalization artefacts"
     }
    ]
@@ -1498,55 +1500,55 @@
      "text": "1,140"
     },
     {
-     "line": 114,
+     "line": 116,
      "text": "1,140"
     },
     {
-     "line": 135,
+     "line": 137,
      "text": "1,140"
     },
     {
-     "line": 486,
+     "line": 490,
      "text": "1,140"
     },
     {
-     "line": 518,
+     "line": 522,
      "text": "1,140"
     },
     {
-     "line": 556,
+     "line": 560,
      "text": "1,140"
     },
     {
-     "line": 761,
+     "line": 765,
      "text": "1,140"
     },
     {
-     "line": 777,
+     "line": 781,
      "text": "1,140"
     },
     {
-     "line": 818,
+     "line": 822,
      "text": "1,140"
     },
     {
-     "line": 874,
+     "line": 914,
      "text": "1,140"
     },
     {
-     "line": 1056,
+     "line": 1096,
      "text": "1,140"
     },
     {
-     "line": 1441,
+     "line": 1481,
      "text": "1,140"
     },
     {
-     "line": 2206,
+     "line": 2246,
      "text": "1,140"
     },
     {
-     "line": 2477,
+     "line": 2519,
      "text": "1,140"
     }
    ]
@@ -1559,51 +1561,51 @@
      "text": "694"
     },
     {
-     "line": 486,
+     "line": 490,
      "text": "694"
     },
     {
-     "line": 507,
+     "line": 511,
      "text": "694"
     },
     {
-     "line": 507,
+     "line": 511,
      "text": "694"
     },
     {
-     "line": 507,
+     "line": 511,
      "text": "694"
     },
     {
-     "line": 518,
+     "line": 522,
      "text": "694"
     },
     {
-     "line": 531,
+     "line": 535,
      "text": "694"
     },
     {
-     "line": 553,
+     "line": 557,
      "text": "694"
     },
     {
-     "line": 607,
+     "line": 611,
      "text": "694"
     },
     {
-     "line": 620,
+     "line": 624,
      "text": "694"
     },
     {
-     "line": 775,
+     "line": 779,
      "text": "694"
     },
     {
-     "line": 1032,
+     "line": 1072,
      "text": "694"
     },
     {
-     "line": 1056,
+     "line": 1096,
      "text": "694"
     }
    ]
@@ -1612,47 +1614,47 @@
    "claim": "size: equivalent pairs of the full set",
    "occurrences": [
     {
-     "line": 486,
+     "line": 490,
      "text": "446"
     },
     {
-     "line": 507,
+     "line": 511,
      "text": "446"
     },
     {
-     "line": 507,
+     "line": 511,
      "text": "446"
     },
     {
-     "line": 507,
+     "line": 511,
      "text": "446"
     },
     {
-     "line": 518,
+     "line": 522,
      "text": "446"
     },
     {
-     "line": 531,
+     "line": 535,
      "text": "446"
     },
     {
-     "line": 553,
+     "line": 557,
      "text": "446"
     },
     {
-     "line": 653,
+     "line": 657,
      "text": "446"
     },
     {
-     "line": 678,
+     "line": 682,
      "text": "446"
     },
     {
-     "line": 1056,
+     "line": 1096,
      "text": "446"
     },
     {
-     "line": 1085,
+     "line": 1125,
      "text": "446"
     }
    ]
@@ -1661,35 +1663,39 @@
    "claim": "size: subset",
    "occurrences": [
     {
-     "line": 370,
+     "line": 374,
      "text": "300-pair"
     },
     {
-     "line": 596,
+     "line": 600,
      "text": "300-pair"
     },
     {
-     "line": 610,
+     "line": 614,
      "text": "300-pair"
     },
     {
-     "line": 826,
+     "line": 830,
      "text": "300-pair"
     },
     {
-     "line": 858,
+     "line": 840,
      "text": "300-pair"
     },
     {
-     "line": 1047,
+     "line": 898,
      "text": "300-pair"
     },
     {
-     "line": 1737,
+     "line": 1087,
      "text": "300-pair"
     },
     {
-     "line": 2441,
+     "line": 1777,
+     "text": "300-pair"
+    },
+    {
+     "line": 2482,
      "text": "300-pair"
     }
    ]
@@ -1698,15 +1704,15 @@
    "claim": "size: ProofNet-Verified",
    "occurrences": [
     {
-     "line": 488,
+     "line": 492,
      "text": "317"
     },
     {
-     "line": 1175,
+     "line": 1215,
      "text": "317"
     },
     {
-     "line": 1216,
+     "line": 1256,
      "text": "317"
     }
    ]
@@ -1724,7 +1730,7 @@
    "claim": "contributions: our FA across budgets",
    "occurrences": [
     {
-     "line": 150,
+     "line": 152,
      "text": "ours stay at 4--15, at fewer model calls"
     }
    ]
@@ -1733,7 +1739,7 @@
    "claim": "contributions: closed FA",
    "occurrences": [
     {
-     "line": 135,
+     "line": 137,
      "text": "closed false accepts rise from 1.7\\% with tactics to 39\\% (95\\% interval 36--43\\%)"
     }
    ]
@@ -1742,7 +1748,7 @@
    "claim": "contributions: closed FA within one model",
    "occurrences": [
     {
-     "line": 137,
+     "line": 139,
      "text": "from 12 to 305 (44\\%) within one model"
     }
    ]
@@ -1751,7 +1757,7 @@
    "claim": "contributions: SemantEq precision and recall",
    "occurrences": [
     {
-     "line": 179,
+     "line": 183,
      "text": "reports 100\\% precision on the ProofNetVerif test split with 51.4\\% recall under the published labels and 65.6\\% under"
     }
    ]
@@ -1760,7 +1766,7 @@
    "claim": "paradox: weak provers",
    "occurrences": [
     {
-     "line": 607,
+     "line": 611,
      "text": "12 false accepts of 694 with tactics alone and with GPT-4.1-mini, 18 with Qwen"
     }
    ]
@@ -1769,7 +1775,7 @@
    "claim": "paradox: ratio",
    "occurrences": [
     {
-     "line": 609,
+     "line": 613,
      "text": "23 times the false accepts at 1.8 times the recall"
     }
    ]
@@ -1778,7 +1784,7 @@
    "claim": "paradox: sweep",
    "occurrences": [
     {
-     "line": 612,
+     "line": 616,
      "text": "closed false accepts are 22, 34, 51 and 61 of 150, and 7, 12, 17 and 25 of 75"
     }
    ]
@@ -1787,7 +1793,7 @@
    "claim": "paradox: our FA across models",
    "occurrences": [
     {
-     "line": 620,
+     "line": 624,
      "text": "stay at 4--14 of 694 (0.6--2.0\\%)"
     }
    ]
@@ -1796,7 +1802,7 @@
    "claim": "paradox: residual",
    "occurrences": [
     {
-     "line": 622,
+     "line": 626,
      "text": "1 to 100 false against 38 to 95 faithful"
     }
    ]
@@ -1805,7 +1811,7 @@
    "claim": "paradox: directions of the equivalent rejects",
    "occurrences": [
     {
-     "line": 655,
+     "line": 659,
      "text": "into $30+8+13$. In 30 of them one of the two statements is certified false: in $15+13$ of these also which one, in the other 2 not. For 15, closed equivalence is refuted"
     }
    ]
@@ -1814,7 +1820,7 @@
    "claim": "paradox: closed-only rejects",
    "occurrences": [
     {
-     "line": 658,
+     "line": 662,
      "text": "8 of them are rejects only through this refutation"
     }
    ]
@@ -1823,7 +1829,7 @@
    "claim": "paradox: reference false",
    "occurrences": [
     {
-     "line": 661,
+     "line": 665,
      "text": "For 13, \\texttt{npimp} and \\texttt{rs} certify"
     }
    ]
@@ -1832,7 +1838,7 @@
    "claim": "paradox: vacuity-only",
    "occurrences": [
     {
-     "line": 666,
+     "line": 670,
      "text": "8 rejects are vacuity-only"
     }
    ]
@@ -1841,7 +1847,7 @@
    "claim": "paradox: direction only",
    "occurrences": [
     {
-     "line": 668,
+     "line": 672,
      "text": "The remaining 13 have a proved direction but no"
     }
    ]
@@ -1850,7 +1856,7 @@
    "claim": "budget: second repair",
    "occurrences": [
     {
-     "line": 775,
+     "line": 779,
      "text": "The second repair round adds 31 closed false accepts against 7 closed accepts of equivalent pairs"
     }
    ]
@@ -1859,7 +1865,7 @@
    "claim": "budget: replay vs full",
    "occurrences": [
     {
-     "line": 779,
+     "line": 783,
      "text": "(274 here, 273 in Table"
     }
    ]
@@ -1868,7 +1874,7 @@
    "claim": "budget: DeepSeek",
    "occurrences": [
     {
-     "line": 780,
+     "line": 784,
      "text": "closed false accepts 12, 62, 108 and 151, ours 4, 6, 9 and 10"
     }
    ]
@@ -1877,7 +1883,7 @@
    "claim": "cost: tactics",
    "occurrences": [
     {
-     "line": 795,
+     "line": 799,
      "text": "the false accepts are 4 against 12"
     }
    ]
@@ -1886,7 +1892,7 @@
    "claim": "cost: coverage",
    "occurrences": [
     {
-     "line": 798,
+     "line": 802,
      "text": "the closed check at 8.1M tokens accepts 366 equivalent pairs, ours at 6.5M accepts 253 and returns \\V{residual} on 95 more"
     }
    ]
@@ -1895,7 +1901,7 @@
    "claim": "subset: zero FA bound",
    "occurrences": [
     {
-     "line": 861,
+     "line": 901,
      "text": "no false accept under either prover (at most 2.5\\% of the 150 at 95\\% confidence)"
     }
    ]
@@ -1904,7 +1910,7 @@
    "claim": "tab:repr prose",
    "occurrences": [
     {
-     "line": 2163,
+     "line": 2203,
      "text": "leaves the canonical form unchanged in 178 of 218 cases, while conjoined hypotheses need conjunct reordering in 29 of 69 and account for 5 of the 7 open ones"
     }
    ]
@@ -1913,7 +1919,7 @@
    "claim": "abstract: benchmark errors",
    "occurrences": [
     {
-     "line": 55,
+     "line": 57,
      "text": "evidence for 34 errors in ProofNet\\#, miniF2F and PutnamBench, 20 of them proved false or vacuous"
     }
    ]
@@ -1922,7 +1928,7 @@
    "claim": "audit: evidence strengths",
    "occurrences": [
     {
-     "line": 1496,
+     "line": 1536,
      "text": "The 34 errors rest on evidence of two strengths. For 20, Lean"
     }
    ]
@@ -1931,7 +1937,7 @@
    "claim": "audit: ProofNet# negations",
    "occurrences": [
     {
-     "line": 1497,
+     "line": 1537,
      "text": "13 ProofNet\\# negations"
     }
    ]
@@ -1940,7 +1946,7 @@
    "claim": "audit: vacuous and competition",
    "occurrences": [
     {
-     "line": 1498,
+     "line": 1538,
      "text": "the 3 ProofNet\\# statements whose hypotheses the \\texttt{vacuous} probe refutes, 3 miniF2F statements and"
     }
    ]
@@ -1949,7 +1955,7 @@
    "claim": "audit: degeneracies",
    "occurrences": [
     {
-     "line": 1501,
+     "line": 1541,
      "text": "For the other 14 the kernel"
     }
    ]
@@ -1958,7 +1964,7 @@
    "claim": "audit: in ProofNet-Verified",
    "occurrences": [
     {
-     "line": 1509,
+     "line": 1549,
      "text": "22 of our 24 ProofNet\\# errors are also in ProofNet-Verified"
     }
    ]
@@ -1967,7 +1973,7 @@
    "claim": "tab:refs caption",
    "occurrences": [
     {
-     "line": 2398,
+     "line": 2438,
      "text": "The 24 ProofNet\\# reference errors"
     }
    ]
@@ -1976,7 +1982,7 @@
    "claim": "app:refs count",
    "occurrences": [
     {
-     "line": 2361,
+     "line": 2401,
      "text": "Table~\\ref{tab:refs} lists the 24 errors"
     }
    ]
@@ -1985,7 +1991,7 @@
    "claim": "recheck: exported proofs",
    "occurrences": [
     {
-     "line": 2465,
+     "line": 2507,
      "text": "tables are 9,983 distinct proofs"
     }
    ]
@@ -1994,7 +2000,7 @@
    "claim": "recheck: first",
    "occurrences": [
     {
-     "line": 2469,
+     "line": 2511,
      "text": "All 6,544 of the first recheck passed"
     }
    ]
@@ -2003,7 +2009,7 @@
    "claim": "recheck: later runs",
    "occurrences": [
     {
-     "line": 2469,
+     "line": 2511,
      "text": "The 3,439 that later runs added (the budget experiment of Table~\\ref{tab:budget} and the final reruns of Table~\\ref{tab:full}) were checked by the same script, and all of them passed"
     }
    ]
@@ -2012,7 +2018,7 @@
    "claim": "replay",
    "occurrences": [
     {
-     "line": 2476,
+     "line": 2518,
      "text": "reproduced Table~\\ref{tab:budget} for both models and all 1,140 verdicts of Qwen and GPT-4.1-mini"
     }
    ]
@@ -2021,7 +2027,7 @@
    "claim": "recheck: the sorryAx proof",
    "occurrences": [
     {
-     "line": 2471,
+     "line": 2513,
      "text": "One further proof, for a closed goal of an inequivalent pair, calls \\texttt{sorryAx} by name"
     }
    ]
@@ -2030,7 +2036,7 @@
    "claim": "devsplit: pilot",
    "occurrences": [
     {
-     "line": 2441,
+     "line": 2482,
      "text": "were written after pilot runs on 100 pairs of the 300-pair subset"
     }
    ]
@@ -2039,7 +2045,7 @@
    "claim": "devsplit: subset",
    "occurrences": [
     {
-     "line": 2442,
+     "line": 2483,
      "text": "The subset is a random sample of 150 pairs per label; the other 840 pairs"
     }
    ]
@@ -2048,7 +2054,7 @@
    "claim": "devsplit: Opus",
    "occurrences": [
     {
-     "line": 2445,
+     "line": 2486,
      "text": "0 of its 150 inequivalent pairs against 14 of the other 544 with Opus (Fisher $p=0.049$"
     }
    ]
@@ -2057,7 +2063,7 @@
    "claim": "devsplit: DeepSeek",
    "occurrences": [
     {
-     "line": 2447,
+     "line": 2488,
      "text": "0 against 9 with DeepSeek ($p=0.22$)"
     }
    ]
@@ -2066,7 +2072,7 @@
    "claim": "devsplit: equivalent accepts",
    "occurrences": [
     {
-     "line": 2447,
+     "line": 2488,
      "text": "accepted more often outside it (59\\% against 49\\% with Opus)"
     }
    ]
@@ -2075,15 +2081,114 @@
    "claim": "devsplit: all configurations",
    "occurrences": [
     {
-     "line": 876,
+     "line": 916,
      "text": "every full-set false accept lies outside"
+    }
+   ]
+  },
+  {
+   "claim": "abstract: held-out",
+   "occurrences": [
+    {
+     "line": 54,
+     "text": "On 1,478 held-out pairs from problems not used in development, under a protocol fixed in advance, closed equivalence false-accepts 46\\% of the unfaithful pairs and our criterion 2.7\\%"
+    }
+   ]
+  },
+  {
+   "claim": "contributions: held-out",
+   "occurrences": [
+    {
+     "line": 154,
+     "text": "the gap reproduces at 46\\% against 2.7\\%"
+    }
+   ]
+  },
+  {
+   "claim": "held-out: disjoint problems",
+   "occurrences": [
+    {
+     "line": 844,
+     "text": "draws on 183 ProofNet problems, none of them among the 178 of the test split"
+    }
+   ]
+  },
+  {
+   "claim": "held-out: raw pairs",
+   "occurrences": [
+    {
+     "line": 845,
+     "text": "of its 2,300 pairs elaborate"
+    }
+   ]
+  },
+  {
+   "claim": "held-out: v2.1 on test",
+   "occurrences": [
+    {
+     "line": 853,
+     "text": "the two steps add 28 certified rejects and 29 accepts of equivalent pairs and no false accept"
+    }
+   ]
+  },
+  {
+   "claim": "held-out: closed above development",
+   "occurrences": [
+    {
+     "line": 856,
+     "text": "more than on the development set"
+    }
+   ]
+  },
+  {
+   "claim": "held-out: canon fails",
+   "occurrences": [
+    {
+     "line": 866,
+     "text": "Canonicalization fails on 88 held-out pairs against 5 on the test split"
+    }
+   ]
+  },
+  {
+   "claim": "held-out: failed attempts",
+   "occurrences": [
+    {
+     "line": 868,
+     "text": "(2.9\\% of the attempts)"
+    }
+   ]
+  },
+  {
+   "claim": "held-out: retry",
+   "occurrences": [
+    {
+     "line": 869,
+     "text": "the retry turned 7 closed and 7 component verdicts from undecided to decided and changed no decided verdict"
+    }
+   ]
+  },
+  {
+   "claim": "held-out: H4",
+   "occurrences": [
+    {
+     "line": 858,
+     "text": "Our rate matches that of the 544 inequivalent development pairs outside the subset"
+    }
+   ]
+  },
+  {
+   "claim": "held-out: H2 decision",
+   "occurrences": [
+    {
+     "line": 863,
+     "text": "by the decision rule fixed in advance it is the criterion we recommend"
     }
    ]
   }
  ],
  "coverage": {
-  "numbers": 867,
-  "uncovered": 503,
+  "numbers": 885,
+  "uncovered": 504,
   "uncovered_by_section": {
    "front": 5,
    "Contributions.": 1,
@@ -2097,6 +2202,7 @@
    "An external adjudication.": 1,
    "One model, growing budget (Table~\\ref{tab:budget": 1,
    "Resampling the prover.": 11,
+   "Held-out evaluation (Table~\\ref{tab:heldout": 1,
    "The 300-pair subset (Table~\\ref{tab:g1": 35,
    "Regrouping certificates.": 24,
    "Independent labels (Table~\\ref{tab:g4": 40,

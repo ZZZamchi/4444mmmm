@@ -806,7 +806,14 @@ DEFINITIONS = {
                     "not a proof of unfaithfulness",
     "decided": "accept, reject or off-domain with both regrouping certificates; residual is reported separately "
                "and counted as decided only where stated",
-    "residual": "a proof of component equivalence on an alignment that ends early; never an accept",
+    "residual": "a proof of component equivalence on an alignment that ends early; never an accept in v2, "
+                "while v2.1 accepts it when the two sides are the same proposition up to reducible unfolding",
+    "held-out set": "the 1,478 labelled ProofNetVerif valid pairs whose statements elaborate (953 U, 525 F), from 183 "
+                    "problems none of which is in the test split; published labels; read only after the protocol "
+                    "was frozen",
+    "v2, v2.1": "v2: the criterion of Section 2, used in every development table; v2.1: v2 with regrouping "
+                "certificates completed for every pair and the reducible-identity accept above, fixed on the full "
+                "set before the freeze",
     "located reject": "a reject whose certificate is a component goal (nhyp or ncin) on telescopes with a nonempty "
                       "prefix or a hoisted hypothesis; a mechanical location, counted per pair",
     "component-goal reject": "a reject decided by a component goal rather than by a refuted closed equivalence; "
@@ -840,9 +847,13 @@ def definition_errors() -> list[str]:
              "242": sum(p["relation"] == "faithful" for p in pnv), "1,135": len(shared), "102": relab,
              "249": len(items), "226": len({it["sheet_item"] for it in items}), "43": fr["sampled"],
              "30": fr["distinct"], "7,608": len(d1["draws"]), "2,879": len(d1["candidates"])}
+    held = json.loads((D / "v3" / "valid" / "scores.json").read_text(encoding="utf-8"))
+    overlap = json.loads((D / "v3" / "valid" / "overlap.json").read_text(encoding="utf-8"))
+    facts.update({"1,478": held["pairs"], "953": held["inequivalent"], "525": held["equivalent"],
+                  "183": overlap["valid_statements"] if not overlap["shared"] else -1})
     want = {"1,140": 1140, "694": 694, "446": 446, "300": 300, "150 / 150": (150, 150), "317": 317, "75": 75,
             "242": 242, "1,135": 1135, "102": 102, "249": 249, "226": 226, "43": 43, "30": 30, "7,608": 7608,
-            "2,879": 2879}
+            "2,879": 2879, "1,478": 1478, "953": 953, "525": 525, "183": 183}
     text = " ".join(DEFINITIONS.values())
     errs = [f"definitions: {k} is {facts[k]} in the data" for k in want if facts[k] != want[k]]
     errs += [f"definitions: '{k}' does not occur" for k in want if k not in text]
@@ -941,6 +952,52 @@ def devsplit_claims() -> list[tuple[str, str]]:
     ]
 
 
+def heldout_claims() -> list[tuple[str, str]]:
+    """The held-out evaluation (sec:measure, abstract, contributions): v3_valid.py outputs."""
+    ws = lambda t: t.replace(" ", r"\s+")
+    V = D / "v3" / "valid"
+    js = lambda p: json.loads(p.read_text(encoding="utf-8"))
+    val, dev = js(V / "scores.json"), js(D / "v3" / "test" / "scores.json")
+    ov, f2v = js(V / "overlap.json"), js(V / "f2_full.json")
+    vm, dm = val["metrics"], dev["metrics"]
+    raw = sum(f2v["selection"].get(k, 0) for k in ("no_conversion", "elab_fail_other", "elab_fail_autoimplicit", "usable"))
+    canon_fail = lambda canon, f2: sum(json.loads(canon.read_text(encoding="utf-8")).get(p["row_id"], {}).get("status") != "ok"
+                                       for p in js(f2)["pairs"])
+    fails_v, fails_t = canon_fail(V / "canon.json", V / "f2_full.json"), canon_fail(D / "g1_canon2.json", D / "g5" / "f2_full.json")
+    err_rate = js(V / "round1_api_events.json")["error_rate"]
+    import v3_valid
+    arms_of = lambda res, post: {p["row_id"]: v3_valid.arms(p, js(V / post)[p["row_id"]]) for p in js(V / res)["pairs"]}
+    a1 = arms_of("round1_g1_results_claude-opus-5.5.json", "round1_post.json")
+    a2 = arms_of("g1_results_claude-opus-5.5.json", "post.json")
+    moved = {arm: [(a1[r][arm], a2[r][arm]) for r in a2 if a1[r][arm] != a2[r][arm]] for arm in ("closed", "v2")}
+    flipped = any(x in ("accept", "reject", "off_domain", "residual") and y in ("accept", "reject", "off_domain", "residual")
+                  for ch in moved.values() for x, y in ch)
+    closed_pct, ours_pct = round(vm["closed"]["false_accept_pct"]), f"{vm['v2']['false_accept_pct']:.1f}"
+    return [
+        (ws(rf"On {val['pairs']:,} held-out pairs from problems not used in development, under a protocol fixed in "
+            rf"advance, closed equivalence false-accepts {closed_pct}\\% of the unfaithful pairs and our criterion "
+            rf"{ours_pct}\\%"), "abstract: held-out"),
+        (ws(rf"the gap reproduces at {closed_pct}\\% against {ours_pct}\\%"), "contributions: held-out"),
+        (ws(rf"draws on {ov['valid_statements']} ProofNet problems, none of them among the {ov['test_statements']} of "
+            rf"the test split") if not ov["shared"] else r"(?!)", "held-out: disjoint problems"),
+        (ws(rf"of its {raw:,} pairs elaborate"), "held-out: raw pairs"),
+        (ws(rf"the two steps add {dm['v2.1']['reject_inequivalent'] - dm['v2']['reject_inequivalent']} certified rejects "
+            rf"and {dm['v2.1']['accept'] - dm['v2']['accept']} accepts of equivalent pairs and no false accept")
+         if dm["v2.1"]["false_accept"] == dm["v2"]["false_accept"] and dm["v2.1"]["reject_equivalent"] == dm["v2"]["reject_equivalent"]
+         else r"(?!)", "held-out: v2.1 on test"),
+        (ws(r"more than on the development set") if vm["closed"]["false_accept_pct"] > dm["closed"]["false_accept_pct"]
+         else r"(?!)", "held-out: closed above development"),
+        (ws(rf"Canonicalization fails on {fails_v} held-out pairs against {fails_t} on the test split"), "held-out: canon fails"),
+        (ws(rf"\({100 * err_rate:.1f}\\% of the attempts\)"), "held-out: failed attempts"),
+        (ws(rf"the retry turned {len(moved['closed'])} closed and {len(moved['v2'])} component verdicts from undecided to "
+            rf"decided and changed no decided verdict") if not flipped else r"(?!)", "held-out: retry"),
+        (ws(r"Our rate matches that of the 544 inequivalent development pairs outside the subset")
+         if val["hypotheses"]["H4_v2_valid_vs_test_outside_dev"]["holds"] else r"(?!)", "held-out: H4"),
+        (ws(r"by the decision rule fixed in advance it is the criterion we recommend")
+         if val["hypotheses"]["H2_v21_vs_v2_accepts"]["holds"] else r"(?!)", "held-out: H2 decision"),
+    ]
+
+
 def recheck_claims() -> list[tuple[str, str]]:
     """The standalone recheck and the replay of app:repro (k5_standalone_audit.py, k20_dump.py)."""
     import gzip
@@ -982,7 +1039,7 @@ def main() -> int:
     exp = expected()
     errs = compare_tables(tex, exp)
     claims = (prose_claims(exp) + audit_claims() + front_claims(exp) + main_claims(exp) + bench_claims()
-              + recheck_claims() + devsplit_claims())
+              + recheck_claims() + devsplit_claims() + heldout_claims())
     for pat, what in claims:
         if not re.search(pat, tex):
             errs.append(f"prose: {what}: /{pat}/ not found")
@@ -992,6 +1049,10 @@ def main() -> int:
     elif h2_tex.OUT.exists() and h2_tex.OUT.read_text(encoding="utf-8") != h2_tex.render(
             json.loads(h2_tex.SCORES.read_text(encoding="utf-8"))):
         errs.append("h2: paper/h2_results.tex is stale; run h2_tex.py")
+    import v3_tex
+    held = {k: json.loads(p.read_text(encoding="utf-8")) for k, p in v3_tex.SCORES.items() if p.exists()}
+    if len(held) == len(v3_tex.SCORES) and (not v3_tex.OUT.exists() or v3_tex.OUT.read_text(encoding="utf-8") != v3_tex.render(held)):
+        errs.append("heldout: paper/heldout_results.tex is missing or stale; run v3_tex.py")
     errs += definition_errors()
     if "--write-units" in sys.argv[1:]:
         UNITS.write_text(render_units(), encoding="utf-8")

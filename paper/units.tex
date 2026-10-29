@@ -12,7 +12,9 @@ shared SemantEq set & the 1,135 full-set pairs that SemantEq-Eval also scores; p
 false accept (FA) & an accept of a pair labelled inequivalent under the label set named with it; published labels unless stated\\
 false reject & a reject of a pair labelled equivalent under the named labels; a certified formal difference, not a proof of unfaithfulness\\
 decided & accept, reject or off-domain with both regrouping certificates; residual is reported separately and counted as decided only where stated\\
-residual & a proof of component equivalence on an alignment that ends early; never an accept\\
+residual & a proof of component equivalence on an alignment that ends early; never an accept in v2, while v2.1 accepts it when the two sides are the same proposition up to reducible unfolding\\
+held-out set & the 1,478 labelled ProofNetVerif valid pairs whose statements elaborate (953 U, 525 F), from 183 problems none of which is in the test split; published labels; read only after the protocol was frozen\\
+v2, v2.1 & v2: the criterion of Section 2, used in every development table; v2.1: v2 with regrouping certificates completed for every pair and the reducible-identity accept above, fixed on the full set before the freeze\\
 located reject & a reject whose certificate is a component goal (nhyp or ncin) on telescopes with a nonempty prefix or a hoisted hypothesis; a mechanical location, counted per pair\\
 component-goal reject & a reject decided by a component goal rather than by a refuted closed equivalence; counted per pair (43 on labelled-equivalent pairs, resting on 30 distinct statements)\\
 blind audit & 249 items shown as 226 distinct statements; a verdict counts only when both annotators agree; rates count distinct statements\\

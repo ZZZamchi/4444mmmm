@@ -1,0 +1,123 @@
+{
+ "split": "test",
+ "pairs": 1140,
+ "inequivalent": 694,
+ "equivalent": 446,
+ "metrics": {
+  "closed": {
+   "false_accept": 273,
+   "false_accept_pct": 39.34,
+   "false_accept_ci": [
+    35.77,
+    43.02
+   ],
+   "accept": 384,
+   "accept_pct": 86.1,
+   "accept_ci": [
+    82.58,
+    89.0
+   ],
+   "reject_inequivalent": 158,
+   "reject_equivalent": 15,
+   "reject_precision_pct": 91.33,
+   "decided_pct": 72.81,
+   "verdicts": {
+    "F:accept": 384,
+    "F:undecided": 47,
+    "F:reject": 15,
+    "U:reject": 158,
+    "U:accept": 273,
+    "U:undecided": 263
+   }
+  },
+  "v2": {
+   "false_accept": 14,
+   "false_accept_pct": 2.02,
+   "false_accept_ci": [
+    1.21,
+    3.36
+   ],
+   "accept": 248,
+   "accept_pct": 55.61,
+   "accept_ci": [
+    50.97,
+    60.15
+   ],
+   "reject_inequivalent": 328,
+   "reject_equivalent": 51,
+   "reject_precision_pct": 86.54,
+   "decided_pct": 56.23,
+   "verdicts": {
+    "F:residual": 95,
+    "F:accept": 248,
+    "F:unknown": 52,
+    "F:reject": 51,
+    "U:reject": 328,
+    "U:unknown": 252,
+    "U:residual": 100,
+    "U:accept": 14
+   },
+   "located_rejects": 244,
+   "located_pct": 74.39
+  },
+  "v2.1": {
+   "false_accept": 14,
+   "false_accept_pct": 2.02,
+   "false_accept_ci": [
+    1.21,
+    3.36
+   ],
+   "accept": 277,
+   "accept_pct": 62.11,
+   "accept_ci": [
+    57.52,
+    66.49
+   ],
+   "reject_inequivalent": 356,
+   "reject_equivalent": 51,
+   "reject_precision_pct": 87.47,
+   "decided_pct": 61.23,
+   "verdicts": {
+    "F:residual": 66,
+    "F:accept": 277,
+    "F:unknown": 52,
+    "F:reject": 51,
+    "U:reject": 356,
+    "U:unknown": 224,
+    "U:residual": 100,
+    "U:accept": 14
+   },
+   "located_rejects": 244,
+   "located_pct": 68.54
+  }
+ },
+ "hypotheses": {
+  "H1_closed_vs_v2_false_accepts": {
+   "discordant": [
+    259,
+    0
+   ],
+   "p": 2.1590421387736112e-78,
+   "holds": true
+  },
+  "H2_v21_vs_v2_accepts": {
+   "discordant": [
+    29,
+    0
+   ],
+   "p_one_sided": 1.862645149230957e-09,
+   "false_accept_increase_pp": 0.0,
+   "holds": true
+  }
+ },
+ "located": {
+  "v2": {
+   "located": 244,
+   "share_pct": 74.39
+  },
+  "v2.1": {
+   "located": 244,
+   "share_pct": 68.54
+  }
+ }
+}

@@ -49,7 +49,11 @@ From cheapest to most expensive:
    alone, in a fresh file without any cache, followed by `#print axioms`, and fails it on any error, on a
    truncated file or on an axiom beyond `propext`, `Classical.choice` and `Quot.sound` (several CPU hours;
    the stored results are `data/real/k5_standalone_audit.json` and `k5_standalone_post.json`).
-4. Each `scripts/real/<id>_*.py` reruns one experiment. The model calls need an OpenAI-compatible endpoint
+4. The held-out evaluation follows `notes/protocol-v3.md`, which was committed before the held-out split
+   was read; `scripts/real/v3_valid.py` runs its steps, `data/real/v3/valid/` holds the outputs of both runs
+   (`round1_*` before the retry of failed calls), and `scripts/real/v3_tex.py` renders
+   `paper/heldout_results.tex`.
+5. Each `scripts/real/<id>_*.py` reruns one experiment. The model calls need an OpenAI-compatible endpoint
    (`LLM_BASE_URL`, `LLM_API_KEY`; `LLM_ANTHROPIC_BASE` for `anthropic/*` models), and new calls need not
    return the proofs we obtained; see below.
 

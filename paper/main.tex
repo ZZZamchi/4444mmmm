@@ -51,7 +51,9 @@ while regrouping certificates tie the compared telescopes to the original statem
 certificates establish formal differences, not faithfulness to the informal problem; which
 components are compared depends on canonicalization and alignment, and faithfulness needs
 external evidence. With the same prover our false accepts stay at 4--15 of 694, at a measured
-cost in coverage: 56\% of the faithful pairs are accepted, against 86\% by closed equivalence.
+cost in coverage: 56\% of the faithful pairs are accepted, against 86\% by closed equivalence. On
+1,478 held-out pairs from problems not used in development, under a protocol fixed in advance,
+closed equivalence false-accepts 46\% of the unfaithful pairs and our criterion 2.7\%.
 Applied to benchmark references, the same goals give kernel-checked evidence for 34 errors in
 ProofNet\#, miniF2F and PutnamBench, 20 of them proved false or vacuous. Accepts remain necessary
 but not sufficient: constant conclusions and the absorption of a conclusion into the hypotheses
@@ -148,7 +150,9 @@ establishes a formal difference, not unfaithfulness (Tables~\ref{tab:layers} and
 \item[C.] \textbf{What it gains, what it costs, and where it fails} (RQ3,
 \S\ref{sec:measure}--\ref{sec:audit}). Against those closed false accepts, with the same prover
 ours stay at 4--15, at fewer model calls and tokens than the closed check spends
-(Table~\ref{tab:cost}). The cost is coverage, reported outcome by outcome
+(Table~\ref{tab:cost}); on held-out problems never used in development, under a protocol committed
+before the held-out split was read, the gap reproduces at 46\% against 2.7\%
+(Table~\ref{tab:heldout}). The cost is coverage, reported outcome by outcome
 (Table~\ref{tab:dist}): 137 faithful pairs are accepted only by closed equivalence, 95 of them
 returned as \V{residual} because the alignment ends early, and most undecided pairs fail in
 canonicalization and alignment, not in proof search. What the cost buys is a mechanical location:
@@ -829,6 +833,42 @@ decided verdict and \V{unknown} (36 newly decided, 23 no longer decided). No acc
 reject or the reverse, and no closed proof became a closed refutation. Closed false accepts were
 61 and 58 in the two runs (66 in their union), ours 0 in both, \V{residual} ones 19 and 23 (26). Both
 checks vary from run to run in what they decide; the meaning of a decided verdict does not.
+
+\IfFileExists{heldout_results.tex}{\input{heldout_results.tex}}{}
+
+\paragraph{Held-out evaluation (Table~\ref{tab:heldout}).} The canonicalization rules were developed
+on the 300-pair subset of the test split (Appendix~\ref{app:repro}), so every number above is
+measured on data the rules have seen. Before reading anything else we therefore committed a
+protocol that fixes the arms, the prover and its budget, the verdict function, the metrics, four
+hypotheses and a decision rule, and locked the ProofNetVerif valid split in code until the
+protocol was frozen (\texttt{notes/protocol-v3.md}). The valid split draws on 183 ProofNet problems,
+none of them among the 178 of the test split; \HeldValidPairs{} of its 2,300 pairs elaborate
+(\HeldValidU{} inequivalent, \HeldValidF{} equivalent), most of the others because the candidate
+relies on automatically bound implicit variables or on a summation notation that the current
+Mathlib no longer parses. Besides v2, the criterion of the tables above, we froze v2.1, which adds
+two steps that use only Lean and were fixed on the test split: regrouping certificates are
+completed for every pair, not only for decided ones, and a \V{residual} pair whose \texttt{acc}
+goal holds by \texttt{Iff.rfl} at reducible transparency is accepted, since its two sides are then
+the same proposition up to reducible unfolding, which no collapse can produce. On the test split
+the two steps add 28 certified rejects and 29 accepts of equivalent pairs and no false accept.
+With the prover and budget of Table~\ref{tab:full}, closed equivalence accepts
+\HeldValidClosedFA{} of the \HeldValidU{} held-out inequivalent pairs (\HeldValidClosedFAPct\%),
+more than on the development set, and our criterion \HeldValidVtwoFA{} (\HeldValidVtwoFAPct\%,
+95\% interval \HeldValidVtwoFACI\%): \HeldValidHoneB{} inequivalent pairs are accepted only by
+closed equivalence and \HeldValidHoneC{} only by ours (exact McNemar $p\HeldValidHoneP$). Our rate
+matches that of the 544 inequivalent development pairs outside the subset on which the rules were
+developed (Fisher $p\HeldValidHfourP$): the zero on the subset (\S\ref{sec:exp}) did not carry over,
+and the full-set rate did. v2.1 accepts \HeldValidVtwoOneAcc{} of the \HeldValidF{} equivalent pairs
+(\HeldValidVtwoOneAccPct\%) against \HeldValidVtwoAcc{} for v2, \HeldValidHtwoB{} more and
+\HeldValidHtwoC{} fewer (one-sided $p\HeldValidHtwoP$), with no false accept added; by the decision
+rule fixed in advance it is the criterion we recommend, while the tables above, which analyse the
+frozen rules of \S\ref{sec:framework}, keep v2. Of the held-out rejects of inequivalent pairs,
+\HeldValidVtwoLocated{} of \HeldValidVtwoRejU{} are located. Canonicalization fails on 88 held-out
+pairs against 5 on the test split, all for metavariables left in the elaborated statement; they
+count as \V{unknown}. Model calls that failed with gateway or connection errors (2.9\% of the
+attempts) were retried once with identical requests, as on the test split; the retry turned 7
+closed and 7 component verdicts from undecided to decided and changed no decided verdict
+(\texttt{v3\_valid.py}).
 
 %======================================================================
 \section{Evaluating candidate formalizations}\label{sec:exp}
@@ -2437,7 +2477,8 @@ accept is not thereby shown to differ. \texttt{paper\_check.py} recomputes the m
 checked prose numbers from the stored results and fails on any difference; the numbers it does
 not yet check are listed, by section, in \texttt{paper\_coverage.json}.
 
-\paragraph{What was fixed in advance.} No analysis was pre-registered. The canonicalization rules
+\paragraph{What was fixed in advance.} Apart from the held-out evaluation of \S\ref{sec:measure},
+whose protocol was committed before the held-out split was read, no analysis was pre-registered. The canonicalization rules
 (\texttt{CanonV2.lean}) were written after pilot runs on 100 pairs of the 300-pair subset and fixed
 with the run on the subset itself, and they have not changed since. The subset is a random sample
 of 150 pairs per label; the other 840 pairs of the full set, ProofNet-Verified
@@ -2446,7 +2487,8 @@ were fixed. Against this split all our false accepts lie outside the subset: 0 o
 inequivalent pairs against 14 of the other 544 with Opus (Fisher $p=0.049$, counting pairs, which
 share statements) and 0 against 9 with DeepSeek ($p=0.22$), while equivalent pairs are accepted
 more often outside it (59\% against 49\% with Opus). The rules may thus fit the pairs they were
-developed on, and the full-set rates, not the subset's, are the ones to quote. The blind audit's
+developed on, and the full-set rates, not the subset's, are the ones to quote; on problems never
+used in development (Table~\ref{tab:heldout}) the false-accept rate is again the full-set one. The blind audit's
 items and questions were fixed before annotation (\S\ref{sec:blind}). Defined after the data they
 are scored on had been seen, and therefore exploratory, are the accept rules that add filters or BEq+ (Table~\ref{tab:levels}), the
 combination with SemantEq (Table~\ref{tab:common}) and the two rules of Appendix~\ref{app:k19}.

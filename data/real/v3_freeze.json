@@ -1,0 +1,15 @@
+{
+ "commit": "378c505174ef9f1d938da53cd140711a9284eca8",
+ "frozen": "2026-10-28",
+ "protocol": "notes/protocol-v3.md",
+ "held_out": "ProofNetVerif valid, published labels",
+ "arms": {
+  "closed": "closed equivalence, four closed goals (f2 tiers t0, t1, then one proposal and one repair)",
+  "v2": "CanonV2 with the paper's verdict function (paper_check.verdict) after E2 certificate completion of decided pairs",
+  "v2.1": "v2 plus R0 (SPLIT_TAC2, then SPLIT_TAC3, on every missing regrouping goal) and R3 (IDENT_TAC on the acc goal of residual pairs)"
+ },
+ "prover": "anthropic/claude-opus-5.5",
+ "budget": "fixed tactics, one model proposal per open goal, one repair round (Table full)",
+ "scorer": "scripts/real/v3_valid.py score",
+ "human_sample_seed": 20261028
+}

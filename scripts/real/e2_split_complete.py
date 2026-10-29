@@ -51,7 +51,7 @@ def load():
     if WHICH == "g1":
         from realdata import proofnetverif
         res_file = RESULTS or ROOT / "data" / "real" / "g1_results.json"
-        rows = {r.row_id: r for r in proofnetverif("test")}
+        rows = {r.row_id: r for r in proofnetverif(f2.SPLIT)}
     else:
         import g4_pnv as g4
         g4.OUT = ROOT / "data" / "real" / "g4_results.json"

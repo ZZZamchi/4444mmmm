@@ -13,7 +13,8 @@ RAW = Path(__file__).resolve().parents[2] / "data" / "real" / "raw" / "hf"
 
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
-    for split in ("valid", "test"):
+    # the valid split is held out (notes/protocol-v3.md)
+    for split in ("test",):
         d = pd.read_parquet(RAW / f"ProofNetVerif-{split}.parquet")
         print(split, d.shape, list(d.columns))
         print(d["correct"].value_counts().to_dict())

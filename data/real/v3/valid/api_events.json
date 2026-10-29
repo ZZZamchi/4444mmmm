@@ -1,0 +1,9 @@
+{
+ "since": "2026-10-29T10:36:12",
+ "events": {
+  "ok": 40,
+  "error": 24,
+  "exhausted_retry": 14
+ },
+ "error_rate": 0.0025
+}

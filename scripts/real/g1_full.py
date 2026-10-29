@@ -186,7 +186,7 @@ def closed(pairs, t0) -> dict:
 def main() -> None:
     sys.stdout.reconfigure(encoding="utf-8")
     t0 = time.time()
-    rows = {r.row_id: r for r in proofnetverif("test")}
+    rows = {r.row_id: r for r in proofnetverif(f2.SPLIT)}
     f2_pairs = json.loads(f2.OUT.read_text(encoding="utf-8"))["pairs"]
     pairs = [(rows[p["row_id"]], f2.normalize(to_prop(rows[p["row_id"]].gold)), f2.normalize(to_prop(rows[p["row_id"]].pred)))
              for p in f2_pairs]
