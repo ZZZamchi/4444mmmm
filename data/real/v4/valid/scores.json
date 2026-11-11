@@ -1,0 +1,129 @@
+{
+ "split": "valid",
+ "pairs": 1478,
+ "inequivalent": 953,
+ "equivalent": 525,
+ "metrics": {
+  "v2.1": {
+   "false_accept": 26,
+   "false_accept_pct": 2.73,
+   "false_accept_ci": [
+    1.87,
+    3.97
+   ],
+   "accept": 303,
+   "accept_pct": 57.71,
+   "accept_ci": [
+    53.45,
+    61.87
+   ],
+   "verdicts": {
+    "F:accept": 303,
+    "F:off_domain": 1,
+    "F:reject": 63,
+    "F:residual": 94,
+    "F:unknown": 64,
+    "U:accept": 26,
+    "U:reject": 479,
+    "U:residual": 130,
+    "U:unknown": 318
+   }
+  },
+  "v4": {
+   "false_accept": 35,
+   "false_accept_pct": 3.67,
+   "false_accept_ci": [
+    2.65,
+    5.06
+   ],
+   "accept": 323,
+   "accept_pct": 61.52,
+   "accept_ci": [
+    57.29,
+    65.59
+   ],
+   "verdicts": {
+    "F:accept": 323,
+    "F:off_domain": 1,
+    "F:reject": 63,
+    "F:residual": 72,
+    "F:unknown": 66,
+    "U:accept": 35,
+    "U:reject": 482,
+    "U:residual": 124,
+    "U:unknown": 312
+   }
+  },
+  "v2.1+L,NF": {
+   "false_accept": 34,
+   "false_accept_pct": 3.57,
+   "false_accept_ci": [
+    2.56,
+    4.94
+   ],
+   "accept": 317,
+   "accept_pct": 60.38,
+   "accept_ci": [
+    56.14,
+    64.47
+   ],
+   "verdicts": {
+    "F:accept": 317,
+    "F:off_domain": 1,
+    "F:reject": 63,
+    "F:residual": 80,
+    "F:unknown": 64,
+    "U:accept": 34,
+    "U:reject": 479,
+    "U:residual": 122,
+    "U:unknown": 318
+   }
+  },
+  "univ0m,align only": {
+   "false_accept": 26,
+   "false_accept_pct": 2.73,
+   "false_accept_ci": [
+    1.87,
+    3.97
+   ],
+   "accept": 309,
+   "accept_pct": 58.86,
+   "accept_ci": [
+    54.6,
+    62.99
+   ],
+   "verdicts": {
+    "F:accept": 309,
+    "F:off_domain": 1,
+    "F:reject": 63,
+    "F:residual": 86,
+    "F:unknown": 66,
+    "U:accept": 26,
+    "U:reject": 482,
+    "U:residual": 133,
+    "U:unknown": 312
+   }
+  }
+ },
+ "H5_v4_vs_v21_accepts": {
+  "discordant": [
+   20,
+   0
+  ],
+  "p_one_sided": 9.5367431640625e-07,
+  "false_accept_increase_pp": 0.94,
+  "holds": true
+ },
+ "changed_pairs": 132,
+ "new_false_accepts": [
+  "pnv-valid-1017",
+  "pnv-valid-1198",
+  "pnv-valid-1203",
+  "pnv-valid-1484",
+  "pnv-valid-1696",
+  "pnv-valid-1929",
+  "pnv-valid-1962",
+  "pnv-valid-2020",
+  "pnv-valid-2104"
+ ]
+}

@@ -1,0 +1,980 @@
+{
+ "v2.1": {
+  "F_accept": 277,
+  "F_accept_pct": 62.11,
+  "U_accept": 14,
+  "U_accept_pct": 2.02,
+  "verdicts": {
+   "F:accept": 277,
+   "F:reject": 51,
+   "F:residual": 66,
+   "F:unknown": 52,
+   "U:accept": 14,
+   "U:reject": 356,
+   "U:residual": 100,
+   "U:unknown": 224
+  }
+ },
+ "v2.1+L": {
+  "F_accept": 283,
+  "F_accept_pct": 63.45,
+  "U_accept": 14,
+  "U_accept_pct": 2.02,
+  "verdicts": {
+   "F:accept": 283,
+   "F:reject": 51,
+   "F:residual": 60,
+   "F:unknown": 52,
+   "U:accept": 14,
+   "U:reject": 356,
+   "U:residual": 100,
+   "U:unknown": 224
+  }
+ },
+ "perm@tactics": {
+  "F_accept": 277,
+  "F_accept_pct": 62.11,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 277,
+   "F:reject": 51,
+   "F:residual": 66,
+   "F:unknown": 52,
+   "U:accept": 13,
+   "U:reject": 356,
+   "U:residual": 100,
+   "U:unknown": 225
+  },
+  "flips": {
+   "U:accept->unknown": 1
+  }
+ },
+ "perm+L@tactics": {
+  "F_accept": 283,
+  "F_accept_pct": 63.45,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 283,
+   "F:reject": 51,
+   "F:residual": 60,
+   "F:unknown": 52,
+   "U:accept": 13,
+   "U:reject": 356,
+   "U:residual": 100,
+   "U:unknown": 225
+  },
+  "flips": {
+   "F:residual->accept": 6,
+   "U:accept->unknown": 1
+  }
+ },
+ "perm@full": {
+  "F_accept": 277,
+  "F_accept_pct": 62.11,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 277,
+   "F:reject": 51,
+   "F:residual": 66,
+   "F:unknown": 52,
+   "U:accept": 13,
+   "U:reject": 356,
+   "U:residual": 100,
+   "U:unknown": 225
+  },
+  "flips": {
+   "U:accept->unknown": 1
+  }
+ },
+ "perm+L@full": {
+  "F_accept": 283,
+  "F_accept_pct": 63.45,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 283,
+   "F:reject": 51,
+   "F:residual": 60,
+   "F:unknown": 52,
+   "U:accept": 13,
+   "U:reject": 356,
+   "U:residual": 100,
+   "U:unknown": 225
+  },
+  "flips": {
+   "F:residual->accept": 6,
+   "U:accept->unknown": 1
+  }
+ },
+ "univ0m@tactics": {
+  "F_accept": 281,
+  "F_accept_pct": 63.0,
+  "U_accept": 14,
+  "U_accept_pct": 2.02,
+  "verdicts": {
+   "F:accept": 281,
+   "F:reject": 51,
+   "F:residual": 59,
+   "F:unknown": 55,
+   "U:accept": 14,
+   "U:reject": 355,
+   "U:residual": 76,
+   "U:unknown": 249
+  },
+  "flips": {
+   "F:residual->accept": 4,
+   "F:residual->unknown": 3,
+   "U:reject->unknown": 1,
+   "U:residual->unknown": 24
+  }
+ },
+ "univ0m+L@tactics": {
+  "F_accept": 293,
+  "F_accept_pct": 65.7,
+  "U_accept": 14,
+  "U_accept_pct": 2.02,
+  "verdicts": {
+   "F:accept": 293,
+   "F:reject": 51,
+   "F:residual": 47,
+   "F:unknown": 55,
+   "U:accept": 14,
+   "U:reject": 355,
+   "U:residual": 76,
+   "U:unknown": 249
+  },
+  "flips": {
+   "F:residual->accept": 16,
+   "F:residual->unknown": 3,
+   "U:reject->unknown": 1,
+   "U:residual->unknown": 24
+  }
+ },
+ "univ0m@full": {
+  "F_accept": 281,
+  "F_accept_pct": 63.0,
+  "U_accept": 14,
+  "U_accept_pct": 2.02,
+  "verdicts": {
+   "F:accept": 281,
+   "F:reject": 51,
+   "F:residual": 59,
+   "F:unknown": 55,
+   "U:accept": 14,
+   "U:reject": 355,
+   "U:residual": 76,
+   "U:unknown": 249
+  },
+  "flips": {
+   "F:residual->accept": 4,
+   "F:residual->unknown": 3,
+   "U:reject->unknown": 1,
+   "U:residual->unknown": 24
+  }
+ },
+ "univ0m+L@full": {
+  "F_accept": 293,
+  "F_accept_pct": 65.7,
+  "U_accept": 14,
+  "U_accept_pct": 2.02,
+  "verdicts": {
+   "F:accept": 293,
+   "F:reject": 51,
+   "F:residual": 47,
+   "F:unknown": 55,
+   "U:accept": 14,
+   "U:reject": 355,
+   "U:residual": 76,
+   "U:unknown": 249
+  },
+  "flips": {
+   "F:residual->accept": 16,
+   "F:residual->unknown": 3,
+   "U:reject->unknown": 1,
+   "U:residual->unknown": 24
+  }
+ },
+ "univ0m,perm@tactics": {
+  "F_accept": 281,
+  "F_accept_pct": 63.0,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 281,
+   "F:reject": 51,
+   "F:residual": 59,
+   "F:unknown": 55,
+   "U:accept": 13,
+   "U:reject": 355,
+   "U:residual": 76,
+   "U:unknown": 250
+  },
+  "semanteq": {
+   "F_accept": 278,
+   "F_accept_pct": 79.43,
+   "U_accept": 16,
+   "U_accept_pct": 2.03,
+   "verdicts": {
+    "F:accept": 278,
+    "F:reject": 5,
+    "F:residual": 47,
+    "F:unknown": 20,
+    "U:accept": 16,
+    "U:reject": 401,
+    "U:residual": 88,
+    "U:unknown": 285
+   }
+  },
+  "flips": {
+   "F:residual->accept": 4,
+   "F:residual->unknown": 3,
+   "U:accept->unknown": 1,
+   "U:reject->unknown": 1,
+   "U:residual->unknown": 24
+  }
+ },
+ "univ0m,perm+L@tactics": {
+  "F_accept": 293,
+  "F_accept_pct": 65.7,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 293,
+   "F:reject": 51,
+   "F:residual": 47,
+   "F:unknown": 55,
+   "U:accept": 13,
+   "U:reject": 355,
+   "U:residual": 76,
+   "U:unknown": 250
+  },
+  "semanteq": {
+   "F_accept": 290,
+   "F_accept_pct": 82.86,
+   "U_accept": 16,
+   "U_accept_pct": 2.03,
+   "verdicts": {
+    "F:accept": 290,
+    "F:reject": 5,
+    "F:residual": 35,
+    "F:unknown": 20,
+    "U:accept": 16,
+    "U:reject": 401,
+    "U:residual": 88,
+    "U:unknown": 285
+   }
+  },
+  "flips": {
+   "F:residual->accept": 16,
+   "F:residual->unknown": 3,
+   "U:accept->unknown": 1,
+   "U:reject->unknown": 1,
+   "U:residual->unknown": 24
+  }
+ },
+ "univ0m,perm@full": {
+  "F_accept": 281,
+  "F_accept_pct": 63.0,
+  "U_accept": 15,
+  "U_accept_pct": 2.16,
+  "verdicts": {
+   "F:accept": 281,
+   "F:reject": 51,
+   "F:residual": 61,
+   "F:unknown": 53,
+   "U:accept": 15,
+   "U:reject": 357,
+   "U:residual": 98,
+   "U:unknown": 224
+  },
+  "semanteq": {
+   "F_accept": 278,
+   "F_accept_pct": 79.43,
+   "U_accept": 18,
+   "U_accept_pct": 2.28,
+   "verdicts": {
+    "F:accept": 278,
+    "F:reject": 5,
+    "F:residual": 49,
+    "F:unknown": 18,
+    "U:accept": 18,
+    "U:reject": 403,
+    "U:residual": 110,
+    "U:unknown": 259
+   }
+  },
+  "flips": {
+   "F:residual->accept": 4,
+   "F:residual->unknown": 1,
+   "U:residual->accept": 1,
+   "U:residual->unknown": 4,
+   "U:unknown->reject": 1,
+   "U:unknown->residual": 3
+  }
+ },
+ "univ0m,perm+L@full": {
+  "F_accept": 293,
+  "F_accept_pct": 65.7,
+  "U_accept": 15,
+  "U_accept_pct": 2.16,
+  "verdicts": {
+   "F:accept": 293,
+   "F:reject": 51,
+   "F:residual": 49,
+   "F:unknown": 53,
+   "U:accept": 15,
+   "U:reject": 357,
+   "U:residual": 98,
+   "U:unknown": 224
+  },
+  "semanteq": {
+   "F_accept": 290,
+   "F_accept_pct": 82.86,
+   "U_accept": 18,
+   "U_accept_pct": 2.28,
+   "verdicts": {
+    "F:accept": 290,
+    "F:reject": 5,
+    "F:residual": 37,
+    "F:unknown": 18,
+    "U:accept": 18,
+    "U:reject": 403,
+    "U:residual": 110,
+    "U:unknown": 259
+   }
+  },
+  "flips": {
+   "F:residual->accept": 16,
+   "F:residual->unknown": 1,
+   "U:residual->accept": 1,
+   "U:residual->unknown": 4,
+   "U:unknown->reject": 1,
+   "U:unknown->residual": 3
+  }
+ },
+ "v2.1@full": {
+  "F_accept": 277,
+  "F_accept_pct": 62.11,
+  "U_accept": 14,
+  "U_accept_pct": 2.02,
+  "verdicts": {
+   "F:accept": 277,
+   "F:reject": 51,
+   "F:residual": 66,
+   "F:unknown": 52,
+   "U:accept": 14,
+   "U:reject": 356,
+   "U:residual": 100,
+   "U:unknown": 224
+  },
+  "flips": {},
+  "semanteq": {
+   "F_accept": 274,
+   "F_accept_pct": 78.29,
+   "U_accept": 17,
+   "U_accept_pct": 2.15,
+   "verdicts": {
+    "F:accept": 274,
+    "F:reject": 5,
+    "F:residual": 54,
+    "F:unknown": 17,
+    "U:accept": 17,
+    "U:reject": 402,
+    "U:residual": 112,
+    "U:unknown": 259
+   }
+  }
+ },
+ "v2.1+L@full": {
+  "F_accept": 283,
+  "F_accept_pct": 63.45,
+  "U_accept": 14,
+  "U_accept_pct": 2.02,
+  "verdicts": {
+   "F:accept": 283,
+   "F:reject": 51,
+   "F:residual": 60,
+   "F:unknown": 52,
+   "U:accept": 14,
+   "U:reject": 356,
+   "U:residual": 100,
+   "U:unknown": 224
+  },
+  "flips": {
+   "F:residual->accept": 6
+  },
+  "semanteq": {
+   "F_accept": 280,
+   "F_accept_pct": 80.0,
+   "U_accept": 17,
+   "U_accept_pct": 2.15,
+   "verdicts": {
+    "F:accept": 280,
+    "F:reject": 5,
+    "F:residual": 48,
+    "F:unknown": 17,
+    "U:accept": 17,
+    "U:reject": 402,
+    "U:residual": 112,
+    "U:unknown": 259
+   }
+  }
+ },
+ "v2.1+NF@full": {
+  "F_accept": 284,
+  "F_accept_pct": 63.68,
+  "U_accept": 14,
+  "U_accept_pct": 2.02,
+  "verdicts": {
+   "F:accept": 284,
+   "F:reject": 51,
+   "F:residual": 61,
+   "F:unknown": 50,
+   "U:accept": 14,
+   "U:reject": 356,
+   "U:residual": 100,
+   "U:unknown": 224
+  },
+  "flips": {
+   "F:residual->accept": 5,
+   "F:unknown->accept": 2
+  },
+  "semanteq": {
+   "F_accept": 281,
+   "F_accept_pct": 80.29,
+   "U_accept": 17,
+   "U_accept_pct": 2.15,
+   "verdicts": {
+    "F:accept": 281,
+    "F:reject": 5,
+    "F:residual": 49,
+    "F:unknown": 15,
+    "U:accept": 17,
+    "U:reject": 402,
+    "U:residual": 112,
+    "U:unknown": 259
+   }
+  }
+ },
+ "v2.1+L,NF@full": {
+  "F_accept": 290,
+  "F_accept_pct": 65.02,
+  "U_accept": 14,
+  "U_accept_pct": 2.02,
+  "verdicts": {
+   "F:accept": 290,
+   "F:reject": 51,
+   "F:residual": 55,
+   "F:unknown": 50,
+   "U:accept": 14,
+   "U:reject": 356,
+   "U:residual": 100,
+   "U:unknown": 224
+  },
+  "flips": {
+   "F:residual->accept": 11,
+   "F:unknown->accept": 2
+  },
+  "semanteq": {
+   "F_accept": 287,
+   "F_accept_pct": 82.0,
+   "U_accept": 17,
+   "U_accept_pct": 2.15,
+   "verdicts": {
+    "F:accept": 287,
+    "F:reject": 5,
+    "F:residual": 43,
+    "F:unknown": 15,
+    "U:accept": 17,
+    "U:reject": 402,
+    "U:residual": 112,
+    "U:unknown": 259
+   }
+  }
+ },
+ "univ0m,perm+NF@tactics": {
+  "F_accept": 288,
+  "F_accept_pct": 64.57,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 288,
+   "F:reject": 51,
+   "F:residual": 54,
+   "F:unknown": 53,
+   "U:accept": 13,
+   "U:reject": 355,
+   "U:residual": 76,
+   "U:unknown": 250
+  },
+  "semanteq": {
+   "F_accept": 285,
+   "F_accept_pct": 81.43,
+   "U_accept": 16,
+   "U_accept_pct": 2.03,
+   "verdicts": {
+    "F:accept": 285,
+    "F:reject": 5,
+    "F:residual": 42,
+    "F:unknown": 18,
+    "U:accept": 16,
+    "U:reject": 401,
+    "U:residual": 88,
+    "U:unknown": 285
+   }
+  },
+  "flips": {
+   "F:residual->accept": 9,
+   "F:residual->unknown": 3,
+   "F:unknown->accept": 2,
+   "U:accept->unknown": 1,
+   "U:reject->unknown": 1,
+   "U:residual->unknown": 24
+  }
+ },
+ "univ0m,perm+NF@full": {
+  "F_accept": 288,
+  "F_accept_pct": 64.57,
+  "U_accept": 15,
+  "U_accept_pct": 2.16,
+  "verdicts": {
+   "F:accept": 288,
+   "F:reject": 51,
+   "F:residual": 56,
+   "F:unknown": 51,
+   "U:accept": 15,
+   "U:reject": 357,
+   "U:residual": 98,
+   "U:unknown": 224
+  },
+  "semanteq": {
+   "F_accept": 285,
+   "F_accept_pct": 81.43,
+   "U_accept": 18,
+   "U_accept_pct": 2.28,
+   "verdicts": {
+    "F:accept": 285,
+    "F:reject": 5,
+    "F:residual": 44,
+    "F:unknown": 16,
+    "U:accept": 18,
+    "U:reject": 403,
+    "U:residual": 110,
+    "U:unknown": 259
+   }
+  },
+  "flips": {
+   "F:residual->accept": 9,
+   "F:residual->unknown": 1,
+   "F:unknown->accept": 2,
+   "U:residual->accept": 1,
+   "U:residual->unknown": 4,
+   "U:unknown->reject": 1,
+   "U:unknown->residual": 3
+  }
+ },
+ "univ0m,perm+L,NF@tactics": {
+  "F_accept": 300,
+  "F_accept_pct": 67.26,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 300,
+   "F:reject": 51,
+   "F:residual": 42,
+   "F:unknown": 53,
+   "U:accept": 13,
+   "U:reject": 355,
+   "U:residual": 76,
+   "U:unknown": 250
+  },
+  "semanteq": {
+   "F_accept": 297,
+   "F_accept_pct": 84.86,
+   "U_accept": 16,
+   "U_accept_pct": 2.03,
+   "verdicts": {
+    "F:accept": 297,
+    "F:reject": 5,
+    "F:residual": 30,
+    "F:unknown": 18,
+    "U:accept": 16,
+    "U:reject": 401,
+    "U:residual": 88,
+    "U:unknown": 285
+   }
+  },
+  "flips": {
+   "F:residual->accept": 21,
+   "F:residual->unknown": 3,
+   "F:unknown->accept": 2,
+   "U:accept->unknown": 1,
+   "U:reject->unknown": 1,
+   "U:residual->unknown": 24
+  }
+ },
+ "univ0m,perm+L,NF@full": {
+  "F_accept": 300,
+  "F_accept_pct": 67.26,
+  "U_accept": 15,
+  "U_accept_pct": 2.16,
+  "verdicts": {
+   "F:accept": 300,
+   "F:reject": 51,
+   "F:residual": 44,
+   "F:unknown": 51,
+   "U:accept": 15,
+   "U:reject": 357,
+   "U:residual": 98,
+   "U:unknown": 224
+  },
+  "semanteq": {
+   "F_accept": 297,
+   "F_accept_pct": 84.86,
+   "U_accept": 18,
+   "U_accept_pct": 2.28,
+   "verdicts": {
+    "F:accept": 297,
+    "F:reject": 5,
+    "F:residual": 32,
+    "F:unknown": 16,
+    "U:accept": 18,
+    "U:reject": 403,
+    "U:residual": 110,
+    "U:unknown": 259
+   }
+  },
+  "flips": {
+   "F:residual->accept": 21,
+   "F:residual->unknown": 1,
+   "F:unknown->accept": 2,
+   "U:residual->accept": 1,
+   "U:residual->unknown": 4,
+   "U:unknown->reject": 1,
+   "U:unknown->residual": 3
+  }
+ },
+ "univ0m,align@tactics": {
+  "F_accept": 281,
+  "F_accept_pct": 63.0,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 281,
+   "F:reject": 51,
+   "F:residual": 59,
+   "F:unknown": 55,
+   "U:accept": 13,
+   "U:reject": 354,
+   "U:residual": 76,
+   "U:unknown": 251
+  },
+  "flips": {
+   "F:residual->accept": 4,
+   "F:residual->unknown": 3,
+   "U:accept->unknown": 1,
+   "U:reject->unknown": 2,
+   "U:residual->unknown": 24
+  },
+  "semanteq": {
+   "F_accept": 278,
+   "F_accept_pct": 79.43,
+   "U_accept": 16,
+   "U_accept_pct": 2.03,
+   "verdicts": {
+    "F:accept": 278,
+    "F:reject": 5,
+    "F:residual": 47,
+    "F:unknown": 20,
+    "U:accept": 16,
+    "U:reject": 400,
+    "U:residual": 88,
+    "U:unknown": 286
+   }
+  }
+ },
+ "univ0m,align@full": {
+  "F_accept": 281,
+  "F_accept_pct": 63.0,
+  "U_accept": 15,
+  "U_accept_pct": 2.16,
+  "verdicts": {
+   "F:accept": 281,
+   "F:reject": 51,
+   "F:residual": 62,
+   "F:unknown": 52,
+   "U:accept": 15,
+   "U:reject": 356,
+   "U:residual": 98,
+   "U:unknown": 225
+  },
+  "flips": {
+   "F:residual->accept": 4,
+   "U:reject->unknown": 1,
+   "U:residual->accept": 1,
+   "U:residual->unknown": 4,
+   "U:unknown->reject": 1,
+   "U:unknown->residual": 3
+  },
+  "semanteq": {
+   "F_accept": 278,
+   "F_accept_pct": 79.43,
+   "U_accept": 18,
+   "U_accept_pct": 2.28,
+   "verdicts": {
+    "F:accept": 278,
+    "F:reject": 5,
+    "F:residual": 50,
+    "F:unknown": 17,
+    "U:accept": 18,
+    "U:reject": 402,
+    "U:residual": 110,
+    "U:unknown": 260
+   }
+  }
+ },
+ "univ0m,align+L@tactics": {
+  "F_accept": 293,
+  "F_accept_pct": 65.7,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 293,
+   "F:reject": 51,
+   "F:residual": 47,
+   "F:unknown": 55,
+   "U:accept": 13,
+   "U:reject": 354,
+   "U:residual": 76,
+   "U:unknown": 251
+  },
+  "flips": {
+   "F:residual->accept": 16,
+   "F:residual->unknown": 3,
+   "U:accept->unknown": 1,
+   "U:reject->unknown": 2,
+   "U:residual->unknown": 24
+  },
+  "semanteq": {
+   "F_accept": 290,
+   "F_accept_pct": 82.86,
+   "U_accept": 16,
+   "U_accept_pct": 2.03,
+   "verdicts": {
+    "F:accept": 290,
+    "F:reject": 5,
+    "F:residual": 35,
+    "F:unknown": 20,
+    "U:accept": 16,
+    "U:reject": 400,
+    "U:residual": 88,
+    "U:unknown": 286
+   }
+  }
+ },
+ "univ0m,align+L@full": {
+  "F_accept": 293,
+  "F_accept_pct": 65.7,
+  "U_accept": 15,
+  "U_accept_pct": 2.16,
+  "verdicts": {
+   "F:accept": 293,
+   "F:reject": 51,
+   "F:residual": 50,
+   "F:unknown": 52,
+   "U:accept": 15,
+   "U:reject": 356,
+   "U:residual": 98,
+   "U:unknown": 225
+  },
+  "flips": {
+   "F:residual->accept": 16,
+   "U:reject->unknown": 1,
+   "U:residual->accept": 1,
+   "U:residual->unknown": 4,
+   "U:unknown->reject": 1,
+   "U:unknown->residual": 3
+  },
+  "semanteq": {
+   "F_accept": 290,
+   "F_accept_pct": 82.86,
+   "U_accept": 18,
+   "U_accept_pct": 2.28,
+   "verdicts": {
+    "F:accept": 290,
+    "F:reject": 5,
+    "F:residual": 38,
+    "F:unknown": 17,
+    "U:accept": 18,
+    "U:reject": 402,
+    "U:residual": 110,
+    "U:unknown": 260
+   }
+  }
+ },
+ "univ0m,align+NF@tactics": {
+  "F_accept": 288,
+  "F_accept_pct": 64.57,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 288,
+   "F:reject": 51,
+   "F:residual": 54,
+   "F:unknown": 53,
+   "U:accept": 13,
+   "U:reject": 354,
+   "U:residual": 76,
+   "U:unknown": 251
+  },
+  "flips": {
+   "F:residual->accept": 9,
+   "F:residual->unknown": 3,
+   "F:unknown->accept": 2,
+   "U:accept->unknown": 1,
+   "U:reject->unknown": 2,
+   "U:residual->unknown": 24
+  },
+  "semanteq": {
+   "F_accept": 285,
+   "F_accept_pct": 81.43,
+   "U_accept": 16,
+   "U_accept_pct": 2.03,
+   "verdicts": {
+    "F:accept": 285,
+    "F:reject": 5,
+    "F:residual": 42,
+    "F:unknown": 18,
+    "U:accept": 16,
+    "U:reject": 400,
+    "U:residual": 88,
+    "U:unknown": 286
+   }
+  }
+ },
+ "univ0m,align+NF@full": {
+  "F_accept": 288,
+  "F_accept_pct": 64.57,
+  "U_accept": 15,
+  "U_accept_pct": 2.16,
+  "verdicts": {
+   "F:accept": 288,
+   "F:reject": 51,
+   "F:residual": 57,
+   "F:unknown": 50,
+   "U:accept": 15,
+   "U:reject": 356,
+   "U:residual": 98,
+   "U:unknown": 225
+  },
+  "flips": {
+   "F:residual->accept": 9,
+   "F:unknown->accept": 2,
+   "U:reject->unknown": 1,
+   "U:residual->accept": 1,
+   "U:residual->unknown": 4,
+   "U:unknown->reject": 1,
+   "U:unknown->residual": 3
+  },
+  "semanteq": {
+   "F_accept": 285,
+   "F_accept_pct": 81.43,
+   "U_accept": 18,
+   "U_accept_pct": 2.28,
+   "verdicts": {
+    "F:accept": 285,
+    "F:reject": 5,
+    "F:residual": 45,
+    "F:unknown": 15,
+    "U:accept": 18,
+    "U:reject": 402,
+    "U:residual": 110,
+    "U:unknown": 260
+   }
+  }
+ },
+ "univ0m,align+L,NF@tactics": {
+  "F_accept": 300,
+  "F_accept_pct": 67.26,
+  "U_accept": 13,
+  "U_accept_pct": 1.87,
+  "verdicts": {
+   "F:accept": 300,
+   "F:reject": 51,
+   "F:residual": 42,
+   "F:unknown": 53,
+   "U:accept": 13,
+   "U:reject": 354,
+   "U:residual": 76,
+   "U:unknown": 251
+  },
+  "flips": {
+   "F:residual->accept": 21,
+   "F:residual->unknown": 3,
+   "F:unknown->accept": 2,
+   "U:accept->unknown": 1,
+   "U:reject->unknown": 2,
+   "U:residual->unknown": 24
+  },
+  "semanteq": {
+   "F_accept": 297,
+   "F_accept_pct": 84.86,
+   "U_accept": 16,
+   "U_accept_pct": 2.03,
+   "verdicts": {
+    "F:accept": 297,
+    "F:reject": 5,
+    "F:residual": 30,
+    "F:unknown": 18,
+    "U:accept": 16,
+    "U:reject": 400,
+    "U:residual": 88,
+    "U:unknown": 286
+   }
+  }
+ },
+ "univ0m,align+L,NF@full": {
+  "F_accept": 300,
+  "F_accept_pct": 67.26,
+  "U_accept": 15,
+  "U_accept_pct": 2.16,
+  "verdicts": {
+   "F:accept": 300,
+   "F:reject": 51,
+   "F:residual": 45,
+   "F:unknown": 50,
+   "U:accept": 15,
+   "U:reject": 356,
+   "U:residual": 98,
+   "U:unknown": 225
+  },
+  "flips": {
+   "F:residual->accept": 21,
+   "F:unknown->accept": 2,
+   "U:reject->unknown": 1,
+   "U:residual->accept": 1,
+   "U:residual->unknown": 4,
+   "U:unknown->reject": 1,
+   "U:unknown->residual": 3
+  },
+  "semanteq": {
+   "F_accept": 297,
+   "F_accept_pct": 84.86,
+   "U_accept": 18,
+   "U_accept_pct": 2.28,
+   "verdicts": {
+    "F:accept": 297,
+    "F:reject": 5,
+    "F:residual": 33,
+    "F:unknown": 15,
+    "U:accept": 18,
+    "U:reject": 402,
+    "U:residual": 110,
+    "U:unknown": 260
+   }
+  }
+ }
+}

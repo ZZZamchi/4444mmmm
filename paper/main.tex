@@ -34,6 +34,7 @@ Measuring the Collapse of Closed Equivalence and Certifying Component Difference
 \author{Anonymous}
 \date{\today}
 \fi
+\IfFileExists{v4_results.tex}{\input{v4_results.tex}}{}
 
 \begin{document}
 \maketitle
@@ -53,8 +54,9 @@ components are compared depends on canonicalization and alignment, and faithfuln
 external evidence. With the same prover our false accepts stay at 4--15 of 694, at a measured
 cost in coverage: 56\% of the faithful pairs are accepted, against 86\% by closed equivalence. On
 1,478 held-out pairs from problems not used in development, under a protocol fixed in advance,
-closed equivalence false-accepts 46\% of the unfaithful pairs and our criterion 2.7\%.
-Applied to benchmark references, the same goals give kernel-checked evidence for 34 errors in
+closed equivalence false-accepts 46\% of the unfaithful pairs and our criterion 2.7\%; a second
+pre-registered protocol with normal forms and a searched alignment raises the held-out accepts of
+faithful pairs from 58\% to 62\%, at 3.7\% false accepts. Applied to benchmark references, the same goals give kernel-checked evidence for 34 errors in
 ProofNet\#, miniF2F and PutnamBench, 20 of them proved false or vacuous. Accepts remain necessary
 but not sufficient: constant conclusions and the absorption of a conclusion into the hypotheses
 defeat every check that accepts any proof of the component equivalences, so certified
@@ -182,7 +184,9 @@ We do not claim a better binary accept than BEq+, which is as precise and someti
 where candidates are close to the reference in form (Table~\ref{tab:g4}), or than SemantEq, whose
 model-free search reports 100\% precision on the ProofNetVerif test split with 51.4\% recall
 under the published labels and 65.6\% under its adjudicated ones~\cite{semanteq} (ours: 94.7\%
-and 55.6\% under the published labels, on a partly different set of pairs). Nor do we claim an
+and 55.6\% under the published labels, on a partly different set of pairs; with the development-set
+rules of Appendix~\ref{app:v4}, \VfSharedVfourPrec\% and \VfSharedVfourRecall\% under the adjudicated
+labels on the shared set). Nor do we claim an
 automatic faithfulness verdict: an accept is a necessary condition, and a reject is a certified
 formal difference whose relevance needs the informal statement. What the criterion adds is a
 certificate for every decided verdict, rejects included, and a precise account of the accepts
@@ -709,6 +713,11 @@ our 14 false accepts, and our accepts add 71 pairs that SemantEq does not accept
 labelled equivalent. Accepting what either accepts would take on all 14; accepting only what both
 accept gives up 43 accepts and no false one. The rule follows from what each side certifies, but we
 fixed it after seeing SemantEq's verdicts, so this comparison is exploratory (\texttt{k18\_combine.py}).
+With the rules of protocol v4 (Appendix~\ref{app:v4}), which were developed on these pairs, ours
+accepts \VfSharedVfourAcc{} pairs of the shared set, \VfSharedVfourFA{} of them false under the
+adjudicated labels (\VfSharedVfourPrec\% precision and \VfSharedVfourRecall\% recall, against 100\%
+and \VfSharedSemRecall\% for SemantEq-Eval), and rejects \VfSharedVfourRej{}, \VfSharedVfourFalseRej{}
+of them false.
 
 \begin{table}[t]
 \centering\small
@@ -861,8 +870,18 @@ developed (Fisher $p\HeldValidHfourP$): the zero on the subset (\S\ref{sec:exp})
 and the full-set rate did. v2.1 accepts \HeldValidVtwoOneAcc{} of the \HeldValidF{} equivalent pairs
 (\HeldValidVtwoOneAccPct\%) against \HeldValidVtwoAcc{} for v2, \HeldValidHtwoB{} more and
 \HeldValidHtwoC{} fewer (one-sided $p\HeldValidHtwoP$), with no false accept added; by the decision
-rule fixed in advance it is the criterion we recommend, while the tables above, which analyse the
-frozen rules of \S\ref{sec:framework}, keep v2. Of the held-out rejects of inequivalent pairs,
+rule of that protocol it was the criterion we recommended, while the tables above, which analyse the
+frozen rules of \S\ref{sec:framework}, keep v2. A second protocol (\texttt{notes/protocol-v4.md}),
+developed only on the test split after the first freeze and locked the same way, adds a universe-0
+normal form when universes disagree, search alignment of binders, one-sided residual locality, and
+a content-free normal-form identity on residual and unknown pairs. On the held-out split it accepts
+\HeldValidVfourAcc{} of the equivalent pairs (\HeldValidVfourAccPct\%) against
+\HeldValidVtwoOneAcc{} for v2.1, \HeldValidHfiveB{} more and \HeldValidHfiveC{} fewer (one-sided
+$p\HeldValidHfiveP$), with a false-accept increase of \HeldValidHfiveFAIncrease{} percentage points;
+by that protocol's decision rule it is the criterion we recommend, and Table~\ref{tab:heldout}
+reports v2.1 and v4 side by side. All \VfValidPubLAddU{} false accepts it adds come from the
+one-sided locality rule, and all are pointwise collapses (Appendix~\ref{app:v4}). Of the held-out
+rejects of inequivalent pairs,
 \HeldValidVtwoLocated{} of \HeldValidVtwoRejU{} are located. Canonicalization fails on 88 held-out
 pairs against 5 on the test split, all for metavariables left in the elaborated statement; they
 count as \V{unknown}. Model calls that failed with gateway or connection errors (2.9\% of the
@@ -1785,8 +1804,10 @@ hypothesis and a binder are split differently (\S\ref{sec:blind}). A uniqueness 
 close this gap; local rules do not. The two rules of Appendix~\ref{app:k19}, one of which keeps the
 alignment going past a binder without a counterpart by reading it as a \texttt{Nonempty}
 hypothesis, remove the artefacts they target and create three of the same kind. The alignment
-itself is positional, by type and role; other strategies, such as matching binders by the
-hypotheses that mention them, are untested. Second, the cross-model tables compare different models ordered by measured
+of the main tables is positional, by type and role. The searched alignment of
+Appendix~\ref{app:v4}, which also matches binders by the hypotheses that mention them, is
+insensitive to renaming and to reordering of same-type binders; its one-sided locality rule,
+which accepts on a remainder, collapses on the held-out split as closed equivalence does. Second, the cross-model tables compare different models ordered by measured
 proving power, and the controlled sweep of Table~\ref{tab:budget} varies only the number of
 proposal and repair rounds of two models; neither is a law in budget or search effort. The cost
 comparison of Table~\ref{tab:cost} counts Lean checks rather than Lean time, and it compares the
@@ -2395,6 +2416,79 @@ the correction and the relation with our goals yields 107 fully certified items 
 with GPT-4.1-mini as prover, where the original protocol obtains 13 (6.4\%) correct relations
 with Lean-passing witnesses. The low scores of witness-based evaluation thus come mostly from
 writing witnesses, not from diagnosis.
+
+\section{Normal forms and a searched alignment (protocol v4)}\label{app:v4}
+
+\VfRulesTable
+
+Most labelled-equivalent pairs that v2.1 leaves undecided have an alignment that ends early
+(Appendix~\ref{app:unk}). A second protocol (\texttt{notes/protocol-v4.md}), developed on the test
+split only and frozen before the valid split was read a second time, adds four rules to v2.1
+(\texttt{CanonV4.lean}, \texttt{k22\_align.py}). (U) When the universe parameters of the two
+statements disagree (\texttt{Type} against \texttt{Type*}), both are instantiated at universe~0, and
+the verdict certifies the universe-0 instances only. (A) The alignment is chosen by search rather
+than greedily by position: among type-compatible correspondences, the one that aligns most
+binders, then the one under which most hypotheses coincide (up to the orientation of $=$, $<$,
+$\le$ and $\ne$), then the one sharing most subterms; it depends only on the two statements and
+is fixed before any proof. (L) When one side is aligned completely and the remainder of the other
+contains no hypothesis, a \V{residual} pair is accepted: the remainder is a conclusion quantified
+over binders the first side lacks. (NF) A \V{residual} or \V{unknown} pair counts its
+\texttt{acc} goal as proved when both sides become syntactically equal after rewriting with
+content-free logical and order lemmas (the orientation of $=$ and $\ne$, $>$ and $\ge$, negation
+through quantifiers, bounded quantifiers, commutativity and associativity of $\wedge$, $\vee$,
+$\cap$, $\cup$); like the reducible identity of v2.1 this is intensional evidence. A two-sided
+version of L, which also accepts when both sides keep a remainder, added 14 false accepts on the
+test split and was dropped before the freeze.
+
+\paragraph{Renaming and reordering.} Renaming every binder of the candidate changes the greedy
+alignment of \VfRenameGreedy{} test pairs and the searched one of \VfRenameAlign{}. Reversing each
+run of adjacent binders of the same type, after renaming, changes \VfShuffleCandidates{}
+candidates. Under the greedy alignment the component goals of \VfShuffleGreedyGoals{} pairs then
+change, \VfShuffleGreedyAcc{} of them labelled-equivalent pairs that v2.1 accepts, and the pairs
+with a total alignment drop from \VfFullGreedyBeforeF{} equivalent and \VfFullGreedyBeforeU{}
+inequivalent to \VfFullGreedyAfterF{} and \VfFullGreedyAfterU{}; under the searched alignment the
+goals of \VfShuffleAlignGoals{} pairs change, \VfShuffleAlignAcc{} of them such accepts, and the
+totals stay at \VfFullAlignAfterF{} and \VfFullAlignAfterU{}.
+
+\paragraph{Results (Table~\ref{tab:v4rules}).} The pre-registered hypothesis H5, more accepts of
+equivalent pairs than v2.1 (exact McNemar, one-sided) with a false-accept increase of at most one
+percentage point, holds on both splits: \VfTestHfiveB{} against \VfTestHfiveC{} on the test split,
+and \VfValidHfiveB{} against \VfValidHfiveC{} on the held-out split ($p\VfValidHfiveP$), with an
+increase of \VfValidHfiveFAIncrease{} points. Under SemantEq's adjudicated labels v4 accepts
+\VfTestAdjVfourAcc{} of the \VfTestAdjF{} equivalent development pairs (\VfTestAdjVfourAccPct\%),
+against \VfTestAdjVtwoOneAcc{} for v2.1 and \VfTestAdjClosedAcc{} for closed equivalence, and
+\VfTestAdjVfourFA{} of the \VfTestAdjU{} inequivalent ones; \VfTestAdjVfourPrec\% of its accepts are
+of equivalent pairs, against \VfTestAdjClosedPrec\% of closed accepts. On the held-out split, where
+only the published labels exist, the shares are \VfValidPubVfourPrec\% and \VfValidPubClosedPrec\%.
+Of the \VfValidPubGap{} held-out labelled-equivalent pairs that closed equivalence accepts and v4
+does not, \VfValidPubGapReject{} are certified rejects (on the test split the adjudication relabels
+46 of our 51 such rejects as non-equivalent), \VfValidPubGapResidual{} \V{residual} and
+\VfValidPubGapUnknown{} \V{unknown}, only \VfValidPubGapUnknownTotal{} of them with a total
+alignment, and canonicalization fails on \VfValidPubGapCanonFail{}; under the adjudicated labels
+the development gap is \VfTestAdjGap{} pairs, \VfTestAdjGapResidual{} of them \V{residual},
+\VfTestAdjGapUnknown{} \V{unknown} (\VfTestAdjGapUnknownTotal{} with a total alignment) and
+\VfTestAdjGapReject{} rejects. What remains lies in canonicalization and alignment more than in
+proof search.
+
+\paragraph{The locality rule does not generalize.} U and A add \VfValidPubStepUAF{} held-out
+accepts of equivalent pairs and \VfValidPubStepUAU{} false ones, NF \VfValidPubStepNFF{} and
+\VfValidPubStepNFU{}. L, whose \VfTestPubLAdd{} development accepts were all of equivalent pairs,
+adds \VfValidPubLAddF{} and \VfValidPubLAddU{}: every false accept v4 adds on the held-out split. An
+accept by L certifies only that the two remainders are equivalent at every aligned input, which is
+a closed equivalence there and collapses when both remainders are constant. All
+\VfValidPubLAddU{} are such pointwise collapses, against \VfValidPubLFARefs{} references
+(\texttt{k22\_l\_audit.py}). \VfValidPubLFATop{} are candidates of one reference,
+$\forall p\le 1,\ f=\lambda k.\,1/(k(\log k)^p)\to\neg\exists l,\ f\to l$, which appears false as
+stated, since its terms tend to~$0$ (we have not proved this in Lean); each of these candidates
+states another false claim (\texttt{Summable}, or divergence to $+\infty$). The other four
+candidates are true but unfaithful: $7x^3+2=y^3$ with one variable for two (twice), $x:\mathbb Q$
+written over $\mathbb N$, and $\exists m\,\forall a$ swapped to $\forall a\,\exists m$. Without L
+the rules accept \VfValidPubUANFAcc{} held-out equivalent pairs (\VfValidPubUANFAccPct\%) with
+\VfValidPubUANFFA{} false accepts, as many as v2.1; that variant was chosen after the held-out
+results and is not a held-out result. We report v4 as frozen, and recommend it by the decision
+rule with this caveat: an accept by L is no stronger than a closed equivalence at the aligned
+inputs. Restricting L, for instance to remainders that are not constant on the aligned inputs, is
+a new rule and needs new data.
 
 \section{ProofNet\# reference errors}\label{app:refs}
 

@@ -1,0 +1,110 @@
+[
+ {
+  "row_id": "pnv-test-226",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/2 prefix_s=2/4 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|ℝ]",
+  "reference": "∀ {f : ℝ → ℝ} (hf : ∀ x y, |f x - f y| ≤ |x - y| ^ 2), ∃ c, f = λ x => c",
+  "candidate": "∀ {f : ℝ → ℝ} (h : ∀ t x : ℝ, abs (f t - f x) ≤ (abs (t - x))^2), ∀ x y : ℝ, f x = f y",
+  "acc_goal": "∀ {f : ℝ → ℝ},\n  ((∀ (x y : ℝ), |f x - f y| ≤ |x - y| ^ 2) ↔ ∀ (t x : ℝ), |f t - f x| ≤ |t - x| ^ 2) ∧\n    ((∃ c, f = fun x => c) ↔ ∀ (x y : ℝ), f x = f y)"
+ },
+ {
+  "row_id": "pnv-test-247",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=11/11 prefix_s=11/12 shared=7 hoist_r=0 hoist_s=0 perm=3 moved=false map=0,2,1,3,4,5,6 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|X]",
+  "reference": "∀ {α : Type} [MetricSpace α] {β : Type} [MetricSpace β] (f g : α → β) (s : Set α) (h₁ : Continuous f) (h₂ : Continuous g) (h₃ : Dense s) (h₄ : ∀ x ∈ s, f x = g x), f = g",
+  "candidate": "∀ {X Y : Type u} [MetricSpace X] [MetricSpace Y] {f g : X → Y} {P : Set X} (hP : Dense P)(hf : Continuous f) (hg : Continuous g) (h : ∀ p ∈ P, f p = g p), ∀ x, f x = g x",
+  "acc_goal": "∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n  ((Continuous f ∧ Continuous g ∧ Dense s ∧ ∀ x ∈ s, f x = g x) ↔\n      Dense s ∧ Continuous f ∧ Continuous g ∧ ∀ p ∈ s, f p = g p) ∧\n    (f = g ↔ ∀ (x : α), f x = g x)"
+ },
+ {
+  "row_id": "pnv-test-346",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=11/11 prefix_s=11/12 shared=7 hoist_r=0 hoist_s=0 perm=3 moved=false map=0,2,1,3,4,5,6 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|X]",
+  "reference": "∀ {α : Type} [MetricSpace α] {β : Type} [MetricSpace β] (f g : α → β) (s : Set α) (h₁ : Continuous f) (h₂ : Continuous g) (h₃ : Dense s) (h₄ : ∀ x ∈ s, f x = g x), f = g",
+  "candidate": "∀ {X Y : Type u} [MetricSpace X] [MetricSpace Y] (f g : X → Y) (hf : Continuous f) (hg : Continuous g) (P : Set X) (hP : Dense P) (hfg : ∀ p ∈ P, f p = g p), ∀ x, f x = g x",
+  "acc_goal": "∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n  ((Continuous f ∧ Continuous g ∧ Dense s ∧ ∀ x ∈ s, f x = g x) ↔\n      Continuous f ∧ Continuous g ∧ Dense s ∧ ∀ p ∈ s, f p = g p) ∧\n    (f = g ↔ ∀ (x : α), f x = g x)"
+ },
+ {
+  "row_id": "pnv-test-660",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=11/11 prefix_s=11/12 shared=7 hoist_r=0 hoist_s=0 perm=3 moved=true map=0,2,1,3,5,4,6 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|X]",
+  "reference": "∀ {α : Type} [MetricSpace α] {β : Type} [MetricSpace β] (f g : α → β) (s : Set α) (h₁ : Continuous f) (h₂ : Continuous g) (h₃ : Dense s) (h₄ : ∀ x ∈ s, f x = g x), f = g",
+  "candidate": "∀ {X Y : Type u} [MetricSpace X] [MetricSpace Y] {f g : X → Y} (hf : Continuous f) (hg : Continuous g) {E : Set X} (hE : Dense E) (hfg : ∀ p ∈ E, g p = f p), ∀ p : X, g p = f p",
+  "acc_goal": "∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n  ((Continuous f ∧ Continuous g ∧ Dense s ∧ ∀ x ∈ s, f x = g x) ↔\n      Continuous g ∧ Continuous f ∧ Dense s ∧ ∀ p ∈ s, f p = g p) ∧\n    (f = g ↔ ∀ (p : α), f p = g p)"
+ },
+ {
+  "row_id": "pnv-test-837",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/2 prefix_s=2/4 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|ℝ]",
+  "reference": "∀ {f : ℝ → ℝ} (hf : ∀ x y : ℝ, |(f x - f y)| ≤ (x - y) ^ 2), ∃ c, f = λ x => c",
+  "candidate": "∀ {f : ℝ → ℝ} (h : ∀ x y : ℝ, |f x - f y| ≤ (x - y) ^ 2), ∀ x y : ℝ, f x = f y",
+  "acc_goal": "∀ {f : ℝ → ℝ},\n  ((∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ↔ ∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ∧\n    ((∃ c, f = fun x => c) ↔ ∀ (x y : ℝ), f x = f y)"
+ },
+ {
+  "row_id": "pnv-test-841",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/2 prefix_s=2/4 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|ℝ]",
+  "reference": "∀ {f : ℝ → ℝ} (hf : ∀ x y : ℝ, |(f x - f y)| ≤ (x - y) ^ 2), ∃ c, f = λ x => c",
+  "candidate": "∀ {f : ℝ → ℝ} (h1 : ∀ x y : ℝ, |f x - f y| ≤ (x - y) ^ 2), ∀ x y : ℝ, f x = f y",
+  "acc_goal": "∀ {f : ℝ → ℝ},\n  ((∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ↔ ∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ∧\n    ((∃ c, f = fun x => c) ↔ ∀ (x y : ℝ), f x = f y)"
+ },
+ {
+  "row_id": "pnv-test-881",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=2/2 prefix_s=2/4 shared=2 hoist_r=0 hoist_s=0 perm=2 moved=false map=0,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|ℤ]",
+  "reference": "¬ ∃ x y : ℤ, 3*x^2 + 2 = y^2",
+  "candidate": "∀ {x y : ℤ}, ¬ (∃ (x y : ℤ), 3 * x^2 + 2 = y^2)",
+  "acc_goal": "∀ (x y : ℤ), (True ↔ True) ∧ (¬3 * x ^ 2 + 2 = y ^ 2 ↔ ∀ (x y : ℤ), ¬3 * x ^ 2 + 2 = y ^ 2)"
+ },
+ {
+  "row_id": "pnv-test-1061",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=4/4 prefix_s=3/5 shared=3 hoist_r=0 hoist_s=1 perm=1 moved=false map=0,2,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[inst|used=false|DecidableEq G]",
+  "reference": "∀ {G : Type u} [Fintype G] [Group G] (hG : card G = 6545), ¬ IsSimpleGroup G",
+  "candidate": "∀ (G : Type u) [Group G] [Fintype G] [DecidableEq G] (hG : Fintype.card G = 6545), ¬IsSimpleGroup G",
+  "acc_goal": "∀ {G : Type u} [inst : Fintype G] [inst_1 : Group G],\n  (card G = 6545 ↔ card G = 6545) ∧ (¬IsSimpleGroup G ↔ ∀ [DecidableEq G], ¬IsSimpleGroup G)"
+ },
+ {
+  "row_id": "pnv-test-1123",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/2 prefix_s=2/4 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|ℝ]",
+  "reference": "∀ {f : ℝ → ℝ} (hf : ∀ x y : ℝ, |(f x - f y)| ≤ (x - y) ^ 2), ∃ c, f = λ x => c",
+  "candidate": "∀ {f : ℝ → ℝ} (h : ∀ x y : ℝ, |f x - f y| ≤ (x - y)^2), ∀ x y : ℝ, f x = f y",
+  "acc_goal": "∀ {f : ℝ → ℝ},\n  ((∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ↔ ∀ (x y : ℝ), |f x - f y| ≤ (x - y) ^ 2) ∧\n    ((∃ c, f = fun x => c) ↔ ∀ (x y : ℝ), f x = f y)"
+ },
+ {
+  "row_id": "pnv-test-1139",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=11/11 prefix_s=11/12 shared=7 hoist_r=0 hoist_s=0 perm=3 moved=true map=0,2,1,3,5,4,6 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|X]",
+  "reference": "∀ {α : Type} [MetricSpace α] {β : Type} [MetricSpace β] (f g : α → β) (s : Set α) (h₁ : Continuous f) (h₂ : Continuous g) (h₃ : Dense s) (h₄ : ∀ x ∈ s, f x = g x), f = g",
+  "candidate": "∀ {X Y : Type u} [MetricSpace X] [MetricSpace Y] {f g : X → Y} {E : Set X} (hE : Dense E) (hf : Continuous f) (hg : Continuous g) (hfg : ∀ p ∈ E, g p = f p), ∀ p : X, g p = f p",
+  "acc_goal": "∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n  ((Continuous f ∧ Continuous g ∧ Dense s ∧ ∀ x ∈ s, f x = g x) ↔\n      Dense s ∧ Continuous g ∧ Continuous f ∧ ∀ p ∈ s, f p = g p) ∧\n    (f = g ↔ ∀ (p : α), f p = g p)"
+ },
+ {
+  "row_id": "pnv-test-1170",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=11/11 prefix_s=11/12 shared=7 hoist_r=0 hoist_s=0 perm=3 moved=false map=0,2,1,3,4,5,6 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|X]",
+  "reference": "∀ {α : Type} [MetricSpace α] {β : Type} [MetricSpace β] (f g : α → β) (s : Set α) (h₁ : Continuous f) (h₂ : Continuous g) (h₃ : Dense s) (h₄ : ∀ x ∈ s, f x = g x), f = g",
+  "candidate": "∀ {X Y : Type u} [MetricSpace X] [MetricSpace Y] {f g : X → Y} (hf : Continuous f) (hg : Continuous g) (P : Set X) (hPd : Dense P) (h : ∀ p ∈ P, f p = g p), ∀ x : X, f x = g x",
+  "acc_goal": "∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n  ((Continuous f ∧ Continuous g ∧ Dense s ∧ ∀ x ∈ s, f x = g x) ↔\n      Continuous f ∧ Continuous g ∧ Dense s ∧ ∀ p ∈ s, f p = g p) ∧\n    (f = g ↔ ∀ (x : α), f x = g x)"
+ },
+ {
+  "row_id": "pnv-test-1411",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=11/11 prefix_s=11/12 shared=7 hoist_r=0 hoist_s=0 perm=3 moved=true map=0,2,1,3,6,5,4 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|X]",
+  "reference": "∀ {α : Type} [MetricSpace α] {β : Type} [MetricSpace β] (f g : α → β) (s : Set α) (h₁ : Continuous f) (h₂ : Continuous g) (h₃ : Dense s) (h₄ : ∀ x ∈ s, f x = g x), f = g",
+  "candidate": "∀ {X Y : Type u} [MetricSpace X] [MetricSpace Y] (E : Set X) (hE : Dense E) (f g : X → Y) (hf : Continuous f) (hg : Continuous g) (hfg : ∀ (p : X), p ∈ E → g p = f p), ∀ (p : X), g p = f p",
+  "acc_goal": "∀ {α : Type} [inst : MetricSpace α] {β : Type} [inst_1 : MetricSpace β] (f g : α → β) (s : Set α),\n  ((Continuous f ∧ Continuous g ∧ Dense s ∧ ∀ x ∈ s, f x = g x) ↔\n      Dense s ∧ Continuous g ∧ Continuous f ∧ ∀ p ∈ s, f p = g p) ∧\n    (f = g ↔ ∀ (p : α), f p = g p)"
+ }
+]

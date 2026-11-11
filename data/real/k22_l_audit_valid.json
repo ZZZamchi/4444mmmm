@@ -1,0 +1,200 @@
+[
+ {
+  "row_id": "pnv-valid-24",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/7 prefix_s=5/5 shared=2 hoist_r=3 hoist_s=0 perm=1 moved=false map=1,0 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=true|↑Ω✝] next_s=[none]",
+  "reference": "∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : Ω) (h : IsOpen Ω) (hf : DifferentiableOn ℂ f Ω) (hc : ∃ (c : ℝ), ∀ z ∈ Ω, (f z).re = c), f a = f b",
+  "candidate": "∀ {Ω : Set ℂ} (f : ℂ → ℂ) (hf : IsOpen Ω) (hf_holo : ∀ z ∈ Ω, DifferentiableAt ℂ f z) (h_re_const : ∃ c : ℝ, ∀ z ∈ Ω, (f z).re = c), ∃ c : ℂ, ∀ z ∈ Ω, f z = c",
+  "acc_goal": "∀ {f : ℂ → ℂ} (Ω : Set ℂ),\n  ((IsOpen Ω ∧ DifferentiableOn ℂ f Ω ∧ ∃ c, ∀ z ∈ Ω, (f z).re = c) ↔\n      IsOpen Ω ∧ (∀ z ∈ Ω, DifferentiableAt ℂ f z) ∧ ∃ c, ∀ z ∈ Ω, (f z).re = c) ∧\n    ((∀ (a b : ↑Ω), f ↑a = f ↑b) ↔ ∃ c, ∀ z ∈ Ω, f z = c)"
+ },
+ {
+  "row_id": "pnv-valid-481",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=4/9 prefix_s=8/8 shared=4 hoist_r=4 hoist_s=0 perm=2 moved=false map=0,2,3,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=false|EuclideanSpace ℝ (Fin n)] next_s=[none]",
+  "reference": "∀ (n : ℕ) (d r : ℝ) (x y z : EuclideanSpace ℝ (Fin n)) (h₁ : n ≥ 3) (h₂ : ‖x - y‖ = d) (h₃ : d > 0) (h₄ : r > 0) (h₅ : 2 * r > d), Set.Infinite {z : EuclideanSpace ℝ (Fin n) | ‖z - x‖ = r ∧ ‖z - y‖ = r}",
+  "candidate": "∀ {k : ℕ} (hk : k ≥ 3) (x y : EuclideanSpace ℝ (Fin k)) (d r : ℝ) (hxy : ‖x - y‖ = d) (hd : d > 0) (hr : r > 0) (h2r : 2 * r > d), { z : EuclideanSpace ℝ (Fin k) | ‖z - x‖ = r ∧ ‖z - y‖ = r }.Infinite",
+  "acc_goal": "∀ (n : ℕ) (r : ℝ) (x y : EuclideanSpace ℝ (Fin n)),\n  (n ≥ 3 ∧ ‖x - y‖ > 0 ∧ r > 0 ∧ 2 * r > ‖x - y‖ ↔ n ≥ 3 ∧ ‖x - y‖ > 0 ∧ r > 0 ∧ 2 * r > ‖x - y‖) ∧\n    ((∀ (z : EuclideanSpace ℝ (Fin n)), {z | ‖z - x‖ = r ∧ ‖z - y‖ = r}.Infinite) ↔\n      {z | ‖z - x‖ = r ∧ ‖z - y‖ = r}.Infinite)"
+ },
+ {
+  "row_id": "pnv-valid-584",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=3/3 prefix_s=3/5 shared=2 hoist_r=0 hoist_s=0 perm=1 moved=false map=0,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|G]",
+  "reference": "∀ (G : Type u) [Group G] (hG : IsCyclic $ G ⧸ (center G)), center G = ⊤",
+  "candidate": "∀ {G : Type u} [Group G] [IsCyclic (G ⧸ center G)], ∀ (x y : G), Commute x y",
+  "acc_goal": "∀ (G : Type u) [inst : Group G],\n  (IsCyclic (G ⧸ center G) ↔ IsCyclic (G ⧸ center G)) ∧ (center G = ⊤ ↔ ∀ (x y : G), Commute x y)"
+ },
+ {
+  "row_id": "pnv-valid-641",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/7 prefix_s=5/5 shared=2 hoist_r=3 hoist_s=0 perm=1 moved=false map=1,0 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=true|↑Ω✝] next_s=[none]",
+  "reference": "∀ {f : ℂ → ℂ} (Ω : Set ℂ) (a b : Ω) (h : IsOpen Ω) (hf : DifferentiableOn ℂ f Ω) (hc : ∃ (c : ℝ), ∀ z ∈ Ω, (f z).re = c), f a = f b",
+  "candidate": "∀ {Ω : Set ℂ} (f : ℂ → ℂ) (hf : IsOpen Ω) (hf_holo : ∀ z ∈ Ω, DifferentiableAt ℂ f z) (h_const : ∃ c : ℝ, ∀ z ∈ Ω, (f z).re = c), ∃ k : ℂ, ∀ z ∈ Ω, f z = k",
+  "acc_goal": "∀ {f : ℂ → ℂ} (Ω : Set ℂ),\n  ((IsOpen Ω ∧ DifferentiableOn ℂ f Ω ∧ ∃ c, ∀ z ∈ Ω, (f z).re = c) ↔\n      IsOpen Ω ∧ (∀ z ∈ Ω, DifferentiableAt ℂ f z) ∧ ∃ c, ∀ z ∈ Ω, (f z).re = c) ∧\n    ((∀ (a b : ↑Ω), f ↑a = f ↑b) ↔ ∃ k, ∀ z ∈ Ω, f z = k)"
+ },
+ {
+  "row_id": "pnv-valid-707",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=4/9 prefix_s=8/8 shared=4 hoist_r=4 hoist_s=0 perm=2 moved=false map=0,2,3,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=false|EuclideanSpace ℝ (Fin n)] next_s=[none]",
+  "reference": "∀ (n : ℕ) (d r : ℝ) (x y z : EuclideanSpace ℝ (Fin n)) (h₁ : n ≥ 3) (h₂ : ‖x - y‖ = d) (h₃ : d > 0) (h₄ : r > 0) (h₅ : 2 * r > d), Set.Infinite {z : EuclideanSpace ℝ (Fin n) | ‖z - x‖ = r ∧ ‖z - y‖ = r}",
+  "candidate": "∀ {k : ℕ} (hk : k ≥ 3) {x y : EuclideanSpace ℝ (Fin k)} (d r : ℝ) (hxy : dist x y = d) (hd : d > 0) (hr : r > 0) (h2r : 2 * r > d), ∃ (S : Set (EuclideanSpace ℝ (Fin k))), S.Infinite ∧ ∀ z ∈ S, dist z x = r ∧ dist z y = r",
+  "acc_goal": "∀ (n : ℕ) (r : ℝ) (x y : EuclideanSpace ℝ (Fin n)),\n  (n ≥ 3 ∧ ‖x - y‖ > 0 ∧ r > 0 ∧ 2 * r > ‖x - y‖ ↔ n ≥ 3 ∧ dist x y > 0 ∧ r > 0 ∧ 2 * r > dist x y) ∧\n    ((∀ (z : EuclideanSpace ℝ (Fin n)), {z | ‖z - x‖ = r ∧ ‖z - y‖ = r}.Infinite) ↔\n      ∃ S, S.Infinite ∧ ∀ z ∈ S, dist z x = r ∧ dist z y = r)"
+ },
+ {
+  "row_id": "pnv-valid-804",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=2/2 prefix_s=2/4 shared=2 hoist_r=0 hoist_s=0 perm=2 moved=false map=0,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|ℤ]",
+  "reference": "¬ ∃ x y : ℤ, 7*x^3 + 2 = y^3",
+  "candidate": "∀ {x y : ℤ}, ¬ (∃ (x y : ℤ), 7 * x ^ 3 + 2 = y ^ 3)",
+  "acc_goal": "∀ (x y : ℤ), (True ↔ True) ∧ (¬7 * x ^ 3 + 2 = y ^ 3 ↔ ∀ (x y : ℤ), ¬7 * x ^ 3 + 2 = y ^ 3)"
+ },
+ {
+  "row_id": "pnv-valid-1017",
+  "label": false,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=true|ℝ] next_s=[none]",
+  "reference": "∀ (p : ℝ) (f : ℕ → ℝ) (hp : p ≤ 1) (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)), ¬ ∃ l, Tendsto f atTop (𝓝 l)",
+  "candidate": "∀ (p : ℝ) (hp : p ≤ 1), Summable fun k => (1 : ℝ) / (k * log k ^ p)",
+  "acc_goal": "∀ (p : ℝ),\n  (p ≤ 1 ↔ p ≤ 1) ∧\n    ((∀ (l : ℝ), ¬Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / (k * log k ^ p))"
+ },
+ {
+  "row_id": "pnv-valid-1113",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=1/2 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[inst|used=false|NormedSpace ℝ (Fin m✝ → ℝ)] next_s=[none]",
+  "reference": "∀ (m : ℕ) [NormedSpace ℝ ((Fin m) → ℝ)], IsCompact (Metric.closedBall (0 : EuclideanSpace ℝ (Fin m)) 1)",
+  "candidate": "∀ (m : ℕ), IsCompact (Metric.closedBall (0 : EuclideanSpace ℝ (Fin m)) 1)",
+  "acc_goal": "∀ (m : ℕ),\n  (True ↔ True) ∧\n    ((∀ [NormedSpace ℝ (Fin m → ℝ)], IsCompact (Metric.closedBall 0 1)) ↔ IsCompact (Metric.closedBall 0 1))"
+ },
+ {
+  "row_id": "pnv-valid-1131",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=4/9 prefix_s=8/8 shared=4 hoist_r=4 hoist_s=0 perm=2 moved=false map=0,2,3,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=false|EuclideanSpace ℝ (Fin n)] next_s=[none]",
+  "reference": "∀ (n : ℕ) (d r : ℝ) (x y z : EuclideanSpace ℝ (Fin n)) (h₁ : n ≥ 3) (h₂ : ‖x - y‖ = d) (h₃ : d > 0) (h₄ : r > 0) (h₅ : 2 * r > d), Set.Infinite {z : EuclideanSpace ℝ (Fin n) | ‖z - x‖ = r ∧ ‖z - y‖ = r}",
+  "candidate": "∀ {k : ℕ} (hk : k ≥ 3) (x y : EuclideanSpace ℝ (Fin k)) (d r : ℝ) (hxy : dist x y = d) (hd : d > 0) (hr : r > 0) (h2r : 2 * r > d), {z : EuclideanSpace ℝ (Fin k) | dist z x = r ∧ dist z y = r}.Infinite",
+  "acc_goal": "∀ (n : ℕ) (r : ℝ) (x y : EuclideanSpace ℝ (Fin n)),\n  (n ≥ 3 ∧ ‖x - y‖ > 0 ∧ r > 0 ∧ 2 * r > ‖x - y‖ ↔ n ≥ 3 ∧ dist x y > 0 ∧ r > 0 ∧ 2 * r > dist x y) ∧\n    ((∀ (z : EuclideanSpace ℝ (Fin n)), {z | ‖z - x‖ = r ∧ ‖z - y‖ = r}.Infinite) ↔\n      {z | dist z x = r ∧ dist z y = r}.Infinite)"
+ },
+ {
+  "row_id": "pnv-valid-1198",
+  "label": false,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=true|ℝ] next_s=[none]",
+  "reference": "∀ (p : ℝ) (f : ℕ → ℝ) (hp : p ≤ 1) (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)), ¬ ∃ l, Tendsto f atTop (𝓝 l)",
+  "candidate": "∀ {p : ℝ} (hp : p ≤ 1), Summable fun k => (1/k) * (log k)^p",
+  "acc_goal": "∀ (p : ℝ),\n  (p ≤ 1 ↔ p ≤ 1) ∧\n    ((∀ (l : ℝ), ¬Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / k * log k ^ p)"
+ },
+ {
+  "row_id": "pnv-valid-1203",
+  "label": false,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=true|ℝ] next_s=[none]",
+  "reference": "∀ (p : ℝ) (f : ℕ → ℝ) (hp : p ≤ 1) (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)), ¬ ∃ l, Tendsto f atTop (𝓝 l)",
+  "candidate": "∀ (p : ℝ) (hp : p ≤ 1), Tendsto (fun k : ℕ => (1/k) * (log k)^p) atTop atTop",
+  "acc_goal": "∀ (p : ℝ),\n  (p ≤ 1 ↔ p ≤ 1) ∧\n    ((∀ (l : ℝ), ¬Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔\n      Tendsto (fun k => 1 / ↑k * log ↑k ^ p) atTop atTop)"
+ },
+ {
+  "row_id": "pnv-valid-1253",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=4/9 prefix_s=8/8 shared=4 hoist_r=4 hoist_s=0 perm=2 moved=false map=0,2,3,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=false|EuclideanSpace ℝ (Fin n)] next_s=[none]",
+  "reference": "∀ (n : ℕ) (d r : ℝ) (x y z : EuclideanSpace ℝ (Fin n)) (h₁ : n ≥ 3) (h₂ : ‖x - y‖ = d) (h₃ : d > 0) (h₄ : r > 0) (h₅ : 2 * r > d), Set.Infinite {z : EuclideanSpace ℝ (Fin n) | ‖z - x‖ = r ∧ ‖z - y‖ = r}",
+  "candidate": "∀ {k : ℕ} (hk : k ≥ 3) (x y : EuclideanSpace ℝ (Fin k)) (d r : ℝ) (hxy : ‖x - y‖ = d) (hd : d > 0) (hr : r > 0) (h2r : 2 * r > d), ∃ (S : Set (EuclideanSpace ℝ (Fin k))), S.Infinite ∧ ∀ z ∈ S, ‖z - x‖ = r ∧ ‖z - y‖ = r",
+  "acc_goal": "∀ (n : ℕ) (r : ℝ) (x y : EuclideanSpace ℝ (Fin n)),\n  (n ≥ 3 ∧ ‖x - y‖ > 0 ∧ r > 0 ∧ 2 * r > ‖x - y‖ ↔ n ≥ 3 ∧ ‖x - y‖ > 0 ∧ r > 0 ∧ 2 * r > ‖x - y‖) ∧\n    ((∀ (z : EuclideanSpace ℝ (Fin n)), {z | ‖z - x‖ = r ∧ ‖z - y‖ = r}.Infinite) ↔\n      ∃ S, S.Infinite ∧ ∀ z ∈ S, ‖z - x‖ = r ∧ ‖z - y‖ = r)"
+ },
+ {
+  "row_id": "pnv-valid-1290",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=2/2 prefix_s=2/4 shared=2 hoist_r=0 hoist_s=0 perm=2 moved=false map=0,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|ℤ]",
+  "reference": "¬ ∃ x y : ℤ, 7*x^3 + 2 = y^3",
+  "candidate": "∀ {x y : ℤ}, ¬ ∃ (x y : ℤ), 7 * x ^ 3 + 2 = y ^ 3",
+  "acc_goal": "∀ (x y : ℤ), (True ↔ True) ∧ (¬7 * x ^ 3 + 2 = y ^ 3 ↔ ∀ (x y : ℤ), ¬7 * x ^ 3 + 2 = y ^ 3)"
+ },
+ {
+  "row_id": "pnv-valid-1484",
+  "label": false,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=3/3 prefix_s=3/4 shared=3 hoist_r=0 hoist_s=0 perm=1 moved=false map=0,1,2 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|G]",
+  "reference": "∀ {G : Type u} [Group G] [Fintype G], ∃ (m : ℕ), m > 0 ∧ ∀ (a : G), a ^ m = 1",
+  "candidate": "∀ {G : Type u} [Group G] [Fintype G] (a : G), ∃ m : ℕ, m > 0 ∧ a ^ m = 1",
+  "acc_goal": "∀ {G : Type u} [inst : Group G] [Fintype G],\n  (True ↔ True) ∧ ((∃ m > 0, ∀ (a : G), a ^ m = 1) ↔ ∀ (a : G), ∃ m > 0, a ^ m = 1)"
+ },
+ {
+  "row_id": "pnv-valid-1605",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/2 prefix_s=2/3 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=false|Group (ZMod n)]",
+  "reference": "∀ (n : ℕ) (hn : 1 < n), IsEmpty (Group (ZMod n))",
+  "candidate": "∀ (n : ℕ) (hn : 1 < n), ¬ ∃ (G : Group (ZMod n)), True",
+  "acc_goal": "∀ (n : ℕ), (1 < n ↔ 1 < n) ∧ (IsEmpty (Group (ZMod n)) ↔ ∀ (G : Group (ZMod n)), ¬True)"
+ },
+ {
+  "row_id": "pnv-valid-1696",
+  "label": false,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=true|ℝ] next_s=[none]",
+  "reference": "∀ (p : ℝ) (f : ℕ → ℝ) (hp : p ≤ 1) (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)), ¬ ∃ l, Tendsto f atTop (𝓝 l)",
+  "candidate": "∀ (p : ℝ) (hp : p ≤ 1), Summable fun k => (1 : ℝ) / k * (log k) ^ p",
+  "acc_goal": "∀ (p : ℝ),\n  (p ≤ 1 ↔ p ≤ 1) ∧\n    ((∀ (l : ℝ), ¬Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / k * log k ^ p)"
+ },
+ {
+  "row_id": "pnv-valid-1900",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=4/9 prefix_s=7/7 shared=4 hoist_r=4 hoist_s=0 perm=2 moved=false map=0,2,3,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=false|EuclideanSpace ℝ (Fin n)] next_s=[none]",
+  "reference": "∀ (n : ℕ) (d r : ℝ) (x y z : EuclideanSpace ℝ (Fin n)) (h₁ : n ≥ 3) (h₂ : ‖x - y‖ = d) (h₃ : d > 0) (h₄ : r > 0) (h₅ : 2 * r > d), Set.Infinite {z : EuclideanSpace ℝ (Fin n) | ‖z - x‖ = r ∧ ‖z - y‖ = r}",
+  "candidate": "∀ (k : ℕ) [Fact (3 ≤ k)] (x y : EuclideanSpace ℝ (Fin k)) (hxy : x ≠ y) (d : ℝ) (hd : dist x y = d) (r : ℝ) (hr : 2 * r > d), Infinite {z : EuclideanSpace ℝ (Fin k) | dist x z = r ∧ dist y z = r}",
+  "acc_goal": "∀ (n : ℕ) (r : ℝ) (x y : EuclideanSpace ℝ (Fin n)),\n  (n ≥ 3 ∧ ‖x - y‖ > 0 ∧ r > 0 ∧ 2 * r > ‖x - y‖ ↔ Fact (3 ≤ n) ∧ x ≠ y ∧ 2 * r > dist x y) ∧\n    ((∀ (z : EuclideanSpace ℝ (Fin n)), {z | ‖z - x‖ = r ∧ ‖z - y‖ = r}.Infinite) ↔\n      Infinite ↑{z | dist x z = r ∧ dist y z = r})"
+ },
+ {
+  "row_id": "pnv-valid-1929",
+  "label": false,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=2/3 prefix_s=2/2 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=true|ℝ] next_s=[none]",
+  "reference": "∀ (p : ℝ) (f : ℕ → ℝ) (hp : p ≤ 1) (h : f = λ (k : ℕ) => (1 : ℝ) / (k * (log k) ^ p)), ¬ ∃ l, Tendsto f atTop (𝓝 l)",
+  "candidate": "∀ (p : ℝ) (hp₁ : p ≤ 1), Summable fun k => ((1 : ℝ) / (k : ℝ)) * (log k : ℝ) ^ p",
+  "acc_goal": "∀ (p : ℝ),\n  (p ≤ 1 ↔ p ≤ 1) ∧\n    ((∀ (l : ℝ), ¬Tendsto (fun k => 1 / (↑k * log ↑k ^ p)) atTop (𝓝 l)) ↔ Summable fun k => 1 / k * log k ^ p)"
+ },
+ {
+  "row_id": "pnv-valid-1962",
+  "label": false,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=1/2 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=true map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=true|ℤ] next_s=[none]",
+  "reference": "¬ ∃ x y : ℤ, 7*x^3 + 2 = y^3",
+  "candidate": "∀ (y : ℤ) (h : 7 * y^3 + 2 = y^3), False",
+  "acc_goal": "∀ (x : ℤ), (True ↔ True) ∧ ((∀ (y : ℤ), ¬7 * x ^ 3 + 2 = y ^ 3) ↔ ¬7 * x ^ 3 + 2 = x ^ 3)"
+ },
+ {
+  "row_id": "pnv-valid-1985",
+  "label": true,
+  "without_L": "residual",
+  "info": "ambiguous=true full=false prefix_r=2/2 prefix_s=2/4 shared=2 hoist_r=0 hoist_s=0 perm=2 moved=false map=0,1 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|ℤ]",
+  "reference": "¬ ∃ x y : ℤ, 7*x^3 + 2 = y^3",
+  "candidate": "∀ {x y : ℤ}, ¬ ∃ (x y : ℤ), 7 * x^3 + 2 = y^3",
+  "acc_goal": "∀ (x y : ℤ), (True ↔ True) ∧ (¬7 * x ^ 3 + 2 = y ^ 3 ↔ ∀ (x y : ℤ), ¬7 * x ^ 3 + 2 = y ^ 3)"
+ },
+ {
+  "row_id": "pnv-valid-2020",
+  "label": false,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=1/1 prefix_s=1/2 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[none] next_s=[data|used=true|ℕ]",
+  "reference": "¬ ∃ (x : ℚ), ( x ^ 2 = 12 )",
+  "candidate": "∀ {q : ℚ}, ¬ ∃ q, q * q = 12",
+  "acc_goal": "∀ (x : ℚ), (True ↔ True) ∧ (¬x ^ 2 = 12 ↔ ∀ (q : ℕ), ¬q * q = 12)"
+ },
+ {
+  "row_id": "pnv-valid-2104",
+  "label": false,
+  "without_L": "residual",
+  "info": "ambiguous=false full=false prefix_r=1/2 prefix_s=1/1 shared=1 hoist_r=0 hoist_s=0 perm=1 moved=false map=0 rest_hyp_r=0 rest_hyp_s=0 next_r=[data|used=true|ℤ] next_s=[none]",
+  "reference": "¬ ∃ x y : ℤ, 7*x^3 + 2 = y^3",
+  "candidate": "∀ {p : ℤ} (h : 7 * p^3 + 2 = p^3), false",
+  "acc_goal": "∀ (x : ℤ), (True ↔ True) ∧ ((∀ (y : ℤ), ¬7 * x ^ 3 + 2 = y ^ 3) ↔ ¬7 * x ^ 3 + 2 = x ^ 3)"
+ }
+]

@@ -8,13 +8,14 @@ quantity & definition\\
 full set & the 1,140 labelled ProofNetVerif test pairs whose statements elaborate in our Mathlib; 694 labelled inequivalent (U), 446 labelled equivalent (F); published ProofNetVerif labels\\
 subset & 300 pairs of the full set stratified 150 / 150 (published labels); experiments too costly for the full set\\
 ProofNet-Verified & 317 ProofNet\# problems with the corrected references of ProofNet-Verified; 75 originals unfaithful, 242 faithful by its own labels\\
-shared SemantEq set & the 1,135 full-set pairs that SemantEq-Eval also scores; published labels and SemantEq's adjudicated labels (102 originally equivalent pairs relabelled inequivalent)\\
+shared SemantEq set & the 1,135 full-set pairs that SemantEq-Eval also scores; published labels and SemantEq's adjudicated labels (SemantEq relabels 102 of its originally equivalent pairs inequivalent, 96 of them in this set)\\
+adjudicated full set & the full set with SemantEq's relabelling applied and every other pair keeping its published label: 350 F, 790 U; used for v4 (Appendix~\ref{app:v4})\\
 false accept (FA) & an accept of a pair labelled inequivalent under the label set named with it; published labels unless stated\\
 false reject & a reject of a pair labelled equivalent under the named labels; a certified formal difference, not a proof of unfaithfulness\\
 decided & accept, reject or off-domain with both regrouping certificates; residual is reported separately and counted as decided only where stated\\
-residual & a proof of component equivalence on an alignment that ends early; never an accept in v2, while v2.1 accepts it when the two sides are the same proposition up to reducible unfolding\\
+residual & a proof of component equivalence on an alignment that ends early; never an accept in v2, while v2.1 accepts it when the two sides are the same proposition up to reducible unfolding, and v4 also under its rules L and NF\\
 held-out set & the 1,478 labelled ProofNetVerif valid pairs whose statements elaborate (953 U, 525 F), from 183 problems none of which is in the test split; published labels; read only after the protocol was frozen\\
-v2, v2.1 & v2: the criterion of Section 2, used in every development table; v2.1: v2 with regrouping certificates completed for every pair and the reducible-identity accept above, fixed on the full set before the freeze\\
+v2, v2.1, v4 & v2: the criterion of Section 2, used in every development table; v2.1: v2 with regrouping certificates completed for every pair and the reducible-identity accept above, fixed on the full set before the freeze; v4: v2.1 with the universe normal form, searched alignment and the L and NF accepts of Appendix~\ref{app:v4}, fixed on the full set before a second freeze\\
 located reject & a reject whose certificate is a component goal (nhyp or ncin) on telescopes with a nonempty prefix or a hoisted hypothesis; a mechanical location, counted per pair\\
 component-goal reject & a reject decided by a component goal rather than by a refuted closed equivalence; counted per pair (43 on labelled-equivalent pairs, resting on 30 distinct statements)\\
 blind audit & 249 items shown as 226 distinct statements; a verdict counts only when both annotators agree; rates count distinct statements\\

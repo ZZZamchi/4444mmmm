@@ -6,7 +6,8 @@ from the stored results and to recheck the Lean certificates; it does not rerun 
 - `paper/main.tex`: the paper source. `python scripts/real/paper_check.py` recomputes every main table and
   the numbers stated in the prose from `data/real/` and compares them with the source, cell by cell.
 - `lean/Formalization/`, `lean/ExperimentsMathlib/`: Lean 4 developments. `CanonV2.lean` computes canonical
-  telescopes and the fixed goals, `Probe.lean` the per-hypothesis probes, `BenchErrors.lean` the
+  telescopes and the fixed goals (`CanonV4.lean` adds the universe normal form and the searched alignment
+  of protocol v4), `Probe.lean` the per-hypothesis probes, `BenchErrors.lean` the
   certificates for benchmark reference errors, `T1`-`T9` the formalized theory (no `sorry`, no added axioms).
 - `scripts/real/`: one script per experiment; `paper_check.py` lists which results feed which table.
 - `data/real/`: results and canonicalization caches. `data/real/ext/semanteq_manifest.jsonl` and
@@ -52,7 +53,11 @@ From cheapest to most expensive:
 4. The held-out evaluation follows `notes/protocol-v3.md`, which was committed before the held-out split
    was read; `scripts/real/v3_valid.py` runs its steps, `data/real/v3/valid/` holds the outputs of both runs
    (`round1_*` before the retry of failed calls), and `scripts/real/v3_tex.py` renders
-   `paper/heldout_results.tex`.
+   `paper/heldout_results.tex`. The second protocol, `notes/protocol-v4.md`, was frozen at the commit in
+   `data/real/v4_freeze.json`; `scripts/real/k22_align.py` runs its steps (`--split valid` for the held-out
+   split, `data/real/v4/valid/`), `k22_align.py score` is its scorer, and `scripts/real/k22_v4_tables.py`
+   renders `paper/v4_results.tex` (Appendix C). The canonicalization caches (`data/real/k22_canon_cache.json`,
+   `data/real/v4/valid/canon_cache.json`) let the scorer run without Lean.
 5. Each `scripts/real/<id>_*.py` reruns one experiment. The model calls need an OpenAI-compatible endpoint
    (`LLM_BASE_URL`, `LLM_API_KEY`; `LLM_ANTHROPIC_BASE` for `anthropic/*` models), and new calls need not
    return the proofs we obtained; see below.

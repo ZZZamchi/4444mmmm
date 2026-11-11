@@ -799,7 +799,10 @@ DEFINITIONS = {
     "ProofNet-Verified": "317 ProofNet# problems with the corrected references of ProofNet-Verified; 75 originals "
                          "unfaithful, 242 faithful by its own labels",
     "shared SemantEq set": "the 1,135 full-set pairs that SemantEq-Eval also scores; published labels and SemantEq's "
-                           "adjudicated labels (102 originally equivalent pairs relabelled inequivalent)",
+                           "adjudicated labels (SemantEq relabels 102 of its originally equivalent pairs inequivalent, "
+                           "96 of them in this set)",
+    "adjudicated full set": "the full set with SemantEq's relabelling applied and every other pair keeping its "
+                            "published label: 350 F, 790 U; used for v4 (Appendix~\\ref{app:v4})",
     "false accept (FA)": "an accept of a pair labelled inequivalent under the label set named with it; published "
                          "labels unless stated",
     "false reject": "a reject of a pair labelled equivalent under the named labels; a certified formal difference, "
@@ -807,13 +810,15 @@ DEFINITIONS = {
     "decided": "accept, reject or off-domain with both regrouping certificates; residual is reported separately "
                "and counted as decided only where stated",
     "residual": "a proof of component equivalence on an alignment that ends early; never an accept in v2, "
-                "while v2.1 accepts it when the two sides are the same proposition up to reducible unfolding",
+                "while v2.1 accepts it when the two sides are the same proposition up to reducible unfolding, "
+                "and v4 also under its rules L and NF",
     "held-out set": "the 1,478 labelled ProofNetVerif valid pairs whose statements elaborate (953 U, 525 F), from 183 "
                     "problems none of which is in the test split; published labels; read only after the protocol "
                     "was frozen",
-    "v2, v2.1": "v2: the criterion of Section 2, used in every development table; v2.1: v2 with regrouping "
-                "certificates completed for every pair and the reducible-identity accept above, fixed on the full "
-                "set before the freeze",
+    "v2, v2.1, v4": "v2: the criterion of Section 2, used in every development table; v2.1: v2 with regrouping "
+                    "certificates completed for every pair and the reducible-identity accept above, fixed on the full "
+                    "set before the freeze; v4: v2.1 with the universe normal form, searched alignment and the L and "
+                    "NF accepts of Appendix~\\ref{app:v4}, fixed on the full set before a second freeze",
     "located reject": "a reject whose certificate is a component goal (nhyp or ncin) on telescopes with a nonempty "
                       "prefix or a hoisted hypothesis; a mechanical location, counted per pair",
     "component-goal reject": "a reject decided by a component goal rather than by a refuted closed equivalence; "
@@ -851,9 +856,15 @@ def definition_errors() -> list[str]:
     overlap = json.loads((D / "v3" / "valid" / "overlap.json").read_text(encoding="utf-8"))
     facts.update({"1,478": held["pairs"], "953": held["inequivalent"], "525": held["equivalent"],
                   "183": overlap["valid_statements"] if not overlap["shared"] else -1})
+    in_shared = lambda r: f"pnv-test-{int(re.match(r'pnv:test:(\d+):', r['id']).group(1))}" in shared
+    adj = json.loads((D / "k22_v4_tables.json").read_text(encoding="utf-8"))["test"]["labels"]["adjudicated"]
+    facts.update({"96 of them": sum(in_shared(r) and r["published_equivalent"] and not r["adjudicated_equivalent"]
+                                    for r in se),
+                  "350 F, 790 U": (adj["equivalent"], adj["inequivalent"])})
     want = {"1,140": 1140, "694": 694, "446": 446, "300": 300, "150 / 150": (150, 150), "317": 317, "75": 75,
             "242": 242, "1,135": 1135, "102": 102, "249": 249, "226": 226, "43": 43, "30": 30, "7,608": 7608,
-            "2,879": 2879, "1,478": 1478, "953": 953, "525": 525, "183": 183}
+            "2,879": 2879, "1,478": 1478, "953": 953, "525": 525, "183": 183, "96 of them": 96,
+            "350 F, 790 U": (350, 790)}
     text = " ".join(DEFINITIONS.values())
     errs = [f"definitions: {k} is {facts[k]} in the data" for k in want if facts[k] != want[k]]
     errs += [f"definitions: '{k}' does not occur" for k in want if k not in text]
@@ -993,8 +1004,56 @@ def heldout_claims() -> list[tuple[str, str]]:
             rf"decided and changed no decided verdict") if not flipped else r"(?!)", "held-out: retry"),
         (ws(r"Our rate matches that of the 544 inequivalent development pairs outside the subset")
          if val["hypotheses"]["H4_v2_valid_vs_test_outside_dev"]["holds"] else r"(?!)", "held-out: H4"),
-        (ws(r"by the decision rule fixed in advance it is the criterion we recommend")
+        (ws(r"by the decision rule of that protocol it was the criterion we recommended")
          if val["hypotheses"]["H2_v21_vs_v2_accepts"]["holds"] else r"(?!)", "held-out: H2 decision"),
+        *heldout_v4_claims(val),
+    ]
+
+
+def heldout_v4_claims(val: dict) -> list[tuple[str, str]]:
+    """v4 numbers: k22_align.py score (protocol-v4.md H5) and k22_v4_tables.py; prose uses macros."""
+    ws = lambda t: t.replace(" ", r"\s+")
+    path = D / "v4" / "valid" / "scores.json"
+    if not path.exists():
+        return []
+    v4 = json.loads(path.read_text(encoding="utf-8"))
+    h5 = v4["H5_v4_vs_v21_accepts"]
+    if not h5["holds"]:
+        return [(r"(?!)", "held-out: H5 decision")]
+    t = json.loads((D / "k22_v4_tables.json").read_text(encoding="utf-8"))
+    tv, tt = t["valid"]["labels"]["published"], t["test"]["labels"]["published"]
+    la_v, la_t = tv["L_added"], tt["L_added"]
+    a = lambda d, arm: d["arms"][arm]
+    sem_adj = t["test"]["shared"]["adjudicated"]["semanteq"]
+    rb = t["test"]["robustness"]["align"]
+    when = lambda ok, pat: pat if ok else r"(?!)"
+    return [
+        (ws(r"On the held-out split it accepts \\HeldValidVfourAcc\{\} of the equivalent pairs"),
+         "held-out: v4 accept"),
+        (ws(r"with a false-accept increase of \\HeldValidHfiveFAIncrease\{\} percentage points"),
+         "held-out: H5 FA increase"),
+        (ws(r"by that protocol's decision rule it is the criterion we recommend"),
+         "held-out: H5 decision"),
+        (when(round(a(tv, "v2.1")["accept_pct"]) == 58 and round(a(tv, "v4")["accept_pct"]) == 62
+              and f"{a(tv, 'v4')['false_accept_pct']:.1f}" == "3.7",
+              ws(r"raises the held-out accepts of faithful pairs from 58\\% to 62\\%, at 3.7\\% false accepts")),
+         "abstract: v4"),
+        (when(la_v["all_new_false_accepts"],
+              ws(r"All \\VfValidPubLAddU\{\} false accepts it adds come from the one-sided locality rule")),
+         "held-out: v4 false accepts from L"),
+        (when(la_v["all_new_false_accepts"], ws(r"every false accept v4 adds on the held-out split")),
+         "v4: L adds every held-out false accept"),
+        (when(la_t["inequivalent"] == 0,
+              ws(r"L, whose \\VfTestPubLAdd\{\} development accepts were all of equivalent pairs")),
+         "v4: L on test"),
+        (when(la_v["inequivalent"] - la_v["largest_reference_group"] == 4, ws(r"The other four candidates")),
+         "v4: L false accepts outside the largest group"),
+        (when(a(tv, "U+A+NF")["false_accept"] == a(tv, "v2.1")["false_accept"], ws(r"false accepts, as many as v2.1")),
+         "v4: without L"),
+        (when(t["test"]["H5"]["holds"] and t["valid"]["H5"]["holds"], ws(r"holds on both splits")), "v4: H5 both"),
+        (when(rb["full_before_shuffle"] == rb["full_after_shuffle"], ws(r"the totals stay at")), "v4: shuffle totals"),
+        (when(sem_adj["accept_precision"] == 1.0, ws(r"against 100\\% and \\VfSharedSemRecall\\% for SemantEq-Eval")),
+         "v4: SemantEq precision"),
     ]
 
 
@@ -1051,8 +1110,14 @@ def main() -> int:
         errs.append("h2: paper/h2_results.tex is stale; run h2_tex.py")
     import v3_tex
     held = {k: json.loads(p.read_text(encoding="utf-8")) for k, p in v3_tex.SCORES.items() if p.exists()}
-    if len(held) == len(v3_tex.SCORES) and (not v3_tex.OUT.exists() or v3_tex.OUT.read_text(encoding="utf-8") != v3_tex.render(held)):
+    held_v4 = {k: s for k in v3_tex.SCORES if (s := v3_tex.load_v4(k)) is not None}
+    if len(held) == len(v3_tex.SCORES) and (not v3_tex.OUT.exists()
+            or v3_tex.OUT.read_text(encoding="utf-8") != v3_tex.render(held, held_v4)):
         errs.append("heldout: paper/heldout_results.tex is missing or stale; run v3_tex.py")
+    import k22_v4_tables
+    if k22_v4_tables.OUT.exists() and (not k22_v4_tables.TEX.exists() or k22_v4_tables.TEX.read_text(encoding="utf-8")
+                                       != k22_v4_tables.render(json.loads(k22_v4_tables.OUT.read_text(encoding="utf-8")))):
+        errs.append("v4: paper/v4_results.tex is missing or stale; run k22_v4_tables.py tex")
     errs += definition_errors()
     if "--write-units" in sys.argv[1:]:
         UNITS.write_text(render_units(), encoding="utf-8")

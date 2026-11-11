@@ -1,0 +1,16 @@
+{
+ "commit": "24dddd3f1678ced5595d5259ffc441ce69230045",
+ "frozen": "2026-11-11",
+ "protocol": "notes/protocol-v4.md",
+ "held_out": "ProofNetVerif valid, published labels (second use after v3; no pair-level content read during v4 development)",
+ "arms": {
+  "v2.1": "frozen v3 result on the same split",
+  "v4": "v2.1 plus CanonV4 flags univ0m,align and the decision rules L and NF of the protocol"
+ },
+ "flags": "univ0m,align",
+ "decision_rules": "L,NF",
+ "nf_lemmas": "ne_eq, gt_iff_lt, ge_iff_le, not_not, not_exists, not_forall, not_and, not_or, exists_prop, exists_and_left, exists_and_right, and_imp, forall_exists_index, eq_comm, and_comm, and_assoc, and_left_comm, or_comm, or_assoc, or_left_comm, Set.mem_setOf_eq, Set.nonempty_iff_ne_empty, Set.inter_comm, Set.union_comm, iff_self",
+ "prover": "anthropic/claude-opus-5.5",
+ "budget": "fixed tactics, R0 (SPLIT_TAC2 then SPLIT_TAC3), R3 (IDENT_TAC), one model proposal per open component goal, one repair round; then NF on residual and unknown",
+ "scorer": "scripts/real/k22_align.py score"
+}

@@ -1,0 +1,418 @@
+{
+ "test": {
+  "pairs": 1140,
+  "labels": {
+   "published": {
+    "equivalent": 446,
+    "inequivalent": 694,
+    "arms": {
+     "v2.1": {
+      "accept": 277,
+      "accept_pct": 62.11,
+      "accept_ci": [
+       57.52,
+       66.49
+      ],
+      "false_accept": 14,
+      "false_accept_pct": 2.02,
+      "false_accept_ci": [
+       1.21,
+       3.36
+      ],
+      "precision_pct": 95.19
+     },
+     "U+A": {
+      "accept": 281,
+      "accept_pct": 63.0,
+      "accept_ci": [
+       58.43,
+       67.36
+      ],
+      "false_accept": 15,
+      "false_accept_pct": 2.16,
+      "false_accept_ci": [
+       1.31,
+       3.54
+      ],
+      "precision_pct": 94.93
+     },
+     "U+A+NF": {
+      "accept": 288,
+      "accept_pct": 64.57,
+      "accept_ci": [
+       60.03,
+       68.87
+      ],
+      "false_accept": 15,
+      "false_accept_pct": 2.16,
+      "false_accept_ci": [
+       1.31,
+       3.54
+      ],
+      "precision_pct": 95.05
+     },
+     "v4": {
+      "accept": 300,
+      "accept_pct": 67.26,
+      "accept_ci": [
+       62.78,
+       71.46
+      ],
+      "false_accept": 15,
+      "false_accept_pct": 2.16,
+      "false_accept_ci": [
+       1.31,
+       3.54
+      ],
+      "precision_pct": 95.24
+     },
+     "closed": {
+      "accept": 384,
+      "accept_pct": 86.1,
+      "accept_ci": [
+       82.58,
+       89.0
+      ],
+      "false_accept": 273,
+      "false_accept_pct": 39.34,
+      "false_accept_ci": [
+       35.77,
+       43.02
+      ],
+      "precision_pct": 58.45
+     }
+    },
+    "L_added": {
+     "equivalent": 12,
+     "inequivalent": 0,
+     "inequivalent_references": 0,
+     "largest_reference_group": 0,
+     "all_new_false_accepts": false
+    },
+    "closed_not_v4": {
+     "pairs": 85,
+     "residual_first_binder": 19,
+     "unknown_total": 21,
+     "residual_closed": 9,
+     "reject": 13,
+     "residual_partial": 17,
+     "unknown_partial": 6
+    }
+   },
+   "adjudicated": {
+    "equivalent": 350,
+    "inequivalent": 790,
+    "arms": {
+     "v2.1": {
+      "accept": 274,
+      "accept_pct": 78.29,
+      "accept_ci": [
+       73.67,
+       82.29
+      ],
+      "false_accept": 17,
+      "false_accept_pct": 2.15,
+      "false_accept_ci": [
+       1.35,
+       3.42
+      ],
+      "precision_pct": 94.16
+     },
+     "U+A": {
+      "accept": 278,
+      "accept_pct": 79.43,
+      "accept_ci": [
+       74.89,
+       83.33
+      ],
+      "false_accept": 18,
+      "false_accept_pct": 2.28,
+      "false_accept_ci": [
+       1.45,
+       3.57
+      ],
+      "precision_pct": 93.92
+     },
+     "U+A+NF": {
+      "accept": 285,
+      "accept_pct": 81.43,
+      "accept_ci": [
+       77.02,
+       85.15
+      ],
+      "false_accept": 18,
+      "false_accept_pct": 2.28,
+      "false_accept_ci": [
+       1.45,
+       3.57
+      ],
+      "precision_pct": 94.06
+     },
+     "v4": {
+      "accept": 297,
+      "accept_pct": 84.86,
+      "accept_ci": [
+       80.72,
+       88.23
+      ],
+      "false_accept": 18,
+      "false_accept_pct": 2.28,
+      "false_accept_ci": [
+       1.45,
+       3.57
+      ],
+      "precision_pct": 94.29
+     },
+     "closed": {
+      "accept": 346,
+      "accept_pct": 98.86,
+      "accept_ci": [
+       97.1,
+       99.55
+      ],
+      "false_accept": 311,
+      "false_accept_pct": 39.37,
+      "false_accept_ci": [
+       36.02,
+       42.82
+      ],
+      "precision_pct": 52.66
+     }
+    },
+    "L_added": {
+     "equivalent": 12,
+     "inequivalent": 0,
+     "inequivalent_references": 0,
+     "largest_reference_group": 0,
+     "all_new_false_accepts": false
+    },
+    "closed_not_v4": {
+     "pairs": 50,
+     "residual_first_binder": 14,
+     "unknown_total": 11,
+     "residual_closed": 9,
+     "reject": 5,
+     "residual_partial": 10,
+     "unknown_partial": 1
+    }
+   }
+  },
+  "H5": {
+   "discordant": [
+    23,
+    0
+   ],
+   "p_one_sided": 1.1920928955078125e-07,
+   "false_accept_increase_pp": 0.14,
+   "holds": true
+  },
+  "robustness": {
+   "greedy": {
+    "renamed_map_changes": 15,
+    "shuffled_candidates": 418,
+    "shuffled_goal_changes": 413,
+    "shuffled_goal_changes_on_v21_equivalent_accepts": 123,
+    "full_before_shuffle": {
+     "F": 335,
+     "U": 264
+    },
+    "full_after_shuffle": {
+     "F": 295,
+     "U": 242
+    }
+   },
+   "align": {
+    "renamed_map_changes": 0,
+    "shuffled_candidates": 418,
+    "shuffled_goal_changes": 178,
+    "shuffled_goal_changes_on_v21_equivalent_accepts": 7,
+    "full_before_shuffle": {
+     "F": 335,
+     "U": 264
+    },
+    "full_after_shuffle": {
+     "F": 335,
+     "U": 264
+    }
+   }
+  },
+  "shared": {
+   "pairs": 1135,
+   "published": {
+    "v4": {
+     "accept": 315,
+     "false_accept": 15,
+     "reject": 406,
+     "false_reject": 51,
+     "undecided": 414,
+     "accept_precision": 0.9524,
+     "accept_recall": 0.6757,
+     "reject_precision": 0.8744,
+     "reject_recall": 0.5137,
+     "decided": 0.6352,
+     "equivalent": 444,
+     "inequivalent": 691
+    },
+    "semanteq": {
+     "accept": 235,
+     "false_accept": 0,
+     "reject": 0,
+     "false_reject": 0,
+     "undecided": 900,
+     "accept_precision": 1.0,
+     "accept_recall": 0.5293,
+     "reject_precision": null,
+     "reject_recall": 0.0,
+     "decided": 0.207,
+     "equivalent": 444,
+     "inequivalent": 691
+    }
+   },
+   "adjudicated": {
+    "v4": {
+     "accept": 315,
+     "false_accept": 18,
+     "reject": 406,
+     "false_reject": 5,
+     "undecided": 414,
+     "accept_precision": 0.9429,
+     "accept_recall": 0.8534,
+     "reject_precision": 0.9877,
+     "reject_recall": 0.5095,
+     "decided": 0.6352,
+     "equivalent": 348,
+     "inequivalent": 787
+    },
+    "semanteq": {
+     "accept": 235,
+     "false_accept": 0,
+     "reject": 0,
+     "false_reject": 0,
+     "undecided": 900,
+     "accept_precision": 1.0,
+     "accept_recall": 0.6753,
+     "reject_precision": null,
+     "reject_recall": 0.0,
+     "decided": 0.207,
+     "equivalent": 348,
+     "inequivalent": 787
+    }
+   },
+   "semanteq_accepts_v4_accepts": 226,
+   "v4_only_accepts": 89
+  }
+ },
+ "valid": {
+  "pairs": 1478,
+  "labels": {
+   "published": {
+    "equivalent": 525,
+    "inequivalent": 953,
+    "arms": {
+     "v2.1": {
+      "accept": 303,
+      "accept_pct": 57.71,
+      "accept_ci": [
+       53.45,
+       61.87
+      ],
+      "false_accept": 26,
+      "false_accept_pct": 2.73,
+      "false_accept_ci": [
+       1.87,
+       3.97
+      ],
+      "precision_pct": 92.1
+     },
+     "U+A": {
+      "accept": 309,
+      "accept_pct": 58.86,
+      "accept_ci": [
+       54.6,
+       62.99
+      ],
+      "false_accept": 26,
+      "false_accept_pct": 2.73,
+      "false_accept_ci": [
+       1.87,
+       3.97
+      ],
+      "precision_pct": 92.24
+     },
+     "U+A+NF": {
+      "accept": 310,
+      "accept_pct": 59.05,
+      "accept_ci": [
+       54.79,
+       63.17
+      ],
+      "false_accept": 26,
+      "false_accept_pct": 2.73,
+      "false_accept_ci": [
+       1.87,
+       3.97
+      ],
+      "precision_pct": 92.26
+     },
+     "v4": {
+      "accept": 323,
+      "accept_pct": 61.52,
+      "accept_ci": [
+       57.29,
+       65.59
+      ],
+      "false_accept": 35,
+      "false_accept_pct": 3.67,
+      "false_accept_ci": [
+       2.65,
+       5.06
+      ],
+      "precision_pct": 90.22
+     },
+     "closed": {
+      "accept": 463,
+      "accept_pct": 88.19,
+      "accept_ci": [
+       85.15,
+       90.68
+      ],
+      "false_accept": 435,
+      "false_accept_pct": 45.65,
+      "false_accept_ci": [
+       42.51,
+       48.82
+      ],
+      "precision_pct": 51.56
+     }
+    },
+    "L_added": {
+     "equivalent": 13,
+     "inequivalent": 9,
+     "inequivalent_references": 4,
+     "largest_reference_group": 5,
+     "all_new_false_accepts": true
+    },
+    "closed_not_v4": {
+     "pairs": 143,
+     "unknown_partial": 22,
+     "unknown_total": 8,
+     "reject": 35,
+     "canon_fail": 14,
+     "residual_partial": 18,
+     "residual_closed": 22,
+     "residual_first_binder": 23,
+     "off_domain": 1
+    }
+   }
+  },
+  "H5": {
+   "discordant": [
+    20,
+    0
+   ],
+   "p_one_sided": 9.5367431640625e-07,
+   "false_accept_increase_pp": 0.94,
+   "holds": true
+  }
+ }
+}

@@ -5694,5 +5694,1161 @@
  "g1_results_qwen3.8-27b-nothink:pnv-test-1231:split_s": {
   "source": "llm",
   "proof": "constructor\n  · intro h x y _\n    by_contra hxy\n    have h1 : ∃ y, y ≠ 0 ∧ x * y = 0 := ⟨y, hxy.1, hxy.2⟩\n    exact h x h1\n  · intro h\n    intro x\n    by_contra hx\n    obtain ⟨y, hy1, hy2⟩ := hx\n    have h_false : ¬(y ≠ 0 ∧ x * y = 0) := h x y trivial\n    exact h_false ⟨hy1, hy2⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-577:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-258:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-258:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-641:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-921:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2195:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2195:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-654:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-257:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-257:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-827:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-661:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-661:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-898:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-700:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-700:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1476:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1476:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1182:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1182:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2282:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1214:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1214:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2140:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-240:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-940:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-816:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-469:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-113:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1706:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-84:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-84:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1138:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1278:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1278:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1628:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1340:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2112:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2112:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1999:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-300:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-300:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1810:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-684:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-24:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1414:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-140:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-140:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-947:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1921:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1921:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1787:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1787:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-335:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-506:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-506:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-33:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1445:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1305:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1305:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-495:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-495:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-81:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-81:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-134:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-425:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-650:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-698:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-698:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-283:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-699:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-707:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-978:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1071:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1071:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1253:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-967:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-967:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-571:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1663:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1365:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1643:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-456:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-613:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1461:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1447:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1777:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-206:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-206:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1382:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1377:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1377:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-211:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-913:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-440:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2126:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-492:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1016:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1016:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1770:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1770:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-329:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1833:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2223:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2223:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2163:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1905:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1260:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1899:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1304:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1304:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-320:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-518:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-778:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-25:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-25:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2264:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2230:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1692:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-687:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2212:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1360:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2004:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-439:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1757:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-993:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1055:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-349:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-865:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-137:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2182:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1441:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-360:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-839:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-839:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-428:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-653:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1095:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2097:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-525:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-973:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1207:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-420:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-585:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-716:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1503:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1098:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1531:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1727:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1727:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1396:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-235:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-400:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1375:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1195:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-468:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-887:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2198:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-529:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1620:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2094:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2052:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1750:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-891:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2044:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-143:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1067:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1624:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-989:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-939:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1062:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1960:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-319:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-319:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1852:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1852:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2099:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2268:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-660:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1189:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1828:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1319:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1153:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-374:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1354:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2012:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1928:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1928:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-721:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-721:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-594:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-594:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-785:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-199:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1940:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1135:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1135:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-507:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1487:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1487:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-498:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1703:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-619:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-619:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1775:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1045:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1836:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-237:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1387:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-886:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-467:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-116:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-462:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-155:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-857:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-806:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2058:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-108:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-108:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-622:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1844:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1105:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1880:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-745:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-745:split_s": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-481:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-481:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h k x y r hh\n    obtain ⟨hk, hd, hr, h2⟩ := hh\n    exact h hk x y _ r rfl hd hr h2\n  · intro h k hk x y d r hxy hd hr h2\n    subst hxy\n    exact h x y r ⟨hk, hd, hr, h2⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1131:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1131:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h k x y r hk\n    obtain ⟨hk3, hd, hr, h2⟩ := hk\n    exact h hk3 x y (dist x y) r rfl hd hr h2\n  · intro h k hk x y d r hxy hd hr h2\n    subst hxy\n    exact h x y r ⟨hk, hd, hr, h2⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1346:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1346:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X _ G hG\n    obtain ⟨hn, hc, hd, ho⟩ := hG\n    exact @h X hn _ hc G hd ho\n  · intro h X _ _ _ G hd ho\n    exact h X ⟨inferInstance, inferInstance, hd, ho⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1255:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h G _ _ p q hpq hs\n    obtain ⟨hp, hq, hc⟩ := hpq\n    have h2 := h hp hq hc hs\n    exact absurd h2 (by decide)\n  · intro h G _ _ p q hp hq hc hs\n    exact absurd hs (h ⟨hp, hq, hc⟩)"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1255:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · rintro h G iG p q iF ⟨h1, h2, hp, hc⟩\n    exact @h G iG p q h1 h2 hp iF hc\n  · intro h G iG p q h1 h2 hp iF hc\n    exact @h G iG p q iF ⟨h1, h2, hp, hc⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2256:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h G _ _ p q hpq hs\n    obtain ⟨hp, hq, hc⟩ := hpq\n    have h2 := h hp hq hc hs\n    exact absurd h2 (by decide)\n  · intro h G _ _ p q hp hq hc hs\n    exact absurd hs (h ⟨hp, hq, hc⟩)"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-13:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-13:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hne, hc, hd, ho⟩ := hG\n    exact @h X inst hne hc G hd ho\n  · intro h X inst hne hc G hd ho\n    exact @h X inst G ⟨hne, hc, hd, ho⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-354:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-354:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · rintro h X _ G ⟨hc, hn, hG⟩\n    exact @h X _ hc hn G hG\n  · intro h X _ hc hn G hG\n    exact @h X _ G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1716:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1716:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hne, hc, ho, hd⟩ := hG\n    exact @h X inst hne hc G ho hd\n  · intro h X inst hne hc G ho hd\n    exact h G ⟨hne, hc, ho, hd⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1496:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h G _ _ p q hpq hs\n    obtain ⟨hp, hq, hc⟩ := hpq\n    have h2 := h hp hq hc hs\n    exact absurd h2 (by decide)\n  · intro h G _ _ p q hp hq hc hs\n    exact absurd hs (h ⟨hp, hq, hc⟩)"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1496:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h p q G _ _ hpq\n    obtain ⟨hp, hq, hc⟩ := hpq\n    exact h p q hp hq G hc\n  · intro h p q hp hq G _ _ hc\n    exact h p q G ⟨hp, hq, hc⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1907:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1907:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X _ G hG\n    obtain ⟨hne, hc, hd, ho⟩ := hG\n    haveI := hne\n    haveI := hc\n    exact h G hd ho\n  · intro h X _ _ _ G hd ho\n    exact h G ⟨‹Nonempty X›, ‹CompleteSpace X›, hd, ho⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1552:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1552:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · rintro hA X instX G ⟨hne, hcomp, hOpen, hDense⟩\n    haveI : Nonempty X := hne\n    haveI : CompleteSpace X := hcomp\n    exact hA G hOpen hDense\n  · rintro hB X instX instNe instComp G hOpen hDense\n    exact hB G ⟨instNe, instComp, hOpen, hDense⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1900:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2208:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-2208:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hh\n    obtain ⟨hc, hn, hG⟩ := hh\n    exact @h X inst hc hn G hG\n  · intro h X inst hc hn G hG\n    exact @h X inst G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1097:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h G _ _ p q hpq hs\n    obtain ⟨hp, hq, hc⟩ := hpq\n    have h2 := h hp hq hc hs\n    exact absurd h2 (by decide)\n  · intro h G _ _ p q hp hq hc hs\n    exact absurd hs (h ⟨hp, hq, hc⟩)"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-707:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1824:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1824:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hGs\n    obtain ⟨hc, hn, hG⟩ := hGs\n    exact @h X inst hc hn G hG\n  · intro h X inst hc hn G hG\n    exact @h X inst G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-123:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-123:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X _ G hyp\n    obtain ⟨hc, hn, ho, hd⟩ := hyp\n    exact @h X _ hc hn G ho hd\n  · intro h X _ _ _ G ho hd\n    exact h G ⟨‹CompleteSpace X›, ‹Nonempty X›, ho, hd⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1253:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1605:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h n hn G _\n    first\n      | exact h n hn ⟨G, trivial⟩\n      | exact h n hn ⟨default, trivial⟩\n      | exact h n hn ⟨⟨⟩, trivial⟩\n      | exact h n hn ⟨trivial, trivial⟩\n      | exact h n hn ⟨0, trivial⟩\n  · intro h n hn _\n    exact h 2 (by norm_num) (Multiplicative.group : Group (Multiplicative (ZMod 2))) trivial"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-771:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1103:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-434:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h _ n i j hp\n    exact h n ⟨i, j, hp⟩\n  · rintro h n ⟨i, j, hp⟩\n    exact h trivial n i j hp"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-572:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1143:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h _ p h1 h2 h3 h4 q r hqr\n    exact h p h1 h2 h3 h4 ⟨q, r, hqr⟩\n  · rintro h p h1 h2 h3 h4 ⟨q, r, hqr⟩\n    exact h trivial p h1 h2 h3 h4 q r hqr"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1231:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-472:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1892:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1892:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X _ G hG\n    obtain ⟨hc, hn, ho, hx⟩ := hG\n    haveI := hc\n    haveI := hn\n    exact h ho hx\n  · intro h X _ _ _ G ho hx\n    exact h ⟨inferInstance, inferInstance, ho, hx⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-776:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-776:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h k x y r hk d hd hdist\n    exact h k hk.1 hk.2 hd hdist\n  · intro h k hk x y hxy r d hd hdist\n    exact h k ⟨hk, hxy⟩ hd hdist"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1404:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h f _ hf\n    exact h ⟨f, hf⟩\n  · rintro h ⟨f, hf⟩\n    exact h f trivial hf"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-538:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h _ a b f hf\n    exact h hf rfl\n  · intro h a b f g hf hg\n    subst hg\n    exact h trivial hf"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-426:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h _ D hD hsub h0 hne f hf\n    exact h hD hsub h0 hne ⟨f, hf⟩\n  · rintro h D hD hsub h0 hne ⟨f, hf⟩\n    exact h trivial hD hsub h0 hne f hf"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-181:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-585:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · -- left → right: specialize the left statement to `d = ‖x - y‖`\n    intro h n r x y hxyz z\n    obtain ⟨h1, h2, h3, h4⟩ := hxyz\n    exact h n ‖x - y‖ r x y z h1 rfl h2 h3 h4\n  · -- right → left: the left hypotheses already give `‖x - y‖ > 0`\n    rintro h n d r x y z h1 h2 h3 h4 h5\n    subst h2\n    exact h n r x y ⟨h1, h3, h4, h5⟩ z"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1704:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1704:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · rintro h X _ G ⟨hne, ho, hd⟩\n    exact @h X hne _ G ho hd\n  · intro h X _ _ G ho hd\n    exact h G ⟨inferInstance, ho, hd⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1559:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-680:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h G hfk inst hk\n    obtain ⟨hf, hex⟩ := hfk\n    exact @h G inst hf hex hk\n  · intro h G inst hfin hex hk\n    exact @h G ⟨hfin, hex⟩ inst hk"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-477:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h G _ _ p q hpq hs\n    obtain ⟨hp, hq, hc⟩ := hpq\n    have h2 := h hp hq hc hs\n    exact absurd h2 (by decide)\n  · intro h G _ _ p q hp hq hc hs\n    exact absurd hs (h ⟨hp, hq, hc⟩)"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-477:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h p q G _ _ hx\n    obtain ⟨h1, h2, h3, h4, h5⟩ := hx\n    exact @h p q h1 h2 h3 h4 G _ _ h5\n  · intro h p q h1 h2 h3 h4 G _ _ h5\n    exact h G ⟨h1, h2, h3, h4, h5⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1498:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h r x hrx\n    exact h r hrx.1 x hrx.2\n  · intro h r hr x hx\n    exact h r x ⟨hr, hx⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1153:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h K V hK _ _ _ s hs t ht\n    first\n      | exact h hs t ht\n      | exact @h K V _ _ _ hK s hs t ht\n  · intro h K V _ _ _ _ s hs t ht\n    first\n      | exact h ‹Countable K› hs t ht\n      | exact @h K V ‹Countable K› _ _ _ s hs t ht"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-844:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h G _ _ hk\n    exact h (card G) rfl hk\n  · intro h G _ n _ hn hk\n    subst hn\n    exact h hk"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1345:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro _ G _ _ hc\n    exfalso\n    omega\n  · intro _ G _ _ n hn hc\n    exfalso\n    omega"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-837:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-837:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hyp\n    obtain ⟨hne, hG⟩ := hyp\n    exact @h X hne inst G hG\n  · intro h X hne inst G hG\n    exact @h X inst G ⟨hne, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-85:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h hP n m hm a b hab\n    exact @h n hP m hm ⟨a, b, hab⟩\n  · intro h n hP m hm hex\n    obtain ⟨a, b, hab⟩ := hex\n    exact h hP (n := n) m hm a b hab"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1813:split_r": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h X inst G hG\n    obtain ⟨hc, hn, hG'⟩ := hG\n    exact @h X inst hc hn G hG'\n  · intro h X inst hc hn G hG\n    exact h X G ⟨hc, hn, hG⟩"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-1973:split_r": {
+  "source": "tactic2",
+  "proof": "first | (simp only [true_implies, and_imp, and_assoc, forall_const]; done) | (constructor <;> intro h <;> intros <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h] | (apply h <;> solve_by_elim (config := {maxDepth := 30})) | (aesop (add safe forward h)) | (simp_all; done))) | (constructor <;> intro h <;> intros <;> subst_vars <;> (first | (apply h <;> assumption) | solve_by_elim (config := {maxDepth := 30}) [h, rfl] | (apply h <;> solve_by_elim (config := {maxDepth := 30}) [rfl]) | (exfalso; simpa using h ‹_› ‹_› ‹_› ‹_›) | (simp_all; done)))"
+ },
+ "g1_results_claude-opus-5.5:pnv-valid-263:split_s": {
+  "source": "llm",
+  "proof": "constructor\n  · intro h p hab m hm\n    exact @h p m hm hab.1 hab.2\n  · intro h p m hm ha hb\n    exact @h p ⟨ha, hb⟩ m hm"
  }
 }
