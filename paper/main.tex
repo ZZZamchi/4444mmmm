@@ -47,20 +47,19 @@ pairs, closed equivalence accepts 2\% of the unfaithful pairs with fixed tactics
 Claude Opus~5.5, and raising the budget of one model takes this from 2\% to 44\%. We introduce a
 component criterion whose comparison goals, over the hypotheses and conclusions of canonical
 Lean telescopes, are fixed before proof search, so that the prover need not be restricted.
-Kernel-checked certificates back every decided component relation, rejections included,
-while regrouping certificates tie the compared telescopes to the original statements. These
-certificates establish formal differences, not faithfulness to the informal problem; which
-components are compared depends on canonicalization and alignment, and faithfulness needs
-external evidence. With the same prover our false accepts stay at 4--15 of 694, at a measured
+Kernel certificates back every decided component relation, rejections included, and
+regrouping certificates tie the compared telescopes to the original statements. These
+certificates establish formal differences relative to the canonicalization and alignment, not
+faithfulness to the informal problem, which needs external evidence. With the same prover our false accepts stay at 4--15 of 694, at a measured
 cost in coverage: 56\% of the faithful pairs are accepted, against 86\% by closed equivalence. On
 1,478 held-out pairs from problems not used in development, under a protocol fixed in advance,
 closed equivalence false-accepts 46\% of the unfaithful pairs and our criterion 2.7\%; a second
-pre-registered protocol with normal forms and a searched alignment raises the held-out accepts of
-faithful pairs from 58\% to 62\%, at 3.7\% false accepts. Applied to benchmark references, the same goals give kernel-checked evidence for 34 errors in
-ProofNet\#, miniF2F and PutnamBench, 20 of them proved false or vacuous. Accepts remain necessary
-but not sufficient: constant conclusions and the absorption of a conclusion into the hypotheses
-defeat every check that accepts any proof of the component equivalences, so certified
-differences complement checks that restrict which proofs count.
+pre-registered protocol with a searched alignment raises the held-out accepts of faithful pairs
+from 58\% to 62\%, at 3.7\% false accepts. Applied to benchmark references, the same goals give
+kernel-checked evidence for 34 errors in ProofNet\#, miniF2F and PutnamBench, 20 of them proved
+false or vacuous. Accepts remain necessary but not sufficient: constant conclusions and absorption
+into the hypotheses defeat every check that accepts any proof of the component equivalences, so
+certified differences complement checks that restrict which proofs count.
 \end{abstract}
 
 %======================================================================
