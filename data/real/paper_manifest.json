@@ -966,7 +966,7 @@
    "claim": "limitations, F rejects",
    "occurrences": [
     {
-     "line": 1799,
+     "line": 1847,
      "text": "22 of the 43 rejects of labelled-equivalent pairs that rest on component goals locate"
     }
    ]
@@ -1299,7 +1299,7 @@
    "claim": "separation, tab:theory",
    "occurrences": [
     {
-     "line": 1891,
+     "line": 1939,
      "text": "111 inequivalent pairs rejected with closed equivalence undecided, 29 the other way"
     }
    ]
@@ -1308,7 +1308,7 @@
    "claim": "K19 rules from the audit",
    "occurrences": [
     {
-     "line": 2266,
+     "line": 2314,
      "text": "They change the goals of 116 of the 1,140 pairs"
     }
    ]
@@ -1479,7 +1479,7 @@
    "claim": "limitations: audit",
    "occurrences": [
     {
-     "line": 1817,
+     "line": 1865,
      "text": "agree on 83\\% of the statements ($\\kappa=0.66$)"
     }
    ]
@@ -1545,11 +1545,11 @@
      "text": "1,140"
     },
     {
-     "line": 2266,
+     "line": 2314,
      "text": "1,140"
     },
     {
-     "line": 2612,
+     "line": 2660,
      "text": "1,140"
     }
    ]
@@ -1692,11 +1692,11 @@
      "text": "300-pair"
     },
     {
-     "line": 1795,
+     "line": 1843,
      "text": "300-pair"
     },
     {
-     "line": 2575,
+     "line": 2623,
      "text": "300-pair"
     }
    ]
@@ -1911,7 +1911,7 @@
    "claim": "tab:repr prose",
    "occurrences": [
     {
-     "line": 2223,
+     "line": 2271,
      "text": "leaves the canonical form unchanged in 178 of 218 cases, while conjoined hypotheses need conjunct reordering in 29 of 69 and account for 5 of the 7 open ones"
     }
    ]
@@ -1974,7 +1974,7 @@
    "claim": "tab:refs caption",
    "occurrences": [
     {
-     "line": 2531,
+     "line": 2579,
      "text": "The 24 ProofNet\\# reference errors"
     }
    ]
@@ -1983,7 +1983,7 @@
    "claim": "app:refs count",
    "occurrences": [
     {
-     "line": 2494,
+     "line": 2542,
      "text": "Table~\\ref{tab:refs} lists the 24 errors"
     }
    ]
@@ -1992,7 +1992,7 @@
    "claim": "recheck: exported proofs",
    "occurrences": [
     {
-     "line": 2600,
+     "line": 2648,
      "text": "tables are 9,983 distinct proofs"
     }
    ]
@@ -2001,7 +2001,7 @@
    "claim": "recheck: first",
    "occurrences": [
     {
-     "line": 2604,
+     "line": 2652,
      "text": "All 6,544 of the first recheck passed"
     }
    ]
@@ -2010,7 +2010,7 @@
    "claim": "recheck: later runs",
    "occurrences": [
     {
-     "line": 2604,
+     "line": 2652,
      "text": "The 3,439 that later runs added (the budget experiment of Table~\\ref{tab:budget} and the final reruns of Table~\\ref{tab:full}) were checked by the same script, and all of them passed"
     }
    ]
@@ -2019,7 +2019,7 @@
    "claim": "replay",
    "occurrences": [
     {
-     "line": 2611,
+     "line": 2659,
      "text": "reproduced Table~\\ref{tab:budget} for both models and all 1,140 verdicts of Qwen and GPT-4.1-mini"
     }
    ]
@@ -2028,7 +2028,7 @@
    "claim": "recheck: the sorryAx proof",
    "occurrences": [
     {
-     "line": 2606,
+     "line": 2654,
      "text": "One further proof, for a closed goal of an inequivalent pair, calls \\texttt{sorryAx} by name"
     }
    ]
@@ -2037,7 +2037,7 @@
    "claim": "devsplit: pilot",
    "occurrences": [
     {
-     "line": 2575,
+     "line": 2623,
      "text": "were written after pilot runs on 100 pairs of the 300-pair subset"
     }
    ]
@@ -2046,7 +2046,7 @@
    "claim": "devsplit: subset",
    "occurrences": [
     {
-     "line": 2576,
+     "line": 2624,
      "text": "The subset is a random sample of 150 pairs per label; the other 840 pairs"
     }
    ]
@@ -2055,7 +2055,7 @@
    "claim": "devsplit: Opus",
    "occurrences": [
     {
-     "line": 2579,
+     "line": 2627,
      "text": "0 of its 150 inequivalent pairs against 14 of the other 544 with Opus (Fisher $p=0.049$"
     }
    ]
@@ -2064,7 +2064,7 @@
    "claim": "devsplit: DeepSeek",
    "occurrences": [
     {
-     "line": 2581,
+     "line": 2629,
      "text": "0 against 9 with DeepSeek ($p=0.22$)"
     }
    ]
@@ -2073,7 +2073,7 @@
    "claim": "devsplit: equivalent accepts",
    "occurrences": [
     {
-     "line": 2581,
+     "line": 2629,
      "text": "accepted more often outside it (59\\% against 49\\% with Opus)"
     }
    ]
@@ -2235,7 +2235,7 @@
    "claim": "v4: L adds every held-out false accept",
    "occurrences": [
     {
-     "line": 2475,
+     "line": 2523,
      "text": "every false accept v4 adds on the held-out split"
     }
    ]
@@ -2244,7 +2244,7 @@
    "claim": "v4: L on test",
    "occurrences": [
     {
-     "line": 2474,
+     "line": 2522,
      "text": "L, whose \\VfTestPubLAdd{} development accepts were all of equivalent pairs"
     }
    ]
@@ -2253,7 +2253,7 @@
    "claim": "v4: L false accepts outside the largest group",
    "occurrences": [
     {
-     "line": 2482,
+     "line": 2530,
      "text": "The other four candidates"
     }
    ]
@@ -2262,7 +2262,7 @@
    "claim": "v4: without L",
    "occurrences": [
     {
-     "line": 2486,
+     "line": 2534,
      "text": "false accepts, as many as v2.1"
     }
    ]
@@ -2271,7 +2271,7 @@
    "claim": "v4: H5 both",
    "occurrences": [
     {
-     "line": 2454,
+     "line": 2502,
      "text": "holds on both splits"
     }
    ]
@@ -2280,7 +2280,7 @@
    "claim": "v4: shuffle totals",
    "occurrences": [
     {
-     "line": 2449,
+     "line": 2497,
      "text": "the totals stay at"
     }
    ]
@@ -2296,8 +2296,8 @@
   }
  ],
  "coverage": {
-  "numbers": 893,
-  "uncovered": 508,
+  "numbers": 900,
+  "uncovered": 515,
   "uncovered_by_section": {
    "front": 5,
    "Contributions.": 1,
@@ -2335,6 +2335,7 @@
    "Whole-statement probes.": 16,
    "Reference-based equivalence.": 4,
    "Component comparison.": 1,
+   "Concurrent work: structure-aware equivalence.": 7,
    "Probe- and test-based criteria.": 2,
    "Benchmark audits.": 4,
    "Limitations.": 7,

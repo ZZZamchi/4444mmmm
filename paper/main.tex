@@ -1648,6 +1648,7 @@ method & \makecell{evidence for\\``equivalent''} & \makecell{evidence for\\``dif
 closed equivalence, unrestricted & kernel & kernel & no & no & yes\\
 BEq+~\cite{beq} & kernel & no & no & \makecell{by restricted\\search} & no\\
 SemantEq~\cite{semanteq} & \makecell{kernel,\\audited} & no & no & \makecell{by allowed-step\\relation} & no\\
+SAE / ACE~\cite{ace} & kernel & \makecell{kernel, or\\structural rule} & not reported & \makecell{by aligned\\roles} & yes\\
 symbolic equivalence~\cite{symeq} & prover & no & components & yes & no\\
 SA-Pass~\cite{shadowbench} & kernel & no & by shadow & by restriction & no\\
 fingerprints~\cite{bpf}, T$^2$~\cite{t2} & kernel & no & no & \makecell{no (complete\\oracle)} & no\\
@@ -1664,7 +1665,9 @@ different''. ``By restriction'', ``by restricted search'', ``by allowed-step rel
 because the prover, the allowed proofs or the admitted relation are restricted (BEq+ requires each
 proof to use the other statement; SemantEq admits only chains of pre-specified steps), so a pair
 that is not accepted may still be equivalent. ``Kernel, audited'': the kernel checks the proof
-term, and an audit decides whether the proof stays within the allowed relation. No evidence for
+term, and an audit decides whether the proof stays within the allowed relation. ``Structural
+rule'': a pair with no admissible shared alignment is reported inequivalent without a proof
+obligation (see the paragraph on concurrent work). No evidence for
 ``equivalent'' in this table shows faithfulness to the informal statement. ``Undecided
 reported'': not accepting is split into a separate undecided verdict whose causes are reported;
 a ``no'' does not mean that a paper reports no recall or no count of pairs it does not accept.
@@ -1748,6 +1751,51 @@ vacuity in all hypotheses~\cite{gurfinkel} is \texttt{trivial} (\texttt{T8}). A 
 by the others is vacuous in this sense but harmless, which is why a flag also requires
 $\texttt{nimplied}_k$, and each probe verdict is a kernel proof, a proof-based vacuity check in
 the sense of~\cite{namjoshi}.
+
+\paragraph{Concurrent work: structure-aware equivalence.} Independently of this work, Yu et
+al.~\cite{ace} propose structure-aware equivalence (SAE) and a checker, ACE, which is the method
+closest to ours. SAE normalizes a statement to a quantifier prefix, top-level premises and a
+conclusion, and requires a bijection between the prefix variables of the two statements that
+preserves types, dependencies and quantifier kinds. For statements with premises it asks that,
+under one such alignment, the conjunctions of the premises be equivalent and the conclusions be
+equivalent, neither under the premises; this has the form of $\Ecomp$ on a total alignment.
+Statements without premises are compared by matching the relations of the conclusion and proving
+their operands equal, a case we do not separate. ACE reports a certified equivalence, a certified
+inequivalence or an inconclusive outcome and, as here, does not read a failed proof search as a
+difference. The two works share the diagnosis, that whole-statement equivalence is too coarse and
+that the relation must be fixed apart from the prover, and the comparison of premises and
+conclusions under a shared alignment. They differ in what the verdicts certify and in what is
+studied.
+(i)~In SAE, inequivalence is the complement of the relation: no admissible alignment satisfies
+the comparisons, and a pair with premises on one side only, or with no shared alignment, is
+inequivalent by a structural rule. The verdict records that the two statements are not
+presented in corresponding form, and ACE reports it for 31.8--31.9\% of the pairs that its own
+audit judges equivalent. Our \V{reject} is a kernel proof that the hypotheses, or the conclusions under
+them, differ at some input ($\neg(R\Econd S)$), or a refutation of the closed equivalence; an
+alignment that cannot be built or that ends early gives \V{unknown} or \V{residual} and never a
+reject by itself. Of our 378 rejects on the pairs shared with SemantEq, 5 are of pairs that its
+adjudication keeps equivalent, one of them a canonicalization artefact (\S\ref{sec:measure}),
+with the caveat of Table~\ref{tab:layers} that a reject on a partial alignment can pair binders
+of different meaning.
+(ii)~ACE's guarantees depend, as its authors state, on correct normalization and on a complete
+enumeration of alignments. Here the regrouping certificates make the kernel check that the
+compared components recompose to the original statements (Proposition~\ref{prop:cert}), so an
+error in the decomposition costs coverage and not soundness.
+(iii)~SAE has no counterpart of $\Econd$ and \V{off-domain}, which separate pairs that agree
+wherever the hypotheses hold and differ elsewhere.
+(iv)~We prove that the collapse is forced for every closed-invariant criterion and study what
+survives in a component criterion (\S\ref{sec:survive}). The surviving collapses apply to SAE as
+defined: candidate $S_5$ of Example~\ref{ex:run} absorbs the conclusion into a premise, its
+premise is equivalent to that of $R$ at every $n$ and the conclusions coincide, so the pair
+satisfies the premise-bearing case of SAE, and redundant premises are among the causes to which
+ACE's authors attribute its rare accepts of non-equivalent pairs.
+On ProofNetVerif, with both splits pooled and after its own audit of the pairs labelled
+equivalent (which finds 340 of 1,127 unsupported, further evidence of the label noise of
+\S\ref{sec:measure}), ACE certifies as equivalent 56.5--58.6\% of the pairs the audit confirms
+and 0.1--0.3\% of the others. These figures cannot be compared with ours pair by pair, since the
+labels, the filtering and the splits differ, but the direction is clear: ACE's false-accept rate
+is about an order of magnitude below ours (Table~\ref{tab:dist}), at a lower coverage of
+equivalent pairs. We did not find a public implementation of ACE and do not run it.
 
 \paragraph{Probe- and test-based criteria.} Provability fingerprints~\cite{bpf} compare forward
 and backward consequence neighbourhoods; SA-Pass~\cite{shadowbench} checks a candidate against
@@ -2639,6 +2687,7 @@ that ``the Lean proof checks'' certifies the challenge, not the claim.
 
 \begin{thebibliography}{99}\small
 \bibitem{beq} A.~Poiroux, G.~Weiss, V.~Kun\v{c}ak, A.~Bosselut. Reliable evaluation and benchmarks for statement autoformalization. EMNLP 2025. arXiv:2406.07222.
+\bibitem{ace} Y.~Yu, Y.-H.~Wu, G.~Lin, Y.~Zhang, Y.~Peng. Structure-aware equivalence for evaluating autoformalized statements. arXiv:2610.25018, 2026.
 \bibitem{semanteq} X.~Li, P.~S.~Ammanamanchi, S.~Bhat, R.~Jamdar, Y.~Lin, S.~Biderman. SemantEq: faithful bidirectional equivalence of formal statements. arXiv:2610.32919, 2026.
 \bibitem{beqliu} Q.~Liu, X.~Zheng, X.~Lu, Q.~Cao, J.~Yan. Rethinking and improving autoformalization: towards a faithful metric and a dependency retrieval-based approach. ICLR 2025.
 \bibitem{symeq} Z.~Li et al. Autoformalize mathematical statements by symbolic equivalence and semantic consistency. NeurIPS 2024.

@@ -1,6 +1,6 @@
 {
- "numbers": 893,
- "uncovered": 508,
+ "numbers": 900,
+ "uncovered": 515,
  "by_section": {
   "front": [
    {
@@ -1982,672 +1982,709 @@
   ],
   "Reference-based equivalence.": [
    {
-    "line": 1692,
+    "line": 1695,
     "number": "100",
     "context": "e ProofNetVerif test split, SemantEq-Eval reports 100\\% precision under its adjudic"
    },
    {
-    "line": 1692,
+    "line": 1695,
     "number": "65.6",
     "context": "00\\% precision under its adjudicated labels, with 65.6\\% recall; under two of four p"
    },
    {
-    "line": 1702,
+    "line": 1705,
     "number": "46",
     "context": " relevant ProofNetVerif pairs by hand and relabel 46 of our 51 rejects as non-equi"
    },
    {
-    "line": 1702,
+    "line": 1705,
     "number": "51",
     "context": "ProofNetVerif pairs by hand and relabel 46 of our 51 rejects as non-equivalent; th"
    }
   ],
   "Component comparison.": [
    {
-    "line": 1731,
+    "line": 1734,
     "number": "31",
     "context": "ts a model write the witness of a difference, and 31\\% of the witnesses that compi"
    }
   ],
+  "Concurrent work: structure-aware equivalence.": [
+   {
+    "line": 1772,
+    "number": "31.8",
+    "context": "ted in corresponding form, and ACE reports it for 31.8--31.9\\% of the pairs that its"
+   },
+   {
+    "line": 1776,
+    "number": "378",
+    "context": "\\V{residual} and never a reject by itself. Of our 378 rejects on the pairs shared w"
+   },
+   {
+    "line": 1776,
+    "number": "5",
+    "context": "ur 378 rejects on the pairs shared with SemantEq, 5 are of pairs that its adjudic"
+   },
+   {
+    "line": 1793,
+    "number": "340",
+    "context": "dit of the pairs labelled equivalent (which finds 340 of 1,127 unsupported, further"
+   },
+   {
+    "line": 1793,
+    "number": "1,127",
+    "context": "the pairs labelled equivalent (which finds 340 of 1,127 unsupported, further evidence"
+   },
+   {
+    "line": 1794,
+    "number": "56.5",
+    "context": "\\S\\ref{sec:measure}), ACE certifies as equivalent 56.5--58.6\\% of the pairs the audi"
+   },
+   {
+    "line": 1795,
+    "number": "0.1",
+    "context": " 56.5--58.6\\% of the pairs the audit confirms and 0.1--0.3\\% of the others. These f"
+   }
+  ],
   "Probe- and test-based criteria.": [
    {
-    "line": 1764,
+    "line": 1812,
     "number": "14",
     "context": "tion to detect proofs that ignore it; they report 14 accepted errors among 153 Pro"
    },
    {
-    "line": 1764,
+    "line": 1812,
     "number": "153",
     "context": "t ignore it; they report 14 accepted errors among 153 ProofNet items and are comple"
    }
   ],
   "Benchmark audits.": [
    {
-    "line": 1774,
+    "line": 1822,
     "number": "31.8",
     "context": "\\paragraph{Benchmark audits.} ProofNet\\# corrects 31.8\\% of the ProofNet Lean~4 port"
    },
    {
-    "line": 1776,
+    "line": 1824,
     "number": "97",
     "context": "by hand (released as ProofNet-Verified) and finds 97 of 367 statements unfaithful "
    },
    {
-    "line": 1776,
+    "line": 1824,
     "number": "367",
     "context": "d (released as ProofNet-Verified) and finds 97 of 367 statements unfaithful or ambi"
    },
    {
-    "line": 1781,
+    "line": 1829,
     "number": "398",
     "context": ", junk-value guards) plus LLM review, and reports 398 certified issues. Our per-hyp"
    }
   ],
   "Limitations.": [
    {
-    "line": 1822,
+    "line": 1870,
     "number": "43",
     "context": "udit's analysis was fixed in advance: each of the 43 rejects and 14 false accepts "
    },
    {
-    "line": 1822,
+    "line": 1870,
     "number": "14",
     "context": " was fixed in advance: each of the 43 rejects and 14 false accepts is mapped to th"
    },
    {
-    "line": 1834,
+    "line": 1882,
     "number": "3",
     "context": "ty only for the arithmetic fragments, which cover 3\\% of ProofNetVerif but a thir"
    },
    {
-    "line": 1837,
+    "line": 1885,
     "number": "26.4",
     "context": " which come from ProofNet\\# and are unfaithful in 26.4\\% of cases~\\cite{pnv}. A wron"
    },
    {
-    "line": 1844,
+    "line": 1892,
     "number": "299",
     "context": "produce and reaches the same conclusion. Seven of 299 re-presentations in \\S\\ref{se"
    },
    {
-    "line": 1846,
+    "line": 1894,
     "number": "12",
     "context": "dit} have low recall against a full manual audit (12 of its 96 unfaithful statemen"
    },
    {
-    "line": 1846,
+    "line": 1894,
     "number": "96",
     "context": "low recall against a full manual audit (12 of its 96 unfaithful statements are fla"
    }
   ],
   "Conclusion.": [
    {
-    "line": 1850,
+    "line": 1898,
     "number": "39",
     "context": "rs in use today the resulting false accepts reach 39\\% of unfaithful pairs. Compar"
    }
   ],
   "Theory": [
    {
-    "line": 2207,
+    "line": 2255,
     "number": "299",
     "context": "V2} implements them is tested, not proved, by the 299 re-presentations of Appendix~"
    }
   ],
   "Re-presentation (Proposition~\\ref{prop:canon": [
    {
-    "line": 2211,
+    "line": 2259,
     "number": "129",
     "context": "sentation (Proposition~\\ref{prop:canon}).} Of the 129 distinct ProofNetVerif refere"
    },
    {
-    "line": 2212,
+    "line": 2260,
     "number": "299",
     "context": "Verif references whose canonicalization succeeds, 299 surface re-presentations appl"
    },
    {
-    "line": 2215,
+    "line": 2263,
     "number": "218",
     "context": "ach pair $(R,R')$ is proved by rewriting alone in 218 cases (canonical forms syntac"
    },
    {
-    "line": 2216,
+    "line": 2264,
     "number": "65",
     "context": "exttt{and\\_comm}/\\texttt{and\\_assoc} in a further 65; 9 more close under propositi"
    },
    {
-    "line": 2216,
+    "line": 2264,
     "number": "9",
     "context": "t{and\\_comm}/\\texttt{and\\_assoc} in a further 65; 9 more close under propositiona"
    },
    {
-    "line": 2219,
+    "line": 2267,
     "number": "7",
     "context": "diate hypothesis mentioned the eliminated binder. 7 remain open, all of them the "
    }
   ],
   "Rule sensitivity.": [
    {
-    "line": 2246,
+    "line": 2294,
     "number": "300",
     "context": "2Var.lean}) reproduces the canonical goals of all 300 pairs of the subset with ever"
    },
    {
-    "line": 2249,
+    "line": 2297,
     "number": "13",
     "context": "s pipeline on the pairs whose telescopes changed: 13, 8, 29 and 8 pairs, and 54 wi"
    },
    {
-    "line": 2249,
+    "line": 2297,
     "number": "8",
     "context": "peline on the pairs whose telescopes changed: 13, 8, 29 and 8 pairs, and 54 with "
    },
    {
-    "line": 2249,
+    "line": 2297,
     "number": "29",
     "context": "ine on the pairs whose telescopes changed: 13, 8, 29 and 8 pairs, and 54 with all "
    },
    {
-    "line": 2250,
+    "line": 2298,
     "number": "8",
     "context": "the pairs whose telescopes changed: 13, 8, 29 and 8 pairs, and 54 with all four o"
    },
    {
-    "line": 2250,
+    "line": 2298,
     "number": "54",
     "context": "se telescopes changed: 13, 8, 29 and 8 pairs, and 54 with all four off. Most of th"
    },
    {
-    "line": 2252,
+    "line": 2300,
     "number": "358",
     "context": ", both on the split. Four rejects become accepts (358 without the $\\neg\\exists$ rul"
    },
    {
-    "line": 2253,
+    "line": 2301,
     "number": "11",
     "context": "come accepts (358 without the $\\neg\\exists$ rule; 11, 189 and 997 without one-poin"
    },
    {
-    "line": 2253,
+    "line": 2301,
     "number": "189",
     "context": " accepts (358 without the $\\neg\\exists$ rule; 11, 189 and 997 without one-point eli"
    },
    {
-    "line": 2253,
+    "line": 2301,
     "number": "997",
     "context": " (358 without the $\\neg\\exists$ rule; 11, 189 and 997 without one-point elimination"
    },
    {
-    "line": 2258,
+    "line": 2306,
     "number": "7",
     "context": "ny variant. A more liberal one-point rule changes 7 telescopes and no decided ver"
    }
   ],
   "Two rules from the audit.": [
    {
-    "line": 2270,
+    "line": 2318,
     "number": "2.1",
     "context": "se accepts become non-accepts, Herstein 2.2.3 and 2.1.26, both judged unfaithful by"
    }
   ],
   "Where \\V{unknown": [
    {
-    "line": 2280,
+    "line": 2328,
     "number": "83",
     "context": "comes from.}\\label{app:unk} The strong run leaves 83 of the 300 pairs \\V{unknown} "
    },
    {
-    "line": 2280,
+    "line": 2328,
     "number": "300",
     "context": ".}\\label{app:unk} The strong run leaves 83 of the 300 pairs \\V{unknown} (Table~\\ref"
    },
    {
-    "line": 2281,
+    "line": 2329,
     "number": "26",
     "context": "he 300 pairs \\V{unknown} (Table~\\ref{tab:g1}). In 26 of them a regrouping certific"
    },
    {
-    "line": 2282,
+    "line": 2330,
     "number": "3",
     "context": "tificate is missing, so no component goal counts; 3 of these have a refuted close"
    },
    {
-    "line": 2283,
+    "line": 2331,
     "number": "15",
     "context": "ertificates says nothing about the telescopes. In 15 both certificates hold but no"
    },
    {
-    "line": 2285,
+    "line": 2333,
     "number": "16",
     "context": "atements and is as hard as closed equivalence. In 16 the alignment is partial. Onl"
    },
    {
-    "line": 2285,
+    "line": 2333,
     "number": "26",
     "context": "n 16 the alignment is partial. Only the remaining 26 are fully aligned with every "
    },
    {
-    "line": 2286,
+    "line": 2334,
     "number": "16",
     "context": "are fully aligned with every component goal open, 16 of them with a proved closed "
    }
   ],
   "Fragments (Table~\\ref{tab:frag": [
    {
-    "line": 2296,
+    "line": 2344,
     "number": "9",
     "context": "tatements are purely arithmetic: on ProofNetVerif 9 of 300 pairs have Presburger "
    },
    {
-    "line": 2296,
+    "line": 2344,
     "number": "300",
     "context": "ents are purely arithmetic: on ProofNetVerif 9 of 300 pairs have Presburger or real"
    },
    {
-    "line": 2296,
+    "line": 2344,
     "number": "9",
     "context": "ave Presburger or real-closed components, and all 9 are decided (6 accept, 3 reje"
    },
    {
-    "line": 2297,
+    "line": 2345,
     "number": "6",
     "context": "or real-closed components, and all 9 are decided (6 accept, 3 reject, 0 \\V{unknow"
    },
    {
-    "line": 2297,
+    "line": 2345,
     "number": "3",
     "context": "osed components, and all 9 are decided (6 accept, 3 reject, 0 \\V{unknown}); the 3"
    },
    {
-    "line": 2297,
+    "line": 2345,
     "number": "0",
     "context": "nents, and all 9 are decided (6 accept, 3 reject, 0 \\V{unknown}); the 3 pairs wit"
    },
    {
-    "line": 2297,
+    "line": 2345,
     "number": "3",
     "context": " decided (6 accept, 3 reject, 0 \\V{unknown}); the 3 pairs with nonlinear integer "
    },
    {
-    "line": 2298,
+    "line": 2346,
     "number": "288",
     "context": "components are all \\V{unknown}, and the remaining 288 involve functions, sets, stru"
    },
    {
-    "line": 2299,
+    "line": 2347,
     "number": "89",
     "context": "e classes, where the theorem makes no promise and 89 of 264 structural pairs are \\"
    },
    {
-    "line": 2299,
+    "line": 2347,
     "number": "264",
     "context": "ses, where the theorem makes no promise and 89 of 264 structural pairs are \\V{unkno"
    },
    {
-    "line": 2300,
+    "line": 2348,
     "number": "158",
     "context": "known}. The competition benchmarks are different: 158 of 488 miniF2F statements (32"
    },
    {
-    "line": 2300,
+    "line": 2348,
     "number": "488",
     "context": " The competition benchmarks are different: 158 of 488 miniF2F statements (32\\%) are"
    },
    {
-    "line": 2300,
+    "line": 2348,
     "number": "32",
     "context": "rks are different: 158 of 488 miniF2F statements (32\\%) are Presburger or real-clo"
    },
    {
-    "line": 2301,
+    "line": 2349,
     "number": "53",
     "context": "32\\%) are Presburger or real-closed and a further 53 are nonlinear integer arithme"
    },
    {
-    "line": 2337,
+    "line": 2385,
     "number": "129",
     "context": "tomrule \\end{tabular} \\caption{Drift injection on 129 ProofNetVerif references. The"
    }
   ],
   "Drift injection (Table~\\ref{tab:g2": [
    {
-    "line": 2345,
+    "line": 2393,
     "number": "386",
     "context": "dicts the verdict of each drift class. Across all 386 mutants (257 non-identity) an"
    },
    {
-    "line": 2345,
+    "line": 2393,
     "number": "257",
     "context": "dict of each drift class. Across all 386 mutants (257 non-identity) and both prover"
    },
    {
-    "line": 2347,
+    "line": 2395,
     "number": "4",
     "context": "coverage without introducing a single error. Only 4 of the 221 non-accept verdict"
    },
    {
-    "line": 2347,
+    "line": 2395,
     "number": "221",
     "context": "without introducing a single error. Only 4 of the 221 non-accept verdicts of the st"
    }
   ],
   "Ranking (F3c).": [
    {
-    "line": 2352,
+    "line": 2400,
     "number": "4.5",
     "context": "ee \\V{off-domain} cases (Dummit--Foote 4.5.13 and 4.5.15: $p\\mid|G|$ against $p\\mid"
    },
    {
-    "line": 2369,
+    "line": 2417,
     "number": "204",
     "context": "xternal stress test on the FormalRx-CC benchmark (204 items, 121 distinct pairs, al"
    },
    {
-    "line": 2369,
+    "line": 2417,
     "number": "121",
     "context": "ess test on the FormalRx-CC benchmark (204 items, 121 distinct pairs, all small def"
    },
    {
-    "line": 2372,
+    "line": 2420,
     "number": "21",
     "context": "eck reproduces the published FormalRx-CC numbers (21 and 114) exactly. The compari"
    },
    {
-    "line": 2372,
+    "line": 2420,
     "number": "114",
     "context": "roduces the published FormalRx-CC numbers (21 and 114) exactly. The comparison is f"
    }
   ],
   "External stress test: FormalRx-CC (Table~\\ref{tab:cc": [
    {
-    "line": 2385,
+    "line": 2433,
     "number": "83",
     "context": "over small values of base-typed arguments certify 83\\% of the relation labels with"
    },
    {
-    "line": 2387,
+    "line": 2435,
     "number": "89",
     "context": "f the FormalRx-CC main experiment, raises this to 89\\%, against 10\\% Lean-passing "
    },
    {
-    "line": 2387,
+    "line": 2435,
     "number": "10",
     "context": "-CC main experiment, raises this to 89\\%, against 10\\% Lean-passing witnesses with"
    },
    {
-    "line": 2395,
+    "line": 2443,
     "number": "19",
     "context": " discriminating witnesses below are upper bounds. 19 of the 21 passing witnesses s"
    },
    {
-    "line": 2395,
+    "line": 2443,
     "number": "21",
     "context": "ating witnesses below are upper bounds. 19 of the 21 passing witnesses still compi"
    },
    {
-    "line": 2396,
+    "line": 2444,
     "number": "22",
     "context": "sses still compile after the collapse. Across all 22 archived FormalRx-CC runs on "
    },
    {
-    "line": 2397,
+    "line": 2445,
     "number": "157",
     "context": "h and without the intended statement and repair), 157 of 503 compiling witnesses (3"
    },
    {
-    "line": 2397,
+    "line": 2445,
     "number": "503",
     "context": "ithout the intended statement and repair), 157 of 503 compiling witnesses (31.2\\%) "
    },
    {
-    "line": 2398,
+    "line": 2446,
     "number": "31.2",
     "context": "ment and repair), 157 of 503 compiling witnesses (31.2\\%) still compile after it and"
    },
    {
-    "line": 2398,
+    "line": 2446,
     "number": "35",
     "context": " compile after it and hence fail to discriminate; 35 further witnesses are complet"
    },
    {
-    "line": 2400,
+    "line": 2448,
     "number": "29",
     "context": "ocol requires, and counting them either way gives 29--36\\%. The best configuration"
    },
    {
-    "line": 2401,
+    "line": 2449,
     "number": "30",
     "context": "(GPT-4.1, intended given, one repair) has at most 30 of 51 items with a correct re"
    },
    {
-    "line": 2401,
+    "line": 2449,
     "number": "51",
     "context": ".1, intended given, one repair) has at most 30 of 51 items with a correct relation"
    },
    {
-    "line": 2402,
+    "line": 2450,
     "number": "46",
     "context": "criminating witness, where our pipeline certifies 46 without a language model. Typ"
    },
    {
-    "line": 2412,
+    "line": 2460,
     "number": "132",
     "context": "efinitions using only tactics and bounded search, 132 of 204 (65\\%) are proved equi"
    },
    {
-    "line": 2412,
+    "line": 2460,
     "number": "204",
     "context": "ons using only tactics and bounded search, 132 of 204 (65\\%) are proved equivalent "
    },
    {
-    "line": 2412,
+    "line": 2460,
     "number": "65",
     "context": "sing only tactics and bounded search, 132 of 204 (65\\%) are proved equivalent and "
    },
    {
-    "line": 2413,
+    "line": 2461,
     "number": "19",
     "context": "arch, 132 of 204 (65\\%) are proved equivalent and 19 proved wrong. Letting the mod"
    },
    {
-    "line": 2414,
+    "line": 2462,
     "number": "107",
     "context": "correction and the relation with our goals yields 107 fully certified items (52\\%),"
    },
    {
-    "line": 2414,
+    "line": 2462,
     "number": "52",
     "context": " with our goals yields 107 fully certified items (52\\%), or 118 with GPT-4.1-mini "
    },
    {
-    "line": 2414,
+    "line": 2462,
     "number": "118",
     "context": "goals yields 107 fully certified items (52\\%), or 118 with GPT-4.1-mini as prover, "
    },
    {
-    "line": 2415,
+    "line": 2463,
     "number": "13",
     "context": "ni as prover, where the original protocol obtains 13 (6.4\\%) correct relations wit"
    },
    {
-    "line": 2415,
+    "line": 2463,
     "number": "6.4",
     "context": "s prover, where the original protocol obtains 13 (6.4\\%) correct relations with Lea"
    }
   ],
   "Normal forms and a searched alignment (protocol v4)": [
    {
-    "line": 2427,
+    "line": 2475,
     "number": "0",
     "context": "texttt{Type*}), both are instantiated at universe~0, and the verdict certifies th"
    },
    {
-    "line": 2439,
+    "line": 2487,
     "number": "14",
     "context": "o accepts when both sides keep a remainder, added 14 false accepts on the test spl"
    }
   ],
   "Results (Table~\\ref{tab:v4rules": [
    {
-    "line": 2464,
+    "line": 2512,
     "number": "46",
     "context": "ects (on the test split the adjudication relabels 46 of our 51 such rejects as non"
    },
    {
-    "line": 2464,
+    "line": 2512,
     "number": "51",
     "context": "he test split the adjudication relabels 46 of our 51 such rejects as non-equivalen"
    }
   ],
   "ProofNet\\# reference errors": [
    {
-    "line": 2538,
+    "line": 2586,
     "number": "21",
     "context": "pendently marks all rows except Munkres 24.3a and 21.6b unfaithful or the informal"
    },
    {
-    "line": 2539,
+    "line": 2587,
     "number": "39",
     "context": "erated by \\texttt{scripts/real/g3\\_probe.py}; the 39 flagged statements and our ve"
    }
   ],
   "Rejects on labelled-equivalent pairs": [
    {
-    "line": 2547,
+    "line": 2595,
     "number": "14",
     "context": "he ProofNetVerif test split. \\emph{Strong prover (14).} The reference is false: 31"
    },
    {
-    "line": 2547,
+    "line": 2595,
     "number": "311",
     "context": "emph{Strong prover (14).} The reference is false: 311 (Dummit--Foote 2.1.13), 253 a"
    },
    {
-    "line": 2547,
+    "line": 2595,
     "number": "253",
     "context": "e reference is false: 311 (Dummit--Foote 2.1.13), 253 and 1114 (Pugh 2.92), each ce"
    },
    {
-    "line": 2547,
+    "line": 2595,
     "number": "1114",
     "context": "nce is false: 311 (Dummit--Foote 2.1.13), 253 and 1114 (Pugh 2.92), each certified b"
    },
    {
-    "line": 2548,
+    "line": 2596,
     "number": "992",
     "context": "each certified by \\texttt{npimp} and \\texttt{rs}; 992 shares the reference of 253, "
    },
    {
-    "line": 2548,
+    "line": 2596,
     "number": "253",
     "context": "imp} and \\texttt{rs}; 992 shares the reference of 253, and its candidate, which add"
    },
    {
-    "line": 2550,
+    "line": 2598,
     "number": "695",
     "context": " and hence false as well. The candidate is false: 695, 738, 1026 and 428 (the candi"
    },
    {
-    "line": 2550,
+    "line": 2598,
     "number": "738",
     "context": "hence false as well. The candidate is false: 695, 738, 1026 and 428 (the candidate "
    },
    {
-    "line": 2550,
+    "line": 2598,
     "number": "1026",
     "context": " false as well. The candidate is false: 695, 738, 1026 and 428 (the candidate genera"
    },
    {
-    "line": 2550,
+    "line": 2598,
     "number": "428",
     "context": " well. The candidate is false: 695, 738, 1026 and 428 (the candidate generalizes to"
    },
    {
-    "line": 2551,
+    "line": 2599,
     "number": "365",
     "context": " A hypothesis difference the annotator tolerated: 365 (extra \\texttt{[Fintype G]}, "
    },
    {
-    "line": 2552,
+    "line": 2600,
     "number": "576",
     "context": "n \\texttt{rs} only), and the vacuity-only rejects 576 (extra \\texttt{Continuous g})"
    },
    {
-    "line": 2553,
+    "line": 2601,
     "number": "693",
     "context": "y-only rejects 576 (extra \\texttt{Continuous g}), 693 (\\texttt{a $\\bullet$ v = 0 $\\"
    },
    {
-    "line": 2553,
+    "line": 2601,
     "number": "913",
     "context": "$ v = 0 $\\to$} replaced by $\\leftrightarrow$) and 913 (\\texttt{map T U = U} replace"
    },
    {
-    "line": 2555,
+    "line": 2603,
     "number": "1135",
     "context": "). Canonicalization artefacts, both vacuity-only: 1135 (\\texttt{[Fintype G]} is data"
    },
    {
-    "line": 2556,
+    "line": 2604,
     "number": "358",
     "context": "n, placed on different sides of the boundary) and 358 (a de Morgan step plus curryi"
    },
    {
-    "line": 2557,
+    "line": 2605,
     "number": "3",
     "context": "de Morgan step plus currying). \\emph{Weak prover (3).} 1135 and 358 (artefacts) a"
    },
    {
-    "line": 2557,
+    "line": 2605,
     "number": "1135",
     "context": "rgan step plus currying). \\emph{Weak prover (3).} 1135 and 358 (artefacts) and 576 ("
    },
    {
-    "line": 2557,
+    "line": 2605,
     "number": "358",
     "context": " plus currying). \\emph{Weak prover (3).} 1135 and 358 (artefacts) and 576 (tolerate"
    },
    {
-    "line": 2557,
+    "line": 2605,
     "number": "576",
     "context": "ph{Weak prover (3).} 1135 and 358 (artefacts) and 576 (tolerated), as above. GPT-4."
    },
    {
-    "line": 2558,
+    "line": 2606,
     "number": "358",
     "context": " no labelled-equivalent pair and Qwen3.8-27B only 358. The label audit of the inequ"
    },
    {
-    "line": 2559,
+    "line": 2607,
     "number": "20",
     "context": " The label audit of the inequivalent side covered 20 pairs left \\V{unknown}: 19 la"
    },
    {
-    "line": 2559,
+    "line": 2607,
     "number": "19",
     "context": "quivalent side covered 20 pairs left \\V{unknown}: 19 labels were correct and 1 dis"
    },
    {
-    "line": 2560,
+    "line": 2608,
     "number": "1",
     "context": "airs left \\V{unknown}: 19 labels were correct and 1 disputed. \\section{Checking "
    }
   ],
   "What was fixed in advance.": [
    {
-    "line": 2595,
+    "line": 2643,
     "number": "122",
     "context": "such a command fails. Compiled alone, none of the 122 distinct model outputs contai"
    }
   ],
   "Case study: a Lean-verified research counterexample": [
    {
-    "line": 2623,
+    "line": 2671,
     "number": "2",
     "context": "'s direct finiteness conjecture in characteristic~2 and in one odd characteristic"
    },
    {
-    "line": 2626,
+    "line": 2674,
     "number": "2",
     "context": "only the three standard axioms. In characteristic~2 the manuscript's main theorem"
    }
